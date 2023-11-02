@@ -1,0 +1,28 @@
+---
+import Default from "../layouts/Default.astro";
+import { t } from "astro-i18n";
+import { Picture } from "astro:assets";
+
+import logomarkBlackColor from "../img/logomark-black-color.svg";
+---
+
+<Default
+  title={t("metadata.title.home")}
+  description={t("metadata.description.home")}
+>
+  <div class="flex max-w-lg flex-col gap-8 p-12">
+    <Picture src={logomarkBlackColor} alt="" width="200" />
+    <h1 class="text-4xl font-bold">{t("waiting.heading")}</h1>
+    <p>{t("waiting.paragraph")}</p>
+    <a
+      href="mailto:william@hallin.media"
+      target="_blank"
+      class="font-semibold text-red-700 underline">Email</a
+    >
+    <a
+      href="https://www.linkedin.com/in/whallin"
+      target="_blank"
+      class="font-semibold text-red-700 underline">LinkedIn</a
+    >
+  </div>
+</Default>

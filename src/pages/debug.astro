@@ -1,0 +1,20 @@
+---
+import { astroI18n, t } from "astro-i18n";
+
+import Layout from "../layouts/Default.astro";
+---
+
+<Layout title="Debug" description="Debug metadata description">
+  <div class="flex flex-col gap-2 p-4">
+    <h2 class="text-2xl">i18n (common)</h2>
+    <b>{astroI18n.locale} — {t("debughello")}</b>
+    <h2 class="text-2xl">Variable font weight</h2>
+    <span class="font-normal">DM Sans 400</span>
+    <span class="font-[450]">DM Sans 450</span>
+    <span class="font-medium">DM Sans 500</span>
+    <span class="font-[550]">DM Sans 550</span>
+    <span class="font-semibold">DM Sans 600</span>
+    <span class="font-[650]">DM Sans 650</span>
+    <span class="font-bold">DM Sans 700</span>
+  </div>
+</Layout>

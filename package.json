@@ -1,0 +1,37 @@
+{
+  "name": "hallinmedia-website",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro-i18n generate:pages --purge && astro-i18n generate:types && astro build && jampack ./dist",
+    "build:no-opti": "astro-i18n generate:pages --purge && astro-i18n generate:types && astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "i18n:extract": "astro-i18n extract",
+    "i18n:generate:pages": "astro-i18n generate:pages --purge",
+    "i18n:generate:types": "astro-i18n generate:types",
+    "i18n:sync": "pnpm run i18n:generate:pages && pnpm run i18n:generate:types"
+  },
+  "dependencies": {
+    "@astrojs/mdx": "^1.1.3",
+    "@astrojs/partytown": "^2.0.1",
+    "@astrojs/prefetch": "^0.4.1",
+    "@astrojs/sitemap": "^3.0.2",
+    "@astrojs/tailwind": "^5.0.2",
+    "@divriots/jampack": "^0.21.1",
+    "@tailwindcss/typography": "^0.5.10",
+    "astro": "^3.4.0",
+    "astro-google-fonts-optimizer": "^0.2.2",
+    "astro-i18n": "^2.1.18",
+    "astro-icon": "^0.8.1",
+    "sharp": "^0.32.6",
+    "tailwindcss": "^3.0.24"
+  },
+  "devDependencies": {
+    "prettier": "^3.0.3",
+    "prettier-plugin-astro": "^0.12.1",
+    "prettier-plugin-tailwindcss": "^0.5.6"
+  }
+}
