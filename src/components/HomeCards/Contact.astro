@@ -1,0 +1,44 @@
+---
+import { t, l } from "astro-i18n";
+import { Icon } from "astro-icon";
+
+import Button from "../Button.astro";
+---
+
+<div
+  class="col-span-5 flex flex-col justify-between gap-4 rounded border border-stone-200 bg-stone-100 p-8 lg:col-span-1 lg:row-span-1"
+>
+  <Icon name="ri:phone-line" width="24" class="text-brand-primary" />
+  <div class="flex flex-col gap-2">
+    <h2 class="text-3xl font-bold">{t("cards.contact.title")}</h2>
+    <p class="text-stone-900">
+      {t("cards.contact.paragraph1")}
+    </p>
+  </div>
+  <div class="flex gap-1 text-stone-500">
+    <Icon name="ri:time-line" width="16" />
+    <span
+      >{t("cards.contact.time1")}<span id="currentTime"></span>{
+        t("cards.contact.time2")
+      }</span
+    >
+  </div>
+  <Button
+    style="solid"
+    text={t("cta.sayHi")}
+    target="_self"
+    href={l("/contact")}
+  />
+</div>
+
+<script>
+  function updateTime() {
+    let date = new Date().toLocaleString("en-US", {
+      timeZone: "Europe/Stockholm",
+    });
+    let time = new Date(date).toLocaleTimeString();
+    document.getElementById("currentTime").innerHTML = time;
+  }
+  updateTime();
+  setInterval(updateTime, 1000);
+</script>

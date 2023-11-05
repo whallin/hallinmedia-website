@@ -1,0 +1,20 @@
+---
+import { Icon } from "astro-icon";
+interface Props {
+  bgColor: string;
+  text: string;
+  showIcon: "true" | "false";
+  icon: string;
+}
+
+const { bgColor, text, showIcon, icon } = Astro.props;
+---
+
+<div class=`${bgColor} flex h-8 w-fit items-center gap-2 rounded-full px-4`>
+  <Icon
+    name={icon}
+    width="16"
+    class:list={[showIcon === "false" && "hidden"]}
+  />
+  <b class="text-stone-900">{text}</b>
+</div>

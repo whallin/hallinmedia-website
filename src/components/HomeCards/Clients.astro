@@ -1,0 +1,42 @@
+---
+import { t, l } from "astro-i18n";
+import { Icon } from "astro-icon";
+import { Picture } from "astro:assets";
+
+import Button from "../Button.astro";
+
+import client24vision from "../../img/clients/24vision.svg";
+import clientCreavite from "../../img/clients/Creavite.svg";
+import clientDirectOn from "../../img/clients/Direct-On.svg";
+import clientProducenterna from "../../img/clients/Producenterna.svg";
+---
+
+<div
+  class="col-span-5 flex flex-col justify-between gap-4 rounded border border-stone-200 bg-stone-100 p-8 lg:col-span-2 lg:row-span-1"
+>
+  <Icon name="ri:hearts-line" width="24" class="text-brand-primary" />
+  <div class="flex flex-col gap-6">
+    <div class="flex flex-col gap-2">
+      <h2 class="text-3xl font-bold">{t("cards.clients.title")}</h2>
+      <p class="text-stone-900">
+        {t("cards.clients.paragraph1")}
+      </p>
+    </div>
+    <div class="flex flex-wrap gap-4">
+      <Picture src={client24vision} alt="" />
+      <Picture src={clientCreavite} alt="" />
+      <Picture src={clientDirectOn} alt="" />
+      <Picture src={clientProducenterna} alt="" />
+      <Picture src={client24vision} alt="" />
+      <Picture src={clientCreavite} alt="" />
+      <Picture src={clientDirectOn} alt="" />
+      <Picture src={clientProducenterna} alt="" />
+    </div>
+  </div>
+  <Button
+    style="solid"
+    text={t("cta.seeAllClients")}
+    target="_self"
+    href={l("/clients")}
+  />
+</div>

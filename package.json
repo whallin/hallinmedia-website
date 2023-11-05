@@ -3,8 +3,8 @@
   "type": "module",
   "version": "0.0.1",
   "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
+    "dev": "pnpm run i18n:generate:pages && pnpm run i18n:generate:types && astro dev",
+    "start": "pnpm run i18n:generate:pages && pnpm run i18n:generate:types && astro dev",
     "build": "astro-i18n generate:pages --purge && astro-i18n generate:types && astro build && jampack ./dist",
     "build:no-opti": "astro-i18n generate:pages --purge && astro-i18n generate:types && astro build",
     "preview": "astro preview",

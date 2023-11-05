@@ -1,3 +1,4 @@
+/// <reference path="../.astro/types.d.ts" />
 /// <reference types="astro/client" />
 
 
@@ -5,9 +6,9 @@
 type PrimaryLocale = "en"
 type SecondaryLocale = "sv"
 type Locale = PrimaryLocale | SecondaryLocale
-type RouteParameters = {"/debug":undefined;"/":undefined;}
+type RouteParameters = {"/debug":undefined;"/":undefined;"/blog":undefined;"/blog/[...slug]":{"slug":unknown;};}
 type Route = keyof RouteParameters
-type TranslationVariables = {"debughello":object|undefined;"metadata.title.home":object|undefined;"metadata.description.home":object|undefined;"waiting.heading":object|undefined;"waiting.paragraph":object|undefined;}
+type TranslationVariables = {"metadata.title":object|undefined;"metadata.description":object|undefined;"cards.main.title":object|undefined;"cards.main.titleUnderline":object|undefined;"cards.main.paragraphStart":object|undefined;"cards.main.paragraph1":object|undefined;"cards.main.paragraphFreelancing":object|undefined;"cards.main.paragraph2":object|undefined;"cards.services.title":object|undefined;"cards.services.paragraph1":object|undefined;"cards.services.paragraph2":object|undefined;"cards.contact.title":object|undefined;"cards.contact.paragraph1":object|undefined;"cards.contact.time1":object|undefined;"cards.contact.time2":object|undefined;"cards.clients.title":object|undefined;"cards.clients.paragraph1":object|undefined;"debughello":object|undefined;"formatting":object|undefined;"cta.playShowreel":object|undefined;"cta.viewPortfolio":object|undefined;"cta.sayHi":object|undefined;"cta.seeAllClients":object|undefined;"cta.readThePost":object|undefined;"cta.browseBlog":object|undefined;}
 type Translation = keyof TranslationVariables
 type Environment = "none"|"node"|"browser"
 declare module "astro-i18n" {

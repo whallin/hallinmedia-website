@@ -1,0 +1,54 @@
+---
+import { t } from "astro-i18n";
+import { Picture } from "astro:assets";
+import { Icon } from "astro-icon";
+
+import imgLogomarkStone50 from "../../img/logomark-stone-50.svg";
+import imgWilliam from "../../img/william.png";
+---
+
+<div
+  class="relative col-span-5 flex flex-col justify-between gap-4 rounded border border-stone-200 p-8 lg:col-span-3 lg:row-span-1"
+>
+  <Picture src={imgLogomarkStone50} alt="" class="select-none" />
+  <div class="flex flex-col gap-2">
+    <h1 class="text-3xl font-bold text-stone-50">
+      {t("cards.main.title")}<span
+        class="font-serif font-normal text-brand-primary underline decoration-2 underline-offset-2"
+        >{t("cards.main.titleUnderline")}</span
+      >
+    </h1>
+    <p class="text-stone-50">
+      {t("cards.main.paragraphStart")}
+      <Picture
+        src={imgWilliam}
+        alt=""
+        width="24"
+        class="mx-1.5 inline select-none rounded-full"
+      /><b class="text-brand-primary">William Hallin</b>
+      {t("cards.main.paragraph1")}
+      <b class="text-brand-primary">{t("cards.main.paragraphFreelancing")}</b>
+      {t("cards.main.paragraph2")}
+    </p>
+  </div>
+  <iframe
+    title="WHS Media showreel"
+    width="64"
+    height="64"
+    tabindex="-1"
+    class="absolute left-0 top-0 -z-10 h-full w-full select-none rounded bg-black brightness-25"
+    src="https://www.youtube-nocookie.com/embed/b3z5_q6lJ5c?playlist=b3z5_q6lJ5c&loop=1&controls=0&disablekb=1&fs=0&playsinline=1&mute=1&autoplay=1"
+  >
+  </iframe>
+  <a
+    href="https://google.com"
+    target="_blank"
+    class="flex w-fit flex-row gap-2 text-brand-primary transition duration-150 hover:opacity-75"
+  >
+    <Icon name="ri:play-circle-line" width="24" />
+    <span class="font-bold underline decoration-2 underline-offset-2"
+      >{t("cta.playShowreel")}</span
+    >
+    <Icon name="ri:external-link-line" width="16" />
+  </a>
+</div>

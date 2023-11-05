@@ -9,6 +9,14 @@ export default {
         serif: ["DM Serif Display", defaultTheme.fontFamily.serif],
         sans: ["DM Sans", defaultTheme.fontFamily.sans],
       },
+      brightness: {
+        25: ".25",
+      },
+      colors: {
+        brand: {
+          primary: "#FF3030",
+        },
+      },
     },
   },
   plugins: [require("@tailwindcss/typography")],

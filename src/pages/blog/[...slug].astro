@@ -1,0 +1,44 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../../layouts/BlogPost.astro";
+import { createGetStaticPaths } from "astro-i18n";
+
+export async function getStaticPaths() {
+  const blogEntries = await getCollection("blog");
+  return blogEntries.map((entry) => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+
+createGetStaticPaths();
+---
+
+<Layout
+  title={entry.data.title}
+  description={entry.data.excerpt}
+  publishDate={entry.data.publishDate}
+  modifiedDate={entry.data.modifiedDate}
+>
+  <div class="flex flex-col gap-2 p-4">
+    <h2 class="text-2xl">Blog post: entry</h2>
+     collection: {entry.collection}<br />
+     id: {entry.id}<br />
+     slug: {entry.slug}
+    <h2 class="text-2xl">Blog post: data</h2>
+     isdraft: {entry.data.isDraft}<br />
+     isfeatured: {entry.data.isFeatured}<br />
+     lang: {entry.data.lang}<br />
+     title: {entry.data.title}<br />
+     excerpt: {entry.data.excerpt}<br />
+     publishdate: {entry.data.publishDate}<br />
+     modifiedDate: {entry.data.modifiedDate}<br />
+    <h2 class="text-2xl">Blog post: content (tailwind prose)</h2>
+    <main class="prose prose-stone">
+      <Content />
+    </main>
+  </div>
+</Layout>

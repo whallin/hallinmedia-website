@@ -1,0 +1,77 @@
+---
+import { t, l } from "astro-i18n";
+import { Icon } from "astro-icon";
+
+import BulletTag from "../BulletTag.astro";
+import Button from "../Button.astro";
+---
+
+<div
+  class="col-span-5 flex flex-col justify-between gap-4 rounded border border-stone-200 bg-stone-100 p-8 lg:col-span-2 lg:row-span-1 lg:gap-6"
+>
+  <Icon name="ri:briefcase-3-line" width="24" class="text-brand-primary" />
+  <div class="flex flex-col gap-2">
+    <h2 class="text-3xl font-bold">{t("cards.services.title")}</h2>
+    <p class="text-stone-900">
+      {t("cards.services.paragraph1")}<br /><span class="text-stone-500"
+        >{t("cards.services.paragraph2")}</span
+      >
+    </p>
+  </div>
+  <div class="flex flex-wrap gap-2">
+    <BulletTag
+      text="Graphics Design"
+      bgColor="bg-lime-300"
+      showIcon="true"
+      icon="ri:palette-fill"
+    />
+    <BulletTag
+      text="Brand Design"
+      bgColor="bg-lime-300"
+      showIcon="true"
+      icon="ri:vip-diamond-fill"
+    />
+    <BulletTag
+      text="UI/UX Design"
+      bgColor="bg-lime-300"
+      showIcon="true"
+      icon="ri:computer-line"
+    />
+    <BulletTag
+      text="Motion Design"
+      bgColor="bg-sky-300"
+      showIcon="true"
+      icon="ri:run-line"
+    />
+    <BulletTag
+      text="Cinematography"
+      bgColor="bg-purple-300"
+      showIcon="true"
+      icon="ri:camera-lens-fill"
+    />
+    <BulletTag
+      text="Video Editing"
+      bgColor="bg-purple-300"
+      showIcon="true"
+      icon="ri:scissors-cut-fill"
+    />
+    <BulletTag
+      text="Copywriting"
+      bgColor="bg-amber-300"
+      showIcon="true"
+      icon="ri:pen-nib-fill"
+    />
+    <BulletTag
+      text="Technical SEO"
+      bgColor="bg-amber-300"
+      showIcon="true"
+      icon="ri:search-eye-line"
+    />
+  </div>
+  <Button
+    style="solid"
+    text={t("cta.viewPortfolio")}
+    target="_self"
+    href={l("/portfolio")}
+  />
+</div>

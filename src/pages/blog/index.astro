@@ -1,0 +1,12 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../../layouts/Default.astro";
+const blog = await getCollection("blog");
+console.log(blog);
+---
+
+<Layout title="Debug" description="Debug metadata description">
+  <div class="flex flex-col gap-2 p-4">
+    <h2 class="text-2xl">Blog</h2>
+  </div>
+</Layout>

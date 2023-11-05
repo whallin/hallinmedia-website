@@ -5,9 +5,11 @@ import { astroI18n } from "astro-i18n";
 interface Props {
   title: string;
   description: string;
+  publishDate: Date;
+  modifiedDate: Date;
 }
 
-const { title, description } = Astro.props;
+const { title, description, publishDate, modifiedDate } = Astro.props;
 
 const ldJsonSchema = {
   "@context": "https://schema.org",
@@ -32,8 +34,8 @@ const ldJsonSchema = {
       url: "https://hallin.media/img/logomark-black-color.png",
     },
   },
-  datePublished: "2023-11-09",
-  dateModified: "2023-11-15",
+  datePublished: publishDate,
+  dateModified: modifiedDate,
 };
 ---
 

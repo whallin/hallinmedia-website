@@ -1,0 +1,31 @@
+{
+  "metadata": {
+    "title": "Home",
+    "description": "William Hallin is a freelancing designer and filmmaker based in Skellefteå, Sweden. Building products, handling live-productions & taking photos."
+  },
+  "cards": {
+    "main": {
+      "title": "Creative work at it's ",
+      "titleUnderline": "finest.",
+      "paragraphStart": "I'm",
+      "paragraph1": " a 18 y/o high school student & product designer from Skellefteå. I'm while also building and developing hobby projects whenever I can. I'm",
+      "paragraphFreelancing": " actively freelancing",
+      "paragraph2": " while also building and developing hobby projects whenever I can."
+    },
+    "services": {
+      "title": "What do I do?",
+      "paragraph1": "Learn more about what fields I comfortably work and offer my services within.",
+      "paragraph2": "Psst, you can click any of the services to learn more about them."
+    },
+    "contact": {
+      "title": "Feel like talking to me?",
+      "paragraph1": "Shoot me a message or give me a call, I don't mind. I'll happily talk about any potential project or topic you wish.",
+      "time1": "It's currently ",
+      "time2": " for me."
+    },
+    "clients": {
+      "title": "Who have I worked for?",
+      "paragraph1": "Take a peak at some of the awesome clients I've had the oppurtunity to work with."
+    }
+  }
+}
