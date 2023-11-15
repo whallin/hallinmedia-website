@@ -1,6 +1,5 @@
 # build output
 dist/
-.jampack/
 
 # generated types
 .astro/
