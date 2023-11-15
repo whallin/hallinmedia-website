@@ -1,0 +1,42 @@
+---
+import { getCollection, getEntry } from "astro:content";
+
+export async function getStaticPaths() {
+  const blogEntries = await getCollection("blog");
+  return Promise.all(
+    blogEntries.map(async (entry) => {
+      const authors = await Promise.all(
+        entry.data.authors.map((author) => getEntry(author)),
+      );
+      return {
+        params: { slug: entry.slug },
+        props: { entry: { ...entry, data: { ...entry.data, authors } } },
+      };
+    }),
+  );
+}
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+---
+
+<main class="prose">
+  {entry.data.isDraft}
+  <br>
+  {entry.data.isFeatured}
+  <br>
+  {entry.data.title}
+  <br>
+  {entry.data.excerpt}
+  <br>
+  {
+    entry.data.authors.map((author) => (
+      <p>
+        {author.data.fullName}
+        {author.data.description}
+        {author.data.avatarUrl}
+      </p>
+    ))
+  }
+  <Content />
+</main>

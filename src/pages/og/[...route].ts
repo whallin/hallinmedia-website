@@ -1,16 +1,18 @@
 import { OGImageRoute } from "astro-og-canvas";
 
+const content = import.meta.glob(`/src/content/**/*.md`, { eager: true });
+
+const pages = Object.entries(content).reduce(
+  (acc, [path, page]) => ({ ...acc, [path.replace(`/src/content`, "")]: page }),
+  {},
+);
+
 export const { getStaticPaths, GET } = OGImageRoute({
   param: "route",
-  pages: {
-    index: {
-      title: "Astro Index",
-      description: "Index Description",
-    },
-  },
+  pages,
   getImageOptions: (path, page) => ({
-    title: page.title,
-    description: page.description,
+    title: page.frontmatter.title,
+    description: page.frontmatter.excerpt,
     padding: 64,
     logo: {
       path: "./public/logomark-white.png",

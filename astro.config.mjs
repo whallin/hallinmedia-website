@@ -7,17 +7,19 @@ import sitemap from "@astrojs/sitemap";
 // https://astro.build/config
 export default defineConfig({
   site: "https://hallin.media",
-  prefetch: true,
-  trailingSlash: "never",
+  prefetch: {
+    defaultStrategy: "viewport",
+    prefetchAll: true,
+  },
   experimental: {
     contentCollectionCache: true,
     i18n: {
       defaultLocale: "en",
       locales: ["en", "sv"],
       routingStrategy: "prefix-other-locales",
-      fallback: {
-        sv: "en",
-      }
+      //fallback: {
+      //  sv: "en",
+      //},
     },
   },
   integrations: [
