@@ -36,6 +36,7 @@ const projectCollection = defineCollection({
     isFeatured: z.boolean().optional(),
     title: z.string(),
     excerpt: z.string(),
+    publishDate: z.string().transform((str) => new Date(str)),
   }),
 });
 
@@ -47,6 +48,8 @@ const blogCollection = defineCollection({
     title: z.string(),
     excerpt: z.string(),
     authors: z.array(reference("author")),
+    publishDate: z.string().transform((str) => new Date(str)),
+    editedDate: z.string().transform((str) => new Date(str)),
   }),
 });
 
@@ -57,6 +60,8 @@ const guideCollection = defineCollection({
     title: z.string(),
     excerpt: z.string(),
     authors: z.array(reference("author")),
+    publishDate: z.string().transform((str) => new Date(str)),
+    editedDate: z.string().transform((str) => new Date(str)),
   }),
 });
 

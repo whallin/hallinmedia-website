@@ -1,0 +1,17 @@
+---
+import SiteHead from "../components/siteHead.astro";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="canonical" href={Astro.url} />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <SiteHead />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>

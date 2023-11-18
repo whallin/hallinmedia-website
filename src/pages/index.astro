@@ -1,1 +1,37 @@
-en - Astro Index Page
+---
+import DefaultLayout from "../layouts/Default.astro";
+
+import { getImage, Picture } from "astro:assets";
+import { Icon } from "astro-icon/components";
+
+import landingBg from "../assets/img/landing-bg.svg";
+const optimizedLandingBg = await getImage({ src: landingBg });
+import logomarkWhite from "../assets/img/logomark-white.svg";
+---
+
+<DefaultLayout>
+  <div
+    class="flex h-screen w-full flex-col items-center bg-cover bg-center px-6 py-12 lg:px-32"
+    style={`background-image: url(${optimizedLandingBg.src});`}
+  >
+    <Picture src={logomarkWhite} alt="" width={256} class="select-none" />
+    <div class="flex h-full w-full items-center justify-center">
+      <div class="flex max-w-6xl flex-col gap-8">
+        <Icon
+          name="ph:hand-waving-duotone"
+          width={64}
+          height={64}
+          class="text-red-800"
+        />
+        <h1 class="text-5xl font-medium text-stone-50">
+          I am <span class="font-serif italic">William Hallin.</span>
+        </h1>
+        <p class="text-3xl text-stone-50">
+          Tänk dig typ två långa meningar som säger vem jag är och vad exakt jag
+          håller på med. Kanske meningarna även berättar lätt vem jag jobbat
+          för, eller så väljer du något annat.
+        </p>
+      </div>
+    </div>
+  </div>
+</DefaultLayout>

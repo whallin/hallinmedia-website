@@ -22,13 +22,15 @@ const { Content } = await entry.render();
 
 <main class="prose">
   {entry.data.isDraft}
-  <br>
+  <br />
   {entry.data.isFeatured}
-  <br>
+  <br />
   {entry.data.title}
-  <br>
+  <br />
   {entry.data.excerpt}
-  <br>
+  <br />
+  {entry.data.publishDate}
+  <br />
   {
     entry.data.authors.map((author) => (
       <p>
@@ -40,3 +42,21 @@ const { Content } = await entry.render();
   }
   <Content />
 </main>
+
+<script
+  src="https://giscus.app/client.js"
+  data-repo="whallin/hallinmedia-website"
+  data-repo-id="R_kgDOKc4lgw"
+  data-category="Giscus Comments"
+  data-category-id="DIC_kwDOKc4lg84Ca-9R"
+  data-mapping="og:title"
+  data-strict="0"
+  data-reactions-enabled="0"
+  data-emit-metadata="0"
+  data-input-position="top"
+  data-theme="preferred_color_scheme"
+  data-lang="en"
+  data-loading="lazy"
+  crossorigin="anonymous"
+  async
+></script>
