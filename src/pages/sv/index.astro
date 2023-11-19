@@ -1,1 +1,59 @@
-sv - Astro Index Page
+---
+import DefaultLayout from "../../layouts/Default.astro";
+
+import { getImage, Picture } from "astro:assets";
+import { Icon } from "astro-icon/components";
+
+import landingBg from "../../assets/landing-bg.png";
+const optimizedLandingBg = await getImage({ src: landingBg });
+import logomarkWhite from "../../assets/logomark-white.svg";
+import avatar from "../../assets/avatar.png";
+---
+
+<DefaultLayout>
+  <div
+    class="h-screen w-full bg-cover bg-center px-8"
+    style={`background-image: url(${optimizedLandingBg.src})`}
+  >
+    <div class="flex w-full flex-col items-center">
+      <Picture
+        src={logomarkWhite}
+        alt=""
+        widths={[128, 200, 256, logomarkWhite.width]}
+        class="select-none py-12"
+      />
+    </div>
+    <div class="flex h-5/6 w-full items-center justify-center">
+      <div class="flex max-w-6xl flex-col gap-8">
+        <div class="flex gap-6">
+          <Icon
+            name="ph:hand-waving-duotone"
+            width={64}
+            height={64}
+            class="text-red-200"
+          />
+          <Picture
+            src={avatar}
+            alt=""
+            widths={[16, 32, 64, 128]}
+            class="w-16 select-none rounded-full"
+          />
+        </div>
+        <h1 class="text-5xl font-medium text-stone-50">
+          Jag är <span
+            class="bg-gradient-to-b from-stone-50 to-red-200 bg-clip-text font-serif italic text-transparent"
+            >William Hallin.</span
+          >
+        </h1>
+        <p class="text-3xl text-stone-50">
+          Jag är en gymnasieelev <span class="font-serif italic"
+            >produktdesigner</span
+          > och naturälskare från <span class="font-serif italic"
+            >Skellefteå, Sverige.</span
+          > Jag hjälper att bygga och utveckla varumärken och produkter för den
+          riktiga världen, så att de sticker ut i mängden.
+        </p>
+      </div>
+    </div>
+  </div>
+</DefaultLayout>

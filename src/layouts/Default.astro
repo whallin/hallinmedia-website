@@ -1,17 +1,45 @@
 ---
 import SiteHead from "../components/siteHead.astro";
+
+import { getAbsoluteLocaleUrl } from "astro:i18n";
 ---
 
-<!doctype html>
-<html lang="en">
+<html lang=`${Astro.currentLocale}`>
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <link rel="canonical" href={Astro.url} />
-    <link rel="sitemap" href="/sitemap-index.xml" />
     <SiteHead />
+    <link
+      rel="alternate"
+      href={getAbsoluteLocaleUrl("en", `${Astro.url.pathname}`)}
+      hreflang="en"
+    />
+    <link
+      rel="alternate"
+      href={getAbsoluteLocaleUrl("sv", `${Astro.url.pathname}`)}
+      hreflang="sv"
+    />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org/",
+        "@type": "Person",
+        "name": "William Hallin",
+        "url": "https://hallin.media",
+        "image": "https://hallin.media/img/william.png",
+        "sameAs": [
+          "https://www.instagram.com/williamhallinn",
+          "https://www.youtube.com/@hallinmedia",
+          "https://www.linkedin.com/in/whallin/",
+          "https://github.com/whallin",
+          "https://hallin.media"
+        ],
+        "jobTitle": "Creative Director",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "HallinMedia"
+        }
+      }
+    </script>
   </head>
-  <body>
+  <body class="selection:bg-red-300">
     <slot />
   </body>
 </html>
