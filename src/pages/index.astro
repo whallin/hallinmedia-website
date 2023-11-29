@@ -12,7 +12,7 @@ import avatar from "../assets/avatar.png";
 
 <DefaultLayout>
   <div
-    class="h-screen w-full bg-cover bg-center px-8"
+    class="h-full w-full bg-cover bg-center px-8 sm:h-screen"
     style={`background-image: url(${optimizedLandingBg.src})`}
   >
     <div class="flex w-full flex-col items-center">
@@ -23,7 +23,7 @@ import avatar from "../assets/avatar.png";
         class="select-none py-12"
       />
     </div>
-    <div class="flex h-5/6 w-full items-center justify-center">
+    <div class="flex h-5/6 w-full items-center justify-center py-32 sm:py-0">
       <div class="flex max-w-6xl flex-col gap-8">
         <div class="flex gap-6">
           <Icon
@@ -40,7 +40,7 @@ import avatar from "../assets/avatar.png";
           />
         </div>
         <h1 class="text-5xl font-medium text-stone-50">
-          I am <span
+          I'm <span
             class="bg-gradient-to-b from-stone-50 to-red-200 bg-clip-text font-serif italic text-transparent"
             >William Hallin.</span
           >
