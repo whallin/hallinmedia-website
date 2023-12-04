@@ -10,9 +10,12 @@ import logomarkWhite from "../../assets/logomark-white.svg";
 import avatar from "../../assets/avatar.png";
 ---
 
-<DefaultLayout>
+<DefaultLayout
+  title="Hem"
+  description="William Hallin är en gymnasieelev och produktdesigner från Skellefteå, Sverige. William hjälper varumärken att vara visuellt intressanta och unika online."
+>
   <div
-    class="h-full sm:h-screen w-full bg-cover bg-center px-8 pb-12"
+    class="h-full w-full bg-cover bg-center px-8 pb-12 sm:h-screen"
     style={`background-image: url(${optimizedLandingBg.src})`}
   >
     <div class="flex w-full flex-col items-center">
@@ -52,6 +55,33 @@ import avatar from "../../assets/avatar.png";
             >Skellefteå, Sverige.</span
           > Jag hjälper att bygga och utveckla varumärken och produkter för den
           riktiga världen, så att de sticker ut i mängden.
+        </p>
+        <p class="text-xl text-stone-50">
+          ⚠ Min webbplats är för närvarande under konstruktion, men du kan
+          fortfarande nå mig genom länkarna nedan:
+          <ol class="font-semibold text-stone-50 underline underline-offset-2">
+            <li>
+              <a
+                class="transition duration-150 hover:opacity-75"
+                target="_blank"
+                href="mailto:william@hallin.media">Email</a
+              >
+            </li>
+            <li>
+              <a
+                class="transition duration-150 hover:opacity-75"
+                target="_blank"
+                href="https://www.linkedin.com/in/whallin/">LinkedIn</a
+              >
+            </li>
+            <li>
+              <a
+                class="transition duration-150 hover:opacity-75"
+                target="_blank"
+                href="https://www.instagram.com/williamhallinn">Instagram</a
+              >
+            </li>
+          </ol>
         </p>
       </div>
     </div>
