@@ -1,15 +1,32 @@
 ---
-import { GoogleFontsOptimizer } from "astro-google-fonts-optimizer";
 import { ViewTransitions } from "astro:transitions";
-import HrefLangs from "./HrefLangs.astro";
+
+interface Props {
+  description: string;
+}
+
+const { description } = Astro.props;
 ---
 
+<!-- Basics -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <link rel="canonical" href={Astro.url} />
-
 <link rel="sitemap" href="/sitemap-index.xml" />
+<meta name="description" content={description} />
+<meta itemprop="description" content={description} />
+<meta property="og:description" content={description} />
+<meta property="twitter:description" content={description} />
 
+<!-- Metadata -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content={Astro.url} />
+<meta property="og:site_name" content="HallinMedia" />
+<meta property="twitter:card" content="summary" />
+<meta property="twitter:url" content={Astro.url} />
+<meta property="twitter:site" content="HallinMedia" />
+
+<!-- Favicon -->
 <link
   rel="apple-touch-icon"
   sizes="180x180"
@@ -35,17 +52,13 @@ import HrefLangs from "./HrefLangs.astro";
 <meta name="msapplication-TileColor" content="#b91d47" />
 <meta name="msapplication-config" content="/favicon/browserconfig.xml" />
 <meta name="theme-color" content="#ff3030" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content={Astro.url} />
-<meta property="og:site_name" content="HallinMedia" />
-<meta property="twitter:card" content="summary" />
-<meta property="twitter:url" content={Astro.url} />
-<meta property="twitter:site" content="HallinMedia" />
 
-<HrefLangs />
-
-<GoogleFontsOptimizer
-  url="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400..700&family=DM+Serif+Display&display=swap"
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.bunny.net" />
+<link
+  href="https://fonts.bunny.net/css?family=dm-sans:400,500,700|dm-serif-display:400,400i"
+  rel="stylesheet"
 />
 
+<!-- Transitions -->
 <ViewTransitions />

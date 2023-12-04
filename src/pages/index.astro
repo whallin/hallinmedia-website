@@ -1,28 +1,89 @@
 ---
-import Default from "../layouts/Default.astro";
-import { t } from "astro-i18n";
-import { Picture } from "astro:assets";
+import DefaultLayout from "../layouts/Default.astro";
 
-import logomarkBlackColor from "../img/logomark-black-color.svg";
+import { getImage, Picture } from "astro:assets";
+import { Icon } from "astro-icon/components";
+
+import landingBg from "../assets/landing-bg.png";
+const optimizedLandingBg = await getImage({ src: landingBg });
+import logomarkWhite from "../assets/logomark-white.svg";
+import avatar from "../assets/avatar.png";
 ---
 
-<Default
-  title={t("metadata.title.home")}
-  description={t("metadata.description.home")}
+<DefaultLayout
+  title="Home"
+  description="William Hallin is a high-school student and product designer based in Skellefteå, Sweden. Williams helps brands to be visually appealing and unique online."
 >
-  <div class="flex max-w-lg flex-col gap-8 p-12">
-    <Picture src={logomarkBlackColor} alt="" width="200" />
-    <h1 class="text-4xl font-bold">{t("waiting.heading")}</h1>
-    <p>{t("waiting.paragraph")}</p>
-    <a
-      href="mailto:william@hallin.media"
-      target="_blank"
-      class="font-semibold text-red-700 underline">Email</a
-    >
-    <a
-      href="https://www.linkedin.com/in/whallin"
-      target="_blank"
-      class="font-semibold text-red-700 underline">LinkedIn</a
-    >
+  <div
+    class="h-full w-full bg-cover bg-center px-8 pb-12 sm:h-screen"
+    style={`background-image: url(${optimizedLandingBg.src})`}
+  >
+    <div class="flex w-full flex-col items-center">
+      <Picture
+        src={logomarkWhite}
+        alt=""
+        widths={[128, 200, 256, logomarkWhite.width]}
+        class="select-none py-12"
+      />
+    </div>
+    <div class="flex h-5/6 w-full items-center justify-center py-32 sm:py-0">
+      <div class="flex max-w-6xl flex-col gap-8">
+        <div class="flex gap-6">
+          <Icon
+            name="ph:hand-waving-duotone"
+            width={64}
+            height={64}
+            class="text-red-200"
+          />
+          <Picture
+            src={avatar}
+            alt=""
+            widths={[16, 32, 64, 128]}
+            class="w-16 select-none rounded-full"
+          />
+        </div>
+        <h1 class="text-5xl font-medium text-stone-50">
+          I'm <span
+            class="bg-gradient-to-b from-stone-50 to-red-200 bg-clip-text font-serif italic text-transparent"
+            >William Hallin.</span
+          >
+        </h1>
+        <p class="text-3xl text-stone-50">
+          I'm a high school student, <span class="font-serif italic"
+            >product designer</span
+          >, and nature lover based in <span class="font-serif italic"
+            >Skellefteå, Sweden.</span
+          > I help build and develop brands and products for the real world,
+          making them stand out in the crowd.
+        </p>
+        <p class="text-xl text-stone-50">
+          ⚠ My website is currently under construction, but you can still reach
+          me using the links below:
+          <ol class="font-semibold text-stone-50 underline underline-offset-2">
+            <li>
+              <a
+                class="transition duration-150 hover:opacity-75"
+                target="_blank"
+                href="mailto:william@hallin.media">Email</a
+              >
+            </li>
+            <li>
+              <a
+                class="transition duration-150 hover:opacity-75"
+                target="_blank"
+                href="https://www.linkedin.com/in/whallin/">LinkedIn</a
+              >
+            </li>
+            <li>
+              <a
+                class="transition duration-150 hover:opacity-75"
+                target="_blank"
+                href="https://www.instagram.com/williamhallinn">Instagram</a
+              >
+            </li>
+          </ol>
+        </p>
+      </div>
+    </div>
   </div>
-</Default>
+</DefaultLayout>

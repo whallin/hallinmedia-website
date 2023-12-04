@@ -1,6 +1,7 @@
 ---
-import SiteHead from "../components/SiteHead.astro";
-import { astroI18n } from "astro-i18n";
+import SiteHead from "../components/siteHead.astro";
+
+import { getAbsoluteLocaleUrl } from "astro:i18n";
 
 interface Props {
   title: string;
@@ -10,25 +11,31 @@ interface Props {
 const { title, description } = Astro.props;
 ---
 
-<!doctype html>
-<html lang={astroI18n.locale}>
+<html lang=`${Astro.currentLocale}`>
   <head>
-    <SiteHead />
+    <SiteHead description={description} />
     <title>{title} | HallinMedia</title>
     <meta itemprop="name" content=`${title} | HallinMedia` />
     <meta property="og:title" content=`${title} | HallinMedia` />
     <meta property="twitter:title" content=`${title} | HallinMedia` />
-    <meta name="description" content={description} />
-    <meta itemprop="description" content={description} />
-    <meta property="og:description" content={description} />
-    <meta property="twitter:description" content={description} />
+    <meta property="og:image" content="/metadata-og.png" />
+    <link
+      rel="alternate"
+      href={getAbsoluteLocaleUrl("en", `${Astro.url.pathname}`)}
+      hreflang="en"
+    />
+    <link
+      rel="alternate"
+      href={getAbsoluteLocaleUrl("sv", `${Astro.url.pathname}`)}
+      hreflang="sv"
+    />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org/",
         "@type": "Person",
         "name": "William Hallin",
         "url": "https://hallin.media",
-        "image": "https://hallin.media/img/william.png",
+        "image": "https://hallin.media/william.png",
         "sameAs": [
           "https://www.instagram.com/williamhallinn",
           "https://www.youtube.com/@hallinmedia",
@@ -44,7 +51,7 @@ const { title, description } = Astro.props;
       }
     </script>
   </head>
-  <body class="bg-stone-50">
+  <body class="selection:bg-red-300">
     <slot />
   </body>
 </html>
