@@ -23,7 +23,7 @@ import avatar from "../../assets/avatar.png";
         src={logomarkWhite}
         alt=""
         widths={[128, 200, 256, logomarkWhite.width]}
-        class="select-none py-12"
+        class="select-none py-14"
       />
     </div>
     <div class="flex h-5/6 w-full items-center justify-center">
@@ -56,33 +56,40 @@ import avatar from "../../assets/avatar.png";
           > Jag hjälper att bygga och utveckla varumärken och produkter för den
           riktiga världen, så att de sticker ut i mängden.
         </p>
-        <p class="text-xl text-stone-50">
-          ⚠ Min webbplats är för närvarande under konstruktion, men du kan
-          fortfarande nå mig genom länkarna nedan:
-          <ol class="font-semibold text-stone-50 underline underline-offset-2">
-            <li>
-              <a
-                class="transition duration-150 hover:opacity-75"
-                target="_blank"
-                href="mailto:william@hallin.media">Email</a
-              >
-            </li>
-            <li>
-              <a
-                class="transition duration-150 hover:opacity-75"
-                target="_blank"
-                href="https://www.linkedin.com/in/whallin/">LinkedIn</a
-              >
-            </li>
-            <li>
-              <a
-                class="transition duration-150 hover:opacity-75"
-                target="_blank"
-                href="https://www.instagram.com/williamhallinn">Instagram</a
-              >
-            </li>
-          </ol>
-        </p>
+        <div class="flex gap-4">
+          <a target="_blank" href="mailto:william@hallin.media">
+            <Icon
+              name="ph:envelope-duotone"
+              width={32}
+              height={32}
+              class="text-red-100 transition duration-150 hover:text-red-300"
+            />
+          </a>
+          <a target="_blank" href="https://www.linkedin.com/in/whallin/">
+            <Icon
+              name="ph:linkedin-logo-duotone"
+              width={32}
+              height={32}
+              class="text-red-100 transition duration-150 hover:text-red-300"
+            />
+          </a>
+          <a target="_blank" href="https://www.instagram.com/williamhallinn">
+            <Icon
+              name="ph:instagram-logo-duotone"
+              width={32}
+              height={32}
+              class="text-red-100 transition duration-150 hover:text-red-300"
+            />
+          </a>
+          <a target="_blank" href="https://github.com/whallin">
+            <Icon
+              name="ph:github-logo-duotone"
+              width={32}
+              height={32}
+              class="text-red-100 transition duration-150 hover:text-red-300"
+            />
+          </a>
+        </div>
       </div>
     </div>
   </div>
