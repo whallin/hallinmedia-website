@@ -57,7 +57,11 @@ import avatar from "../../assets/avatar.png";
           riktiga världen, så att de sticker ut i mängden.
         </p>
         <div class="flex gap-4">
-          <a target="_blank" href="mailto:william@hallin.media">
+          <a
+            target="_blank"
+            href="mailto:william@hallin.media"
+            data-umami-event=`${Astro.url.pathname}: Landing Email`
+          >
             <Icon
               name="ph:envelope-duotone"
               width={32}
@@ -65,7 +69,11 @@ import avatar from "../../assets/avatar.png";
               class="text-red-100 transition duration-150 hover:text-red-300"
             />
           </a>
-          <a target="_blank" href="https://www.linkedin.com/in/whallin/">
+          <a
+            target="_blank"
+            href="https://www.linkedin.com/in/whallin/"
+            data-umami-event=`${Astro.url.pathname}: Landing LinkedIn`
+          >
             <Icon
               name="ph:linkedin-logo-duotone"
               width={32}
@@ -73,7 +81,11 @@ import avatar from "../../assets/avatar.png";
               class="text-red-100 transition duration-150 hover:text-red-300"
             />
           </a>
-          <a target="_blank" href="https://www.instagram.com/williamhallinn">
+          <a
+            target="_blank"
+            href="https://www.instagram.com/williamhallinn"
+            data-umami-event=`${Astro.url.pathname}: Landing Instagram`
+          >
             <Icon
               name="ph:instagram-logo-duotone"
               width={32}
@@ -81,7 +93,11 @@ import avatar from "../../assets/avatar.png";
               class="text-red-100 transition duration-150 hover:text-red-300"
             />
           </a>
-          <a target="_blank" href="https://github.com/whallin">
+          <a
+            target="_blank"
+            href="https://github.com/whallin"
+            data-umami-event=`${Astro.url.pathname}: Landing GitHub`
+          >
             <Icon
               name="ph:github-logo-duotone"
               width={32}
