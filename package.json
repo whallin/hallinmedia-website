@@ -2,43 +2,29 @@
   "name": "hallinmedia-website",
   "type": "module",
   "version": "0.0.1",
-  "homepage": "https://hallin.media",
-  "bugs": {
-    "url": "https://github.com/whallin/hallinmedia-website/issues",
-    "email": "william@hallin.media"
-  },
-  "contributors": [
-    {
-      "name": "William Hallin",
-      "email": "william@hallin.media",
-      "url": "https://hallin.media"
-    }
-  ],
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro build && jampack ./dist",
-    "preview": "astro preview",
-    "astro": "astro"
+    "build": "astro build",
+    "preview": "astro build && wrangler pages dev",
+    "astro": "astro",
+    "deploy": "astro build && wrangler pages deploy",
+    "cf-typegen": "wrangler types"
   },
   "dependencies": {
-    "@astrojs/partytown": "^2.0.2",
-    "@astrojs/sitemap": "^3.0.3",
-    "@astrojs/tailwind": "^5.0.2",
-    "@divriots/jampack": "^0.22.1",
-    "@iconify-json/ph": "^1.1.8",
-    "@tailwindcss/typography": "^0.5.10",
-    "astro": "^3.6.4",
-    "astro-icon": "1.0.0-next.2",
-    "astro-og-canvas": "^0.3.2",
-    "canvaskit-wasm": "^0.39.1",
-    "sharp": "^0.32.6",
-    "tailwindcss": "^3.3.6"
+    "@astrojs/sitemap": "^3.1.6",
+    "@astrojs/tailwind": "^5.1.0",
+    "astro": "^4.12.2",
+    "astro-compress": "^2.3.0",
+    "gsap": "^3.12.5",
+    "sharp": "^0.33.4",
+    "tailwindcss": "^3.4.7"
   },
   "devDependencies": {
-    "prettier": "^3.1.0",
-    "prettier-plugin-astro": "^0.12.2",
-    "prettier-plugin-tailwindcss": "^0.5.7",
-    "wrangler": "^3.67.0"
+    "@cloudflare/workers-types": "^4.20240725.0",
+    "prettier": "^3.3.3",
+    "prettier-plugin-astro": "^0.14.1",
+    "prettier-plugin-tailwindcss": "^0.6.5",
+    "wrangler": "^3.67.1"
   }
 }

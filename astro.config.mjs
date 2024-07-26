@@ -1,44 +1,10 @@
-import { defineConfig } from "astro/config";
+import { defineConfig } from 'astro/config';
 
-import tailwind from "@astrojs/tailwind";
-import partytown from "@astrojs/partytown";
+import compress from "astro-compress";
 import sitemap from "@astrojs/sitemap";
-import icon from "astro-icon";
+import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://hallin.media",
-  prefetch: {
-    defaultStrategy: "viewport",
-    prefetchAll: true,
-  },
-  experimental: {
-    contentCollectionCache: true,
-    i18n: {
-      defaultLocale: "en",
-      locales: ["en", "sv"],
-      routingStrategy: "prefix-other-locales",
-      //fallback: {
-      //  sv: "en",
-      //},
-    },
-  },
-  integrations: [
-    tailwind(),
-    partytown(),
-    sitemap({
-      i18n: {
-        defaultLocale: "en",
-        locales: {
-          en: "en-US",
-          sv: "sv-SE",
-        },
-      },
-    }),
-    icon({
-      include: {
-        ph: ["*"],
-      },
-    }),
-  ],
+  integrations: [compress(), sitemap(), tailwind()]
 });

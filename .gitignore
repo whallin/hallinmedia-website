@@ -1,7 +1,5 @@
 # build output
 dist/
-.jampack/
-.wrangler/
 
 # generated types
 .astro/
@@ -18,8 +16,13 @@ pnpm-debug.log*
 # environment variables
 .env
 .env.production
-spotify.json
-wrangler.toml
 
 # macOS-specific files
 .DS_Store
+
+# jetbrains setting folder
+.idea/
+
+# wrangler files
+.wrangler
+.dev.vars
