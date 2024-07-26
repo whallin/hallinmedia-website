@@ -2,13 +2,15 @@ export async function onRequest({ env }) {
 	// -- Measure time to fetch data
 	let startTime = performance.now()
 
+	const spotifyAccessToken = env.SPOTIFYACCESSTOKEN.get('spotifyAccessToken', { cacheTtl: 3600 })
+	console.log(`Spotify access token KV: ${spotifyAccessToken}`)
+
 	// Get data about the last played song
 	const lastPlayed = await fetch('https://api.spotify.com/v1/me/player/recently-played?limit=1', {
 		method: 'GET',
 		headers: {
 			'Content-Type': 'application/json',
-			Authorization:
-				'Bearer ' + env.SPOTIFYACCESSTOKEN.get('spotifyAccessToken', { cacheTtl: 3600 })
+			Authorization: `Bearer ${spotifyAccessToken}`
 		},
 		cf: {
 			cacheTtl: 180,
