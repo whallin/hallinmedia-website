@@ -1,6 +1,7 @@
 # build output
 dist/
 .jampack/
+.wrangler/
 
 # generated types
 .astro/
@@ -18,6 +19,7 @@ pnpm-debug.log*
 .env
 .env.production
 spotify.json
+wrangler.toml
 
 # macOS-specific files
 .DS_Store
