@@ -13,7 +13,7 @@ export default {
 					Authorization: 'Basic ' + env.SPOTIFY_CLIENT_IDSECRET_AUTH64
 				},
 				cf: {
-					cacheTtl: 1800,
+					cacheTtl: 3600,
 					cacheEverything: true
 				}
 			}

@@ -7,7 +7,8 @@ export async function onRequest({ env }) {
 		method: 'GET',
 		headers: {
 			'Content-Type': 'application/json',
-			Authorization: 'Bearer ' + env.SPOTIFYACCESSTOKEN.get('spotifyAccessToken')
+			Authorization:
+				'Bearer ' + env.SPOTIFYACCESSTOKEN.get('spotifyAccessToken', { cacheTtl: 3600 })
 		},
 		cf: {
 			cacheTtl: 180,
