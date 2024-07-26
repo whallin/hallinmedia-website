@@ -8,7 +8,7 @@
 */
 
 export default {
-	async scheduled(request, env, ctx) {
+	async scheduled(event, env, ctx) {
 		// -- Measure time to refresh spotifyAccessToken
 		let startTime = performance.now()
 
@@ -21,14 +21,9 @@ export default {
 					'Content-Type': 'application/x-www-form-urlencoded',
 					Authorization: 'Basic ' + env.SPOTIFY_CLIENT_IDSECRET_AUTH64
 				},
-				cf: {
-					cacheTtl: 3600,
-					cacheEverything: true
-				}
+				cf: { cacheTtl: 3600, cacheEverything: true }
 			}
 		).then((response) => response.json())
-
-		console.log(refreshAccess)
 
 		// -- Print measured time to refresh spotifyAccessToken
 		let endTime = performance.now()
@@ -43,11 +38,9 @@ export default {
 		// -- Print measured time to save spotifyAccessToken
 		endTime = performance.now()
 		console.log(`Save token to KV took ${endTime - startTime} ms`)
-	},
 
-	async fetch(request, env, ctx) {
 		// -- Measure time to fetch lastPlayed
-		let startTime = performance.now()
+		startTime = performance.now()
 
 		const spotifyAccessToken = await env.SPOTIFYACCESSTOKEN.get('spotifyAccessToken', {
 			cacheTtl: 3600
@@ -60,18 +53,36 @@ export default {
 				'Content-Type': 'application/json',
 				Authorization: `Bearer ${spotifyAccessToken}`
 			},
-			cf: {
-				cacheTtl: 180,
-				cacheEverything: true
-			}
+			cf: { cacheTtl: 180, cacheEverything: true }
 		}).then((response) => response.json())
 
 		// -- Print measured time to fetch lastPlayed
-		let endTime = performance.now()
+		endTime = performance.now()
 		console.log(`Last played song fetch took ${endTime - startTime} ms`)
 
+		// -- Measure time to save lastPlayedJSON
+		startTime = performance.now()
+
+		// Save lastPlayedJSON in KV
+		await env.LASTPLAYEDJSON.put('lastPlayedJSON', JSON.stringify(lastPlayed))
+
+		// -- Print measured time to save lastPlayedJSON
+		endTime = performance.now()
+		console.log(`Save token to KV took ${endTime - startTime} ms`)
+
+		switch (event.cron) {
+			case '0 */1 * * *': // Every hour
+				await refreshAccess()
+				break
+			case '*/3 * * * *': // Every 3 minutes
+				await lastPlayed()
+				break
+		}
+	},
+
+	async fetch(request, env, ctx) {
 		// Return data about the last played song
-		return new Response(JSON.stringify(lastPlayed), {
+		return new Response(await env.LASTPLAYEDJSON.get('lastPlayedJSON', { cacheTtl: 180 }), {
 			status: 200,
 			headers: {
 				'Content-Type': 'application/json',
