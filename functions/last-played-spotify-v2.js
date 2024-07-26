@@ -2,7 +2,9 @@ export async function onRequest({ env }) {
 	// -- Measure time to fetch data
 	let startTime = performance.now()
 
-	const spotifyAccessToken = env.SPOTIFYACCESSTOKEN.get('spotifyAccessToken', { cacheTtl: 3600 })
+	const spotifyAccessToken = await env.SPOTIFYACCESSTOKEN.get('spotifyAccessToken', {
+		cacheTtl: 3600
+	})
 	console.log(`Spotify access token KV: ${spotifyAccessToken}`)
 
 	// Get data about the last played song
