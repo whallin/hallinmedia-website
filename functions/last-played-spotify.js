@@ -1,10 +1,10 @@
-export async function onRequest({context, env}) {
+export async function onRequest({context}) {
   // Refresh the Spotify access token
-  const refreshAccess = await fetch(`https://accounts.spotify.com/api/token?grant_type=refresh_token&refresh_token=${env.SPOTIFY_REFRESH_TOKEN}`,{
+  const refreshAccess = await fetch(`https://accounts.spotify.com/api/token?grant_type=refresh_token&refresh_token=${context.env.SPOTIFY_REFRESH_TOKEN}`,{
     method: 'POST',
     headers: {
         'Content-Type':'application/x-www-form-urlencoded',
-        'Authorization':`Basic ${env.SPOTIFY_ACCESS_TOKEN}`,
+        'Authorization':`Basic ${context.env.SPOTIFY_ACCESS_TOKEN}`,
     },
   })
 
