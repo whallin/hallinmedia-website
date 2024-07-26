@@ -1,4 +1,4 @@
-export async function onRequest({env}) {
+export async function onRequest({context, env}) {
   // Refresh the Spotify access token
   const refreshAccess = await fetch(`https://accounts.spotify.com/api/token?grant_type=refresh_token&refresh_token=${env.SPOTIFY_REFRESH_TOKEN}`,{
     method: 'POST',
@@ -18,10 +18,10 @@ export async function onRequest({env}) {
   })
 
   // Return data about the last played song
-  return new Response(JSON.stringify(lastPlayed.json()), {
+  return new Response(lastPlayed()), {
       status: 200,
       headers: {
         "Content-Type": "application/json"
       }
-  });
+  };
 }
