@@ -8,7 +8,7 @@
 */
 
 export default {
-	async scheduled(env) {
+	async scheduled(request, env, ctx) {
 		// -- Measure time to refresh spotifyAccessToken
 		let startTime = performance.now()
 
@@ -45,7 +45,7 @@ export default {
 		console.log(`Save token to KV took ${endTime - startTime} ms`)
 	},
 
-	async fetch(env) {
+	async fetch(request, env, ctx) {
 		// -- Measure time to fetch lastPlayed
 		let startTime = performance.now()
 
