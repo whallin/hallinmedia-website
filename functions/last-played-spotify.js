@@ -18,10 +18,10 @@ export async function onRequest({context, env}) {
   })
 
   // Return data about the last played song
-  return new Response(lastPlayed()), {
+  return new Response(JSON.stringify(lastPlayed.json()), {
       status: 200,
       headers: {
         "Content-Type": "application/json"
       }
-  };
+  });
 }
