@@ -1,5 +1,5 @@
 ---
-
+import { Image } from 'astro:assets'
 ---
 
 <div class="flex flex-col gap-4">
@@ -10,11 +10,13 @@
 		target="_blank"
 		class="flex w-fit items-center gap-4 transition duration-200 hover:opacity-75"
 	>
-		<img
+		<Image
 			id="spotifyImage"
-			class="h-12 w-12 rounded-lg"
 			src="https://via.placeholder.com/64"
+			width="64"
+			height="64"
 			alt="Spotify Album Cover"
+			class="h-12 w-12 rounded-lg"
 		/>
 		<div class="flex flex-col text-sm">
 			<b id="spotifyArtist" class="text-green-600">Artist</b>
@@ -25,7 +27,7 @@
 
 <script>
 	async function fetchLastPlayed() {
-		const response = await fetch('https://hallinmedia-spotify-last-played.newgent.workers.dev/')
+		const response = await fetch('https://spotify-last-played.hallin.media/')
 		const data = await response.json()
 		document.getElementById('spotifyLink').href = data.items[0].track.external_urls.spotify
 		document.getElementById('spotifyImage').src = data.items[0].track.album.images[2].url
