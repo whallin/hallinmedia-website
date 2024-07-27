@@ -27,7 +27,7 @@ export default {
 
 		// -- Print measured time to refresh spotifyAccessToken
 		let endTime = performance.now()
-		console.log(`Refresh token fetch took ${endTime - startTime} ms`)
+		console.log(`refreshAccess fetch took ${endTime - startTime} ms`)
 
 		// -- Measure time to save spotifyAccessToken
 		startTime = performance.now()
@@ -37,7 +37,7 @@ export default {
 
 		// -- Print measured time to save spotifyAccessToken
 		endTime = performance.now()
-		console.log(`Save token to KV took ${endTime - startTime} ms`)
+		console.log(`Save refreshAccess to KV took ${endTime - startTime} ms`)
 
 		// -- Measure time to fetch lastPlayed
 		startTime = performance.now()
@@ -53,12 +53,12 @@ export default {
 				'Content-Type': 'application/json',
 				Authorization: `Bearer ${spotifyAccessToken}`
 			},
-			cf: { cacheTtl: 180, cacheEverything: true }
+			cf: { cacheTtl: 600, cacheEverything: true }
 		}).then((response) => response.json())
 
 		// -- Print measured time to fetch lastPlayed
 		endTime = performance.now()
-		console.log(`Last played song fetch took ${endTime - startTime} ms`)
+		console.log(`lastPlayed fetch took ${endTime - startTime} ms`)
 
 		// -- Measure time to save lastPlayedJSON
 		startTime = performance.now()
@@ -68,25 +68,26 @@ export default {
 
 		// -- Print measured time to save lastPlayedJSON
 		endTime = performance.now()
-		console.log(`Save token to KV took ${endTime - startTime} ms`)
+		console.log(`Save lastPlayed to KV took ${endTime - startTime} ms`)
 
 		switch (event.cron) {
 			case '0 */1 * * *': // Every hour
 				await refreshAccess()
 				break
-			case '*/3 * * * *': // Every 3 minutes
+			case '*/10 * * * *': // Every 5 minutes
 				await lastPlayed()
 				break
 		}
+		console.log(`Cron processeed ${event.scheduledTime}`)
 	},
 
 	async fetch(request, env, ctx) {
 		// Return data about the last played song
-		return new Response(await env.LASTPLAYEDJSON.get('lastPlayedJSON', { cacheTtl: 180 }), {
+		return new Response(await env.LASTPLAYEDJSON.get('lastPlayedJSON', { cacheTtl: 600 }), {
 			status: 200,
 			headers: {
 				'Content-Type': 'application/json',
-				'Cache-Control': 'public, max-age=180'
+				'Cache-Control': 'public, max-age=600'
 			}
 		})
 	}

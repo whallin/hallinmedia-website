@@ -1,14 +1,14 @@
 ---
 import { getRelativeLocaleUrl } from 'astro:i18n'
 import { Picture } from 'astro:assets'
-import LayoutMain from '../layouts/Main.astro'
-import HallinmediaGradientBG from '../assets/brand/hallinmedia-gradient.png'
-import Avatar from '../assets/avatar.png'
-import PhHandWavingDuotone from '../components/icon/PhHandWavingDuotone.astro'
-import SpotifyNowPlaying from '../components/SpotifyNowPlaying.astro'
+import LayoutMain from '../../layouts/Main.astro'
+import HallinmediaGradientBG from '../../assets/brand/hallinmedia-gradient.png'
+import Avatar from '../../assets/avatar.png'
+import PhHandWavingDuotone from '../../components/icon/PhHandWavingDuotone.astro'
+import SpotifyNowPlaying from '../../components/SpotifyNowPlaying.astro'
 ---
 
-<LayoutMain title="Home">
+<LayoutMain title="Hem">
 	<main>
 		<div
 			class="relative h-fit overflow-clip break-words rounded-xl bg-gradient-to-t from-red-900/75 to-red-900/0 p-8 shadow-lg sm:h-[250px]"
@@ -29,8 +29,8 @@ import SpotifyNowPlaying from '../components/SpotifyNowPlaying.astro'
 					<a
 						href={getRelativeLocaleUrl(Astro.currentLocale, 'work')}
 						class="underline decoration-2 underline-offset-4 transition duration-200 hover:opacity-75 focus:opacity-50"
-						>Freelancing</a
-					> digital designer & video producer based in <i class="font-serif">Skellefteå, Sweden.</i>
+						>Frilansande</a
+					> digital designer & videoproducent i <i class="font-serif">Skellefteå, Sweden.</i>
 				</h1>
 			</div>
 			<Picture
@@ -43,19 +43,20 @@ import SpotifyNowPlaying from '../components/SpotifyNowPlaying.astro'
 		</div>
 	</main>
 	<section id="about" class="flex flex-col gap-4 py-12">
-		<h2 id="about-1" class="text-2xl">Hi <i class="font-serif">there!</i></h2>
+		<h2 id="about-1" class="text-2xl">Hallå <i class="font-serif">där!</i></h2>
 		<p id="about-2">
-			Thanks for stopping by my website! It's currently getting a bit of a makeover, but I'm super
-			excited that you're interested.
+			Tack för att du tittade förbi min sajt! Den är för närvarande på väg att få lite av en
+			makeover, men jag är super glad att du är intresserad.
 		</p>
 		<p id="about-3">
-			If you wouldn't mind checking back a little later, that would be awesome! There's not much to
-			see at the moment, and I can't wait to show you all the cool stuff coming soon.
+			Om du inte skulle ha något emot att titta förbi lite senare, så vore det fantastiskt! Det
+			finns inte så mycket att se just nu, och jag ser fram emot att visa dig alla läckra saker som
+			kommer framöver.
 		</p>
 		<p id="about-4">
-			In the meantime, if you're curious about what I do, feel free to check out my social media
-			links in the footer below. I'm active on Instagram and LinkedIn, and I'd love to connect with
-			you there!
+			Under tiden, om du är nyfiken på vad jag gör, är du välkommen att kolla in mina sociala medier
+			i sidfoten nedan. Jag är aktiv både på Instagram och LinkedIn, och jag skulle gärna träffa dig
+			där!
 		</p>
 	</section>
 	<SpotifyNowPlaying />

@@ -1,0 +1,50 @@
+---
+import { Picture } from 'astro:assets'
+import { getRelativeLocaleUrl } from 'astro:i18n'
+import PhEnvelopeSimpleDuotone from './icon/PhEnvelopeSimpleDuotone.astro'
+import PhBehanceLogoDuotone from './icon/brands/PhBehanceLogoDuotone.astro'
+import PhYoutubeLogoDuotone from './icon/brands/PhYoutubeLogoDuotone.astro'
+import PhInstagramLogoDuotone from './icon/brands/PhInstagramLogoDuotone.astro'
+import PhLinkedinLogoDuotone from './icon/brands/PhLinkedinLogoDuotone.astro'
+import HallinmediaWordmarkVertical from '../assets/brand/wordmark-vertical.svg'
+---
+
+<hr class="my-12 border-t-[0.5px] border-stone-300" />
+
+<footer class="flex flex-col items-center gap-4 sm:flex-row sm:justify-between">
+	<div class="flex flex-col items-center gap-4 sm:flex-row">
+		<a href={getRelativeLocaleUrl(Astro.currentLocale, '/')}>
+			<Picture
+				src={HallinmediaWordmarkVertical}
+				alt="Wordmark of HallinMedia"
+				width={64}
+				class="select-none transition duration-200 hover:opacity-50"
+			/>
+		</a>
+		<p class="text-stone-400">
+			A <a
+				href="https://newgent.digital/"
+				target="_blank"
+				class="underline underline-offset-4 transition duration-200 hover:opacity-75 focus:opacity-50"
+				>newgent.digital</a
+			> brand.
+		</p>
+	</div>
+	<nav class="flex gap-2 text-red-400">
+		<a href="mailto:william@hallin.media"
+			><PhEnvelopeSimpleDuotone class="h-6 w-6 transition duration-200 hover:opacity-75" /></a
+		>
+		<a href="https://www.behance.net/whallin" target="_blank"
+			><PhBehanceLogoDuotone class="h-6 w-6 transition duration-200 hover:opacity-75" /></a
+		>
+		<a href="https://www.youtube.com/@HallinMedia" target="_blank"
+			><PhYoutubeLogoDuotone class="h-6 w-6 transition duration-200 hover:opacity-75" /></a
+		>
+		<a href="https://www.instagram.com/williamhallinn/" target="_blank"
+			><PhInstagramLogoDuotone class="h-6 w-6 transition duration-200 hover:opacity-75" /></a
+		>
+		<a href="https://www.linkedin.com/in/whallin/" target="_blank"
+			><PhLinkedinLogoDuotone class="h-6 w-6 transition duration-200 hover:opacity-75" /></a
+		>
+	</nav>
+</footer>
