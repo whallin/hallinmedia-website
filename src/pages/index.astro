@@ -1,112 +1,88 @@
 ---
-import DefaultLayout from "../layouts/Default.astro";
-
-import { getImage, Picture } from "astro:assets";
-import { Icon } from "astro-icon/components";
-
-import landingBg from "../assets/landing-bg.png";
-const optimizedLandingBg = await getImage({ src: landingBg });
-import logomarkWhite from "../assets/logomark-white.svg";
-import avatar from "../assets/avatar.png";
+import { getRelativeLocaleUrl } from 'astro:i18n'
+import { Picture } from 'astro:assets'
+import LayoutMain from '../layouts/Main.astro'
+import HallinmediaGradientBG from '../assets/brand/hallinmedia-gradient.png'
+import Avatar from '../assets/avatar.png'
+import PhHandWavingDuotone from '../components/icon/PhHandWavingDuotone.astro'
+import SpotifyNowPlaying from '../components/SpotifyNowPlaying.astro'
 ---
 
-<DefaultLayout
-  title="Home"
-  description="William Hallin is a high-school student and product designer based in Skellefteå, Sweden. William helps brands to be visually appealing and unique online."
->
-  <div
-    class="h-full w-full bg-cover bg-center px-8 pb-12 sm:h-screen"
-    style={`background-image: url(${optimizedLandingBg.src})`}
-  >
-    <div class="flex w-full flex-col items-center">
-      <Picture
-        src={logomarkWhite}
-        alt=""
-        widths={[128, 200, 256, logomarkWhite.width]}
-        class="select-none py-14"
-      />
-    </div>
-    <div class="flex h-5/6 w-full items-center justify-center py-32 sm:py-0">
-      <div class="flex max-w-6xl flex-col gap-8">
-        <div class="flex gap-6">
-          <Icon
-            name="ph:hand-waving-duotone"
-            width={64}
-            height={64}
-            class="text-red-200"
-          />
-          <Picture
-            src={avatar}
-            alt=""
-            widths={[16, 32, 64, 128]}
-            class="w-16 select-none rounded-full"
-          />
-        </div>
-        <h1 class="text-5xl font-medium text-stone-50">
-          I'm <span
-            class="bg-gradient-to-b from-stone-50 to-red-200 bg-clip-text font-serif italic text-transparent"
-            >William Hallin.</span
-          >
-        </h1>
-        <p class="text-3xl text-stone-50">
-          I'm a high school student, <span class="font-serif italic"
-            >product designer</span
-          >, and nature lover based in <span class="font-serif italic"
-            >Skellefteå, Sweden.</span
-          > I help build and develop brands and products for the real world,
-          making them stand out in the crowd.
-        </p>
-        <div class="flex gap-4">
-          <a
-            target="_blank"
-            href="mailto:william@hallin.media"
-            data-umami-event=`${Astro.url.pathname}: Landing Email`
-          >
-            <Icon
-              name="ph:envelope-duotone"
-              width={32}
-              height={32}
-              class="text-red-100 transition duration-150 hover:text-red-300"
-            />
-          </a>
-          <a
-            target="_blank"
-            href="https://www.linkedin.com/in/whallin/"
-            data-umami-event=`${Astro.url.pathname}: Landing LinkedIn`
-          >
-            <Icon
-              name="ph:linkedin-logo-duotone"
-              width={32}
-              height={32}
-              class="text-red-100 transition duration-150 hover:text-red-300"
-            />
-          </a>
-          <a
-            target="_blank"
-            href="https://www.instagram.com/williamhallinn"
-            data-umami-event=`${Astro.url.pathname}: Landing Instagram`
-          >
-            <Icon
-              name="ph:instagram-logo-duotone"
-              width={32}
-              height={32}
-              class="text-red-100 transition duration-150 hover:text-red-300"
-            />
-          </a>
-          <a
-            target="_blank"
-            href="https://github.com/whallin"
-            data-umami-event=`${Astro.url.pathname}: Landing GitHub`
-          >
-            <Icon
-              name="ph:github-logo-duotone"
-              width={32}
-              height={32}
-              class="text-red-100 transition duration-150 hover:text-red-300"
-            />
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</DefaultLayout>
+<LayoutMain title="Home">
+	<main>
+		<div
+			class="relative h-fit overflow-clip break-words rounded-xl bg-gradient-to-t from-red-900/75 to-red-900/0 p-8 shadow-lg sm:h-[250px]"
+		>
+			<div class="flex h-full flex-col justify-between gap-8">
+				<div class="flex items-center gap-2" id="landing-avatar">
+					<Picture
+						src={Avatar}
+						alt="Picture of William Hallin"
+						formats={['avif', 'webp']}
+						height={48}
+						class="select-none rounded-full"
+						id="landing-avatar--img"
+					/>
+					<PhHandWavingDuotone class="h-10 w-10 text-red-600" id="landing-avatar--wave" />
+				</div>
+				<h1 class="text-3xl font-light text-stone-50" id="landing-header">
+					<a
+						href={getRelativeLocaleUrl(Astro.currentLocale, 'work')}
+						class="underline decoration-2 underline-offset-4 transition duration-200 hover:opacity-75 focus:opacity-50"
+						>Freelancing</a
+					> digital designer & video producer based in <i class="font-serif">Skellefteå, Sweden.</i>
+				</h1>
+			</div>
+			<Picture
+				src={HallinmediaGradientBG}
+				alt=""
+				formats={['avif', 'webp']}
+				height={300}
+				class="justify-self absolute left-0 top-0 -z-10 h-full w-full select-none"
+			/>
+		</div>
+	</main>
+	<section id="about" class="flex flex-col gap-4 py-12">
+		<h2 id="about-1" class="text-2xl">Hi <i class="font-serif">there!</i></h2>
+		<p id="about-2">
+			Thanks for stopping by my website! It's currently getting a bit of a makeover, but I'm super
+			excited that you're interested.
+		</p>
+		<p id="about-3">
+			If you wouldn't mind checking back a little later, that would be awesome! There's not much to
+			see at the moment, and I can't wait to show you all the cool stuff coming soon.
+		</p>
+		<p id="about-4">
+			In the meantime, if you're curious about what I do, feel free to check out my social media
+			links in the footer below. I'm active on Instagram and LinkedIn, and I'd love to connect with
+			you there!
+		</p>
+	</section>
+	<SpotifyNowPlaying />
+
+	<script>
+		import gsap from 'gsap'
+
+		gsap.from(['#landing-avatar--img', '#landing-avatar--wave'], {
+			y: -5,
+			opacity: 0,
+			duration: 1,
+			ease: 'power2.out',
+			stagger: 0.25
+		})
+		gsap.from(['#landing-avatar', '#landing-header'], {
+			y: -15,
+			opacity: 0,
+			duration: 1,
+			ease: 'power2.out',
+			stagger: 0.25
+		})
+		gsap.from(['#about-1', '#about-2', '#about-3', '#about-4'], {
+			y: 25,
+			opacity: 0,
+			duration: 0.5,
+			ease: 'power2.out',
+			stagger: 0.25
+		})
+	</script>
+</LayoutMain>

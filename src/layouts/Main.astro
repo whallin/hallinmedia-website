@@ -1,0 +1,24 @@
+---
+import Footer from '../components/Footer.astro'
+import Navbar from '../components/Navbar.astro'
+import SiteHead from '../components/SiteHead.astro'
+
+interface Props {
+	title: string
+	description: string
+}
+
+const { title, description } = Astro.props
+---
+
+<!doctype html>
+<html lang=`${Astro.currentLocale}`>
+	<head>
+		<SiteHead title={title} description={description} />
+	</head>
+	<body class="m-auto max-w-[700px] bg-stone-100 p-6 selection:bg-red-500">
+		<Navbar />
+		<slot />
+		<Footer />
+	</body>
+</html>

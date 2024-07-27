@@ -1,0 +1,44 @@
+---
+import { getRelativeLocaleUrl } from 'astro:i18n'
+import { Picture } from 'astro:assets'
+import HallinmediaWordmark from '../assets/brand/wordmark.svg'
+import PhHeartDuotone from './icon/PhHeartDuotone.astro'
+import PhChatCircleTextDuotone from './icon/PhChatCircleTextDuotone.astro'
+import PhHandsClappingDuotone from './icon/PhHandsClappingDuotone.astro'
+---
+
+<div
+	class="flex flex-col justify-between gap-4 pb-8 pt-4 sm:flex-row sm:items-center sm:gap-0 sm:pb-12"
+>
+	<div class="flex w-full items-center justify-between gap-6 sm:w-fit sm:justify-start">
+		<a href={getRelativeLocaleUrl(Astro.currentLocale, '/')}>
+			<Picture
+				src={HallinmediaWordmark}
+				alt="Wordmark of HallinMedia"
+				width={160}
+				class="select-none transition duration-200 hover:opacity-50"
+			/>
+		</a>
+		<div class="flex gap-4 font-semibold text-stone-400">
+			<a href={getRelativeLocaleUrl('en')}>EN</a>
+			<a href={getRelativeLocaleUrl('sv')}>SV</a>
+		</div>
+	</div>
+	<nav class="flex items-end gap-6 text-stone-400">
+		<a
+			href={getRelativeLocaleUrl(Astro.currentLocale, 'work')}
+			class="flex items-center gap-1 transition duration-200 hover:text-red-400 focus:opacity-50"
+			><PhHeartDuotone class="text-red-400" /> Work</a
+		>
+		<a
+			href={getRelativeLocaleUrl(Astro.currentLocale, 'blog')}
+			class="flex items-center gap-1 transition duration-200 hover:text-red-400 focus:opacity-50"
+			><PhChatCircleTextDuotone class="text-red-400" /> Blog</a
+		>
+		<a
+			href={getRelativeLocaleUrl(Astro.currentLocale, 'contact')}
+			class="flex items-center gap-1 transition duration-200 hover:text-red-400 focus:opacity-50"
+			><PhHandsClappingDuotone class="text-red-400" /> Contact</a
+		>
+	</nav>
+</div>
