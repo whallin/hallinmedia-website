@@ -23,7 +23,7 @@ import SpotifyNowPlaying from '../../components/SpotifyNowPlaying.astro'
 						class="select-none rounded-full"
 						id="landing-avatar--img"
 					/>
-					<PhHandWavingDuotone class="h-10 w-10 text-red-200" id="landing-avatar--wave" />
+					<PhHandWavingDuotone class="h-10 w-10 text-red-100" id="landing-avatar--wave" />
 				</div>
 				<h1 class="text-3xl font-light text-stone-50" id="landing-header">
 					<a
@@ -62,12 +62,14 @@ import SpotifyNowPlaying from '../../components/SpotifyNowPlaying.astro'
 	<SpotifyNowPlaying />
 
 	<script>
+		import gsap from 'gsap'
+
 		gsap.from(['#landing-avatar--img', '#landing-avatar--wave'], {
-			y: -5,
+			y: -10,
 			opacity: 0,
 			duration: 1,
 			ease: 'power2.out',
-			stagger: 0.25
+			stagger: 0.5
 		})
 		gsap.from(['#landing-avatar', '#landing-header'], {
 			y: -15,
