@@ -38,11 +38,6 @@ const t = useTranslations(Astro.currentLocale)
 	</div>
 	<nav class="flex items-end justify-between gap-6 text-stone-400 sm:justify-start">
 		<a
-			href={getRelativeLocaleUrl(Astro.currentLocale, '/')}
-			class="flex items-center gap-1 transition duration-200 hover:text-red-400 focus:opacity-50"
-			><PhHouseDuotone class="text-red-400" /> {t('nav.home')}</a
-		>
-		<a
 			href={getRelativeLocaleUrl(Astro.currentLocale, 'work')}
 			class="flex items-center gap-1 transition duration-200 hover:text-red-400 focus:opacity-50"
 			><PhHeartDuotone class="text-red-400" /> {t('nav.work')}</a

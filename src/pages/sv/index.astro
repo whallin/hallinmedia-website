@@ -71,6 +71,7 @@ import SpotifyNowPlaying from '../../components/SpotifyNowPlaying.astro'
 			ease: 'power2.out',
 			stagger: 0.5
 		})
+
 		gsap.from(['#landing-avatar', '#landing-header'], {
 			y: -15,
 			opacity: 0,
@@ -78,6 +79,7 @@ import SpotifyNowPlaying from '../../components/SpotifyNowPlaying.astro'
 			ease: 'power2.out',
 			stagger: 0.25
 		})
+
 		gsap.from(['#about-1', '#about-2', '#about-3', '#about-4'], {
 			y: 25,
 			opacity: 0,
@@ -85,6 +87,7 @@ import SpotifyNowPlaying from '../../components/SpotifyNowPlaying.astro'
 			ease: 'power2.out',
 			stagger: 0.25
 		})
+
 		gsap.to('#landing-avatar--wave', {
 			rotation: 20,
 			duration: 1,
