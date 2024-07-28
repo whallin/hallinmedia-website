@@ -14,7 +14,7 @@ import SpotifyNowPlaying from '../components/SpotifyNowPlaying.astro'
 			class="relative h-fit overflow-clip break-words rounded-xl bg-gradient-to-t from-red-900/75 to-red-900/0 p-8 shadow-lg sm:h-[250px]"
 		>
 			<div class="flex h-full flex-col justify-between gap-12">
-				<div class="flex items-center gap-2" id="landing-avatar">
+				<div class="flex items-center gap-4" id="landing-avatar">
 					<Picture
 						src={Avatar}
 						alt="Picture of William Hallin"
@@ -23,7 +23,7 @@ import SpotifyNowPlaying from '../components/SpotifyNowPlaying.astro'
 						class="select-none rounded-full"
 						id="landing-avatar--img"
 					/>
-					<PhHandWavingDuotone class="h-10 w-10 text-red-200" id="landing-avatar--wave" />
+					<PhHandWavingDuotone class="h-10 w-10 text-red-100" id="landing-avatar--wave" />
 				</div>
 				<h1 class="text-3xl font-light text-stone-50" id="landing-header">
 					<a
@@ -64,11 +64,11 @@ import SpotifyNowPlaying from '../components/SpotifyNowPlaying.astro'
 		import gsap from 'gsap'
 
 		gsap.from(['#landing-avatar--img', '#landing-avatar--wave'], {
-			y: -5,
+			y: -10,
 			opacity: 0,
 			duration: 1,
 			ease: 'power2.out',
-			stagger: 0.25
+			stagger: 0.5
 		})
 		gsap.from(['#landing-avatar', '#landing-header'], {
 			y: -15,
@@ -83,6 +83,13 @@ import SpotifyNowPlaying from '../components/SpotifyNowPlaying.astro'
 			duration: 0.5,
 			ease: 'power2.out',
 			stagger: 0.25
+		})
+		gsap.to('#landing-avatar--wave', {
+			rotation: 20,
+			duration: 1,
+			yoyo: true,
+			repeat: -1,
+			ease: 'power1.inOut'
 		})
 	</script>
 </LayoutMain>
