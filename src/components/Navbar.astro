@@ -1,10 +1,16 @@
 ---
 import { getRelativeLocaleUrl } from 'astro:i18n'
 import { Picture } from 'astro:assets'
+import { useTranslations } from '../i18n/utils'
+
 import HallinmediaWordmark from '../assets/brand/wordmark.svg'
+
 import PhHeartDuotone from './icon/PhHeartDuotone.astro'
 import PhChatCircleTextDuotone from './icon/PhChatCircleTextDuotone.astro'
 import PhHandsClappingDuotone from './icon/PhHandsClappingDuotone.astro'
+import PhHouseDuotone from './icon/PhHouseDuotone.astro'
+
+const t = useTranslations(Astro.currentLocale)
 ---
 
 <div
@@ -20,25 +26,36 @@ import PhHandsClappingDuotone from './icon/PhHandsClappingDuotone.astro'
 			/>
 		</a>
 		<div class="flex gap-4 font-semibold text-stone-400">
-			<a href={getRelativeLocaleUrl('en')}>EN</a>
-			<a href={getRelativeLocaleUrl('sv')}>SV</a>
+			<a
+				href={getRelativeLocaleUrl('en')}
+				class="transition duration-200 hover:opacity-75 focus:opacity-50">EN</a
+			>
+			<a
+				href={getRelativeLocaleUrl('sv')}
+				class="transition duration-200 hover:opacity-75 focus:opacity-50">SV</a
+			>
 		</div>
 	</div>
-	<nav class="flex items-end gap-6 text-stone-400">
+	<nav class="flex items-end justify-between gap-6 text-stone-400 sm:justify-start">
+		<a
+			href={getRelativeLocaleUrl(Astro.currentLocale, '/')}
+			class="flex items-center gap-1 transition duration-200 hover:text-red-400 focus:opacity-50"
+			><PhHouseDuotone class="text-red-400" /> {t('nav.home')}</a
+		>
 		<a
 			href={getRelativeLocaleUrl(Astro.currentLocale, 'work')}
 			class="flex items-center gap-1 transition duration-200 hover:text-red-400 focus:opacity-50"
-			><PhHeartDuotone class="text-red-400" /> Work</a
+			><PhHeartDuotone class="text-red-400" /> {t('nav.work')}</a
 		>
 		<a
 			href={getRelativeLocaleUrl(Astro.currentLocale, 'blog')}
 			class="flex items-center gap-1 transition duration-200 hover:text-red-400 focus:opacity-50"
-			><PhChatCircleTextDuotone class="text-red-400" /> Blog</a
+			><PhChatCircleTextDuotone class="text-red-400" /> {t('nav.blog')}</a
 		>
 		<a
 			href={getRelativeLocaleUrl(Astro.currentLocale, 'contact')}
 			class="flex items-center gap-1 transition duration-200 hover:text-red-400 focus:opacity-50"
-			><PhHandsClappingDuotone class="text-red-400" /> Contact</a
+			><PhHandsClappingDuotone class="text-red-400" /> {t('nav.contact')}</a
 		>
 	</nav>
 </div>
