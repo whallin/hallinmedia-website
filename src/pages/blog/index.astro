@@ -8,8 +8,8 @@ const blogPosts = await getCollection('blog')
 
 <LayoutMain title="Blogg">
 	<div class="flex flex-row items-center gap-4">
-		<PhChatCircleTextDuotone id="blog-header--icon" class="h-10 w-10 text-red-400" />
-		<h1 id="blog-header" class="text-3xl font-light">
+		<PhChatCircleTextDuotone id="blog-header--icon" class="h-10 w-10 text-red-400 opacity-0" />
+		<h1 id="blog-header" class="text-3xl font-light opacity-0">
 			Mina <i class="font-serif">blogginlägg</i>
 		</h1>
 	</div>
@@ -31,6 +31,7 @@ const blogPosts = await getCollection('blog')
 		document.addEventListener(
 			'astro:page-load',
 			() => {
+				gsap.set(['#blog-header--icon', '#blog-header'], { opacity: 1 })
 				gsap.from(['#blog-header--icon', '#blog-header'], {
 					y: -10,
 					opacity: 0,

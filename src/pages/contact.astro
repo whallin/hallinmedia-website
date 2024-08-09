@@ -10,8 +10,8 @@ import LayoutMain from '../layouts/Main.astro'
 
 <LayoutMain title="Kontakt">
 	<div class="flex flex-row items-center gap-4">
-		<PhHandWavingDuotone id="contact-header--icon" class="h-10 w-10 text-red-400" />
-		<h1 id="contact-header" class="text-3xl font-light">
+		<PhHandWavingDuotone id="contact-header--icon" class="h-10 w-10 text-red-400 opacity-0" />
+		<h1 id="contact-header" class="text-3xl font-light opacity-0">
 			Låt oss <i class="font-serif">snacka!</i>
 		</h1>
 	</div>
@@ -78,6 +78,7 @@ import LayoutMain from '../layouts/Main.astro'
 		document.addEventListener(
 			'astro:page-load',
 			() => {
+				gsap.set(['#contact-header--icon', '#contact-header'], { opacity: 1 })
 				gsap.from(['#contact-header--icon', '#contact-header'], {
 					y: -10,
 					opacity: 0,
