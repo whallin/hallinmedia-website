@@ -86,6 +86,10 @@ import LayoutMain from '../layouts/Main.astro'
 					ease: 'power2.out',
 					stagger: 0.25
 				})
+
+				// Update the stockholm-time every minute
+				updateStockholmTime()
+				setInterval(updateStockholmTime, 1000)
 			},
 			{ once: false }
 		)
@@ -100,9 +104,5 @@ import LayoutMain from '../layouts/Main.astro'
 				hour12: false
 			}).format(new Date())
 		}
-
-		// Update the stockholm-time every minute
-		updateStockholmTime()
-		setInterval(updateStockholmTime, 1000)
 	</script>
 </LayoutMain>
