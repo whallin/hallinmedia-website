@@ -1,0 +1,29 @@
+---
+import PhHeartDuotone from '../../components/icon/PhHeartDuotone.astro'
+import LayoutMain from '../../layouts/Main.astro'
+---
+
+<LayoutMain title="Arbete">
+	<div class="flex flex-row items-center gap-4">
+		<PhHeartDuotone id="work-header--icon" class="h-10 w-10 text-red-400" />
+		<h1 id="work-header" class="text-3xl font-light">
+			Mina tidigare <i class="font-serif">arbeten</i>
+		</h1>
+	</div>
+
+	<script>
+		document.addEventListener(
+			'astro:page-load',
+			() => {
+				gsap.from(['#work-header--icon', '#work-header'], {
+					y: -10,
+					opacity: 0,
+					duration: 1,
+					ease: 'power2.out',
+					stagger: 0.25
+				})
+			},
+			{ once: false }
+		)
+	</script>
+</LayoutMain>

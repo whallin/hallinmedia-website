@@ -14,7 +14,7 @@ const { title, description } = Astro.props
 <!doctype html>
 <html lang=`${Astro.currentLocale}`>
 	<head>
-		<SiteHead title={title} description={description} />
+		<SiteHead title=`${title} - Blogg` description={description} />
 	</head>
 	<body class="m-auto max-w-[700px] bg-stone-100 p-6 text-stone-900 selection:bg-red-500">
 		<Navbar />

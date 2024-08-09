@@ -9,19 +9,15 @@ export default defineConfig({
 	site: 'https://hallin.media',
 	prefetch: true,
 	i18n: {
-		defaultLocale: 'en',
-		locales: ['en', 'sv'],
-		fallback: {
-			sv: 'en'
-		}
+		defaultLocale: 'sv',
+		locales: ['sv']
 	},
 	integrations: [
 		compress(),
 		sitemap({
 			i18n: {
-				defaultLocale: 'en',
+				defaultLocale: 'sv',
 				locales: {
-					en: 'en-US',
 					sv: 'sv-SE'
 				}
 			}

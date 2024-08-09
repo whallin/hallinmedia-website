@@ -1,0 +1,45 @@
+---
+import { getCollection } from 'astro:content'
+import PhChatCircleTextDuotone from '../../components/icon/PhChatCircleTextDuotone.astro'
+import LayoutMain from '../../layouts/Main.astro'
+
+const blogPosts = await getCollection('blog')
+---
+
+<LayoutMain title="Blogg">
+	<div class="flex flex-row items-center gap-4">
+		<PhChatCircleTextDuotone id="blog-header--icon" class="h-10 w-10 text-red-400" />
+		<h1 id="blog-header" class="text-3xl font-light">
+			Mina <i class="font-serif">blogginlägg</i>
+		</h1>
+	</div>
+	<section>
+		<ul>
+			{
+				blogPosts.map((post) => (
+					<li key={post.id}>
+						<a href={`/blog/${post.slug}`} class="text-blue-500 hover:text-blue-700">
+							{post.data.title}
+						</a>
+					</li>
+				))
+			}
+		</ul>
+	</section>
+
+	<script>
+		document.addEventListener(
+			'astro:page-load',
+			() => {
+				gsap.from(['#blog-header--icon', '#blog-header'], {
+					y: -10,
+					opacity: 0,
+					duration: 1,
+					ease: 'power2.out',
+					stagger: 0.25
+				})
+			},
+			{ once: false }
+		)
+	</script>
+</LayoutMain>
