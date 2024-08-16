@@ -10,7 +10,10 @@ import PhLinkedinLogoDuotone from '../components/icon/brands/PhLinkedinLogoDuoto
 import LayoutMain from '../layouts/Main.astro'
 ---
 
-<LayoutMain title="Kontakt">
+<LayoutMain
+	title="Kontakt"
+	description="William Hallin är en frilansande digital designer och videoproducent i Skellefteå. Specialiserad på fotografering, videoproduktion och redigering."
+>
 	<div class="flex flex-row items-center gap-4">
 		<PhHandWavingDuotone id="contact-header--icon" class="h-10 w-10 text-red-400 opacity-0" />
 		<h1 id="contact-header" class="text-3xl font-light opacity-0">
@@ -43,9 +46,11 @@ import LayoutMain from '../layouts/Main.astro'
 				alt="Picture of William Hallin"
 				formats={['avif', 'webp']}
 				widths={[250, 640]}
+				sizes="(max-width: 640px) 640px, 250px"
 				class="h-full select-none rounded drop-shadow-2xl transition duration-150 hover:drop-shadow-lg"
+				loading="eager"
 			/>
-			<i class="text-center text-xs text-stone-400">Fotat i Mo i Rana, Norge 🇳🇴</i>
+			<i class="text-center text-xs text-stone-500">Fotat i Mo i Rana, Norge 🇳🇴</i>
 		</div>
 	</div>
 	<section id="contact-links" class="flex flex-col gap-6">
@@ -61,7 +66,7 @@ import LayoutMain from '../layouts/Main.astro'
 				<PhEnvelopeSimpleDuotone class="h-8 w-8 text-red-400" />
 				<div class="flex flex-col gap-1">
 					<span class="font-serif">E-post</span>
-					<span class="text-stone-400">william@hallin.media</span>
+					<span class="text-stone-500">william@hallin.media</span>
 				</div>
 			</div>
 		</a>
@@ -77,7 +82,7 @@ import LayoutMain from '../layouts/Main.astro'
 				<PhPhoneDuotone class="h-8 w-8 text-red-400" />
 				<div class="flex flex-col gap-1">
 					<span class="font-serif">Telefon</span>
-					<span class="text-stone-400">+46 (0)70-615 92 79</span>
+					<span class="text-stone-500">+46 (0)70-615 92 79</span>
 				</div>
 			</div>
 		</a>
@@ -94,7 +99,7 @@ import LayoutMain from '../layouts/Main.astro'
 				<PhInstagramLogoDuotone class="h-8 w-8 text-red-400" />
 				<div class="flex flex-col gap-1">
 					<span class="font-serif">Instagram</span>
-					<span class="text-stone-400">@williamhallinn</span>
+					<span class="text-stone-500">@williamhallinn</span>
 				</div>
 			</div>
 		</a>
@@ -111,7 +116,7 @@ import LayoutMain from '../layouts/Main.astro'
 				<PhLinkedinLogoDuotone class="h-8 w-8 text-red-400" />
 				<div class="flex flex-col gap-1">
 					<span class="font-serif">LinkedIn</span>
-					<span class="text-stone-400">@whallin</span>
+					<span class="text-stone-500">@whallin</span>
 				</div>
 			</div>
 		</a>

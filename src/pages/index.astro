@@ -9,7 +9,10 @@ import PhHandWavingDuotone from '../components/icon/PhHandWavingDuotone.astro'
 import LayoutMain from '../layouts/Main.astro'
 ---
 
-<LayoutMain title="Hem">
+<LayoutMain
+	title="Hem"
+	description="William Hallin är en frilansande digital designer och videoproducent i Skellefteå. Specialiserad på fotografering, videoproduktion och redigering."
+>
 	<main class="pb-12">
 		<div
 			class="relative h-fit overflow-clip break-words rounded-xl bg-gradient-to-t from-red-900/70 to-red-900/0 p-8 shadow-lg sm:h-[250px]"
@@ -20,8 +23,8 @@ import LayoutMain from '../layouts/Main.astro'
 						src={Avatar}
 						alt="Picture of William Hallin"
 						formats={['avif', 'webp']}
-						height={48}
-						class="select-none rounded-full opacity-0"
+						height={80}
+						class="h-[48px] w-[48px] select-none rounded-full opacity-0"
 						id="landing-avatar--img"
 					/>
 					<PhHandWavingDuotone class="h-10 w-10 text-red-800 opacity-0" id="landing-avatar--wave" />
@@ -38,8 +41,8 @@ import LayoutMain from '../layouts/Main.astro'
 				src={HallinmediaGradientBG}
 				alt=""
 				formats={['avif', 'webp']}
-				height={300}
-				class="justify-self absolute left-0 top-0 -z-10 h-full w-full select-none"
+				loading="eager"
+				class="justify-self absolute left-0 top-0 -z-10 h-full select-none"
 			/>
 		</div>
 	</main>

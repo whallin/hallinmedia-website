@@ -28,6 +28,7 @@
 		"prettier-plugin-astro": "^0.14.1",
 		"prettier-plugin-astro-organize-imports": "^0.4.9",
 		"prettier-plugin-tailwindcss": "^0.6.6",
+		"unlighthouse": "^0.13.2",
 		"wrangler": "^3.72.0"
 	}
 }
