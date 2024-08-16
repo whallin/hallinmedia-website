@@ -1,4 +1,6 @@
 ---
+import { Picture } from 'astro:assets'
+import ImgContact from '../assets/contactimg.png'
 import PhClockDuotone from '../components/icon/PhClockDuotone.astro'
 import PhEnvelopeSimpleDuotone from '../components/icon/PhEnvelopeSimpleDuotone.astro'
 import PhHandWavingDuotone from '../components/icon/PhHandWavingDuotone.astro'
@@ -12,81 +14,125 @@ import LayoutMain from '../layouts/Main.astro'
 	<div class="flex flex-row items-center gap-4">
 		<PhHandWavingDuotone id="contact-header--icon" class="h-10 w-10 text-red-400 opacity-0" />
 		<h1 id="contact-header" class="text-3xl font-light opacity-0">
-			Låt oss <i class="font-serif">snacka</i>
+			Vi <i class="font-serif">hörs!</i>
 		</h1>
 	</div>
-	<main id="contact-info" class="flex flex-col gap-4 py-12">
-		<p id="info-1">
-			Jag ser alltid fram emot att höra från dig, oavsett om du är intresserad av att samarbeta, har
-			frågor eller bara vill ta en kaffe tillsammans!
-		</p>
-		<p id="info-2">
-			Om du tänker på att samarbeta med mig, skulle jag verkligen vilja veta mer om ditt projekt!
-			Dela gärna med dig av detaljer som budget och tidslinje, så att jag kan få en bättre
-			förståelse för dina behov och ge dig en mer exakt offert.
-		</p>
-		<section id="info-time" class="flex items-center gap-2">
-			<PhClockDuotone class="h-6 w-6 text-red-400" />
-			<p>Klockan är just nu <span id="stockholm-time" class="font-serif italic">00:00:00</span></p>
-		</section>
-	</main>
+	<div class="gap-12 pb-8 pt-6 sm:grid sm:grid-cols-3">
+		<main id="contact-info" class="col-span-2 flex h-fit flex-col gap-4">
+			<p id="info-1">
+				Jag ser alltid fram emot att höra från nya kontakter, oavsett om det handlar om att
+				samarbeta eller bara ställa frågor och ta en kaffe ihop!
+			</p>
+			<p id="info-2">
+				<i class="font-serif">Om du funderar på ett samarbete</i> så skulle jag gärna vilja veta mer
+				om ditt projekt! Dela gärna med dig av detaljer som budget och deadline, så att jag kan få en
+				bättre känsla för vad du behöver och ge dig en mer exakt offert!
+			</p>
+			<section id="info-time" class="flex items-center gap-2">
+				<PhClockDuotone class="h-6 w-6 text-red-400" />
+				<p>
+					Klockan är just nu <span id="stockholm-time" class="font-serif italic">00:00:00</span>.
+				</p>
+			</section>
+		</main>
+		<div
+			class="flex flex-col items-center gap-4 pb-4 pt-12 grayscale transition duration-150 hover:rotate-0 hover:grayscale-0 sm:rotate-6 sm:gap-2 sm:py-0"
+		>
+			<Picture
+				src={ImgContact}
+				alt="Picture of William Hallin"
+				formats={['avif', 'webp']}
+				widths={[640, 768, 1024, 1280, 1536, 1920]}
+				class="h-full select-none rounded drop-shadow-2xl transition duration-150 hover:drop-shadow-lg"
+			/>
+			<i class="text-center text-xs text-stone-400">Fotat i Mo i Rana, Norge 🇳🇴</i>
+		</div>
+	</div>
 	<section id="contact-links" class="flex flex-col gap-6">
 		<a
 			id="contact-link-mail"
 			href="mailto:william@hallin.media"
 			data-umami-event="/contact (mail)"
-			class="flex w-fit items-center gap-4"
+			class="w-fit opacity-0"
 		>
-			<PhEnvelopeSimpleDuotone class="h-8 w-8 text-red-400" />
-			<div class="flex flex-col gap-1">
-				<span class="font-serif">Email</span>
-				<span>william@hallin.media</span>
+			<div
+				class="flex w-fit items-center gap-4 transition duration-150 hover:text-red-400 active:opacity-50"
+			>
+				<PhEnvelopeSimpleDuotone class="h-8 w-8 text-red-400" />
+				<div class="flex flex-col gap-1">
+					<span class="font-serif">E-post</span>
+					<span class="text-stone-400">william@hallin.media</span>
+				</div>
 			</div>
 		</a>
 		<a
 			id="contact-link-phone"
 			href="tel:+46706159279"
 			data-umami-event="/contact (phone)"
-			class="flex w-fit items-center gap-4"
+			class="w-fit opacity-0"
 		>
-			<PhPhoneDuotone class="h-8 w-8 text-red-400" />
-			<div class="flex flex-col gap-1">
-				<span class="font-serif">Phone</span>
-				<span>+46 (0)70-615 9279</span>
+			<div
+				class="flex w-fit items-center gap-4 transition duration-150 hover:text-red-400 active:opacity-50"
+			>
+				<PhPhoneDuotone class="h-8 w-8 text-red-400" />
+				<div class="flex flex-col gap-1">
+					<span class="font-serif">Telefon</span>
+					<span class="text-stone-400">+46 (0)70-615 92 79</span>
+				</div>
 			</div>
 		</a>
 		<a
 			id="contact-link-ig"
-			href="https://www.instagram.com/williamhallinn/"
+			href="https://www.instagram.com/williamhallinn/?ref=hallin.media"
 			data-umami-event="/contact (instagram)"
 			target="_blank"
-			class="flex w-fit items-center gap-4"
+			class="w-fit opacity-0"
 		>
-			<PhInstagramLogoDuotone class="h-8 w-8 text-red-400" />
-			<div class="flex flex-col gap-1">
-				<span class="font-serif">Instagram</span>
-				<span>@williamhallinn</span>
+			<div
+				class="flex w-fit items-center gap-4 transition duration-150 hover:text-red-400 active:opacity-50"
+			>
+				<PhInstagramLogoDuotone class="h-8 w-8 text-red-400" />
+				<div class="flex flex-col gap-1">
+					<span class="font-serif">Instagram</span>
+					<span class="text-stone-400">@williamhallinn</span>
+				</div>
 			</div>
 		</a>
 		<a
 			id="contact-link-li"
-			href="https://www.linkedin.com/in/whallin/"
+			href="https://www.linkedin.com/in/whallin/?ref=hallin.media"
 			data-umami-event="/contact (linkedin)"
 			target="_blank"
-			class="flex w-fit items-center gap-4"
+			class="w-fit opacity-0"
 		>
-			<PhLinkedinLogoDuotone class="h-8 w-8 text-red-400" />
-			<div class="flex flex-col gap-1">
-				<span class="font-serif">LinkedIn</span>
-				<span>@whallin</span>
+			<div
+				class="flex w-fit items-center gap-4 transition duration-150 hover:text-red-400 active:opacity-50"
+			>
+				<PhLinkedinLogoDuotone class="h-8 w-8 text-red-400" />
+				<div class="flex flex-col gap-1">
+					<span class="font-serif">LinkedIn</span>
+					<span class="text-stone-400">@whallin</span>
+				</div>
 			</div>
 		</a>
 	</section>
+
 	<script>
 		document.addEventListener(
 			'astro:page-load',
 			() => {
-				gsap.set(['#contact-header--icon', '#contact-header'], { opacity: 1 })
+				gsap.set(
+					[
+						'#contact-header--icon',
+						'#contact-header',
+						'#contact-link-mail',
+						'#contact-link-phone',
+						'#contact-link-ig',
+						'#contact-link-li'
+					],
+					{ opacity: 1 }
+				)
+
 				gsap.from(['#contact-header--icon', '#contact-header'], {
 					y: -10,
 					opacity: 0,
@@ -94,6 +140,17 @@ import LayoutMain from '../layouts/Main.astro'
 					ease: 'power2.out',
 					stagger: 0.25
 				})
+
+				gsap.from(
+					['#contact-link-mail', '#contact-link-phone', '#contact-link-ig', '#contact-link-li'],
+					{
+						y: 15,
+						opacity: 0,
+						duration: 0.5,
+						ease: 'power2.out',
+						stagger: 0.25
+					}
+				)
 
 				// Update the stockholm-time every minute
 				updateStockholmTime()

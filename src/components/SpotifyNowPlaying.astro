@@ -1,17 +1,20 @@
 ---
 import { Image } from 'astro:assets'
+import PhSpotifyLogoDuotone from './icon/brands/PhSpotifyLogoDuotone.astro'
 ---
 
 <div class="flex flex-col gap-4">
-	<h3 class="text-lg">
-		Senast
-		<span class="font-serif italic">spelat</span>
+	<h3 class="flex items-center gap-2 text-lg">
+		<PhSpotifyLogoDuotone class="h-6 w-6 text-green-600" />
+		<div>
+			Senast <span class="font-serif italic">spelat</span>
+		</div>
 	</h3>
 	<a
 		id="spotifyLink"
 		href="#"
 		target="_blank"
-		class="flex w-fit items-center gap-4 transition duration-200 hover:opacity-75 focus:opacity-50"
+		class="flex w-fit items-center gap-4 transition duration-200 hover:opacity-75 active:opacity-50"
 		transition:persist
 	>
 		<Image
@@ -20,7 +23,7 @@ import { Image } from 'astro:assets'
 			width="64"
 			height="64"
 			alt="Spotify Album Cover"
-			class="h-12 w-12 rounded-lg"
+			class="h-12 w-12 select-none rounded"
 		/>
 		<div class="flex flex-col text-sm">
 			<b id="spotifyArtist" class="text-green-600">Artist</b>

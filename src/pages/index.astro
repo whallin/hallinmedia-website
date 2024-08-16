@@ -29,7 +29,7 @@ import LayoutMain from '../layouts/Main.astro'
 				<h1 class="text-3xl font-light text-stone-50 opacity-0" id="landing-header">
 					<a
 						href={getRelativeLocaleUrl(Astro.currentLocale, 'work')}
-						class="underline decoration-2 underline-offset-4 transition duration-200 hover:opacity-75 focus:opacity-50"
+						class="underline decoration-2 underline-offset-4 transition duration-200 hover:opacity-75 active:opacity-50"
 						>Frilansande</a
 					> digital designer & videoproducent i <i class="font-serif">Skellefteå, Sweden.</i>
 				</h1>
@@ -44,10 +44,13 @@ import LayoutMain from '../layouts/Main.astro'
 		</div>
 	</main>
 	<ClientBar />
-	<section id="about" class="flex flex-col gap-4 pb-6 pt-12">
-		<h2 id="about-1" class="text-2xl">Om mig <i class="font-serif">(a.k.a. William)</i></h2>
+	<section id="about" class="flex flex-col gap-4 pb-8 pt-12">
+		<h2 id="about-1" class="text-2xl">
+			Om <i class="font-serif">mig <span class="text-base text-stone-500">(a.k.a. William)</span></i
+			>
+		</h2>
 		<p id="about-2">
-			Tja! Jag är William Hallin, en 19-årig frilansande grafiker samt foto- och videoproducent med
+			Hej! Jag är William Hallin, en 19-årig frilansande grafiker samt foto- och videoproducent med
 			ursprung i Skellefteå.
 		</p>
 		<p id="about-3">
@@ -57,7 +60,7 @@ import LayoutMain from '../layouts/Main.astro'
 			hjälpa till!
 		</p>
 		<p id="about-4">
-			<span class="font-serif">Vad gör jag när jag inte jobbar då?</span> Då spenderar jag min tid antingen
+			<i class="font-serif">Vad gör jag när jag inte jobbar då?</i> Då spenderar jag min tid antingen
 			ute i naturen eller på stan, eller så avnjuter jag musik av olika genrer. Allt detta samtidigt
 			som jag fortsätter med min hobby inom foto och video.
 		</p>
