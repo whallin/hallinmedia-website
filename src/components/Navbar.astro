@@ -4,9 +4,9 @@ import { getRelativeLocaleUrl } from 'astro:i18n'
 
 import HallinmediaWordmark from '../assets/brand/wordmark.svg'
 
-import PhChatCircleTextDuotone from './icon/PhChatCircleTextDuotone.astro'
 import PhHandWavingDuotone from './icon/PhHandWavingDuotone.astro'
 import PhHeartDuotone from './icon/PhHeartDuotone.astro'
+import PhReadCvLogoDuotone from './icon/PhReadCvLogoDuotone.astro'
 ---
 
 <div
@@ -30,14 +30,15 @@ import PhHeartDuotone from './icon/PhHeartDuotone.astro'
 			><PhHeartDuotone class="text-red-400" />Arbete</a
 		>
 		<a
-			href={getRelativeLocaleUrl(Astro.currentLocale, 'blog')}
-			class="flex items-center gap-1 transition duration-200 hover:text-red-400 focus:opacity-50"
-			><PhChatCircleTextDuotone class="text-red-400" />Blogg</a
-		>
-		<a
 			href={getRelativeLocaleUrl(Astro.currentLocale, 'contact')}
 			class="flex items-center gap-1 transition duration-200 hover:text-red-400 focus:opacity-50"
 			><PhHandWavingDuotone class="text-red-400" />Kontakt</a
+		>
+		<a
+			href="/william-hallin-cv-2024.pdf"
+			target="_blank"
+			class="flex items-center gap-1 transition duration-200 hover:text-red-400 focus:opacity-50"
+			><PhReadCvLogoDuotone class="text-red-400" />CV</a
 		>
 	</nav>
 </div>
