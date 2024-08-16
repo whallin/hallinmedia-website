@@ -16,18 +16,18 @@
 		"@astrojs/sitemap": "^3.1.6",
 		"@astrojs/tailwind": "^5.1.0",
 		"@tailwindcss/typography": "^0.5.14",
-		"astro": "^4.13.2",
+		"astro": "^4.14.2",
 		"astro-compress": "^2.3.1",
 		"gsap": "^3.12.5",
-		"sharp": "^0.33.4",
-		"tailwindcss": "^3.4.9"
+		"sharp": "^0.33.5",
+		"tailwindcss": "^3.4.10"
 	},
 	"devDependencies": {
-		"@cloudflare/workers-types": "^4.20240806.0",
+		"@cloudflare/workers-types": "^4.20240815.0",
 		"prettier": "^3.3.3",
 		"prettier-plugin-astro": "^0.14.1",
 		"prettier-plugin-astro-organize-imports": "^0.4.9",
 		"prettier-plugin-tailwindcss": "^0.6.6",
-		"wrangler": "^3.70.0"
+		"wrangler": "^3.72.0"
 	}
 }
