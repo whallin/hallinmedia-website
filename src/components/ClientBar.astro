@@ -1,0 +1,73 @@
+---
+import { Picture } from 'astro:assets'
+import Logo24vision from '../assets/clients/24vision.png'
+import LogoBrannbollsyran from '../assets/clients/brannbollsyran.webp'
+import LogoExtenseIT from '../assets/clients/extenseit.svg'
+import LogoLastbilsstation from '../assets/clients/lastbilsstation.svg'
+import LogoNolia from '../assets/clients/nolia.svg'
+import LogoNorraSkog from '../assets/clients/norraskog.svg'
+import LogoProducenterna from '../assets/clients/producenterna.png'
+import LogoTrastockfestivalen from '../assets/clients/trastockfestivalen.png'
+---
+
+<section
+	id="clients"
+	class="grid grid-cols-1 items-center justify-items-center gap-8 grayscale sm:grid-cols-2 md:grid-cols-4"
+>
+	<a
+		href="https://trastockfestivalen.se/"
+		data-umami-event=""
+		target="_blank"
+		class="transition duration-150 hover:opacity-75 active:opacity-50"
+		><Picture src={LogoTrastockfestivalen} alt="Trästockfestivalen" height={40} class="invert" />
+	</a>
+	<a
+		href="https://brannbollsyran.com/"
+		data-umami-event=""
+		target="_blank"
+		class="transition duration-150 hover:opacity-75 active:opacity-50"
+		><Picture src={LogoBrannbollsyran} alt="Brännbollsyran" height={40} />
+	</a>
+	<a
+		href="https://nolia.se/"
+		data-umami-event=""
+		target="_blank"
+		class="transition duration-150 hover:opacity-75 active:opacity-50"
+		><Picture src={LogoNolia} alt="Nolia" height={40} />
+	</a>
+	<a
+		href="https://norraskog.se/"
+		data-umami-event=""
+		target="_blank"
+		class="transition duration-150 hover:opacity-75 active:opacity-50"
+		><Picture src={LogoNorraSkog} alt="Norra Skog" height={40} />
+	</a>
+	<a
+		href="https://lastbilsstation.se/"
+		data-umami-event=""
+		target="_blank"
+		class="transition duration-150 hover:opacity-75 active:opacity-50"
+		><Picture src={LogoLastbilsstation} alt="Skellefteå Lastbilsstation" height={40} />
+	</a>
+	<a
+		href="https://producenterna.se/"
+		data-umami-event=""
+		target="_blank"
+		class="transition duration-150 hover:opacity-75 active:opacity-50"
+		><Picture src={LogoProducenterna} alt="Producenterna" height={40} class="invert" />
+	</a>
+	<a
+		href="https://24vision.se/"
+		data-umami-event=""
+		target="_blank"
+		class="transition duration-150 hover:opacity-75 active:opacity-50"
+		><Picture src={Logo24vision} alt="24vision" height={40} />
+	</a>
+	<a
+		href="https://extenseit.se/"
+		data-umami-event=""
+		target="_blank"
+		class="transition duration-150 hover:opacity-75 active:opacity-50"
+		><Picture src={LogoExtenseIT} alt="ExtenseIT" height={40} />
+	</a>
+</section>

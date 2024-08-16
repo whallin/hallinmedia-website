@@ -3,13 +3,14 @@ import { Picture } from 'astro:assets'
 import { getRelativeLocaleUrl } from 'astro:i18n'
 import Avatar from '../assets/avatar.png'
 import HallinmediaGradientBG from '../assets/brand/hallinmedia-gradient.png'
+import ClientBar from '../components/ClientBar.astro'
 import SpotifyNowPlaying from '../components/SpotifyNowPlaying.astro'
 import PhHandWavingDuotone from '../components/icon/PhHandWavingDuotone.astro'
 import LayoutMain from '../layouts/Main.astro'
 ---
 
 <LayoutMain title="Hem">
-	<main>
+	<main class="pb-12">
 		<div
 			class="relative h-fit overflow-clip break-words rounded-xl bg-gradient-to-t from-red-900/70 to-red-900/0 p-8 shadow-lg sm:h-[250px]"
 		>
@@ -42,21 +43,23 @@ import LayoutMain from '../layouts/Main.astro'
 			/>
 		</div>
 	</main>
-	<section id="about" class="flex flex-col gap-4 py-12">
-		<h2 id="about-1" class="text-2xl">Hallå <i class="font-serif">där!</i></h2>
+	<ClientBar />
+	<section id="about" class="flex flex-col gap-4 pb-6 pt-12">
+		<h2 id="about-1" class="text-2xl">Om mig <i class="font-serif">(a.k.a. William)</i></h2>
 		<p id="about-2">
-			Tack för att du tittade förbi min sajt! Den är för närvarande på väg att få lite av en
-			makeover, men jag är super glad att du är intresserad.
+			Tja! Jag är William Hallin, en 19-årig frilansande grafiker samt foto- och videoproducent med
+			ursprung i Skellefteå.
 		</p>
 		<p id="about-3">
-			Om du inte skulle ha något emot att titta förbi lite senare, så vore det fantastiskt! Det
-			finns inte så mycket att se just nu, och jag ser fram emot att visa dig alla läckra saker som
-			kommer framöver.
+			Jag erbjuder helhetslösningar inom allt från layout- och reklamdesign till fotografering och
+			videoproduktion. Oavsett om du behöver en mindre konsultation för ett designuppdrag eller en
+			fullständig reklamfilm med bild, ljud och redigering så har jag troligtvis resurserna för att
+			hjälpa till!
 		</p>
 		<p id="about-4">
-			Under tiden, om du är nyfiken på vad jag gör, är du välkommen att kolla in mina sociala medier
-			i sidfoten nedan. Jag är aktiv både på Instagram och LinkedIn, och jag skulle gärna träffa dig
-			där!
+			<span class="font-serif">Vad gör jag när jag inte jobbar då?</span> Då spenderar jag min tid antingen
+			ute i naturen eller på stan, eller så avnjuter jag musik av olika genrer. Allt detta samtidigt
+			som jag fortsätter med min hobby inom foto och video.
 		</p>
 	</section>
 	<SpotifyNowPlaying />
