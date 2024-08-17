@@ -1,18 +1,22 @@
 ---
 import { Picture } from 'astro:assets'
 import Logo24vision from '../assets/clients/24vision.svg'
+import LogoAtlas from '../assets/clients/atlasos.svg'
 import LogoBrannbollsyran from '../assets/clients/brannbollsyran.svg'
+import LogoCreavite from '../assets/clients/creavite.svg'
 import LogoExtenseIT from '../assets/clients/extenseit.svg'
 import LogoLastbilsstation from '../assets/clients/lastbilsstation.svg'
 import LogoNolia from '../assets/clients/nolia.svg'
 import LogoNorraSkog from '../assets/clients/norraskog.svg'
 import LogoProducenterna from '../assets/clients/producenterna.svg'
+import LogoRoyale from '../assets/clients/royale.svg'
 import LogoTrastockfestivalen from '../assets/clients/trastockfestivalen.svg'
+import LogoTutorio from '../assets/clients/tutorio.svg'
 ---
 
 <section
 	id="clients"
-	class="rid-cols-1 grid select-none items-center justify-items-center gap-6 grayscale sm:grid-cols-2 sm:gap-8 md:grid-cols-4"
+	class="grid select-none grid-cols-2 items-center justify-items-center gap-6 grayscale sm:gap-12 md:grid-cols-4"
 >
 	<a
 		href="https://www.brannbollsyran.com/?ref=hallin.media"
@@ -23,7 +27,7 @@ import LogoTrastockfestivalen from '../assets/clients/trastockfestivalen.svg'
 			src={LogoBrannbollsyran}
 			alt="Brännbollsyran"
 			id="clientLogo1"
-			height={46}
+			height={42}
 			class="opacity-0"
 		/>
 	</a>
@@ -94,6 +98,34 @@ import LogoTrastockfestivalen from '../assets/clients/trastockfestivalen.svg'
 		class="transition duration-150 hover:opacity-75 active:opacity-50"
 		><Picture src={Logo24vision} alt="24vision" id="clientLogo8" height={32} class="opacity-0" />
 	</a>
+	<a
+		href="https://auto.creavite.co/?ref=hallin.media"
+		data-umami-event=`${Astro.url.pathname}: ClientBar (creavite)`
+		target="_blank"
+		class="transition duration-150 hover:opacity-75 active:opacity-50"
+		><Picture src={LogoCreavite} alt="Creavite" id="clientLogo9" height={16} class="opacity-0" />
+	</a>
+	<a
+		href="https://royalehosting.net/?ref=hallin.media"
+		data-umami-event=`${Astro.url.pathname}: ClientBar (royale)`
+		target="_blank"
+		class="transition duration-150 hover:opacity-75 active:opacity-50"
+		><Picture src={LogoRoyale} alt="Royale" id="clientLogo10" height={24} class="opacity-0" />
+	</a>
+	<a
+		href="https://atlasos.net/?ref=hallin.media"
+		data-umami-event=`${Astro.url.pathname}: ClientBar (atlasos)`
+		target="_blank"
+		class="transition duration-150 hover:opacity-75 active:opacity-50"
+		><Picture src={LogoAtlas} alt="AtlasOS" id="clientLogo11" height={24} class="opacity-0" />
+	</a>
+	<a
+		href="https://tutorio.app/?ref=hallin.media"
+		data-umami-event=`${Astro.url.pathname}: ClientBar (tutorio)`
+		target="_blank"
+		class="transition duration-150 hover:opacity-75 active:opacity-50"
+		><Picture src={LogoTutorio} alt="Tutorio" id="clientLogo12" height={24} class="opacity-0" />
+	</a>
 </section>
 
 <script>
@@ -109,7 +141,11 @@ import LogoTrastockfestivalen from '../assets/clients/trastockfestivalen.svg'
 					'#clientLogo5',
 					'#clientLogo6',
 					'#clientLogo7',
-					'#clientLogo8'
+					'#clientLogo8',
+					'#clientLogo9',
+					'#clientLogo10',
+					'#clientLogo11',
+					'#clientLogo12'
 				],
 				{
 					opacity: 1
@@ -124,7 +160,11 @@ import LogoTrastockfestivalen from '../assets/clients/trastockfestivalen.svg'
 					'#clientLogo5',
 					'#clientLogo6',
 					'#clientLogo7',
-					'#clientLogo8'
+					'#clientLogo8',
+					'#clientLogo9',
+					'#clientLogo10',
+					'#clientLogo11',
+					'#clientLogo12'
 				],
 				{
 					y: 15,
