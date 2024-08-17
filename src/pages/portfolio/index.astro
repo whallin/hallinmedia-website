@@ -14,7 +14,7 @@ import LayoutMain from '../../layouts/Main.astro'
 	<div class="flex flex-row items-center gap-4">
 		<PhHeartDuotone id="portfolio-header--icon" class="h-10 w-10 text-red-400 opacity-0" />
 		<h1 id="portfolio-header" class="text-3xl font-light opacity-0">
-			Mitt <i class="font-serif">portfolio</i>
+			Min <i class="font-serif">portfolio</i>
 		</h1>
 	</div>
 	<main id="portfolio-info" class="flex h-fit flex-col gap-4 pb-8 pt-6">
@@ -28,11 +28,11 @@ import LayoutMain from '../../layouts/Main.astro'
 		</p>
 		<div class="mt-2 flex flex-col gap-2 rounded border-l-4 border-red-400 bg-red-100 p-4">
 			<h2 class="flex items-center gap-2 font-bold">
-				<PhInfoDuotone class="h-6 w-6 text-red-400" />Vill du se ännu mer projekt?
+				<PhInfoDuotone class="h-6 w-6 text-red-500" />Vill du se ännu mer projekt?
 			</h2>
-			<p id="info-3">
+			<p>
 				För att se ännu fler exempel på mina tidigare arbeten, inklusive projekt <i>utan</i> case studies,
-				rekommenderar jag att du besöker min <PhBehanceLogoDuotone class="inline text-red-400" />
+				rekommenderar jag att du besöker min <PhBehanceLogoDuotone class="inline text-red-500" />
 				<a
 					href="ttps://www.behance.net/whallin/?ref=hallin.media"
 					data-umami-event="Portfolio (behance)"
@@ -41,7 +41,7 @@ import LayoutMain from '../../layouts/Main.astro'
 				>
 					Behance-sida</a
 				>
-				för grafiska designprojekt samt mina <PhInstagramLogoDuotone class="inline text-red-400" />
+				för grafiska designprojekt samt mina <PhInstagramLogoDuotone class="inline text-red-500" />
 				<a
 					href="https://www.instagram.com/williamhallinn/?ref=hallin.media"
 					data-umami-event="Portfolio (instagram)"
@@ -49,14 +49,14 @@ import LayoutMain from '../../layouts/Main.astro'
 					class="underline underline-offset-2 transition duration-150 hover:opacity-75 active:opacity-50"
 				>
 					Instagram</a
-				>- och <PhYoutubeLogoDuotone class="inline text-red-400" />
+				>- och <PhYoutubeLogoDuotone class="inline text-red-500" />
 				<a
 					href="https://www.youtube.com/@HallinMedia/?ref=hallin.media"
 					data-umami-event="Portfolio (youtube)"
 					target="_blank"
 					class="underline underline-offset-2 transition duration-150 hover:opacity-75 active:opacity-50"
 					>YouTube-konton</a
-				> för en inblick i mina video- och fotoarbeten.
+				> för en inblick i mina foto- och videoarbeten.
 			</p>
 		</div>
 	</main>
@@ -66,6 +66,7 @@ import LayoutMain from '../../layouts/Main.astro'
 			'astro:page-load',
 			() => {
 				gsap.set(['#portfolio-header--icon', '#portfolio-header'], { opacity: 1 })
+
 				gsap.from(['#portfolio-header--icon', '#portfolio-header'], {
 					y: -10,
 					opacity: 0,
