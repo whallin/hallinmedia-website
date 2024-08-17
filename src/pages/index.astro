@@ -40,8 +40,10 @@ import LayoutMain from '../layouts/Main.astro'
 			<Picture
 				src={HallinmediaGradientBG}
 				alt=""
-				formats={['avif', 'webp']}
 				loading="eager"
+				widths={[650, 240]}
+				sizes="(max-width: 640px) 240px, 650px"
+				formats={['avif', 'webp']}
 				class="justify-self absolute left-0 top-0 -z-10 h-full select-none"
 			/>
 		</div>
