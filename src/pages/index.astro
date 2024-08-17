@@ -31,7 +31,7 @@ import LayoutMain from '../layouts/Main.astro'
 				</div>
 				<h1 class="text-3xl font-light text-stone-50 opacity-0" id="landing-header">
 					<a
-						href={getRelativeLocaleUrl(Astro.currentLocale, 'work')}
+						href={getRelativeLocaleUrl(Astro.currentLocale, 'portfolio')}
 						class="underline decoration-2 underline-offset-4 transition duration-200 hover:opacity-75 active:opacity-50"
 						>Frilansande</a
 					> digital designer & videoproducent i <i class="font-serif">Skellefteå, Sweden.</i>
@@ -48,28 +48,32 @@ import LayoutMain from '../layouts/Main.astro'
 			/>
 		</div>
 	</main>
+
 	<ClientBar />
+
 	<section id="about" class="flex flex-col gap-4 pb-8 pt-12">
 		<h2 id="about-1" class="text-2xl">
 			Om <i class="font-serif">mig <span class="text-base text-stone-500">(a.k.a. William)</span></i
 			>
 		</h2>
 		<p id="about-2">
-			Hej! Jag är William Hallin, en 19-årig frilansande grafiker samt foto- och videoproducent med
-			ursprung i Skellefteå.
+			Hej! Jag heter William Hallin och är en 19-årig frilansande grafiker samt foto- och
+			videoproducent med rötter i Skellefteå.
 		</p>
 		<p id="about-3">
-			Jag erbjuder helhetslösningar inom allt från layout- och reklamdesign till fotografering och
-			videoproduktion. Oavsett om du behöver en mindre konsultation för ett designuppdrag eller en
-			fullständig reklamfilm med bild, ljud och redigering så har jag troligtvis resurserna för att
-			hjälpa till!
+			Jag specialiserar mig på att erbjuda skräddarsydda helhetslösningar inom <i class="font-serif"
+				>layoutdesign, reklamdesign, fotografering och videoproduktion.</i
+			> Oavsett om du behöver en konsultation för ett designprojekt eller en komplett reklamfilm med
+			professionell bild, ljud och redigering, har jag nog resurserna och erfarenheten för att hjälpa
+			dig att nå dina mål!
 		</p>
 		<p id="about-4">
-			<i class="font-serif">Vad gör jag när jag inte jobbar då?</i> Då spenderar jag min tid antingen
-			ute i naturen eller på stan, eller så avnjuter jag musik av olika genrer. Allt detta samtidigt
-			som jag fortsätter med min hobby inom foto och video.
+			<i class="font-serif">När jag inte arbetar,</i> njuter jag av att vara ute i naturen, utforska
+			staden eller lyssna på musik. Samtidigt som jag även fortsätter att utveckla min passion för foto
+			och video, vilket inspirerar mig i mitt arbete som kreativ professionell.
 		</p>
 	</section>
+
 	<SpotifyNowPlaying />
 
 	<script>
