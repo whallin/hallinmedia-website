@@ -1,0 +1,53 @@
+---
+import ClientBar from '../components/ClientBar.astro'
+import PhReadCvLogoDuotone from '../components/icon/PhReadCvLogoDuotone.astro'
+import LayoutMain from '../layouts/Main.astro'
+---
+
+<LayoutMain
+	title="CV"
+	description="William Hallin är en frilansande digital designer och videoproducent i Skellefteå. Specialiserad på fotografering, videoproduktion och redigering."
+>
+	<div class="flex flex-row items-center gap-4">
+		<PhReadCvLogoDuotone id="cv-header--icon" class="h-10 w-10 text-red-400 opacity-0" />
+		<h1 id="cv-header" class="text-3xl font-light opacity-0">
+			Mitt <i class="font-serif">CV</i>
+		</h1>
+	</div>
+
+	<div class="mb-12 mt-8 flex flex-col items-center gap-6">
+		<object
+			data=`${Astro.url.origin}/william-hallin-cv-2024.pdf`
+			type="application/pdf"
+			width="100%"
+			height="700"></object>
+		<a
+			href="/william-hallin-cv-2024.pdf"
+			target="_blank"
+			class="text-red-500 underline underline-offset-2 hover:opacity-75 active:opacity-50"
+			><PhReadCvLogoDuotone class="mr-2 inline h-4 w-4" />Ladda ner mitt CV</a
+		>
+	</div>
+
+	<the-fold></the-fold>
+
+	<ClientBar />
+
+	<script>
+		document.addEventListener(
+			'astro:page-load',
+			() => {
+				gsap.set(['#cv-header--icon', '#cv-header'], { opacity: 1 })
+
+				gsap.from(['#cv-header--icon', '#cv-header'], {
+					y: -10,
+					opacity: 0,
+					duration: 1,
+					ease: 'power2.out',
+					stagger: 0.25
+				})
+			},
+			{ once: false }
+		)
+	</script>
+</LayoutMain>

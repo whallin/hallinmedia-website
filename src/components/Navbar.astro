@@ -35,8 +35,7 @@ import PhReadCvLogoDuotone from './icon/PhReadCvLogoDuotone.astro'
 			><PhHandWavingDuotone class="text-red-400" />Kontakt</a
 		>
 		<a
-			href="/william-hallin-cv-2024.pdf"
-			target="_blank"
+			href={getRelativeLocaleUrl(Astro.currentLocale, 'cv')}
 			class="flex items-center gap-1 transition duration-200 hover:text-red-400 active:opacity-50"
 			><PhReadCvLogoDuotone class="text-red-400" />CV</a
 		>
