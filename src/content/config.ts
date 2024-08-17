@@ -1,18 +1,22 @@
 import { z, defineCollection } from 'astro:content'
 
-const workCollection = defineCollection({
+const portfolioCollection = defineCollection({
 	type: 'content',
-	schema: z.object({
-		title: z.string(),
-		language: z.enum(['sv', 'en']),
-		image: z.object({
-			src: z.string(),
-			alt: z.string()
-		}),
-		publishDate: z.date()
-	})
+	schema: ({ image }) =>
+		z.object({
+			title: z.string(),
+			description: z.string(),
+			category: z.string(),
+			language: z.enum(['sv', 'en']),
+			thumbnail: z.object({
+				src: image().refine((img) => img.width === 1280 && img.height === 720),
+				alt: z.string()
+			}),
+			publishDate: z.date(),
+			modifiedDate: z.date()
+		})
 })
 
 export const collections = {
-	work: workCollection
+	portfolio: portfolioCollection
 }

@@ -6,15 +6,46 @@ import SiteHead from '../components/SiteHead.astro'
 interface Props {
 	title: string
 	description: string
+	thumbnail: string
+	publishDate: string
+	modifiedDate: string
 }
 
-const { title, description } = Astro.props
+const { title, description, thumbnail, publishDate, modifiedDate } = Astro.props
+
+const schema = {
+	'@context': 'https://schema.org',
+	'@type': 'BlogPosting',
+	mainEntityOfPage: {
+		'@type': 'WebPage',
+		'@id': Astro.url
+	},
+	headline: title,
+	description: description,
+	image: Astro.site + thumbnail,
+	author: {
+		'@type': 'Person',
+		name: 'William Hallin',
+		url: 'https://hallin.media/'
+	},
+	publisher: {
+		'@type': 'Organization',
+		name: 'HallinMedia',
+		logo: {
+			'@type': 'ImageObject',
+			url: 'https://hallin.media/william.png'
+		}
+	},
+	datePublished: publishDate,
+	dateModified: modifiedDate ?? publishDate
+}
 ---
 
 <!doctype html>
 <html lang=`${Astro.currentLocale}`>
 	<head>
-		<SiteHead title=`${title} - Arbete` description={description} />
+		<SiteHead title=`${title} - Portfolio` description={description} />
+		<script type="application/ld+json" set:html={JSON.stringify(schema)} />
 	</head>
 	<body class="m-auto max-w-[700px] bg-stone-50 p-6 text-stone-900 selection:bg-red-500">
 		<Navbar />

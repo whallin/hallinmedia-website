@@ -1,9 +1,7 @@
 ---
-import PhBehanceLogoDuotone from '../../components/icon/brands/PhBehanceLogoDuotone.astro'
-import PhInstagramLogoDuotone from '../../components/icon/brands/PhInstagramLogoDuotone.astro'
-import PhYoutubeLogoDuotone from '../../components/icon/brands/PhYoutubeLogoDuotone.astro'
 import PhHeartDuotone from '../../components/icon/PhHeartDuotone.astro'
-import PhInfoDuotone from '../../components/icon/PhInfoDuotone.astro'
+import PortfolioGrid from '../../components/PortfolioGrid.astro'
+import PortfolioViewMore from '../../components/PortfolioViewMore.astro'
 import LayoutMain from '../../layouts/Main.astro'
 ---
 
@@ -17,6 +15,7 @@ import LayoutMain from '../../layouts/Main.astro'
 			Min <i class="font-serif">portfolio</i>
 		</h1>
 	</div>
+
 	<main id="portfolio-info" class="flex h-fit flex-col gap-4 pb-8 pt-6">
 		<p id="info-1">
 			Välkommen till min portfolio, där jag stolt presenterar en utvald samling av mina tidigare
@@ -26,40 +25,11 @@ import LayoutMain from '../../layouts/Main.astro'
 			De arbeten som visas här är noggrant utvalda för att ge dig en djupare förståelse av mina
 			kreativa processer genom case studies.
 		</p>
-		<div class="mt-2 flex flex-col gap-2 rounded border-l-4 border-red-400 bg-red-100 p-4">
-			<h2 class="flex items-center gap-2 font-bold">
-				<PhInfoDuotone class="h-6 w-6 text-red-500" />Vill du se ännu mer projekt?
-			</h2>
-			<p>
-				För att se ännu fler exempel på mina tidigare arbeten, inklusive projekt <i>utan</i> case studies,
-				rekommenderar jag att du besöker min <PhBehanceLogoDuotone class="inline text-red-500" />
-				<a
-					href="ttps://www.behance.net/whallin/?ref=hallin.media"
-					data-umami-event="Portfolio (behance)"
-					target="_blank"
-					class="underline underline-offset-2 transition duration-150 hover:opacity-75 active:opacity-50"
-				>
-					Behance-sida</a
-				>
-				för grafiska designprojekt samt mina <PhInstagramLogoDuotone class="inline text-red-500" />
-				<a
-					href="https://www.instagram.com/williamhallinn/?ref=hallin.media"
-					data-umami-event="Portfolio (instagram)"
-					target="_blank"
-					class="underline underline-offset-2 transition duration-150 hover:opacity-75 active:opacity-50"
-				>
-					Instagram</a
-				>- och <PhYoutubeLogoDuotone class="inline text-red-500" />
-				<a
-					href="https://www.youtube.com/@HallinMedia/?ref=hallin.media"
-					data-umami-event="Portfolio (youtube)"
-					target="_blank"
-					class="underline underline-offset-2 transition duration-150 hover:opacity-75 active:opacity-50"
-					>YouTube-konton</a
-				> för en inblick i mina foto- och videoarbeten.
-			</p>
-		</div>
 	</main>
+
+	<PortfolioGrid />
+
+	<PortfolioViewMore />
 
 	<script>
 		document.addEventListener(

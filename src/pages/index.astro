@@ -1,8 +1,8 @@
 ---
 import { Picture } from 'astro:assets'
 import { getRelativeLocaleUrl } from 'astro:i18n'
-import Avatar from '../assets/avatar.png'
-import HallinmediaGradientBG from '../assets/brand/hallinmedia-gradient.png'
+import Avatar from '../assets/avatar.webp'
+import HallinmediaGradientBG from '../assets/brand/hallinmedia-gradient.webp'
 import ClientBar from '../components/ClientBar.astro'
 import SpotifyNowPlaying from '../components/SpotifyNowPlaying.astro'
 import PhHandWavingDuotone from '../components/icon/PhHandWavingDuotone.astro'
@@ -15,7 +15,7 @@ import LayoutMain from '../layouts/Main.astro'
 >
 	<main class="pb-12">
 		<div
-			class="relative h-fit overflow-clip break-words rounded-xl bg-gradient-to-t from-red-900/70 to-red-900/0 p-8 shadow-lg sm:h-[250px]"
+			class="relative h-fit overflow-clip break-words rounded-xl bg-gradient-to-t from-red-900/75 to-red-900/0 p-8 shadow-lg sm:h-[250px]"
 		>
 			<div class="flex h-full flex-col justify-between gap-12">
 				<div class="flex items-center gap-4 opacity-0" id="landing-avatar">
@@ -44,7 +44,7 @@ import LayoutMain from '../layouts/Main.astro'
 				widths={[650, 240]}
 				sizes="(max-width: 640px) 240px, 650px"
 				formats={['avif', 'webp']}
-				class="justify-self absolute left-0 top-0 -z-10 h-full select-none"
+				class="justify-self absolute left-0 top-0 -z-10 h-full w-full select-none object-cover"
 			/>
 		</div>
 	</main>

@@ -3,6 +3,7 @@ import compress from 'astro-compress'
 import sitemap from '@astrojs/sitemap'
 import tailwind from '@astrojs/tailwind'
 import partytown from '@astrojs/partytown'
+import { remarkReadingTime } from './remark-reading-time.mjs'
 
 // https://astro.build/config
 export default defineConfig({
@@ -11,6 +12,9 @@ export default defineConfig({
 	i18n: {
 		defaultLocale: 'sv',
 		locales: ['sv']
+	},
+	markdown: {
+		remarkPlugins: [remarkReadingTime]
 	},
 	integrations: [
 		compress(),
