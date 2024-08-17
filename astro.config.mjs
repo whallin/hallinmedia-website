@@ -1,5 +1,4 @@
 import { defineConfig } from 'astro/config'
-import compress from 'astro-compress'
 import sitemap from '@astrojs/sitemap'
 import tailwind from '@astrojs/tailwind'
 import partytown from '@astrojs/partytown'
@@ -17,7 +16,6 @@ export default defineConfig({
 		remarkPlugins: [remarkReadingTime]
 	},
 	integrations: [
-		compress(),
 		sitemap({
 			i18n: {
 				defaultLocale: 'sv',

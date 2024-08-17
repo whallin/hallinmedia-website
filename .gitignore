@@ -1,6 +1,7 @@
 # build output
 dist/
 .unlighthouse/
+.jampack/
 
 # generated types
 .astro/
