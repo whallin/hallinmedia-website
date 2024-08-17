@@ -23,8 +23,8 @@ const { Content, remarkPluginFrontmatter } = await entry.render()
 	title=`${entry.data.title}`
 	description=`${entry.data.description}`
 	thumbnail=`${entry.data.thumbnail.src}`
-	publishDate=`${entry.data.publishDate.toISOString().slice(0, 10)}`
-	modifiedDate=`${entry.data.modifiedDate.toISOString().slice(0, 10)}`
+	publishDate=`${entry.data.publishDate.toISOString()}`
+	modifiedDate=`${entry.data.modifiedDate.toISOString()}`
 >
 	<section>
 		<Picture
