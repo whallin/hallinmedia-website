@@ -1,43 +1,75 @@
 ---
-import { Picture } from 'astro:assets'
-import { getRelativeLocaleUrl } from 'astro:i18n'
+import { Picture } from "astro:assets";
+import { getRelativeLocaleUrl } from "astro:i18n";
 
-import HallinmediaWordmark from '../assets/brand/wordmark.svg'
+import HallinmediaWordmark from "../assets/brand/wordmark.svg";
 
-import PhHandWavingDuotone from './icon/PhHandWavingDuotone.astro'
-import PhHeartDuotone from './icon/PhHeartDuotone.astro'
-import PhReadCvLogoDuotone from './icon/PhReadCvLogoDuotone.astro'
+import PhHandWavingDuotone from "./icon/PhHandWavingDuotone.astro";
+import PhHeartDuotone from "./icon/PhHeartDuotone.astro";
+import PhReadCvLogoDuotone from "./icon/PhReadCvLogoDuotone.astro";
 ---
 
-<div
-	class="flex flex-col justify-between gap-4 pb-8 pt-4 sm:flex-row sm:items-center sm:gap-0 sm:pb-12"
-	transition:animate="none"
+<header
+  role="banner"
+  class="flex flex-col justify-between gap-4 pb-8 pt-4 sm:flex-row sm:items-center sm:gap-0 sm:pb-12"
+  transition:animate="none"
 >
-	<div class="flex w-full items-center justify-between gap-6 sm:w-fit sm:justify-start">
-		<a href={getRelativeLocaleUrl(Astro.currentLocale, '/')}>
-			<Picture
-				src={HallinmediaWordmark}
-				alt="Wordmark of HallinMedia"
-				width={160}
-				class="select-none transition duration-200 hover:opacity-75 active:opacity-50"
-			/>
-		</a>
-	</div>
-	<nav class="flex flex-wrap items-end justify-between gap-6 text-stone-500 sm:justify-start">
-		<a
-			href={getRelativeLocaleUrl(Astro.currentLocale, 'portfolio')}
-			class="flex items-center gap-1 transition duration-200 hover:text-red-400 active:opacity-50"
-			><PhHeartDuotone class="text-red-400" />Portfolio</a
-		>
-		<a
-			href={getRelativeLocaleUrl(Astro.currentLocale, 'contact')}
-			class="flex items-center gap-1 transition duration-200 hover:text-red-400 active:opacity-50"
-			><PhHandWavingDuotone class="text-red-400" />Kontakt</a
-		>
-		<a
-			href={getRelativeLocaleUrl(Astro.currentLocale, 'cv')}
-			class="flex items-center gap-1 transition duration-200 hover:text-red-400 active:opacity-50"
-			><PhReadCvLogoDuotone class="text-red-400" />CV</a
-		>
-	</nav>
-</div>
+  <div
+    class="flex w-full items-center justify-between gap-6 sm:w-fit sm:justify-start"
+  >
+    <a
+      href={getRelativeLocaleUrl(Astro.currentLocale ?? "en", "/")}
+      aria-label="Go to homepage"
+      class="rounded-lg p-2 transition duration-150 hover:opacity-75 focus:outline-none focus:ring-2 focus:ring-red-600 active:opacity-50"
+    >
+      <Picture
+        src={HallinmediaWordmark}
+        alt="Wordmark of HallinMedia"
+        width={160}
+        class="select-none"
+      />
+    </a>
+  </div>
+  <nav
+    role="navigation"
+    aria-label="Main navigation"
+    class="flex flex-wrap items-end justify-between gap-6 text-stone-500 sm:justify-start"
+  >
+    <a
+      href={getRelativeLocaleUrl(Astro.currentLocale ?? "en", "portfolio")}
+      data-umami-event="Navigation Click"
+      data-umami-page="portfolio"
+      data-ga4-event="nav_click"
+      data-ga4-page="portfolio"
+      class="flex items-center gap-1 rounded-lg p-2 transition duration-150 hover:opacity-75 focus:outline-none focus:ring-2 focus:ring-red-600 active:opacity-50"
+      aria-label="View portfolio"
+    >
+      <PhHeartDuotone class="text-red-400" aria-hidden="true" />
+      <span>Portfolio</span>
+    </a>
+    <a
+      href={getRelativeLocaleUrl(Astro.currentLocale ?? "en", "contact")}
+      data-umami-event="Navigation Click"
+      data-umami-page="contact"
+      data-ga4-event="nav_click"
+      data-ga4-page="contact"
+      class="flex items-center gap-1 rounded-lg p-2 transition duration-150 hover:opacity-75 focus:outline-none focus:ring-2 focus:ring-red-600 active:opacity-50"
+      aria-label="Contact page"
+    >
+      <PhHandWavingDuotone class="text-red-400" aria-hidden="true" />
+      <span>Kontakt</span>
+    </a>
+    <a
+      href={getRelativeLocaleUrl(Astro.currentLocale ?? "en", "cv")}
+      data-umami-event="Navigation Click"
+      data-umami-page="cv"
+      data-ga4-event="nav_click"
+      data-ga4-page="cv"
+      class="flex items-center gap-1 rounded-lg p-2 transition duration-150 hover:opacity-75 focus:outline-none focus:ring-2 focus:ring-red-600 active:opacity-50"
+      aria-label="View CV"
+    >
+      <PhReadCvLogoDuotone class="text-red-400" aria-hidden="true" />
+      <span>CV</span>
+    </a>
+  </nav>
+</header>

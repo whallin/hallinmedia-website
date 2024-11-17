@@ -1,40 +1,61 @@
 ---
-import PhBehanceLogoDuotone from './icon/brands/PhBehanceLogoDuotone.astro'
-import PhInstagramLogoDuotone from './icon/brands/PhInstagramLogoDuotone.astro'
-import PhYoutubeLogoDuotone from './icon/brands/PhYoutubeLogoDuotone.astro'
-import PhInfoDuotone from './icon/PhInfoDuotone.astro'
+import PhBehanceLogoDuotone from "./icon/brands/PhBehanceLogoDuotone.astro";
+import PhInstagramLogoDuotone from "./icon/brands/PhInstagramLogoDuotone.astro";
+import PhYoutubeLogoDuotone from "./icon/brands/PhYoutubeLogoDuotone.astro";
+import PhInfoDuotone from "./icon/PhInfoDuotone.astro";
 ---
 
-<div class="my-12 flex flex-col gap-2 rounded border-l-4 border-red-400 bg-red-100 p-4">
-	<h2 class="flex items-center gap-2 font-bold">
-		<PhInfoDuotone class="h-6 w-6 text-red-500" />Vill du se ännu mer projekt?
-	</h2>
-	<p>
-		För att se ännu fler exempel på mina tidigare arbeten, inklusive projekt <i>utan</i> case studies,
-		rekommenderar jag att du besöker min <PhBehanceLogoDuotone class="inline text-red-500" />
-		<a
-			href="https://www.behance.net/whallin/?ref=hallin.media"
-			data-umami-event="Portfolio (behance)"
-			target="_blank"
-			class="underline underline-offset-2 transition duration-150 hover:opacity-75 active:opacity-50"
-		>
-			Behance-sida</a
-		>
-		för grafiska designprojekt samt mina <PhInstagramLogoDuotone class="inline text-red-500" />
-		<a
-			href="https://www.instagram.com/williamhallinn/?ref=hallin.media"
-			data-umami-event="Portfolio (instagram)"
-			target="_blank"
-			class="underline underline-offset-2 transition duration-150 hover:opacity-75 active:opacity-50"
-		>
-			Instagram</a
-		>- och <PhYoutubeLogoDuotone class="inline text-red-500" />
-		<a
-			href="https://www.youtube.com/@HallinMedia/?ref=hallin.media"
-			data-umami-event="Portfolio (youtube)"
-			target="_blank"
-			class="underline underline-offset-2 transition duration-150 hover:opacity-75 active:opacity-50"
-			>YouTube-konton</a
-		> för en inblick i mina foto- och videoarbeten.
-	</p>
+<div
+  class="my-12 flex flex-col gap-2 rounded border-l-4 border-red-400 bg-red-100 p-4"
+  role="region"
+  aria-labelledby="view-more-heading"
+>
+  <h2 id="view-more-heading" class="flex items-center gap-2 font-bold">
+    <PhInfoDuotone class="h-6 w-6 text-red-500" aria-hidden="true" />
+    Vill du se ännu mer projekt?
+  </h2>
+  <p>
+    För att se ännu fler exempel på mina tidigare arbeten, inklusive projekt <i
+      >utan</i
+    > case studies, rekommenderar jag att du besöker min <PhBehanceLogoDuotone
+      class="inline text-red-500"
+      aria-hidden="true"
+    />
+    <a
+      href="https://www.behance.net/whallin/?ref=hallin.media"
+      data-umami-event="Portfolio (behance)"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="select-none underline underline-offset-2 transition-opacity duration-150 hover:opacity-80 active:opacity-60"
+      aria-label="Besök min Behance-sida för grafiska designprojekt (öppnas i ny flik)"
+    >
+      Behance-sida</a
+    >
+    för grafiska designprojekt samt mina <PhInstagramLogoDuotone
+      class="inline text-red-500"
+      aria-hidden="true"
+    />
+    <a
+      href="https://www.instagram.com/williamhallinn/?ref=hallin.media"
+      data-umami-event="Portfolio (instagram)"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="select-none underline underline-offset-2 transition-opacity duration-150 hover:opacity-80 active:opacity-60"
+      aria-label="Följ mig på Instagram för fotoprojekt (öppnas i ny flik)"
+    >
+      Instagram</a
+    >- och <PhYoutubeLogoDuotone
+      class="inline text-red-500"
+      aria-hidden="true"
+    />
+    <a
+      href="https://www.youtube.com/@HallinMedia/?ref=hallin.media"
+      data-umami-event="Portfolio (youtube)"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="select-none underline underline-offset-2 transition-opacity duration-150 hover:opacity-80 active:opacity-60"
+      aria-label="Besök min YouTube-kanal för videoprojekt (öppnas i ny flik)"
+      >YouTube-konton</a
+    > för en inblick i mina foto- och videoarbeten.
+  </p>
 </div>

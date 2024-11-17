@@ -1,6 +1,7 @@
 #:schema node_modules/wrangler/config-schema.json
 name = "hallinmedia-website"
-compatibility_date = "2024-07-25"
+compatibility_date = "2024-11-12"
+compatibility_flags = ["nodejs_compat"]
 pages_build_output_dir = "./dist"
 
 # Automatically place your workloads in an optimal location to minimize latency.
@@ -15,7 +16,7 @@ pages_build_output_dir = "./dist"
 # - https://developers.cloudflare.com/pages/functions/bindings/#environment-variables
 # Note: Use secrets to store sensitive data.
 # - https://developers.cloudflare.com/pages/functions/bindings/#secrets
-[vars]
+# [vars]
 # MY_VARIABLE = "production_value"
 
 # Bind the Workers AI model catalog. Run machine learning models, powered by serverless GPUs, on Cloudflare’s global network

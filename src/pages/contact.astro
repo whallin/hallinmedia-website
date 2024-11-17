@@ -1,185 +1,229 @@
 ---
-import { Picture } from 'astro:assets'
-import ImgContact from '../assets/contactimg.webp'
-import PhClockDuotone from '../components/icon/PhClockDuotone.astro'
-import PhEnvelopeSimpleDuotone from '../components/icon/PhEnvelopeSimpleDuotone.astro'
-import PhHandWavingDuotone from '../components/icon/PhHandWavingDuotone.astro'
-import PhPhoneDuotone from '../components/icon/PhPhoneDuotone.astro'
-import PhInstagramLogoDuotone from '../components/icon/brands/PhInstagramLogoDuotone.astro'
-import PhLinkedinLogoDuotone from '../components/icon/brands/PhLinkedinLogoDuotone.astro'
-import LayoutMain from '../layouts/Main.astro'
+import { Picture } from "astro:assets";
+import ImgContact from "../assets/contactimg.webp";
+import PhClockDuotone from "../components/icon/PhClockDuotone.astro";
+import PhEnvelopeSimpleDuotone from "../components/icon/PhEnvelopeSimpleDuotone.astro";
+import PhHandWavingDuotone from "../components/icon/PhHandWavingDuotone.astro";
+import PhPhoneDuotone from "../components/icon/PhPhoneDuotone.astro";
+import PhInstagramLogoDuotone from "../components/icon/brands/PhInstagramLogoDuotone.astro";
+import PhLinkedinLogoDuotone from "../components/icon/brands/PhLinkedinLogoDuotone.astro";
+import LayoutMain from "../layouts/Main.astro";
 ---
 
 <LayoutMain
-	title="Kontakta mig"
-	description="William Hallin är en frilansande digital designer och videoproducent i Skellefteå. Specialiserad på fotografering, videoproduktion och redigering."
+  title="Kontakta mig"
+  description="William Hallin är en frilansande digital designer och videoproducent i Skellefteå. Specialiserad på fotografering, videoproduktion och redigering."
 >
-	<div class="flex flex-row items-center gap-4">
-		<PhHandWavingDuotone id="contact-header--icon" class="h-10 w-10 text-red-400 opacity-0" />
-		<h1 id="contact-header" class="text-3xl font-light opacity-0">
-			Kontakta <i class="font-serif">mig</i>
-		</h1>
-	</div>
+  <div class="flex flex-row items-center gap-4" role="banner">
+    <PhHandWavingDuotone
+      id="contact-header--icon"
+      class="h-10 w-10 text-red-400 opacity-0"
+      aria-hidden="true"
+    />
+    <h1 id="contact-header" class="text-3xl font-light opacity-0">
+      Kontakta <i class="font-serif">mig</i>
+    </h1>
+  </div>
 
-	<div class="gap-12 pb-8 pt-6 sm:grid sm:grid-cols-3">
-		<main id="contact-info" class="col-span-2 flex h-fit flex-col gap-4">
-			<p id="info-1">
-				Jag ser alltid fram emot att skapa ny kontakter! Oavsett om du är intresserad av samarbete
-				eller bara vill ställa frågor och träffas för en kaffe, så är jag här för att hjälpa till.
-			</p>
-			<p id="info-2">
-				<i class="font-serif">Om du överväger ett samarbete,</i> dela gärna med dig av information om
-				ditt projekt, inklusive budget och deadline. Genom dessa detaljer kan jag bättre förstå dina
-				behov och erbjuda en mer exakt offert.
-			</p>
-			<p id="info-3">
-				<i class="font-serif">Tveka inte att kontaka mig</i> — jag ser fram emot att skapa något fantastiskt
-				tillsammans!
-			</p>
-			<section id="info-time" class="flex items-center gap-2">
-				<PhClockDuotone class="h-6 w-6 text-red-400" />
-				<p>
-					Klockan är just nu <span id="stockholm-time" class="font-serif italic">00:00:00</span>.
-				</p>
-			</section>
-		</main>
-		<div
-			class="flex flex-col items-center gap-4 pb-4 pt-12 grayscale transition duration-150 hover:rotate-0 hover:grayscale-0 sm:rotate-6 sm:gap-2 sm:py-0"
-		>
-			<Picture
-				src={ImgContact}
-				alt="Picture of William Hallin"
-				formats={['avif', 'webp']}
-				width={640}
-				class="h-full select-none rounded drop-shadow-2xl transition duration-150 hover:drop-shadow-lg"
-				loading="eager"
-			/>
-			<i class="text-center text-xs text-stone-500">Fotat i Mo i Rana, Norge 🇳🇴</i>
-		</div>
-	</div>
+  <div class="gap-12 pb-8 pt-6 sm:grid sm:grid-cols-3">
+    <main id="contact-info" class="col-span-2 flex h-fit flex-col gap-4">
+      <p id="info-1">
+        Jag ser alltid fram emot att skapa ny kontakter! Oavsett om du är
+        intresserad av samarbete eller bara vill ställa frågor och träffas för
+        en kaffe, så är jag här för att hjälpa till.
+      </p>
+      <p id="info-2">
+        <i class="font-serif">Om du överväger ett samarbete,</i> dela gärna med dig
+        av information om ditt projekt, inklusive budget och deadline. Genom dessa
+        detaljer kan jag bättre förstå dina behov och erbjuda en mer exakt offert.
+      </p>
+      <p id="info-3">
+        <i class="font-serif">Tveka inte att kontaka mig</i> — jag ser fram emot
+        att skapa något fantastiskt tillsammans!
+      </p>
+      <section id="info-time" class="flex w-fit items-center gap-2 rounded-lg">
+        <PhClockDuotone class="h-6 w-6 text-red-400" />
+        <p class="select-none">
+          Klockan är just nu <span id="stockholm-time" class="font-serif italic"
+            >00:00:00</span
+          >.
+        </p>
+      </section>
+    </main>
+    <div
+      class="flex flex-col items-center gap-4 pb-4 pt-12 grayscale transition duration-150 hover:rotate-0 hover:grayscale-0 sm:rotate-6 sm:gap-2 sm:py-0"
+    >
+      <Picture
+        src={ImgContact}
+        alt="Picture of William Hallin"
+        formats={["avif", "webp"]}
+        width={640}
+        class="h-full select-none rounded drop-shadow-2xl transition duration-150 hover:drop-shadow-lg"
+        loading="eager"
+      />
+      <i class="text-center text-xs text-stone-500"
+        >Fotat i Mo i Rana, Norge 🇳🇴</i
+      >
+    </div>
+  </div>
 
-	<the-fold></the-fold>
+  <section
+    id="contact-links"
+    class="flex flex-col gap-6"
+    aria-label="Kontaktinformation"
+  >
+    <a
+      id="contact-link-mail"
+      href="mailto:william@hallin.media"
+      data-umami-event="contact_email_click"
+      data-ga4-event="contact_interaction"
+      data-ga4-event-category="engagement"
+      data-ga4-event-label="email"
+      class="w-fit opacity-0"
+      aria-label="Send an email to william@hallin.media"
+    >
+      <div
+        class="flex w-fit items-center gap-4 transition duration-150 hover:text-red-400 active:opacity-50"
+      >
+        <PhEnvelopeSimpleDuotone
+          class="h-8 w-8 text-red-400"
+          aria-hidden="true"
+        />
+        <div class="flex flex-col gap-1">
+          <span class="font-serif">E-post</span>
+          <span class="text-stone-500">william@hallin.media</span>
+        </div>
+      </div>
+    </a>
+    <a
+      id="contact-link-phone"
+      href="tel:+46706159279"
+      data-umami-event="contact_phone_click"
+      data-ga4-event="contact_interaction"
+      data-ga4-event-category="engagement"
+      data-ga4-event-label="phone"
+      class="w-fit opacity-0"
+      aria-label="Call +46 70-615 92 79"
+    >
+      <div
+        class="flex w-fit items-center gap-4 transition duration-150 hover:text-red-400 active:opacity-50"
+      >
+        <PhPhoneDuotone class="h-8 w-8 text-red-400" aria-hidden="true" />
+        <div class="flex flex-col gap-1">
+          <span class="font-serif">Telefon</span>
+          <span class="text-stone-500">+46 (0)70-615 92 79</span>
+        </div>
+      </div>
+    </a>
+    <a
+      id="contact-link-ig"
+      href="https://www.instagram.com/williamhallinn/?utm_source=hallin.media&utm_medium=website&utm_campaign=contact_page&utm_content=profile_link"
+      data-umami-event="contact_instagram_click"
+      data-ga4-event="social_link_click"
+      data-ga4-event-category="social"
+      data-ga4-event-label="instagram"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="w-fit opacity-0"
+      aria-label="Visit my Instagram profile"
+    >
+      <div
+        class="flex w-fit items-center gap-4 transition duration-150 hover:text-red-400 active:opacity-50"
+      >
+        <PhInstagramLogoDuotone
+          class="h-8 w-8 text-red-400"
+          aria-hidden="true"
+        />
+        <div class="flex flex-col gap-1">
+          <span class="font-serif">Instagram</span>
+          <span class="text-stone-500">@williamhallinn</span>
+        </div>
+      </div>
+    </a>
+    <a
+      id="contact-link-li"
+      href="https://www.linkedin.com/in/whallin/?utm_source=hallin.media&utm_medium=website&utm_campaign=contact_page&utm_content=profile_link"
+      data-umami-event="contact_linkedin_click"
+      data-ga4-event="social_link_click"
+      data-ga4-event-category="social"
+      data-ga4-event-label="linkedin"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="w-fit opacity-0"
+      aria-label="Visit my LinkedIn profile"
+    >
+      <div
+        class="flex w-fit items-center gap-4 transition duration-150 hover:text-red-400 active:opacity-50"
+      >
+        <PhLinkedinLogoDuotone
+          class="h-8 w-8 text-red-400"
+          aria-hidden="true"
+        />
+        <div class="flex flex-col gap-1">
+          <span class="font-serif">LinkedIn</span>
+          <span class="text-stone-500">@whallin</span>
+        </div>
+      </div>
+    </a>
+  </section>
 
-	<section id="contact-links" class="flex flex-col gap-6">
-		<a
-			id="contact-link-mail"
-			href="mailto:william@hallin.media"
-			data-umami-event="/contact (mail)"
-			class="w-fit opacity-0"
-		>
-			<div
-				class="flex w-fit items-center gap-4 transition duration-150 hover:text-red-400 active:opacity-50"
-			>
-				<PhEnvelopeSimpleDuotone class="h-8 w-8 text-red-400" />
-				<div class="flex flex-col gap-1">
-					<span class="font-serif">E-post</span>
-					<span class="text-stone-500">william@hallin.media</span>
-				</div>
-			</div>
-		</a>
-		<a
-			id="contact-link-phone"
-			href="tel:+46706159279"
-			data-umami-event="/contact (phone)"
-			class="w-fit opacity-0"
-		>
-			<div
-				class="flex w-fit items-center gap-4 transition duration-150 hover:text-red-400 active:opacity-50"
-			>
-				<PhPhoneDuotone class="h-8 w-8 text-red-400" />
-				<div class="flex flex-col gap-1">
-					<span class="font-serif">Telefon</span>
-					<span class="text-stone-500">+46 (0)70-615 92 79</span>
-				</div>
-			</div>
-		</a>
-		<a
-			id="contact-link-ig"
-			href="https://www.instagram.com/williamhallinn/?ref=hallin.media"
-			data-umami-event="/contact (instagram)"
-			target="_blank"
-			class="w-fit opacity-0"
-		>
-			<div
-				class="flex w-fit items-center gap-4 transition duration-150 hover:text-red-400 active:opacity-50"
-			>
-				<PhInstagramLogoDuotone class="h-8 w-8 text-red-400" />
-				<div class="flex flex-col gap-1">
-					<span class="font-serif">Instagram</span>
-					<span class="text-stone-500">@williamhallinn</span>
-				</div>
-			</div>
-		</a>
-		<a
-			id="contact-link-li"
-			href="https://www.linkedin.com/in/whallin/?ref=hallin.media"
-			data-umami-event="/contact (linkedin)"
-			target="_blank"
-			class="w-fit opacity-0"
-		>
-			<div
-				class="flex w-fit items-center gap-4 transition duration-150 hover:text-red-400 active:opacity-50"
-			>
-				<PhLinkedinLogoDuotone class="h-8 w-8 text-red-400" />
-				<div class="flex flex-col gap-1">
-					<span class="font-serif">LinkedIn</span>
-					<span class="text-stone-500">@whallin</span>
-				</div>
-			</div>
-		</a>
-	</section>
+  <script>
+    document.addEventListener(
+      "astro:page-load",
+      () => {
+        gsap.set(
+          [
+            "#contact-header--icon",
+            "#contact-header",
+            "#contact-link-mail",
+            "#contact-link-phone",
+            "#contact-link-ig",
+            "#contact-link-li",
+          ],
+          { opacity: 1 },
+        );
 
-	<script>
-		document.addEventListener(
-			'astro:page-load',
-			() => {
-				gsap.set(
-					[
-						'#contact-header--icon',
-						'#contact-header',
-						'#contact-link-mail',
-						'#contact-link-phone',
-						'#contact-link-ig',
-						'#contact-link-li'
-					],
-					{ opacity: 1 }
-				)
+        gsap.from(["#contact-header--icon", "#contact-header"], {
+          y: -10,
+          opacity: 0,
+          duration: 1,
+          ease: "power2.out",
+          stagger: 0.25,
+        });
 
-				gsap.from(['#contact-header--icon', '#contact-header'], {
-					y: -10,
-					opacity: 0,
-					duration: 1,
-					ease: 'power2.out',
-					stagger: 0.25
-				})
+        gsap.from(
+          [
+            "#contact-link-mail",
+            "#contact-link-phone",
+            "#contact-link-ig",
+            "#contact-link-li",
+          ],
+          {
+            y: 15,
+            opacity: 0,
+            duration: 0.5,
+            ease: "power2.out",
+            stagger: 0.25,
+          },
+        );
 
-				gsap.from(
-					['#contact-link-mail', '#contact-link-phone', '#contact-link-ig', '#contact-link-li'],
-					{
-						y: 15,
-						opacity: 0,
-						duration: 0.5,
-						ease: 'power2.out',
-						stagger: 0.25
-					}
-				)
+        // Update the stockholm-time every minute
+        updateStockholmTime();
+        setInterval(updateStockholmTime, 1000);
+      },
+      { once: false },
+    );
 
-				// Update the stockholm-time every minute
-				updateStockholmTime()
-				setInterval(updateStockholmTime, 1000)
-			},
-			{ once: false }
-		)
-
-		// Get the Stockholm time
-		function updateStockholmTime() {
-			document.getElementById('stockholm-time').textContent = new Intl.DateTimeFormat([], {
-				timeZone: 'Europe/Stockholm',
-				hour: '2-digit',
-				minute: '2-digit',
-				second: '2-digit',
-				hour12: false
-			}).format(new Date())
-		}
-	</script>
+    // Get the Stockholm time
+    function updateStockholmTime() {
+      document.getElementById("stockholm-time").textContent =
+        new Intl.DateTimeFormat([], {
+          timeZone: "Europe/Stockholm",
+          hour: "2-digit",
+          minute: "2-digit",
+          second: "2-digit",
+          hour12: false,
+        }).format(new Date());
+    }
+  </script>
 </LayoutMain>
