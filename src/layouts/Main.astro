@@ -1,29 +1,31 @@
 ---
-import Footer from '../components/Footer.astro'
-import Navbar from '../components/Navbar.astro'
-import SiteHead from '../components/SiteHead.astro'
+import Footer from "../components/Footer.astro";
+import Navbar from "../components/Navbar.astro";
+import SiteHead from "../components/SiteHead.astro";
 
 interface Props {
-	title: string
-	description: string
+  title: string;
+  description: string;
 }
 
-const { title, description } = Astro.props
+const { title, description } = Astro.props;
 ---
 
 <!doctype html>
 <html lang=`${Astro.currentLocale}`>
-	<head>
-		<SiteHead title={title} description={description} />
-	</head>
-	<body class="m-auto max-w-[700px] bg-stone-50 p-6 text-stone-900 selection:bg-red-500">
-		<Navbar />
-		<slot />
-		<Footer />
+  <head>
+    <SiteHead title={title} description={description} />
+  </head>
+  <body
+    class="m-auto max-w-[700px] bg-stone-50 p-6 text-stone-900 selection:bg-red-500"
+  >
+    <Navbar />
+    <slot />
+    <Footer />
 
-		<script>
-			import gsap from 'gsap'
-			window.gsap = gsap
-		</script>
-	</body>
+    <script>
+      import { gsap } from "gsap";
+      window.gsap = gsap;
+    </script>
+  </body>
 </html>

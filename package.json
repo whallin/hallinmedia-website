@@ -1,38 +1,34 @@
 {
-	"name": "hallinmedia-website",
-	"type": "module",
-	"version": "0.0.1",
-	"scripts": {
-		"dev": "astro dev",
-		"start": "astro dev",
-		"build": "astro build && jampack ./dist",
-		"preview": "astro build && jampack ./dist && wrangler pages dev",
-		"astro": "astro",
-		"deploy": "astro build && jampack ./dist && wrangler pages deploy",
-		"cf-typegen": "wrangler types"
-	},
-	"dependencies": {
-		"@astrojs/mdx": "^3.1.7",
-		"@astrojs/partytown": "^2.1.2",
-		"@astrojs/sitemap": "^3.1.6",
-		"@astrojs/tailwind": "^5.1.1",
-		"@divriots/jampack": "^0.25.0",
-		"@tailwindcss/typography": "^0.5.15",
-		"astro": "^4.15.8",
-		"astro-embed": "^0.7.2",
-		"gsap": "^3.12.5",
-		"mdast-util-to-string": "^4.0.0",
-		"reading-time": "^1.5.0",
-		"sharp": "^0.33.5",
-		"tailwindcss": "^3.4.12"
-	},
-	"devDependencies": {
-		"@cloudflare/workers-types": "^4.20240919.0",
-		"prettier": "^3.3.3",
-		"prettier-plugin-astro": "^0.14.1",
-		"prettier-plugin-astro-organize-imports": "^0.4.9",
-		"prettier-plugin-tailwindcss": "^0.6.6",
-		"unlighthouse": "^0.13.2",
-		"wrangler": "^3.78.7"
-	}
+  "name": "hallinmedia-website",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro build && wrangler pages dev",
+    "astro": "astro",
+    "deploy": "astro build && wrangler pages deploy",
+    "cf-typegen": "wrangler types"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.9.4",
+    "@astrojs/cloudflare": "^11.2.0",
+    "@astrojs/mdx": "^3.1.9",
+    "@astrojs/partytown": "^2.1.2",
+    "@astrojs/sitemap": "^3.2.1",
+    "@astrojs/tailwind": "^5.1.2",
+    "astro": "^4.16.13",
+    "gsap": "^3.12.5",
+    "tailwindcss": "^3.4.15",
+    "typescript": "^5.6.3"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20241112.0",
+    "prettier": "^3.3.3",
+    "prettier-plugin-astro": "^0.14.1",
+    "prettier-plugin-astro-organize-imports": "^0.4.11",
+    "prettier-plugin-tailwindcss": "^0.6.8",
+    "wrangler": "^3.87.0"
+  }
 }
