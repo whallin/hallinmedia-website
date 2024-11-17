@@ -1,19 +1,21 @@
 ---
 import { Picture } from "astro:assets";
+import type { CollectionEntry } from "astro:content";
 import { getCollection } from "astro:content";
 import { getRelativeLocaleUrl } from "astro:i18n";
 
 const portfolioEntries = await getCollection("portfolio");
-const sortedWorkPosts = portfolioEntries.sort((a: any, b: any) => {
-  // Convert dates to timestamps for comparison
-  const dateA = new Date(a.data.publishDate).getTime();
-  const dateB = new Date(b.data.publishDate).getTime();
-  return dateB - dateA;
-});
+const sortedWorkPosts = portfolioEntries.sort(
+  (a: CollectionEntry<"portfolio">, b: CollectionEntry<"portfolio">) => {
+    const dateA = new Date(a.data.publishDate).getTime();
+    const dateB = new Date(b.data.publishDate).getTime();
+    return dateB - dateA;
+  },
+);
 ---
 
 <section
-  class="grid grid-cols-1 gap-4 sm:grid-cols-2"
+  class="grid select-none grid-cols-1 gap-4 sm:grid-cols-2"
   aria-label="Portfolio projects grid"
 >
   {
@@ -21,10 +23,10 @@ const sortedWorkPosts = portfolioEntries.sort((a: any, b: any) => {
       <article class="portfolio-item">
         <a
           href={getRelativeLocaleUrl(
-            Astro.currentLocale ?? "en", // Provide fallback for undefined locale
+            Astro.currentLocale ?? "en",
             `/portfolio/${workPostEntry.slug}`,
           )}
-          class="group block transition duration-150 hover:opacity-75 active:opacity-50"
+          class="group block rounded-lg transition duration-150 hover:opacity-75 focus:outline-none focus:ring-2 focus:ring-red-600 active:opacity-50"
           aria-labelledby={`project-title-${workPostEntry.slug}`}
         >
           <div
@@ -37,7 +39,7 @@ const sortedWorkPosts = portfolioEntries.sort((a: any, b: any) => {
               formats={["avif", "webp"]}
               width={1280}
               height={720}
-              class="absolute left-0 top-0 -z-20 h-full w-full select-none object-cover transition duration-150 group-hover:rotate-6 group-hover:scale-110"
+              class="absolute left-0 top-0 -z-20 h-full w-full select-none object-cover transition duration-150 group-hover:rotate-6 group-hover:scale-125"
             />
             <div class="absolute inset-0 z-10 bg-gradient-to-t from-red-950/90 via-red-900/50 to-transparent" />
             <div class="relative z-20 h-full p-6 sm:p-8">
