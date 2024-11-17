@@ -1,72 +1,80 @@
 ---
-import { Picture } from 'astro:assets'
-import { getCollection } from 'astro:content'
-import { getRelativeLocaleUrl } from 'astro:i18n'
+import { Picture } from "astro:assets";
+import { getCollection } from "astro:content";
+import { getRelativeLocaleUrl } from "astro:i18n";
 
-const portfolioEntries = await getCollection('portfolio')
+const portfolioEntries = await getCollection("portfolio");
 const sortedWorkPosts = portfolioEntries.sort((a, b) => {
-	return new Date(b.data.publishDate) - new Date(a.data.publishDate)
-})
+  return new Date(b.data.publishDate) - new Date(a.data.publishDate);
+});
 ---
 
 <section class="grid grid-cols-1 gap-4 sm:grid-cols-2">
-	{
-		sortedWorkPosts.map((workPostEntry) => (
-			<a
-				id="work-post--link"
-				href={getRelativeLocaleUrl(Astro.currentLocale, `/portfolio/${workPostEntry.slug}`)}
-				class="transition duration-150 hover:opacity-75 active:opacity-50"
-			>
-				<div id="work-post" class="relative h-[350px] overflow-clip rounded opacity-0">
-					<div class="h-full bg-gradient-to-t from-red-900/75 to-red-900/0 p-6 sm:p-8">
-						<div class="flex h-full flex-col justify-end text-stone-50">
-							<div class="flex flex-col gap-1">
-								<span class="text-sm opacity-50">
-									{workPostEntry.data.publishDate.toISOString().slice(0, 10)}
-								</span>
-								<h2 class="text-2xl">{workPostEntry.data.title}</h2>
-							</div>
-						</div>
-						<Picture
-							id="work-post--thumbnail"
-							src={workPostEntry.data.thumbnail.src}
-							alt={workPostEntry.data.thumbnail.alt}
-							formats={['avif', 'webp']}
-							width={1280}
-							height={720}
-							class="justify-self hover absolute left-0 top-0 -z-10 h-full w-full select-none object-cover transition duration-150"
-						/>
-					</div>
-				</div>
-			</a>
-		))
-	}
+  {
+    sortedWorkPosts.map((workPostEntry) => (
+      <a
+        id="work-post--link"
+        href={getRelativeLocaleUrl(
+          Astro.currentLocale,
+          `/portfolio/${workPostEntry.slug}`,
+        )}
+        class="transition duration-150 hover:opacity-75 active:opacity-50"
+      >
+        <div
+          id="work-post"
+          class="relative h-[350px] overflow-clip rounded opacity-0"
+        >
+          <div class="h-full bg-gradient-to-t from-red-900/75 to-red-900/0 p-6 sm:p-8">
+            <div class="flex h-full flex-col justify-end text-stone-50">
+              <div class="flex flex-col gap-1">
+                <span class="text-sm opacity-50">
+                  {workPostEntry.data.publishDate.toISOString().slice(0, 10)}
+                </span>
+                <h2 class="text-2xl">{workPostEntry.data.title}</h2>
+              </div>
+            </div>
+            <Picture
+              id="work-post--thumbnail"
+              src={workPostEntry.data.thumbnail.src}
+              alt={workPostEntry.data.thumbnail.alt}
+              formats={["avif", "webp"]}
+              width={1280}
+              height={720}
+              class="justify-self hover absolute left-0 top-0 -z-10 h-full w-full select-none object-cover transition duration-150"
+            />
+          </div>
+        </div>
+      </a>
+    ))
+  }
 </section>
 
 <script>
-	document.addEventListener(
-		'astro:page-load',
-		() => {
-			gsap.set('#work-post', { opacity: 1 })
-			gsap.from('#work-post', {
-				y: 10,
-				opacity: 0,
-				duration: 1,
-				ease: 'power2.out',
-				stagger: 0.25
-			})
-			const workPostLinks = document.querySelectorAll('#work-post--link')
-			workPostLinks.forEach((workPostLink) => {
-				workPostLink.addEventListener('mouseenter', () => {
-					workPostLink.querySelector('#work-post--thumbnail').classList.add('rotate-6', 'scale-110')
-				})
-				workPostLink.addEventListener('mouseleave', () => {
-					workPostLink
-						.querySelector('#work-post--thumbnail')
-						.classList.remove('rotate-6', 'scale-110')
-				})
-			})
-		},
-		{ once: false }
-	)
+  document.addEventListener(
+    "astro:page-load",
+    () => {
+      gsap.set("#work-post", { opacity: 1 });
+      gsap.from("#work-post", {
+        y: 10,
+        opacity: 0,
+        duration: 1,
+        ease: "power2.out",
+        stagger: 0.25,
+      });
+      const workPostLinks = document.querySelectorAll("#work-post--link");
+      workPostLinks.forEach((workPostLink) => {
+        workPostLink.addEventListener("mouseenter", () => {
+          workPostLink
+            .querySelector("#work-post--thumbnail")
+            .classList.add("rotate-6", "scale-110");
+        });
+        workPostLink.addEventListener("mouseleave", () => {
+          workPostLink
+            .querySelector("#work-post--thumbnail")
+            .classList.remove("rotate-6", "scale-110");
+        });
+      });
+    },
+    { once: false },
+  );
 </script>

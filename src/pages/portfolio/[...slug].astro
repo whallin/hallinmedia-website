@@ -1,133 +1,137 @@
 ---
-import { Picture } from 'astro:assets'
-import { getCollection } from 'astro:content'
-import Avatar from '../../assets/avatar.webp'
-import PhClockDuotone from '../../components/icon/PhClockDuotone.astro'
-import PhHourglassMediumDuotone from '../../components/icon/PhHourglassMediumDuotone.astro'
-import PortfolioViewMore from '../../components/PortfolioViewMore.astro'
-import LayoutWorkPost from '../../layouts/WorkPost.astro'
+import { Picture } from "astro:assets";
+import { getCollection } from "astro:content";
+import Avatar from "../../assets/avatar.webp";
+import PhClockDuotone from "../../components/icon/PhClockDuotone.astro";
+import PhHourglassMediumDuotone from "../../components/icon/PhHourglassMediumDuotone.astro";
+import PortfolioViewMore from "../../components/PortfolioViewMore.astro";
+import LayoutWorkPost from "../../layouts/WorkPost.astro";
 
 export async function getStaticPaths() {
-	const portfolioEntries = await getCollection('portfolio')
-	return portfolioEntries.map((entry) => ({
-		params: { slug: entry.slug },
-		props: { entry }
-	}))
+  const portfolioEntries = await getCollection("portfolio");
+  return portfolioEntries.map((entry) => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  }));
 }
 
-const { entry } = Astro.props
-const { Content, remarkPluginFrontmatter } = await entry.render()
+const { entry } = Astro.props;
+const { Content, remarkPluginFrontmatter } = await entry.render();
 ---
 
 <LayoutWorkPost
-	title=`${entry.data.title}`
-	description=`${entry.data.description}`
-	thumbnail=`${entry.data.thumbnail.src}`
-	publishDate=`${entry.data.publishDate.toISOString()}`
-	modifiedDate=`${entry.data.modifiedDate.toISOString()}`
+  title=`${entry.data.title}`
+  description=`${entry.data.description}`
+  thumbnail=`${entry.data.thumbnail.src}`
+  publishDate=`${entry.data.publishDate.toISOString()}`
+  modifiedDate=`${entry.data.modifiedDate.toISOString()}`
 >
-	<section>
-		<Picture
-			src={entry.data.thumbnail.src}
-			alt={entry.data.thumbnail.alt}
-			formats={['avif', 'webp']}
-			width={1280}
-			height={720}
-			class="rounded drop-shadow-lg"
-			loading="eager"
-		/>
-		<div class="mb-6 mt-8">
-			<i id="work-post--category" class="font-serif text-stone-500 opacity-0"
-				>{entry.data.category}</i
-			>
-			<h1 id="work-post--title" class="mb-2 mt-1 text-2xl opacity-0">
-				{entry.data.title}
-			</h1>
-			<div
-				id="work-post--info"
-				class="flex flex-col gap-2 text-sm text-stone-500 opacity-0 sm:flex-row"
-			>
-				<span class="text-stone-500"
-					><PhHourglassMediumDuotone class="inline h-4 w-4 text-red-400" />
-					{remarkPluginFrontmatter.minutes} minuts läsning</span
-				>
-				<span class="hidden sm:block">•</span>
-				<span
-					><PhClockDuotone class="inline h-4 w-4 text-red-400" /> Publicerad {
-						entry.data.publishDate.toISOString().slice(0, 10)
-					}</span
-				>
-			</div>
-		</div>
-	</section>
+  <section>
+    <Picture
+      src={entry.data.thumbnail.src}
+      alt={entry.data.thumbnail.alt}
+      formats={["avif", "webp"]}
+      width={1280}
+      height={720}
+      class="rounded drop-shadow-lg"
+      loading="eager"
+    />
+    <div class="mb-6 mt-8">
+      <i id="work-post--category" class="font-serif text-stone-500 opacity-0"
+        >{entry.data.category}</i
+      >
+      <h1 id="work-post--title" class="mb-2 mt-1 text-2xl opacity-0">
+        {entry.data.title}
+      </h1>
+      <div
+        id="work-post--info"
+        class="flex flex-col gap-2 text-sm text-stone-500 opacity-0 sm:flex-row"
+      >
+        <span class="text-stone-500"
+          ><PhHourglassMediumDuotone class="inline h-4 w-4 text-red-400" />
+          {remarkPluginFrontmatter.minutes} minuts läsning</span
+        >
+        <span class="hidden sm:block">•</span>
+        <span
+          ><PhClockDuotone class="inline h-4 w-4 text-red-400" /> Publicerad {
+            entry.data.publishDate.toISOString().slice(0, 10)
+          }</span
+        >
+      </div>
+    </div>
+  </section>
 
-	<the-fold></the-fold>
+  <article class="prose prose-stone">
+    <Content />
+  </article>
 
-	<article class="prose prose-stone">
-		<Content />
-	</article>
+  <div class="my-8 flex flex-col gap-4">
+    <div class="flex items-center gap-4">
+      <Picture
+        src={Avatar}
+        alt="Picture of William Hallin"
+        formats={["avif", "webp"]}
+        height={80}
+        class="h-[48px] w-[48px] select-none rounded-full"
+      />
+      <div class="flex flex-col">
+        <b>William Hallin</b>
+        <a
+          href=`mailto:william@hallin.media?subject=${entry.data.title}`
+          class="text-red-500 underline underline-offset-2 transition duration-150 hover:opacity-75 active:opacity-50"
+          >william@hallin.media</a
+        >
+      </div>
+    </div>
+    <span class="text-sm text-stone-500"
+      ><PhClockDuotone class="inline h-4 w-4 text-red-400" /> Senast redigerad {
+        entry.data.modifiedDate.toISOString().slice(0, 10)
+      }
+    </span>
+  </div>
 
-	<div class="my-8 flex flex-col gap-4">
-		<div class="flex items-center gap-4">
-			<Picture
-				src={Avatar}
-				alt="Picture of William Hallin"
-				formats={['avif', 'webp']}
-				height={80}
-				class="h-[48px] w-[48px] select-none rounded-full"
-			/>
-			<div class="flex flex-col">
-				<b>William Hallin</b>
-				<a
-					href=`mailto:william@hallin.media?subject=${entry.data.title}`
-					class="text-red-500 underline underline-offset-2 transition duration-150 hover:opacity-75 active:opacity-50"
-					>william@hallin.media</a
-				>
-			</div>
-		</div>
-		<span class="text-sm text-stone-500"
-			><PhClockDuotone class="inline h-4 w-4 text-red-400" /> Senast redigerad {
-				entry.data.modifiedDate.toISOString().slice(0, 10)
-			}
-		</span>
-	</div>
+  <PortfolioViewMore />
 
-	<PortfolioViewMore />
+  <section class="my-8">
+    <script
+      src="https://giscus.app/client.js"
+      data-repo="whallin/hallinmedia-website"
+      data-repo-id="R_kgDOKc4lgw"
+      data-category="Giscus Comments"
+      data-category-id="DIC_kwDOKc4lg84Ca-9R"
+      data-mapping="url"
+      data-strict="0"
+      data-reactions-enabled="1"
+      data-emit-metadata="0"
+      data-input-position="bottom"
+      data-theme="light"
+      data-lang="en"
+      data-loading="lazy"
+      crossorigin="anonymous"
+      async></script>
+  </section>
 
-	<section class="my-8">
-		<script
-			src="https://giscus.app/client.js"
-			data-repo="whallin/hallinmedia-website"
-			data-repo-id="R_kgDOKc4lgw"
-			data-category="Giscus Comments"
-			data-category-id="DIC_kwDOKc4lg84Ca-9R"
-			data-mapping="url"
-			data-strict="0"
-			data-reactions-enabled="1"
-			data-emit-metadata="0"
-			data-input-position="bottom"
-			data-theme="light"
-			data-lang="en"
-			data-loading="lazy"
-			crossorigin="anonymous"
-			async></script>
-	</section>
+  <script>
+    document.addEventListener(
+      "astro:page-load",
+      () => {
+        gsap.set(
+          ["#work-post--category", "#work-post--title", "#work-post--info"],
+          { opacity: 1 },
+        );
 
-	<script>
-		document.addEventListener(
-			'astro:page-load',
-			() => {
-				gsap.set(['#work-post--category', '#work-post--title', '#work-post--info'], { opacity: 1 })
-
-				gsap.from(['#work-post--category', '#work-post--title', '#work-post--info'], {
-					y: 15,
-					opacity: 0,
-					duration: 0.5,
-					ease: 'power2.out',
-					stagger: 0.25
-				})
-			},
-			{ once: false }
-		)
-	</script>
+        gsap.from(
+          ["#work-post--category", "#work-post--title", "#work-post--info"],
+          {
+            y: 15,
+            opacity: 0,
+            duration: 0.5,
+            ease: "power2.out",
+            stagger: 0.25,
+          },
+        );
+      },
+      { once: false },
+    );
+  </script>
 </LayoutWorkPost>

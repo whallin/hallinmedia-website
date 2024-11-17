@@ -1,140 +1,164 @@
 ---
-import { Picture } from 'astro:assets'
-import Logo24vision from '../assets/clients/24vision.svg'
-import LogoBrannbollsyran from '../assets/clients/brannbollsyran.svg'
-import LogoExtenseIT from '../assets/clients/extenseit.svg'
-import LogoLastbilsstation from '../assets/clients/lastbilsstation.svg'
-import LogoNolia from '../assets/clients/nolia.svg'
-import LogoNorraSkog from '../assets/clients/norraskog.svg'
-import LogoProducenterna from '../assets/clients/producenterna.svg'
-import LogoTrastockfestivalen from '../assets/clients/trastockfestivalen.svg'
+import { Picture } from "astro:assets";
+import Logo24vision from "../assets/clients/24vision.svg";
+import LogoBrannbollsyran from "../assets/clients/brannbollsyran.svg";
+import LogoExtenseIT from "../assets/clients/extenseit.svg";
+import LogoLastbilsstation from "../assets/clients/lastbilsstation.svg";
+import LogoNolia from "../assets/clients/nolia.svg";
+import LogoNorraSkog from "../assets/clients/norraskog.svg";
+import LogoProducenterna from "../assets/clients/producenterna.svg";
+import LogoTrastockfestivalen from "../assets/clients/trastockfestivalen.svg";
 ---
 
 <section
-	id="clients"
-	class="grid select-none grid-cols-2 items-center justify-items-center gap-6 grayscale sm:gap-12 md:grid-cols-4"
+  id="clients"
+  class="grid select-none grid-cols-2 items-center justify-items-center gap-6 grayscale sm:gap-12 md:grid-cols-4"
 >
-	<a
-		href="https://www.brannbollsyran.com/?ref=hallin.media"
-		data-umami-event=`${Astro.url.pathname}: ClientBar (brannbollsyran)`
-		target="_blank"
-		class="transition duration-150 hover:opacity-75 active:opacity-50"
-		><Picture
-			src={LogoBrannbollsyran}
-			alt="Brännbollsyran"
-			id="clientLogo1"
-			height={42}
-			class="opacity-0"
-		/>
-	</a>
-	<a
-		href="https://www.trastockfestivalen.se/?ref=hallin.media"
-		data-umami-event=`${Astro.url.pathname}: ClientBar (trastockfestivalen)`
-		target="_blank"
-		class="transition duration-150 hover:opacity-75 active:opacity-50"
-		><Picture
-			src={LogoTrastockfestivalen}
-			alt="Trästockfestivalen"
-			id="clientLogo2"
-			height={32}
-			class="opacity-0 invert"
-		/>
-	</a>
-	<a
-		href="https://www.nolia.se/?ref=hallin.media"
-		data-umami-event=`${Astro.url.pathname}: ClientBar (nolia)`
-		target="_blank"
-		class="transition duration-150 hover:opacity-75 active:opacity-50"
-		><Picture src={LogoNolia} alt="Nolia" id="clientLogo3" height={24} class="opacity-0" />
-	</a>
-	<a
-		href="https://www.norraskog.se/?ref=hallin.media"
-		data-umami-event=`${Astro.url.pathname}: ClientBar (norraskog)`
-		target="_blank"
-		class="transition duration-150 hover:opacity-75 active:opacity-50"
-		><Picture src={LogoNorraSkog} alt="Norra Skog" id="clientLogo4" height={32} class="opacity-0" />
-	</a>
-	<a
-		href="https://lastbilsstation.se/index.html?ref=hallin.media"
-		data-umami-event=`${Astro.url.pathname}: ClientBar (lastbilsstation)`
-		target="_blank"
-		class="transition duration-150 hover:opacity-75 active:opacity-50"
-		><Picture
-			src={LogoLastbilsstation}
-			alt="Skellefteå Lastbilsstation"
-			id="clientLogo5"
-			height={32}
-			class="opacity-0"
-		/>
-	</a>
-	<a
-		href="https://producenterna.se/"
-		data-umami-event=`${Astro.url.pathname}: ClientBar (producenterna)`
-		target="_blank"
-		class="transition duration-150 hover:opacity-75 active:opacity-50"
-		><Picture
-			src={LogoProducenterna}
-			alt="Producenterna"
-			id="clientLogo6"
-			height={32}
-			class="opacity-0"
-		/>
-	</a>
-	<a
-		href="https://extenseit.se/?ref=hallin.media"
-		data-umami-event=`${Astro.url.pathname}: ClientBar (extenseit)`
-		target="_blank"
-		class="transition duration-150 hover:opacity-75 active:opacity-50"
-		><Picture src={LogoExtenseIT} alt="ExtenseIT" id="clientLogo7" height={20} class="opacity-0" />
-	</a>
-	<a
-		href="https://www.24vision.se/?ref=hallin.media"
-		data-umami-event=`${Astro.url.pathname}: ClientBar (24vision)`
-		target="_blank"
-		class="transition duration-150 hover:opacity-75 active:opacity-50"
-		><Picture src={Logo24vision} alt="24vision" id="clientLogo8" height={32} class="opacity-0" />
-	</a>
+  <a
+    href="https://www.brannbollsyran.com/?ref=hallin.media"
+    data-umami-event=`${Astro.url.pathname}: ClientBar (brannbollsyran)`
+    target="_blank"
+    class="transition duration-150 hover:opacity-75 active:opacity-50"
+    ><Picture
+      src={LogoBrannbollsyran}
+      alt="Brännbollsyran"
+      id="clientLogo1"
+      height={42}
+      class="opacity-0"
+    />
+  </a>
+  <a
+    href="https://www.trastockfestivalen.se/?ref=hallin.media"
+    data-umami-event=`${Astro.url.pathname}: ClientBar (trastockfestivalen)`
+    target="_blank"
+    class="transition duration-150 hover:opacity-75 active:opacity-50"
+    ><Picture
+      src={LogoTrastockfestivalen}
+      alt="Trästockfestivalen"
+      id="clientLogo2"
+      height={32}
+      class="opacity-0 invert"
+    />
+  </a>
+  <a
+    href="https://www.nolia.se/?ref=hallin.media"
+    data-umami-event=`${Astro.url.pathname}: ClientBar (nolia)`
+    target="_blank"
+    class="transition duration-150 hover:opacity-75 active:opacity-50"
+    ><Picture
+      src={LogoNolia}
+      alt="Nolia"
+      id="clientLogo3"
+      height={24}
+      class="opacity-0"
+    />
+  </a>
+  <a
+    href="https://www.norraskog.se/?ref=hallin.media"
+    data-umami-event=`${Astro.url.pathname}: ClientBar (norraskog)`
+    target="_blank"
+    class="transition duration-150 hover:opacity-75 active:opacity-50"
+    ><Picture
+      src={LogoNorraSkog}
+      alt="Norra Skog"
+      id="clientLogo4"
+      height={32}
+      class="opacity-0"
+    />
+  </a>
+  <a
+    href="https://lastbilsstation.se/index.html?ref=hallin.media"
+    data-umami-event=`${Astro.url.pathname}: ClientBar (lastbilsstation)`
+    target="_blank"
+    class="transition duration-150 hover:opacity-75 active:opacity-50"
+    ><Picture
+      src={LogoLastbilsstation}
+      alt="Skellefteå Lastbilsstation"
+      id="clientLogo5"
+      height={32}
+      class="opacity-0"
+    />
+  </a>
+  <a
+    href="https://producenterna.se/"
+    data-umami-event=`${Astro.url.pathname}: ClientBar (producenterna)`
+    target="_blank"
+    class="transition duration-150 hover:opacity-75 active:opacity-50"
+    ><Picture
+      src={LogoProducenterna}
+      alt="Producenterna"
+      id="clientLogo6"
+      height={32}
+      class="opacity-0"
+    />
+  </a>
+  <a
+    href="https://extenseit.se/?ref=hallin.media"
+    data-umami-event=`${Astro.url.pathname}: ClientBar (extenseit)`
+    target="_blank"
+    class="transition duration-150 hover:opacity-75 active:opacity-50"
+    ><Picture
+      src={LogoExtenseIT}
+      alt="ExtenseIT"
+      id="clientLogo7"
+      height={20}
+      class="opacity-0"
+    />
+  </a>
+  <a
+    href="https://www.24vision.se/?ref=hallin.media"
+    data-umami-event=`${Astro.url.pathname}: ClientBar (24vision)`
+    target="_blank"
+    class="transition duration-150 hover:opacity-75 active:opacity-50"
+    ><Picture
+      src={Logo24vision}
+      alt="24vision"
+      id="clientLogo8"
+      height={32}
+      class="opacity-0"
+    />
+  </a>
 </section>
 
 <script>
-	document.addEventListener(
-		'astro:page-load',
-		() => {
-			gsap.set(
-				[
-					'#clientLogo1',
-					'#clientLogo2',
-					'#clientLogo3',
-					'#clientLogo4',
-					'#clientLogo5',
-					'#clientLogo6',
-					'#clientLogo7',
-					'#clientLogo8'
-				],
-				{
-					opacity: 1
-				}
-			)
-			gsap.from(
-				[
-					'#clientLogo1',
-					'#clientLogo2',
-					'#clientLogo3',
-					'#clientLogo4',
-					'#clientLogo5',
-					'#clientLogo6',
-					'#clientLogo7',
-					'#clientLogo8'
-				],
-				{
-					y: 15,
-					opacity: 0,
-					duration: 0.5,
-					ease: 'power2.out',
-					stagger: 0.25
-				}
-			)
-		},
-		{ once: false }
-	)
+  document.addEventListener(
+    "astro:page-load",
+    () => {
+      gsap.set(
+        [
+          "#clientLogo1",
+          "#clientLogo2",
+          "#clientLogo3",
+          "#clientLogo4",
+          "#clientLogo5",
+          "#clientLogo6",
+          "#clientLogo7",
+          "#clientLogo8",
+        ],
+        {
+          opacity: 1,
+        },
+      );
+      gsap.from(
+        [
+          "#clientLogo1",
+          "#clientLogo2",
+          "#clientLogo3",
+          "#clientLogo4",
+          "#clientLogo5",
+          "#clientLogo6",
+          "#clientLogo7",
+          "#clientLogo8",
+        ],
+        {
+          y: 15,
+          opacity: 0,
+          duration: 0.5,
+          ease: "power2.out",
+          stagger: 0.25,
+        },
+      );
+    },
+    { once: false },
+  );
 </script>

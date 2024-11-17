@@ -1,85 +1,87 @@
 ---
-import { Picture } from 'astro:assets'
-import { getRelativeLocaleUrl } from 'astro:i18n'
-import HallinmediaWordmarkVertical from '../assets/brand/wordmark-vertical.svg'
-import PhEnvelopeSimpleDuotone from './icon/PhEnvelopeSimpleDuotone.astro'
-import PhBehanceLogoDuotone from './icon/brands/PhBehanceLogoDuotone.astro'
-import PhInstagramLogoDuotone from './icon/brands/PhInstagramLogoDuotone.astro'
-import PhYoutubeLogoDuotone from './icon/brands/PhYoutubeLogoDuotone.astro'
+import { Picture } from "astro:assets";
+import { getRelativeLocaleUrl } from "astro:i18n";
+import HallinmediaWordmarkVertical from "../assets/brand/wordmark-vertical.svg";
+import PhEnvelopeSimpleDuotone from "./icon/PhEnvelopeSimpleDuotone.astro";
+import PhBehanceLogoDuotone from "./icon/brands/PhBehanceLogoDuotone.astro";
+import PhInstagramLogoDuotone from "./icon/brands/PhInstagramLogoDuotone.astro";
+import PhYoutubeLogoDuotone from "./icon/brands/PhYoutubeLogoDuotone.astro";
 ---
 
 <hr class="my-12 border-t-[0.5px] border-stone-300" transition:animate="none" />
 
 <footer
-	class="mb-12 flex flex-col items-center gap-4 sm:flex-row sm:justify-between"
-	transition:animate="none"
+  class="mb-12 flex flex-col items-center gap-4 sm:flex-row sm:justify-between"
+  transition:animate="none"
 >
-	<div class="flex flex-col items-center gap-4 sm:flex-row">
-		<a href={getRelativeLocaleUrl(Astro.currentLocale, '/')}>
-			<Picture
-				src={HallinmediaWordmarkVertical}
-				alt="Wordmark of HallinMedia"
-				width={64}
-				class="select-none transition duration-200 hover:opacity-75 active:opacity-50"
-			/>
-		</a>
-		<div class="flex flex-col items-center gap-1 py-2 text-stone-500 sm:items-start sm:py-0">
-			<p class="text-sm">
-				A <a
-					href="https://newgent.digital/?ref=hallin.media"
-					data-umami-event="Footer (newgent)"
-					target="_blank"
-					class="underline underline-offset-4 transition duration-200 hover:opacity-75 active:opacity-50"
-					>newgent.digital</a
-				> brand.
-			</p>
-			<a
-				href="https://github.com/whallin/hallinmedia-website/?ref=hallin.media"
-				target="_blank"
-				class="duration text-xs underline underline-offset-2 transition hover:opacity-75 active:opacity-50"
-				>Utvecklad med ❤ av er alldeles egna</a
-			>
-		</div>
-	</div>
-	<nav class="flex gap-2 text-red-400">
-		<a
-			href="mailto:william@hallin.media"
-			aria-label="William Hallin via e-post"
-			data-umami-event="Footer (mail)"
-		>
-			<PhEnvelopeSimpleDuotone
-				class="h-6 w-6 transition duration-200 hover:opacity-75 active:opacity-50"
-			/>
-		</a>
-		<a
-			href="https://www.instagram.com/williamhallinn/?ref=hallin.media"
-			aria-label="William Hallin på Instagram"
-			data-umami-event="Footer (instagram)"
-			target="_blank"
-		>
-			<PhInstagramLogoDuotone
-				class="h-6 w-6 transition duration-200 hover:opacity-75 active:opacity-50"
-			/>
-		</a>
-		<a
-			href="https://www.youtube.com/@HallinMedia/?ref=hallin.media"
-			aria-label="William Hallin på YouTube"
-			data-umami-event="Footer (youtube)"
-			target="_blank"
-		>
-			<PhYoutubeLogoDuotone
-				class="h-6 w-6 transition duration-200 hover:opacity-75 active:opacity-50"
-			/>
-		</a>
-		<a
-			href="https://www.behance.net/whallin/?ref=hallin.media"
-			aria-label="William Hallin på Behance"
-			data-umami-event="Footer (behance)"
-			target="_blank"
-		>
-			<PhBehanceLogoDuotone
-				class="h-6 w-6 transition duration-200 hover:opacity-75 active:opacity-50"
-			/>
-		</a>
-	</nav>
+  <div class="flex flex-col items-center gap-4 sm:flex-row">
+    <a href={getRelativeLocaleUrl(Astro.currentLocale, "/")}>
+      <Picture
+        src={HallinmediaWordmarkVertical}
+        alt="Wordmark of HallinMedia"
+        width={64}
+        class="select-none transition duration-200 hover:opacity-75 active:opacity-50"
+      />
+    </a>
+    <div
+      class="flex flex-col items-center gap-1 py-2 text-stone-500 sm:items-start sm:py-0"
+    >
+      <p class="text-sm">
+        A <a
+          href="https://newgent.digital/?ref=hallin.media"
+          data-umami-event="Footer (newgent)"
+          target="_blank"
+          class="underline underline-offset-4 transition duration-200 hover:opacity-75 active:opacity-50"
+          >newgent.digital</a
+        > brand.
+      </p>
+      <a
+        href="https://github.com/whallin/hallinmedia-website/?ref=hallin.media"
+        target="_blank"
+        class="duration text-xs underline underline-offset-2 transition hover:opacity-75 active:opacity-50"
+        >Utvecklad med ❤ av er alldeles egna</a
+      >
+    </div>
+  </div>
+  <nav class="flex gap-2 text-red-400">
+    <a
+      href="mailto:william@hallin.media"
+      aria-label="William Hallin via e-post"
+      data-umami-event="Footer (mail)"
+    >
+      <PhEnvelopeSimpleDuotone
+        class="h-6 w-6 transition duration-200 hover:opacity-75 active:opacity-50"
+      />
+    </a>
+    <a
+      href="https://www.instagram.com/williamhallinn/?ref=hallin.media"
+      aria-label="William Hallin på Instagram"
+      data-umami-event="Footer (instagram)"
+      target="_blank"
+    >
+      <PhInstagramLogoDuotone
+        class="h-6 w-6 transition duration-200 hover:opacity-75 active:opacity-50"
+      />
+    </a>
+    <a
+      href="https://www.youtube.com/@HallinMedia/?ref=hallin.media"
+      aria-label="William Hallin på YouTube"
+      data-umami-event="Footer (youtube)"
+      target="_blank"
+    >
+      <PhYoutubeLogoDuotone
+        class="h-6 w-6 transition duration-200 hover:opacity-75 active:opacity-50"
+      />
+    </a>
+    <a
+      href="https://www.behance.net/whallin/?ref=hallin.media"
+      aria-label="William Hallin på Behance"
+      data-umami-event="Footer (behance)"
+      target="_blank"
+    >
+      <PhBehanceLogoDuotone
+        class="h-6 w-6 transition duration-200 hover:opacity-75 active:opacity-50"
+      />
+    </a>
+  </nav>
 </footer>

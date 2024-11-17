@@ -1,119 +1,133 @@
 ---
-import { Picture } from 'astro:assets'
-import { getRelativeLocaleUrl } from 'astro:i18n'
-import Avatar from '../assets/avatar.webp'
-import HallinmediaGradientBG from '../assets/brand/hallinmedia-gradient.webp'
-import ClientBar from '../components/ClientBar.astro'
-import SpotifyNowPlaying from '../components/SpotifyNowPlaying.astro'
-import PhHandWavingDuotone from '../components/icon/PhHandWavingDuotone.astro'
-import LayoutMain from '../layouts/Main.astro'
+import { Picture } from "astro:assets";
+import { getRelativeLocaleUrl } from "astro:i18n";
+import Avatar from "../assets/avatar.webp";
+import HallinmediaGradientBG from "../assets/brand/hallinmedia-gradient.webp";
+import ClientBar from "../components/ClientBar.astro";
+import SpotifyNowPlaying from "../components/SpotifyNowPlaying.astro";
+import PhHandWavingDuotone from "../components/icon/PhHandWavingDuotone.astro";
+import LayoutMain from "../layouts/Main.astro";
 ---
 
 <LayoutMain
-	title="Hem"
-	description="William Hallin är en frilansande digital designer och videoproducent i Skellefteå. Specialiserad på fotografering, videoproduktion och redigering."
+  title="Hem"
+  description="William Hallin är en frilansande digital designer och videoproducent i Skellefteå. Specialiserad på fotografering, videoproduktion och redigering."
 >
-	<main class="pb-12">
-		<div
-			class="relative h-fit overflow-clip break-words rounded-xl bg-gradient-to-t from-red-900/75 to-red-900/0 p-8 shadow-lg sm:h-[250px]"
-		>
-			<div class="flex h-full flex-col justify-between gap-12">
-				<div class="flex items-center gap-4 opacity-0" id="landing-avatar">
-					<Picture
-						src={Avatar}
-						alt="Picture of William Hallin"
-						formats={['avif', 'webp']}
-						height={80}
-						class="h-[48px] w-[48px] select-none rounded-full opacity-0"
-						id="landing-avatar--img"
-					/>
-					<PhHandWavingDuotone class="h-10 w-10 text-red-800 opacity-0" id="landing-avatar--wave" />
-				</div>
-				<h1 class="text-3xl font-light text-stone-50 opacity-0" id="landing-header">
-					<a
-						href={getRelativeLocaleUrl(Astro.currentLocale, 'portfolio')}
-						class="underline decoration-2 underline-offset-4 transition duration-200 hover:opacity-75 active:opacity-50"
-						>Frilansande</a
-					> digital designer & videoproducent i <i class="font-serif">Skellefteå, Sweden.</i>
-				</h1>
-			</div>
-			<Picture
-				src={HallinmediaGradientBG}
-				alt=""
-				loading="eager"
-				widths={[650, 240]}
-				sizes="(max-width: 640px) 240px, 650px"
-				formats={['avif', 'webp']}
-				class="justify-self absolute left-0 top-0 -z-10 h-full w-full select-none object-cover"
-			/>
-		</div>
-	</main>
+  <main class="pb-12">
+    <div
+      class="relative h-fit overflow-clip break-words rounded-xl bg-gradient-to-t from-red-900/75 to-red-900/0 p-8 shadow-lg sm:h-[250px]"
+    >
+      <div class="flex h-full flex-col justify-between gap-12">
+        <div class="flex items-center gap-4 opacity-0" id="landing-avatar">
+          <Picture
+            src={Avatar}
+            alt="Picture of William Hallin"
+            formats={["avif", "webp"]}
+            height={80}
+            class="h-[48px] w-[48px] select-none rounded-full opacity-0"
+            id="landing-avatar--img"
+          />
+          <PhHandWavingDuotone
+            class="h-10 w-10 text-red-800 opacity-0"
+            id="landing-avatar--wave"
+          />
+        </div>
+        <h1
+          class="text-3xl font-light text-stone-50 opacity-0"
+          id="landing-header"
+        >
+          <a
+            href={getRelativeLocaleUrl(Astro.currentLocale, "portfolio")}
+            class="underline decoration-2 underline-offset-4 transition duration-200 hover:opacity-75 active:opacity-50"
+            >Frilansande</a
+          > digital designer & videoproducent i <i class="font-serif"
+            >Skellefteå, Sweden.</i
+          >
+        </h1>
+      </div>
+      <Picture
+        src={HallinmediaGradientBG}
+        alt=""
+        loading="eager"
+        widths={[650, 240]}
+        sizes="(max-width: 640px) 240px, 650px"
+        formats={["avif", "webp"]}
+        class="justify-self absolute left-0 top-0 -z-10 h-full w-full select-none object-cover"
+      />
+    </div>
+  </main>
 
-	<the-fold></the-fold>
+  <ClientBar />
 
-	<ClientBar />
+  <section id="about" class="flex flex-col gap-4 pb-8 pt-12">
+    <h2 id="about-1" class="text-2xl">
+      Om <i class="font-serif"
+        >mig <span class="text-base text-stone-500">(a.k.a. William)</span></i
+      >
+    </h2>
+    <p id="about-2">
+      Hej! Jag heter William Hallin och är en 19-årig frilansande grafiker samt
+      foto- och videoproducent med rötter i Skellefteå.
+    </p>
+    <p id="about-3">
+      Jag specialiserar mig på att erbjuda skräddarsydda helhetslösningar inom <i
+        class="font-serif"
+        >layoutdesign, reklamdesign, fotografering och videoproduktion.</i
+      > Oavsett om du behöver en konsultation för ett designprojekt eller en komplett
+      reklamfilm med professionell bild, ljud och redigering, har jag nog resurserna
+      och erfarenheten för att hjälpa dig att nå dina mål!
+    </p>
+    <p id="about-4">
+      <i class="font-serif">När jag inte arbetar,</i> njuter jag av att vara ute
+      i naturen, utforska staden eller lyssna på musik. Samtidigt som jag även fortsätter
+      att utveckla min passion för foto och video, vilket inspirerar mig i mitt arbete
+      som kreativ professionell.
+    </p>
+  </section>
 
-	<section id="about" class="flex flex-col gap-4 pb-8 pt-12">
-		<h2 id="about-1" class="text-2xl">
-			Om <i class="font-serif">mig <span class="text-base text-stone-500">(a.k.a. William)</span></i
-			>
-		</h2>
-		<p id="about-2">
-			Hej! Jag heter William Hallin och är en 19-årig frilansande grafiker samt foto- och
-			videoproducent med rötter i Skellefteå.
-		</p>
-		<p id="about-3">
-			Jag specialiserar mig på att erbjuda skräddarsydda helhetslösningar inom <i class="font-serif"
-				>layoutdesign, reklamdesign, fotografering och videoproduktion.</i
-			> Oavsett om du behöver en konsultation för ett designprojekt eller en komplett reklamfilm med
-			professionell bild, ljud och redigering, har jag nog resurserna och erfarenheten för att hjälpa
-			dig att nå dina mål!
-		</p>
-		<p id="about-4">
-			<i class="font-serif">När jag inte arbetar,</i> njuter jag av att vara ute i naturen, utforska
-			staden eller lyssna på musik. Samtidigt som jag även fortsätter att utveckla min passion för foto
-			och video, vilket inspirerar mig i mitt arbete som kreativ professionell.
-		</p>
-	</section>
+  <SpotifyNowPlaying />
 
-	<SpotifyNowPlaying />
+  <script>
+    document.addEventListener(
+      "astro:page-load",
+      () => {
+        gsap.set(
+          [
+            "#landing-avatar--img",
+            "#landing-avatar--wave",
+            "#landing-avatar",
+            "#landing-header",
+          ],
+          {
+            opacity: 1,
+          },
+        );
 
-	<script>
-		document.addEventListener(
-			'astro:page-load',
-			() => {
-				gsap.set(
-					['#landing-avatar--img', '#landing-avatar--wave', '#landing-avatar', '#landing-header'],
-					{
-						opacity: 1
-					}
-				)
+        gsap.from(["#landing-avatar--img", "#landing-avatar--wave"], {
+          y: -10,
+          opacity: 0,
+          duration: 1,
+          ease: "power2.out",
+          stagger: 0.25,
+        });
 
-				gsap.from(['#landing-avatar--img', '#landing-avatar--wave'], {
-					y: -10,
-					opacity: 0,
-					duration: 1,
-					ease: 'power2.out',
-					stagger: 0.25
-				})
+        gsap.from(["#landing-avatar", "#landing-header"], {
+          y: -10,
+          opacity: 0,
+          duration: 1,
+          ease: "power2.out",
+          stagger: 0.5,
+        });
 
-				gsap.from(['#landing-avatar', '#landing-header'], {
-					y: -10,
-					opacity: 0,
-					duration: 1,
-					ease: 'power2.out',
-					stagger: 0.5
-				})
-
-				gsap.to('#landing-avatar--wave', {
-					rotation: 20,
-					duration: 1,
-					yoyo: true,
-					repeat: -1,
-					ease: 'power1.inOut'
-				})
-			},
-			{ once: false }
-		)
-	</script>
+        gsap.to("#landing-avatar--wave", {
+          rotation: 20,
+          duration: 1,
+          yoyo: true,
+          repeat: -1,
+          ease: "power1.inOut",
+        });
+      },
+      { once: false },
+    );
+  </script>
 </LayoutMain>
