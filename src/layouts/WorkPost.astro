@@ -46,7 +46,11 @@ const schema = {
 <html lang=`${Astro.currentLocale}`>
   <head>
     <SiteHead title=`${title} - Portfolio` description={description} />
-    <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+    <script
+      is:inline
+      type="application/ld+json"
+      set:html={JSON.stringify(schema)}
+    />
   </head>
   <body
     class="m-auto max-w-[700px] bg-stone-50 p-6 text-stone-900 selection:bg-red-500"

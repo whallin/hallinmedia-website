@@ -36,7 +36,7 @@ const fullTitle = `${title} - William Hallin`;
 <meta name="author" content="William Hallin" />
 
 <!-- Schema Markup (JSON-LD) -->
-<script type="application/ld+json">
+<script is:inline type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@graph": [
@@ -126,12 +126,13 @@ const fullTitle = `${title} - William Hallin`;
 
 <!-- Analytics -->
 <script
+  is:inline
   type="text/partytown"
   src="https://cloud.umami.is/script.js"
   data-website-id="3e7bdf28-0c0e-47bb-adbd-9a2a6f7b6203"
   data-domains="hallin.media"></script>
 
-<script type="text/partytown">
+<script is:inline type="text/partytown">
   (function (c, l, a, r, i, t, y) {
     c[a] =
       c[a] ||

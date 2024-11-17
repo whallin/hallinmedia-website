@@ -216,14 +216,16 @@ import LayoutMain from "../layouts/Main.astro";
 
     // Get the Stockholm time
     function updateStockholmTime() {
-      document.getElementById("stockholm-time").textContent =
-        new Intl.DateTimeFormat([], {
-          timeZone: "Europe/Stockholm",
-          hour: "2-digit",
-          minute: "2-digit",
-          second: "2-digit",
-          hour12: false,
-        }).format(new Date());
+      const timeElement = document.getElementById("stockholm-time");
+      if (!timeElement) return;
+
+      timeElement.textContent = new Intl.DateTimeFormat([], {
+        timeZone: "Europe/Stockholm",
+        hour: "2-digit",
+        minute: "2-digit",
+        second: "2-digit",
+        hour12: false,
+      }).format(new Date());
     }
   </script>
 </LayoutMain>
