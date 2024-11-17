@@ -14,10 +14,11 @@ import LayoutMain from "../layouts/Main.astro";
   title="Kontakta mig"
   description="William Hallin är en frilansande digital designer och videoproducent i Skellefteå. Specialiserad på fotografering, videoproduktion och redigering."
 >
-  <div class="flex flex-row items-center gap-4">
+  <div class="flex flex-row items-center gap-4" role="banner">
     <PhHandWavingDuotone
       id="contact-header--icon"
       class="h-10 w-10 text-red-400 opacity-0"
+      aria-hidden="true"
     />
     <h1 id="contact-header" class="text-3xl font-light opacity-0">
       Kontakta <i class="font-serif">mig</i>
@@ -66,17 +67,28 @@ import LayoutMain from "../layouts/Main.astro";
     </div>
   </div>
 
-  <section id="contact-links" class="flex flex-col gap-6">
+  <section
+    id="contact-links"
+    class="flex flex-col gap-6"
+    aria-label="Kontaktinformation"
+  >
     <a
       id="contact-link-mail"
       href="mailto:william@hallin.media"
-      data-umami-event="/contact (mail)"
+      data-umami-event="contact_email_click"
+      data-ga4-event="contact_interaction"
+      data-ga4-event-category="engagement"
+      data-ga4-event-label="email"
       class="w-fit opacity-0"
+      aria-label="Send an email to william@hallin.media"
     >
       <div
         class="flex w-fit items-center gap-4 transition duration-150 hover:text-red-400 active:opacity-50"
       >
-        <PhEnvelopeSimpleDuotone class="h-8 w-8 text-red-400" />
+        <PhEnvelopeSimpleDuotone
+          class="h-8 w-8 text-red-400"
+          aria-hidden="true"
+        />
         <div class="flex flex-col gap-1">
           <span class="font-serif">E-post</span>
           <span class="text-stone-500">william@hallin.media</span>
@@ -86,13 +98,17 @@ import LayoutMain from "../layouts/Main.astro";
     <a
       id="contact-link-phone"
       href="tel:+46706159279"
-      data-umami-event="/contact (phone)"
+      data-umami-event="contact_phone_click"
+      data-ga4-event="contact_interaction"
+      data-ga4-event-category="engagement"
+      data-ga4-event-label="phone"
       class="w-fit opacity-0"
+      aria-label="Call +46 70-615 92 79"
     >
       <div
         class="flex w-fit items-center gap-4 transition duration-150 hover:text-red-400 active:opacity-50"
       >
-        <PhPhoneDuotone class="h-8 w-8 text-red-400" />
+        <PhPhoneDuotone class="h-8 w-8 text-red-400" aria-hidden="true" />
         <div class="flex flex-col gap-1">
           <span class="font-serif">Telefon</span>
           <span class="text-stone-500">+46 (0)70-615 92 79</span>
@@ -101,15 +117,23 @@ import LayoutMain from "../layouts/Main.astro";
     </a>
     <a
       id="contact-link-ig"
-      href="https://www.instagram.com/williamhallinn/?ref=hallin.media"
-      data-umami-event="/contact (instagram)"
+      href="https://www.instagram.com/williamhallinn/?utm_source=hallin.media&utm_medium=website&utm_campaign=contact_page&utm_content=profile_link"
+      data-umami-event="contact_instagram_click"
+      data-ga4-event="social_link_click"
+      data-ga4-event-category="social"
+      data-ga4-event-label="instagram"
       target="_blank"
+      rel="noopener noreferrer"
       class="w-fit opacity-0"
+      aria-label="Visit my Instagram profile"
     >
       <div
         class="flex w-fit items-center gap-4 transition duration-150 hover:text-red-400 active:opacity-50"
       >
-        <PhInstagramLogoDuotone class="h-8 w-8 text-red-400" />
+        <PhInstagramLogoDuotone
+          class="h-8 w-8 text-red-400"
+          aria-hidden="true"
+        />
         <div class="flex flex-col gap-1">
           <span class="font-serif">Instagram</span>
           <span class="text-stone-500">@williamhallinn</span>
@@ -118,15 +142,23 @@ import LayoutMain from "../layouts/Main.astro";
     </a>
     <a
       id="contact-link-li"
-      href="https://www.linkedin.com/in/whallin/?ref=hallin.media"
-      data-umami-event="/contact (linkedin)"
+      href="https://www.linkedin.com/in/whallin/?utm_source=hallin.media&utm_medium=website&utm_campaign=contact_page&utm_content=profile_link"
+      data-umami-event="contact_linkedin_click"
+      data-ga4-event="social_link_click"
+      data-ga4-event-category="social"
+      data-ga4-event-label="linkedin"
       target="_blank"
+      rel="noopener noreferrer"
       class="w-fit opacity-0"
+      aria-label="Visit my LinkedIn profile"
     >
       <div
         class="flex w-fit items-center gap-4 transition duration-150 hover:text-red-400 active:opacity-50"
       >
-        <PhLinkedinLogoDuotone class="h-8 w-8 text-red-400" />
+        <PhLinkedinLogoDuotone
+          class="h-8 w-8 text-red-400"
+          aria-hidden="true"
+        />
         <div class="flex flex-col gap-1">
           <span class="font-serif">LinkedIn</span>
           <span class="text-stone-500">@whallin</span>

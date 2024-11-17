@@ -9,14 +9,18 @@ import PhHeartDuotone from "./icon/PhHeartDuotone.astro";
 import PhReadCvLogoDuotone from "./icon/PhReadCvLogoDuotone.astro";
 ---
 
-<div
+<header
+  role="banner"
   class="flex flex-col justify-between gap-4 pb-8 pt-4 sm:flex-row sm:items-center sm:gap-0 sm:pb-12"
   transition:animate="none"
 >
   <div
     class="flex w-full items-center justify-between gap-6 sm:w-fit sm:justify-start"
   >
-    <a href={getRelativeLocaleUrl(Astro.currentLocale, "/")}>
+    <a
+      href={getRelativeLocaleUrl(Astro.currentLocale ?? "en", "/")}
+      aria-label="Go to homepage"
+    >
       <Picture
         src={HallinmediaWordmark}
         alt="Wordmark of HallinMedia"
@@ -26,22 +30,45 @@ import PhReadCvLogoDuotone from "./icon/PhReadCvLogoDuotone.astro";
     </a>
   </div>
   <nav
+    role="navigation"
+    aria-label="Main navigation"
     class="flex flex-wrap items-end justify-between gap-6 text-stone-500 sm:justify-start"
   >
     <a
-      href={getRelativeLocaleUrl(Astro.currentLocale, "portfolio")}
+      href={getRelativeLocaleUrl(Astro.currentLocale ?? "en", "portfolio")}
+      data-umami-event="Navigation Click"
+      data-umami-page="portfolio"
+      data-ga4-event="nav_click"
+      data-ga4-page="portfolio"
       class="flex items-center gap-1 transition duration-200 hover:text-red-400 active:opacity-50"
-      ><PhHeartDuotone class="text-red-400" />Portfolio</a
+      aria-label="View portfolio"
     >
+      <PhHeartDuotone class="text-red-400" aria-hidden="true" />
+      <span>Portfolio</span>
+    </a>
     <a
-      href={getRelativeLocaleUrl(Astro.currentLocale, "contact")}
+      href={getRelativeLocaleUrl(Astro.currentLocale ?? "en", "contact")}
+      data-umami-event="Navigation Click"
+      data-umami-page="contact"
+      data-ga4-event="nav_click"
+      data-ga4-page="contact"
       class="flex items-center gap-1 transition duration-200 hover:text-red-400 active:opacity-50"
-      ><PhHandWavingDuotone class="text-red-400" />Kontakt</a
+      aria-label="Contact page"
     >
+      <PhHandWavingDuotone class="text-red-400" aria-hidden="true" />
+      <span>Kontakt</span>
+    </a>
     <a
-      href={getRelativeLocaleUrl(Astro.currentLocale, "cv")}
+      href={getRelativeLocaleUrl(Astro.currentLocale ?? "en", "cv")}
+      data-umami-event="Navigation Click"
+      data-umami-page="cv"
+      data-ga4-event="nav_click"
+      data-ga4-page="cv"
       class="flex items-center gap-1 transition duration-200 hover:text-red-400 active:opacity-50"
-      ><PhReadCvLogoDuotone class="text-red-400" />CV</a
+      aria-label="View CV"
     >
+      <PhReadCvLogoDuotone class="text-red-400" aria-hidden="true" />
+      <span>CV</span>
+    </a>
   </nav>
-</div>
+</header>

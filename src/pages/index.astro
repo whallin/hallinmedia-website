@@ -21,7 +21,7 @@ import LayoutMain from "../layouts/Main.astro";
         <div class="flex items-center gap-4 opacity-0" id="landing-avatar">
           <Picture
             src={Avatar}
-            alt="Picture of William Hallin"
+            alt="William Hallin"
             formats={["avif", "webp"]}
             height={80}
             class="h-[48px] w-[48px] select-none rounded-full opacity-0"
@@ -30,6 +30,7 @@ import LayoutMain from "../layouts/Main.astro";
           <PhHandWavingDuotone
             class="h-10 w-10 text-red-800 opacity-0"
             id="landing-avatar--wave"
+            aria-hidden="true"
           />
         </div>
         <h1
@@ -37,9 +38,12 @@ import LayoutMain from "../layouts/Main.astro";
           id="landing-header"
         >
           <a
-            href={getRelativeLocaleUrl(Astro.currentLocale, "portfolio")}
+            href={getRelativeLocaleUrl(
+              Astro.currentLocale ?? "sv",
+              "portfolio",
+            )}
             class="underline decoration-2 underline-offset-4 transition duration-200 hover:opacity-75 active:opacity-50"
-            >Frilansande</a
+            aria-label="Gå till portfolio">Frilansande</a
           > digital designer & videoproducent i <i class="font-serif"
             >Skellefteå, Sweden.</i
           >
@@ -53,13 +57,18 @@ import LayoutMain from "../layouts/Main.astro";
         sizes="(max-width: 640px) 240px, 650px"
         formats={["avif", "webp"]}
         class="justify-self absolute left-0 top-0 -z-10 h-full w-full select-none object-cover"
+        aria-hidden="true"
       />
     </div>
   </main>
 
   <ClientBar />
 
-  <section id="about" class="flex flex-col gap-4 pb-8 pt-12">
+  <section
+    id="about"
+    class="flex flex-col gap-4 pb-8 pt-12"
+    aria-labelledby="about-1"
+  >
     <h2 id="about-1" class="text-2xl">
       Om <i class="font-serif"
         >mig <span class="text-base text-stone-500">(a.k.a. William)</span></i
