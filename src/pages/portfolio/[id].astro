@@ -22,13 +22,13 @@ const { Content, remarkPluginFrontmatter } = await render(entry);
 <LayoutWorkPost
   title={entry.data.title}
   description={entry.data.description}
-  thumbnail={entry.data.thumbnail.src}
+  thumbnail={entry.data.thumbnail.src.src}
   publishDate={entry.data.publishDate.toISOString()}
   modifiedDate={entry.data.modifiedDate.toISOString()}
 >
   <section>
     <Picture
-      src={entry.data.thumbnail.src}
+      src={entry.data.thumbnail.src.src}
       alt={entry.data.thumbnail.alt}
       formats={["avif", "webp"]}
       width={1280}
