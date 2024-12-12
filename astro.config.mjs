@@ -1,8 +1,6 @@
 // @ts-check
 import { defineConfig } from "astro/config";
 
-import cloudflare from "@astrojs/cloudflare";
-
 import tailwind from "@astrojs/tailwind";
 import partytown from "@astrojs/partytown";
 import sitemap from "@astrojs/sitemap";
@@ -13,12 +11,6 @@ export default defineConfig({
   site: "https://hallin.media",
   trailingSlash: "ignore",
   output: "static",
-
-  //adapter: cloudflare({
-  //  platformProxy: {
-  //    enabled: true,
-  //  },
-  //}),
 
   integrations: [
     tailwind(),

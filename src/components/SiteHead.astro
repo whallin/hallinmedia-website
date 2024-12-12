@@ -1,5 +1,5 @@
 ---
-import { ViewTransitions } from "astro:transitions";
+import { ClientRouter } from "astro:transitions";
 
 interface Props {
   title: string;
@@ -28,7 +28,7 @@ const fullTitle = `${title} - William Hallin`;
 <meta name="language" content="English" />
 
 <!-- Astro Transitions -->
-<ViewTransitions />
+<ClientRouter />
 
 <!-- Basic SEO -->
 <title>{fullTitle}</title>

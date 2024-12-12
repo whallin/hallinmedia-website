@@ -24,10 +24,10 @@ const sortedWorkPosts = portfolioEntries.sort(
         <a
           href={getRelativeLocaleUrl(
             Astro.currentLocale ?? "en",
-            `/portfolio/${workPostEntry.slug}`,
+            `/portfolio/${workPostEntry.id}`,
           )}
           class="group block rounded-lg transition duration-150 hover:opacity-75 focus:outline-none focus:ring-2 focus:ring-red-600 active:opacity-50"
-          aria-labelledby={`project-title-${workPostEntry.slug}`}
+          aria-labelledby={`project-title-${workPostEntry.id}`}
         >
           <div
             class="relative h-[350px] overflow-clip rounded opacity-0"
@@ -51,10 +51,7 @@ const sortedWorkPosts = portfolioEntries.sort(
                   >
                     {workPostEntry.data.publishDate.toISOString().slice(0, 10)}
                   </time>
-                  <h2
-                    id={`project-title-${workPostEntry.slug}`}
-                    class="text-2xl"
-                  >
+                  <h2 id={`project-title-${workPostEntry.id}`} class="text-2xl">
                     {workPostEntry.data.title}
                   </h2>
                 </div>
