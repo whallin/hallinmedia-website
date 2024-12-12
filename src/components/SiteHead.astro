@@ -1,6 +1,4 @@
 ---
-import { ClientRouter } from "astro:transitions";
-
 interface Props {
   title: string;
   description: string;
@@ -26,9 +24,6 @@ const fullTitle = `${title} - William Hallin`;
 <link rel="sitemap" href="/sitemap-index.xml" />
 <meta name="robots" content="index, follow" />
 <meta name="language" content="English" />
-
-<!-- Astro Transitions -->
-<ClientRouter />
 
 <!-- Basic SEO -->
 <title>{fullTitle}</title>
