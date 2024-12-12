@@ -12,13 +12,13 @@ import mdx from "@astrojs/mdx";
 export default defineConfig({
   site: "https://hallin.media",
   trailingSlash: "ignore",
-  output: "hybrid",
+  output: "static",
 
-  adapter: cloudflare({
-    platformProxy: {
-      enabled: true,
-    },
-  }),
+  //adapter: cloudflare({
+  //  platformProxy: {
+  //    enabled: true,
+  //  },
+  //}),
 
   integrations: [
     tailwind(),

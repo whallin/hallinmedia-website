@@ -1,7 +1,8 @@
 import { z, defineCollection } from "astro:content";
+import { glob } from "astro/loaders";
 
 const portfolioCollection = defineCollection({
-  type: "content",
+  loader: glob({ pattern: "**/[^_]*.mdx", base: "./src/content/portfolio" }),
   schema: ({ image }) =>
     z.object({
       title: z.string(),
@@ -9,7 +10,7 @@ const portfolioCollection = defineCollection({
       category: z.string(),
       language: z.enum(["sv", "en"]),
       thumbnail: z.object({
-        src: image().refine((img) => img.width === 1280 && img.height === 720),
+        src: image(),
         alt: z.string(),
       }),
       publishDate: z.date(),

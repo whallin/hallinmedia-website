@@ -4,9 +4,9 @@ import { getRelativeLocaleUrl } from "astro:i18n";
 
 import HallinmediaWordmark from "../assets/brand/wordmark.svg";
 
+import PhCameraDuotone from "./icon/PhCameraDuotone.astro";
 import PhHandWavingDuotone from "./icon/PhHandWavingDuotone.astro";
 import PhHeartDuotone from "./icon/PhHeartDuotone.astro";
-import PhReadCvLogoDuotone from "./icon/PhReadCvLogoDuotone.astro";
 ---
 
 <header
@@ -33,8 +33,22 @@ import PhReadCvLogoDuotone from "./icon/PhReadCvLogoDuotone.astro";
   <nav
     role="navigation"
     aria-label="Main navigation"
-    class="flex flex-wrap items-end justify-between gap-6 text-stone-500 sm:justify-start"
+    class="flex flex-wrap items-end justify-between gap-2 text-stone-500 sm:justify-start"
   >
+    <a
+      href="https://piwigo.hallin.media"
+      data-umami-event="Navigation Click"
+      data-umami-page="fotobank"
+      data-ga4-event="nav_click"
+      data-ga4-page="fotobank"
+      class="flex items-center gap-1 rounded-lg p-2 transition duration-150 hover:opacity-75 focus:outline-none focus:ring-2 focus:ring-red-600 active:opacity-50"
+      aria-label="View Fotobank"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <PhCameraDuotone class="h-4 w-4 text-red-400" aria-hidden="true" />
+      <span>Fotobank</span>
+    </a>
     <a
       href={getRelativeLocaleUrl(Astro.currentLocale ?? "en", "portfolio")}
       data-umami-event="Navigation Click"
@@ -58,18 +72,6 @@ import PhReadCvLogoDuotone from "./icon/PhReadCvLogoDuotone.astro";
     >
       <PhHandWavingDuotone class="text-red-400" aria-hidden="true" />
       <span>Kontakt</span>
-    </a>
-    <a
-      href={getRelativeLocaleUrl(Astro.currentLocale ?? "en", "cv")}
-      data-umami-event="Navigation Click"
-      data-umami-page="cv"
-      data-ga4-event="nav_click"
-      data-ga4-page="cv"
-      class="flex items-center gap-1 rounded-lg p-2 transition duration-150 hover:opacity-75 focus:outline-none focus:ring-2 focus:ring-red-600 active:opacity-50"
-      aria-label="View CV"
-    >
-      <PhReadCvLogoDuotone class="text-red-400" aria-hidden="true" />
-      <span>CV</span>
     </a>
   </nav>
 </header>

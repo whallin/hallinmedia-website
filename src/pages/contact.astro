@@ -1,12 +1,14 @@
 ---
 import { Picture } from "astro:assets";
+import { getRelativeLocaleUrl } from "astro:i18n";
 import ImgContact from "../assets/contactimg.webp";
+import PhInstagramLogoDuotone from "../components/icon/brands/PhInstagramLogoDuotone.astro";
+import PhLinkedinLogoDuotone from "../components/icon/brands/PhLinkedinLogoDuotone.astro";
 import PhClockDuotone from "../components/icon/PhClockDuotone.astro";
 import PhEnvelopeSimpleDuotone from "../components/icon/PhEnvelopeSimpleDuotone.astro";
 import PhHandWavingDuotone from "../components/icon/PhHandWavingDuotone.astro";
 import PhPhoneDuotone from "../components/icon/PhPhoneDuotone.astro";
-import PhInstagramLogoDuotone from "../components/icon/brands/PhInstagramLogoDuotone.astro";
-import PhLinkedinLogoDuotone from "../components/icon/brands/PhLinkedinLogoDuotone.astro";
+import PhReadCvLogoDuotone from "../components/icon/PhReadCvLogoDuotone.astro";
 import LayoutMain from "../layouts/Main.astro";
 ---
 
@@ -72,6 +74,27 @@ import LayoutMain from "../layouts/Main.astro";
     class="flex flex-col gap-6"
     aria-label="Kontaktinformation"
   >
+    <a
+      id="contact-link-cv"
+      href={getRelativeLocaleUrl(Astro.currentLocale ?? "en", "cv")}
+      target="_blank"
+      data-umami-event="contact_cv_click"
+      data-ga4-event="contact_interaction"
+      data-ga4-event-category="engagement"
+      data-ga4-event-label="cv"
+      class="w-fit opacity-0"
+      aria-label="Ladda ner mitt CV"
+    >
+      <div
+        class="flex w-fit items-center gap-4 transition duration-150 hover:text-red-400 active:opacity-50"
+      >
+        <PhReadCvLogoDuotone class="h-8 w-8 text-red-400" aria-hidden="true" />
+        <div class="flex flex-col gap-1">
+          <span class="font-serif">CV</span>
+          <span class="text-stone-500">Ladda ner mitt CV</span>
+        </div>
+      </div>
+    </a>
     <a
       id="contact-link-mail"
       href="mailto:william@hallin.media"
@@ -175,6 +198,7 @@ import LayoutMain from "../layouts/Main.astro";
           [
             "#contact-header--icon",
             "#contact-header",
+            "#contact-link-cv",
             "#contact-link-mail",
             "#contact-link-phone",
             "#contact-link-ig",
@@ -193,6 +217,7 @@ import LayoutMain from "../layouts/Main.astro";
 
         gsap.from(
           [
+            "#contact-link-cv",
             "#contact-link-mail",
             "#contact-link-phone",
             "#contact-link-ig",
