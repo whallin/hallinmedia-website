@@ -1,4 +1,6 @@
 ---
+import { ClientRouter } from "astro:transitions";
+
 interface Props {
   title: string;
   description: string;
@@ -75,6 +77,9 @@ const fullTitle = `${title} - William Hallin`;
     ]
   }
 </script>
+
+<!-- Astro Transitions -->
+<ClientRouter />
 
 <!-- Open Graph -->
 <meta property="og:site_name" content={siteName} />
