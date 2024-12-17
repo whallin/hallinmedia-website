@@ -1,10 +1,27 @@
 {
   "recommendations": [
-    "astro-build.astro-vscode",
-    "unifiedjs.vscode-mdx",
-    "esbenp.prettier-vscode",
-    "bradlc.vscode-tailwindcss",
-    "vivaxy.vscode-conventional-commits"
-  ],
-  "unwantedRecommendations": []
+    // Core development tools
+    "ms-vscode-remote.remote-containers", // Enables development inside Docker containers
+    "ms-azuretools.vscode-docker", // Docker integration and management
+    "eamodio.gitlens", // Enhanced Git functionality and history
+    "vivaxy.vscode-conventional-commits", // Helps write standardized commit messages
+
+    // Code quality and formatting
+    "esbenp.prettier-vscode", // Code formatting for multiple languages
+    "usernamehw.errorlens", // Inline display of errors and warnings
+    "oderwat.indent-rainbow", // Makes indentation more visible with colors
+
+    // Developer experience
+    "christian-kohler.path-intellisense", // Autocompletes filenames in imports
+    "wix.vscode-import-cost", // Shows size of imported packages
+    "aaron-bond.better-comments", // Enables color-coded comment annotations
+    "mintlify.document", // AI-powered documentation generation
+
+    // Runtime support
+    "oven.bun-vscode", // Support for Bun JavaScript runtime
+
+    // Framework support
+    "astro-build.astro-vscode", // Astro support
+    "bradlc.vscode-tailwindcss" // Tailwind CSS support
+  ]
 }

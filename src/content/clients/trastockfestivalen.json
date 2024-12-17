@@ -1,0 +1,13 @@
+{
+  "name": "Trästockfestivalen",
+  "description": {
+    "en": "Trästockfestivalen is Sweden's largest free festival. For two days, live music, performance, food and other delights are served in the scenic Nordanå area.",
+    "sv": "Trästockfestivalen är Sveriges största fria festival. Under två dagar serveras livemusik, performance, mat och andra härligheter på natursköna Nordanåområde."
+  },
+  "logo": "/src/assets/clients/trastockfestivalen.svg",
+  "websiteUrl": "https://www.trastockfestivalen.se/",
+  "socialLinks": {
+    "facebook": "https://www.facebook.com/trastockfestivalen/",
+    "instagram": "https://www.instagram.com/trastockfestivalen"
+  }
+}

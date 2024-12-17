@@ -1,0 +1,88 @@
+---
+import { Icon } from "astro-icon/components";
+
+interface Props {
+  variant?:
+    | "info" // Blue 500
+    | "warning" // Orange 500
+    | "error" // Red 500
+    | "success" // Green 500
+    | "note"; // Purple 500
+  showIcon?: boolean;
+  icon?: string;
+  showCta?: boolean;
+  ctaText?: string;
+  ctaLink?: string;
+}
+
+const {
+  variant = "info",
+  showIcon = true,
+  icon = "ph:info-duotone",
+  showCta = true,
+  ctaText = "Call to action",
+  ctaLink = "#",
+} = Astro.props;
+
+const variants = {
+  info: {
+    container: "bg-blue-500 dark:bg-blue-950",
+    icon: "text-blue-50 dark:text-blue-500",
+    cta: "text-blue-50 dark:text-blue-500",
+  },
+  warning: {
+    container: "bg-yellow-500 dark:bg-yellow-950",
+    icon: "text-yellow-50 dark:text-yellow-500",
+    cta: "text-yellow-50 dark:text-yellow-500",
+  },
+  error: {
+    container: "bg-red-500 dark:bg-red-950",
+    icon: "text-red-50 dark:text-red-500",
+    cta: "text-red-50 dark:text-red-500",
+  },
+  success: {
+    container: "bg-lime-500 dark:bg-lime-950",
+    icon: "text-lime-50 dark:text-lime-500",
+    cta: "text-lime-50 dark:text-lime-500",
+  },
+  note: {
+    container: "bg-purple-500 dark:bg-purple-950",
+    icon: "text-purple-50 dark:text-purple-500",
+    cta: "text-purple-50 dark:text-purple-500",
+  },
+} as const;
+
+const baseClasses = "w-full px-4 py-4 text-stone-50";
+---
+
+<div class:list={[baseClasses, variants[variant].container]}>
+  <div class="mx-auto max-w-3xl">
+    <div class="flex flex-col gap-1 sm:flex-row sm:justify-between">
+      <div class="flex items-center gap-4">
+        {
+          showIcon && (
+            <Icon
+              name={icon}
+              class:list={["h-6 w-6", variants[variant].icon]}
+            />
+          )
+        }
+        <slot />
+      </div>
+      {
+        showCta && (
+          <a
+            href={ctaLink}
+            class="group flex items-center gap-1 text-sm underline underline-offset-4 transition duration-200 hover:opacity-70 active:opacity-50"
+          >
+            {ctaText}
+            <Icon
+              name="ph:arrow-right-bold"
+              class="transition duration-200 group-hover:translate-x-[1.5px]"
+            />
+          </a>
+        )
+      }
+    </div>
+  </div>
+</div>

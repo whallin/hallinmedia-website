@@ -1,0 +1,12 @@
+{
+  "name": "AtlasOS",
+  "description": {
+    "en": "An open and transparent modification of the Windows operating system, designed to optimize performance and latency.",
+    "sv": "En öppen och transparent modifiering av operativsystemet Windows, utformad för att optimera prestanda och latens."
+  },
+  "logo": "/src/assets/clients/atlasos.svg",
+  "websiteUrl": "https://atlasos.net/",
+  "socialLinks": {
+    "twitter": "https://x.com/atlasos"
+  }
+}

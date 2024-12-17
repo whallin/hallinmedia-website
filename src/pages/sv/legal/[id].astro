@@ -1,0 +1,75 @@
+---
+import { Icon } from "astro-icon/components";
+import { getCollection, render } from "astro:content";
+import Notice from "../../../components/Notice.astro";
+import { getLocalizedPath, useTranslations } from "../../../i18n/utils";
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+
+export async function getStaticPaths() {
+  const documents = await getCollection("legal");
+  const filteredDocs = documents.filter((doc) => doc.id.includes("sv/"));
+  return filteredDocs.map((doc) => ({
+    params: { id: doc.id.replace("sv/", "") },
+    props: { legalDoc: doc },
+  }));
+}
+
+const { legalDoc } = Astro.props;
+const { Content } = await render(legalDoc);
+const t = useTranslations(Astro.currentLocale);
+---
+
+<BaseLayout
+  title={legalDoc.data.title}
+  description={legalDoc.data.purpose}
+  article={true}
+  icon={legalDoc.data.icon}
+  showDescription={true}
+>
+  <div class="flex flex-col gap-4 sm:flex-row">
+    {
+      legalDoc.data.publishDate && (
+        <div class="flex flex-row gap-2">
+          <Icon name="ph:clock-duotone" class="h-5 w-5 text-live-500" />
+          <p class="text-sm text-stone-500 dark:text-stone-400">
+            {t("content.published")}{" "}
+            {new Date(legalDoc.data.publishDate).toLocaleDateString(
+              Astro.currentLocale,
+            )}
+          </p>
+        </div>
+      )
+    }
+    {
+      legalDoc.data.updatedDate && (
+        <div class="flex flex-row gap-2">
+          <Icon name="ph:pencil-duotone" class="h-5 w-5 text-live-500" />
+          <p class="text-sm text-stone-500 dark:text-stone-400">
+            {t("content.last-updated")}{" "}
+            {new Date(legalDoc.data.updatedDate).toLocaleDateString(
+              Astro.currentLocale,
+            )}
+          </p>
+        </div>
+      )
+    }
+  </div>
+  <hr class="my-8 border-stone-200 dark:border-stone-800" />
+  <article
+    class="prose prose-stone max-w-none dark:prose-invert prose-headings:font-serif prose-headings:font-normal prose-h1:font-sans prose-h1:text-4xl prose-h1:font-semibold prose-h2:font-sans prose-h2:text-3xl prose-h2:font-semibold prose-h3:text-2xl prose-h4:text-xl prose-p:text-base prose-p:text-stone-900 prose-a:text-live-500 prose-a:underline prose-a:transition prose-a:duration-200 hover:prose-a:opacity-70 active:prose-a:opacity-50 dark:prose-p:text-stone-100 dark:active:prose-a:opacity-50"
+  >
+    <Content />
+  </article>
+  <div class="mt-12">
+    <Notice
+      variant="note"
+      icon="ph:question-duotone"
+      showCta={true}
+      ctaText="Contact me"
+      ctaLink={getLocalizedPath(Astro.currentLocale, "contact")}
+      ><span class="font-semibold"
+        >Har du några frågor eller funderingar kring dokumentet?</span
+      > Kontakta mig så återkommer jag till dig så fort som möjligt.</Notice
+    >
+  </div>
+</BaseLayout>

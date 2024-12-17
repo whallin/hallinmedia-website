@@ -1,0 +1,15 @@
+{
+  "name": "Mänskliga Rättighetsdagarna",
+  "description": {
+    "en": "Mänskliga rättighetsdagarna is the largest human rights forum in the Nordic region.",
+    "sv": "Mänskliga rättighetsdagarna är nordens största forum för mänsikliga rättigheter."
+  },
+  "logo": "/src/assets/clients/mr-dagarna.png",
+  "websiteUrl": "https://www.mrdagarna.se/",
+  "socialLinks": {
+    "facebook": "https://www.facebook.com/mrdagarna/",
+    "instagram": "https://www.instagram.com/mrdagarna",
+    "linkedin": "https://www.linkedin.com/company/manskliga-rattighetsdagarna/"
+  },
+  "featured": true
+}

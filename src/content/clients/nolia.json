@@ -1,0 +1,15 @@
+{
+  "name": "Nolia",
+  "description": {
+    "en": "Nolia is an experienced event organizer in Norrland. We organize fairs, conferences, congresses, and rent out furniture and equipment.",
+    "sv": "Nolia är en erfaren evenemangsarrangör i Norrland. Vi arrangerar mässor, konferenser, kongresser, samt hyr ut möbler och utrustning."
+  },
+  "logo": "/src/assets/clients/nolia.svg",
+  "websiteUrl": "https://www.nolia.se/",
+  "socialLinks": {
+    "instagram": "https://www.instagram.com/noliaab",
+    "linkedin": "https://www.linkedin.com/company/nolia/",
+    "facebook": "https://www.facebook.com/NoliaAB"
+  },
+  "subcontracted": true
+}

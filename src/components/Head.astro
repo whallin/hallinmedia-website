@@ -1,0 +1,69 @@
+---
+import "@fontsource-variable/dm-sans";
+import DmSansWoff2 from "@fontsource-variable/dm-sans/files/dm-sans-latin-wght-normal.woff2?url";
+import "@fontsource/dm-mono";
+import "@fontsource/dm-serif-text";
+
+interface Props {
+  title: string;
+  description: string;
+  article: boolean;
+}
+
+const {
+  title = "Undefined title",
+  description = "Undefined description",
+  article = false,
+} = Astro.props;
+---
+
+<title>{title} - HallinMedia</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content={description} />
+<meta name="author" content="William Hallin" />
+<link rel="canonical" href={Astro.url} />
+<link rel="sitemap" href="/sitemap-index.xml" />
+
+<!-- Open Graph -->
+<meta property="og:type" content={article ? "article" : "website"} />
+<meta property="og:site_name" content="HallinMedia" />
+<meta property="og:url" content={Astro.url} />
+<meta property="og:title" content=`${title} - HallinMedia` />
+<meta property="og:description" content={description} />
+<meta property="og:image" content="/favicon/favicon-96x96.png" />
+<meta property="og:image:alt" content={description} />
+<meta property="og:locale" content={Astro.currentLocale} />
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:title" content=`${title} - HallinMedia` />
+<meta property="twitter:description" content={description} />
+<meta property="twitter:image" content="/favicon/favicon-96x96.png" />
+<meta property="twitter:image:alt" content={description} />
+
+<!-- Favicon -->
+<link
+  rel="icon"
+  type="image/png"
+  href="/favicon/favicon-96x96.png"
+  sizes="96x96"
+/>
+<link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
+<link rel="shortcut icon" href="/favicon/favicon.ico" />
+<link
+  rel="apple-touch-icon"
+  sizes="180x180"
+  href="/favicon/apple-touch-icon.png"
+/>
+<meta name="apple-mobile-web-app-title" content="HallinMedia" />
+<link rel="manifest" href="/favicon/site.webmanifest" />
+
+<!-- Fonts -->
+<link
+  rel="preload"
+  as="font"
+  type="font/woff2"
+  href={DmSansWoff2}
+  crossorigin="anonymous"
+/>

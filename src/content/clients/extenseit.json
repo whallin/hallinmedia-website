@@ -1,0 +1,14 @@
+{
+  "name": "ExtenseIT",
+  "description": {
+    "en": "ExtenseIT is a company that provides IT services for small and medium-sized businesses.",
+    "sv": "ExtenseIT är ett företag som tillhandahåller IT-tjänster för små och medelstora företag."
+  },
+  "logo": "/src/assets/clients/extenseit.svg",
+  "websiteUrl": "https://extenseit.se/",
+  "socialLinks": {
+    "instagram": "https://www.instagram.com/extenseit",
+    "linkedin": "https://www.linkedin.com/company/extenseit-ab",
+    "facebook": "https://www.facebook.com/people/Extenseit-AB/61551503837384/"
+  }
+}

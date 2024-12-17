@@ -1,0 +1,13 @@
+{
+  "name": "24vision",
+  "description": {
+    "en": "24vision is a company that provides video production services for advertising, corporate and events.",
+    "sv": "24vision är ett företag som tillhandahåller videoproduktionstjänster för reklam, företag och evenemang."
+  },
+  "logo": "/src/assets/clients/24vision.svg",
+  "websiteUrl": "https://24vision.se",
+  "socialLinks": {
+    "instagram": "https://www.instagram.com/24vision.se",
+    "linkedin": "https://se.linkedin.com/company/24vision"
+  }
+}

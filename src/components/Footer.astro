@@ -1,117 +1,218 @@
 ---
-import { Picture } from "astro:assets";
-import { getRelativeLocaleUrl } from "astro:i18n";
-import HallinmediaWordmarkVertical from "../assets/brand/wordmark-vertical.svg";
-import PhEnvelopeSimpleDuotone from "./icon/PhEnvelopeSimpleDuotone.astro";
-import PhBehanceLogoDuotone from "./icon/brands/PhBehanceLogoDuotone.astro";
-import PhInstagramLogoDuotone from "./icon/brands/PhInstagramLogoDuotone.astro";
-import PhYoutubeLogoDuotone from "./icon/brands/PhYoutubeLogoDuotone.astro";
+import { Icon } from "astro-icon/components";
+import { Image } from "astro:assets";
+import { GIT_HASH, PACKAGE_VERSION } from "astro:env/client";
+import WordmarkVerticalDark from "../assets/brand/wordmark-vertical-dark.svg";
+import WordmarkVerticalLight from "../assets/brand/wordmark-vertical-light.svg";
+import { getLocalizedPath, useTranslations } from "../i18n/utils";
+import ThemeSwitcher from "./ThemeSwitcher.astro";
+
+const t = useTranslations(Astro.currentLocale);
+
+const isCurrentPath = (path: string) => {
+  const currentPath = Astro.url.pathname
+    .replace(/^\/(en|sv)/, "")
+    .replace(/\/$/, "");
+  return `/${path}` === currentPath || (currentPath === "" && path === "");
+};
+
+type FooterCategory = {
+  category: { name: string; icon: string };
+  links: { text: string; href: string; icon: string }[];
+};
+
+const footerCategories: FooterCategory[] = [
+  {
+    category: { name: t("nav.explore"), icon: "ph:compass-duotone" },
+    links: [
+      {
+        text: t("nav.portfolio"),
+        href: "portfolio",
+        icon: "ph:shooting-star-duotone",
+      },
+      {
+        text: t("nav.stock-photos"),
+        href: "stock-photos",
+        icon: "ph:images-duotone",
+      },
+      {
+        text: t("nav.blog"),
+        href: "blog",
+        icon: "ph:newspaper-duotone",
+      },
+      {
+        text: t("nav.contact"),
+        href: "contact",
+        icon: "ph:phone-duotone",
+      },
+    ],
+  },
+  {
+    category: { name: t("nav.categories"), icon: "ph:folders-duotone" },
+    links: [
+      {
+        text: t("nav.clients"),
+        href: "clients",
+        icon: "ph:users-duotone",
+      },
+      {
+        text: t("nav.services"),
+        href: "services",
+        icon: "ph:folders-duotone",
+      },
+      {
+        text: t("nav.blog-tags"),
+        href: "blog/tags",
+        icon: "ph:newspaper-duotone",
+      },
+      {
+        text: t("nav.legal"),
+        href: "legal",
+        icon: "ph:file-text-duotone",
+      },
+    ],
+  },
+  {
+    category: { name: t("nav.legal"), icon: "ph:file-text-duotone" },
+    links: [
+      {
+        text: t("nav.terms"),
+        href: "legal/terms",
+        icon: "ph:file-text-duotone",
+      },
+      {
+        text: t("nav.privacy"),
+        href: "legal/privacy",
+        icon: "ph:lock-duotone",
+      },
+      {
+        text: t("nav.refund"),
+        href: "legal/refund",
+        icon: "ph:currency-circle-dollar-duotone",
+      },
+      {
+        text: t("nav.credit"),
+        href: "legal/credit",
+        icon: "ph:copyright-duotone",
+      },
+    ],
+  },
+];
+
+const socialLinks = [
+  {
+    platform: "Instagram",
+    href: "https://www.instagram.com/williamhallinn/",
+    icon: "ph:instagram-logo-duotone",
+  },
+  {
+    platform: "YouTube",
+    href: "https://www.youtube.com/@HallinMedia/",
+    icon: "ph:youtube-logo-duotone",
+  },
+  {
+    platform: "Behance",
+    href: "https://www.behance.net/whallin/",
+    icon: "ph:behance-logo-duotone",
+  },
+];
 ---
 
-<hr
-  class="my-12 border-t-[0.5px] border-stone-300"
-  transition:animate="none"
-  aria-hidden="true"
-/>
-
 <footer
-  class="mb-12 flex flex-col items-center gap-4 sm:flex-row sm:justify-between"
-  transition:animate="none"
-  role="contentinfo"
+  class="mt-16 w-full border-t border-stone-200 px-4 py-12 dark:border-stone-800 dark:bg-stone-950"
 >
-  <div class="flex flex-col items-center gap-4 sm:flex-row">
-    <a
-      href={getRelativeLocaleUrl(Astro.currentLocale ?? "en", "/")}
-      aria-label="Return to HallinMedia homepage"
-    >
-      <Picture
-        src={HallinmediaWordmarkVertical}
-        alt="HallinMedia logo"
-        width={64}
-        class="select-none transition duration-150 hover:opacity-75 focus:outline-none focus:ring-2 focus:ring-red-600 active:opacity-50"
-      />
-    </a>
+  <div class="container mx-auto">
+    <!-- Footer Navigation Grid -->
+    <div class="mb-16 grid grid-cols-1 gap-8 md:grid-cols-3">
+      {
+        footerCategories.map((category) => (
+          <div>
+            <h2 class="mb-4 flex items-center gap-2 text-lg font-semibold text-live-500">
+              <Icon name={category.category.icon} />
+              {category.category.name}
+            </h2>
+            <ul class="space-y-2">
+              {category.links.map((link) => (
+                <li>
+                  <a
+                    href={getLocalizedPath(Astro.currentLocale, link.href)}
+                    class:list={[
+                      "group flex items-center gap-2 transition duration-200 hover:text-live-500 active:opacity-70 dark:hover:text-live-500 md:justify-between",
+                      isCurrentPath(link.href)
+                        ? "text-live-500"
+                        : "text-stone-500 dark:text-stone-400",
+                    ]}
+                  >
+                    <div class="flex items-center gap-2">
+                      <Icon name={link.icon} />
+                      {link.text}
+                    </div>
+                    <Icon
+                      name="ph:arrow-right-bold"
+                      class="transition duration-75 group-hover:translate-x-1"
+                    />
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))
+      }
+    </div>
+
+    <!-- Footer Bottom -->
     <div
-      class="flex flex-col items-center gap-1 py-2 text-stone-500 sm:items-start sm:py-0"
+      class="flex flex-col items-center justify-between gap-8 border-t border-stone-200 pt-8 dark:border-stone-800 md:flex-row"
     >
-      <p class="text-sm">
-        A <a
-          href="https://newgent.digital/?utm_source=hallinmedia&utm_medium=referral&utm_campaign=footer_brand"
-          data-umami-event="Brand Click"
-          data-umami-brand="newgent"
-          data-ga4-event="brand_click"
-          data-ga4-brand="newgent"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="underline underline-offset-4 transition duration-150 hover:opacity-75 focus:outline-none focus:ring-2 focus:ring-red-600 active:opacity-50"
-          aria-label="Visit newgent.digital website (opens in new tab)"
-          >newgent.digital</a
-        > brand.
-      </p>
-      <a
-        href="https://github.com/whallin/hallinmedia-website/?utm_source=hallinmedia&utm_medium=referral&utm_campaign=footer_source"
-        data-umami-event="Source Click"
-        data-umami-source="github"
-        data-ga4-event="source_click"
-        data-ga4-source="github"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="text-xs underline underline-offset-2 transition duration-150 hover:opacity-75 focus:outline-none focus:ring-2 focus:ring-red-600 active:opacity-50"
-        aria-label="View source code on GitHub (opens in new tab)"
-        >Utvecklad med ❤ av er alldeles egna</a
-      >
+      <div>
+        <div class="flex items-center gap-6">
+          <a
+            href="/"
+            class="transition duration-200 hover:opacity-70 active:scale-90"
+          >
+            <Image
+              src={WordmarkVerticalDark}
+              alt="HallinMedia Logo"
+              class="pointer-events-none block w-20 select-none dark:hidden"
+            />
+            <Image
+              src={WordmarkVerticalLight}
+              alt="HallinMedia Logo"
+              class="pointer-events-none hidden w-20 select-none dark:block"
+            />
+          </a>
+          <div class="flex flex-col">
+            <span class="text-stone-900 dark:text-stone-100">
+              A <a
+                href="https://newgent.digital"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-blue-500 underline underline-offset-4 transition duration-200 hover:text-blue-900 active:opacity-70"
+                >newgent.digital</a
+              > brand.
+            </span>
+            <p class="text-sm text-stone-600 dark:text-stone-400">
+              Version {PACKAGE_VERSION} ({GIT_HASH})
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Social Links -->
+      <div class="flex items-center gap-4">
+        {
+          socialLinks.map((link) => (
+            <a
+              href={link.href}
+              aria-label={link.platform}
+              class="text-live-500 transition duration-200 hover:text-live-900 active:scale-90"
+            >
+              <Icon name={link.icon} size="24" />
+            </a>
+          ))
+        }
+        <ThemeSwitcher />
+      </div>
     </div>
   </div>
-  <nav class="flex gap-2 text-red-400" aria-label="Social media links">
-    <a
-      href="mailto:william@hallin.media"
-      aria-label="Contact William Hallin via email"
-      data-umami-event="Contact Click"
-      data-umami-channel="email"
-      data-ga4-event="contact_click"
-      data-ga4-channel="email"
-      class="inline-flex items-center justify-center rounded-lg p-2 transition duration-150 hover:opacity-75 focus:outline-none focus:ring-2 focus:ring-red-600 active:opacity-50"
-    >
-      <PhEnvelopeSimpleDuotone class="h-6 w-6" />
-    </a>
-    <a
-      href="https://www.instagram.com/williamhallinn/?utm_source=hallinmedia&utm_medium=social&utm_campaign=footer_social"
-      aria-label="Follow William Hallin on Instagram (opens in new tab)"
-      data-umami-event="Social Click"
-      data-umami-channel="instagram"
-      data-ga4-event="social_click"
-      data-ga4-channel="instagram"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="inline-flex items-center justify-center rounded-lg p-2 transition duration-150 hover:opacity-75 focus:outline-none focus:ring-2 focus:ring-red-600 active:opacity-50"
-    >
-      <PhInstagramLogoDuotone class="h-6 w-6" />
-    </a>
-    <a
-      href="https://www.youtube.com/@HallinMedia/?utm_source=hallinmedia&utm_medium=social&utm_campaign=footer_social"
-      aria-label="Subscribe to William Hallin on YouTube (opens in new tab)"
-      data-umami-event="Social Click"
-      data-umami-channel="youtube"
-      data-ga4-event="social_click"
-      data-ga4-channel="youtube"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="inline-flex items-center justify-center rounded-lg p-2 transition duration-150 hover:opacity-75 focus:outline-none focus:ring-2 focus:ring-red-600 active:opacity-50"
-    >
-      <PhYoutubeLogoDuotone class="h-6 w-6" />
-    </a>
-    <a
-      href="https://www.behance.net/whallin/?utm_source=hallinmedia&utm_medium=social&utm_campaign=footer_social"
-      aria-label="View William Hallin's work on Behance (opens in new tab)"
-      data-umami-event="Social Click"
-      data-umami-channel="behance"
-      data-ga4-event="social_click"
-      data-ga4-channel="behance"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="inline-flex items-center justify-center rounded-lg p-2 transition duration-150 hover:opacity-75 focus:outline-none focus:ring-2 focus:ring-red-600 active:opacity-50"
-    >
-      <PhBehanceLogoDuotone class="h-6 w-6" />
-    </a>
-  </nav>
 </footer>

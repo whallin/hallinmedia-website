@@ -1,0 +1,54 @@
+---
+import { Icon } from "astro-icon/components";
+import { getRelativeLocaleUrl } from "astro:i18n";
+import { defaultLanguage, strings } from "../i18n/strings";
+import { useTranslations } from "../i18n/utils";
+
+interface Props {
+  showLabels?: boolean;
+}
+
+const currentLocale = Astro.currentLocale || defaultLanguage;
+const pathWithoutLocale = Astro.url.pathname.replace(/^\/(en|sv)/, "") || "";
+const t = useTranslations(Astro.currentLocale);
+
+const { showLabels = false } = Astro.props;
+
+const flags = {
+  en: "twemoji:flag-united-kingdom",
+  sv: "twemoji:flag-sweden",
+} as const;
+
+const labels = {
+  en: "English",
+  sv: "Svenska",
+} as const;
+
+const availableLocales = Object.keys(strings).filter(
+  (locale) => locale !== currentLocale,
+);
+---
+
+<div class="flex gap-2">
+  {
+    availableLocales.map((locale) => (
+      <a
+        href={getRelativeLocaleUrl(locale, pathWithoutLocale)}
+        class="flex items-center gap-2 transition duration-200 hover:opacity-80 active:scale-90"
+        title={`${t("i18n.switch-to")} ${labels[locale as keyof typeof labels]}`}
+        aria-label={`${t("i18n.switch-to")} ${labels[locale as keyof typeof labels]}`}
+      >
+        <Icon
+          name={flags[locale as keyof typeof flags]}
+          class="h-6 w-6"
+          aria-hidden="true"
+        />
+        {showLabels && (
+          <span class="text-sm text-stone-400">
+            {labels[locale as keyof typeof labels]}
+          </span>
+        )}
+      </a>
+    ))
+  }
+</div>

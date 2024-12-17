@@ -1,0 +1,14 @@
+{
+  "name": "Lastbilsstation",
+  "description": {
+    "en": "Skellefteå Lastbilsstation is a logistics company based in Skellefteå, Sweden.",
+    "sv": "Skellefteå Lastbilsstation är ett logistikföretag med säte i Skellefteå."
+  },
+  "logo": "/src/assets/clients/lastbilsstation.svg",
+  "websiteUrl": "https://www.lastbilsstation.se/",
+  "socialLinks": {
+    "facebook": "https://www.facebook.com/Lastbilsstation/",
+    "linkedin": "https://www.linkedin.com/company/lastbilsstation/"
+  },
+  "featured": true
+}
