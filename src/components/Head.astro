@@ -17,9 +17,20 @@ const {
 } = Astro.props;
 ---
 
-<title>{title} - HallinMedia</title>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>{title} - HallinMedia</title>
+
+<!-- Fonts -->
+<link
+  rel="preload"
+  as="font"
+  type="font/woff2"
+  href={DmSansWoff2}
+  crossorigin="anonymous"
+/>
+
+<!-- Meta Tags -->
 <meta name="description" content={description} />
 <meta name="author" content="William Hallin" />
 <link rel="canonical" href={Astro.url} />
@@ -31,16 +42,16 @@ const {
 <meta property="og:url" content={Astro.url} />
 <meta property="og:title" content=`${title} - HallinMedia` />
 <meta property="og:description" content={description} />
-<meta property="og:image" content="/favicon/favicon-96x96.png" />
+<meta property="og:image" content="https://hallin.media/meta.png" />
 <meta property="og:image:alt" content={description} />
 <meta property="og:locale" content={Astro.currentLocale} />
 
 <!-- Twitter -->
-<meta property="twitter:card" content="summary_large_image" />
-<meta property="twitter:title" content=`${title} - HallinMedia` />
-<meta property="twitter:description" content={description} />
-<meta property="twitter:image" content="/favicon/favicon-96x96.png" />
-<meta property="twitter:image:alt" content={description} />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content=`${title} - HallinMedia` />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content="https://hallin.media/meta.png" />
+<meta name="twitter:image:alt" content={description} />
 
 <!-- Favicon -->
 <link
@@ -58,12 +69,3 @@ const {
 />
 <meta name="apple-mobile-web-app-title" content="HallinMedia" />
 <link rel="manifest" href="/favicon/site.webmanifest" />
-
-<!-- Fonts -->
-<link
-  rel="preload"
-  as="font"
-  type="font/woff2"
-  href={DmSansWoff2}
-  crossorigin="anonymous"
-/>
