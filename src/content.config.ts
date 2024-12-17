@@ -13,40 +13,42 @@ const services = defineCollection({
 
 const clients = defineCollection({
   loader: glob({ pattern: '*.json', base: './src/content/clients' }),
-  schema: z.object({
-    name: z.string(),
-    description: z.object({
-      en: z.string(),
-      sv: z.string(),
+  schema: ({ image }) =>
+    z.object({
+      name: z.string(),
+      description: z.object({
+        en: z.string(),
+        sv: z.string(),
+      }),
+      logo: image(), // Path to logo image
+      logoDark: image().optional(), // Path to dark logo image
+      websiteUrl: z.string().url().optional(),
+      socialLinks: z
+        .object({
+          twitter: z.string().url().optional(),
+          linkedin: z.string().url().optional(),
+          instagram: z.string().url().optional(),
+          facebook: z.string().url().optional(),
+        })
+        .optional(),
+      featured: z.boolean().default(false),
+      subcontracted: z.boolean().default(false),
     }),
-    logo: z.string(), // Path to logo image
-    logoDark: z.string().optional(), // Path to dark logo image
-    websiteUrl: z.string().url().optional(),
-    socialLinks: z
-      .object({
-        twitter: z.string().url().optional(),
-        linkedin: z.string().url().optional(),
-        instagram: z.string().url().optional(),
-        facebook: z.string().url().optional(),
-      })
-      .optional(),
-    featured: z.boolean().default(false),
-    subcontracted: z.boolean().default(false),
-  }),
 });
 
 const portfolio = defineCollection({
   loader: glob({ pattern: '**/*.mdx', base: './src/content/portfolio' }),
-  schema: z.object({
-    title: z.string(),
-    description: z.string(),
-    thumbnail: z.string(), // Path to thumbnail image
-    featured: z.boolean().default(false),
-    publishDate: z.date(),
-    updatedDate: z.date().optional(),
-    clients: z.array(reference('clients')),
-    services: z.array(reference('services')),
-  }),
+  schema: ({ image }) =>
+    z.object({
+      title: z.string(),
+      description: z.string(),
+      thumbnail: image(), // Path to thumbnail image
+      featured: z.boolean().default(false),
+      publishDate: z.date(),
+      updatedDate: z.date().optional(),
+      clients: z.array(reference('clients')),
+      services: z.array(reference('services')),
+    }),
 });
 
 const stockPhotosCategory = defineCollection({
@@ -110,15 +112,16 @@ const blogTags = defineCollection({
 
 const blog = defineCollection({
   loader: glob({ pattern: '**/*.mdx', base: './src/content/blog' }),
-  schema: z.object({
-    title: z.string(),
-    description: z.string(),
-    thumbnail: z.string(), // Path to thumbnail image
-    featured: z.boolean().default(false),
-    publishDate: z.date(),
-    updatedDate: z.date().optional(),
-    tags: z.array(reference('blogTags')),
-  }),
+  schema: ({ image }) =>
+    z.object({
+      title: z.string(),
+      description: z.string(),
+      thumbnail: image(), // Path to thumbnail image
+      featured: z.boolean().default(false),
+      publishDate: z.date(),
+      updatedDate: z.date().optional(),
+      tags: z.array(reference('blogTags')),
+    }),
 });
 
 const legal = defineCollection({
