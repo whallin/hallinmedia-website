@@ -1,142 +1,127 @@
 ---
+import { Icon } from "astro-icon/components";
 import { Picture } from "astro:assets";
-import { getRelativeLocaleUrl } from "astro:i18n";
-import Avatar from "../assets/avatar.webp";
-import HallinmediaGradientBG from "../assets/brand/hallinmedia-gradient.webp";
+import ImgAvatar from "../assets/avatar.jpeg";
 import ClientBar from "../components/ClientBar.astro";
-import SpotifyNowPlaying from "../components/SpotifyNowPlaying.astro";
-import PhHandWavingDuotone from "../components/icon/PhHandWavingDuotone.astro";
-import LayoutMain from "../layouts/Main.astro";
+import ServiceGrid from "../components/ServiceGrid.astro";
+import { useTranslations } from "../i18n/utils";
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const t = useTranslations(Astro.currentLocale);
 ---
 
-<LayoutMain
-  title="Hem"
-  description="William Hallin är en frilansande digital designer och videoproducent i Skellefteå. Specialiserad på fotografering, videoproduktion och redigering."
+<BaseLayout
+  title={t("nav.home")}
+  description="William Hallin is a freelance photographer and digital designer based in Skellefteå, Sweden."
+  article={false}
+  showHeader={false}
 >
-  <main class="pb-12">
+  <div class="space-y-20">
     <div
-      class="relative h-fit overflow-clip break-words rounded-xl bg-gradient-to-t from-red-900/75 to-red-900/0 p-8 shadow-lg sm:h-[250px]"
+      class="relative isolate overflow-hidden rounded-lg p-8 drop-shadow-xl md:p-12"
     >
-      <div class="flex h-full flex-col justify-between gap-12">
-        <div class="flex items-center gap-4 opacity-0" id="landing-avatar">
+      <!-- Gradient background -->
+      <div class="hero-gradient absolute inset-0 -z-10"></div>
+
+      <!-- Content overlay with backdrop blur and subtle background -->
+      <div
+        class="relative z-10 flex h-full min-h-[200px] flex-col justify-between"
+      >
+        <div class="flex items-center gap-2">
           <Picture
-            src={Avatar}
+            src={ImgAvatar}
             alt="William Hallin"
             formats={["avif", "webp"]}
+            width={80}
             height={80}
-            class="h-[48px] w-[48px] select-none rounded-full opacity-0"
-            id="landing-avatar--img"
+            class="pointer-events-none h-10 w-10 select-none rounded-full object-cover"
           />
-          <PhHandWavingDuotone
-            class="h-10 w-10 text-red-800 opacity-0"
-            id="landing-avatar--wave"
-            aria-hidden="true"
-          />
+          <Icon name="ph:hand-waving-duotone" class="h-8 w-8 text-stone-50" />
         </div>
-        <h1
-          class="text-3xl font-light text-stone-50 opacity-0"
-          id="landing-header"
-        >
-          <a
-            href={getRelativeLocaleUrl(
-              Astro.currentLocale ?? "sv",
-              "portfolio",
-            )}
-            class="underline decoration-2 underline-offset-4 transition duration-200 hover:opacity-75 active:opacity-50"
-            aria-label="Gå till portfolio">Frilansande</a
-          > digital designer & videoproducent i <i class="font-serif"
-            >Skellefteå, Sweden.</i
+        <p class="text-3xl text-stone-50">
+          A freelancing photographer and digital designer in <a
+            class="font-serif font-normal underline underline-offset-4 transition duration-200 hover:opacity-70 active:opacity-50"
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://skelleftea.se"
           >
-        </h1>
+            Skellefteå, Sweden</a
+          >.
+        </p>
       </div>
-      <Picture
-        src={HallinmediaGradientBG}
-        alt=""
-        loading="eager"
-        widths={[650, 240]}
-        sizes="(max-width: 640px) 240px, 650px"
-        formats={["avif", "webp"]}
-        class="justify-self absolute left-0 top-0 -z-10 h-full w-full select-none object-cover"
-        aria-hidden="true"
-      />
     </div>
-  </main>
 
-  <ClientBar />
+    <ClientBar max={20} onlyFeatured={true} />
+    <!--
+      <FeaturedWork max={2} onlyFeatured={true} />
+    -->
+    <ServiceGrid max={3} onlyFeatured={true} />
+  </div>
+</BaseLayout>
 
-  <section
-    id="about"
-    class="flex flex-col gap-4 pb-8 pt-12"
-    aria-labelledby="about-1"
-  >
-    <h2 id="about-1" class="text-2xl">
-      Om <i class="font-serif"
-        >mig <span class="text-base text-stone-500">(a.k.a. William)</span></i
-      >
-    </h2>
-    <p id="about-2">
-      Hej! Jag heter William Hallin och är en 19-årig frilansande grafiker samt
-      foto- och videoproducent med rötter i Skellefteå.
-    </p>
-    <p id="about-3">
-      Jag specialiserar mig på att erbjuda skräddarsydda helhetslösningar inom <i
-        class="font-serif"
-        >layoutdesign, reklamdesign, fotografering och videoproduktion.</i
-      > Oavsett om du behöver en konsultation för ett designprojekt eller en komplett
-      reklamfilm med professionell bild, ljud och redigering, har jag nog resurserna
-      och erfarenheten för att hjälpa dig att nå dina mål!
-    </p>
-    <p id="about-4">
-      <i class="font-serif">När jag inte arbetar,</i> njuter jag av att vara ute
-      i naturen, utforska staden eller lyssna på musik. Samtidigt som jag även fortsätter
-      att utveckla min passion för foto och video, vilket inspirerar mig i mitt arbete
-      som kreativ professionell.
-    </p>
-  </section>
+<style>
+  .hero-gradient {
+    background-image: radial-gradient(
+        circle at 90% 90%,
+        hsla(20, 100%, 65%, 0.8) 0px,
+        transparent 25%
+      ),
+      radial-gradient(
+        circle at 15% 90%,
+        hsla(30, 100%, 70%, 0.7) 0px,
+        transparent 25%
+      ),
+      radial-gradient(
+        circle at 25% 55%,
+        hsla(45, 100%, 65%, 0.7) 0px,
+        transparent 25%
+      ),
+      radial-gradient(
+        circle at 75% 35%,
+        hsla(25, 100%, 70%, 0.7) 0px,
+        transparent 25%
+      ),
+      radial-gradient(
+        circle at 10% 15%,
+        hsla(65, 100%, 65%, 0.7) 0px,
+        transparent 25%
+      ),
+      radial-gradient(
+        circle at 92% 8%,
+        hsla(35, 100%, 70%, 0.7) 0px,
+        transparent 25%
+      ),
+      radial-gradient(
+        circle at 60% 65%,
+        hsla(50, 100%, 65%, 0.7) 0px,
+        transparent 25%
+      ),
+      radial-gradient(
+        circle at 40% 30%,
+        hsla(45, 100%, 70%, 0.7) 0px,
+        transparent 25%
+      );
+    background-color: hsl(0, 98%, 60%);
+    animation: hero-animation 20s ease-in-out infinite;
+    background-size: 400% 400%;
+    background-attachment: fixed;
+  }
 
-  <SpotifyNowPlaying />
-
-  <script>
-    document.addEventListener(
-      "astro:page-load",
-      () => {
-        gsap.set(
-          [
-            "#landing-avatar--img",
-            "#landing-avatar--wave",
-            "#landing-avatar",
-            "#landing-header",
-          ],
-          {
-            opacity: 1,
-          },
-        );
-
-        gsap.from(["#landing-avatar--img", "#landing-avatar--wave"], {
-          y: -10,
-          opacity: 0,
-          duration: 1,
-          ease: "power2.out",
-          stagger: 0.25,
-        });
-
-        gsap.from(["#landing-avatar", "#landing-header"], {
-          y: -10,
-          opacity: 0,
-          duration: 1,
-          ease: "power2.out",
-          stagger: 0.5,
-        });
-
-        gsap.to("#landing-avatar--wave", {
-          rotation: 20,
-          duration: 1,
-          yoyo: true,
-          repeat: -1,
-          ease: "power1.inOut",
-        });
-      },
-      { once: false },
-    );
-  </script>
-</LayoutMain>
+  @keyframes hero-animation {
+    0% {
+      background-position: 0% 0%;
+    }
+    25% {
+      background-position: 50% 0%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    75% {
+      background-position: 50% 100%;
+    }
+    100% {
+      background-position: 0% 0%;
+    }
+  }
+</style>

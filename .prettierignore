@@ -1,3 +1,32 @@
-.astro/
-.wrangler/
-node_modules/
+# Build outputs
+dist
+.next
+out
+.svelte-kit
+.astro
+build
+target
+debug
+
+# Dependencies
+node_modules
+.yarn
+.pnp.*
+
+# Cache directories
+.cache
+.parcel-cache
+.temp
+.docusaurus
+.wrangler
+
+# Coverage and test outputs
+coverage
+.nyc_output
+
+# Environment and local files
+.env*
+*.log
+
+# Package files
+package

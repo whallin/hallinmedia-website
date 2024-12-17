@@ -1,72 +1,79 @@
 // @ts-check
-import { defineConfig } from "astro/config";
+import { defineConfig, envField } from "astro/config";
+import { execSync } from "child_process";
+import packageJson from "./package.json";
 
-import tailwind from "@astrojs/tailwind";
+//import cloudflare from "@astrojs/cloudflare";
+import mdx from "@astrojs/mdx";
 import partytown from "@astrojs/partytown";
 import sitemap from "@astrojs/sitemap";
-import mdx from "@astrojs/mdx";
+import tailwind from "@astrojs/tailwind";
+import icon from "astro-icon";
+
+const getGitHash = () => {
+  try {
+    return execSync("git rev-parse --short HEAD").toString().trim();
+  } catch (error) {
+    return "dev";
+  }
+};
 
 // https://astro.build/config
 export default defineConfig({
   site: "https://hallin.media",
   trailingSlash: "ignore",
-  output: "static",
+
+  //adapter: cloudflare({
+  //  platformProxy: {
+  //    enabled: true,
+  //  },
+  //}),
 
   integrations: [
+    mdx(),
     tailwind(),
-    partytown({
-      config: {
-        forward: [],
-      },
-    }),
     sitemap({
       i18n: {
-        defaultLocale: "sv",
+        defaultLocale: "en",
         locales: {
-          sv: "sv-SE",
           en: "en-GB",
+          sv: "sv-SE",
         },
       },
     }),
-    mdx({
-      optimize: true,
-    }),
+    icon(),
+    partytown(),
   ],
-
-  security: {
-    checkOrigin: true,
-  },
-
-  build: {
-    inlineStylesheets: "auto",
-  },
 
   prefetch: {
     prefetchAll: true,
-    defaultStrategy: "hover",
+    defaultStrategy: "viewport",
   },
 
   image: {
     domains: ["hallin.media"],
   },
 
-  markdown: {
-    shikiConfig: {
-      themes: {
-        light: "github-light",
-        dark: "github-dark",
-      },
-    },
-    gfm: true,
-  },
-
   i18n: {
-    defaultLocale: "sv",
-    locales: ["sv", "en"],
+    defaultLocale: "en",
+    locales: ["en", "sv"],
     routing: {
       prefixDefaultLocale: false,
-      redirectToDefaultLocale: true,
-      fallbackType: "redirect",
+    },
+  },
+
+  env: {
+    schema: {
+      GIT_HASH: envField.string({
+        context: "client",
+        access: "public",
+        default: getGitHash(),
+      }),
+      PACKAGE_VERSION: envField.string({
+        context: "client",
+        access: "public",
+        default: packageJson.version,
+      }),
     },
   },
 });

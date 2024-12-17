@@ -1,77 +1,182 @@
 ---
-import { Picture } from "astro:assets";
-import { getRelativeLocaleUrl } from "astro:i18n";
+import { Icon } from "astro-icon/components";
+import { Image } from "astro:assets";
+import WordmarkDark from "../assets/brand/wordmark-dark.svg";
+import WordmarkLight from "../assets/brand/wordmark-light.svg";
+import { getLocalizedPath, useTranslations } from "../i18n/utils";
+import LanguageSwitcher from "./LanguageSwitcher.astro";
+import ThemeSwitcher from "./ThemeSwitcher.astro";
 
-import HallinmediaWordmark from "../assets/brand/wordmark.svg";
+const t = useTranslations(Astro.currentLocale);
 
-import PhCameraDuotone from "./icon/PhCameraDuotone.astro";
-import PhHandWavingDuotone from "./icon/PhHandWavingDuotone.astro";
-import PhHeartDuotone from "./icon/PhHeartDuotone.astro";
+const navLinks = [
+  {
+    href: "",
+    label: "nav.home",
+    icon: "ph:house-duotone",
+  },
+  {
+    href: "portfolio",
+    label: "nav.portfolio",
+    icon: "ph:shooting-star-duotone",
+  },
+  {
+    href: "stock-photos",
+    label: "nav.stock-photos",
+    icon: "ph:images-duotone",
+  },
+  {
+    href: "contact",
+    label: "nav.contact",
+    icon: "ph:phone-duotone",
+  },
+  {
+    href: "blog",
+    label: "nav.blog",
+    icon: "ph:newspaper-duotone",
+  },
+] as const;
+
+const isCurrentPath = (path: string) => {
+  const currentPath = Astro.url.pathname
+    .replace(/^\/(en|sv)/, "")
+    .replace(/\/$/, "");
+  return `/${path}` === currentPath || (currentPath === "" && path === "");
+};
 ---
 
-<header
-  role="banner"
-  class="flex flex-col justify-between gap-4 pb-8 pt-4 sm:flex-row sm:items-center sm:gap-0 sm:pb-12"
-  transition:animate="none"
+<nav
+  class="sticky top-4 z-50 mx-4 my-8 max-w-4xl rounded-full border border-stone-200 bg-stone-50/80 drop-shadow-xl backdrop-blur-xl dark:border-stone-800 dark:bg-stone-950/80 md:mx-auto"
 >
-  <div
-    class="flex w-full items-center justify-between gap-6 sm:w-fit sm:justify-start"
-  >
+  <div class="flex h-16 items-center justify-between px-8">
     <a
-      href={getRelativeLocaleUrl(Astro.currentLocale ?? "en", "/")}
-      aria-label="Go to homepage"
-      class="rounded-lg p-2 transition duration-150 hover:opacity-75 focus:outline-none focus:ring-2 focus:ring-red-600 active:opacity-50"
+      href={getLocalizedPath(Astro.currentLocale, "")}
+      class="flex items-center space-x-2 transition duration-200 hover:opacity-80 active:scale-90"
     >
-      <Picture
-        src={HallinmediaWordmark}
-        alt="Wordmark of HallinMedia"
-        width={160}
-        class="select-none"
+      <Image
+        src={WordmarkDark}
+        alt="HallinMedia"
+        class="pointer-events-none h-4 w-auto select-none dark:hidden"
+      />
+      <Image
+        src={WordmarkLight}
+        alt="HallinMedia"
+        class="pointer-events-none hidden h-4 w-auto select-none dark:block"
       />
     </a>
+
+    <!-- Navigation Links -->
+    <div class="flex items-center space-x-4 sm:space-x-8">
+      <div class="hidden space-x-6 md:flex">
+        {
+          navLinks.slice(1).map(({ href, label }) => (
+            <a
+              href={getLocalizedPath(Astro.currentLocale, href)}
+              class:list={[
+                "text-base transition duration-200 hover:text-live-500 active:opacity-70 dark:hover:text-live-500",
+                isCurrentPath(href)
+                  ? "text-live-500"
+                  : "text-stone-600 dark:text-stone-400",
+              ]}
+            >
+              {t(label)}
+            </a>
+          ))
+        }
+      </div>
+
+      <!-- Language Switcher with labels -->
+      <div class="flex items-center gap-2">
+        <LanguageSwitcher showLabels={false} />
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button
+        type="button"
+        class="inline-flex items-center justify-center rounded-lg p-2 text-stone-600 transition duration-200 hover:text-stone-900 active:opacity-70 dark:text-stone-400 dark:hover:text-stone-100 md:hidden"
+        aria-label="Open menu"
+      >
+        <Icon name="ph:list-bold" class="h-6 w-6" />
+      </button>
+    </div>
   </div>
-  <nav
-    role="navigation"
-    aria-label="Main navigation"
-    class="flex flex-wrap items-end justify-between gap-2 text-stone-500 sm:justify-start"
-  >
-    <a
-      href="https://piwigo.hallin.media"
-      data-umami-event="Navigation Click"
-      data-umami-page="fotobank"
-      data-ga4-event="nav_click"
-      data-ga4-page="fotobank"
-      class="flex items-center gap-1 rounded-lg p-2 transition duration-150 hover:opacity-75 focus:outline-none focus:ring-2 focus:ring-red-600 active:opacity-50"
-      aria-label="View Fotobank"
-      target="_blank"
-      rel="noopener noreferrer"
+</nav>
+
+<!-- Mobile Menu (Hidden by default) -->
+<div
+  class="fixed inset-0 z-50 hidden overflow-y-auto bg-stone-950/90 backdrop-blur-md md:hidden"
+  role="dialog"
+  aria-modal="true"
+>
+  <!-- Header with close button -->
+  <div class="absolute right-4 top-4">
+    <button
+      type="button"
+      class="inline-flex items-center justify-center rounded-lg p-2 text-stone-400 transition duration-200 hover:text-stone-100 active:opacity-70"
+      aria-label="Close menu"
     >
-      <PhCameraDuotone class="h-4 w-4 text-red-400" aria-hidden="true" />
-      <span>Fotobank</span>
-    </a>
-    <a
-      href={getRelativeLocaleUrl(Astro.currentLocale ?? "en", "portfolio")}
-      data-umami-event="Navigation Click"
-      data-umami-page="portfolio"
-      data-ga4-event="nav_click"
-      data-ga4-page="portfolio"
-      class="flex items-center gap-1 rounded-lg p-2 transition duration-150 hover:opacity-75 focus:outline-none focus:ring-2 focus:ring-red-600 active:opacity-50"
-      aria-label="View portfolio"
+      <Icon name="ph:x-bold" class="h-6 w-6" />
+    </button>
+  </div>
+
+  <!-- Navigation Links -->
+  <nav class="flex h-full flex-col justify-between px-8 py-20">
+    <div class="space-y-8">
+      {
+        navLinks.map(({ href, label, icon }) => (
+          <a
+            href={getLocalizedPath(Astro.currentLocale, href)}
+            class:list={[
+              "flex w-fit items-center space-x-4 hover:text-stone-100",
+              isCurrentPath(href) ? "text-live-500" : "text-stone-400",
+            ]}
+          >
+            <Icon name={icon} class="h-6 w-6" />
+            <div class="flex flex-col">
+              <span class="text-sm text-stone-500">/{href}</span>
+              <span class="text-lg">{t(label)}</span>
+            </div>
+          </a>
+        ))
+      }
+    </div>
+
+    <!-- Switchers Container -->
+    <div
+      class="flex items-center justify-between border-t border-stone-700 pt-8"
     >
-      <PhHeartDuotone class="text-red-400" aria-hidden="true" />
-      <span>Portfolio</span>
-    </a>
-    <a
-      href={getRelativeLocaleUrl(Astro.currentLocale ?? "en", "contact")}
-      data-umami-event="Navigation Click"
-      data-umami-page="contact"
-      data-ga4-event="nav_click"
-      data-ga4-page="contact"
-      class="flex items-center gap-1 rounded-lg p-2 transition duration-150 hover:opacity-75 focus:outline-none focus:ring-2 focus:ring-red-600 active:opacity-50"
-      aria-label="Contact page"
-    >
-      <PhHandWavingDuotone class="text-red-400" aria-hidden="true" />
-      <span>Kontakt</span>
-    </a>
+      <LanguageSwitcher showLabels={true} />
+      <ThemeSwitcher />
+    </div>
   </nav>
-</header>
+</div>
+
+<script>
+  // Handle mobile menu toggle
+  const mobileMenuButton = document.querySelector(
+    'button[aria-label="Open menu"]',
+  );
+  const mobileMenuCloseButton = document.querySelector(
+    'button[aria-label="Close menu"]',
+  );
+  const mobileMenu = document.querySelector('[role="dialog"]');
+
+  function toggleMenu(show: boolean) {
+    if (show) {
+      mobileMenu?.classList.remove("hidden");
+      document.body.style.overflow = "hidden";
+    } else {
+      mobileMenu?.classList.add("hidden");
+      document.body.style.overflow = "";
+    }
+  }
+
+  mobileMenuButton?.addEventListener("click", () => toggleMenu(true));
+  mobileMenuCloseButton?.addEventListener("click", () => toggleMenu(false));
+
+  // Close menu when clicking on a link
+  const mobileMenuLinks = mobileMenu?.querySelectorAll("a");
+  mobileMenuLinks?.forEach((link) => {
+    link.addEventListener("click", () => toggleMenu(false));
+  });
+</script>
