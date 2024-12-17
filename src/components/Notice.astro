@@ -1,0 +1,99 @@
+---
+import { Icon } from "astro-icon/components";
+
+interface Props {
+  variant?:
+    | "default" // Live 500
+    | "info" // Blue 500
+    | "warning" // Orange 500
+    | "error" // Red 500
+    | "success" // Green 500
+    | "note" // Purple 500
+    | "quote"; // Teal 500
+  showIcon?: boolean;
+  icon?: string;
+  showCta?: boolean;
+  ctaText?: string;
+  ctaLink?: string;
+}
+
+const {
+  variant = "default",
+  showIcon = true,
+  icon = "ph:info-duotone",
+  showCta = true,
+  ctaText = "Call to action",
+  ctaLink = "#",
+} = Astro.props;
+
+const variants = {
+  default: {
+    container: "bg-stone-100 dark:bg-stone-900",
+    icon: "text-live-500",
+    cta: "text-live-500",
+  },
+  info: {
+    container: "border border-blue-500 bg-blue-50 dark:bg-blue-950",
+    icon: "text-blue-500",
+    cta: "text-blue-500",
+  },
+  warning: {
+    container: "border border-yellow-500 bg-yellow-50 dark:bg-yellow-950",
+    icon: "text-yellow-500",
+    cta: "text-yellow-500",
+  },
+  error: {
+    container: "border border-red-500 bg-red-50 dark:bg-red-950",
+    icon: "text-red-500",
+    cta: "text-red-500",
+  },
+  success: {
+    container: "border border-lime-500 bg-lime-50 dark:bg-lime-950",
+    icon: "text-lime-500",
+    cta: "text-lime-500",
+  },
+  note: {
+    container: "border border-purple-500 bg-purple-50 dark:bg-purple-950",
+    icon: "text-purple-500",
+    cta: "text-purple-500",
+  },
+  quote: {
+    container: "border border-stone-500 bg-stone-50 dark:bg-stone-950",
+    icon: "text-stone-500",
+    cta: "text-stone-500",
+  },
+} as const;
+
+const baseClasses =
+  "flex flex-col gap-2 rounded-lg p-4 text-stone-700 dark:text-stone-300";
+---
+
+<div class:list={[baseClasses, variants[variant].container]}>
+  <div class="flex flex-col gap-2 sm:flex-row">
+    {
+      showIcon && (
+        <Icon name={icon} class:list={["h-6 w-6", variants[variant].icon]} />
+      )
+    }
+    <div class="flex flex-col gap-1">
+      <p class="text-sm"><slot /></p>
+      {
+        showCta && (
+          <a
+            href={ctaLink}
+            class:list={[
+              "group flex items-center gap-1 text-sm underline underline-offset-4 transition duration-200 hover:opacity-70 active:opacity-50",
+              variants[variant].cta,
+            ]}
+          >
+            {ctaText}
+            <Icon
+              name="ph:arrow-right-bold"
+              class="transition duration-200 group-hover:translate-x-[1.5px]"
+            />
+          </a>
+        )
+      }
+    </div>
+  </div>
+</div>

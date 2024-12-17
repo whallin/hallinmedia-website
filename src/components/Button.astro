@@ -1,0 +1,66 @@
+---
+interface Props {
+  variant?:
+    | "primary"
+    | "secondary"
+    | "white"
+    | "whiteSecondary"
+    | "black"
+    | "blackSecondary"
+    | "plain"
+    | "plainSecondary";
+  size?: "sm" | "md" | "lg";
+  disabled?: boolean;
+  class?: string;
+  type?: "button" | "submit" | "reset";
+}
+
+const {
+  variant = "primary",
+  size = "md",
+  disabled = false,
+  class: className = "",
+  type = "button",
+} = Astro.props;
+
+const variants = {
+  primary: "bg-live-500 text-stone-100 hover:bg-live-700 active:scale-95",
+  secondary:
+    "border-2 border-live-500 text-live-500 hover:bg-live-100 active:scale-95 dark:hover:bg-live-950/50",
+  white: "bg-stone-50 text-stone-900 hover:bg-stone-300 active:scale-95",
+  whiteSecondary:
+    "border-2 border-stone-50 text-stone-50 hover:bg-stone-700/50 active:scale-95",
+  black: "bg-stone-900 text-stone-100 hover:bg-stone-700/50 active:scale-95",
+  blackSecondary:
+    "border-2 border-stone-900 text-stone-900 hover:bg-stone-700/50 active:scale-95",
+  plain:
+    "bg-stone-900 text-stone-100 hover:bg-stone-700 active:scale-95 dark:bg-stone-50 dark:text-stone-900 dark:hover:bg-stone-200",
+  plainSecondary:
+    "border-2 border-stone-900 text-stone-900 hover:bg-stone-700/20 active:scale-95 dark:border-stone-50 dark:text-stone-50 dark:hover:bg-stone-50/20",
+} as const;
+
+const sizes = {
+  sm: "px-3 py-1 text-sm",
+  md: "px-4 py-2",
+  lg: "px-6 py-3 text-lg",
+} as const;
+
+const baseClasses =
+  "inline-flex items-center gap-2 rounded-lg transition duration-200";
+const disabledClasses = "cursor-not-allowed opacity-50";
+---
+
+<button
+  type={type}
+  disabled={disabled}
+  class:list={[
+    baseClasses,
+    variants[variant],
+    sizes[size],
+    disabled && disabledClasses,
+    className,
+  ]}
+  {...Astro.props}
+>
+  <slot />
+</button>

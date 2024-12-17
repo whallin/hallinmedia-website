@@ -1,0 +1,147 @@
+---
+import { Icon } from "astro-icon/components";
+import { Picture } from "astro:assets";
+import ImgContact from "../../assets/contactimg.webp";
+import { useTranslations } from "../../i18n/utils";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const t = useTranslations(Astro.currentLocale);
+
+type ContactInfo = {
+  name: string;
+  icon: string;
+  href: string;
+  hrefText: string;
+};
+
+const contactMethods: ContactInfo[] = [
+  {
+    name: "CV",
+    icon: "ph:read-cv-logo-duotone",
+    href: "https://hallin.media/william-hallin-cv-2024.pdf",
+    hrefText: "Se PDF",
+  },
+  {
+    name: "E-post",
+    icon: "ph:envelope-duotone",
+    href: "mailto:william@hallin.media",
+    hrefText: "william@hallin.media",
+  },
+  {
+    name: "Telefon",
+    icon: "ph:phone-duotone",
+    href: "tel:+46706159279",
+    hrefText: "+46 70-615 9279",
+  },
+  {
+    name: "Instagram",
+    icon: "ph:instagram-logo-duotone",
+    href: "https://www.instagram.com/williamhallinn/",
+    hrefText: "@williamhallinn",
+  },
+  {
+    name: "LinkedIn",
+    icon: "ph:linkedin-logo-duotone",
+    href: "https://www.linkedin.com/in/whallin/",
+    hrefText: "William Hallin",
+  },
+];
+---
+
+<BaseLayout
+  title={t("nav.contact")}
+  description="William Hallin är frilansfotograf och digital designer med bas i Skellefteå."
+  icon="ph:phone-duotone"
+  article={false}
+  showHeader={true}
+  showDescription={false}
+>
+  <div class="flex flex-col gap-8 sm:flex-row sm:gap-20">
+    <div class="space-y-4 text-stone-900 dark:text-stone-50">
+      <p>
+        Jag ser alltid fram emot att skapa nya kontakter. Oavsett om du är
+        intresserad av ett samarbete eller bara vill ställa frågor och ses för
+        en kaffe, så finns jag här!
+      </p>
+      <p>
+        <span class="font-semibold">Om du överväger ett samarbete</span>, dela
+        gärna med dig av information om ditt projekt, inklusive budget och
+        deadline. Med dessa detaljer kan jag bättre förstå dina behov och
+        erbjuda en mer exakt offert.
+      </p>
+      <section class="flex w-fit items-center">
+        <Icon name="ph:clock-duotone" class="mr-2 h-6 w-6 text-red-400" />
+        <p class="select-none">
+          Klockan i Sverige är just nu <span
+            id="stockholm-time"
+            class="font-serif">00:00:00</span
+          >
+        </p>
+      </section>
+    </div>
+    <div
+      class="flex rotate-0 flex-col items-center gap-4 transition duration-200 hover:rotate-0 sm:rotate-6"
+    >
+      <Picture
+        src={ImgContact}
+        alt="Picture of William Hallin"
+        width={600}
+        formats={["avif", "webp"]}
+        class="pointer-events-none select-none rounded-lg drop-shadow-xl"
+        loading="eager"
+      />
+      <span class="text-center text-xs italic text-stone-500"
+        >Fotat i Mo i Rana, Norge <Icon
+          name="twemoji:flag-norway"
+          class="ml-1 inline h-4 w-4"
+        /></span
+      >
+    </div>
+  </div>
+  <div class="mt-8 space-y-6 sm:mt-0">
+    {
+      contactMethods.map((method) => (
+        <div class="flex flex-row items-center gap-4">
+          <Icon name={method.icon} class="h-8 w-8 text-red-500" />
+          <div class="flex flex-col gap-1">
+            <h2 class="font-serif text-stone-900 dark:text-stone-50">
+              {method.name}
+            </h2>
+            <a
+              href={method.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-red-500 transition duration-200 hover:opacity-70 active:opacity-50"
+            >
+              <div class="flex items-center gap-1">
+                <span class="underline underline-offset-4">
+                  {method.hrefText}
+                </span>
+                <Icon name="ph:arrow-up-right-bold" class="inline" />
+              </div>
+            </a>
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</BaseLayout>
+
+<script>
+  updateStockholmTime();
+  setInterval(updateStockholmTime, 1000);
+
+  // Get the Stockholm time
+  function updateStockholmTime() {
+    const timeElement = document.getElementById("stockholm-time");
+    if (!timeElement) return;
+
+    timeElement.textContent = new Intl.DateTimeFormat([], {
+      timeZone: "Europe/Stockholm",
+      hour: "2-digit",
+      minute: "2-digit",
+      second: "2-digit",
+      hour12: false,
+    }).format(new Date());
+  }
+</script>

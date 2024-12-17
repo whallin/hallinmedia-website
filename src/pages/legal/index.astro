@@ -1,0 +1,37 @@
+---
+import { getCollection } from "astro:content";
+import LegalCard from "../../components/LegalCard.astro";
+import { getLocalizedPath, useTranslations } from "../../i18n/utils";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const t = useTranslations(Astro.currentLocale);
+const legalDocs = await getCollection("legal");
+const localizedLegalDocs = legalDocs.filter((doc) =>
+  doc.id.includes(`${Astro.currentLocale}/`),
+);
+---
+
+<BaseLayout
+  title={t("nav.legal")}
+  description="A collection of legal documents releated to HallinMedia."
+  icon="ph:file-text-duotone"
+  article={false}
+>
+  <div class="grid gap-4 sm:grid-cols-2">
+    {
+      localizedLegalDocs.map((doc) => (
+        <LegalCard
+          title={doc.data.title}
+          purpose={doc.data.purpose}
+          icon={doc.data.icon}
+          publishDate={doc.data.publishDate}
+          updatedDate={doc.data.updatedDate}
+          href={getLocalizedPath(
+            Astro.currentLocale,
+            `legal/${doc.id.split("/").pop()}`,
+          )}
+        />
+      ))
+    }
+  </div>
+</BaseLayout>

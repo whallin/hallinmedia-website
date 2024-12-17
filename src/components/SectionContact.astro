@@ -1,0 +1,198 @@
+---
+import { Icon } from "astro-icon/components";
+import { Picture } from "astro:assets";
+import { getLocalizedPath, useTranslations } from "../i18n/utils";
+import Button from "./Button.astro";
+
+const t = useTranslations(Astro.currentLocale);
+---
+
+<div class="relative isolate overflow-hidden rounded-lg p-8 md:p-12">
+  <!-- Gradient background -->
+  <div class="mesh-gradient absolute inset-0 -z-10"></div>
+
+  <!-- Content overlay with backdrop blur and subtle background -->
+  <div class="relative z-10 flex flex-col backdrop-blur-[2px]">
+    <h2
+      class="flex flex-col gap-2 text-3xl font-semibold text-stone-900 sm:flex-row sm:items-center"
+    >
+      <Icon name="ph:hand-waving-duotone" class="h-8 w-8" />
+      {t("contact-section.title")}
+    </h2>
+
+    <p class="mt-4 max-w-2xl text-base text-stone-900">
+      {t("contact-section.subtitle")}
+    </p>
+
+    <div class="mt-8 flex flex-col gap-4 sm:flex-row">
+      <a
+        href={getLocalizedPath(Astro.currentLocale, "contact")}
+        class="inline-flex w-full"
+      >
+        <Button variant="primary" size="md" class="flex w-full justify-center">
+          <Icon name="ph:phone-duotone" />
+          {t("contact-section.contact-text")}
+          <Icon name="ph:arrow-right-bold" />
+        </Button>
+      </a>
+
+      <Button
+        variant="blackSecondary"
+        size="md"
+        class="flex w-full justify-center"
+        data-cal-link="williamh/hello"
+        data-cal-namespace="hello"
+        data-cal-config='{"layout":"month_view"}'
+      >
+        <Icon name="ph:calendar-blank-duotone" />
+        {t("contact-section.schedule-text")}
+        <Icon name="ph:arrow-square-out-duotone" />
+      </Button>
+    </div>
+  </div>
+
+  <div class="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center">
+    <div class="pointer-events-none flex select-none -space-x-2">
+      <Picture
+        class="inline-block h-10 w-10 rounded-full ring-2 ring-live-500"
+        src="https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+        alt="Testimonial avatar"
+        formats={["avif", "webp"]}
+        width={80}
+        height={80}
+      />
+      <Picture
+        class="inline-block h-10 w-10 rounded-full ring-2 ring-live-500"
+        src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+        alt="Testimonial avatar"
+        formats={["avif", "webp"]}
+        width={80}
+        height={80}
+      />
+      <Picture
+        class="inline-block h-10 w-10 rounded-full ring-2 ring-live-500"
+        src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+        alt="Testimonial avatar"
+        formats={["avif", "webp"]}
+        width={80}
+        height={80}
+      />
+    </div>
+    <p class="text-sm text-stone-600">
+      {t("contact-section.clients")}
+      <span class="font-semibold text-stone-900"
+        ><a
+          href={getLocalizedPath(Astro.currentLocale, "clients")}
+          class="underline underline-offset-4 transition duration-200 hover:text-live-500 active:opacity-70 dark:hover:text-live-500"
+          >{t("contact-section.clients-link")}</a
+        ></span
+      >
+      {t("contact-section.clients-worldwide")}
+    </p>
+  </div>
+</div>
+
+<style>
+  .mesh-gradient {
+    background-image: radial-gradient(
+        circle at 15% 15%,
+        hsla(0, 100%, 65%, 0.8) 0px,
+        transparent 25%
+      ),
+      radial-gradient(
+        circle at 85% 10%,
+        hsla(20, 100%, 70%, 0.7) 0px,
+        transparent 25%
+      ),
+      radial-gradient(
+        circle at 75% 45%,
+        hsla(35, 100%, 65%, 0.7) 0px,
+        transparent 25%
+      ),
+      radial-gradient(
+        circle at 25% 65%,
+        hsla(15, 100%, 70%, 0.7) 0px,
+        transparent 25%
+      ),
+      radial-gradient(
+        circle at 90% 85%,
+        hsla(45, 100%, 65%, 0.7) 0px,
+        transparent 25%
+      ),
+      radial-gradient(
+        circle at 8% 92%,
+        hsla(5, 100%, 70%, 0.7) 0px,
+        transparent 25%
+      ),
+      radial-gradient(
+        circle at 40% 35%,
+        hsla(30, 100%, 65%, 0.7) 0px,
+        transparent 25%
+      ),
+      radial-gradient(
+        circle at 60% 70%,
+        hsla(25, 100%, 70%, 0.7) 0px,
+        transparent 25%
+      );
+    background-color: hsl(0, 0%, 100%);
+    animation: gradient-animation 20s ease-in-out infinite;
+    background-size: 400% 400%;
+    background-attachment: fixed;
+  }
+
+  @keyframes gradient-animation {
+    0% {
+      background-position: 0% 0%;
+    }
+    25% {
+      background-position: 50% 0%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    75% {
+      background-position: 50% 100%;
+    }
+    100% {
+      background-position: 0% 0%;
+    }
+  }
+</style>
+
+<script is:inline>
+  (function (C, A, L) {
+    let p = function (a, ar) {
+      a.q.push(ar);
+    };
+    let d = C.document;
+    C.Cal =
+      C.Cal ||
+      function () {
+        let cal = C.Cal;
+        let ar = arguments;
+        if (!cal.loaded) {
+          cal.ns = {};
+          cal.q = cal.q || [];
+          d.head.appendChild(d.createElement("script")).src = A;
+          cal.loaded = true;
+        }
+        if (ar[0] === L) {
+          const api = function () {
+            p(api, arguments);
+          };
+          const namespace = ar[1];
+          api.q = api.q || [];
+          if (typeof namespace === "string") {
+            cal.ns[namespace] = cal.ns[namespace] || api;
+            p(cal.ns[namespace], ar);
+            p(cal, ["initNamespace", namespace]);
+          } else p(cal, ar);
+          return;
+        }
+        p(cal, ar);
+      };
+  })(window, "https://app.cal.com/embed/embed.js", "init");
+  Cal("init", "hello", { origin: "https://cal.com" });
+
+  Cal.ns.hello("ui", { hideEventTypeDetails: false, layout: "month_view" });
+</script>

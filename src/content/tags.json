@@ -1,0 +1,138 @@
+{
+  "blog": [
+    {
+      "id": "video-production",
+      "name": "Video Production"
+    },
+    {
+      "id": "photography",
+      "name": "Photography"
+    },
+    {
+      "id": "brand-design",
+      "name": "Brand Design"
+    },
+    {
+      "id": "graphic-design",
+      "name": "Graphic Design"
+    },
+    {
+      "id": "motion-graphics",
+      "name": "Motion Graphics"
+    },
+    {
+      "id": "post-production",
+      "name": "Post Production"
+    },
+    {
+      "id": "freelancing",
+      "name": "Freelancing"
+    },
+    {
+      "id": "client-work",
+      "name": "Client Work"
+    },
+    {
+      "id": "case-study",
+      "name": "Case Study"
+    },
+    {
+      "id": "workflow",
+      "name": "Workflow"
+    },
+    {
+      "id": "behind-the-scenes",
+      "name": "Behind the Scenes"
+    },
+    {
+      "id": "tech",
+      "name": "Tech"
+    },
+    {
+      "id": "sysadmin",
+      "name": "Sysadmin"
+    },
+    {
+      "id": "software",
+      "name": "Software"
+    },
+    {
+      "id": "hardware",
+      "name": "Hardware"
+    },
+    {
+      "id": "automation",
+      "name": "Automation"
+    },
+    {
+      "id": "tutorial",
+      "name": "Tutorial"
+    },
+    {
+      "id": "review",
+      "name": "Review"
+    },
+    {
+      "id": "portfolio",
+      "name": "Portfolio"
+    },
+    {
+      "id": "resources",
+      "name": "Resources"
+    },
+    {
+      "id": "tips",
+      "name": "Tips"
+    },
+    {
+      "id": "commercial",
+      "name": "Commercial"
+    },
+    {
+      "id": "corporate",
+      "name": "Corporate"
+    },
+    {
+      "id": "events",
+      "name": "Events"
+    },
+    {
+      "id": "marketing",
+      "name": "Marketing"
+    },
+    {
+      "id": "social-media",
+      "name": "Social Media"
+    }
+  ],
+  "stockPhotos": [
+    {
+      "id": "people",
+      "name": "People"
+    },
+    {
+      "id": "nature",
+      "name": "Nature"
+    },
+    {
+      "id": "architecture",
+      "name": "Architecture"
+    },
+    {
+      "id": "transport",
+      "name": "Transport"
+    },
+    {
+      "id": "food",
+      "name": "Food"
+    },
+    {
+      "id": "gaming",
+      "name": "Gaming"
+    },
+    {
+      "id": "other",
+      "name": "Other"
+    }
+  ]
+}

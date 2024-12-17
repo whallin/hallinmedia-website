@@ -1,0 +1,16 @@
+{
+  "name": "Norra Skog",
+  "description": {
+    "en": "Norra Skog is a forest owners' association owned by 27,000 individual forest owners with a total forest holding of just over 2.2 million hectares of forest land.",
+    "sv": "Norra Skog är en skogsägarförening som ägs av 27 000 enskilda skogsägare med ett samlat skogsinnehav på drygt 2,2 miljoner hektar skogsmark."
+  },
+  "logo": "/src/assets/clients/norraskog.svg",
+  "websiteUrl": "https://www.norraskog.se/",
+  "socialLinks": {
+    "instagram": "https://www.instagram.com/norraskogs",
+    "linkedin": "https://se.linkedin.com/company/norraskog/",
+    "facebook": "https://www.facebook.com/norraskogs/",
+    "twitter": "https://x.com/norraskog"
+  },
+  "subcontracted": true
+}

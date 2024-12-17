@@ -1,0 +1,61 @@
+---
+import { Icon } from "astro-icon/components";
+import { Image } from "astro:assets";
+import { getCollection } from "astro:content";
+import Button from "../../components/Button.astro";
+import { getLocalizedPath, useTranslations } from "../../i18n/utils";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const t = useTranslations(Astro.currentLocale);
+const clients = await getCollection("clients");
+---
+
+<BaseLayout
+  title={t("nav.clients")}
+  description="A collection of clients William Hallin has worked with."
+  icon="ph:users-duotone"
+  article={false}
+>
+  <div class="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
+    {
+      clients
+        .sort((a, b) => a.data.name.localeCompare(b.data.name))
+        .map((client) => (
+          <div class="flex h-full flex-col gap-6 rounded-lg">
+            <div class="flex h-20 items-center justify-center rounded-lg bg-stone-200 p-6 dark:bg-stone-800">
+              <Image
+                src={client.data.logo}
+                alt={client.data.name}
+                width={300}
+                height={100}
+                class="pointer-events-none mx-auto h-12 w-auto select-none object-contain"
+              />
+            </div>
+            <div>
+              <h2 class="mb-2 font-serif text-xl text-stone-900 dark:text-stone-100">
+                {client.data.name}
+              </h2>
+              <p class="text-stone-600 dark:text-stone-400">
+                {client.data.description.en.split(".")[0]}.
+              </p>
+            </div>
+            <a
+              href={getLocalizedPath(
+                Astro.currentLocale,
+                `clients/${client.id}`,
+              )}
+              class="mt-auto"
+            >
+              <Button
+                variant="secondary"
+                class="mt-auto flex w-full justify-center"
+              >
+                {t("button.see-more")}
+                <Icon name="ph:arrow-right-bold" />
+              </Button>
+            </a>
+          </div>
+        ))
+    }
+  </div>
+</BaseLayout>

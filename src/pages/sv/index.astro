@@ -1,0 +1,127 @@
+---
+import { Icon } from "astro-icon/components";
+import { Picture } from "astro:assets";
+import ImgAvatar from "../../assets/avatar.jpeg";
+import ClientBar from "../../components/ClientBar.astro";
+import ServiceGrid from "../../components/ServiceGrid.astro";
+import { useTranslations } from "../../i18n/utils";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const t = useTranslations(Astro.currentLocale);
+---
+
+<BaseLayout
+  title={t("nav.home")}
+  description="William Hallin är frilansfotograf och digital designer med bas i Skellefteå."
+  article={false}
+  showHeader={false}
+>
+  <div class="space-y-20">
+    <div
+      class="relative isolate overflow-hidden rounded-lg p-8 drop-shadow-xl md:p-12"
+    >
+      <!-- Gradient background -->
+      <div class="hero-gradient absolute inset-0 -z-10"></div>
+
+      <!-- Content overlay with backdrop blur and subtle background -->
+      <div
+        class="relative z-10 flex h-full min-h-[200px] flex-col justify-between"
+      >
+        <div class="flex items-center gap-2">
+          <Picture
+            src={ImgAvatar}
+            alt="William Hallin"
+            formats={["avif", "webp"]}
+            width={80}
+            height={80}
+            class="pointer-events-none h-10 w-10 select-none rounded-full object-cover"
+          />
+          <Icon name="ph:hand-waving-duotone" class="h-8 w-8 text-stone-50" />
+        </div>
+        <p class="text-3xl text-stone-50">
+          Frilansfotograf och digital designer med bas i <a
+            class="font-serif font-normal underline underline-offset-4 transition duration-200 hover:opacity-70 active:opacity-50"
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://skelleftea.se"
+          >
+            Skellefteå, Sverige</a
+          >.
+        </p>
+      </div>
+    </div>
+
+    <ClientBar max={20} onlyFeatured={true} />
+    <!--
+      <FeaturedWork max={2} onlyFeatured={true} />
+    -->
+    <ServiceGrid max={3} onlyFeatured={true} />
+  </div>
+</BaseLayout>
+
+<style>
+  .hero-gradient {
+    background-image: radial-gradient(
+        circle at 90% 90%,
+        hsla(20, 100%, 65%, 0.8) 0px,
+        transparent 25%
+      ),
+      radial-gradient(
+        circle at 15% 90%,
+        hsla(30, 100%, 70%, 0.7) 0px,
+        transparent 25%
+      ),
+      radial-gradient(
+        circle at 25% 55%,
+        hsla(45, 100%, 65%, 0.7) 0px,
+        transparent 25%
+      ),
+      radial-gradient(
+        circle at 75% 35%,
+        hsla(25, 100%, 70%, 0.7) 0px,
+        transparent 25%
+      ),
+      radial-gradient(
+        circle at 10% 15%,
+        hsla(65, 100%, 65%, 0.7) 0px,
+        transparent 25%
+      ),
+      radial-gradient(
+        circle at 92% 8%,
+        hsla(35, 100%, 70%, 0.7) 0px,
+        transparent 25%
+      ),
+      radial-gradient(
+        circle at 60% 65%,
+        hsla(50, 100%, 65%, 0.7) 0px,
+        transparent 25%
+      ),
+      radial-gradient(
+        circle at 40% 30%,
+        hsla(45, 100%, 70%, 0.7) 0px,
+        transparent 25%
+      );
+    background-color: hsl(0, 98%, 60%);
+    animation: hero-animation 20s ease-in-out infinite;
+    background-size: 400% 400%;
+    background-attachment: fixed;
+  }
+
+  @keyframes hero-animation {
+    0% {
+      background-position: 0% 0%;
+    }
+    25% {
+      background-position: 50% 0%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    75% {
+      background-position: 50% 100%;
+    }
+    100% {
+      background-position: 0% 0%;
+    }
+  }
+</style>

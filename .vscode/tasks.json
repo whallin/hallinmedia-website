@@ -1,0 +1,300 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Node: Start Development Server",
+      "type": "shell",
+      "command": "npm run dev",
+      "problemMatcher": [],
+      "presentation": {
+        "group": "dev-servers",
+        "panel": "dedicated"
+      },
+      "detail": "Start Node.js development server"
+    },
+    {
+      "label": "Bun: Start Development Server",
+      "type": "shell",
+      "command": "bun run dev",
+      "problemMatcher": [],
+      "presentation": {
+        "group": "dev-servers",
+        "panel": "dedicated"
+      },
+      "detail": "Start Bun development server"
+    },
+    {
+      "label": "Node: Install Dependencies",
+      "type": "shell",
+      "command": "npm install",
+      "problemMatcher": [],
+      "presentation": {
+        "group": "package-management",
+        "reveal": "silent",
+        "panel": "shared"
+      },
+      "detail": "Install Node.js project dependencies using npm"
+    },
+    {
+      "label": "Bun: Install Dependencies",
+      "type": "shell",
+      "command": "bun install",
+      "problemMatcher": [],
+      "presentation": {
+        "group": "package-management",
+        "reveal": "silent",
+        "panel": "shared"
+      },
+      "detail": "Install Bun project dependencies"
+    },
+    {
+      "label": "Docker: Build Image",
+      "type": "shell",
+      "command": "docker build -t ${input:dockerImageName} .",
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared"
+      },
+      "detail": "Build Docker image from Dockerfile"
+    },
+    {
+      "label": "Docker: Run Container",
+      "type": "shell",
+      "command": "docker run -p ${input:dockerHostPort}:${input:dockerContainerPort} ${input:dockerImageName}",
+      "problemMatcher": [],
+      "presentation": {
+        "group": "dev-servers",
+        "panel": "dedicated"
+      },
+      "detail": "Run Docker container"
+    },
+    {
+      "label": "Docker Compose: Up",
+      "type": "shell",
+      "command": "docker-compose up",
+      "problemMatcher": [],
+      "presentation": {
+        "group": "dev-servers",
+        "panel": "dedicated"
+      },
+      "detail": "Start all services defined in docker-compose.yml"
+    },
+    {
+      "label": "Git: Checkout develop",
+      "type": "shell",
+      "command": "git",
+      "args": ["checkout", "develop"],
+      "dependsOrder": "sequence",
+      "dependsOn": ["Git: Pull current"],
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "silent",
+        "panel": "shared",
+        "group": "git-operations"
+      },
+      "detail": "Switch to develop branch and pull latest changes"
+    },
+    {
+      "label": "Git: Pull current",
+      "type": "shell",
+      "command": "git",
+      "args": ["pull"],
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "silent",
+        "panel": "shared",
+        "group": "git-operations"
+      },
+      "detail": "Pull latest changes from remote for current branch"
+    },
+    {
+      "label": "Git: Checkout staging",
+      "type": "shell",
+      "command": "git",
+      "args": ["checkout", "staging"],
+      "dependsOrder": "sequence",
+      "dependsOn": ["Git: Pull current"],
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "silent",
+        "panel": "shared",
+        "group": "git-operations"
+      },
+      "detail": "Switch to staging branch and pull latest changes"
+    },
+    {
+      "label": "Git: Checkout preview",
+      "type": "shell",
+      "command": "git",
+      "args": ["checkout", "preview"],
+      "dependsOrder": "sequence",
+      "dependsOn": ["Git: Pull current"],
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "silent",
+        "panel": "shared",
+        "group": "git-operations"
+      },
+      "detail": "Switch to preview branch and pull latest changes"
+    },
+    {
+      "label": "Git: Create feature branch",
+      "type": "shell",
+      "command": "git",
+      "args": ["checkout", "-b", "feature/${input:gitFeatureName}", "develop"],
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared",
+        "group": "git-operations"
+      },
+      "detail": "Create a new feature branch from develop"
+    },
+    {
+      "label": "Git: Create hotfix branch",
+      "type": "shell",
+      "command": "git",
+      "args": ["checkout", "-b", "hotfix/${input:gitHotfixName}", "main"],
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared",
+        "group": "git-operations"
+      },
+      "detail": "Create a new hotfix branch from main"
+    },
+    {
+      "label": "Git: Sync current branch",
+      "type": "shell",
+      "command": "git",
+      "args": ["pull", "origin", "${command:git.getBranch}"],
+      "dependsOrder": "sequence",
+      "dependsOn": ["Git: Push current"],
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared",
+        "group": "git-operations"
+      },
+      "detail": "Pull and push changes for the current branch"
+    },
+    {
+      "label": "Git: Push current",
+      "type": "shell",
+      "command": "git",
+      "args": ["push", "origin", "${command:git.getBranch}"],
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared",
+        "group": "git-operations"
+      },
+      "detail": "Push current branch changes to remote"
+    },
+    {
+      "label": "Git: Move staged changes to new branch",
+      "type": "shell",
+      "dependsOrder": "sequence",
+      "dependsOn": [
+        "Git: Stash changes",
+        "Git: Create new branch",
+        "Git: Apply stash"
+      ],
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared",
+        "group": "git-operations"
+      },
+      "detail": "Move staged changes to a new branch"
+    },
+    {
+      "label": "Git: Stash changes",
+      "type": "shell",
+      "command": "git",
+      "args": ["stash"],
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared",
+        "group": "git-operations"
+      },
+      "detail": "Temporarily store current changes in git stash"
+    },
+    {
+      "label": "Git: Create new branch",
+      "type": "shell",
+      "command": "git",
+      "args": ["checkout", "-b", "${input:gitNewBranchName}"],
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared",
+        "group": "git-operations"
+      },
+      "detail": "Create and checkout a new branch"
+    },
+    {
+      "label": "Git: Apply stash",
+      "type": "shell",
+      "command": "git",
+      "args": ["stash", "pop"],
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared",
+        "group": "git-operations"
+      },
+      "detail": "Apply most recent stashed changes to current branch"
+    },
+    {
+      "label": "Git: Undo staged commits",
+      "type": "shell",
+      "command": "git",
+      "args": ["reset", "origin/${command:git.getBranch}"],
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared",
+        "group": "git-operations"
+      },
+      "detail": "Undo local commits that haven't been pushed to remote"
+    }
+  ],
+  "inputs": [
+    {
+      "id": "dockerImageName",
+      "type": "promptString",
+      "description": "Docker image name",
+      "default": "my-app:latest"
+    },
+    {
+      "id": "dockerHostPort",
+      "type": "promptString",
+      "description": "Host port number",
+      "default": "8080"
+    },
+    {
+      "id": "dockerContainerPort",
+      "type": "promptString",
+      "description": "Container port number",
+      "default": "8080"
+    },
+    {
+      "id": "gitFeatureName",
+      "type": "promptString",
+      "description": "Name of the feature branch"
+    },
+    {
+      "id": "gitHotfixName",
+      "type": "promptString",
+      "description": "Name of the hotfix branch"
+    },
+    {
+      "id": "gitNewBranchName",
+      "type": "promptString",
+      "description": "Name of the new branch"
+    }
+  ]
+}
