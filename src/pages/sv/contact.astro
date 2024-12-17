@@ -1,7 +1,7 @@
 ---
 import { Icon } from "astro-icon/components";
 import { Picture } from "astro:assets";
-import ImgContact from "../../assets/contactimg.webp";
+import ImgContact from "../../assets/contactimg.jpeg";
 import { useTranslations } from "../../i18n/utils";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 
@@ -56,8 +56,8 @@ const contactMethods: ContactInfo[] = [
   showHeader={true}
   showDescription={false}
 >
-  <div class="flex flex-col gap-8 sm:flex-row sm:gap-20">
-    <div class="space-y-4 text-stone-900 dark:text-stone-50">
+  <div class="flex flex-col gap-8 sm:flex-row sm:justify-between sm:gap-20">
+    <div class="max-w-lg space-y-4 text-stone-900 dark:text-stone-50">
       <p>
         Jag ser alltid fram emot att skapa nya kontakter. Oavsett om du är
         intresserad av ett samarbete eller bara vill ställa frågor och ses för
@@ -85,20 +85,19 @@ const contactMethods: ContactInfo[] = [
       <Picture
         src={ImgContact}
         alt="Picture of William Hallin"
-        width={600}
+        width={320}
         formats={["avif", "webp"]}
-        class="pointer-events-none select-none rounded-lg drop-shadow-xl"
-        loading="eager"
+        class="pointer-events-none w-40 select-none rounded-lg drop-shadow-xl"
       />
       <span class="text-center text-xs italic text-stone-500"
-        >Fotat i Mo i Rana, Norge <Icon
+        >Mo i Rana, Norge <Icon
           name="twemoji:flag-norway"
           class="ml-1 inline h-4 w-4"
         /></span
       >
     </div>
   </div>
-  <div class="mt-8 space-y-6 sm:mt-0">
+  <div class="mt-8 space-y-6">
     {
       contactMethods.map((method) => (
         <div class="flex flex-row items-center gap-4">

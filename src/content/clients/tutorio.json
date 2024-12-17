@@ -4,7 +4,8 @@
     "en": "Tutorio is an educational platform that offers resources and tools for students preparing for various examinations, including A Levels, GCSEs, driving tests, and SATs.",
     "sv": "Tutorio är en utbildningsplattform som erbjuder resurser och verktyg för studenter som förbereder sig för olika examina, inklusive A Levels, GCSE, körprov och SATs."
   },
-  "logo": "/src/assets/clients/tutorio.png",
+  "logo": "/src/assets/clients/tutorio.svg",
+  "logoDark": "/src/assets/clients/tutorio-dark.svg",
   "websiteUrl": "https://tutorio.app/",
   "socialLinks": {
     "instagram": "https://www.instagram.com/tutorio_uk",

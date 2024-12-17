@@ -22,14 +22,33 @@ const clients = await getCollection("clients");
         .sort((a, b) => a.data.name.localeCompare(b.data.name))
         .map((client) => (
           <div class="flex h-full flex-col gap-6 rounded-lg">
-            <div class="flex h-20 items-center justify-center rounded-lg bg-stone-200 p-6 dark:bg-stone-800">
-              <Image
-                src={client.data.logo}
-                alt={client.data.name}
-                width={300}
-                height={100}
-                class="pointer-events-none mx-auto h-12 w-auto select-none object-contain"
-              />
+            <div class="flex h-20 items-center justify-center rounded-lg bg-stone-200 p-8 dark:bg-stone-800">
+              {client.data.logoDark ? (
+                <div>
+                  <Image
+                    src={client.data.logoDark}
+                    alt={client.data.name}
+                    width={320}
+                    height={80}
+                    class="pointer-events-none mx-auto hidden h-10 w-auto select-none object-contain dark:block"
+                  />
+                  <Image
+                    src={client.data.logo}
+                    alt={client.data.name}
+                    width={320}
+                    height={80}
+                    class="pointer-events-none mx-auto block h-10 w-auto select-none object-contain dark:hidden"
+                  />
+                </div>
+              ) : (
+                <Image
+                  src={client.data.logo}
+                  alt={client.data.name}
+                  width={320}
+                  height={80}
+                  class="pointer-events-none mx-auto h-10 w-auto select-none object-contain"
+                />
+              )}
             </div>
             <div>
               <h2 class="mb-2 font-serif text-xl text-stone-900 dark:text-stone-100">

@@ -28,13 +28,32 @@ const { max = 4, onlyFeatured = false } = Astro.props;
             href={getLocalizedPath(Astro.currentLocale, `clients/${client.id}`)}
             class="transtion opacity-70 grayscale duration-200 hover:opacity-100 hover:grayscale-0 active:scale-90"
           >
-            <Image
-              src={client.data.logo}
-              alt={client.data.name}
-              width={300}
-              height={100}
-              class="pointer-events-none h-12 select-none object-contain"
-            />
+            {client.data.logoDark ? (
+              <div>
+                <Image
+                  src={client.data.logoDark}
+                  alt={client.data.name}
+                  width={200}
+                  height={80}
+                  class="pointer-events-none hidden h-10 w-full select-none object-contain dark:block"
+                />
+                <Image
+                  src={client.data.logo}
+                  alt={client.data.name}
+                  width={200}
+                  height={80}
+                  class="pointer-events-none block h-10 w-full select-none object-contain dark:hidden"
+                />
+              </div>
+            ) : (
+              <Image
+                src={client.data.logo}
+                alt={client.data.name}
+                width={200}
+                height={80}
+                class="pointer-events-none h-10 w-full select-none object-contain"
+              />
+            )}
           </a>
         ))
     }

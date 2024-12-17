@@ -27,14 +27,35 @@ const portfolio = await getCollection("portfolio", ({ data }) => {
   showDescription={false}
 >
   <div class="space-y-8">
-    <div class="w-fit rounded-md bg-stone-200 p-4 dark:bg-stone-800">
-      <Image
-        src={client.data.logo}
-        alt={`${client.data.name} logo`}
-        width={300}
-        height={100}
-        class="pointer-events-none h-12 w-fit select-none"
-      />
+    <div class="w-fit rounded-md bg-stone-200 p-8 dark:bg-stone-800">
+      {
+        client.data.logoDark ? (
+          <div>
+            <Image
+              src={client.data.logoDark}
+              alt={`${client.data.name} logo`}
+              width={400}
+              height={96}
+              class="pointer-events-none hidden h-12 w-fit select-none dark:block"
+            />
+            <Image
+              src={client.data.logo}
+              alt={`${client.data.name} logo`}
+              width={400}
+              height={96}
+              class="pointer-events-none block h-12 w-fit select-none dark:hidden"
+            />
+          </div>
+        ) : (
+          <Image
+            src={client.data.logo}
+            alt={`${client.data.name} logo`}
+            width={400}
+            height={96}
+            class="pointer-events-none h-12 w-fit select-none"
+          />
+        )
+      }
     </div>
 
     <div class="space-y-2">

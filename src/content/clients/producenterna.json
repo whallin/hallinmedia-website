@@ -5,6 +5,7 @@
     "sv": "Producenterna är ett produktionsbolag inom film- och TV-produktion i norra Sverige."
   },
   "logo": "/src/assets/clients/producenterna.svg",
+  "logoDark": "/src/assets/clients/producenterna-dark.svg",
   "websiteUrl": "https://producenterna.se/",
   "socialLinks": {
     "instagram": "https://www.instagram.com/producenterna",

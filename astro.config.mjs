@@ -52,6 +52,7 @@ export default defineConfig({
 
   image: {
     domains: ["hallin.media"],
+    experimentalObjectFit: "responsive",
   },
 
   i18n: {
@@ -75,5 +76,10 @@ export default defineConfig({
         default: packageJson.version,
       }),
     },
+  },
+
+  experimental: {
+    responsiveImages: true,
+    contentIntellisense: true,
   },
 });

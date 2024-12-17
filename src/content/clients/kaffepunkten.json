@@ -4,7 +4,8 @@
     "en": "Kaffepunkten provides complete coffee solutions for companies as well as equipment, service and ingredients to hotels, cafés and restaurants throughout Sweden.",
     "sv": "Kaffepunkten tillhandahåller kompletta kaffelösningar för företag samt även utrustning, service och råvaror till hotell, caféer och restauranger över hela Sverige."
   },
-  "logo": "/src/assets/clients/kaffepunkten.png",
+  "logo": "/src/assets/clients/kaffepunkten.svg",
+  "logoDark": "/src/assets/clients/kaffepunkten-dark.svg",
   "websiteUrl": "https://kaffepunkten.se/",
   "socialLinks": {
     "instagram": "https://www.instagram.com/kaffepunkten",
