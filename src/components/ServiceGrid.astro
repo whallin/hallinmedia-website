@@ -23,8 +23,14 @@ const { max = 4, onlyFeatured = false } = Astro.props;
   >
     {
       localizedServices
-        .slice(0, max)
         .filter((service) => !onlyFeatured || service.data.featured)
+        .slice(0, max)
+        .sort((a, b) => {
+          const other = a.id.includes("other");
+          if (other && !b.id.includes("other")) return 1;
+          if (!other && b.id.includes("other")) return -1;
+          return a.data.name.localeCompare(b.data.name);
+        })
         .map((service) => (
           <div class="flex flex-col items-center gap-2 text-center sm:items-start sm:text-left">
             <Icon name={service.data.icon} class="h-8 w-8 text-live-500" />

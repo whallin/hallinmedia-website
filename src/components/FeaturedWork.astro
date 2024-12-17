@@ -30,8 +30,8 @@ const { max = 4, onlyFeatured = false } = Astro.props;
     <div class="grid w-full grid-cols-1 gap-4 sm:grid-cols-2">
       {
         portfolio
-          .slice(0, max)
           .filter((item) => !onlyFeatured || item.data.featured)
+          .slice(0, max)
           .map((item) => (
             <a
               href={getLocalizedPath(

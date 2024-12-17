@@ -20,13 +20,13 @@ const { max = 4, onlyFeatured = false } = Astro.props;
   >
     {
       clients
-        .slice(0, max)
         .filter((client) => !onlyFeatured || client.data.featured)
+        .slice(0, max)
         .sort((a, b) => a.data.name.localeCompare(b.data.name))
         .map((client) => (
           <a
             href={getLocalizedPath(Astro.currentLocale, `clients/${client.id}`)}
-            class="transtion opacity-70 duration-200 hover:opacity-100 active:scale-90"
+            class="transtion opacity-70 grayscale duration-200 hover:opacity-100 hover:grayscale-0 active:scale-90"
           >
             <Image
               src={client.data.logo}

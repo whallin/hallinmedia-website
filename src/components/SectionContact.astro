@@ -3,11 +3,16 @@ import { Icon } from "astro-icon/components";
 import { Picture } from "astro:assets";
 import { getLocalizedPath, useTranslations } from "../i18n/utils";
 import Button from "./Button.astro";
+import ImgTestimonialMio from "../assets/testimonial-mio.png";
+import ImgTestimonialJack from "../assets/testimonial-jack.png";
+import ImgTestimonialAnton from "../assets/testimonial-anton.png";
 
 const t = useTranslations(Astro.currentLocale);
 ---
 
-<div class="relative isolate overflow-hidden rounded-lg p-8 md:p-12">
+<div
+  class="relative isolate overflow-hidden rounded-lg p-8 drop-shadow-xl md:p-12"
+>
   <!-- Gradient background -->
   <div class="mesh-gradient absolute inset-0 -z-10"></div>
 
@@ -55,32 +60,32 @@ const t = useTranslations(Astro.currentLocale);
     <div class="pointer-events-none flex select-none -space-x-2">
       <Picture
         class="inline-block h-10 w-10 rounded-full ring-2 ring-live-500"
-        src="https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-        alt="Testimonial avatar"
+        src={ImgTestimonialJack}
+        alt="Jack Holmes"
         formats={["avif", "webp"]}
         width={80}
         height={80}
       />
       <Picture
         class="inline-block h-10 w-10 rounded-full ring-2 ring-live-500"
-        src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-        alt="Testimonial avatar"
+        src={ImgTestimonialAnton}
+        alt="Anton Lundin"
         formats={["avif", "webp"]}
         width={80}
         height={80}
       />
       <Picture
         class="inline-block h-10 w-10 rounded-full ring-2 ring-live-500"
-        src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-        alt="Testimonial avatar"
+        src={ImgTestimonialMio}
+        alt="Mio Bokesten"
         formats={["avif", "webp"]}
         width={80}
         height={80}
       />
     </div>
-    <p class="text-sm text-stone-600">
+    <p class="text-sm text-stone-900">
       {t("contact-section.clients")}
-      <span class="font-semibold text-stone-900"
+      <span class="font-semibold"
         ><a
           href={getLocalizedPath(Astro.currentLocale, "clients")}
           class="underline underline-offset-4 transition duration-200 hover:text-live-500 active:opacity-70 dark:hover:text-live-500"
@@ -96,42 +101,42 @@ const t = useTranslations(Astro.currentLocale);
   .mesh-gradient {
     background-image: radial-gradient(
         circle at 15% 15%,
-        hsla(0, 100%, 65%, 0.8) 0px,
+        hsla(0, 100%, 85%, 0.8) 0px,
         transparent 25%
       ),
       radial-gradient(
         circle at 85% 10%,
-        hsla(20, 100%, 70%, 0.7) 0px,
+        hsla(20, 100%, 90%, 0.7) 0px,
         transparent 25%
       ),
       radial-gradient(
         circle at 75% 45%,
-        hsla(35, 100%, 65%, 0.7) 0px,
+        hsla(35, 100%, 85%, 0.7) 0px,
         transparent 25%
       ),
       radial-gradient(
         circle at 25% 65%,
-        hsla(15, 100%, 70%, 0.7) 0px,
+        hsla(15, 100%, 90%, 0.7) 0px,
         transparent 25%
       ),
       radial-gradient(
         circle at 90% 85%,
-        hsla(45, 100%, 65%, 0.7) 0px,
+        hsla(45, 100%, 85%, 0.7) 0px,
         transparent 25%
       ),
       radial-gradient(
         circle at 8% 92%,
-        hsla(5, 100%, 70%, 0.7) 0px,
+        hsla(5, 100%, 90%, 0.7) 0px,
         transparent 25%
       ),
       radial-gradient(
         circle at 40% 35%,
-        hsla(30, 100%, 65%, 0.7) 0px,
+        hsla(30, 100%, 85%, 0.7) 0px,
         transparent 25%
       ),
       radial-gradient(
         circle at 60% 70%,
-        hsla(25, 100%, 70%, 0.7) 0px,
+        hsla(25, 100%, 90%, 0.7) 0px,
         transparent 25%
       );
     background-color: hsl(0, 0%, 100%);
