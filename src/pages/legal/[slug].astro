@@ -1,0 +1,188 @@
+---
+import { getCollection, render, type CollectionEntry } from "astro:content";
+import { getRelativeLocaleUrl } from "astro:i18n";
+import PhArrowSquareOutDuotone from "../../components/icons/PhArrowSquareOutDuotone.astro";
+import PhBuildingsDuotone from "../../components/icons/PhBuildingsDuotone.astro";
+import PhCalendarDuotone from "../../components/icons/PhCalendarDuotone.astro";
+import PhClockCounterClockwiseDuotone from "../../components/icons/PhClockCounterClockwiseDuotone.astro";
+import PhEnvelopeDuotone from "../../components/icons/PhEnvelopeDuotone.astro";
+import PhHandWavingDuotone from "../../components/icons/PhHandWavingDuotone.astro";
+import PhHeartDuotone from "../../components/icons/PhHeartDuotone.astro";
+import PhSparkleDuotone from "../../components/icons/PhSparkleDuotone.astro";
+import MainLayout from "../../layouts/MainLayout.astro";
+
+export async function getStaticPaths() {
+  const legalItems = await getCollection("legalEnCollection");
+  return legalItems.map((item) => ({
+    params: { slug: item.id },
+    props: { item, allLegalItems: legalItems },
+  }));
+}
+
+type Props = {
+  item: CollectionEntry<"legalEnCollection">;
+  allLegalItems: CollectionEntry<"legalEnCollection">[];
+};
+
+const { item, allLegalItems } = Astro.props;
+const { Content } = await render(item);
+const audienceColor =
+  item.data.audience === "B2B" ? "blue" : item.data.audience === "B2C" ? "pink" : "purple";
+---
+
+<wbr
+  class="hidden text-blue-500 text-pink-500 text-purple-500 selection:bg-blue-300 selection:bg-pink-300 selection:bg-purple-300 selection:text-blue-800 selection:text-pink-800 selection:text-purple-800"
+/>
+
+<MainLayout title={item.data.title}>
+  <article class="flex flex-col gap-8 font-serif">
+    <header class="flex flex-col gap-6 selection:bg-red-300 selection:text-red-800">
+      <span
+        class="h-fit w-fit rounded-full border border-stone-500 px-3 py-1 font-mono text-xs font-light text-stone-600"
+      >
+        {item.data.documentType}
+      </span>
+      <h1 class="text-4xl font-light break-words text-stone-900 italic sm:text-6xl">
+        {item.data.title}
+      </h1>
+    </header>
+
+    <aside
+      class="grid gap-6 rounded-lg border border-stone-200 p-6 font-mono text-sm text-stone-600"
+    >
+      <div class="grid gap-4 sm:grid-cols-2">
+        <dl class="space-y-2">
+          <div
+            class={`flex items-center gap-2 selection:bg-${audienceColor}-300 selection:text-${audienceColor}-800`}
+          >
+            <dt class="sr-only">Audience</dt>
+            <dd class="flex items-center gap-2">
+              <span class={`text-${audienceColor}-500`}>
+                {
+                  item.data.audience === "B2B" ? (
+                    <PhEnvelopeDuotone class="h-4 w-4" />
+                  ) : item.data.audience === "B2C" ? (
+                    <PhHeartDuotone class="h-4 w-4" />
+                  ) : (
+                    <PhSparkleDuotone class="h-4 w-4" />
+                  )
+                }
+              </span>
+              <p>Audience: {item.data.audience === "Both" ? "B2B + B2C" : item.data.audience}</p>
+            </dd>
+          </div>
+          {
+            item.data.jurisdiction && (
+              <div class="flex items-center gap-2 selection:bg-green-300 selection:text-green-800">
+                <dt class="sr-only">Jurisdiction</dt>
+                <dd class="flex items-center gap-2">
+                  <PhBuildingsDuotone class="h-4 w-4 text-green-500" />
+                  <p>Jurisdiction: {item.data.jurisdiction}</p>
+                </dd>
+              </div>
+            )
+          }
+        </dl>
+
+        <dl class="space-y-2 selection:bg-indigo-300 selection:text-indigo-800">
+          <div class="flex items-center gap-2">
+            <dt class="sr-only">Effective Date</dt>
+            <dd class="flex items-center gap-2">
+              <PhCalendarDuotone class="h-4 w-4 text-indigo-500" />
+              <p>Effective Date: {new Date(item.data.effectiveDate).toLocaleDateString()}</p>
+            </dd>
+          </div>
+          <div class="flex items-center gap-2">
+            <dt class="sr-only">Last Edited</dt>
+            <dd class="flex items-center gap-2">
+              <PhClockCounterClockwiseDuotone class="h-4 w-4 text-indigo-500" />
+              <p>Last Edited: {new Date(item.data.lastEdited).toLocaleDateString()}</p>
+            </dd>
+          </div>
+        </dl>
+      </div>
+
+      {
+        item.data.compliance && item.data.compliance.length > 0 && (
+          <div class="border-t border-stone-200 pt-4 selection:bg-red-300 selection:text-red-800">
+            <div class="flex flex-col justify-between gap-4 sm:flex-row sm:items-center sm:gap-0">
+              <div>
+                <h3 class="mb-2 text-xs font-medium text-stone-500">Compliance</h3>
+                <div class="flex flex-wrap gap-2">
+                  {item.data.compliance.map((compliance) => (
+                    <span class="rounded-full border border-stone-500 px-3 py-1 text-xs transition duration-200 hover:-translate-y-1 hover:border-red-500 hover:text-red-700">
+                      {compliance}
+                    </span>
+                  ))}
+                </div>
+              </div>
+              <span class="h-fit w-fit rounded-full border border-stone-500 px-3 py-1 font-mono text-xs">
+                v{item.data.version}
+              </span>
+            </div>
+          </div>
+        )
+      }
+    </aside>
+
+    <hr class="border-stone-300" />
+
+    <section
+      class="prose prose-stone mt-8 max-w-none text-sm font-light text-stone-700 selection:bg-red-300 selection:text-red-800"
+    >
+      <div>
+        <Content />
+      </div>
+    </section>
+
+    <hr class="border-stone-300" />
+
+    {
+      item.data.relatedDocuments && item.data.relatedDocuments.length > 0 && (
+        <footer class="mt-8 selection:bg-red-300 selection:text-red-800">
+          <h2 class="mb-4 text-2xl font-light text-stone-900 italic">Related Documents</h2>
+          <div class="flex w-full flex-col gap-4 sm:w-auto sm:flex-row sm:flex-wrap">
+            {item.data.relatedDocuments.map((docSlug) => {
+              const relatedDoc = allLegalItems.find((doc) => doc.id === docSlug);
+              return (
+                <a
+                  href={getRelativeLocaleUrl(`${Astro.currentLocale}`, `/legal/${docSlug}`)}
+                  class="flex w-full items-center justify-center gap-2 rounded-lg border border-stone-300 px-4 py-2 text-sm text-stone-700 transition duration-200 hover:border-red-500 hover:text-red-700 active:scale-90 sm:w-auto sm:justify-normal"
+                >
+                  {relatedDoc ? relatedDoc.data.title : `/${docSlug}`}
+                </a>
+              );
+            })}
+          </div>
+        </footer>
+      )
+    }
+
+    <section
+      class="mt-8 rounded border border-red-400 bg-amber-50 p-6 text-sm font-light text-stone-700 selection:bg-red-300 selection:text-red-800"
+    >
+      <h3 class="mb-2 text-xl text-stone-900 italic">Got any questions?</h3>
+      <p class="mb-4">
+        Did this legal document leave you with unanswered questions? That's okay; it happens from
+        time to time! You're always welcome to contact me, and I'll do my best to explain and
+        clarify any questions or concerns you may have.
+      </p>
+      <div class="flex w-full flex-col gap-2 sm:flex-row">
+        <a
+          href={getRelativeLocaleUrl(`${Astro.currentLocale}`, "contact")}
+          class="inline-flex items-center justify-center gap-2 rounded-md border bg-red-500 px-4 py-2 text-sm font-medium text-stone-50 transition duration-200 hover:bg-red-700 active:scale-95"
+        >
+          Contact me
+          <PhHandWavingDuotone class="inline-block h-4 w-4" />
+        </a>
+        <a
+          href={`mailto:william@hallin.media?subject=Legal inquiry: ${item.data.title}`}
+          class="inline-flex items-center justify-center gap-2 rounded-lg border border-red-300 px-4 py-2 transition duration-200 hover:border-red-500 hover:text-red-700 active:scale-95 sm:w-auto sm:justify-normal"
+        >
+          Send an email
+          <PhArrowSquareOutDuotone class="inline-block h-4 w-4" />
+        </a>
+      </div>
+    </section>
+  </article>
+</MainLayout>

@@ -1,0 +1,11 @@
+{
+  "name": "The Babes",
+  "description": {
+    "en": "EN",
+    "sv": "SV"
+  },
+  "logo": "/src/assets/clients/the-babes.svg",
+  "dominantColor": "#b9a152",
+  "websiteUrl": "https://24vision.se",
+  "subcontracted": true
+}

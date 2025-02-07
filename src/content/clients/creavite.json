@@ -1,0 +1,11 @@
+{
+  "name": "Creavite",
+  "description": {
+    "en": "EN",
+    "sv": "SV"
+  },
+  "logo": "/src/assets/clients/creavite.svg",
+  "dominantColor": "#0fbcf9",
+  "websiteUrl": "https://creavite.co/",
+  "subcontracted": false
+}

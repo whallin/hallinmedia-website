@@ -5,6 +5,7 @@
     "sv": "Norra Skog är en skogsägarförening som ägs av 27 000 enskilda skogsägare med ett samlat skogsinnehav på drygt 2,2 miljoner hektar skogsmark."
   },
   "logo": "/src/assets/clients/norraskog.svg",
+  "dominantColor": "#ce7f10",
   "websiteUrl": "https://www.norraskog.se/",
   "socialLinks": {
     "instagram": "https://www.instagram.com/norraskogs",

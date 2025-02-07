@@ -1,0 +1,11 @@
+{
+  "name": "Creative Kids",
+  "description": {
+    "en": "EN",
+    "sv": "SV"
+  },
+  "logo": "/src/assets/clients/creative-kids.svg",
+  "dominantColor": "#ffc80b",
+  "websiteUrl": "https://24vision.se",
+  "subcontracted": true
+}

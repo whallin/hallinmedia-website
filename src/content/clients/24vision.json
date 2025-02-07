@@ -5,6 +5,7 @@
     "sv": "24vision är ett företag som tillhandahåller videoproduktionstjänster för reklam, företag och evenemang."
   },
   "logo": "/src/assets/clients/24vision.svg",
+  "dominantColor": "#1f893c",
   "websiteUrl": "https://24vision.se",
   "socialLinks": {
     "instagram": "https://www.instagram.com/24vision.se",

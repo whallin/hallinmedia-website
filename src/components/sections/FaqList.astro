@@ -1,0 +1,107 @@
+---
+import { getCollection } from "astro:content";
+import { getRelativeLocaleUrl } from "astro:i18n";
+
+interface Props {
+  slice?: number;
+  showCategories?: boolean;
+  showFeaturedOnly?: boolean;
+}
+
+const { slice, showCategories, showFeaturedOnly } = Astro.props;
+const faqCollection = await getCollection("faqCollection");
+
+const filteredFaqCollection = faqCollection
+  .map((category) => ({
+    ...category,
+    data: {
+      ...category.data,
+      questions: showFeaturedOnly
+        ? category.data.questions.filter((q) => q.featured)
+        : category.data.questions,
+    },
+  }))
+  .filter((category) => category.data.questions.length > 0);
+
+let remainingItems = slice || Infinity;
+const displayFaqCollection = filteredFaqCollection
+  .map((category) => {
+    const questions = category.data.questions.slice(0, remainingItems);
+    remainingItems -= questions.length;
+    return {
+      ...category,
+      data: {
+        ...category.data,
+        questions,
+      },
+    };
+  })
+  .filter((category) => category.data.questions.length > 0);
+
+const translations = {
+  en: {
+    faqHeading: "FAQ",
+    partialFaqText:
+      "This is just a portion of the frequently asked questions I receive. If the list below doesn't answer your questions,",
+    checkFaqLink: "feel free to check the FAQ page.",
+  },
+  sv: {
+    faqHeading: "Vanliga frågor",
+    partialFaqText:
+      "Detta är bara en del av de vanligaste frågorna jag får. Om listan nedan inte svarar på dina frågor,",
+    checkFaqLink: "kolla gärna på FAQ-sidan.",
+  },
+};
+---
+
+<section id="faq" class="flex flex-col gap-6 selection:bg-red-300 selection:text-red-800">
+  <header class="flex flex-col gap-4">
+    <h2 class="font-serif text-3xl font-light text-stone-900 italic">
+      {translations[Astro.currentLocale].faqHeading}
+    </h2>
+    {
+      slice && displayFaqCollection.length < faqCollection.length && (
+        <p class="font-serif text-sm font-light text-stone-700">
+          {translations[Astro.currentLocale].partialFaqText}
+          <a
+            href={getRelativeLocaleUrl(`${Astro.currentLocale}`, "faq")}
+            class="text-red-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-50 hover:no-underline active:opacity-50"
+          >
+            {translations[Astro.currentLocale].checkFaqLink}
+          </a>
+        </p>
+      )
+    }
+  </header>
+  <article class="flex flex-col gap-4">
+    {
+      displayFaqCollection.map((category) => (
+        <section class="flex flex-col gap-4">
+          {showCategories && (
+            <h3 class="font-serif text-xl font-light text-stone-900 italic">
+              {category.data.categoryName[Astro.currentLocale]}
+            </h3>
+          )}
+          {category.data.questions.map((faq) => (
+            <details
+              class:list={[
+                "group rounded-sm border p-4 transition duration-200 open:border-red-400 hover:border-red-400/75 active:border-red-400/50",
+                faq.featured ? "border-red-200" : "border-stone-300",
+              ]}
+            >
+              <summary class="cursor-pointer font-serif font-light text-stone-900 italic transition duration-200 hover:opacity-75 active:opacity-50">
+                {faq.question[Astro.currentLocale]}
+                {faq.featured && <span class="ml-2 text-red-400 not-italic">★</span>}
+              </summary>
+              <hr class="my-4 border-stone-300" />
+              <div
+                class="my-2 font-serif text-sm text-stone-700"
+                set:html={`${faq.answer[Astro.currentLocale]}`}
+              />
+            </details>
+          ))}
+        </section>
+      ))
+    }
+  </article>
+</section>

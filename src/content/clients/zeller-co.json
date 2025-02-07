@@ -1,0 +1,12 @@
+{
+  "name": "Zeller & Co",
+  "description": {
+    "en": "EN",
+    "sv": "SV"
+  },
+  "logo": "/src/assets/clients/zeller-co.svg",
+  "logoDark": "/src/assets/clients/zeller-co-dark.svg",
+  "dominantColor": "#000000",
+  "websiteUrl": "https://24vision.se",
+  "subcontracted": true
+}

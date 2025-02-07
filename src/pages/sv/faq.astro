@@ -1,0 +1,31 @@
+---
+import { getRelativeLocaleUrl } from "astro:i18n";
+import PhQuestionDuotone from "../../components/icons/PhQuestionDuotone.astro";
+import FaqList from "../../components/sections/FaqList.astro";
+import MainLayout from "../../layouts/MainLayout.astro";
+---
+
+<MainLayout>
+  <article class="flex flex-col gap-12 font-serif">
+    <header
+      class="flex flex-col-reverse justify-between gap-4 selection:bg-red-300 selection:text-red-800 sm:flex-row sm:items-center"
+    >
+      <h1 class="max-w-md text-4xl font-light break-words text-stone-900 italic">Vanliga frågor</h1>
+      <PhQuestionDuotone
+        class="motion-opacity-loop-60 motion-duration-2000 motion-ease h-8 w-8 text-red-500 sm:h-12 sm:w-12"
+      />
+    </header>
+    <p
+      class="font-serif text-sm font-light text-stone-700 selection:bg-red-300 selection:text-red-800"
+    >
+      Ibland dyker det upp frågor som kan störa meningsfulla samtal. Här är några av de vanligaste
+      frågorna som jag får, tillsammans med deras svar. Förhoppningsvis kan de hjälpa dig att förstå
+      mig, mina tjänster och mitt arbete lite bättre. Om du inte får svar på din fråga är du <a
+        href={getRelativeLocaleUrl(`${Astro.currentLocale}`, "contact")}
+        class="text-red-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-50 hover:no-underline active:opacity-50"
+        >välkommen att kontakta mig</a
+      >.
+    </p>
+    <FaqList showCategories={true} />
+  </article>
+</MainLayout>

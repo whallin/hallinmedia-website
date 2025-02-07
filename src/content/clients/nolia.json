@@ -5,6 +5,7 @@
     "sv": "Nolia är en erfaren evenemangsarrangör i Norrland. Vi arrangerar mässor, konferenser, kongresser, samt hyr ut möbler och utrustning."
   },
   "logo": "/src/assets/clients/nolia.svg",
+  "dominantColor": "#eb663c",
   "websiteUrl": "https://www.nolia.se/",
   "socialLinks": {
     "instagram": "https://www.instagram.com/noliaab",

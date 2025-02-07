@@ -6,6 +6,7 @@
   },
   "logo": "/src/assets/clients/lastbilsstation.svg",
   "logoDark": "/src/assets/clients/lastbilsstation-dark.svg",
+  "dominantColor": "#73a8da",
   "websiteUrl": "https://www.lastbilsstation.se/",
   "socialLinks": {
     "facebook": "https://www.facebook.com/Lastbilsstation/",

@@ -39,9 +39,16 @@
       }
     },
     {
+      "files": ["*.svelte"],
+      "options": {
+        "parser": "svelte"
+      }
+    },
+    {
       "files": ["*.astro"],
       "options": {
-        "parser": "astro"
+        "parser": "astro",
+        "printWidth": 100
       }
     }
   ]

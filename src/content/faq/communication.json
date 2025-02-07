@@ -1,0 +1,41 @@
+{
+  "categoryName": {
+    "en": "Communication",
+    "sv": "Kommunikation"
+  },
+  "questions": [
+    {
+      "featured": false,
+      "question": {
+        "en": "What communication methods do you use?",
+        "sv": "Vilka kommunikationsmetoder använder du?"
+      },
+      "answer": {
+        "en": "I use <a href='https://client.newgent.digital/' target='_blank' class='text-red-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-50 hover:no-underline active:opacity-50'>Project.co</a> as my primary platform for project management, file sharing, and client communication.<br><br>Additional channels such as <a href='mailto:william@hallin.media' class='text-red-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-50 hover:no-underline active:opacity-50'>email</a>, <a href='https://wa.me/46706159279' target='_blank' rel='noopener noreferrer' class='text-red-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-50 hover:no-underline active:opacity-50'>WhatsApp</a>, and <strong>Google Meet</strong> are used for everyday communication and virtual meetings.",
+        "sv": "Jag använder <a href='https://client.newgent.digital/' target='_blank' class='text-red-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-50 hover:no-underline active:opacity-50'>Project.co</a> som min primära plattform för projekthantering, fildelning och kommunikation.<br><br>Andra kommunikationsmetoder som <a href='mailto:william@hallin.media' class='text-red-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-50 hover:no-underline active:opacity-50'>e-post</a>, <a href='https://wa.me/46706159279' target='_blank' rel='noopener noreferrer' class='text-red-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-50 hover:no-underline active:opacity-50'>WhatsApp</a> och <strong>Google Meet</strong> används för vardaglig kommunikation och virtuella möten."
+      }
+    },
+    {
+      "featured": false,
+      "question": {
+        "en": "How can I contact you?",
+        "sv": "Hur kan jag kontakta dig?"
+      },
+      "answer": {
+        "en": "You can reach me via <a href='mailto:william@hallin.media' class='text-red-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-50 hover:no-underline active:opacity-50'>email</a>, <a href='https://wa.me/46706159279' target='_blank' rel='noopener noreferrer' class='text-red-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-50 hover:no-underline active:opacity-50'>WhatsApp</a>, or <a href='tel:+46706159279' class='text-red-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-50 hover:no-underline active:opacity-50'>phone</a> during business hours. Virtual meetings are conducted through <strong>Google Meet</strong>.<br><br>Official correspondence address:<br><strong>NWG Digital AB</strong><br>c/o William Hallin<br>Bleckslagargatan 16<br>934 31 Kåge<br>Sweden",
+        "sv": "Du kan nå mig via <a href='mailto:william@hallin.media' class='text-red-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-50 hover:no-underline active:opacity-50'>e-post</a>, <a href='https://wa.me/46706159279' target='_blank' rel='noopener noreferrer' class='text-red-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-50 hover:no-underline active:opacity-50'>WhatsApp</a> eller <a href='tel:+46706159279' class='text-red-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-50 hover:no-underline active:opacity-50'>telefon</a> under vanliga konstorstider. Virtuella möten genomförs via <strong>Google Meet</strong>.<br><br>Officiell korrespondensadress:<br><strong>NWG Digital AB</strong><br>c/o William Hallin<br>Bleckslagargatan 16<br>934 31 Kåge<br>Sverige"
+      }
+    },
+    {
+      "featured": true,
+      "question": {
+        "en": "What is your typical response time?",
+        "sv": "Vad är din vanliga svarstid?"
+      },
+      "answer": {
+        "en": "I aim to respond to all messages within <strong>2 business hours</strong> during my support hours. Complex queries may require up to <u>24 hours</u> for a detailed response. Urgent matters can be marked with [URGENT] in the subject line, but they may incur additional surcharges during an active project.",
+        "sv": "Jag strävar efter att svara på alla meddelanden inom <strong>2 arbetsstimmar</strong> under mina supporttider. Komplexa ärenden kan kräva upp till <u>24 timmar</u> för ett utförligt svar. Akuta ärenden kan markeras med [AKUT] i ämnesraden, men de kan medföra ytterligare tilläggsavgifter under ett aktivt projekt."
+      }
+    }
+  ]
+}

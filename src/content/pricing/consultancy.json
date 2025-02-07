@@ -1,0 +1,55 @@
+{
+  "categoryName": {
+    "en": "Consultancy",
+    "sv": "Rådgivning"
+  },
+  "icon": "PhSparkleDuotone",
+  "color": "amber",
+  "services": [
+    {
+      "price": 1500,
+      "unit": {
+        "en": "SEK/hour",
+        "sv": "kr/timme"
+      },
+      "name": {
+        "en": "Creative Brainstorming",
+        "sv": "Kreativ brainstorming"
+      },
+      "description": {
+        "en": "Collaborative session to generate innovative ideas and strategies, great for start-ups and creative professionals.",
+        "sv": "Samarbetssession för att ta fram nya idéer och strategier, perfekt för nystartade företag och kreativa proffs."
+      }
+    },
+    {
+      "price": 1000,
+      "unit": {
+        "en": "SEK/session",
+        "sv": "kr/möte"
+      },
+      "name": {
+        "en": "Portfolio Review",
+        "sv": "Portföljgenomgång"
+      },
+      "description": {
+        "en": "Detailed analysis and feedback on your creative portfolio, ideal for artists and designers seeking professional growth.",
+        "sv": "Detaljerad analys och feedback på din portfölj, perfekt för designers och kreatörer som vill utvecklas professionellt."
+      }
+    },
+    {
+      "price": 3500,
+      "unit": {
+        "en": "SEK/project",
+        "sv": "kr/projekt"
+      },
+      "name": {
+        "en": "Brand Evaluation",
+        "sv": "Varumärkesutvärdering"
+      },
+      "description": {
+        "en": "Comprehensive assessment of your brand's strengths and weaknesses, perfect for businesses looking to refine their identity.",
+        "sv": "Omfattande utvärdering av ditt varumärkes styrkor och svagheter, perfekt för företag som vill förfina sin identitet."
+      }
+    }
+  ]
+}

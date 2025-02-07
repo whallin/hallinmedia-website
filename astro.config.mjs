@@ -1,20 +1,17 @@
 // @ts-check
-import { defineConfig, envField } from "astro/config";
-import { execSync } from "child_process";
-import packageJson from "./package.json";
-
-//import cloudflare from "@astrojs/cloudflare";
 import mdx from "@astrojs/mdx";
 import partytown from "@astrojs/partytown";
 import sitemap from "@astrojs/sitemap";
-import tailwind from "@astrojs/tailwind";
-import icon from "astro-icon";
+import tailwindcss from "@tailwindcss/vite";
+import { defineConfig, envField } from "astro/config";
+import { execSync } from "child_process";
+import { remarkReadingTime } from "./src/plugins/remark-reading-time.mjs";
 
 const getGitHash = () => {
   try {
     return execSync("git rev-parse --short HEAD").toString().trim();
   } catch (error) {
-    return "dev";
+    return "hallinmedia-website";
   }
 };
 
@@ -23,41 +20,65 @@ export default defineConfig({
   site: "https://hallin.media",
   trailingSlash: "ignore",
 
-  //adapter: cloudflare({
-  //  platformProxy: {
-  //    enabled: true,
-  //  },
-  //}),
-
   integrations: [
     mdx(),
-    tailwind(),
+    partytown({
+      config: {
+        forward: ["dataLayer.push", "_hsq.push"],
+      },
+    }),
     sitemap({
       i18n: {
         defaultLocale: "en",
         locales: {
-          en: "en-GB",
+          en: "en-US",
           sv: "sv-SE",
         },
       },
     }),
-    icon(),
-    partytown(),
   ],
 
+  compressHTML: true,
+  scopedStyleStrategy: "attribute",
+  security: {
+    checkOrigin: true,
+  },
+  build: {
+    inlineStylesheets: "auto",
+  },
   prefetch: {
     prefetchAll: true,
     defaultStrategy: "viewport",
   },
-
   image: {
     domains: ["hallin.media"],
-    experimentalObjectFit: "responsive",
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "hallin.media",
+      },
+    ],
+  },
+
+  markdown: {
+    shikiConfig: {
+      themes: {
+        light: "github-light",
+        dark: "github-dark",
+      },
+      wrap: true,
+    },
+    gfm: false,
+    smartypants: false,
+    remarkPlugins: [remarkReadingTime],
   },
 
   i18n: {
     defaultLocale: "en",
     locales: ["en", "sv"],
+    fallback: {
+      sv: "en",
+    },
     routing: {
       prefixDefaultLocale: false,
     },
@@ -70,16 +91,10 @@ export default defineConfig({
         access: "public",
         default: getGitHash(),
       }),
-      PACKAGE_VERSION: envField.string({
-        context: "client",
-        access: "public",
-        default: packageJson.version,
-      }),
     },
   },
 
-  experimental: {
-    responsiveImages: true,
-    contentIntellisense: true,
+  vite: {
+    plugins: [tailwindcss()],
   },
 });

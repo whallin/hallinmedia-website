@@ -1,0 +1,31 @@
+---
+import { getRelativeLocaleUrl } from "astro:i18n";
+import PhArrowSquareOutDuotone from "../icons/PhArrowSquareOutDuotone.astro";
+import PhHandWavingDuotone from "../icons/PhHandWavingDuotone.astro";
+---
+
+<section
+  class="mt-8 rounded border border-red-400 bg-amber-50 p-6 text-sm font-light text-stone-700 selection:bg-red-300 selection:text-red-800"
+>
+  <h3 class="mb-2 text-xl text-stone-900 italic">Ready to move forward?</h3>
+  <p class="mb-4">
+    Did this project pique your interest? I'd love to hear from you and be a part of your next
+    project! Send me a message today, and let's start discussing what my services can offer you.
+  </p>
+  <div class="flex w-full flex-col gap-2 sm:flex-row">
+    <a
+      href={getRelativeLocaleUrl(`${Astro.currentLocale}`, "contact")}
+      class="inline-flex items-center justify-center gap-2 rounded-md border bg-red-500 px-4 py-2 text-sm font-medium text-stone-50 transition duration-200 hover:bg-red-700 active:scale-95"
+    >
+      Get in Touch
+      <PhHandWavingDuotone class="inline-block h-4 w-4" />
+    </a>
+    <a
+      href={getRelativeLocaleUrl(`${Astro.currentLocale}`, "contact#pricing")}
+      class="inline-flex items-center justify-center gap-2 rounded-lg border border-red-300 px-4 py-2 transition duration-200 hover:border-red-500 hover:text-red-700 active:scale-95 sm:w-auto sm:justify-normal"
+    >
+      View pricing
+      <PhArrowSquareOutDuotone class="inline-block h-4 w-4" />
+    </a>
+  </div>
+</section>

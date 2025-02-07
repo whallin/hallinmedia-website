@@ -5,6 +5,7 @@
     "sv": "ExtenseIT är ett företag som tillhandahåller IT-tjänster för små och medelstora företag."
   },
   "logo": "/src/assets/clients/extenseit.svg",
+  "dominantColor": "#2f84ff",
   "websiteUrl": "https://extenseit.se/",
   "socialLinks": {
     "instagram": "https://www.instagram.com/extenseit",

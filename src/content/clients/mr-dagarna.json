@@ -5,6 +5,7 @@
     "sv": "Mänskliga rättighetsdagarna är nordens största forum för mänsikliga rättigheter."
   },
   "logo": "/src/assets/clients/mr-dagarna.svg",
+  "dominantColor": "#970e7e",
   "websiteUrl": "https://www.mrdagarna.se/",
   "socialLinks": {
     "facebook": "https://www.facebook.com/mrdagarna/",

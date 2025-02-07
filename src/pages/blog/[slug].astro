@@ -1,0 +1,191 @@
+---
+import { Picture } from "astro:assets";
+import { getCollection, render, type CollectionEntry } from "astro:content";
+import { getRelativeLocaleUrl } from "astro:i18n";
+import PhArrowSquareOutDuotone from "../../components/icons/PhArrowSquareOutDuotone.astro";
+import PhCalendarDuotone from "../../components/icons/PhCalendarDuotone.astro";
+import PhClockCounterClockwiseDuotone from "../../components/icons/PhClockCounterClockwiseDuotone.astro";
+import PhNewspaperDuotone from "../../components/icons/PhNewspaperDuotone.astro";
+import PhTimerDuotone from "../../components/icons/PhTimerDuotone.astro";
+import PhUserDuotone from "../../components/icons/PhUserDuotone.astro";
+import MainLayout from "../../layouts/MainLayout.astro";
+
+export async function getStaticPaths() {
+  const blogPosts = await getCollection("blogEnCollection");
+  return blogPosts.map((post) => ({
+    params: { slug: post.id },
+    props: { post, allPosts: blogPosts },
+  }));
+}
+
+type Props = {
+  post: CollectionEntry<"blogEnCollection">;
+  allPosts: CollectionEntry<"blogEnCollection">[];
+};
+
+const { post, allPosts } = Astro.props;
+const { Content, remarkPluginFrontmatter } = await render(post);
+const categoryColor = {
+  Design: "sky",
+  Photography: "fuchsia",
+  Video: "rose",
+  Marketing: "emerald",
+  Technology: "amber",
+  Business: "indigo",
+  Tutorials: "pink",
+  Insights: "teal",
+}[post.data.category];
+---
+
+<wbr
+  class="hidden hover:border-amber-500 hover:border-emerald-500 hover:border-fuchsia-500 hover:border-indigo-500 hover:border-pink-500 hover:border-rose-500 hover:border-sky-500 hover:border-teal-500 hover:text-amber-700 hover:text-emerald-700 hover:text-fuchsia-700 hover:text-indigo-700 hover:text-pink-700 hover:text-rose-700 hover:text-sky-700 hover:text-teal-700"
+/>
+
+<MainLayout title={post.data.title} description={post.data.description}>
+  <article class="flex flex-col gap-8 font-serif">
+    <header class="flex flex-col gap-6 selection:bg-red-300 selection:text-red-800">
+      <span
+        class={`h-fit w-fit rounded-full border border-stone-500 px-3 py-1 font-mono text-xs font-light text-stone-600 transition duration-200 hover:-translate-y-1 hover:border-${categoryColor}-500 hover:text-${categoryColor}-700`}
+      >
+        {post.data.category}
+      </span>
+      <h1 class="text-4xl font-light break-words text-stone-900 italic sm:text-6xl">
+        {post.data.title}
+      </h1>
+    </header>
+
+    {
+      post.data.featuredImage && (
+        <Picture
+          src={post.data.featuredImage}
+          alt={post.data.featuredImageAlt}
+          widths={[320, 480, 768]}
+          formats={["avif", "webp", "jpeg"]}
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+          class={`hover:border-${categoryColor}-500 aspect-video w-full rounded-lg border-2 border-stone-300 object-cover transition duration-200 select-none hover:-translate-y-1 hover:drop-shadow-lg`}
+        />
+      )
+    }
+
+    <aside
+      class="grid gap-6 rounded-lg border border-stone-200 p-6 font-mono text-sm text-stone-600"
+    >
+      <div class="grid gap-4 sm:grid-cols-2">
+        <dl class="space-y-2">
+          <div class="flex items-center gap-2 selection:bg-sky-300 selection:text-sky-800">
+            <dt class="sr-only">Published Date</dt>
+            <dd class="flex items-center gap-2">
+              <PhCalendarDuotone class="h-4 w-4 text-sky-500" />
+              <p>Published: {new Date(post.data.publishedDate).toLocaleDateString()}</p>
+            </dd>
+          </div>
+          {
+            post.data.updatedDate && (
+              <div class="flex items-center gap-2 selection:bg-amber-300 selection:text-amber-800">
+                <dt class="sr-only">Last Updated</dt>
+                <dd class="flex items-center gap-2">
+                  <PhClockCounterClockwiseDuotone class="h-4 w-4 text-amber-500" />
+                  <p>Updated: {new Date(post.data.updatedDate).toLocaleDateString()}</p>
+                </dd>
+              </div>
+            )
+          }
+        </dl>
+
+        <dl class="space-y-2">
+          <div class="flex items-center gap-2 selection:bg-emerald-300 selection:text-emerald-800">
+            <dt class="sr-only">Author</dt>
+            <dd class="flex items-center gap-2">
+              <PhUserDuotone class="h-4 w-4 text-emerald-500" />
+              <p>By {post.data.author}</p>
+            </dd>
+          </div>
+          <div class="flex items-center gap-2 selection:bg-fuchsia-300 selection:text-fuchsia-800">
+            <dt class="sr-only">Reading Time</dt>
+            <dd class="flex items-center gap-2">
+              <PhTimerDuotone class="h-4 w-4 text-fuchsia-500" />
+              <p>{Math.ceil(remarkPluginFrontmatter.readingTime)} min read</p>
+            </dd>
+          </div>
+        </dl>
+      </div>
+
+      {
+        post.data.tags && post.data.tags.length > 0 && (
+          <div class="border-t border-stone-200 pt-4 selection:bg-red-300 selection:text-red-800">
+            <h3 class="mb-2 text-xs font-medium text-stone-500">Tags</h3>
+            <div class="flex flex-wrap gap-2">
+              {post.data.tags.map((tag) => (
+                <span
+                  class={`hover:border-${categoryColor}-500 hover:text-${categoryColor}-700 rounded-full border border-stone-500 px-3 py-1 text-xs transition duration-200 hover:-translate-y-1`}
+                >
+                  #{tag}
+                </span>
+              ))}
+            </div>
+          </div>
+        )
+      }
+    </aside>
+
+    <section
+      class="prose prose-stone my-8 max-w-none text-sm font-light text-stone-700 selection:bg-red-300 selection:text-red-800"
+    >
+      <Content />
+    </section>
+
+    <hr class="border-stone-300" />
+
+    {
+      post.data.relatedPosts && post.data.relatedPosts.length > 0 && (
+        <footer class="mt-8 selection:bg-red-300 selection:text-red-800">
+          <h2 class="mb-4 text-2xl font-light text-stone-900 italic">Related Posts</h2>
+          <div class="flex w-full flex-col gap-4 sm:w-auto sm:flex-row sm:flex-wrap">
+            {post.data.relatedPosts.map((postSlug) => {
+              const relatedPost = allPosts.find((p) => p.id === postSlug);
+              return (
+                <a
+                  href={getRelativeLocaleUrl(`${Astro.currentLocale}`, `/blog/${postSlug}`)}
+                  class={`hover:border-${categoryColor}-500 hover:text-${categoryColor}-700 flex w-full items-center justify-center gap-2 rounded-lg border border-stone-300 px-4 py-2 text-sm text-stone-700 transition duration-200 active:scale-90 sm:w-auto sm:justify-normal`}
+                >
+                  {relatedPost ? relatedPost.data.title : `/${postSlug}`}
+                </a>
+              );
+            })}
+          </div>
+        </footer>
+      )
+    }
+
+    <section
+      class="mt-8 rounded border border-red-400 bg-amber-50 p-6 text-sm font-light text-stone-700 selection:bg-red-300 selection:text-red-800"
+    >
+      <h3 class="mb-2 text-xl text-stone-900 italic">Enjoyed this post?</h3>
+      <p class="mb-4">
+        If you found this article helpful or interesting, consider sharing it with others who might
+        benefit from it. You can also explore more content in the {post.data.category} category.
+      </p>
+      <div class="flex w-full flex-col gap-2 sm:flex-row">
+        <a
+          href={getRelativeLocaleUrl(
+            `${Astro.currentLocale}`,
+            `/blog?category=${post.data.category.toLowerCase()}`
+          )}
+          class="inline-flex items-center justify-center gap-2 rounded-md border bg-red-500 px-4 py-2 text-sm font-medium text-stone-50 transition duration-200 hover:bg-red-700 active:scale-95"
+        >
+          <PhNewspaperDuotone class="inline-block h-4 w-4" />
+          More {post.data.category} Posts
+        </a>
+        <a
+          href={`https://x.com/intent/tweet?text=${encodeURIComponent(`Check out this post: ${post.data.title} by @hallinmedia`)}`}
+          class="inline-flex items-center justify-center gap-2 rounded-md border border-stone-300 px-4 py-2 text-sm font-medium text-stone-700 transition duration-200 hover:border-red-500 hover:text-red-700 active:scale-95"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Share on X
+          <PhArrowSquareOutDuotone class="inline-block h-4 w-4" />
+        </a>
+      </div>
+    </section>
+  </article></MainLayout
+>

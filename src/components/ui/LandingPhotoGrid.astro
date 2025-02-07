@@ -1,0 +1,85 @@
+---
+import { Picture } from "astro:assets";
+import Img1 from "../../assets/images/landing-photo-grid/1.jpg";
+import Img2 from "../../assets/images/landing-photo-grid/2.jpg";
+import Img3 from "../../assets/images/landing-photo-grid/3.jpg";
+import Img4 from "../../assets/images/landing-photo-grid/4.jpg";
+import Img5 from "../../assets/images/landing-photo-grid/5.jpg";
+
+const images = [
+  {
+    src: Img3,
+    alt: {
+      en: "A young cinematographer, Tim Svanborg",
+      sv: "En ung filmfotograf, Tim Svanborg",
+    },
+    specs: "ISO 6400, 1/1250s, f/5.6",
+    hoverColor: "#d86640",
+    colSpan: "",
+  },
+  {
+    src: Img1,
+    alt: {
+      en: "Swedish singer, Cimberly Wanyonyi",
+      sv: "Svensk sångerska, Cimberly Wanyonyi",
+    },
+    specs: "ISO 1250, 1/100s, f/5.6",
+    hoverColor: "#777777",
+    colSpan: "sm:col-span-2",
+  },
+  {
+    src: Img2,
+    alt: {
+      en: "Employee of the Swedish government agency, Diskrimineringsombudsmannen",
+      sv: "Anställd på den svenska myndigheten Diskrimineringsombudsmannen",
+    },
+    specs: "ISO 1250, 1/80s, f/6.3",
+    hoverColor: "#c37b2f",
+    colSpan: "sm:col-span-2",
+  },
+  {
+    src: Img4,
+    alt: {
+      en: "A lead singer at the Swedish concert, Attentatfest Umeå",
+      sv: "En sångerska på den svenska konserten, Attentatfest Umeå",
+    },
+    specs: "ISO 12800, 1/320s, f/5.6",
+    hoverColor: "#b85519",
+    colSpan: "",
+  },
+  {
+    src: Img5,
+    alt: {
+      en: "Skellefteå river from the city center",
+      sv: "Skellefteå älv från stadens centrum",
+    },
+    specs: "ISO 640, 1/50s, f/5.6",
+    hoverColor: "#a31e27",
+    colSpan: "sm:col-span-3",
+  },
+];
+---
+
+<figure class="grid gap-2 sm:grid-cols-3">
+  {
+    images.map((image) => (
+      <figure
+        class={`group flex flex-col items-center ${image.colSpan} transition duration-200 hover:-translate-y-1`}
+      >
+        <div class="relative h-72 w-full" style={`--border-color: ${image.hoverColor}`}>
+          <Picture
+            src={image.src}
+            alt={image.alt[Astro.currentLocale]}
+            widths={[320, 480, 768]}
+            formats={["avif", "webp", "jpeg"]}
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+            class="h-full w-full rounded-lg border-2 border-stone-300 object-cover transition duration-200 select-none group-hover:border-[var(--border-color)] group-hover:drop-shadow-lg"
+          />
+          <figcaption class="absolute bottom-4 left-4 z-10 rounded-full border border-stone-500 bg-amber-50 px-2 py-1 text-xs font-light text-stone-700 transition duration-200 group-hover:border-[var(--border-color)] group-hover:text-[var(--border-color)] selection:bg-[var(--border-color)] selection:text-[color-mix(in_oklab,var(--border-color),white_70%)]">
+            {image.specs}
+          </figcaption>
+        </div>
+      </figure>
+    ))
+  }
+</figure>

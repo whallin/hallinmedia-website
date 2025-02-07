@@ -1,0 +1,77 @@
+---
+import { Image } from "astro:assets";
+
+const translations = {
+  en: {
+    last_played: "Last played song:",
+    album_cover: "Album cover of the last played song",
+  },
+  sv: {
+    last_played: "Senast spelad låt:",
+    album_cover: "Omslag till den senast spelade låten",
+  },
+};
+---
+
+<a
+  id="s-link"
+  href="#"
+  target="_blank"
+  class="group relative flex w-fit items-center gap-3 text-xs font-light text-stone-600 active:opacity-50"
+>
+  <figure
+    class="invisible absolute -top-8 left-1/2 z-10 -translate-x-1/2 rounded bg-stone-800 px-2 py-1 text-xs whitespace-nowrap text-stone-50 opacity-0 transition duration-200 group-hover:visible group-hover:opacity-100"
+  >
+    <div class="flex items-center gap-2">
+      <time class="flex flex-col items-center">
+        <span class="text-[0.6rem] text-stone-400">Duration</span>
+        <span id="s-duration">n/a</span>
+      </time>
+      <time class="flex flex-col items-center">
+        <span class="text-[0.6rem] text-stone-400">Played when?</span>
+        <span id="s-played">n/a</span>
+      </time>
+    </div>
+  </figure>
+  <Image
+    id="s-cover"
+    src="https://api.dicebear.com/9.x/glass/svg?seed=albumcover"
+    alt={translations[Astro.currentLocale].album_cover}
+    width="32"
+    height="32"
+    class="rounded-full border border-stone-200 transition duration-200 select-none group-hover:shadow-lg group-hover:shadow-green-600/40 motion-safe:animate-[spin_10s_linear_infinite]"
+  />
+  <article class="flex flex-col gap-1 selection:bg-green-300 selection:text-green-700">
+    <p class="font-serif">{translations[Astro.currentLocale].last_played}</p>
+    <address
+      class="w-fit font-mono text-green-600 underline decoration-green-600 decoration-dashed decoration-from-font underline-offset-4 group-hover:bg-green-600 group-hover:text-stone-50 group-hover:no-underline"
+    >
+      <span id="s-artist">Artist</span> - <span id="s-track">Track</span>
+    </address>
+  </article>
+</a>
+
+<script>
+  const spotifyPlaying = async () => {
+    const response = await fetch("https://spotify-last-played.hallin.media/");
+    const data = await response.json();
+
+    document.getElementById("s-track")!.textContent = data.name;
+    document.getElementById("s-artist")!.textContent = data.artist;
+    (document.getElementById("s-cover") as HTMLImageElement).src = data.album_cover;
+    (document.getElementById("s-link") as HTMLAnchorElement).href = data.url;
+
+    document.getElementById("s-duration")!.textContent =
+      `${new Date(data.duration_ms).getMinutes()}:${String(new Date(data.duration_ms).getSeconds()).padStart(2, "0")}`;
+
+    document.getElementById("s-played")!.textContent = new Date(data.played_at).toLocaleString([], {
+      year: "numeric",
+      month: "numeric",
+      day: "numeric",
+      hour: "2-digit",
+      minute: "2-digit",
+    });
+  };
+
+  spotifyPlaying();
+</script>

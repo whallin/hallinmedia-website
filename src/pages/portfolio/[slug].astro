@@ -1,0 +1,201 @@
+---
+import { Image, Picture } from "astro:assets";
+import { getCollection, getEntry, render, type CollectionEntry } from "astro:content";
+import { getRelativeLocaleUrl } from "astro:i18n";
+import PhArrowSquareOutDuotone from "../../components/icons/PhArrowSquareOutDuotone.astro";
+import PhEnvelopeDuotone from "../../components/icons/PhEnvelopeDuotone.astro";
+import PhPaletteDuotone from "../../components/icons/PhPaletteDuotone.astro";
+import PhQuestionDuotone from "../../components/icons/PhQuestionDuotone.astro";
+import PhSparkleDuotone from "../../components/icons/PhSparkleDuotone.astro";
+import CtaBanner from "../../components/sections/CtaBanner.astro";
+import MainLayout from "../../layouts/MainLayout.astro";
+
+export async function getStaticPaths() {
+  const portfolioItems = await getCollection("portfolioEnCollection");
+  return portfolioItems.map((item) => ({
+    params: { slug: item.id },
+    props: { item },
+  }));
+}
+
+type Props = {
+  item: CollectionEntry<"portfolioEnCollection">;
+};
+
+const { item } = Astro.props;
+const client = await getEntry("clientsCollection", item.data.client.id);
+const { Content } = await render(item);
+const dominantColor = client?.data.dominantColor || "oklch(0.637 0.237 25.331)";
+---
+
+<MainLayout title="">
+  <article class="flex flex-col gap-8 font-serif" style={`--dominant-color: ${dominantColor}`}>
+    <header class="flex flex-col gap-2">
+      <div
+        class="flex flex-col-reverse gap-4 selection:bg-red-300 selection:text-red-800 sm:flex-row sm:items-center sm:justify-between"
+      >
+        <h1 class="max-w-md text-4xl font-light break-words text-stone-900 italic sm:text-6xl">
+          {item.data.title}
+        </h1>
+        <time
+          class="h-fit w-fit rounded-full border border-stone-500 px-3 py-1 font-mono text-xs font-light text-stone-600"
+          >{item.data.category}</time
+        >
+      </div>
+
+      {
+        item.data.featuredImage && (
+          <Picture
+            src={item.data.featuredImage}
+            alt={item.data.featuredImageAlt || item.data.title}
+            widths={[320, 480, 768]}
+            formats={["avif", "webp", "jpeg"]}
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+            class="mt-6 mb-4 aspect-video h-full w-full rounded-lg border-2 border-stone-300 object-cover transition duration-200 select-none hover:-translate-y-1 hover:border-[var(--dominant-color)] hover:drop-shadow-lg sm:mt-12"
+          />
+        )
+      }
+
+      <nav class="flex items-center justify-between gap-4">
+        <ul class="flex h-fit flex-wrap gap-2 font-mono text-xs font-light text-stone-600">
+          {
+            item.data.tags.map((tag) => (
+              <li class="rounded-full border border-stone-500 bg-amber-50 px-3 py-1 transition duration-200 selection:bg-[var(--dominant-color)] selection:text-[color-mix(in_oklab,var(--dominant-color),white_70%)] hover:-translate-y-1 hover:border-[var(--dominant-color)] hover:text-[var(--dominant-color)] hover:drop-shadow-md">
+                #{tag}
+              </li>
+            ))
+          }
+        </ul>
+
+        {
+          client?.data?.logo && (
+            <div class="flex h-8 w-32 justify-end">
+              <a
+                href={getRelativeLocaleUrl(`${Astro.currentLocale}`, `/clients/${client.id}`)}
+                class="block h-full transition duration-200 hover:opacity-70 active:scale-95"
+              >
+                <Image
+                  src={client.data.logo}
+                  alt={`${client.data.name} logo`}
+                  width="128"
+                  height="64"
+                  class="h-full w-auto object-contain select-none"
+                />
+              </a>
+            </div>
+          )
+        }
+      </nav>
+    </header>
+
+    <p class="text-sm font-light text-stone-700 selection:bg-red-300 selection:text-red-800">
+      {item.data.description}
+    </p>
+
+    {
+      item.data.type === "case-study" && (
+        <>
+          <hr class="border-stone-300" />
+          <div class="flex flex-col gap-6">
+            <div class="grid gap-6 sm:grid-cols-2">
+              <section class="flex flex-col gap-2 selection:bg-red-300 selection:text-red-800">
+                <h2 class="flex items-center gap-2 text-2xl font-light text-stone-900 italic">
+                  <PhQuestionDuotone class="h-6 w-6 text-red-500" />
+                  Problem
+                </h2>
+                <p class="text-sm font-light text-stone-700">{item.data.content?.problem}</p>
+              </section>
+              <section class="flex flex-col gap-2 selection:bg-green-300 selection:text-green-800">
+                <h2 class="flex items-center gap-2 text-2xl font-light text-stone-900 italic">
+                  <PhSparkleDuotone class="mr-1 inline-block h-6 w-6 text-green-500" />
+                  Solution
+                </h2>
+                <p class="text-sm font-light text-stone-700">{item.data.content?.solution}</p>
+              </section>
+
+              {item.data.content?.process && (
+                <section class="flex flex-col gap-2 selection:bg-amber-300 selection:text-amber-800">
+                  <h2 class="flex items-center gap-2 text-2xl font-light text-stone-900 italic">
+                    <PhPaletteDuotone class="mr-1 inline-block h-6 w-6 text-amber-500" />
+                    Process
+                  </h2>
+                  <p class="text-sm font-light text-stone-700">{item.data.content.process}</p>
+                </section>
+              )}
+
+              {item.data.content?.results && (
+                <section class="flex flex-col gap-2 selection:bg-blue-300 selection:text-blue-800">
+                  <h2 class="flex items-center gap-2 text-2xl font-light text-stone-900 italic">
+                    <PhEnvelopeDuotone class="mr-1 inline h-6 w-6 text-blue-500" />
+                    Results
+                  </h2>
+                  <p class="text-sm font-light text-stone-700">{item.data.content.results}</p>
+                </section>
+              )}
+            </div>
+
+            <div class="grid auto-rows-[minmax(200px,1fr)] grid-cols-1 gap-4 sm:grid-cols-3">
+              {item.data.content?.images?.map((image, index) => (
+                <div
+                  class={`relative overflow-hidden rounded-lg border-2 border-stone-300 transition duration-200 hover:-translate-y-1 hover:border-[var(--dominant-color)] hover:drop-shadow-lg ${
+                    index === 0 ? "sm:col-span-2 lg:col-span-2 lg:row-span-2" : ""
+                  }`}
+                >
+                  <Picture
+                    src={image}
+                    alt={`Process image ${index + 1}`}
+                    widths={[320, 480, 768]}
+                    formats={["avif", "webp", "jpeg"]}
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    class="absolute inset-0 h-full w-full object-cover select-none"
+                  />
+                </div>
+              ))}
+            </div>
+
+            {item.data.content?.videos?.map((video, index) => (
+              <div class="my-2 aspect-video w-full transition duration-200 select-none hover:-translate-y-1 hover:drop-shadow-lg sm:my-4">
+                <iframe
+                  src={video}
+                  class="h-full w-full rounded-lg border-2 border-stone-300 transition duration-200 hover:border-[var(--dominant-color)]"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                />
+              </div>
+            ))}
+          </div>
+        </>
+      )
+    }
+
+    <hr class="border-stone-300" />
+    <section class="mt-8 selection:bg-red-300 selection:text-red-800">
+      <div class="prose prose-stone max-w-none text-sm font-light text-stone-700">
+        <Content />
+      </div>
+    </section>
+
+    <aside class="mt-8 selection:bg-red-300 selection:text-red-800">
+      <h2 class="mb-4 text-2xl font-light text-stone-900 italic">External Resources</h2>
+      <ul class="flex flex-wrap gap-4">
+        {
+          item.data.links?.map((link) => (
+            <li>
+              <a
+                href={link.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="flex w-full items-center justify-center gap-2 rounded-lg border border-stone-300 px-4 py-2 text-sm text-stone-700 transition duration-200 hover:border-red-500 hover:text-red-700 active:scale-90 sm:w-auto sm:justify-normal"
+              >
+                <PhArrowSquareOutDuotone class="inline-block h-4 w-4" />
+                {link.label}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </aside>
+
+    <CtaBanner />
+  </article>
+</MainLayout>

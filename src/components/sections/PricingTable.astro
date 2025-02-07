@@ -1,0 +1,100 @@
+---
+import { getCollection } from "astro:content";
+import IconPhCameraDuotone from "../icons/PhCameraDuotone.astro";
+import IconPhNewspaperDuotone from "../icons/PhNewspaperDuotone.astro";
+import IconPhPaletteDuotone from "../icons/PhPaletteDuotone.astro";
+import IconPhSparkleDuotone from "../icons/PhSparkleDuotone.astro";
+
+const iconComponents = {
+  PhCameraDuotone: IconPhCameraDuotone,
+  PhNewspaperDuotone: IconPhNewspaperDuotone,
+  PhPaletteDuotone: IconPhPaletteDuotone,
+  PhSparkleDuotone: IconPhSparkleDuotone,
+};
+
+const pricingCollection = await getCollection("pricingCollection");
+
+const translations = {
+  en: {
+    heading: "Pricing",
+    description:
+      "My pricing table is a fantastic starting point for getting a feel for my charges, but it's not fixed. I always take the time to gather all the necessary details about your project so I can offer you a range of quotes and options that best suit you and your business.",
+  },
+  sv: {
+    heading: "Priser",
+    description:
+      "Min prislista är en bra utgångspunkt för att få en bild av mina priser, men den är inte definitiv. Jag tar mig alltid tid att samla in all nödvändig information om ditt projekt så att jag kan erbjuda dig en rad olika offerter och valmöjligheter som passar dig och ditt företag allra bäst.",
+  },
+};
+---
+
+<wbr class="hidden text-green-500 selection:bg-green-300 selection:text-green-700" />
+
+<section id="pricing" class="flex flex-col gap-6">
+  <header class="flex flex-col gap-4 selection:bg-red-300 selection:text-red-800">
+    <h2 class="font-serif text-3xl font-light text-stone-900 italic">
+      {translations[Astro.currentLocale].heading}
+    </h2>
+    <p class="font-serif text-sm font-light text-stone-700">
+      {translations[Astro.currentLocale].description}
+    </p>
+  </header>
+  <div class="grid gap-12 sm:grid-cols-2">
+    {
+      [...pricingCollection]
+        .sort((a, b) => {
+          // Ensure photography comes first
+          if (a.data.categoryName.en === "Photography & Video") return -1;
+          if (b.data.categoryName.en === "Photography & Video") return 1;
+          // Ensure digital design comes second
+          if (a.data.categoryName.en === "Digital Design & Strategy") return -1;
+          if (b.data.categoryName.en === "Digital Design & Strategy") return 1;
+          // Keep original order for others
+          return 0;
+        })
+        .map((category) => {
+          const IconComponent = iconComponents[category.data.icon];
+          return (
+            <article
+              class={`flex flex-col gap-2 selection:bg-${category.data.color}-300 selection:text-${category.data.color}-700`}
+            >
+              <h3 class="flex items-center gap-2 text-lg font-light text-stone-900 italic">
+                <IconComponent class={`h-6 w-6 text-${category.data.color}-500`} />
+                {category.data.categoryName[Astro.currentLocale]}
+              </h3>
+              <hr class="border-stone-300" />
+              {category.data.services.map((service) => (
+                <figure class="group relative flex cursor-help items-center justify-between">
+                  <figcaption
+                    class={`peer text-sm font-light text-stone-700 underline decoration-stone-300 decoration-dashed decoration-from-font underline-offset-4 transition group-hover:text-stone-900 group-hover:decoration-stone-900 has-[div.opacity-100]:text-stone-900 has-[div.opacity-100]:decoration-stone-900`}
+                  >
+                    {service.name[Astro.currentLocale]}
+                    <div class="pointer-events-none absolute z-10 mt-2 w-64 rounded-sm bg-stone-800 px-2 py-1 text-xs font-light text-white opacity-0 transition select-none group-hover:opacity-100 peer-hover:opacity-100">
+                      {service.description[Astro.currentLocale]}
+                    </div>
+                  </figcaption>
+                  <span class="text-end font-mono text-sm font-light text-stone-700">
+                    {service.price} {service.unit[Astro.currentLocale]}
+                  </span>
+                </figure>
+              ))}
+            </article>
+          );
+        })
+    }
+  </div>
+</section>
+
+<script>
+  document.querySelectorAll(".group").forEach((element) => {
+    element.addEventListener("click", (e) => {
+      if (!e.target.closest('div[class*="absolute"]')) {
+        document.querySelectorAll('div[class*="absolute"]').forEach((tooltip) => {
+          tooltip !== element.querySelector('div[class*="absolute"]') &&
+            tooltip.classList.remove("opacity-100");
+        });
+        element.querySelector('div[class*="absolute"]')?.classList.toggle("opacity-100");
+      }
+    });
+  });
+</script>

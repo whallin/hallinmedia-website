@@ -1,0 +1,11 @@
+{
+  "name": "Fiscal Year",
+  "description": {
+    "en": "EN",
+    "sv": "SV"
+  },
+  "logo": "/src/assets/clients/fiscal-year.svg",
+  "dominantColor": "#5d5d5d",
+  "websiteUrl": "https://24vision.se",
+  "subcontracted": true
+}

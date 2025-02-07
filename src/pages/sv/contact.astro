@@ -1,146 +1,126 @@
 ---
-import { Icon } from "astro-icon/components";
-import { Picture } from "astro:assets";
-import ImgContact from "../../assets/contactimg.jpeg";
-import { useTranslations } from "../../i18n/utils";
-import BaseLayout from "../../layouts/BaseLayout.astro";
-
-const t = useTranslations(Astro.currentLocale);
-
-type ContactInfo = {
-  name: string;
-  icon: string;
-  href: string;
-  hrefText: string;
-};
-
-const contactMethods: ContactInfo[] = [
-  {
-    name: "CV",
-    icon: "ph:read-cv-logo-duotone",
-    href: "https://hallin.media/william-hallin-cv-2024.pdf",
-    hrefText: "Se PDF",
-  },
-  {
-    name: "E-post",
-    icon: "ph:envelope-duotone",
-    href: "mailto:william@hallin.media",
-    hrefText: "william@hallin.media",
-  },
-  {
-    name: "Telefon",
-    icon: "ph:phone-duotone",
-    href: "tel:+46706159279",
-    hrefText: "+46 70-615 9279",
-  },
-  {
-    name: "Instagram",
-    icon: "ph:instagram-logo-duotone",
-    href: "https://www.instagram.com/williamhallinn/",
-    hrefText: "@williamhallinn",
-  },
-  {
-    name: "LinkedIn",
-    icon: "ph:linkedin-logo-duotone",
-    href: "https://www.linkedin.com/in/whallin/",
-    hrefText: "William Hallin",
-  },
-];
+import { Image } from "astro:assets";
+import { getRelativeLocaleUrl } from "astro:i18n";
+import ImgAvatar from "../../assets/images/avatar.jpeg";
+import FaqList from "../../components/sections/FaqList.astro";
+import IconPhEnvelopeDuotone from "../../components/icons/PhEnvelopeDuotone.astro";
+import IconPhHandPeaceDuotone from "../../components/icons/PhHandPeaceDuotone.astro";
+import IconPhLinkedinLogoDuotone from "../../components/icons/PhLinkedinLogoDuotone.astro";
+import IconPhPhoneCallDuotone from "../../components/icons/PhPhoneCallDuotone.astro";
+import PricingTable from "../../components/sections/PricingTable.astro";
+import MainLayout from "../../layouts/MainLayout.astro";
 ---
 
-<BaseLayout
-  title={t("nav.contact")}
-  description="William Hallin är frilansfotograf och digital designer med bas i Skellefteå."
-  icon="ph:phone-duotone"
-  article={false}
-  showHeader={true}
-  showDescription={false}
->
-  <div class="flex flex-col gap-8 sm:flex-row sm:justify-between sm:gap-20">
-    <div class="max-w-lg space-y-4 text-stone-900 dark:text-stone-50">
-      <p>
-        Jag ser alltid fram emot att skapa nya kontakter. Oavsett om du är
-        intresserad av ett samarbete eller bara vill ställa frågor och ses för
-        en kaffe, så finns jag här!
-      </p>
-      <p>
-        <span class="font-semibold">Om du överväger ett samarbete</span>, dela
-        gärna med dig av information om ditt projekt, inklusive budget och
-        deadline. Med dessa detaljer kan jag bättre förstå dina behov och
-        erbjuda en mer exakt offert.
-      </p>
-      <section class="flex w-fit items-center">
-        <Icon name="ph:clock-duotone" class="mr-2 h-6 w-6 text-red-400" />
-        <p class="select-none">
-          Klockan i Sverige är just nu <span
-            id="stockholm-time"
-            class="font-serif">00:00:00</span
-          >
-        </p>
-      </section>
-    </div>
-    <div
-      class="flex rotate-0 flex-col items-center gap-4 transition duration-200 hover:rotate-0 sm:rotate-6"
+<MainLayout>
+  <article class="flex flex-col gap-12 font-serif">
+    <header
+      class="flex flex-col-reverse justify-between gap-4 selection:bg-red-300 selection:text-red-800 sm:flex-row sm:items-center"
     >
-      <Picture
-        src={ImgContact}
-        alt="Picture of William Hallin"
-        width={320}
-        formats={["avif", "webp"]}
-        class="pointer-events-none w-40 select-none rounded-lg drop-shadow-xl"
+      <h1 class="max-w-md text-4xl font-light break-words text-stone-900 italic">Chatta med mig</h1>
+      <IconPhHandPeaceDuotone
+        class="flip -motion-rotate-loop-24/mirror motion-duration-2000 motion-ease h-8 w-8 origin-bottom text-red-500 motion-safe:rotate-12 sm:h-12 sm:w-12"
       />
-      <span class="text-center text-xs italic text-stone-500"
-        >Mo i Rana, Norge <Icon
-          name="twemoji:flag-norway"
-          class="ml-1 inline h-4 w-4"
-        /></span
-      >
-    </div>
-  </div>
-  <div class="mt-8 space-y-6">
-    {
-      contactMethods.map((method) => (
-        <div class="flex flex-row items-center gap-4">
-          <Icon name={method.icon} class="h-8 w-8 text-red-500" />
-          <div class="flex flex-col gap-1">
-            <h2 class="font-serif text-stone-900 dark:text-stone-50">
-              {method.name}
-            </h2>
-            <a
-              href={method.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              class="text-red-500 transition duration-200 hover:opacity-70 active:opacity-50"
-            >
-              <div class="flex items-center gap-1">
-                <span class="underline underline-offset-4">
-                  {method.hrefText}
-                </span>
-                <Icon name="ph:arrow-up-right-bold" class="inline" />
-              </div>
-            </a>
-          </div>
-        </div>
-      ))
-    }
-  </div>
-</BaseLayout>
+    </header>
+    <section
+      class="flex flex-col-reverse gap-4 font-serif text-sm font-light text-stone-700 sm:flex-row sm:items-center sm:gap-24"
+    >
+      <div class="flex flex-col gap-2 selection:bg-red-300 selection:text-red-800">
+        <p>
+          Jag letar alltid efter nya möjligheter att arbeta med varumärken och företag. Om du är
+          nyfiken på ett samarbete, <a
+            href="#contacts"
+            class="text-red-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-50 hover:no-underline active:opacity-50"
+            >hör av dig</a
+          >. Om du bara är nyfiken på mitt arbete och vill snacka lite är du välkommen att höra av
+          dig, så kanske vi kan träffas över en kopp kaffe.
+        </p>
+        <p>
+          Nyfiken på min prissättning? <a
+            href="#pricing"
+            class="text-red-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-50 hover:no-underline active:opacity-50"
+            >Kolla in mitt prisregister</a
+          > som ger dig en överblick över vad jag brukar ta betalt för mina tjänster.
+        </p>
+        <time class="mt-2 font-mono text-xs text-stone-500">
+          Aktuell tid i Sverige: <span id="swedishTime"></span>
+        </time>
+      </div>
+      <Image
+        src={ImgAvatar}
+        alt="Porträtt av William Hallin"
+        width="256"
+        height="256"
+        class="h-12 w-12 rounded-full border border-stone-300 object-cover drop-shadow-xs select-none sm:h-24 sm:w-24"
+      />
+    </section>
+    <address id="contacts" class="flex flex-col gap-8 sm:flex-row sm:justify-between">
+      <div class="flex flex-col gap-2 selection:bg-amber-300 selection:text-amber-700">
+        <h2 class="flex items-center gap-2 text-2xl font-light text-stone-900 italic">
+          <IconPhEnvelopeDuotone class="h-6 w-6 text-amber-500" />
+          E-post
+        </h2>
+        <a
+          href="mailto:william@hallin.media?subject=Hej William!"
+          class="w-fit font-mono text-sm text-amber-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-amber-500 hover:text-amber-100 hover:no-underline active:opacity-50"
+          >william@hallin.media</a
+        >
+      </div>
+      <div class="flex flex-col gap-2 selection:bg-red-300 selection:text-red-800">
+        <h2 class="flex items-center gap-2 text-2xl font-light text-stone-900 italic">
+          <IconPhPhoneCallDuotone class="h-6 w-6 text-red-500" />
+          Mobil
+        </h2>
+        <a
+          href="tel:+46706159279"
+          class="w-fit font-mono text-sm text-red-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-red-100 hover:no-underline active:opacity-50"
+          >070-615 92 79</a
+        >
+      </div>
+      <div class="flex flex-col gap-2 selection:bg-blue-300 selection:text-blue-700">
+        <h2 class="flex items-center gap-2 text-2xl font-light text-stone-900 italic">
+          <IconPhLinkedinLogoDuotone class="h-6 w-6 text-blue-500" />
+          LinkedIn
+        </h2>
+        <a
+          href="https://www.linkedin.com/in/whallin"
+          target="_blank"
+          class="w-fit font-mono text-sm text-blue-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-blue-500 hover:text-blue-100 hover:no-underline active:opacity-50"
+          >/in/whallin</a
+        >
+      </div>
+    </address>
+    <FaqList slice={5} showFeaturedOnly={true} />
+    <PricingTable />
+    <section
+      id="legalities"
+      class="flex flex-col gap-4 selection:bg-red-300 selection:text-red-800"
+    >
+      <h2 class="font-serif text-3xl font-light text-stone-900 italic">Juridiska frågor</h2>
+      <p class="font-serif text-sm font-light text-stone-700">
+        Ibland kan det administrativa komma i vägen för det roliga, särskilt när det gäller
+        juridiska frågor. Jag ser till att allt viktigt pappersarbete och alla villkor är klara när
+        vi arbetar tillsammans för dig och ditt företag. För att kolla in villkoren, policyerna och
+        andra dokument som jag har upprättat för att hålla dig och ditt företag säkra, <a
+          href={getRelativeLocaleUrl(`${Astro.currentLocale}`, "legal")}
+          class="text-red-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-50 hover:no-underline active:opacity-50"
+          >klicka dig bara över till juridiksidan</a
+        >.
+      </p>
+    </section>
+  </article>
+</MainLayout>
 
 <script>
-  updateStockholmTime();
-  setInterval(updateStockholmTime, 1000);
-
-  // Get the Stockholm time
-  function updateStockholmTime() {
-    const timeElement = document.getElementById("stockholm-time");
-    if (!timeElement) return;
-
-    timeElement.textContent = new Intl.DateTimeFormat([], {
+  function updateTime() {
+    const swedishTime = new Date().toLocaleTimeString(undefined, {
       timeZone: "Europe/Stockholm",
       hour: "2-digit",
       minute: "2-digit",
       second: "2-digit",
-      hour12: false,
-    }).format(new Date());
+    });
+    document.getElementById("swedishTime")!.textContent = swedishTime;
   }
+
+  updateTime();
+  setInterval(updateTime, 1000);
 </script>

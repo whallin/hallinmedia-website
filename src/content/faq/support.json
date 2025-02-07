@@ -1,0 +1,52 @@
+{
+  "categoryName": {
+    "en": "Support",
+    "sv": "Support"
+  },
+  "questions": [
+    {
+      "featured": true,
+      "question": {
+        "en": "What are your support hours?",
+        "sv": "Vilka är dina supporttider?"
+      },
+      "answer": {
+        "en": "I'm available <strong>Monday to Friday</strong> from <strong>09:00 to 17:00 CET</strong>, excluding Swedish public holidays. I aim to respond to all enquiries personally within <u>one working day</u>.",
+        "sv": "Jag är tillgänglig <strong>måndag till fredag</strong> kl. <strong>09.00-17.00 CET</strong>, med undantag för svenska helgdagar. Jag försöker svara på alla ärenden <u>inom en arbetsdag</u>."
+      }
+    },
+    {
+      "featured": false,
+      "question": {
+        "en": "Can I request urgent support outside business hours?",
+        "sv": "Kan jag begära akut support utanför ordinarie öppettider?"
+      },
+      "answer": {
+        "en": "Urgent support is available outside regular hours for <strong>active projects</strong> with a 2-hour response SLA. This service incurs a <u>150% surcharge</u> and must be requested through the <a href='https://client.newgent.digital/' target='_blank' class='text-red-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-50 hover:no-underline active:opacity-50'>client portal</a> using the [URGENT] prefix in your message. The surcharge will appear on your invoice for the number of urgent support requests made.",
+        "sv": "Akut support finns tillgänglig utanför ordinarie tid för <strong>aktiva projekt</strong> med 2-timmars svarstid. Denna service omfattas av ett <u>tillägg på 150 %</u> och måste begäras via <a href='https://client.newgent.digital/' target='_blank' class='text-red-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-50 hover:no-underline active:opacity-50'>kundportalen</a> med prefixet [AKUT] i ditt meddelande. Tilläggsavgiften kommer att visas på din faktura för det antal akuta supportförfrågningar som gjorts."
+      }
+    },
+    {
+      "featured": false,
+      "question": {
+        "en": "What support is included during active projects?",
+        "sv": "Vilken support ingår under aktiva projekt?"
+      },
+      "answer": {
+        "en": "All active projects receive <strong>priority support</strong> including:<br>- Daily progress updates<br>- A dedicated project channel in the <a href='https://client.newgent.digital/' target='_blank' class='text-red-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-50 hover:no-underline active:opacity-50'>client portal</a><br>- A 4-hour response time during business days<br>- Emergency technical assistance for critical issues<br>- File version management and backups",
+        "sv": "Alla aktiva projekt inkluderar <strong>prioriterad support</strong> med:<br>- Dagliga statusuppdateringar<br>- En dedikerad projektkanal i <a href='https://client.newgent.digital/' target='_blank' class='text-red-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-50 hover:no-underline active:opacity-50'>kundportalen</a><br>- En 4-timmars svarstid under arbetsdagar<br>- Akut teknisk assistans för kritiska problem<br>- Hantering av filversioner och säkerhetskopior"
+      }
+    },
+    {
+      "featured": true,
+      "question": {
+        "en": "How long do you provide support after project delivery?",
+        "sv": "Hur länge erbjuder du support efter projektleverans?"
+      },
+      "answer": {
+        "en": "All projects include <strong>30 days of complimentary support</strong> after delivery for minor adjustments and technical questions. Extended support plans are available for ongoing needs, including:<br>- Monthly maintenance packages<br>- Content update subscriptions<br>- Priority emergency support",
+        "sv": "Alla projekt inkluderar <strong>30 dagars gratis support</strong> efter leverans för mindre justeringar och tekniska frågor. Utökade supportpaket finns tillgängliga för löpande behov, inklusive:<br>- Underhållspaket per månad<br>- Abonnemang för uppdateringar av material<br>- Prioriterad akut support"
+      }
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+---
+import { getRelativeLocaleUrl } from "astro:i18n";
+---
+
+<header class="mb-8">
+  <nav class="flex justify-between font-mono text-sm font-light text-stone-500">
+    <ul class="flex flex-wrap gap-2 selection:bg-red-300 selection:text-red-800 sm:gap-4">
+      <li>
+        <a
+          href={getRelativeLocaleUrl(`${Astro.currentLocale}`, "/")}
+          class={`hover:bg-red-500 hover:text-stone-50 active:opacity-50 ${Astro.url.pathname === "/" || Astro.url.pathname === `/${Astro.currentLocale}/` || Astro.url.pathname === `/${Astro.currentLocale}` ? "text-red-500" : ""}`}
+          >/home</a
+        >
+      </li>
+      <li>
+        <a
+          href={getRelativeLocaleUrl(`${Astro.currentLocale}`, "portfolio")}
+          class={`hover:bg-red-500 hover:text-stone-50 active:opacity-50 ${Astro.url.pathname.includes("/portfolio") ? "text-red-500" : ""}`}
+          >/portfolio</a
+        >
+      </li>
+      <li>
+        <a
+          href={getRelativeLocaleUrl(`${Astro.currentLocale}`, "clients")}
+          class={`hover:bg-red-500 hover:text-stone-50 active:opacity-50 ${Astro.url.pathname.includes("/clients") ? "text-red-500" : ""}`}
+          >/clients</a
+        >
+      </li>
+      <li>
+        <a
+          href={getRelativeLocaleUrl(`${Astro.currentLocale}`, "contact")}
+          class={`hover:bg-red-500 hover:text-stone-50 active:opacity-50 ${Astro.url.pathname.includes("/contact") ? "text-red-500" : ""}`}
+          >/contact</a
+        >
+      </li>
+    </ul>
+    <ul class="flex flex-wrap justify-end gap-2">
+      <li>
+        <a
+          href={getRelativeLocaleUrl(
+            "en",
+            Astro.url.pathname.replace(`/${Astro.currentLocale}`, "")
+          )}
+          class={`hover:bg-blue-600 hover:text-stone-50 active:opacity-50 selection:bg-blue-300 selection:text-blue-700 ${Astro.url.pathname.includes(`/${Astro.currentLocale}`) ? "" : "text-blue-600"}`}
+          >EN</a
+        >
+      </li>
+      <li>
+        <a
+          href={getRelativeLocaleUrl(
+            "sv",
+            Astro.url.pathname.replace(`/${Astro.currentLocale}`, "")
+          )}
+          class={`hover:bg-amber-500 hover:text-stone-50 active:opacity-50 selection:bg-amber-300 selection:text-amber-700 ${Astro.url.pathname.includes("/sv") ? "text-amber-500" : ""}`}
+          >SV</a
+        >
+      </li>
+    </ul>
+  </nav>
+</header>
+<hr class="mb-12 border-stone-300" />

@@ -5,6 +5,7 @@
     "sv": "Brännbollsyran är ett återkommande evenemang i Umeå som består av en musikfestival i kombination med Brännbollscupen."
   },
   "logo": "/src/assets/clients/brannbollsyran.svg",
+  "dominantColor": "#19202a",
   "websiteUrl": "https://www.brannbollsyran.com/",
   "socialLinks": {
     "instagram": "https://www.instagram.com/brannbollsyran",

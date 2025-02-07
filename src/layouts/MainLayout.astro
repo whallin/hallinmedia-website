@@ -1,0 +1,26 @@
+---
+import Footer from "../components/layout/Footer.astro";
+import Navbar from "../components/layout/Navbar.astro";
+import SiteHead from "../components/layout/SiteHead.astro";
+import "../styles/global.css";
+
+interface Props {
+  title: string;
+  description?: string;
+  article?: boolean;
+}
+
+const { title, description = "", article } = Astro.props;
+---
+
+<!doctype html>
+<html lang={Astro.currentLocale}>
+  <head>
+    <SiteHead title={title} description={description} article={article} />
+  </head>
+  <body class="mx-8 my-12 max-w-2xl bg-amber-50 md:mx-auto">
+    <Navbar />
+    <slot />
+    <Footer />
+  </body>
+</html>

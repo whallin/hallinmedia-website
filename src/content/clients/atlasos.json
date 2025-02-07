@@ -5,6 +5,7 @@
     "sv": "En öppen och transparent modifiering av operativsystemet Windows, utformad för att optimera prestanda och latens."
   },
   "logo": "/src/assets/clients/atlasos.svg",
+  "dominantColor": "#1a90ff",
   "websiteUrl": "https://atlasos.net/",
   "socialLinks": {
     "twitter": "https://x.com/atlasos"

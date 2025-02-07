@@ -9,7 +9,6 @@
     // Code quality and formatting
     "esbenp.prettier-vscode", // Code formatting for multiple languages
     "usernamehw.errorlens", // Inline display of errors and warnings
-    "oderwat.indent-rainbow", // Makes indentation more visible with colors
 
     // Developer experience
     "christian-kohler.path-intellisense", // Autocompletes filenames in imports
@@ -22,6 +21,7 @@
 
     // Framework support
     "astro-build.astro-vscode", // Astro support
-    "bradlc.vscode-tailwindcss" // Tailwind CSS support
+    "bradlc.vscode-tailwindcss", // TailwindCSS support
+    "unifiedjs.vscode-mdx" // MDX support
   ]
 }

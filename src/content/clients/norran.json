@@ -1,0 +1,17 @@
+{
+  "name": "Norran",
+  "description": {
+    "en": "Producenterna is a production company in film and TV production in northern Sweden.",
+    "sv": "Producenterna är ett produktionsbolag inom film- och TV-produktion i norra Sverige."
+  },
+  "logo": "/src/assets/clients/norran.svg",
+  "logoDark": "/src/assets/clients/norran-dark.svg",
+  "dominantColor": "#1d1d1d",
+  "websiteUrl": "https://norran.se/",
+  "socialLinks": {
+    "instagram": "https://www.instagram.com/norran.se",
+    "linkedin": "https://www.linkedin.com/company/norran",
+    "facebook": "https://www.facebook.com/norravasterbotten/"
+  },
+  "featured": true
+}

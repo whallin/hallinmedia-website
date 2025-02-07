@@ -1,0 +1,130 @@
+---
+import { Picture } from "astro:assets";
+import { getCollection, render } from "astro:content";
+import { getRelativeLocaleUrl } from "astro:i18n";
+import IconPhNewspaperDuotone from "../../components/icons/PhNewspaperDuotone.astro";
+import MainLayout from "../../layouts/MainLayout.astro";
+
+// Fetch all blog posts with read time
+const blogPosts = await getCollection("blogEnCollection").then(async (posts) => {
+  const postsWithReadTime = await Promise.all(
+    posts.map(async (post) => {
+      const { remarkPluginFrontmatter } = await render(post);
+      return {
+        ...post,
+        data: {
+          ...post.data,
+          readTime: Math.ceil(remarkPluginFrontmatter.readingTime),
+        },
+      };
+    })
+  );
+
+  return postsWithReadTime.sort((a, b) => {
+    // Featured posts first
+    if (a.data.featured && !b.data.featured) return -1;
+    if (!a.data.featured && b.data.featured) return 1;
+    // Then sort by date
+    return new Date(b.data.publishedDate).getTime() - new Date(a.data.publishedDate).getTime();
+  });
+});
+---
+
+<MainLayout>
+  <main class="flex flex-col gap-12 font-serif">
+    <header
+      class="flex flex-col-reverse justify-between gap-4 selection:bg-red-300 selection:text-red-800 sm:flex-row sm:items-center"
+    >
+      <h1 class="max-w-md text-4xl font-light break-words text-stone-900 italic">My "newspaper"</h1>
+      <IconPhNewspaperDuotone class="motion-preset-expand h-8 w-8 text-red-500 sm:h-12 sm:w-12" />
+    </header>
+    <article
+      class="flex flex-col gap-4 font-serif text-sm font-light text-stone-700 selection:bg-red-300 selection:text-red-800"
+    >
+      <p>
+        My blog, or as I like to call it, my newspaper, is a place for all my various publications.
+        It includes everything from my experiences and discoveries to personal opinions and things
+        I'd like to share. Most of my posts are quite short and to the point, though some might be
+        more complex and elaborate.
+      </p>
+      <p>
+        Feel free to see if any title piques your interest—remember, all blog posts are available in
+        both <a
+          href={getRelativeLocaleUrl("en", "blog")}
+          class="text-blue-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-blue-500 hover:text-stone-50 hover:no-underline active:opacity-50"
+          >English</a
+        > and <a
+          href={getRelativeLocaleUrl("sv", "blog")}
+          class="text-amber-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-amber-500 hover:text-stone-50 hover:no-underline active:opacity-50"
+          >Swedish</a
+        > and have support for commenting (as long as you have a <a
+          href="https://github.com/"
+          target="_blank"
+          class="text-red-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-50 hover:no-underline active:opacity-50"
+          >GitHub</a
+        > account).
+      </p>
+    </article>
+
+    <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+      {
+        blogPosts.map((post) => (
+          <a
+            href={getRelativeLocaleUrl(`${Astro.currentLocale}`, `/blog/${post.id}`)}
+            class="group block h-full"
+          >
+            <article class="relative flex h-full flex-col overflow-hidden rounded-lg border border-stone-300 bg-amber-50 transition duration-200 selection:bg-red-300 selection:text-red-800 hover:-translate-y-1 hover:border-red-500 hover:drop-shadow-[0_4px_4px_rgb(0,0,0,0.05)]">
+              {post.data.featured && (
+                <div class="absolute top-4 right-4 z-10 text-xl text-red-500 select-none">★</div>
+              )}
+              <figure class="relative overflow-hidden">
+                <span class="absolute top-4 left-4 z-10 rounded-full border border-stone-500 bg-amber-50 px-2 py-1 text-xs font-light text-stone-700 transition duration-200 group-hover:border-red-500 group-hover:text-red-700">
+                  {post.data.category}
+                </span>
+                <Picture
+                  src={post.data.featuredImage}
+                  alt={post.data.featuredImageAlt}
+                  widths={[400, 800, 1200]}
+                  sizes="(max-width: 640px) 100vw, 50vw"
+                  class="h-48 w-full object-cover transition duration-200 group-hover:scale-105"
+                  formats={["avif", "webp", "jpeg"]}
+                />
+              </figure>
+              <div class="flex flex-1 flex-col p-4">
+                <header>
+                  <h2 class="mb-2 font-serif text-xl text-stone-900 italic underline decoration-dashed decoration-from-font underline-offset-4 group-hover:text-red-500">
+                    {post.data.title}
+                  </h2>
+                </header>
+                <p class="line-clamp-2 text-sm font-light text-stone-600">
+                  {post.data.description}
+                </p>
+              </div>
+              <footer class="mt-auto flex flex-row flex-wrap items-center justify-between border-t border-stone-200 p-4 text-stone-500">
+                <div class="flex flex-col gap-1">
+                  <time
+                    class="font-mono text-sm font-light text-stone-500"
+                    datetime={new Date(post.data.publishedDate).toISOString()}
+                  >
+                    {new Date(post.data.publishedDate).toLocaleDateString()}
+                  </time>
+                  <span class="font-mono text-xs font-light text-stone-400">
+                    {post.data.readTime} min read
+                  </span>
+                </div>
+                <div class="flex items-center justify-end gap-2 group-hover:text-red-500">
+                  <span class="underline decoration-dashed decoration-from-font underline-offset-4">
+                    Read more
+                  </span>
+                  <div class="font-mono text-sm font-light whitespace-nowrap transition duration-200 select-none group-hover:translate-x-0.5">
+                    ->
+                  </div>
+                </div>
+              </footer>
+            </article>
+          </a>
+        ))
+      }
+    </div>
+  </main>
+</MainLayout>

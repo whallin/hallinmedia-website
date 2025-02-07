@@ -1,0 +1,12 @@
+{
+  "name": "Sannegårdens Pizzeria",
+  "description": {
+    "en": "EN",
+    "sv": "SV"
+  },
+  "logo": "/src/assets/clients/sannegardens-pizzeria.svg",
+  "logoDark": "/src/assets/clients/sannegardens-pizzeria-dark.svg",
+  "dominantColor": "#fdc800",
+  "websiteUrl": "https://24vision.se",
+  "subcontracted": true
+}

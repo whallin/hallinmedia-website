@@ -1,0 +1,70 @@
+---
+interface Props {
+  title: string;
+  description?: string;
+  article?: boolean;
+}
+
+const { title, description = "", article } = Astro.props;
+---
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>{title} - William Hallin</title>
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Geist+Mono:wght@100..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap"
+  rel="stylesheet"
+/>
+
+<!-- Meta -->
+<meta name="description" content={description} />
+<meta name="author" content="William Hallin" />
+<link rel="canonical" href={Astro.url} />
+<link rel="sitemap" href="/sitemap-index.xml" />
+
+<!-- Open Graph -->
+<meta property="og:type" content={article ? "article" : "website"} />
+<meta property="og:site_name" content="HallinMedia" />
+<meta property="og:url" content={Astro.url} />
+<meta property="og:title" content=`${title} - William Hallin` />
+<meta property="og:description" content={description} />
+<meta property="og:image" content="https://hallin.media/meta.png" />
+<meta property="og:image:alt" content={description} />
+<meta property="og:locale" content={Astro.currentLocale} />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content=`${title} - William Hallin` />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content="https://hallin.media/meta.png" />
+<meta name="twitter:image:alt" content={description} />
+
+<!-- Umami -->
+<script
+  is:inline
+  type="text/partytown"
+  src="https://cloud.umami.is/script.js"
+  data-website-id="3e7bdf28-0c0e-47bb-adbd-9a2a6f7b6203"
+  data-domains="hallin.media"></script>
+
+<!-- Microsoft Clarity -->
+<script is:inline type="text/partytown">
+  (function (c, l, a, r, i, t, y) {
+    c[a] =
+      c[a] ||
+      function () {
+        (c[a].q = c[a].q || []).push(arguments);
+      };
+    t = l.createElement(r);
+    t.async = 1;
+    t.src = "https://www.clarity.ms/tag/" + i;
+    y = l.getElementsByTagName(r)[0];
+    y.parentNode.insertBefore(t, y);
+  })(window, document, "clarity", "script", "i624k9um9g");
+</script>
+
+<!-- HubSpot -->

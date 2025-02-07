@@ -1,37 +1,97 @@
 ---
 import { getCollection } from "astro:content";
-import LegalCard from "../../components/LegalCard.astro";
-import { getLocalizedPath, useTranslations } from "../../i18n/utils";
-import BaseLayout from "../../layouts/BaseLayout.astro";
+import IconPhGavelDuotone from "../../components/icons/PhGavelDuotone.astro";
+import MainLayout from "../../layouts/MainLayout.astro";
 
-const t = useTranslations(Astro.currentLocale);
-const legalDocs = await getCollection("legal");
-const localizedLegalDocs = legalDocs.filter((doc) =>
-  doc.id.includes(`${Astro.currentLocale}/`),
+const allLegalDocs = (await getCollection("legalEnCollection")).sort(
+  (a, b) => new Date(b.data.publishedDate).getTime() - new Date(a.data.publishedDate).getTime()
 );
+
+const groupedDocs = allLegalDocs.reduce((acc: Record<string, typeof allLegalDocs>, doc) => {
+  const category = doc.data.documentType;
+  if (!acc[category]) {
+    acc[category] = [];
+  }
+  acc[category].push(doc);
+  return acc;
+}, {});
 ---
 
-<BaseLayout
-  title={t("nav.legal")}
-  description="A collection of all legal documents releated to HallinMedia."
-  icon="ph:file-text-duotone"
-  article={false}
->
-  <div class="grid gap-4 sm:grid-cols-2">
-    {
-      localizedLegalDocs.map((doc) => (
-        <LegalCard
-          title={doc.data.title}
-          purpose={doc.data.purpose}
-          icon={doc.data.icon}
-          publishDate={doc.data.publishDate}
-          updatedDate={doc.data.updatedDate}
-          href={getLocalizedPath(
-            Astro.currentLocale,
-            `legal/${doc.id.split("/").pop()}`,
-          )}
-        />
-      ))
-    }
-  </div>
-</BaseLayout>
+<MainLayout>
+  <main class="flex flex-col gap-12 font-serif">
+    <header
+      class="flex flex-col-reverse justify-between gap-4 selection:bg-red-300 selection:text-red-800 sm:flex-row sm:items-center"
+    >
+      <h1 class="max-w-md text-4xl font-light break-words text-stone-900 italic">Legalities</h1>
+      <IconPhGavelDuotone
+        class="-motion-rotate-loop-16 flip motion-ease motion-duration-2000 h-8 w-8 origin-bottom-left text-red-500 sm:h-12 sm:w-12"
+      />
+    </header>
+    <article
+      class="flex flex-col gap-4 font-serif text-sm font-light text-stone-700 selection:bg-red-300 selection:text-red-800"
+    >
+      <p>
+        Sometimes, paperwork, especially legal documents, can get in the way of fun. I make sure all
+        the necessary documents and conditions are ready for you and your business when we work
+        together. You're more than welcome to look around and see what terms and policies are
+        available for you.
+      </p>
+      <p>
+        If you have any questions about my legal documents, feel free to <a
+          href="mailto:william@hallin.media?subject=A legal question..."
+          class="text-red-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-50 hover:no-underline active:opacity-50"
+          >email me</a
+        >.
+      </p>
+
+      <div class="mt-6 flex flex-col gap-8">
+        {
+          Object.entries(groupedDocs).map(([category, docs]) => (
+            <article class="flex flex-col gap-4">
+              <header>
+                <h2 class="font-serif text-3xl font-light text-stone-900 italic">{category}</h2>
+              </header>
+              <ul class="grid gap-4">
+                {docs.map(async (doc) => {
+                  const IconComponent = await import(
+                    `../../components/icons/${doc.data.icon}.astro`
+                  );
+                  return (
+                    <li class="group relative overflow-hidden rounded-lg border border-stone-300 bg-amber-50/50 p-4 transition duration-200 selection:bg-red-300 selection:text-red-800 hover:-translate-y-1 hover:border-red-500 hover:drop-shadow-[0_4px_4px_rgb(0,0,0,0.05)]">
+                      <a href={`/legal/${doc.id}`} class="block">
+                        <IconComponent.default class="absolute top-1/2 -right-22 z-0 aspect-square h-[calc(100%+4rem)] w-auto -translate-y-1/2 text-red-500/20 transition duration-200 group-hover:scale-105" />
+                        <div class="relative z-10 flex flex-col gap-2">
+                          <h3 class="text-lg font-medium text-stone-900">{doc.data.title}</h3>
+                          <time
+                            class="font-mono text-xs text-stone-500"
+                            datetime={new Date(doc.data.publishedDate).toISOString()}
+                          >
+                            <div class="flex gap-2">
+                              <span>{new Date(doc.data.publishedDate).toLocaleDateString()}</span>
+                              •
+                              <span>{doc.data.audience === 'Both' || doc.data.audience === 'Båda' ? 'B2C + B2B' : doc.data.audience}</span>
+                            </div>
+                          </time>
+                          <p class="text-stone-600">{doc.data.description}</p>
+                          <ul class="my-2 flex flex-wrap gap-2">
+                            {doc.data.compliance?.map((compliance) => (
+                              <li>
+                                <span class="rounded-full border border-stone-300 bg-amber-50 px-2.5 py-1 text-xs font-medium text-stone-700 transition duration-200 hover:border-red-300 hover:text-red-700">
+                                  {compliance}
+                                </span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      </a>
+                    </li>
+                  );
+                })}
+              </ul>
+            </article>
+          ))
+        }
+      </div>
+    </article>
+  </main>
+</MainLayout>

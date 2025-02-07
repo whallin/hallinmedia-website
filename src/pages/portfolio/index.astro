@@ -1,0 +1,116 @@
+---
+import { Image, Picture } from "astro:assets";
+import { getCollection, getEntry } from "astro:content";
+import { getRelativeLocaleUrl } from "astro:i18n";
+import IconPhSparkleDuotone from "../../components/icons/PhSparkleDuotone.astro";
+import MainLayout from "../../layouts/MainLayout.astro";
+
+// Fetch all portfolio posts
+const portfolioPosts = await getCollection("portfolioEnCollection").then((posts) =>
+  posts.sort((a, b) => {
+    // Featured posts first
+    if (a.data.featured && !b.data.featured) return -1;
+    if (!a.data.featured && b.data.featured) return 1;
+    // Then sort by date
+    return new Date(b.data.date).getTime() - new Date(a.data.date).getTime();
+  })
+);
+---
+
+<MainLayout>
+  <main class="flex flex-col gap-12 font-serif">
+    <header
+      class="flex flex-col-reverse justify-between gap-4 selection:bg-red-300 selection:text-red-800 sm:flex-row sm:items-center"
+    >
+      <h1 class="max-w-md text-4xl font-light break-words text-stone-900 italic">Previous works</h1>
+      <IconPhSparkleDuotone
+        class="motion-opacity-loop-60 motion-duration-2000 motion-ease h-8 w-8 text-red-500 sm:h-12 sm:w-12"
+      />
+    </header>
+
+    <article
+      class="flex flex-col gap-4 font-serif text-sm font-light text-stone-700 selection:bg-red-300 selection:text-red-800"
+    >
+      <p>
+        What is a portfolio website without a portfolio page? This page highlights my best and most
+        interesting work and creations. Some may be better than others, especially compared to older
+        crafts, but that's part of growing and learning.
+      </p>
+    </article>
+
+    <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+      {
+        portfolioPosts.map(async (post) => {
+          const client = await getEntry("clientsCollection", post.data.client.id);
+          const dominantColor = client?.data.dominantColor || "oklch(0.637 0.237 25.331)";
+          return (
+            <a
+              href={getRelativeLocaleUrl(`${Astro.currentLocale}`, `/portfolio/${post.id}`)}
+              class="group block h-full"
+            >
+              <article
+                class="relative flex h-full flex-col overflow-hidden rounded-lg border border-stone-300 bg-amber-50 transition duration-200 selection:bg-red-300 selection:text-red-800 hover:-translate-y-1 hover:border-red-500 hover:drop-shadow-[0_4px_4px_rgb(0,0,0,0.05)]"
+                style={`--dominant-color: ${dominantColor}`}
+              >
+                <figure class="relative overflow-hidden">
+                  {post.data.featured && (
+                    <figcaption class="absolute top-4 right-4 z-10 text-xl text-red-500 select-none">
+                      ★
+                    </figcaption>
+                  )}
+                  <span class="absolute top-4 left-4 z-10 rounded-full border border-stone-500 bg-amber-50 px-2 py-1 text-xs font-light text-stone-700 transition duration-200 group-hover:border-red-500 group-hover:text-red-700">
+                    {post.data.category}
+                  </span>
+                  <div class="relative">
+                    <div class="absolute inset-0 z-10 bg-gradient-to-t from-black/50 to-transparent" />
+                    <Picture
+                      src={post.data.featuredImage}
+                      alt={post.data.featuredImageAlt}
+                      widths={[400, 800, 1200]}
+                      sizes="(max-width: 640px) 100vw, 50vw"
+                      class="h-48 w-full object-cover transition duration-200 group-hover:scale-105"
+                      formats={["avif", "webp", "jpeg"]}
+                    />
+                  </div>
+                  {client?.data.logo && (
+                    <Image
+                      src={client.data.logo}
+                      alt={`${client.data.name} logo`}
+                      class="absolute right-4 bottom-4 z-10 h-auto w-16 opacity-75"
+                    />
+                  )}
+                </figure>
+                <div class="flex flex-1 flex-col p-4">
+                  <header>
+                    <h2 class="mb-2 font-serif text-xl text-stone-900 italic underline decoration-dashed decoration-from-font underline-offset-4 group-hover:text-red-500">
+                      {post.data.title}
+                    </h2>
+                  </header>
+                  <p class="line-clamp-2 text-sm font-light text-stone-600">
+                    {post.data.description}
+                  </p>
+                </div>
+                <footer class="mt-auto flex flex-row flex-wrap items-center justify-between border-t border-stone-200 p-4 text-stone-500">
+                  <time
+                    class="font-mono text-sm font-light text-stone-500"
+                    datetime={new Date(post.data.date).toISOString()}
+                  >
+                    {new Date(post.data.date).toLocaleDateString()}
+                  </time>
+                  <div class="flex items-center justify-end gap-2 group-hover:text-red-500">
+                    <span class="underline decoration-dashed decoration-from-font underline-offset-4">
+                      Learn more
+                    </span>
+                    <div class="font-mono text-sm font-light whitespace-nowrap transition duration-200 select-none group-hover:translate-x-0.5">
+                      ->
+                    </div>
+                  </div>
+                </footer>
+              </article>
+            </a>
+          );
+        })
+      }
+    </div>
+  </main>
+</MainLayout>
