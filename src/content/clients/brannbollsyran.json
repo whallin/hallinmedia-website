@@ -1,18 +1,18 @@
 {
   "name": "Brännbollsyran",
   "description": {
-    "en": "Brännbollsyran is a recurring event in Umeå that consists of a music festival combined with the Brännbollscupen.",
-    "sv": "Brännbollsyran är ett återkommande evenemang i Umeå som består av en musikfestival i kombination med Brännbollscupen."
+    "en": "Brännbollsyran is the largest music festival in Northern Scandinavia, held annually in Umeå, Sweden. Attracting over 16,000 visitors each day, the festival combines world-class music performances with a unique sports tradition. It features renowned international and Swedish artists, creating a vibrant atmosphere over four days.",
+    "sv": "Brännbollsyran är den största musikfestivalen i norra Skandinavien och hålls årligen i Umeå. Festivalen lockar över 16 000 besökare varje dag och kombinerar musikuppträdanden av högsta klass med en unik idrottstradition. Här uppträder kända nationella och internationella artister och skapar en levande atmosfär under fyra dagar."
   },
   "logo": "/src/assets/clients/brannbollsyran.svg",
   "dominantColor": "#19202a",
   "websiteUrl": "https://www.brannbollsyran.com/",
   "socialLinks": {
-    "instagram": "https://www.instagram.com/brannbollsyran",
     "twitter": "https://x.com/brannbollsyran",
-    "linkedin": "https://www.linkedin.com/company/br%C3%A4nnbollsyran/",
+    "linkedin": "https://www.linkedin.com/company/br%C3%A4nnbollsyran",
+    "instagram": "https://www.instagram.com/brannbollsyran/",
     "facebook": "https://www.facebook.com/brannbollsyran/"
   },
-  "subcontracted": true,
-  "featured": true
+  "featured": true,
+  "subcontracted": true
 }

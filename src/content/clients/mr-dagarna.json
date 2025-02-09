@@ -1,16 +1,16 @@
 {
   "name": "Mänskliga Rättighetsdagarna",
   "description": {
-    "en": "Mänskliga rättighetsdagarna is the largest human rights forum in the Nordic region.",
-    "sv": "Mänskliga rättighetsdagarna är nordens största forum för mänsikliga rättigheter."
+    "en": "Mänskliga Rättighetsdagarna (MR-dagarna) is an annual event centred on human rights, primarily held in Sweden. It acts as a platform for dialogue, education, and inspiration, uniting organisations, activists, academics, and policymakers to discuss vital human rights issues.",
+    "sv": "Mänskliga Rättighetsdagarna (MR-dagarna) är ett årligt evenemang i Sverige som fokuserar på mänskliga rättigheter. Det är en plattform för dialog, utbildning och inspiration där organisationer, aktivister, akademiker och beslutsfattare samlas för att diskutera viktiga frågor inom mänskliga rättigheter."
   },
   "logo": "/src/assets/clients/mr-dagarna.svg",
   "dominantColor": "#970e7e",
   "websiteUrl": "https://www.mrdagarna.se/",
   "socialLinks": {
-    "facebook": "https://www.facebook.com/mrdagarna/",
+    "linkedin": "https://www.linkedin.com/company/manskliga-rattighetsdagarna/",
     "instagram": "https://www.instagram.com/mrdagarna",
-    "linkedin": "https://www.linkedin.com/company/manskliga-rattighetsdagarna/"
+    "facebook": "https://www.facebook.com/mrdagarna/"
   },
   "featured": true
 }

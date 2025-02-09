@@ -1,11 +1,14 @@
 {
   "name": "Creative Kids",
   "description": {
-    "en": "EN",
-    "sv": "SV"
+    "en": "Creative Kids Preschool is a bilingual early childhood education centre situated in Majorna, Gothenburg. Dedicated to fostering a love of learning, the centre offers a nurturing and supportive environment where children aged 1 to 5 years can thrive.",
+    "sv": "Creative Kids Preschool är en tvåspråkig förskola i Majorna, Göteborg. Förskolan är engagerad i att främja intresset för lärande och erbjuder en stödjande miljö där barn i åldrarna 1 till 5 år kan växa och utvecklas."
   },
   "logo": "/src/assets/clients/creative-kids.svg",
   "dominantColor": "#ffc80b",
-  "websiteUrl": "https://24vision.se",
+  "websiteUrl": "https://www.creativekidsforskola.com/",
+  "socialLinks": {
+    "linkedin": "https://www.linkedin.com/company/creative-kids-f%C3%B6rskola-preschool-ab"
+  },
   "subcontracted": true
 }

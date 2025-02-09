@@ -1,15 +1,15 @@
 {
   "name": "Producenterna",
   "description": {
-    "en": "Producenterna is a production company in film and TV production in northern Sweden.",
-    "sv": "Producenterna är ett produktionsbolag inom film- och TV-produktion i norra Sverige."
+    "en": "Producenterna is a versatile production company based in northern Sweden. They specialise in a wide range of media productions, including films, live broadcasts, and hybrid events. The company offers services such as single-camera and multi-camera productions for broadcast, web, and social media, as well as content creation for large LED screens.",
+    "sv": "Producenterna är ett mångsidigt produktionsbolag baserat i norra Sverige. De specialiserar sig på ett brett spektrum av medieproduktioner, inklusive film, livesändningar och hybridevenemang. Företaget erbjuder tjänster som en- och flerkameraproduktioner för broadcast, webb och sociala medier samt innehållsskapande för stora LED-skärmar."
   },
   "logo": "/src/assets/clients/producenterna.svg",
   "dominantColor": "#096bb3",
   "websiteUrl": "https://producenterna.se/",
   "socialLinks": {
-    "instagram": "https://www.instagram.com/producenterna",
     "linkedin": "https://www.linkedin.com/company/producenterna-i-norrland",
+    "instagram": "https://www.instagram.com/producenterna",
     "facebook": "https://www.facebook.com/Producenterna/"
   },
   "featured": true

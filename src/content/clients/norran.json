@@ -1,16 +1,16 @@
 {
   "name": "Norran",
   "description": {
-    "en": "Producenterna is a production company in film and TV production in northern Sweden.",
-    "sv": "Producenterna är ett produktionsbolag inom film- och TV-produktion i norra Sverige."
+    "en": "Norran, also known as Norra Västerbotten, is a Swedish newspaper based in Skellefteå, Västerbotten County. Established in 1910, Norran offers local, national, and international news coverage with a focus on the Västerbotten region. It is published mainly in Swedish and provides both print and digital editions.",
+    "sv": "Norran, även känd som Norra Västerbotten, är en svensk dagstidning baserad i Skellefteå, Västerbotten. Norran grundades 1910 och bevakar lokala, nationella och internationella nyheter med fokus på Västerbottensregionen. Tidningen publiceras huvudsakligen på svenska och ges ut både i tryckt och digital form."
   },
   "logo": "/src/assets/clients/norran.svg",
   "logoDark": "/src/assets/clients/norran-dark.svg",
   "dominantColor": "#1d1d1d",
   "websiteUrl": "https://norran.se/",
   "socialLinks": {
-    "instagram": "https://www.instagram.com/norran.se",
     "linkedin": "https://www.linkedin.com/company/norran",
+    "instagram": "https://www.instagram.com/norran.se",
     "facebook": "https://www.facebook.com/norravasterbotten/"
   },
   "featured": true

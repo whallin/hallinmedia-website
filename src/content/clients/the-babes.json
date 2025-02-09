@@ -1,11 +1,16 @@
 {
   "name": "The Babes",
   "description": {
-    "en": "EN",
-    "sv": "SV"
+    "en": "The Babes is one of Sweden's leading show and cover bands, renowned for delivering an unforgettable party experience. With extensive experience in events ranging from intimate gatherings to grand galas, The Babes tailor their performances to fit the client's vision.",
+    "sv": "The Babes är ett av Sveriges främsta show- och coverband, känt för att leverera en festupplevelse utöver det vanliga. Med omfattande erfarenhet av evenemang, från små möten till stora galor, anpassar The Babes sina framträdanden för att passa kundens vision."
   },
   "logo": "/src/assets/clients/the-babes.svg",
   "dominantColor": "#b9a152",
-  "websiteUrl": "https://24vision.se",
+  "websiteUrl": "https://thebabes.se/",
+  "socialLinks": {
+    "linkedin": "https://www.linkedin.com/company/the-babes",
+    "instagram": "https://www.instagram.com/thebabesshowband/",
+    "facebook": "https://www.facebook.com/thebabescoverband/"
+  },
   "subcontracted": true
 }

@@ -1,8 +1,8 @@
 {
   "name": "AtlasOS",
   "description": {
-    "en": "An open and transparent modification of the Windows operating system, designed to optimize performance and latency.",
-    "sv": "En öppen och transparent modifiering av operativsystemet Windows, utformad för att optimera prestanda och latens."
+    "en": "AtlasOS is an open-source modification of Windows designed for tech enthusiasts and gamers. It aims to enhance privacy, usability, and performance by removing unnecessary background processes, telemetry, and pre-installed apps.",
+    "sv": "AtlasOS är en modifierad version av Windows baserad på öppen källkod, utformad för teknikentusiaster och gamers. Syftet är att förbättra sekretess, användbarhet och prestanda genom att ta bort onödiga bakgrundsprocesser, telemetri och förinstallerade appar."
   },
   "logo": "/src/assets/clients/atlasos.svg",
   "dominantColor": "#1a90ff",

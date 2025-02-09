@@ -1,12 +1,16 @@
 {
   "name": "Sannegårdens Pizzeria",
   "description": {
-    "en": "EN",
-    "sv": "SV"
+    "en": "Sannegårdens Pizzeria is a renowned pizzeria chain located in Gothenburg, Sweden. Celebrated for its exceptional pizzas and kebabs, Sannegårdens Pizzeria prides itself on using the finest quality ingredients, ensuring each dish is prepared with care and dedication.",
+    "sv": "Sannegårdens Pizzeria är en berömd pizzeriakedja belägen i Göteborg. Pizzerian är känd för sina fantastiska pizzor och kebab och är stolt över att använda ingredienser av högsta kvalitet, vilket garanterar att varje rätt tillagas med omsorg och hängivenhet."
   },
   "logo": "/src/assets/clients/sannegardens-pizzeria.svg",
   "logoDark": "/src/assets/clients/sannegardens-pizzeria-dark.svg",
   "dominantColor": "#fdc800",
-  "websiteUrl": "https://24vision.se",
+  "websiteUrl": "https://sannegardens.se/",
+  "socialLinks": {
+    "instagram": "https://www.instagram.com/sannegardenspizzeriaa/",
+    "facebook": "https://www.facebook.com/Sannegardenspizzeria/"
+  },
   "subcontracted": true
 }
