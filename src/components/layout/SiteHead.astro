@@ -10,7 +10,7 @@ const { title, description = "", article } = Astro.props;
 
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>{title} - William Hallin</title>
+<title>{title} | William Hallin</title>
 
 <!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -38,7 +38,7 @@ const { title, description = "", article } = Astro.props;
 <meta property="og:type" content={article ? "article" : "website"} />
 <meta property="og:site_name" content="HallinMedia" />
 <meta property="og:url" content={Astro.url} />
-<meta property="og:title" content=`${title} - William Hallin` />
+<meta property="og:title" content=`${title} | William Hallin` />
 <meta property="og:description" content={description} />
 <meta property="og:image" content="https://hallin.media/meta.png" />
 <meta property="og:image:alt" content={description} />
@@ -46,7 +46,7 @@ const { title, description = "", article } = Astro.props;
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content=`${title} - William Hallin` />
+<meta name="twitter:title" content=`${title} | William Hallin` />
 <meta name="twitter:description" content={description} />
 <meta name="twitter:image" content="https://hallin.media/meta.png" />
 <meta name="twitter:image:alt" content={description} />

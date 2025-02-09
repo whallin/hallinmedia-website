@@ -28,7 +28,7 @@ const portfolioPosts = await getCollection("portfolioEnCollection").then((posts)
 );
 ---
 
-<MainLayout title={data.name}>
+<MainLayout title={data.name} description={data.description.en}>
   <main class="flex flex-col gap-12 font-serif" style={`--dominant-color: ${dominantColor}`}>
     <header
       class="flex flex-col-reverse justify-between gap-6 selection:bg-[var(--dominant-color)] selection:text-[color-mix(in_oklab,var(--dominant-color),white_70%)] sm:flex-row sm:items-center sm:gap-12"
@@ -43,7 +43,7 @@ const portfolioPosts = await getCollection("portfolioEnCollection").then((posts)
 
     {
       data.subcontracted && (
-        <div class="relative rounded-lg border border-stone-300 bg-amber-50 p-6 text-sm font-light text-stone-700 selection:bg-[var(--dominant-color)] selection:text-[color-mix(in_oklab,var(--dominant-color),white_70%)]">
+        <aside class="relative rounded-lg border border-stone-300 bg-amber-50 p-6 text-sm font-light text-stone-700 selection:bg-[var(--dominant-color)] selection:text-[color-mix(in_oklab,var(--dominant-color),white_70%)]">
           <div class="absolute -top-3 left-4 flex h-6 w-6 items-center justify-center rounded-full border border-stone-300 bg-amber-50 text-[var(--dominant-color)]">
             <PhHeartDuotone class="h-4 w-4" />
           </div>
@@ -56,7 +56,7 @@ const portfolioPosts = await getCollection("portfolioEnCollection").then((posts)
             the contract, I may not be allowed to share any details or created projects for this
             client.
           </p>
-        </div>
+        </aside>
       )
     }
 
@@ -85,56 +85,58 @@ const portfolioPosts = await getCollection("portfolioEnCollection").then((posts)
               <h3 class="mt-4 font-serif text-2xl font-light text-stone-900 italic">
                 Social Media
               </h3>
-              <ul class="flex flex-wrap gap-4">
-                {data.socialLinks.twitter && (
-                  <li>
-                    <a
-                      href={data.socialLinks.twitter}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      class="flex items-center gap-2 text-sm text-stone-700 underline decoration-stone-500 decoration-dashed decoration-from-font underline-offset-4 selection:bg-stone-300 selection:text-stone-700 hover:bg-stone-500 hover:text-stone-100 hover:no-underline active:opacity-50"
-                    >
-                      Twitter / X
-                    </a>
-                  </li>
-                )}
-                {data.socialLinks.linkedin && (
-                  <li>
-                    <a
-                      href={data.socialLinks.linkedin}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      class="flex items-center gap-2 text-sm text-stone-700 underline decoration-blue-500 decoration-dashed decoration-from-font underline-offset-4 selection:bg-blue-300 selection:text-blue-700 hover:bg-blue-500 hover:text-blue-100 hover:no-underline active:opacity-50"
-                    >
-                      LinkedIn
-                    </a>
-                  </li>
-                )}
-                {data.socialLinks.instagram && (
-                  <li>
-                    <a
-                      href={data.socialLinks.instagram}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      class="flex items-center gap-2 text-sm text-stone-700 underline decoration-pink-500 decoration-dashed decoration-from-font underline-offset-4 selection:bg-pink-300 selection:text-pink-700 hover:bg-pink-500 hover:text-pink-100 hover:no-underline active:opacity-50"
-                    >
-                      Instagram
-                    </a>
-                  </li>
-                )}
-                {data.socialLinks.facebook && (
-                  <li>
-                    <a
-                      href={data.socialLinks.facebook}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      class="flex items-center gap-2 text-sm text-stone-700 underline decoration-sky-500 decoration-dashed decoration-from-font underline-offset-4 selection:bg-sky-300 selection:text-sky-700 hover:bg-sky-500 hover:text-sky-100 hover:no-underline active:opacity-50"
-                    >
-                      Facebook
-                    </a>
-                  </li>
-                )}
-              </ul>
+              <nav>
+                <ul class="flex flex-wrap gap-4">
+                  {data.socialLinks.twitter && (
+                    <li>
+                      <a
+                        href={data.socialLinks.twitter}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="flex items-center gap-2 text-sm text-stone-700 underline decoration-stone-500 decoration-dashed decoration-from-font underline-offset-4 selection:bg-stone-300 selection:text-stone-700 hover:bg-stone-500 hover:text-stone-100 hover:no-underline active:opacity-50"
+                      >
+                        Twitter / X
+                      </a>
+                    </li>
+                  )}
+                  {data.socialLinks.linkedin && (
+                    <li>
+                      <a
+                        href={data.socialLinks.linkedin}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="flex items-center gap-2 text-sm text-stone-700 underline decoration-blue-500 decoration-dashed decoration-from-font underline-offset-4 selection:bg-blue-300 selection:text-blue-700 hover:bg-blue-500 hover:text-blue-100 hover:no-underline active:opacity-50"
+                      >
+                        LinkedIn
+                      </a>
+                    </li>
+                  )}
+                  {data.socialLinks.instagram && (
+                    <li>
+                      <a
+                        href={data.socialLinks.instagram}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="flex items-center gap-2 text-sm text-stone-700 underline decoration-pink-500 decoration-dashed decoration-from-font underline-offset-4 selection:bg-pink-300 selection:text-pink-700 hover:bg-pink-500 hover:text-pink-100 hover:no-underline active:opacity-50"
+                      >
+                        Instagram
+                      </a>
+                    </li>
+                  )}
+                  {data.socialLinks.facebook && (
+                    <li>
+                      <a
+                        href={data.socialLinks.facebook}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="flex items-center gap-2 text-sm text-stone-700 underline decoration-sky-500 decoration-dashed decoration-from-font underline-offset-4 selection:bg-sky-300 selection:text-sky-700 hover:bg-sky-500 hover:text-sky-100 hover:no-underline active:opacity-50"
+                      >
+                        Facebook
+                      </a>
+                    </li>
+                  )}
+                </ul>
+              </nav>
             </>
           )
         }
@@ -143,7 +145,7 @@ const portfolioPosts = await getCollection("portfolioEnCollection").then((posts)
 
     {
       portfolioPosts.length > 0 && (
-        <div class="flex flex-col gap-8">
+        <section class="flex flex-col gap-8">
           <header class="flex items-center justify-between">
             <h2 class="text-3xl font-light text-stone-900 italic">Related Works</h2>
             <IconPhSparkleDuotone class="h-8 w-8 text-[var(--dominant-color)]" />
@@ -203,7 +205,7 @@ const portfolioPosts = await getCollection("portfolioEnCollection").then((posts)
               </a>
             ))}
           </div>
-        </div>
+        </section>
       )
     }
 
