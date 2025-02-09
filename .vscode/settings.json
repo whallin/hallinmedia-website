@@ -1,227 +1,227 @@
 {
-    // Editor general settings - Controls basic editor behavior and appearance
-    "editor.formatOnSave": true, // Format files automatically when saved
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.bracketPairColorization.enabled": true, // Colorize matching brackets
-    "editor.guides.bracketPairs": true, // Show vertical lines for bracket pairs
-    "editor.wordWrap": "on", // Wrap long lines instead of horizontal scrolling
-    "editor.tabSize": 2, // Number of spaces for tabs
-    "editor.detectIndentation": true, // Auto-detect file indentation
-    "editor.insertSpaces": true, // Use spaces instead of tabs
-    "editor.codeActionsOnSave": {
-      "source.fixAll": "explicit", // Apply all automatic fixes on save
-      "source.organizeImports": "explicit", // Sort and remove unused imports
-      "source.addMissingImports": "explicit" // Add imports for referenced symbols
+  // Editor general settings - Controls basic editor behavior and appearance
+  "editor.formatOnSave": true, // Format files automatically when saved
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.bracketPairColorization.enabled": true, // Colorize matching brackets
+  "editor.guides.bracketPairs": true, // Show vertical lines for bracket pairs
+  "editor.wordWrap": "on", // Wrap long lines instead of horizontal scrolling
+  "editor.tabSize": 2, // Number of spaces for tabs
+  "editor.detectIndentation": true, // Auto-detect file indentation
+  "editor.insertSpaces": true, // Use spaces instead of tabs
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit", // Apply all automatic fixes on save
+    "source.organizeImports": "explicit", // Sort and remove unused imports
+    "source.addMissingImports": "explicit" // Add imports for referenced symbols
+  },
+
+  // Files settings - Controls how files are handled by VS Code
+  "files.trimTrailingWhitespace": true, // Remove extra spaces at line ends
+  "files.insertFinalNewline": true, // Add empty line at end of file
+  "files.trimFinalNewlines": true, // Keep only one final newline
+  "files.eol": "\n", // Use LF line endings
+
+  // Telemetry settings - Control data collection and reporting
+  "gitlens.telemetry.enabled": false,
+
+  // Git settings - Configure Git integration behavior
+  "git.autofetch": true, // Automatically fetch from remote
+  "git.autofetchPeriod": 180, // Fetch every 3 minutes
+  "git.enableSmartCommit": true, // Stage all changes when there are no staged changes
+  "git.confirmSync": false, // Don't ask for confirmation when syncing
+  "git.branchProtection": [
+    "main",
+    "master",
+    "develop",
+    "staging",
+    "preview",
+    "production",
+    "release/*"
+  ],
+  "git.branchProtectionPrompt": "alwaysPrompt", // Always ask before modifying protected branches
+  "git.pullBeforeCheckout": true, // Pull changes before checking out branches
+  "git.fetchOnPull": true, // Fetch all branches when pulling
+  "git.mergeEditor": true, // Use the merge editor for conflicts
+  "git.suggestSmartCommit": true, // Suggest smart commits when applicable
+  "git.untrackedChanges": "separate", // Show untracked files separately
+  "git.showActionButton": {
+    "publish": true, // Show publish button
+    "sync": true, // Show sync button
+    "commit": true // Show commit button
+  },
+
+  // Conventional Commits settings - Enforce consistent commit messages
+  "conventionalCommits.autoCommit": false,
+  "conventionalCommits.emojiFormat": "emoji",
+  "conventionalCommits.gitmoji": true,
+  "conventionalCommits.promptBody": true, // Prompt for commit body
+  "conventionalCommits.promptFooter": true, // Prompt for commit footer
+  "conventionalCommits.promptScopes": true, // Prompt for commit scopes
+  "conventionalCommits.promptCI": true, // Prompt for CI skip
+  "conventionalCommits.scopes": [
+    // Core areas
+    "api",
+    "ui",
+    "core",
+    "auth",
+    "db",
+
+    // Infrastructure
+    "ci",
+    "docker",
+    "infra",
+
+    // Testing and quality
+    "test",
+    "e2e",
+
+    // Documentation and dependencies
+    "docs",
+    "deps",
+
+    // Features and components
+    "components",
+    "utils",
+    "config",
+    "i18n",
+
+    // Build and performance
+    "build",
+    "perf",
+
+    // Platform
+    "server",
+    "client"
+  ],
+
+  // File associations - Define how files should be interpreted
+  "files.associations": {
+    "*.css": "css",
+    "*.scss": "scss",
+    "*.sass": "sass",
+    "*.html": "html"
+  },
+
+  // GitLens settings - Configure additional Git functionality
+  "gitlens.codeLens.enabled": true, // Show Git information above code
+  "gitlens.currentLine.enabled": true, // Show Git blame information in current line
+  "gitlens.defaultTimeFormat": "HH:mm",
+  "gitlens.defaultDateFormat": "YYYY-MM-DD HH:mm",
+  "gitlens.hovers.currentLine.over": "line", // Show blame info when hovering over line
+  "gitlens.statusBar.enabled": true, // Show Git info in status bar
+  "gitlens.statusBar.format": "${branch} • ${authorAgoOrDate}", // Format of status bar info
+  "gitlens.advanced.messages": {
+    "suppressGitMissingWarning": true // Don't warn if Git is missing
+  },
+
+  // GitLens views configuration
+  "gitlens.views.branches.branches.layout": "list",
+  "gitlens.views.repositories.branches.layout": "list",
+  "gitlens.views.branches.showBranchComparison": "branch", // Enable branch comparison view
+
+  // Better Comments - Configure comment highlighting
+  "better-comments.tags": [
+    {
+      "tag": "!",
+      "color": "#FF2D00", // Red for important/warning comments
+      "strikethrough": false,
+      "backgroundColor": "transparent"
     },
-
-    // Files settings - Controls how files are handled by VS Code
-    "files.trimTrailingWhitespace": true, // Remove extra spaces at line ends
-    "files.insertFinalNewline": true, // Add empty line at end of file
-    "files.trimFinalNewlines": true, // Keep only one final newline
-    "files.eol": "\n", // Use LF line endings
-
-    // Telemetry settings - Control data collection and reporting
-    "gitlens.telemetry.enabled": false,
-
-    // Git settings - Configure Git integration behavior
-    "git.autofetch": true, // Automatically fetch from remote
-    "git.autofetchPeriod": 180, // Fetch every 3 minutes
-    "git.enableSmartCommit": true, // Stage all changes when there are no staged changes
-    "git.confirmSync": false, // Don't ask for confirmation when syncing
-    "git.branchProtection": [
-      "main",
-      "master",
-      "develop",
-      "staging",
-      "preview",
-      "production",
-      "release/*"
-    ],
-    "git.branchProtectionPrompt": "alwaysPrompt", // Always ask before modifying protected branches
-    "git.pullBeforeCheckout": true, // Pull changes before checking out branches
-    "git.fetchOnPull": true, // Fetch all branches when pulling
-    "git.mergeEditor": true, // Use the merge editor for conflicts
-    "git.suggestSmartCommit": true, // Suggest smart commits when applicable
-    "git.untrackedChanges": "separate", // Show untracked files separately
-    "git.showActionButton": {
-      "publish": true, // Show publish button
-      "sync": true, // Show sync button
-      "commit": true // Show commit button
+    {
+      "tag": "?",
+      "color": "#3498DB", // Blue for questions/queries
+      "strikethrough": false,
+      "backgroundColor": "transparent"
     },
-
-    // Conventional Commits settings - Enforce consistent commit messages
-    "conventionalCommits.autoCommit": false,
-    "conventionalCommits.emojiFormat": "emoji",
-    "conventionalCommits.gitmoji": true,
-    "conventionalCommits.promptBody": true, // Prompt for commit body
-    "conventionalCommits.promptFooter": true, // Prompt for commit footer
-    "conventionalCommits.promptScopes": true, // Prompt for commit scopes
-    "conventionalCommits.promptCI": true, // Prompt for CI skip
-    "conventionalCommits.scopes": [
-      // Core areas
-      "api",
-      "ui",
-      "core",
-      "auth",
-      "db",
-
-      // Infrastructure
-      "ci",
-      "docker",
-      "infra",
-
-      // Testing and quality
-      "test",
-      "e2e",
-
-      // Documentation and dependencies
-      "docs",
-      "deps",
-
-      // Features and components
-      "components",
-      "utils",
-      "config",
-      "i18n",
-
-      // Build and performance
-      "build",
-      "perf",
-
-      // Platform
-      "server",
-      "client"
-    ],
-
-    // File associations - Define how files should be interpreted
-    "files.associations": {
-      "*.css": "css",
-      "*.scss": "scss",
-      "*.sass": "sass",
-      "*.html": "html"
+    {
+      "tag": "//",
+      "color": "#474747", // Grey for deprecated code
+      "strikethrough": true,
+      "backgroundColor": "transparent"
     },
-
-    // GitLens settings - Configure additional Git functionality
-    "gitlens.codeLens.enabled": true, // Show Git information above code
-    "gitlens.currentLine.enabled": true, // Show Git blame information in current line
-    "gitlens.defaultTimeFormat": "HH:mm",
-    "gitlens.defaultDateFormat": "YYYY-MM-DD HH:mm",
-    "gitlens.hovers.currentLine.over": "line", // Show blame info when hovering over line
-    "gitlens.statusBar.enabled": true, // Show Git info in status bar
-    "gitlens.statusBar.format": "${branch} • ${authorAgoOrDate}", // Format of status bar info
-    "gitlens.advanced.messages": {
-      "suppressGitMissingWarning": true // Don't warn if Git is missing
+    {
+      "tag": "todo",
+      "color": "#FF8C00", // Orange for todos
+      "strikethrough": false,
+      "backgroundColor": "transparent"
     },
-
-    // GitLens views configuration
-    "gitlens.views.branches.branches.layout": "list",
-    "gitlens.views.repositories.branches.layout": "list",
-    "gitlens.views.branches.showBranchComparison": "branch", // Enable branch comparison view
-
-    // Better Comments - Configure comment highlighting
-    "better-comments.tags": [
-      {
-        "tag": "!",
-        "color": "#FF2D00", // Red for important/warning comments
-        "strikethrough": false,
-        "backgroundColor": "transparent"
-      },
-      {
-        "tag": "?",
-        "color": "#3498DB", // Blue for questions/queries
-        "strikethrough": false,
-        "backgroundColor": "transparent"
-      },
-      {
-        "tag": "//",
-        "color": "#474747", // Grey for deprecated code
-        "strikethrough": true,
-        "backgroundColor": "transparent"
-      },
-      {
-        "tag": "todo",
-        "color": "#FF8C00", // Orange for todos
-        "strikethrough": false,
-        "backgroundColor": "transparent"
-      },
-      {
-        "tag": "*",
-        "color": "#98C379", // Green for highlights
-        "strikethrough": false,
-        "backgroundColor": "transparent"
-      }
-    ],
-
-    // Language specific settings - Configure editor behavior per language
-    "[javascript]": {
-      "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[typescript]": {
-      "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[markdown]": {
-      "editor.defaultFormatter": "esbenp.prettier-vscode",
-      "editor.quickSuggestions": {
-        "comments": "off",
-        "strings": "off",
-        "other": "off"
-      },
-    },
-    "[astro]": {
-      "editor.defaultFormatter": "astro-build.astro-vscode",
-    },
-
-    // Error Lens - Configure inline error/warning display
-    "errorLens.enabledDiagnosticLevels": ["error", "warning", "info"],
-    "errorLens.messageEnabled": true,
-
-    // Import Cost - Show size of imported packages
-    "importCost.typescriptExtensions": ["\\.tsx?$"],
-    "importCost.javascriptExtensions": ["\\.jsx?$"],
-    "importCost.showCalculatingDecoration": true,
-
-    // Search settings - Configure search behavior
-    "search.exclude": {
-      // Version Control
-      "**/.git": true,
-
-      // Dependencies and Package Managers
-      "**/node_modules": true,
-      "**/bower_components": true,
-      "**/.yarn": true,
-      "**/.pnp.*": true,
-
-      // Build and Output Directories
-      "**/dist": true,
-      "**/.next": true,
-      "**/out": true,
-      "**/build": true,
-      "**/.svelte-kit": true,
-      "**/.astro": true,
-      "**/target": true,
-      "**/debug": true,
-
-      // Cache and Temporary Files
-      "**/.cache": true,
-      "**/.parcel-cache": true,
-      "**/.temp": true,
-      "**/.docusaurus": true,
-      "**/package": true,
-
-      // Test and Coverage
-      "**/coverage": true,
-      "**/.nyc_output": true,
-      "**/lib-cov": true,
-
-      // Build Artifacts and Logs
-      "**/*.log": true,
-      "**/*.tsbuildinfo": true,
-
-      // Environment Files
-      "**/.env*": true,
-
-      // OS-specific Files
-      "**/.DS_Store": true,
-      "**/Thumbs.db": true
+    {
+      "tag": "*",
+      "color": "#98C379", // Green for highlights
+      "strikethrough": false,
+      "backgroundColor": "transparent"
     }
+  ],
+
+  // Language specific settings - Configure editor behavior per language
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.quickSuggestions": {
+      "comments": "off",
+      "strings": "off",
+      "other": "off"
+    }
+  },
+  "[astro]": {
+    "editor.defaultFormatter": "astro-build.astro-vscode"
+  },
+
+  // Error Lens - Configure inline error/warning display
+  "errorLens.enabledDiagnosticLevels": ["error", "warning", "info"],
+  "errorLens.messageEnabled": true,
+
+  // Import Cost - Show size of imported packages
+  "importCost.typescriptExtensions": ["\\.tsx?$"],
+  "importCost.javascriptExtensions": ["\\.jsx?$"],
+  "importCost.showCalculatingDecoration": true,
+
+  // Search settings - Configure search behavior
+  "search.exclude": {
+    // Version Control
+    "**/.git": true,
+
+    // Dependencies and Package Managers
+    "**/node_modules": true,
+    "**/bower_components": true,
+    "**/.yarn": true,
+    "**/.pnp.*": true,
+
+    // Build and Output Directories
+    "**/dist": true,
+    "**/.next": true,
+    "**/out": true,
+    "**/build": true,
+    "**/.svelte-kit": true,
+    "**/.astro": true,
+    "**/target": true,
+    "**/debug": true,
+
+    // Cache and Temporary Files
+    "**/.cache": true,
+    "**/.parcel-cache": true,
+    "**/.temp": true,
+    "**/.docusaurus": true,
+    "**/package": true,
+
+    // Test and Coverage
+    "**/coverage": true,
+    "**/.nyc_output": true,
+    "**/lib-cov": true,
+
+    // Build Artifacts and Logs
+    "**/*.log": true,
+    "**/*.tsbuildinfo": true,
+
+    // Environment Files
+    "**/.env*": true,
+
+    // OS-specific Files
+    "**/.DS_Store": true,
+    "**/Thumbs.db": true
   }
+}

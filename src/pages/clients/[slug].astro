@@ -24,7 +24,7 @@ const dominantColor = data.dominantColor || "oklch(0.637 0.237 25.331)";
 const portfolioPosts = await getCollection("portfolioEnCollection").then((posts) =>
   posts
     .filter((post) => post.data.client.id === client.id)
-    .sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime())
+    .sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime()),
 );
 ---
 

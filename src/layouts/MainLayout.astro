@@ -17,7 +17,7 @@ function truncateDescription(text: string, maxLength: number): string {
   const lastBoundary = Math.max(
     truncated.lastIndexOf("."),
     truncated.lastIndexOf("!"),
-    truncated.lastIndexOf("?")
+    truncated.lastIndexOf("?"),
   );
 
   return lastBoundary > 0 ? text.slice(0, lastBoundary + 1) : truncated;
