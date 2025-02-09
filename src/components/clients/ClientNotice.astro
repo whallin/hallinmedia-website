@@ -1,0 +1,20 @@
+---
+import PhHeartDuotone from "../icons/PhHeartDuotone.astro";
+const { dominantColor } = Astro.props;
+---
+
+<aside
+  class="relative rounded-lg border border-stone-300 bg-amber-50 p-6 text-sm font-light text-stone-700 selection:bg-[var(--dominant-color)] selection:text-[color-mix(in_oklab,var(--dominant-color),white_70%)]"
+>
+  <div
+    class="absolute -top-3 left-4 flex h-6 w-6 items-center justify-center rounded-full border border-stone-300 bg-amber-50 text-[var(--dominant-color)]"
+  >
+    <PhHeartDuotone class="h-4 w-4" />
+  </div>
+  <h3 class="mb-2 font-serif text-xl font-light text-stone-900 italic">Collaboration Notice</h3>
+  <p class="leading-relaxed">
+    This engagement was facilitated through a subcontracting arrangement. I'm proud to have
+    contributed to this project as part of a larger collaboration, but due to the nature of the
+    contract, I may not be allowed to share any details or created projects for this client.
+  </p>
+</aside>

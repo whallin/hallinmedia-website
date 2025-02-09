@@ -1,0 +1,78 @@
+---
+import { Picture } from "astro:assets";
+import { getRelativeLocaleUrl } from "astro:i18n";
+import IconPhSparkleDuotone from "../icons/PhSparkleDuotone.astro";
+
+const translations = {
+  en: {
+    learn_more: "Learn more",
+  },
+  sv: {
+    learn_more: "Läs mer",
+  },
+};
+
+const { posts, dominantColor, currentLocale } = Astro.props;
+---
+
+<section class="flex flex-col gap-8">
+  <header class="flex items-center justify-between">
+    <h2 class="text-3xl font-light text-stone-900 italic">Related Works</h2>
+    <IconPhSparkleDuotone class="h-8 w-8 text-[var(--dominant-color)]" />
+  </header>
+  <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+    {
+      posts.map((post) => (
+        <a
+          href={getRelativeLocaleUrl(currentLocale, `/portfolio/${post.id}`)}
+          class="group block h-full"
+        >
+          <article class="relative flex h-full flex-col overflow-hidden rounded-lg border border-stone-300 bg-amber-50 transition duration-200 selection:bg-[var(--dominant-color)] selection:text-[color-mix(in_oklab,var(--dominant-color),white_70%)] hover:-translate-y-1 hover:border-[var(--dominant-color)] hover:drop-shadow-[0_4px_4px_rgb(0,0,0,0.05)]">
+            <figure class="relative overflow-hidden">
+              {post.data.featured && (
+                <figcaption class="absolute top-4 right-4 z-10 text-xl text-[var(--dominant-color)] select-none">
+                  ★
+                </figcaption>
+              )}
+              <span class="absolute top-4 left-4 z-10 rounded-full border border-stone-500 bg-amber-50 px-2 py-1 text-xs font-light text-stone-700 transition duration-200 group-hover:border-[var(--dominant-color)] group-hover:text-[var(--dominant-color)]">
+                {post.data.category}
+              </span>
+              <Picture
+                src={post.data.featuredImage}
+                alt={post.data.featuredImageAlt}
+                widths={[400, 800, 1200]}
+                sizes="(max-width: 640px) 100vw, 50vw"
+                formats={["avif", "webp", "jpeg"]}
+                class="h-48 w-full object-cover transition duration-200 select-none group-hover:scale-105"
+              />
+            </figure>
+            <div class="flex flex-1 flex-col p-4">
+              <header>
+                <h2 class="mb-2 font-serif text-xl text-stone-900 italic underline decoration-dashed decoration-from-font underline-offset-4 group-hover:text-[var(--dominant-color)]">
+                  {post.data.title}
+                </h2>
+              </header>
+              <p class="line-clamp-2 text-sm font-light text-stone-600">{post.data.description}</p>
+            </div>
+            <footer class="mt-auto flex flex-row flex-wrap items-center justify-between border-t border-stone-200 p-4 text-stone-500">
+              <time
+                class="font-mono text-sm font-light text-stone-500"
+                datetime={new Date(post.data.date).toISOString()}
+              >
+                {new Date(post.data.date).toLocaleDateString()}
+              </time>
+              <div class="flex items-center justify-end gap-2 group-hover:text-[var(--dominant-color)]">
+                <span class="underline decoration-dashed decoration-from-font underline-offset-4">
+                  {translations[Astro.currentLocale].learn_more}
+                </span>
+                <div class="font-mono text-sm font-light whitespace-nowrap transition duration-200 select-none group-hover:translate-x-0.5">
+                  ->
+                </div>
+              </div>
+            </footer>
+          </article>
+        </a>
+      ))
+    }
+  </div>
+</section>
