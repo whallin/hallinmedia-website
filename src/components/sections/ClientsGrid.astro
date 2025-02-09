@@ -9,13 +9,13 @@ interface Props {
 const { clients } = Astro.props;
 ---
 
-<div class="grid gap-4 font-serif text-sm font-light sm:grid-cols-2">
+<article class="grid gap-4 font-serif text-sm font-light sm:grid-cols-2">
   {
     clients.map((client) => {
       const dominantColor = client.data.dominantColor || "oklch(0.637 0.237 25.331)";
       return (
         <a href={getRelativeLocaleUrl(`${Astro.currentLocale}`, `/clients/${client.id}`)}>
-          <div
+          <article
             class="group relative flex h-full flex-col gap-6 overflow-hidden rounded-lg border border-stone-300 bg-amber-50 px-4 py-6 transition duration-200 selection:bg-[var(--dominant-color)] selection:text-[color-mix(in_oklab,var(--dominant-color),white_70%)] hover:-translate-y-1 hover:border-[var(--dominant-color)] hover:drop-shadow-[0_4px_4px_rgb(0,0,0,0.05)] active:-translate-y-1 active:border-[var(--dominant-color)] active:drop-shadow-[0_4px_4px_rgb(0,0,0,0.05)]"
             style={`--dominant-color: ${dominantColor}`}
             onmouseenter={`document.querySelector('.heart-icon').style.color = '${dominantColor}'`}
@@ -24,12 +24,12 @@ const { clients } = Astro.props;
             ontouchend={`document.querySelector('.heart-icon').style.color = 'oklch(0.637 0.237 25.331)'`}
           >
             {client.data.featured && (
-              <span class="absolute top-4 right-4 text-xl text-[var(--dominant-color)] not-italic select-none">
+              <figure class="absolute top-4 right-4 text-xl text-[var(--dominant-color)] not-italic select-none">
                 ★
-              </span>
+              </figure>
             )}
-            <div class="absolute inset-x-0 -bottom-4 h-3/4 bg-[radial-gradient(ellipse_at_bottom,var(--dominant-color)_0%,transparent_70%)] opacity-[0.08] transition duration-200 group-hover:opacity-30" />
-            <div class="flex h-16 items-center justify-center">
+            <figure class="absolute inset-x-0 -bottom-4 h-3/4 bg-[radial-gradient(ellipse_at_bottom,var(--dominant-color)_0%,transparent_70%)] opacity-[0.08] transition duration-200 group-hover:opacity-30" />
+            <figure class="flex h-16 items-center justify-center">
               <Image
                 src={client.data.logo}
                 alt={`${client.data.name} logo`}
@@ -37,18 +37,18 @@ const { clients } = Astro.props;
                 height="64"
                 class="max-h-16 w-fit max-w-32 transition duration-200 select-none group-hover:scale-105"
               />
-            </div>
-            <div class="flex justify-between">
+            </figure>
+            <header class="flex justify-between">
               <h2 class="font-serif text-xl text-stone-700 italic underline decoration-dashed decoration-from-font underline-offset-4 group-hover:text-[var(--dominant-color)]">
                 {client.data.name}
               </h2>
               <div class="flex items-center justify-end gap-2 text-stone-500 group-hover:bg-[var(--dominant-color)] group-hover:text-stone-50">
                 <div class="font-mono text-sm font-light whitespace-nowrap select-none">-></div>
               </div>
-            </div>
-          </div>
+            </header>
+          </article>
         </a>
       );
     })
   }
-</div>
+</article>
