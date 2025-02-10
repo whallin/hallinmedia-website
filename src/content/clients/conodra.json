@@ -1,0 +1,14 @@
+{
+  "name": "Conodra",
+  "description": {
+    "en": "Description",
+    "sv": "Description"
+  },
+  "logo": "/src/assets/clients/conodra.svg",
+  "dominantColor": "#0a60ff",
+  "websiteUrl": "https://conodra.com/",
+  "socialLinks": {
+    "twitter": "https://x.com/conodra",
+    "linkedin": "https://www.linkedin.com/company/conodra"
+  }
+}
