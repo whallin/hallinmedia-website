@@ -21,7 +21,7 @@ const { posts, currentLocale } = Astro.props;
     </h2>
     <IconPhSparkleDuotone class="h-8 w-8 text-[var(--dominant-color)]" />
   </header>
-  <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+  <div class="grid gap-4 sm:grid-cols-2">
     {posts.map((post) => <PortfolioCard post={post} currentLocale={currentLocale} />)}
   </div>
 </section>

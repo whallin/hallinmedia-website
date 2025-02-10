@@ -3,21 +3,19 @@ import { Image, Picture } from "astro:assets";
 import { getRelativeLocaleUrl } from "astro:i18n";
 import PortfolioTags from "./PortfolioTags.astro";
 
-const { item, client, dominantColor } = Astro.props;
+const { item, client } = Astro.props;
 ---
 
-<header class="flex flex-col gap-2">
-  <div
-    class="flex flex-col-reverse gap-4 selection:bg-red-300 selection:text-red-800 sm:flex-row sm:items-center sm:justify-between"
-  >
-    <h1 class="max-w-md text-4xl font-light break-words text-stone-900 italic sm:text-6xl">
+<header class="flex flex-col gap-2 selection:bg-red-300 selection:text-red-800">
+  <div class="flex flex-col-reverse gap-4 sm:flex-row sm:items-center sm:justify-between">
+    <h1 class="max-w-md text-4xl font-light text-stone-900 italic sm:text-6xl">
       {item.data.title}
     </h1>
-    <time
-      class="h-fit w-fit rounded-full border border-stone-500 px-3 py-1 font-mono text-xs font-light text-stone-600"
+    <span
+      class="w-fit rounded-full border border-stone-500 px-3 py-1 text-xs font-light text-stone-600"
     >
       {item.data.category}
-    </time>
+    </span>
   </div>
 
   {
@@ -28,20 +26,20 @@ const { item, client, dominantColor } = Astro.props;
         widths={[320, 480, 768]}
         formats={["avif", "webp", "jpeg"]}
         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-        class="mt-6 mb-4 aspect-video h-full w-full rounded-lg border-2 border-stone-300 object-cover transition duration-200 select-none hover:-translate-y-1 hover:border-[var(--dominant-color)] hover:drop-shadow-lg active:-translate-y-1 active:border-[var(--dominant-color)] active:drop-shadow-lg sm:mt-12"
+        class="mt-6 mb-4 aspect-video rounded-lg border-2 border-stone-300 object-cover transition select-none hover:-translate-y-1 hover:border-[var(--dominant-color)] hover:drop-shadow-lg active:-translate-y-1 active:border-[var(--dominant-color)] active:drop-shadow-lg sm:mt-12"
       />
     )
   }
 
   <nav class="flex items-center justify-between gap-4">
-    <PortfolioTags tags={item.data.tags} dominantColor={dominantColor} />
+    <PortfolioTags tags={item.data.tags} />
 
     {
       client?.data?.logo && (
-        <div class="flex h-8 w-32 justify-end">
+        <div class="h-8 w-32">
           <a
             href={getRelativeLocaleUrl(`${Astro.currentLocale}`, `/clients/${client.id}`)}
-            class="block h-full transition duration-200 hover:opacity-70 active:scale-95 active:opacity-70"
+            class="block h-full transition hover:opacity-70 active:scale-95 active:opacity-70"
           >
             <Image
               src={client.data.logo}

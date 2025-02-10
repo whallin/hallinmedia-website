@@ -64,7 +64,7 @@ const images = [
   {
     images.map((image) => (
       <figure
-        class={`group flex flex-col items-center ${image.colSpan} transition duration-200 hover:-translate-y-1`}
+        class={`group ${image.colSpan} transition hover:-translate-y-1 active:-translate-y-1`}
       >
         <div class="relative h-72 w-full" style={`--border-color: ${image.hoverColor}`}>
           <Picture
@@ -73,9 +73,9 @@ const images = [
             widths={[320, 480, 768]}
             formats={["avif", "webp", "jpeg"]}
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-            class="h-full w-full rounded-lg border-2 border-stone-300 object-cover transition duration-200 select-none group-hover:border-[var(--border-color)] group-hover:drop-shadow-lg group-active:border-[var(--border-color)] group-active:drop-shadow-lg"
+            class="h-full w-full rounded-lg border-2 border-stone-300 object-cover transition select-none group-hover:border-[var(--border-color)] group-hover:drop-shadow-lg group-active:border-[var(--border-color)] group-active:drop-shadow-lg"
           />
-          <figcaption class="absolute bottom-4 left-4 z-10 rounded-full border border-stone-500 bg-amber-50 px-2 py-1 text-xs font-light text-stone-700 transition duration-200 group-hover:border-[var(--border-color)] group-hover:text-[var(--border-color)] group-active:border-[var(--border-color)] group-active:text-[var(--border-color)] selection:bg-[var(--border-color)] selection:text-[color-mix(in_oklab,var(--border-color),white_70%)]">
+          <figcaption class="absolute bottom-4 left-4 z-10 rounded-full border border-stone-500 bg-amber-50 px-2 py-1 text-xs font-light text-stone-700 transition group-hover:border-[var(--border-color)] group-hover:text-[var(--border-color)] group-active:border-[var(--border-color)] group-active:text-[var(--border-color)] selection:bg-[var(--border-color)] selection:text-[color-mix(in_oklab,var(--border-color),white_70%)]">
             {image.specs}
           </figcaption>
         </div>

@@ -18,10 +18,10 @@ const { post } = Astro.props;
 
 <a
   href={getRelativeLocaleUrl(`${Astro.currentLocale}`, `/blog/${post.id}`)}
-  class="group block h-full transition duration-200 active:scale-95"
+  class="group block h-full transition active:scale-95"
 >
   <article
-    class="relative flex h-full flex-col overflow-hidden rounded-lg border border-stone-300 bg-amber-50 transition duration-200 selection:bg-red-300 selection:text-red-800 hover:-translate-y-1 hover:border-red-500 hover:drop-shadow-[0_4px_4px_rgb(0,0,0,0.05)] active:-translate-y-1 active:border-red-500 active:drop-shadow-[0_4px_4px_rgb(0,0,0,0.05)]"
+    class="relative flex h-full flex-col overflow-hidden rounded-lg border border-stone-300 bg-amber-50 transition selection:bg-red-300 selection:text-red-800 hover:-translate-y-1 hover:border-red-500 hover:drop-shadow-[0_4px_4px_rgb(0,0,0,0.05)] active:-translate-y-1 active:border-red-500 active:drop-shadow-[0_4px_4px_rgb(0,0,0,0.05)]"
   >
     {
       post.data.featured && (
@@ -30,7 +30,7 @@ const { post } = Astro.props;
     }
     <figure class="relative overflow-hidden">
       <span
-        class="absolute top-4 left-4 z-10 rounded-full border border-stone-500 bg-amber-50 px-2 py-1 text-xs font-light text-stone-700 transition duration-200 group-hover:border-red-500 group-hover:text-red-700 group-active:border-red-500 group-active:text-red-700"
+        class="absolute top-4 left-4 z-10 rounded-full border border-stone-500 bg-amber-50 px-2 py-1 text-xs font-light text-stone-700 transition group-hover:border-red-500 group-hover:text-red-700 group-active:border-red-500 group-active:text-red-700"
       >
         {post.data.category}
       </span>
@@ -39,7 +39,7 @@ const { post } = Astro.props;
         alt={post.data.featuredImageAlt}
         widths={[400, 800, 1200]}
         sizes="(max-width: 640px) 100vw, 50vw"
-        class="h-48 w-full object-cover transition duration-200 select-none group-hover:scale-105 group-active:scale-105"
+        class="h-48 w-full object-cover transition select-none group-hover:scale-105 group-active:scale-105"
         formats={["avif", "webp", "jpeg"]}
       />
     </figure>
@@ -77,7 +77,7 @@ const { post } = Astro.props;
           {translations[Astro.currentLocale].read_more}
         </span>
         <div
-          class="font-mono text-sm font-light whitespace-nowrap transition duration-200 select-none group-hover:translate-x-0.5 group-active:translate-x-0.5"
+          class="font-mono text-sm font-light whitespace-nowrap select-none group-hover:translate-x-0.5 group-active:translate-x-0.5"
         >
           ->
         </div>

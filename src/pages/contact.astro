@@ -12,89 +12,86 @@ import MainLayout from "../layouts/MainLayout.astro";
 ---
 
 <MainLayout title="Contact">
-  <article class="flex flex-col gap-12 font-serif">
-    <header
-      class="flex flex-col-reverse justify-between gap-4 selection:bg-red-300 selection:text-red-800 sm:flex-row sm:items-center"
-    >
-      <h1 class="max-w-md text-4xl font-light break-words text-stone-900 italic">Chat with me</h1>
-      <IconPhHandPeaceDuotone
-        class="flip -motion-rotate-loop-24/mirror motion-duration-2000 motion-ease h-8 w-8 origin-bottom text-red-500 motion-safe:rotate-12 sm:h-12 sm:w-12"
-      />
-    </header>
-    <section
-      class="flex flex-col-reverse gap-4 font-serif text-sm font-light text-stone-700 sm:flex-row sm:items-center sm:gap-24"
-    >
-      <div class="flex flex-col gap-2 selection:bg-red-300 selection:text-red-800">
-        <p>
-          I'm always looking for new chances to work with brands and businesses. If you're
-          interested in collaborating, <a
-            href="#contacts"
-            class="text-red-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-50 hover:no-underline active:opacity-50"
-            >please get in touch</a
-          >. If you're just curious about my work and want to chat, feel free to reach out, and
-          maybe we can meet for coffee.
-        </p>
-        <p>
-          Curious about my pricing? <a
-            href="#pricing"
-            class="text-red-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-50 hover:no-underline active:opacity-50"
-            >Check out my pricing section</a
-          > which gives you a good idea of what I tend to charge for my services.
-        </p>
-        <time class="mt-2 font-mono text-xs text-stone-500">
-          Current time in Sweden: <span id="swedishTime"></span>
-        </time>
+  <article class="space-y-12 font-serif">
+    <header class="selection:bg-red-300 selection:text-red-800">
+      <div class="flex flex-col-reverse gap-4 sm:flex-row sm:items-center sm:justify-between">
+        <h1 class="max-w-md text-4xl font-light text-stone-900 italic">Chat with me</h1>
+        <IconPhHandPeaceDuotone
+          class="flip -motion-rotate-loop-24/mirror motion-duration-2000 motion-ease h-8 w-8 origin-bottom text-red-500 motion-safe:rotate-12 sm:h-12 sm:w-12"
+        />
       </div>
-      <Image
-        src={ImgAvatar}
-        alt="Portrait of William Hallin"
-        width="256"
-        height="256"
-        class="h-12 w-12 rounded-full border border-stone-300 object-cover drop-shadow-xs select-none sm:h-24 sm:w-24"
-      />
+    </header>
+    <section class="font-serif text-sm font-light text-stone-700">
+      <div class="flex flex-col-reverse gap-4 sm:flex-row sm:items-center sm:gap-24">
+        <div class="flex flex-col gap-2 selection:bg-red-300 selection:text-red-800">
+          <p>
+            I'm always looking for new chances to work with brands and businesses. If you're
+            interested in collaborating, <a
+              href="#contacts"
+              class="text-red-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-50 hover:no-underline active:opacity-50"
+              >please get in touch</a
+            >. If you're just curious about my work and want to chat, feel free to reach out, and
+            maybe we can meet for coffee.
+          </p>
+          <p>
+            Curious about my pricing? <a
+              href="#pricing"
+              class="text-red-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-50 hover:no-underline active:opacity-50"
+              >Check out my pricing section</a
+            > which gives you a good idea of what I tend to charge for my services.
+          </p>
+          <time class="mt-2 font-mono text-xs text-stone-500">
+            Current time in Sweden: <span id="swedishTime"></span>
+          </time>
+        </div>
+        <Image
+          src={ImgAvatar}
+          alt="Portrait of William Hallin"
+          width="256"
+          height="256"
+          class="h-12 w-12 rounded-full border border-stone-300 object-cover drop-shadow-xs select-none sm:h-24 sm:w-24"
+        />
+      </div>
     </section>
     <address id="contacts" class="flex flex-col gap-8 sm:flex-row sm:justify-between">
       <div class="flex flex-col gap-2 selection:bg-amber-300 selection:text-amber-700">
-        <h2 class="flex items-center gap-2 text-2xl font-light text-stone-900 italic">
+        <h2 class="flex items-center gap-2 text-2xl font-light text-stone-900">
           <IconPhEnvelopeDuotone class="h-6 w-6 text-amber-500" />
           Email
         </h2>
         <a
           href="mailto:william@hallin.media?subject=Hey William!"
-          class="w-fit font-mono text-sm text-amber-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-amber-500 hover:text-amber-100 hover:no-underline active:opacity-50"
+          class="w-fit font-mono text-sm text-amber-500 not-italic underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-amber-500 hover:text-amber-100 hover:no-underline active:opacity-50"
           >william@hallin.media</a
         >
       </div>
       <div class="flex flex-col gap-2 selection:bg-red-300 selection:text-red-800">
-        <h2 class="flex items-center gap-2 text-2xl font-light text-stone-900 italic">
+        <h2 class="flex items-center gap-2 text-2xl font-light text-stone-900">
           <IconPhPhoneCallDuotone class="h-6 w-6 text-red-500" />
           Mobile
         </h2>
         <a
           href="tel:+46706159279"
-          class="w-fit font-mono text-sm text-red-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-red-100 hover:no-underline active:opacity-50"
+          class="w-fit font-mono text-sm text-red-500 not-italic underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-red-100 hover:no-underline active:opacity-50"
           >+46 70-615 92 79</a
         >
       </div>
       <div class="flex flex-col gap-2 selection:bg-blue-300 selection:text-blue-700">
-        <h2 class="flex items-center gap-2 text-2xl font-light text-stone-900 italic">
+        <h2 class="flex items-center gap-2 text-2xl font-light text-stone-900">
           <IconPhLinkedinLogoDuotone class="h-6 w-6 text-blue-500" />
           LinkedIn
         </h2>
         <a
           href="https://www.linkedin.com/in/whallin"
           target="_blank"
-          class="w-fit font-mono text-sm text-blue-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-blue-500 hover:text-blue-100 hover:no-underline active:opacity-50"
+          class="w-fit font-mono text-sm text-blue-500 not-italic underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-blue-500 hover:text-blue-100 hover:no-underline active:opacity-50"
           >/in/whallin</a
         >
       </div>
     </address>
     <FaqList slice={5} showFeaturedOnly={true} />
     <PricingTable />
-    <section
-      id="legalities"
-      class="flex flex-col gap-4 selection:bg-red-300 selection:text-red-800"
-    >
+    <section id="legalities" class="space-y-4 selection:bg-red-300 selection:text-red-800">
       <h2 class="font-serif text-3xl font-light text-stone-900 italic">Legalities</h2>
       <p class="font-serif text-sm font-light text-stone-700">
         Sometimes the admin side of things can get in the way of the fun stuff, especially when it
@@ -116,10 +113,11 @@ import MainLayout from "../layouts/MainLayout.astro";
       timeZone: "Europe/Stockholm",
       hour: "2-digit",
       minute: "2-digit",
+      second: "2-digit",
     });
     document.getElementById("swedishTime")!.textContent = swedishTime;
   }
 
   updateTime();
-  setInterval(updateTime, 60000);
+  setInterval(updateTime, 1000);
 </script>

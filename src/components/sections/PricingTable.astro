@@ -54,25 +54,23 @@ const translations = {
         .map((category) => {
           const IconComponent = iconComponents[category.data.icon];
           const colorClasses = {
-            amber: "selection:bg-amber-300 selection:text-amber-700",
-            green: "selection:bg-green-300 selection:text-green-700",
-            blue: "selection:bg-blue-300 selection:text-blue-700",
-            red: "selection:bg-red-300 selection:text-red-700",
+            amber: "text-amber-500 selection:bg-amber-300 selection:text-amber-700",
+            green: "text-green-500 selection:bg-green-300 selection:text-green-700",
+            blue: "text-blue-500 selection:bg-blue-300 selection:text-blue-700",
+            red: "text-red-500 selection:bg-red-300 selection:text-red-700",
           };
           return (
             <article class={`flex flex-col gap-2 ${colorClasses[category.data.color]}`}>
               <h3 class="flex items-center gap-2 text-lg font-light text-stone-900 italic">
                 <IconComponent
-                  class={`h-6 w-6 ${category.data.color === "amber" && "text-amber-500"} ${category.data.color === "green" && "text-green-500"} ${category.data.color === "blue" && "text-blue-500"} ${category.data.color === "red" && "text-red-500"} `}
+                  class={`h-6 w-6 ${colorClasses[category.data.color].split(" ")[0]}`}
                 />
                 {category.data.categoryName[Astro.currentLocale]}
               </h3>
               <hr class="border-stone-300" />
               {category.data.services.map((service) => (
                 <figure class="group relative flex cursor-help items-center justify-between">
-                  <figcaption
-                    class={`peer text-sm font-light text-stone-700 underline decoration-stone-300 decoration-dashed decoration-from-font underline-offset-4 transition group-hover:text-stone-900 group-hover:decoration-stone-900 group-active:text-stone-900 group-active:decoration-stone-900 has-[div.opacity-100]:text-stone-900 has-[div.opacity-100]:decoration-stone-900`}
-                  >
+                  <figcaption class="peer text-sm font-light text-stone-700 underline decoration-stone-300 decoration-dashed decoration-from-font underline-offset-4 transition hover:text-stone-900 hover:decoration-stone-900 active:text-stone-900 active:decoration-stone-900 has-[div.opacity-100]:text-stone-900 has-[div.opacity-100]:decoration-stone-900">
                     {service.name[Astro.currentLocale]}
                     <div class="pointer-events-none absolute z-10 mt-2 w-64 rounded-sm bg-stone-800 px-2 py-1 text-xs font-light text-white opacity-0 transition select-none group-hover:opacity-100 peer-hover:opacity-100">
                       {service.description[Astro.currentLocale]}

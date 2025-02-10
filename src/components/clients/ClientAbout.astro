@@ -29,7 +29,7 @@ const { name, description, websiteUrl } = Astro.props;
         href={websiteUrl}
         target="_blank"
         rel="noopener noreferrer"
-        class="inline-flex items-center justify-center gap-2 rounded-md border bg-[var(--dominant-color)] px-4 py-2 text-sm font-medium text-stone-50 transition duration-200 hover:opacity-75 active:scale-95 active:opacity-75"
+        class="flex items-center justify-center gap-2 rounded-md border bg-[var(--dominant-color)] px-4 py-2 text-sm font-medium text-stone-50 transition hover:opacity-75 active:scale-95 active:opacity-75"
       >
         {translations[Astro.currentLocale].visit}{" "}
         {websiteUrl.replace(/^(https?:\/\/)?(www\.)?|\/$/g, "")}

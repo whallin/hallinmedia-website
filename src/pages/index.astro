@@ -10,11 +10,11 @@ const age = new Date().getFullYear() - 2005 - (new Date().getMonth() < 7 ? 1 : 0
 ---
 
 <MainLayout title="Home">
-  <main class="flex flex-col gap-12 font-serif">
+  <main class="space-y-12 font-serif">
     <header
-      class="flex flex-col-reverse justify-between gap-4 selection:bg-red-300 selection:text-red-800 sm:flex-row sm:items-center"
+      class="flex flex-col-reverse gap-4 selection:bg-red-300 selection:text-red-800 sm:flex-row sm:items-center sm:justify-between"
     >
-      <h1 class="max-w-md text-4xl font-light break-words text-stone-900 italic sm:text-6xl">
+      <h1 class="max-w-md text-4xl font-light text-stone-900 italic sm:text-6xl">
         The details are everything.
       </h1>
       <IconPhHandWavingDuotone
@@ -22,7 +22,7 @@ const age = new Date().getFullYear() - 2005 - (new Date().getMonth() < 7 ? 1 : 0
       />
     </header>
     <article
-      class="flex flex-col gap-4 text-sm font-light text-stone-700 selection:bg-red-300 selection:text-red-800"
+      class="mt-12 space-y-4 text-sm font-light text-stone-700 selection:bg-red-300 selection:text-red-800"
     >
       <p>
         I'm a {age}-year-old <b>photographer</b> and <b>digital designer</b> based in Skellefteå, Sweden.
@@ -30,12 +30,12 @@ const age = new Date().getFullYear() - 2005 - (new Date().getMonth() < 7 ? 1 : 0
       <p>
         I craft engaging <a
           href={getRelativeLocaleUrl(`${Astro.currentLocale}`, "portfolio")}
-          class="text-red-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-50 hover:no-underline active:opacity-50"
+          class="text-red-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-50 active:opacity-75"
           >visual experiences</a
         > for brands and businesses. With 5+ years of experience under my belt, I've had the pleasure
         of working with <a
           href={getRelativeLocaleUrl(`${Astro.currentLocale}`, "clients")}
-          class="text-red-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-50 hover:no-underline active:opacity-50"
+          class="text-red-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-50 active:opacity-75"
           >clients from all around the globe</a
         >, helping them bring their brand to life and grow their business through effective
         communication.
@@ -44,11 +44,11 @@ const age = new Date().getFullYear() - 2005 - (new Date().getMonth() < 7 ? 1 : 0
         When I'm not busy creating, you'll likely <a
           href="https://www.instagram.com/williamhallinn"
           target="_blank"
-          class="text-red-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-50 hover:no-underline active:opacity-50"
+          class="text-red-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-50 active:opacity-75"
           >find me out and about with my camera</a
         >, capturing the beauty around me—or <a
           href="#blog"
-          class="text-red-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-50 hover:no-underline active:opacity-50"
+          class="text-red-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-50 active:opacity-75"
           >writing about the things I love</a
         >.
       </p>

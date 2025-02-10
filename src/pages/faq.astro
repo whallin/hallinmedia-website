@@ -9,20 +9,14 @@ const faqCollection = await getCollection("faqCollection");
 ---
 
 <MainLayout title="FAQ" faqData={faqCollection}>
-  <article class="flex flex-col gap-12 font-serif">
-    <header
-      class="flex flex-col-reverse justify-between gap-4 selection:bg-red-300 selection:text-red-800 sm:flex-row sm:items-center"
-    >
-      <h1 class="max-w-md text-4xl font-light break-words text-stone-900 italic">
-        Frequent questions
-      </h1>
+  <article class="space-y-12 font-serif selection:bg-red-300 selection:text-red-800">
+    <header class="flex flex-col-reverse gap-4 sm:flex-row sm:items-center sm:justify-between">
+      <h1 class="max-w-md text-4xl font-light text-stone-900 italic">Frequent questions</h1>
       <PhQuestionDuotone
         class="motion-opacity-loop-60 motion-duration-2000 motion-ease h-8 w-8 text-red-500 sm:h-12 sm:w-12"
       />
     </header>
-    <p
-      class="font-serif text-sm font-light text-stone-700 selection:bg-red-300 selection:text-red-800"
-    >
+    <p class="text-sm font-light text-stone-700">
       Sometimes, questions arise that disrupt useful conversations. Here are some of the most common
       questions I am asked, along with their answers. Hopefully, they will help you understand me,
       my services, and my work a bit better. If they don't answer your question, <a

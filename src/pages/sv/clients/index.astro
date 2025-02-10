@@ -13,21 +13,21 @@ const sortedClients = clientsCollection.sort((a, b) => {
 ---
 
 <MainLayout title="Kunder">
-  <main class="flex flex-col gap-12 font-serif">
-    <header
-      class="flex flex-col-reverse justify-between gap-4 selection:bg-red-300 selection:text-red-800 sm:flex-row sm:items-center"
-    >
-      <h1 class="max-w-md text-4xl font-light break-words text-stone-900 italic">
-        Mina grymma kunder
-      </h1>
-      <IconPhHeartDuotone
-        class="heart-icon motion-preset-pulse motion-duration-2000 h-8 w-8 text-red-500 transition duration-200 sm:h-12 sm:w-12"
-      />
+  <main class="space-y-12 font-serif">
+    <header class="selection:bg-red-300 selection:text-red-800">
+      <div class="flex flex-col-reverse justify-between gap-4 sm:flex-row sm:items-center">
+        <h1 class="max-w-md text-4xl font-light break-words text-stone-900 italic">
+          Mina grymma kunder
+        </h1>
+        <IconPhHeartDuotone
+          class="heart-icon motion-preset-pulse motion-duration-2000 h-8 w-8 text-red-500 transition duration-200 sm:h-12 sm:w-12"
+        />
+      </div>
     </header>
     <article
-      class="flex flex-col gap-4 font-serif text-sm font-light text-stone-700 selection:bg-red-300 selection:text-red-800"
+      class="font-serif text-sm font-light text-stone-700 selection:bg-red-300 selection:text-red-800"
     >
-      <p>
+      <p class="mt-12">
         Varje projekt är en härlig berättelse om förtroende, innovation och gemensamma idéer. Dessa
         fantastiska varumärken, företag och organisationer har gett mig chansen att förverkliga
         deras visioner, och de har också hjälpt mig att växa i mitt yrke.

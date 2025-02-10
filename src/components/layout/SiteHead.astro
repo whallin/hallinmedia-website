@@ -213,37 +213,9 @@ const { title, description = "", article, faqData, datePublished, dateModified }
           : ""
       }
       ${
-        Astro.url.pathname.includes("/legal/")
-          ? `,
-      {
-        "@type": "Article",
-        "mainEntityOfPage": {
-          "@type": "WebPage",
-          "@id": "${Astro.url}"
-        },
-        "headline": "${title}",
-        "description": "${description}",
-        "image": "https://hallin.media/meta.png",
-        "author": {
-          "@type": "Organization",
-          "name": "HallinMedia",
-          "url": "https://hallin.media/"
-        },
-        "publisher": {
-          "@type": "Organization",
-          "name": "HallinMedia",
-          "logo": {
-            "@type": "ImageObject",
-            "url": "https://hallin.media/meta.png"
-          }
-        },
-        ${datePublished ? `"datePublished": "${datePublished}",` : ""}
-        ${dateModified ? `"dateModified": "${dateModified}"` : ""}
-      }`
-          : ""
-      }
-      ${
-        Astro.url.pathname.includes("/blog/") || Astro.url.pathname.includes("/portfolio/")
+        Astro.url.pathname.includes("/legal/") ||
+        Astro.url.pathname.includes("/blog/") ||
+        Astro.url.pathname.includes("/portfolio/")
           ? `,
       {
         "@type": "${Astro.url.pathname.includes("/blog/") ? "BlogPosting" : "Article"}",
@@ -255,8 +227,8 @@ const { title, description = "", article, faqData, datePublished, dateModified }
         "description": "${description}",
         "image": "https://hallin.media/meta.png",
         "author": {
-          "@type": "Person",
-          "name": "William Hallin",
+          "@type": "${Astro.url.pathname.includes("/legal/") ? "Organization" : "Person"}",
+          "name": "${Astro.url.pathname.includes("/legal/") ? "HallinMedia" : "William Hallin"}",
           "url": "https://hallin.media/"
         },
         "publisher": {

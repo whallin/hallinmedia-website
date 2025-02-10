@@ -28,18 +28,18 @@ const categoryStyles = {
 };
 ---
 
-<footer class="mt-8 selection:bg-red-300 selection:text-red-800">
-  <h2 class="mb-4 text-2xl font-light text-stone-900 italic">
+<footer class="mt-8 selection:bg-red-300/80 selection:text-red-800">
+  <h2 class="mb-4 text-2xl font-light text-stone-900/90 italic">
     {translations[Astro.currentLocale].related_posts}
   </h2>
-  <div class="flex w-full flex-col gap-4 sm:w-auto sm:flex-row sm:flex-wrap">
+  <div class="flex flex-col gap-4 sm:flex-row sm:flex-wrap">
     {
       relatedPosts.map((postSlug) => {
         const relatedPost = allPosts.find((p) => p.id === postSlug);
         return (
           <a
             href={getRelativeLocaleUrl(currentLocale, `/blog/${postSlug}`)}
-            class={`flex w-full items-center justify-center gap-2 rounded-lg border border-stone-300 px-4 py-2 text-sm text-stone-700 transition duration-200 active:scale-90 sm:w-auto sm:justify-normal ${categoryStyles[categoryColor]}`}
+            class={`flex items-center gap-2 rounded-lg border border-stone-300/80 px-4 py-2 text-sm text-stone-700/90 transition active:scale-90 ${categoryStyles[categoryColor]}`}
           >
             {relatedPost ? relatedPost.data.title : `/${postSlug}`}
           </a>

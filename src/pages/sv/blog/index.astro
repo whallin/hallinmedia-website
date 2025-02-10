@@ -30,17 +30,13 @@ const blogPosts = await getCollection("blogSvCollection").then(async (posts) => 
 });
 ---
 
-<MainLayout title="Blog">
-  <main class="flex flex-col gap-12 font-serif">
-    <header
-      class="flex flex-col-reverse justify-between gap-4 selection:bg-red-300 selection:text-red-800 sm:flex-row sm:items-center"
-    >
+<MainLayout title="Blogg">
+  <main class="flex flex-col gap-12 font-serif selection:bg-red-300 selection:text-red-800">
+    <header class="flex flex-col-reverse justify-between gap-4 sm:flex-row sm:items-center">
       <h1 class="max-w-md text-4xl font-light break-words text-stone-900 italic">Min "tidning"</h1>
       <IconPhNewspaperDuotone class="motion-preset-expand h-8 w-8 text-red-500 sm:h-12 sm:w-12" />
     </header>
-    <article
-      class="flex flex-col gap-4 font-serif text-sm font-light text-stone-700 selection:bg-red-300 selection:text-red-800"
-    >
+    <article class="flex flex-col gap-4 text-sm font-light text-stone-700">
       <p>
         Min blogg, eller som jag brukar kalla den, min tidning, är en plats för alla mina olika
         publikationer. Den innehåller allt från mina erfarenheter och upptäckter till personliga
@@ -66,7 +62,7 @@ const blogPosts = await getCollection("blogSvCollection").then(async (posts) => 
       </p>
     </article>
 
-    <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+    <div class="grid gap-4 sm:grid-cols-2">
       {blogPosts.map((post) => <BlogPostCard post={post} />)}
     </div>
   </main>

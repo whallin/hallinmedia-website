@@ -20,7 +20,7 @@ const translations = {
   class="group relative flex w-fit items-center gap-3 text-xs font-light text-stone-600 active:opacity-50"
 >
   <figure
-    class="invisible absolute -top-8 left-1/2 z-10 -translate-x-1/2 rounded bg-stone-800 px-2 py-1 text-xs whitespace-nowrap text-stone-50 opacity-0 transition duration-200 group-hover:visible group-hover:opacity-100 group-active:visible group-active:opacity-100"
+    class="invisible absolute -top-8 left-1/2 z-10 -translate-x-1/2 rounded bg-stone-800 px-2 py-1 text-xs whitespace-nowrap text-stone-50 opacity-0 transition group-hover:visible group-hover:opacity-100 group-active:visible group-active:opacity-100"
   >
     <div class="flex items-center gap-2">
       <time class="flex flex-col items-center">
@@ -39,12 +39,12 @@ const translations = {
     alt={translations[Astro.currentLocale].album_cover}
     width="32"
     height="32"
-    class="rounded-full border border-stone-200 transition duration-200 select-none group-hover:shadow-lg group-hover:shadow-green-600/40 group-active:shadow-lg group-active:shadow-green-600/40 motion-safe:animate-[spin_10s_linear_infinite]"
+    class="rounded-full border border-stone-200 transition select-none group-hover:shadow-lg group-hover:shadow-green-600/40 group-active:shadow-lg group-active:shadow-green-600/40 motion-safe:animate-[spin_10s_linear_infinite]"
   />
   <article class="flex flex-col gap-1 selection:bg-green-300 selection:text-green-700">
     <p class="font-serif">{translations[Astro.currentLocale].last_played}</p>
     <address
-      class="w-fit font-mono text-green-600 underline decoration-green-600 decoration-dashed decoration-from-font underline-offset-4 group-hover:bg-green-600 group-hover:text-stone-50 group-hover:no-underline group-active:bg-green-600 group-active:text-stone-50 group-active:no-underline"
+      class="font-mono text-green-600 underline decoration-dashed decoration-from-font underline-offset-4 group-hover:bg-green-600 group-hover:text-stone-50 group-hover:no-underline group-active:bg-green-600 group-active:text-stone-50 group-active:no-underline"
     >
       <span id="s-artist">Artist</span> - <span id="s-track">Track</span>
     </address>
