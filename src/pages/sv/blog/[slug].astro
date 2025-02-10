@@ -33,6 +33,17 @@ const categoryColor = {
   Guider: "pink",
   Insikter: "teal",
 }[post.data.category];
+
+const categoryStyles = {
+  Design: "hover:border-sky-500",
+  Fotografi: "hover:border-fuchsia-500",
+  Video: "hover:border-rose-500",
+  Marknadsföring: "hover:border-emerald-500",
+  Teknik: "hover:border-amber-500",
+  Företagande: "hover:border-indigo-500",
+  Guider: "hover:border-pink-500",
+  Insikter: "hover:border-teal-500",
+}[post.data.category];
 ---
 
 <MainLayout
@@ -42,9 +53,6 @@ const categoryColor = {
   datePublished={post.data.publishedDate}
   dateModified={post.data.updatedDate}
 >
-  <wbr
-    class="hidden hover:border-amber-500 hover:border-emerald-500 hover:border-fuchsia-500 hover:border-indigo-500 hover:border-pink-500 hover:border-rose-500 hover:border-sky-500 hover:border-teal-500 hover:text-amber-700 hover:text-emerald-700 hover:text-fuchsia-700 hover:text-indigo-700 hover:text-pink-700 hover:text-rose-700 hover:text-sky-700 hover:text-teal-700"
-  />
   <article class="flex flex-col gap-8 font-serif">
     <BlogHeader
       category={post.data.category}
@@ -60,7 +68,7 @@ const categoryColor = {
           widths={[320, 480, 768]}
           formats={["avif", "webp", "jpeg"]}
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-          class={`hover:border-${categoryColor}-500 aspect-video w-full rounded-lg border-2 border-stone-300 object-cover transition duration-200 select-none hover:-translate-y-1 hover:drop-shadow-lg`}
+          class={`aspect-video w-full rounded-lg border-2 border-stone-300 object-cover transition duration-200 select-none hover:-translate-y-1 hover:drop-shadow-lg ${categoryStyles}`}
         />
       )
     }

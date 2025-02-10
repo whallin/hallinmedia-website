@@ -28,7 +28,7 @@ const { item, client, dominantColor } = Astro.props;
         widths={[320, 480, 768]}
         formats={["avif", "webp", "jpeg"]}
         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-        class="mt-6 mb-4 aspect-video h-full w-full rounded-lg border-2 border-stone-300 object-cover transition duration-200 select-none hover:-translate-y-1 hover:border-[var(--dominant-color)] hover:drop-shadow-lg sm:mt-12"
+        class="mt-6 mb-4 aspect-video h-full w-full rounded-lg border-2 border-stone-300 object-cover transition duration-200 select-none hover:-translate-y-1 hover:border-[var(--dominant-color)] hover:drop-shadow-lg active:-translate-y-1 active:border-[var(--dominant-color)] active:drop-shadow-lg sm:mt-12"
       />
     )
   }
@@ -41,7 +41,7 @@ const { item, client, dominantColor } = Astro.props;
         <div class="flex h-8 w-32 justify-end">
           <a
             href={getRelativeLocaleUrl(`${Astro.currentLocale}`, `/clients/${client.id}`)}
-            class="block h-full transition duration-200 hover:opacity-70 active:scale-95"
+            class="block h-full transition duration-200 hover:opacity-70 active:scale-95 active:opacity-70"
           >
             <Image
               src={client.data.logo}

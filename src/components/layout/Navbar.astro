@@ -8,28 +8,28 @@ import { getRelativeLocaleUrl } from "astro:i18n";
       <li>
         <a
           href={getRelativeLocaleUrl(`${Astro.currentLocale}`, "/")}
-          class={`hover:bg-red-500 hover:text-stone-50 active:opacity-50 ${Astro.url.pathname === "/" || Astro.url.pathname === `/${Astro.currentLocale}/` || Astro.url.pathname === `/${Astro.currentLocale}` ? "text-red-500" : ""}`}
+          class={`hover:bg-red-500 hover:text-stone-50 active:bg-red-500 active:text-stone-50 active:opacity-50 ${Astro.url.pathname === "/" || Astro.url.pathname === `/${Astro.currentLocale}/` || Astro.url.pathname === `/${Astro.currentLocale}` ? "text-red-500" : ""}`}
           >/home</a
         >
       </li>
       <li>
         <a
           href={getRelativeLocaleUrl(`${Astro.currentLocale}`, "portfolio")}
-          class={`hover:bg-red-500 hover:text-stone-50 active:opacity-50 ${Astro.url.pathname.includes("/portfolio") ? "text-red-500" : ""}`}
+          class={`hover:bg-red-500 hover:text-stone-50 active:bg-red-500 active:text-stone-50 active:opacity-50 ${Astro.url.pathname.includes("/portfolio") ? "text-red-500" : ""}`}
           >/portfolio</a
         >
       </li>
       <li>
         <a
           href={getRelativeLocaleUrl(`${Astro.currentLocale}`, "clients")}
-          class={`hover:bg-red-500 hover:text-stone-50 active:opacity-50 ${Astro.url.pathname.includes("/clients") ? "text-red-500" : ""}`}
+          class={`hover:bg-red-500 hover:text-stone-50 active:bg-red-500 active:text-stone-50 active:opacity-50 ${Astro.url.pathname.includes("/clients") ? "text-red-500" : ""}`}
           >/clients</a
         >
       </li>
       <li>
         <a
           href={getRelativeLocaleUrl(`${Astro.currentLocale}`, "contact")}
-          class={`hover:bg-red-500 hover:text-stone-50 active:opacity-50 ${Astro.url.pathname.includes("/contact") ? "text-red-500" : ""}`}
+          class={`hover:bg-red-500 hover:text-stone-50 active:bg-red-500 active:text-stone-50 active:opacity-50 ${Astro.url.pathname.includes("/contact") ? "text-red-500" : ""}`}
           >/contact</a
         >
       </li>
@@ -39,9 +39,9 @@ import { getRelativeLocaleUrl } from "astro:i18n";
         <a
           href={getRelativeLocaleUrl(
             "en",
-            Astro.url.pathname.replace(`/${Astro.currentLocale}`, ""),
+            Astro.url.pathname.replace(`/${Astro.currentLocale}`, "")
           )}
-          class={`hover:bg-blue-600 hover:text-stone-50 active:opacity-50 selection:bg-blue-300 selection:text-blue-700 ${Astro.url.pathname.includes(`/${Astro.currentLocale}`) ? "" : "text-blue-600"}`}
+          class={`hover:bg-blue-600 hover:text-stone-50 active:bg-blue-600 active:text-stone-50 active:opacity-50 selection:bg-blue-300 selection:text-blue-700 ${Astro.url.pathname.includes(`/${Astro.currentLocale}`) ? "" : "text-blue-600"}`}
           >EN</a
         >
       </li>
@@ -49,9 +49,9 @@ import { getRelativeLocaleUrl } from "astro:i18n";
         <a
           href={getRelativeLocaleUrl(
             "sv",
-            Astro.url.pathname.replace(`/${Astro.currentLocale}`, ""),
+            Astro.url.pathname.replace(`/${Astro.currentLocale}`, "")
           )}
-          class={`hover:bg-amber-500 hover:text-stone-50 active:opacity-50 selection:bg-amber-300 selection:text-amber-700 ${Astro.url.pathname.includes("/sv") ? "text-amber-500" : ""}`}
+          class={`hover:bg-amber-500 hover:text-stone-50 active:bg-amber-500 active:text-stone-50 active:opacity-50 selection:bg-amber-300 selection:text-amber-700 ${Astro.url.pathname.includes("/sv") ? "text-amber-500" : ""}`}
           >SV</a
         >
       </li>

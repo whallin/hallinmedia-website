@@ -30,11 +30,23 @@ const { item, audienceColor } = Astro.props;
   <div class="grid gap-4 sm:grid-cols-2">
     <dl class="space-y-2">
       <div
-        class={`flex items-center gap-2 selection:bg-${audienceColor}-300 selection:text-${audienceColor}-800`}
+        class={`flex items-center gap-2 ${
+          audienceColor === "blue"
+            ? "selection:bg-blue-300 selection:text-blue-800"
+            : audienceColor === "pink"
+              ? "selection:bg-pink-300 selection:text-pink-800"
+              : "selection:bg-purple-300 selection:text-purple-800"
+        }`}
       >
         <dt class="sr-only">{translations[Astro.currentLocale].audience}</dt>
         <dd class="flex items-center gap-2">
-          <span class={`text-${audienceColor}-500`}>
+          <span
+            class={audienceColor === "blue"
+              ? "text-blue-500"
+              : audienceColor === "pink"
+                ? "text-pink-500"
+                : "text-purple-500"}
+          >
             {
               item.data.audience === "B2B" ? (
                 <PhEnvelopeDuotone class="h-4 w-4" />
@@ -96,14 +108,14 @@ const { item, audienceColor } = Astro.props;
   {
     item.data.compliance && item.data.compliance.length > 0 && (
       <div class="border-t border-stone-200 pt-4 selection:bg-red-300 selection:text-red-800">
-        <div class="flex flex-col justify-between gap-4 sm:flex-row sm:items-center sm:gap-0">
+        <div class="flex flex-col-reverse justify-between gap-4 sm:flex-row sm:items-center sm:gap-0">
           <div>
             <h3 class="mb-2 text-xs font-medium text-stone-500">
               {translations[Astro.currentLocale].compliance}
             </h3>
             <div class="flex flex-wrap gap-2">
               {item.data.compliance.map((compliance) => (
-                <span class="rounded-full border border-stone-500 px-3 py-1 text-xs transition duration-200 hover:-translate-y-1 hover:border-red-500 hover:text-red-700">
+                <span class="rounded-full border border-stone-500 px-3 py-1 text-xs transition duration-200 hover:-translate-y-1 hover:border-red-500 hover:text-red-700 active:-translate-y-1 active:border-red-500 active:text-red-700">
                   {compliance}
                 </span>
               ))}

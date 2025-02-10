@@ -11,6 +11,21 @@ const translations = {
 };
 
 const { relatedPosts, allPosts, categoryColor, currentLocale } = Astro.props;
+
+const categoryStyles = {
+  sky: "hover:border-sky-500 hover:text-sky-700 active:border-sky-500 active:text-sky-700",
+  fuchsia:
+    "hover:border-fuchsia-500 hover:text-fuchsia-700 active:border-fuchsia-500 active:text-fuchsia-700",
+  rose: "hover:border-rose-500 hover:text-rose-700 active:border-rose-500 active:text-rose-700",
+  emerald:
+    "hover:border-emerald-500 hover:text-emerald-700 active:border-emerald-500 active:text-emerald-700",
+  amber:
+    "hover:border-amber-500 hover:text-amber-700 active:border-amber-500 active:text-amber-700",
+  indigo:
+    "hover:border-indigo-500 hover:text-indigo-700 active:border-indigo-500 active:text-indigo-700",
+  pink: "hover:border-pink-500 hover:text-pink-700 active:border-pink-500 active:text-pink-700",
+  teal: "hover:border-teal-500 hover:text-teal-700 active:border-teal-500 active:text-teal-700",
+};
 ---
 
 <footer class="mt-8 selection:bg-red-300 selection:text-red-800">
@@ -24,7 +39,7 @@ const { relatedPosts, allPosts, categoryColor, currentLocale } = Astro.props;
         return (
           <a
             href={getRelativeLocaleUrl(currentLocale, `/blog/${postSlug}`)}
-            class={`hover:border-${categoryColor}-500 hover:text-${categoryColor}-700 flex w-full items-center justify-center gap-2 rounded-lg border border-stone-300 px-4 py-2 text-sm text-stone-700 transition duration-200 active:scale-90 sm:w-auto sm:justify-normal`}
+            class={`flex w-full items-center justify-center gap-2 rounded-lg border border-stone-300 px-4 py-2 text-sm text-stone-700 transition duration-200 active:scale-90 sm:w-auto sm:justify-normal ${categoryStyles[categoryColor]}`}
           >
             {relatedPost ? relatedPost.data.title : `/${postSlug}`}
           </a>

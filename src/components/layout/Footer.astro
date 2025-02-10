@@ -16,6 +16,55 @@ const translations = {
     navTitle: "Utforska",
   },
 };
+
+const navLinks = [
+  { path: "/", label: "/home" },
+  { path: "portfolio", label: "/portfolio" },
+  { path: "clients", label: "/clients" },
+  { path: "contact", label: "/contact" },
+  { path: "faq", label: "/faq" },
+  { path: "blog", label: "/blog" },
+  { path: "legal", label: "/legal" },
+];
+
+const socialLinks = [
+  {
+    href: "mailto:william@hallin.media?subject=Hey!",
+    label: "mailto:",
+    classes: {
+      base: "decoration-amber-500 selection:bg-amber-300 selection:text-amber-700",
+      hover: "hover:bg-amber-500 hover:text-amber-100",
+      active: "active:bg-amber-500 active:text-amber-100",
+    },
+  },
+  {
+    href: "tel:+46706159279",
+    label: "tel:",
+    classes: {
+      base: "decoration-red-500 selection:bg-red-300 selection:text-red-700",
+      hover: "hover:bg-red-500 hover:text-red-100",
+      active: "active:bg-red-500 active:text-red-100",
+    },
+  },
+  {
+    href: "https://www.instagram.com/williamhallinn",
+    label: "instagram",
+    classes: {
+      base: "decoration-pink-500 selection:bg-pink-300 selection:text-pink-700",
+      hover: "hover:bg-pink-500 hover:text-pink-100",
+      active: "active:bg-pink-500 active:text-pink-100",
+    },
+  },
+  {
+    href: "https://www.linkedin.com/in/williamhallin",
+    label: "linkedin",
+    classes: {
+      base: "decoration-blue-500 selection:bg-blue-300 selection:text-blue-700",
+      hover: "hover:bg-blue-500 hover:text-blue-100",
+      active: "active:bg-blue-500 active:text-blue-100",
+    },
+  },
+];
 ---
 
 <footer class="mt-12 flex flex-col gap-8">
@@ -26,41 +75,16 @@ const translations = {
         {translations[Astro.currentLocale].navTitle}
       </h3>
       <menu class="flex flex-wrap justify-end gap-2 text-sm font-light text-stone-500">
-        <a
-          href={getRelativeLocaleUrl(`${Astro.currentLocale}`, "/")}
-          class="underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-50 hover:no-underline active:opacity-50"
-          >/home</a
-        >
-        <a
-          href={getRelativeLocaleUrl(`${Astro.currentLocale}`, "portfolio")}
-          class="underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-50 hover:no-underline active:opacity-50"
-          >/portfolio</a
-        >
-        <a
-          href={getRelativeLocaleUrl(`${Astro.currentLocale}`, "clients")}
-          class="underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-50 hover:no-underline active:opacity-50"
-          >/clients</a
-        >
-        <a
-          href={getRelativeLocaleUrl(`${Astro.currentLocale}`, "contact")}
-          class="underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-50 hover:no-underline active:opacity-50"
-          >/contact</a
-        >
-        <a
-          href={getRelativeLocaleUrl(`${Astro.currentLocale}`, "faq")}
-          class="underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-50 hover:no-underline active:opacity-50"
-          >/faq</a
-        >
-        <a
-          href={getRelativeLocaleUrl(`${Astro.currentLocale}`, "blog")}
-          class="underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-50 hover:no-underline active:opacity-50"
-          >/blog</a
-        >
-        <a
-          href={getRelativeLocaleUrl(`${Astro.currentLocale}`, "legal")}
-          class="underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-50 hover:no-underline active:opacity-50"
-          >/legal</a
-        >
+        {
+          navLinks.map((link) => (
+            <a
+              href={getRelativeLocaleUrl(`${Astro.currentLocale}`, link.path)}
+              class="underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-50 hover:no-underline active:bg-red-500 active:text-stone-50 active:no-underline active:opacity-50"
+            >
+              {link.label}
+            </a>
+          ))
+        }
       </menu>
     </nav>
 
@@ -82,34 +106,23 @@ const translations = {
       </figure>
       <div class="flex flex-col gap-2 sm:items-end">
         <menu class="flex flex-wrap gap-2 font-serif text-sm sm:justify-end">
-          <a
-            href="mailto:william@hallin.media?subject=Hey!"
-            class="underline decoration-amber-500 decoration-dashed decoration-from-font underline-offset-4 selection:bg-amber-300 selection:text-amber-700 hover:bg-amber-500 hover:text-amber-100 active:opacity-50"
-            >mailto:</a
-          >
-          <a
-            href="tel:+46706159279"
-            class="underline decoration-red-500 decoration-dashed decoration-from-font underline-offset-4 selection:bg-red-300 selection:text-red-800 hover:bg-red-500 hover:text-red-100 active:opacity-50"
-            >tel:</a
-          >
-          <a
-            href="https://www.instagram.com/williamhallinn"
-            target="_blank"
-            class="underline decoration-pink-500 decoration-dashed decoration-from-font underline-offset-4 selection:bg-pink-300 selection:text-pink-700 hover:bg-pink-500 hover:text-pink-100 active:opacity-50"
-            >instagram</a
-          >
-          <a
-            href="https://www.linkedin.com/in/williamhallin"
-            target="_blank"
-            class="underline decoration-blue-500 decoration-dashed decoration-from-font underline-offset-4 selection:bg-blue-300 selection:text-blue-700 hover:bg-blue-500 hover:text-blue-100 active:opacity-50"
-            >linkedin</a
-          >
+          {
+            socialLinks.map((link) => (
+              <a
+                href={link.href}
+                target={link.href.startsWith("http") ? "_blank" : undefined}
+                class={`underline decoration-dashed decoration-from-font underline-offset-4 ${link.classes.base} ${link.classes.hover} ${link.classes.active} active:opacity-50`}
+              >
+                {link.label}
+              </a>
+            ))
+          }
         </menu>
         <div class="flex items-center gap-2">
           <a
             href="https://github.com/whallin/hallinmedia-website"
             target="_blank"
-            class="font-mono text-xs font-light text-stone-500 selection:bg-stone-300 selection:text-stone-700 hover:bg-stone-500 hover:text-stone-100 active:opacity-50"
+            class="font-mono text-xs font-light text-stone-500 selection:bg-stone-300 selection:text-stone-700 hover:bg-stone-500 hover:text-stone-100 active:bg-stone-500 active:text-stone-100 active:opacity-50"
             >{GIT_HASH}</a
           >
         </div>

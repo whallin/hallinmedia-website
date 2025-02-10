@@ -28,6 +28,21 @@ const translations = {
 };
 
 const { publishedDate, updatedDate, author, readingTime, tags, categoryColor } = Astro.props;
+
+const categoryStyles = {
+  sky: "hover:border-sky-500 hover:text-sky-700 active:border-sky-500 active:text-sky-700",
+  fuchsia:
+    "hover:border-fuchsia-500 hover:text-fuchsia-700 active:border-fuchsia-500 active:text-fuchsia-700",
+  rose: "hover:border-rose-500 hover:text-rose-700 active:border-rose-500 active:text-rose-700",
+  emerald:
+    "hover:border-emerald-500 hover:text-emerald-700 active:border-emerald-500 active:text-emerald-700",
+  amber:
+    "hover:border-amber-500 hover:text-amber-700 active:border-amber-500 active:text-amber-700",
+  indigo:
+    "hover:border-indigo-500 hover:text-indigo-700 active:border-indigo-500 active:text-indigo-700",
+  pink: "hover:border-pink-500 hover:text-pink-700 active:border-pink-500 active:text-pink-700",
+  teal: "hover:border-teal-500 hover:text-teal-700 active:border-teal-500 active:text-teal-700",
+};
 ---
 
 <aside class="grid gap-6 rounded-lg border border-stone-200 p-6 font-mono text-sm text-stone-600">
@@ -87,7 +102,7 @@ const { publishedDate, updatedDate, author, readingTime, tags, categoryColor } =
         <div class="flex flex-wrap gap-2">
           {tags.map((tag) => (
             <span
-              class={`hover:border-${categoryColor}-500 hover:text-${categoryColor}-700 rounded-full border border-stone-500 px-3 py-1 text-xs transition duration-200 hover:-translate-y-1`}
+              class={`rounded-full border border-stone-500 px-3 py-1 text-xs transition duration-200 hover:-translate-y-1 active:-translate-y-1 ${categoryStyles[categoryColor]}`}
             >
               #{tag}
             </span>
