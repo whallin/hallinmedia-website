@@ -15,18 +15,18 @@ const translations = {
 };
 ---
 
-<aside
+<article
   class="relative rounded-lg border border-stone-300 bg-amber-50 p-6 text-sm font-light text-stone-700 selection:bg-[var(--dominant-color)] selection:text-[color-mix(in_oklab,var(--dominant-color),white_70%)]"
 >
-  <div
+  <header
     class="absolute -top-3 left-4 flex h-6 w-6 items-center justify-center rounded-full border border-stone-300 bg-amber-50 text-[var(--dominant-color)]"
   >
     <PhHeartDuotone class="h-4 w-4" />
-  </div>
-  <h3 class="mb-2 font-serif text-xl text-stone-900 italic">
+  </header>
+  <h1 class="mb-2 font-serif text-xl text-stone-900 italic">
     {translations[Astro.currentLocale].title}
-  </h3>
+  </h1>
   <p class="leading-relaxed">
     {translations[Astro.currentLocale].notice}
   </p>
-</aside>
+</article>

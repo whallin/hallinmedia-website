@@ -4,11 +4,13 @@ import LegalDocumentCard from "./LegalDocumentCard.astro";
 const { category, docs } = Astro.props;
 ---
 
-<article class="flex flex-col gap-4">
+<section class="flex flex-col gap-4">
   <header>
     <h2 class="font-serif text-3xl font-light text-stone-900 italic">{category}</h2>
   </header>
-  <ul class="grid gap-4">
-    {docs.map((doc) => <LegalDocumentCard doc={doc} />)}
-  </ul>
-</article>
+  <nav>
+    <ul class="grid gap-4">
+      {docs.map((doc) => <LegalDocumentCard doc={doc} />)}
+    </ul>
+  </nav>
+</section>

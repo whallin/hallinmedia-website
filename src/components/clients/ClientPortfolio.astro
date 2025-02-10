@@ -14,14 +14,14 @@ const translations = {
 const { posts, currentLocale } = Astro.props;
 ---
 
-<section class="flex flex-col gap-8">
+<article class="flex flex-col gap-8">
   <header class="flex items-center justify-between">
     <h2 class="text-3xl font-light text-stone-900 italic">
       {translations[Astro.currentLocale].related_works}
     </h2>
     <IconPhSparkleDuotone class="h-8 w-8 text-[var(--dominant-color)]" />
   </header>
-  <div class="grid gap-4 sm:grid-cols-2">
+  <section class="grid gap-4 sm:grid-cols-2">
     {posts.map((post) => <PortfolioCard post={post} currentLocale={currentLocale} />)}
-  </div>
-</section>
+  </section>
+</article>

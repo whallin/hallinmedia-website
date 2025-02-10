@@ -73,14 +73,14 @@ const translations = {
       )
     }
   </header>
-  <article class="flex flex-col gap-4">
+  <dl class="flex flex-col gap-4">
     {
       displayFaqCollection.map((category) => (
-        <section class="flex flex-col gap-4">
+        <div class="flex flex-col gap-4">
           {showCategories && (
-            <h3 class="font-serif text-xl font-light text-stone-900 italic">
+            <dt class="font-serif text-xl font-light text-stone-900 italic">
               {category.data.categoryName[Astro.currentLocale]}
-            </h3>
+            </dt>
           )}
           {category.data.questions.map((faq) => (
             <details
@@ -96,14 +96,14 @@ const translations = {
                 {faq.featured && <span class="ml-2 text-red-400 not-italic">★</span>}
               </summary>
               <hr class="my-4 border-stone-300" />
-              <div
+              <dd
                 class="my-2 font-serif text-sm text-stone-700"
                 set:html={`${faq.answer[Astro.currentLocale]}`}
               />
             </details>
           ))}
-        </section>
+        </div>
       ))
     }
-  </article>
+  </dl>
 </section>

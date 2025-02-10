@@ -22,14 +22,16 @@ const {
 } = Astro.props as Props;
 ---
 
-<section
+<article
   class="mt-8 rounded border border-red-400 bg-amber-50 p-6 text-sm font-light text-stone-700"
 >
-  <h3 class="mb-2 text-xl text-stone-900 italic">{title}</h3>
+  <header class="mb-2">
+    <h2 class="text-xl text-stone-900 italic">{title}</h2>
+  </header>
   <p class="mb-4">
     {description}
   </p>
-  <div class="flex flex-col gap-2 sm:flex-row">
+  <nav class="flex flex-col gap-2 sm:flex-row">
     <a
       href={contactLink}
       class="inline-flex items-center justify-center gap-2 rounded-md border bg-red-500 px-4 py-2 text-stone-50 transition hover:bg-red-700 active:scale-95 active:bg-red-700"
@@ -48,5 +50,5 @@ const {
         </a>
       )
     }
-  </div>
-</section>
+  </nav>
+</article>

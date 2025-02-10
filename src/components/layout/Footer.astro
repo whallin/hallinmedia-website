@@ -70,65 +70,69 @@ const socialLinks = [
 <footer class="mt-12 flex flex-col gap-8">
   <hr class="border-stone-300" />
   <div class="flex flex-col gap-8 md:justify-between">
-    <nav
-      class="flex justify-between gap-4 font-serif text-sm text-stone-500 selection:bg-red-300 selection:text-red-800"
-    >
-      <h3 class="font-medium text-stone-700">
+    <section class="flex justify-between gap-4 font-serif text-sm">
+      <h3 id="navigation-heading" class="font-medium text-stone-700">
         {translations[Astro.currentLocale].navTitle}
       </h3>
-      <menu class="flex flex-wrap justify-end gap-2 font-light">
-        {
-          navLinks.map((link) => (
-            <a
-              href={getRelativeLocaleUrl(`${Astro.currentLocale}`, link.path)}
-              class="underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-50 hover:no-underline active:bg-red-500 active:text-stone-50 active:no-underline"
-            >
-              {link.label}
-            </a>
-          ))
-        }
-      </menu>
-    </nav>
-
-    <address class="flex flex-col justify-between gap-4 sm:flex-row sm:items-center">
-      <figure class="flex items-center gap-4 font-serif">
-        <Image
-          src={ImgAvatar}
-          alt={translations[Astro.currentLocale].alt}
-          width="128"
-          height="128"
-          class="h-8 w-8 rounded-full border border-stone-300 object-cover drop-shadow-xs select-none"
-        />
-        <figcaption class="flex flex-col selection:bg-red-300 selection:text-red-800">
-          <span class="font-medium">William Hallin</span>
-          <span class="text-sm font-light text-stone-700 italic">
-            {translations[Astro.currentLocale].title}
-          </span>
-        </figcaption>
-      </figure>
-      <div class="flex flex-col gap-2 sm:items-end">
-        <menu class="flex flex-wrap gap-2 font-serif text-sm">
+      <nav>
+        <ul class="flex flex-wrap justify-end gap-2 font-light">
           {
-            socialLinks.map((link) => (
-              <a
-                href={link.href}
-                target={link.href.startsWith("http") ? "_blank" : undefined}
-                class={`underline decoration-dashed decoration-from-font underline-offset-4 ${link.classes.base} ${link.classes.hover} ${link.classes.active}`}
-              >
-                {link.label}
-              </a>
+            navLinks.map((link) => (
+              <li>
+                <a
+                  href={getRelativeLocaleUrl(`${Astro.currentLocale}`, link.path)}
+                  class="underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-50 hover:no-underline active:bg-red-500 active:text-stone-50 active:no-underline"
+                >
+                  {link.label}
+                </a>
+              </li>
             ))
           }
-        </menu>
-        <div class="flex items-center gap-2">
-          <a
-            href="https://github.com/whallin/hallinmedia-website"
-            target="_blank"
-            class="font-mono text-xs font-light text-stone-500 hover:bg-stone-500 hover:text-stone-100 active:bg-stone-500 active:text-stone-100"
-            >{GIT_HASH}</a
-          >
-        </div>
-      </div>
+        </ul>
+      </nav>
+    </section>
+
+    <address class="flex flex-col justify-between gap-4 sm:flex-row sm:items-center">
+      <section>
+        <figure class="flex items-center gap-4 font-serif">
+          <Image
+            src={ImgAvatar}
+            alt={translations[Astro.currentLocale].alt}
+            width="128"
+            height="128"
+            class="h-8 w-8 rounded-full border border-stone-300 object-cover drop-shadow-xs select-none"
+          />
+          <figcaption class="flex flex-col selection:bg-red-300 selection:text-red-800">
+            <span id="author-info" class="font-medium">William Hallin</span>
+            <span class="text-sm font-light text-stone-700 italic">
+              {translations[Astro.currentLocale].title}
+            </span>
+          </figcaption>
+        </figure>
+      </section>
+      <section class="sm:text-right">
+        <ul class="flex flex-wrap gap-2 font-serif text-sm">
+          {
+            socialLinks.map((link) => (
+              <li>
+                <a
+                  href={link.href}
+                  target={link.href.startsWith("http") ? "_blank" : undefined}
+                  class={`underline decoration-dashed decoration-from-font underline-offset-4 ${link.classes.base} ${link.classes.hover} ${link.classes.active}`}
+                >
+                  {link.label}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+        <a
+          href="https://github.com/whallin/hallinmedia-website"
+          target="_blank"
+          class="font-mono text-xs font-light text-stone-500 hover:bg-stone-500 hover:text-stone-100 active:bg-stone-500 active:text-stone-100"
+          >{GIT_HASH}</a
+        >
+      </section>
     </address>
   </div>
 </footer>

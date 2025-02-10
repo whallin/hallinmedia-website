@@ -25,7 +25,9 @@ const { post } = Astro.props;
   >
     {
       post.data.featured && (
-        <div class="absolute top-4 right-4 z-10 text-xl text-red-500 select-none">★</div>
+        <mark class="absolute top-4 right-4 z-10 bg-transparent text-xl text-red-500 select-none">
+          ★
+        </mark>
       )
     }
     <figure class="relative overflow-hidden">
@@ -43,7 +45,7 @@ const { post } = Astro.props;
         formats={["avif", "webp", "jpeg"]}
       />
     </figure>
-    <div class="flex flex-1 flex-col p-4">
+    <section class="flex flex-1 flex-col p-4">
       <header>
         <h2
           class="mb-2 font-serif text-xl text-stone-900 italic underline decoration-dashed decoration-from-font underline-offset-4 group-hover:text-red-500 group-active:text-red-500"
@@ -54,7 +56,7 @@ const { post } = Astro.props;
       <p class="line-clamp-2 text-sm font-light text-stone-600">
         {post.data.description}
       </p>
-    </div>
+    </section>
     <footer
       class="mt-auto flex flex-row flex-wrap items-center justify-between border-t border-stone-200 p-4 text-stone-500"
     >
@@ -65,10 +67,10 @@ const { post } = Astro.props;
         >
           {new Date(post.data.publishedDate).toLocaleDateString()}
         </time>
-        <span class="font-mono text-xs font-light text-stone-400">
+        <small class="font-mono text-xs font-light text-stone-400">
           {post.data.readTime}
           {translations[Astro.currentLocale].minutes_read}
-        </span>
+        </small>
       </div>
       <div
         class="flex items-center justify-end gap-2 group-hover:text-red-500 group-active:text-red-500"

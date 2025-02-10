@@ -18,12 +18,16 @@ const categoryStyles = {
 ---
 
 <header class="flex flex-col gap-6 selection:bg-red-300 selection:text-red-800">
-  <span
-    class={`h-fit w-fit rounded-full border border-stone-500 px-3 py-1 font-mono text-xs font-light text-stone-600 transition  hover:-translate-y-1 active:-translate-y-1 ${categoryStyles[categoryColor]}`}
-  >
-    {category}
-  </span>
-  <h1 class="text-4xl font-light break-words text-stone-900 italic sm:text-6xl">
-    {title}
-  </h1>
+  <nav>
+    <span
+      class={`h-fit w-fit rounded-full border border-stone-500 px-3 py-1 font-mono text-xs font-light text-stone-600 transition  hover:-translate-y-1 active:-translate-y-1 ${categoryStyles[categoryColor]}`}
+    >
+      {category}
+    </span>
+  </nav>
+  <article>
+    <h1 class="text-4xl font-light break-words text-stone-900 italic sm:text-6xl">
+      {title}
+    </h1>
+  </article>
 </header>

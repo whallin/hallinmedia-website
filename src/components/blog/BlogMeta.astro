@@ -6,22 +6,14 @@ import PhUserDuotone from "../icons/PhUserDuotone.astro";
 
 const translations = {
   en: {
-    published_date: "Published Date",
     published: "Published",
-    updated_date: "Last Updated",
     updated: "Updated",
-    author: "Author",
-    reading_time: "Reading Time",
     minutes_read: "min read",
     tags: "Tags",
   },
   sv: {
-    published_date: "Publicerat datum",
     published: "Publicerat",
-    updated_date: "Senast uppdaterad",
     updated: "Uppdaterad",
-    author: "Författare",
-    reading_time: "Lästid",
     minutes_read: "min att läsa",
     tags: "Taggar",
   },
@@ -45,70 +37,68 @@ const categoryStyles = {
 };
 ---
 
-<aside class="grid gap-6 rounded-lg border border-stone-200 p-6 font-mono text-sm text-stone-600">
-  <div class="grid gap-4 sm:grid-cols-2">
-    <dl class="space-y-2">
+<article class="grid gap-6 rounded-lg border border-stone-200 p-6 font-mono text-sm text-stone-600">
+  <section class="grid gap-4 sm:grid-cols-2">
+    <div class="space-y-2">
       <div class="flex items-center gap-2 selection:bg-sky-300 selection:text-sky-800">
-        <dt class="sr-only">{translations[Astro.currentLocale].published_date}</dt>
-        <dd class="flex items-center gap-2">
+        <time class="flex items-center gap-2" datetime={new Date(publishedDate).toISOString()}>
           <PhCalendarDuotone class="h-4 w-4 text-sky-500" />
           <p>
             {translations[Astro.currentLocale].published}: {
               new Date(publishedDate).toLocaleDateString()
             }
           </p>
-        </dd>
+        </time>
       </div>
       {
         updatedDate && (
           <div class="flex items-center gap-2 selection:bg-amber-300 selection:text-amber-800">
-            <dt class="sr-only">{translations[Astro.currentLocale].updated_date}</dt>
-            <dd class="flex items-center gap-2">
+            <time class="flex items-center gap-2" datetime={new Date(updatedDate).toISOString()}>
               <PhClockCounterClockwiseDuotone class="h-4 w-4 text-amber-500" />
               <p>
                 {translations[Astro.currentLocale].updated}:{" "}
                 {new Date(updatedDate).toLocaleDateString()}
               </p>
-            </dd>
+            </time>
           </div>
         )
       }
-    </dl>
+    </div>
 
-    <dl class="space-y-2">
-      <div class="flex items-center gap-2 selection:bg-emerald-300 selection:text-emerald-800">
-        <dt class="sr-only">{translations[Astro.currentLocale].author}</dt>
-        <dd class="flex items-center gap-2">
+    <div class="space-y-2">
+      <address
+        class="flex items-center gap-2 not-italic selection:bg-emerald-300 selection:text-emerald-800"
+      >
+        <div class="flex items-center gap-2">
           <PhUserDuotone class="h-4 w-4 text-emerald-500" />
           <p>{author}</p>
-        </dd>
-      </div>
+        </div>
+      </address>
       <div class="flex items-center gap-2 selection:bg-fuchsia-300 selection:text-fuchsia-800">
-        <dt class="sr-only">{translations[Astro.currentLocale].reading_time}</dt>
-        <dd class="flex items-center gap-2">
+        <div class="flex items-center gap-2">
           <PhTimerDuotone class="h-4 w-4 text-fuchsia-500" />
           <p>{readingTime} {translations[Astro.currentLocale].minutes_read}</p>
-        </dd>
+        </div>
       </div>
-    </dl>
-  </div>
+    </div>
+  </section>
 
   {
     tags && tags.length > 0 && (
-      <div class="border-t border-stone-200 pt-4 selection:bg-red-300 selection:text-red-800">
-        <h3 class="mb-2 text-xs font-medium text-stone-500">
+      <section class="border-t border-stone-200 pt-4 selection:bg-red-300 selection:text-red-800">
+        <h2 class="mb-2 text-xs font-medium text-stone-500">
           {translations[Astro.currentLocale].tags}
-        </h3>
-        <div class="flex flex-wrap gap-2">
+        </h2>
+        <ul class="flex flex-wrap gap-2">
           {tags.map((tag) => (
-            <span
+            <li
               class={`rounded-full border border-stone-500 px-3 py-1 text-xs transition hover:-translate-y-1 active:-translate-y-1 ${categoryStyles[categoryColor]}`}
             >
               #{tag}
-            </span>
+            </li>
           ))}
-        </div>
-      </div>
+        </ul>
+      </section>
     )
   }
-</aside>
+</article>

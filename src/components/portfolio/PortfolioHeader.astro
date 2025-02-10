@@ -7,27 +7,30 @@ const { item, client } = Astro.props;
 ---
 
 <header class="flex flex-col gap-2 selection:bg-red-300 selection:text-red-800">
-  <div class="flex flex-col-reverse gap-4 sm:flex-row sm:items-center sm:justify-between">
+  <section class="flex flex-col-reverse gap-4 sm:flex-row sm:items-center sm:justify-between">
     <h1 class="max-w-md text-4xl font-light text-stone-900 italic sm:text-6xl">
       {item.data.title}
     </h1>
-    <span
+    <time
       class="w-fit rounded-full border border-stone-500 px-3 py-1 text-xs font-light text-stone-600"
+      datetime={item.data.date}
     >
       {item.data.category}
-    </span>
-  </div>
+    </time>
+  </section>
 
   {
     item.data.featuredImage && (
-      <Picture
-        src={item.data.featuredImage}
-        alt={item.data.featuredImageAlt || item.data.title}
-        widths={[320, 480, 768]}
-        formats={["avif", "webp", "jpeg"]}
-        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-        class="mt-6 mb-4 aspect-video rounded-lg border-2 border-stone-300 object-cover transition select-none hover:-translate-y-1 hover:border-[var(--dominant-color)] hover:drop-shadow-lg active:-translate-y-1 active:border-[var(--dominant-color)] active:drop-shadow-lg sm:mt-12"
-      />
+      <figure>
+        <Picture
+          src={item.data.featuredImage}
+          alt={item.data.featuredImageAlt || item.data.title}
+          widths={[320, 480, 768]}
+          formats={["avif", "webp", "jpeg"]}
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+          class="mt-6 mb-4 aspect-video rounded-lg border-2 border-stone-300 object-cover transition select-none hover:-translate-y-1 hover:border-[var(--dominant-color)] hover:drop-shadow-lg active:-translate-y-1 active:border-[var(--dominant-color)] active:drop-shadow-lg sm:mt-12"
+        />
+      </figure>
     )
   }
 
@@ -36,7 +39,7 @@ const { item, client } = Astro.props;
 
     {
       client?.data?.logo && (
-        <div class="h-8 w-32">
+        <address class="h-8 w-32">
           <a
             href={getRelativeLocaleUrl(`${Astro.currentLocale}`, `/clients/${client.id}`)}
             class="block h-full transition hover:opacity-70 active:scale-95 active:opacity-70"
@@ -49,7 +52,7 @@ const { item, client } = Astro.props;
               class="h-full w-auto object-contain select-none"
             />
           </a>
-        </div>
+        </address>
       )
     }
   </nav>

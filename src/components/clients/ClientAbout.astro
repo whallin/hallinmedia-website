@@ -15,27 +15,33 @@ const translations = {
 const { name, description, websiteUrl } = Astro.props;
 ---
 
-<article
+<section
   class="flex flex-col gap-4 rounded-lg border border-stone-300 bg-amber-50 p-6 selection:bg-[var(--dominant-color)] selection:text-[color-mix(in_oklab,var(--dominant-color),white_70%)]"
 >
-  <h2 class="font-serif text-2xl font-light text-stone-900 italic">
-    {translations[Astro.currentLocale].about}
-    {name}
-  </h2>
-  <p class="text-sm leading-relaxed font-light text-stone-700">{description}</p>
+  <header>
+    <h2 class="font-serif text-2xl font-light text-stone-900 italic">
+      {translations[Astro.currentLocale].about}
+      {name}
+    </h2>
+  </header>
+  <div class="text-sm leading-relaxed font-light text-stone-700">
+    <p>{description}</p>
+  </div>
   {
     websiteUrl && (
-      <a
-        href={websiteUrl}
-        target="_blank"
-        rel="noopener noreferrer"
-        class="flex items-center justify-center gap-2 rounded-md border bg-[var(--dominant-color)] px-4 py-2 text-sm font-medium text-stone-50 transition hover:opacity-75 active:scale-95 active:opacity-75"
-      >
-        {translations[Astro.currentLocale].visit}{" "}
-        {websiteUrl.replace(/^(https?:\/\/)?(www\.)?|\/$/g, "")}
-        <PhArrowSquareOutDuotone class="h-4 w-4" />
-      </a>
+      <footer>
+        <a
+          href={websiteUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="flex items-center justify-center gap-2 rounded-md border bg-[var(--dominant-color)] px-4 py-2 text-sm font-medium text-stone-50 transition hover:opacity-75 active:scale-95 active:opacity-75"
+        >
+          {translations[Astro.currentLocale].visit}{" "}
+          {websiteUrl.replace(/^(https?:\/\/)?(www\.)?|\/$/g, "")}
+          <PhArrowSquareOutDuotone class="h-4 w-4" />
+        </a>
+      </footer>
     )
   }
   <slot />
-</article>
+</section>

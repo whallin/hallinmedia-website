@@ -24,52 +24,52 @@ const { content } = Astro.props;
 ---
 
 <hr class="border-stone-300" />
-<div class="flex flex-col gap-6">
-  <div class="grid gap-6 sm:grid-cols-2">
-    <section class="flex flex-col gap-2 selection:bg-red-300 selection:text-red-800">
+<article class="flex flex-col gap-6">
+  <div class="mb-2 grid gap-6 sm:grid-cols-2">
+    <article class="flex flex-col gap-2 selection:bg-red-300 selection:text-red-800">
       <h2 class="flex items-center gap-2 text-2xl font-light text-stone-900 italic">
         <PhQuestionDuotone class="h-6 w-6 text-red-500" />
         {translations[Astro.currentLocale].problem}
       </h2>
       <p class="text-sm font-light text-stone-700">{content?.problem}</p>
-    </section>
-    <section class="flex flex-col gap-2 selection:bg-green-300 selection:text-green-800">
+    </article>
+    <article class="flex flex-col gap-2 selection:bg-green-300 selection:text-green-800">
       <h2 class="flex items-center gap-2 text-2xl font-light text-stone-900 italic">
         <PhSparkleDuotone class="mr-1 h-6 w-6 text-green-500" />
         {translations[Astro.currentLocale].solution}
       </h2>
       <p class="text-sm font-light text-stone-700">{content?.solution}</p>
-    </section>
+    </article>
 
     {
       content?.process && (
-        <section class="flex flex-col gap-2 selection:bg-amber-300 selection:text-amber-800">
+        <article class="flex flex-col gap-2 selection:bg-amber-300 selection:text-amber-800">
           <h2 class="flex items-center gap-2 text-2xl font-light text-stone-900 italic">
             <PhPaletteDuotone class="mr-1 h-6 w-6 text-amber-500" />
             {translations[Astro.currentLocale].process}
           </h2>
           <p class="text-sm font-light text-stone-700">{content.process}</p>
-        </section>
+        </article>
       )
     }
 
     {
       content?.results && (
-        <section class="flex flex-col gap-2 selection:bg-blue-300 selection:text-blue-800">
+        <article class="flex flex-col gap-2 selection:bg-blue-300 selection:text-blue-800">
           <h2 class="flex items-center gap-2 text-2xl font-light text-stone-900 italic">
             <PhEnvelopeDuotone class="mr-1 h-6 w-6 text-blue-500" />
             {translations[Astro.currentLocale].results}
           </h2>
           <p class="text-sm font-light text-stone-700">{content.results}</p>
-        </section>
+        </article>
       )
     }
   </div>
 
-  <div class="grid auto-rows-[minmax(200px,1fr)] gap-4 sm:grid-cols-3">
+  <figure class="grid auto-rows-[minmax(200px,1fr)] gap-4 sm:grid-cols-3">
     {
       content?.images?.map((image, index) => (
-        <div
+        <figure
           class={`relative overflow-hidden rounded-lg border-2 border-stone-300 transition hover:-translate-y-1 hover:border-[var(--dominant-color)] hover:drop-shadow-lg active:-translate-y-1 active:border-[var(--dominant-color)] active:drop-shadow-lg ${
             index === 0 ? "sm:col-span-2 lg:col-span-2 lg:row-span-2" : ""
           }`}
@@ -82,21 +82,21 @@ const { content } = Astro.props;
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
             class="absolute inset-0 size-full object-cover select-none"
           />
-        </div>
+        </figure>
       ))
     }
-  </div>
+  </figure>
 
   {
     content?.videos?.map((video) => (
-      <div class="my-2 aspect-video w-full transition select-none hover:-translate-y-1 hover:drop-shadow-lg sm:my-4">
+      <figure class="aspect-video w-full transition select-none hover:-translate-y-1 hover:drop-shadow-lg">
         <iframe
           src={video}
           class="size-full rounded-lg border-2 border-stone-300 transition hover:border-[var(--dominant-color)]"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen
         />
-      </div>
+      </figure>
     ))
   }
-</div>
+</article>

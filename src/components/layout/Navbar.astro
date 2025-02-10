@@ -4,7 +4,7 @@ import { getRelativeLocaleUrl } from "astro:i18n";
 
 <header class="mb-8">
   <nav class="flex justify-between font-mono text-sm font-light text-stone-500">
-    <ul class="flex flex-wrap gap-2 selection:bg-red-300 selection:text-red-800 sm:gap-4">
+    <menu class="flex flex-wrap gap-2 selection:bg-red-300 selection:text-red-800 sm:gap-4">
       <li>
         <a
           href={getRelativeLocaleUrl(`${Astro.currentLocale}`, "/")}
@@ -40,8 +40,8 @@ import { getRelativeLocaleUrl } from "astro:i18n";
           class:list={[Astro.url.pathname.includes("/contact") ? "text-red-500" : ""]}>/contact</a
         >
       </li>
-    </ul>
-    <ul class="flex flex-wrap justify-end gap-2">
+    </menu>
+    <menu class="flex flex-wrap justify-end gap-2">
       <li>
         <a
           href={getRelativeLocaleUrl(
@@ -51,7 +51,9 @@ import { getRelativeLocaleUrl } from "astro:i18n";
           class="selection:bg-blue-300 selection:text-blue-700 hover:bg-blue-600 hover:text-stone-50 active:bg-blue-600 active:text-stone-50 active:opacity-50"
           class:list={[
             Astro.url.pathname.includes(`/${Astro.currentLocale}`) ? "" : "text-blue-600",
-          ]}>EN</a
+          ]}
+          hreflang="en"
+          lang="en">EN</a
         >
       </li>
       <li>
@@ -61,10 +63,12 @@ import { getRelativeLocaleUrl } from "astro:i18n";
             Astro.url.pathname.replace(`/${Astro.currentLocale}`, "")
           )}
           class="selection:bg-amber-300 selection:text-amber-700 hover:bg-amber-500 hover:text-stone-50 active:bg-amber-500 active:text-stone-50 active:opacity-50"
-          class:list={[Astro.url.pathname.includes("/sv") ? "text-amber-500" : ""]}>SV</a
+          class:list={[Astro.url.pathname.includes("/sv") ? "text-amber-500" : ""]}
+          hreflang="sv"
+          lang="sv">SV</a
         >
       </li>
-    </ul>
+    </menu>
   </nav>
 </header>
 <hr class="mb-12 border-stone-300" />

@@ -11,68 +11,72 @@ const translations = {
 const { socialLinks } = Astro.props;
 ---
 
-<section class="space-y-2">
-  <h3 class="mt-4 font-serif text-2xl font-light text-stone-900 italic">
-    {translations[Astro.currentLocale].social_media}
-  </h3>
-  <nav>
-    <ul class="flex flex-wrap gap-4 text-sm text-stone-700">
-      {
-        socialLinks.twitter && (
-          <li>
-            <a
-              href={socialLinks.twitter}
-              target="_blank"
-              rel="noopener noreferrer"
-              class="flex items-center gap-2 underline decoration-stone-500 decoration-dashed decoration-from-font underline-offset-4 selection:bg-stone-300 selection:text-stone-700 hover:bg-stone-500 hover:text-stone-100 hover:no-underline active:bg-stone-500 active:text-stone-100 active:no-underline active:opacity-50"
-            >
-              Twitter / X
-            </a>
-          </li>
-        )
-      }
-      {
-        socialLinks.linkedin && (
-          <li>
-            <a
-              href={socialLinks.linkedin}
-              target="_blank"
-              rel="noopener noreferrer"
-              class="flex items-center gap-2 underline decoration-blue-500 decoration-dashed decoration-from-font underline-offset-4 selection:bg-blue-300 selection:text-blue-700 hover:bg-blue-500 hover:text-blue-100 hover:no-underline active:bg-blue-500 active:text-blue-100 active:no-underline active:opacity-50"
-            >
-              LinkedIn
-            </a>
-          </li>
-        )
-      }
-      {
-        socialLinks.instagram && (
-          <li>
-            <a
-              href={socialLinks.instagram}
-              target="_blank"
-              rel="noopener noreferrer"
-              class="flex items-center gap-2 underline decoration-pink-500 decoration-dashed decoration-from-font underline-offset-4 selection:bg-pink-300 selection:text-pink-700 hover:bg-pink-500 hover:text-pink-100 hover:no-underline active:bg-pink-500 active:text-pink-100 active:no-underline active:opacity-50"
-            >
-              Instagram
-            </a>
-          </li>
-        )
-      }
-      {
-        socialLinks.facebook && (
-          <li>
-            <a
-              href={socialLinks.facebook}
-              target="_blank"
-              rel="noopener noreferrer"
-              class="flex items-center gap-2 underline decoration-sky-500 decoration-dashed decoration-from-font underline-offset-4 selection:bg-sky-300 selection:text-sky-700 hover:bg-sky-500 hover:text-sky-100 hover:no-underline active:bg-sky-500 active:text-sky-100 active:no-underline active:opacity-50"
-            >
-              Facebook
-            </a>
-          </li>
-        )
-      }
-    </ul>
-  </nav>
-</section>
+<article>
+  <header>
+    <h3 class="mb-2 font-serif text-2xl font-light text-stone-900 italic">
+      {translations[Astro.currentLocale].social_media}
+    </h3>
+  </header>
+  <section>
+    <nav>
+      <ul class="flex flex-wrap gap-4 text-sm text-stone-700">
+        {
+          socialLinks.twitter && (
+            <li>
+              <a
+                href={socialLinks.twitter}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="flex items-center gap-2 underline decoration-stone-500 decoration-dashed decoration-from-font underline-offset-4 selection:bg-stone-300 selection:text-stone-700 hover:bg-stone-500 hover:text-stone-100 hover:no-underline active:bg-stone-500 active:text-stone-100 active:no-underline active:opacity-50"
+              >
+                Twitter / X
+              </a>
+            </li>
+          )
+        }
+        {
+          socialLinks.linkedin && (
+            <li>
+              <a
+                href={socialLinks.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="flex items-center gap-2 underline decoration-blue-500 decoration-dashed decoration-from-font underline-offset-4 selection:bg-blue-300 selection:text-blue-700 hover:bg-blue-500 hover:text-blue-100 hover:no-underline active:bg-blue-500 active:text-blue-100 active:no-underline active:opacity-50"
+              >
+                LinkedIn
+              </a>
+            </li>
+          )
+        }
+        {
+          socialLinks.instagram && (
+            <li>
+              <a
+                href={socialLinks.instagram}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="flex items-center gap-2 underline decoration-pink-500 decoration-dashed decoration-from-font underline-offset-4 selection:bg-pink-300 selection:text-pink-700 hover:bg-pink-500 hover:text-pink-100 hover:no-underline active:bg-pink-500 active:text-pink-100 active:no-underline active:opacity-50"
+              >
+                Instagram
+              </a>
+            </li>
+          )
+        }
+        {
+          socialLinks.facebook && (
+            <li>
+              <a
+                href={socialLinks.facebook}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="flex items-center gap-2 underline decoration-sky-500 decoration-dashed decoration-from-font underline-offset-4 selection:bg-sky-300 selection:text-sky-700 hover:bg-sky-500 hover:text-sky-100 hover:no-underline active:bg-sky-500 active:text-sky-100 active:no-underline active:opacity-50"
+              >
+                Facebook
+              </a>
+            </li>
+          )
+        }
+      </ul>
+    </nav>
+  </section>
+</article>
