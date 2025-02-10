@@ -30,7 +30,10 @@ const blogPosts = await getCollection("blogEnCollection").then(async (posts) => 
 });
 ---
 
-<MainLayout title="Blog">
+<MainLayout
+  title="Blog"
+  description="Visit the William Hallin blog for engaging articles on technology and personal stories in English and Swedish. Join the conversation!"
+>
   <main class="flex flex-col gap-12 font-serif selection:bg-red-300 selection:text-red-800">
     <header class="flex flex-col-reverse justify-between gap-4 sm:flex-row sm:items-center">
       <h1 class="max-w-md text-4xl font-light break-words text-stone-900 italic">My "newspaper"</h1>

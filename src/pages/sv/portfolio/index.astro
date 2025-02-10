@@ -16,7 +16,10 @@ const portfolioPosts = await getCollection("portfolioSvCollection").then((posts)
 );
 ---
 
-<MainLayout title="Portfolio">
+<MainLayout
+  title="Portfolio"
+  description="Besök min portföljsida för att se hur kreativitet och innovation möts. Utforska ett urval av mina bästa projekt som visar mina kunskaper och utveckling."
+>
   <main class="space-y-12 font-serif">
     <header class="selection:bg-red-300 selection:text-red-800">
       <div class="flex flex-col-reverse justify-between gap-4 sm:flex-row sm:items-center">

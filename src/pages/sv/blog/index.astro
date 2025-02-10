@@ -30,7 +30,10 @@ const blogPosts = await getCollection("blogSvCollection").then(async (posts) => 
 });
 ---
 
-<MainLayout title="Blogg">
+<MainLayout
+  title="Blogg"
+  description="Besök William Hallins blogg för artiklar om teknik och personliga berättelser på engelska och svenska. Delta i diskussionen!"
+>
   <main class="flex flex-col gap-12 font-serif selection:bg-red-300 selection:text-red-800">
     <header class="flex flex-col-reverse justify-between gap-4 sm:flex-row sm:items-center">
       <h1 class="max-w-md text-4xl font-light break-words text-stone-900 italic">Min "tidning"</h1>

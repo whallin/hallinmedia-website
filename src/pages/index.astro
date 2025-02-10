@@ -9,7 +9,10 @@ import MainLayout from "../layouts/MainLayout.astro";
 const age = new Date().getFullYear() - 2005 - (new Date().getMonth() < 7 ? 1 : 0);
 ---
 
-<MainLayout title="Home">
+<MainLayout
+  title="Home"
+  description="William Hallin is a photographer and designer in Skellefteå, Sweden. He boosts brands by crafting engaging visuals, backed by over five years of experience worldwide. See how HallinMedia can refresh your brand with creative solutions."
+>
   <main class="space-y-12 font-serif">
     <header
       class="flex flex-col-reverse gap-4 selection:bg-red-300 selection:text-red-800 sm:flex-row sm:items-center sm:justify-between"

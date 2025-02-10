@@ -8,7 +8,11 @@ import MainLayout from "../layouts/MainLayout.astro";
 const faqCollection = await getCollection("faqCollection");
 ---
 
-<MainLayout title="FAQ" faqData={faqCollection}>
+<MainLayout
+  title="FAQ"
+  description="Besök vår FAQ-sida för svar på vanliga frågor. Få klar och tydlig information för en smidig upplevelse. Besök oss nu för snabb support."
+  faqData={faqCollection}
+>
   <article class="space-y-12 font-serif selection:bg-red-300 selection:text-red-800">
     <header class="flex flex-col-reverse gap-4 sm:flex-row sm:items-center sm:justify-between">
       <h1 class="max-w-md text-4xl font-light text-stone-900 italic">Frequent questions</h1>
