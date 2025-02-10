@@ -37,7 +37,13 @@ const categoryColor = {
 }[post.data.category];
 ---
 
-<MainLayout title={post.data.title} description={post.data.description} article={true}>
+<MainLayout
+  title={post.data.title}
+  description={post.data.description}
+  article={true}
+  datePublished={post.data.publishedDate}
+  dateModified={post.data.updatedDate}
+>
   <wbr
     class="hidden hover:border-amber-500 hover:border-emerald-500 hover:border-fuchsia-500 hover:border-indigo-500 hover:border-pink-500 hover:border-rose-500 hover:border-sky-500 hover:border-teal-500 hover:text-amber-700 hover:text-emerald-700 hover:text-fuchsia-700 hover:text-indigo-700 hover:text-pink-700 hover:text-rose-700 hover:text-sky-700 hover:text-teal-700"
   />

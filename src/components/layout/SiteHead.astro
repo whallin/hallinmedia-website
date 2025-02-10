@@ -259,34 +259,41 @@ const { title, description = "", article, faqData, datePublished, dateModified }
 }
 
 <!-- JSON-LD: Article (Blog & Portfolio) -->
-<script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    "mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id": "https://hallin.media/blog/[slug].astro"
-    },
-    "headline": "blog.data.title",
-    "description": "blog.data.description",
-    "image": "https://hallin.media/blog/featuredImg",
-    "author": {
-      "@type": "Person",
-      "name": "William Hallin",
-      "url": "https://hallin.media/"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "HallinMedia",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://hallin.media/meta.png"
-      }
-    },
-    "datePublished": "2025-02-01",
-    "dateModified": "2025-02-02"
-  }
-</script>
+{
+  (Astro.url.pathname.includes("/blog/") || Astro.url.pathname.includes("/portfolio/")) && (
+    <script
+      type="application/ld+json"
+      set:html={`
+    {
+      "@context": "https://schema.org",
+      "@type": "${Astro.url.pathname.includes("/blog/") ? "BlogPosting" : "Article"}",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "${Astro.url}"
+      },
+      "headline": "${title}",
+      "description": "${description}",
+      "image": "https://hallin.media/meta.png",
+      "author": {
+        "@type": "Person",
+        "name": "William Hallin",
+        "url": "https://hallin.media/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "HallinMedia",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://hallin.media/meta.png"
+        }
+      },
+      ${datePublished ? `"datePublished": "${datePublished}",` : ""}
+      ${dateModified ? `"dateModified": "${dateModified}"` : ""}
+    }
+    `}
+    />
+  )
+}
 
 <!-- Umami -->
 <script

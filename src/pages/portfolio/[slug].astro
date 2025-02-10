@@ -28,7 +28,13 @@ const { Content } = await render(item);
 const dominantColor = client?.data.dominantColor || "oklch(0.637 0.237 25.331)";
 ---
 
-<MainLayout title={item.data.title} description={item.data.description} article={true}>
+<MainLayout
+  title={item.data.title}
+  description={item.data.description}
+  article={true}
+  datePublished={item.data.date}
+  dateModified={item.data.date}
+>
   <article class="flex flex-col gap-8 font-serif" style={`--dominant-color: ${dominantColor}`}>
     <header class="flex flex-col gap-2">
       <div
