@@ -28,12 +28,31 @@ export default defineConfig({
       },
     }),
     sitemap({
+      changefreq: "weekly",
+      priority: 0.7,
+      lastmod: new Date(),
       i18n: {
         defaultLocale: "en",
         locales: {
           en: "en-GB",
           sv: "sv-SE",
         },
+      },
+      serialize(item) {
+        if (item.url.includes("/clients/")) {
+          item.changefreq = "monthly";
+          item.priority = 0.8;
+        } else if (item.url.includes("/legal/")) {
+          item.changefreq = "yearly";
+          item.priority = 0.5;
+        } else if (item.url.includes("/portfolio/")) {
+          item.changefreq = "weekly";
+          item.priority = 0.9;
+        } else if (item.url.includes("/blog/")) {
+          item.changefreq = "daily";
+          item.priority = 1.0;
+        }
+        return item;
       },
     }),
   ],
