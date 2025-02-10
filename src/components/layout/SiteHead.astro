@@ -1,5 +1,5 @@
 ---
-import { getAbsoluteLocaleUrlList } from "astro:i18n";
+import { getAbsoluteLocaleUrl } from "astro:i18n";
 
 interface Props {
   title: string;
@@ -8,7 +8,6 @@ interface Props {
 }
 
 const { title, description = "", article } = Astro.props;
-const canonicalUrls = getAbsoluteLocaleUrlList(Astro.url.pathname);
 ---
 
 <meta charset="UTF-8" />
@@ -29,10 +28,10 @@ const canonicalUrls = getAbsoluteLocaleUrlList(Astro.url.pathname);
 <link rel="sitemap" href="/sitemap-index.xml" />
 <link rel="canonical" href={Astro.url} />
 {
-  canonicalUrls.map((url) => {
-    const locale = new URL(url).pathname.split("/")[1] || "en";
-    return <link rel="alternate" hreflang={locale} href={url} />;
-  })
+  [
+    getAbsoluteLocaleUrl("en", Astro.url.pathname),
+    getAbsoluteLocaleUrl("sv", Astro.url.pathname),
+  ].map((url) => <link rel="alternate" hreflang={url.includes("/sv/") ? "sv" : "en"} href={url} />)
 }
 
 <!-- Favicon -->
