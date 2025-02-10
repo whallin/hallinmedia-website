@@ -1,0 +1,88 @@
+---
+import { Image, Picture } from "astro:assets";
+import { getRelativeLocaleUrl } from "astro:i18n";
+
+const translations = {
+  en: {
+    learn_more: "Learn more",
+  },
+  sv: {
+    learn_more: "Läs mer",
+  },
+};
+
+const { post, client, currentLocale } = Astro.props;
+---
+
+<a href={getRelativeLocaleUrl(currentLocale, `/portfolio/${post.id}`)} class="group block h-full">
+  <article
+    class="relative flex h-full flex-col overflow-hidden rounded-lg border border-stone-300 bg-amber-50 transition duration-200 selection:bg-red-300 selection:text-red-800 hover:-translate-y-1 hover:border-red-500 hover:drop-shadow-[0_4px_4px_rgb(0,0,0,0.05)]"
+  >
+    <figure class="relative overflow-hidden">
+      {
+        post.data.featured && (
+          <figcaption class="absolute top-4 right-4 z-20 text-xl text-red-500 select-none">
+            ★
+          </figcaption>
+        )
+      }
+      <span
+        class="absolute top-4 left-4 z-10 rounded-full border border-stone-500 bg-amber-50 px-2 py-1 text-xs font-light text-stone-700 transition duration-200 group-hover:border-red-500 group-hover:text-red-700"
+      >
+        {post.data.category}
+      </span>
+      <div class="relative">
+        <div class="absolute inset-0 z-10 bg-gradient-to-t from-black/50 to-transparent"></div>
+        <Picture
+          src={post.data.featuredImage}
+          alt={post.data.featuredImageAlt}
+          widths={[400, 800, 1200]}
+          sizes="(max-width: 640px) 100vw, 50vw"
+          class="h-48 w-full object-cover transition duration-200 group-hover:scale-105"
+          formats={["avif", "webp", "jpeg"]}
+        />
+      </div>
+      {
+        client?.data.logo && (
+          <Image
+            src={client.data.logo}
+            alt={`${client.data.name} logo`}
+            class="absolute right-4 bottom-4 z-10 h-auto w-16 opacity-75"
+          />
+        )
+      }
+    </figure>
+    <div class="flex flex-1 flex-col p-4">
+      <header>
+        <h2
+          class="mb-2 font-serif text-xl text-stone-900 italic underline decoration-dashed decoration-from-font underline-offset-4 group-hover:text-red-500"
+        >
+          {post.data.title}
+        </h2>
+      </header>
+      <p class="line-clamp-2 text-sm font-light text-stone-600">
+        {post.data.description}
+      </p>
+    </div>
+    <footer
+      class="mt-auto flex flex-row flex-wrap items-center justify-between border-t border-stone-200 p-4 text-stone-500"
+    >
+      <time
+        class="font-mono text-sm font-light text-stone-500"
+        datetime={new Date(post.data.date).toISOString()}
+      >
+        {new Date(post.data.date).toLocaleDateString()}
+      </time>
+      <div class="flex items-center justify-end gap-2 group-hover:text-red-500">
+        <span class="underline decoration-dashed decoration-from-font underline-offset-4">
+          {translations[Astro.currentLocale].learn_more}
+        </span>
+        <div
+          class="font-mono text-sm font-light whitespace-nowrap transition duration-200 select-none group-hover:translate-x-0.5"
+        >
+          ->
+        </div>
+      </div>
+    </footer>
+  </article>
+</a>

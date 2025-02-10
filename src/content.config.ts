@@ -314,10 +314,10 @@ export const collections = {
   faqCollection,
   pricingCollection,
   clientsCollection,
-  //legalEnCollection,
+  legalEnCollection,
   legalSvCollection,
-  //blogEnCollection,
+  blogEnCollection,
   blogSvCollection,
-  //portfolioEnCollection,
+  portfolioEnCollection,
   portfolioSvCollection,
 };

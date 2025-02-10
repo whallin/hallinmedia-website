@@ -20,7 +20,6 @@ const { client } = Astro.props;
 const { data } = client;
 const dominantColor = data.dominantColor || "oklch(0.637 0.237 25.331)";
 
-// Get portfolio posts for this client
 const portfolioPosts = await getCollection("portfolioEnCollection").then((posts) =>
   posts
     .filter((post) => post.data.client.id === client.id)
