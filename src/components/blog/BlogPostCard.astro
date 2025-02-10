@@ -1,0 +1,73 @@
+---
+import { Picture } from "astro:assets";
+import { getRelativeLocaleUrl } from "astro:i18n";
+
+const { post } = Astro.props;
+---
+
+<a
+  href={getRelativeLocaleUrl(`${Astro.currentLocale}`, `/blog/${post.id}`)}
+  class="group block h-full"
+>
+  <article
+    class="relative flex h-full flex-col overflow-hidden rounded-lg border border-stone-300 bg-amber-50 transition duration-200 selection:bg-red-300 selection:text-red-800 hover:-translate-y-1 hover:border-red-500 hover:drop-shadow-[0_4px_4px_rgb(0,0,0,0.05)]"
+  >
+    {
+      post.data.featured && (
+        <div class="absolute top-4 right-4 z-10 text-xl text-red-500 select-none">★</div>
+      )
+    }
+    <figure class="relative overflow-hidden">
+      <span
+        class="absolute top-4 left-4 z-10 rounded-full border border-stone-500 bg-amber-50 px-2 py-1 text-xs font-light text-stone-700 transition duration-200 group-hover:border-red-500 group-hover:text-red-700"
+      >
+        {post.data.category}
+      </span>
+      <Picture
+        src={post.data.featuredImage}
+        alt={post.data.featuredImageAlt}
+        widths={[400, 800, 1200]}
+        sizes="(max-width: 640px) 100vw, 50vw"
+        class="h-48 w-full object-cover transition duration-200 group-hover:scale-105"
+        formats={["avif", "webp", "jpeg"]}
+      />
+    </figure>
+    <div class="flex flex-1 flex-col p-4">
+      <header>
+        <h2
+          class="mb-2 font-serif text-xl text-stone-900 italic underline decoration-dashed decoration-from-font underline-offset-4 group-hover:text-red-500"
+        >
+          {post.data.title}
+        </h2>
+      </header>
+      <p class="line-clamp-2 text-sm font-light text-stone-600">
+        {post.data.description}
+      </p>
+    </div>
+    <footer
+      class="mt-auto flex flex-row flex-wrap items-center justify-between border-t border-stone-200 p-4 text-stone-500"
+    >
+      <div class="flex flex-col gap-1">
+        <time
+          class="font-mono text-sm font-light text-stone-500"
+          datetime={new Date(post.data.publishedDate).toISOString()}
+        >
+          {new Date(post.data.publishedDate).toLocaleDateString()}
+        </time>
+        <span class="font-mono text-xs font-light text-stone-400">
+          {post.data.readTime} min read
+        </span>
+      </div>
+      <div class="flex items-center justify-end gap-2 group-hover:text-red-500">
+        <span class="underline decoration-dashed decoration-from-font underline-offset-4">
+          Read more
+        </span>
+        <div
+          class="font-mono text-sm font-light whitespace-nowrap transition duration-200 select-none group-hover:translate-x-0.5"
+        >
+          ->
+        </div>
+      </div>
+    </footer>
+  </article>
+</a>

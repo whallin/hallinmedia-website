@@ -1,0 +1,44 @@
+---
+const { doc } = Astro.props;
+const IconComponent = await import(`../../components/icons/${doc.data.icon}.astro`);
+---
+
+<li
+  class="group relative overflow-hidden rounded-lg border border-stone-300 bg-amber-50/50 p-4 transition duration-200 selection:bg-red-300 selection:text-red-800 hover:-translate-y-1 hover:border-red-500 hover:drop-shadow-[0_4px_4px_rgb(0,0,0,0.05)]"
+>
+  <a href={`/legal/${doc.id}`} class="block">
+    <IconComponent.default
+      class="absolute top-1/2 -right-22 z-0 aspect-square h-[calc(100%+4rem)] w-auto -translate-y-1/2 text-red-500/20 transition duration-200 group-hover:scale-105"
+    />
+    <div class="relative z-10 flex flex-col gap-2">
+      <h3 class="text-lg font-medium text-stone-900">{doc.data.title}</h3>
+      <time
+        class="font-mono text-xs text-stone-500"
+        datetime={new Date(doc.data.publishedDate).toISOString()}
+      >
+        <div class="flex gap-2">
+          <span>{new Date(doc.data.publishedDate).toLocaleDateString()}</span>•
+          <span>
+            {
+              doc.data.audience === "Both" || doc.data.audience === "Båda"
+                ? "B2C + B2B"
+                : doc.data.audience
+            }
+          </span>
+        </div>
+      </time>
+      <p class="text-stone-600">{doc.data.description}</p>
+      <ul class="my-2 flex flex-wrap gap-2">
+        {
+          doc.data.compliance?.map((compliance) => (
+            <li>
+              <span class="rounded-full border border-stone-300 bg-amber-50 px-2.5 py-1 text-xs font-medium text-stone-700 transition duration-200 hover:border-red-300 hover:text-red-700">
+                {compliance}
+              </span>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </a>
+</li>

@@ -1,12 +1,12 @@
 ---
 import { getCollection, render } from "astro:content";
 import { getRelativeLocaleUrl } from "astro:i18n";
-import BlogPostCard from "../../components/blog/BlogPostCard.astro";
-import IconPhNewspaperDuotone from "../../components/icons/PhNewspaperDuotone.astro";
-import MainLayout from "../../layouts/MainLayout.astro";
+import BlogPostCard from "../../../components/blog/BlogPostCard.astro";
+import IconPhNewspaperDuotone from "../../../components/icons/PhNewspaperDuotone.astro";
+import MainLayout from "../../../layouts/MainLayout.astro";
 
 // Fetch all blog posts with read time
-const blogPosts = await getCollection("blogEnCollection").then(async (posts) => {
+const blogPosts = await getCollection("blogSvCollection").then(async (posts) => {
   const postsWithReadTime = await Promise.all(
     posts.map(async (post) => {
       const { remarkPluginFrontmatter } = await render(post);
@@ -35,34 +35,34 @@ const blogPosts = await getCollection("blogEnCollection").then(async (posts) => 
     <header
       class="flex flex-col-reverse justify-between gap-4 selection:bg-red-300 selection:text-red-800 sm:flex-row sm:items-center"
     >
-      <h1 class="max-w-md text-4xl font-light break-words text-stone-900 italic">My "newspaper"</h1>
+      <h1 class="max-w-md text-4xl font-light break-words text-stone-900 italic">Min "tidning"</h1>
       <IconPhNewspaperDuotone class="motion-preset-expand h-8 w-8 text-red-500 sm:h-12 sm:w-12" />
     </header>
     <article
       class="flex flex-col gap-4 font-serif text-sm font-light text-stone-700 selection:bg-red-300 selection:text-red-800"
     >
       <p>
-        My blog, or as I like to call it, my newspaper, is a place for all my various publications.
-        It includes everything from my experiences and discoveries to personal opinions and things
-        I'd like to share. Most of my posts are quite short and to the point, though some might be
-        more complex and elaborate.
+        Min blogg, eller som jag brukar kalla den, min tidning, är en plats för alla mina olika
+        publikationer. Den innehåller allt från mina erfarenheter och upptäckter till personliga
+        åsikter och sådant jag vill dela med mig av. De flesta av mina inlägg är ganska korta och
+        koncisa, men vissa kan vara mer komplexa och utförliga.
       </p>
       <p>
-        Feel free to see if any title piques your interest—remember, all blog posts are available in
-        both <a
+        Titta gärna om någon titel väcker ditt intresse - kom ihåg att alla blogginlägg finns
+        tillgängliga på både <a
           href={getRelativeLocaleUrl("en", "blog")}
           class="text-blue-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-blue-500 hover:text-stone-50 hover:no-underline active:opacity-50"
-          >English</a
-        > and <a
+          >engelska</a
+        > och <a
           href={getRelativeLocaleUrl("sv", "blog")}
           class="text-amber-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-amber-500 hover:text-stone-50 hover:no-underline active:opacity-50"
-          >Swedish</a
-        > and have support for commenting (as long as you have a <a
+          >svenska</a
+        > och har stöd för kommentarer (så länge du har ett <a
           href="https://github.com/"
           target="_blank"
           class="text-red-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-50 hover:no-underline active:opacity-50"
-          >GitHub</a
-        > account).
+          >Github-konto</a
+        >).
       </p>
     </article>
 
