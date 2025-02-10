@@ -1,5 +1,18 @@
 ---
 import PhHeartDuotone from "../icons/PhHeartDuotone.astro";
+
+const translations = {
+  en: {
+    title: "Collaboration Notice",
+    notice:
+      "This engagement was facilitated through a subcontracting arrangement. I'm proud to have contributed to this project as part of a larger collaboration, but due to the nature of the contract, I may not be allowed to share any details or created projects for this client.",
+  },
+  sv: {
+    title: "Samarbetsmeddelande",
+    notice:
+      "Detta uppdrag genomfördes genom ett underleverantörsavtal. Jag är stolt över att ha bidragit till detta projekt som en del av ett större samarbete, men på grund av uppdragets natur får jag eventuellt inte dela några detaljer eller skapade projekt för denna kund.",
+  },
+};
 ---
 
 <aside
@@ -10,10 +23,10 @@ import PhHeartDuotone from "../icons/PhHeartDuotone.astro";
   >
     <PhHeartDuotone class="h-4 w-4" />
   </div>
-  <h3 class="mb-2 font-serif text-xl font-light text-stone-900 italic">Collaboration Notice</h3>
+  <h3 class="mb-2 font-serif text-xl font-light text-stone-900 italic">
+    {translations[Astro.currentLocale].title}
+  </h3>
   <p class="leading-relaxed">
-    This engagement was facilitated through a subcontracting arrangement. I'm proud to have
-    contributed to this project as part of a larger collaboration, but due to the nature of the
-    contract, I may not be allowed to share any details or created projects for this client.
+    {translations[Astro.currentLocale].notice}
   </p>
 </aside>
