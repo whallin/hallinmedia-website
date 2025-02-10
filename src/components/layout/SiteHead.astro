@@ -6,9 +6,11 @@ interface Props {
   description?: string;
   article?: boolean;
   faqData?: any;
+  datePublished?: string;
+  dateModified?: string;
 }
 
-const { title, description = "", article, faqData } = Astro.props;
+const { title, description = "", article, faqData, datePublished, dateModified } = Astro.props;
 ---
 
 <meta charset="UTF-8" />
@@ -232,26 +234,26 @@ const { title, description = "", article, faqData } = Astro.props;
         "@type": "WebPage",
         "@id": "${Astro.url}"
       },
-      "headline": "title}",
-      "description": "description}",
+      "headline": "${title}",
+      "description": "${description}",
       "image": "https://hallin.media/meta.png",
       "author": {
         "@type": "Organization",
         "name": "HallinMedia",
         "url": "https://hallin.media/"
       },
-          "publisher": {
-            "@type": "Organization",
-            "name": "HallinMedia",
-            "logo": {
-              "@type": "ImageObject",
-              "url": "https://hallin.media/meta.png"
-            }
-          },
-          "datePublished": "datePublished}",
-          "dateModified": "dateModified}"
+      "publisher": {
+        "@type": "Organization",
+        "name": "HallinMedia",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://hallin.media/meta.png"
         }
-        `}
+      },
+      ${datePublished ? `"datePublished": "${datePublished}",` : ""}
+      ${dateModified ? `"dateModified": "${dateModified}"` : ""}
+    }
+    `}
     />
   )
 }

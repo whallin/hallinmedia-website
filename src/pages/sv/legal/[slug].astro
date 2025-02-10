@@ -24,11 +24,17 @@ const audienceColor =
   item.data.audience === "B2B" ? "blue" : item.data.audience === "B2C" ? "pink" : "purple";
 ---
 
-<wbr
-  class="hidden text-blue-500 text-pink-500 text-purple-500 selection:bg-blue-300 selection:bg-pink-300 selection:bg-purple-300 selection:text-blue-800 selection:text-pink-800 selection:text-purple-800"
-/>
+<MainLayout
+  title={item.data.title}
+  description={item.data.description}
+  article={true}
+  datePublished={item.data.publishedDate}
+  dateModified={item.data.lastEdited}
+>
+  <wbr
+    class="hidden text-blue-500 text-pink-500 text-purple-500 selection:bg-blue-300 selection:bg-pink-300 selection:bg-purple-300 selection:text-blue-800 selection:text-pink-800 selection:text-purple-800"
+  />
 
-<MainLayout title={item.data.title} description={item.data.description} article={true}>
   <article class="flex flex-col gap-8 font-serif">
     <header class="flex flex-col gap-6 selection:bg-red-300 selection:text-red-800">
       <span
