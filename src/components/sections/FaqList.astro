@@ -54,6 +54,34 @@ const translations = {
 };
 ---
 
+<script
+  type="application/ld+json"
+  set:html={`
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      ${JSON.stringify(
+        displayFaqCollection.flatMap((category) =>
+          category.data.questions.map((faq) => ({
+            "@type": "Question",
+            name: faq.question[Astro.currentLocale],
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: faq.answer[Astro.currentLocale]
+                .replace(/<br\s*\/?>/gi, " ")
+                .replace(/<[^>]+>/g, "")
+                .replace(/\s+/g, " ")
+                .trim(),
+            },
+          }))
+        )
+      ).slice(1, -1)}
+    ]
+  }
+`}
+/>
+
 <section id="faq" class="flex flex-col gap-6 selection:bg-red-300 selection:text-red-800">
   <header class="flex flex-col gap-4">
     <h2 class="font-serif text-3xl font-light text-stone-900 italic">

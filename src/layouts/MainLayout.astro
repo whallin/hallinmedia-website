@@ -8,6 +8,7 @@ interface Props {
   title: string;
   description?: string;
   article?: boolean;
+  faqData?: any;
 }
 
 function truncateDescription(text: string, maxLength: number): string {
@@ -17,20 +18,25 @@ function truncateDescription(text: string, maxLength: number): string {
   const lastBoundary = Math.max(
     truncated.lastIndexOf("."),
     truncated.lastIndexOf("!"),
-    truncated.lastIndexOf("?"),
+    truncated.lastIndexOf("?")
   );
 
   return lastBoundary > 0 ? text.slice(0, lastBoundary + 1) : truncated;
 }
 
-const { title, description = "", article } = Astro.props;
+const { title, description = "", article, faqData } = Astro.props;
 const truncatedDescription = truncateDescription(description, 160);
 ---
 
 <!doctype html>
 <html lang={Astro.currentLocale}>
   <head>
-    <SiteHead title={title} description={truncatedDescription} article={article} />
+    <SiteHead
+      title={title}
+      description={truncatedDescription}
+      article={article}
+      faqData={faqData}
+    />
   </head>
   <body class="mx-8 my-12 max-w-2xl bg-amber-50 md:mx-auto">
     <Navbar />

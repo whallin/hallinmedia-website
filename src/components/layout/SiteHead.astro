@@ -5,9 +5,10 @@ interface Props {
   title: string;
   description?: string;
   article?: boolean;
+  faqData?: any;
 }
 
-const { title, description = "", article } = Astro.props;
+const { title, description = "", article, faqData } = Astro.props;
 ---
 
 <meta charset="UTF-8" />
@@ -64,6 +65,226 @@ const { title, description = "", article } = Astro.props;
 <meta name="twitter:description" content={description} />
 <meta name="twitter:image" content="https://hallin.media/meta.png" />
 <meta name="twitter:image:alt" content={description} />
+
+<!-- JSON-LD Markup -->
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "name": "William Hallin",
+        "url": "https://hallin.media/",
+        "image": "https://hallin.media/mw.png",
+        "sameAs": [
+          "https://www.facebook.com/profile.php?id=100082821755832",
+          "https://www.instagram.com/williamhallinn",
+          "https://www.youtube.com/@hallinmedia",
+          "https://www.linkedin.com/in/whallin/",
+          "https://github.com/whallin",
+          "https://hallin.media/"
+        ],
+        "jobTitle": "Photographer & Designer",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "HallinMedia"
+        }
+      },
+      {
+        "@type": "Corporation",
+        "name": "HallinMedia",
+        "alternateName": "William Hallin",
+        "url": "https://hallin.media/",
+        "logo": "https://hallin.media/meta.png",
+        "contactPoint": [
+          {
+            "@type": "ContactPoint",
+            "telephone": "+46706159279",
+            "contactType": "customer service",
+            "areaServed": "SE",
+            "availableLanguage": ["en", "Swedish"]
+          },
+          {
+            "@type": "ContactPoint",
+            "telephone": "+46706159279",
+            "contactType": "technical support",
+            "areaServed": "SE",
+            "availableLanguage": ["en", "Swedish"]
+          },
+          {
+            "@type": "ContactPoint",
+            "telephone": "+46706159279",
+            "contactType": "billing support",
+            "areaServed": "SE",
+            "availableLanguage": ["en", "Swedish"]
+          },
+          {
+            "@type": "ContactPoint",
+            "telephone": "+46706159279",
+            "contactType": "sales",
+            "areaServed": "SE",
+            "availableLanguage": ["en", "Swedish"]
+          }
+        ],
+        "sameAs": [
+          "https://www.facebook.com/profile.php?id=100082821755832",
+          "https://www.instagram.com/williamhallinn",
+          "https://www.youtube.com/@hallinmedia",
+          "https://www.linkedin.com/in/whallin/",
+          "https://github.com/whallin",
+          "https://hallin.media/"
+        ]
+      },
+      {
+        "@type": "ProfessionalService",
+        "name": "HallinMedia",
+        "image": "https://hallin.media/meta.png",
+        "@id": "https://hallin.media/",
+        "url": "https://hallin.media/",
+        "telephone": "+46706159279",
+        "priceRange": "$$",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Bleckslagargatan 16",
+          "addressLocality": "Kåge",
+          "postalCode": "93431",
+          "addressCountry": "SE"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 64.8303689,
+          "longitude": 20.990464
+        },
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "opens": "00:00",
+          "closes": "23:59"
+        },
+        "sameAs": [
+          "https://www.facebook.com/profile.php?id=100082821755832",
+          "https://www.instagram.com/williamhallinn",
+          "https://www.youtube.com/@hallinmedia",
+          "https://www.linkedin.com/in/whallin/",
+          "https://github.com/whallin",
+          "https://hallin.media/"
+        ]
+      }
+    ]
+  }
+</script>
+
+<!-- JSON-LD: FAQ Page -->
+{
+  (faqData || Astro.url.pathname.includes("/faq")) && (
+    <script
+      type="application/ld+json"
+      set:html={`
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      ${
+        faqData
+          ? JSON.stringify(
+              faqData.flatMap((category) =>
+                category.data.questions.map((faq) => ({
+                  "@type": "Question",
+                  name: faq.question[Astro.currentLocale],
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: faq.answer[Astro.currentLocale]
+                      .replace(/<br\s*\/?>/gi, " ")
+                      .replace(/<[^>]+>/g, "")
+                      .replace(/\s+/g, " ")
+                      .trim(),
+                  },
+                }))
+              )
+            ).slice(1, -1)
+          : "[]"
+      }
+    ]
+  }
+`}
+    />
+  )
+}
+
+<!-- JSON-LD: Article (Legal) -->
+{
+  Astro.url.pathname.includes("/legal/") && (
+    <script
+      type="application/ld+json"
+      set:html={`
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "${Astro.url}"
+      },
+      "headline": "title}",
+      "description": "description}",
+      "image": "https://hallin.media/meta.png",
+      "author": {
+        "@type": "Organization",
+        "name": "HallinMedia",
+        "url": "https://hallin.media/"
+      },
+          "publisher": {
+            "@type": "Organization",
+            "name": "HallinMedia",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://hallin.media/meta.png"
+            }
+          },
+          "datePublished": "datePublished}",
+          "dateModified": "dateModified}"
+        }
+        `}
+    />
+  )
+}
+
+<!-- JSON-LD: Article (Blog & Portfolio) -->
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://hallin.media/blog/[slug].astro"
+    },
+    "headline": "blog.data.title",
+    "description": "blog.data.description",
+    "image": "https://hallin.media/blog/featuredImg",
+    "author": {
+      "@type": "Person",
+      "name": "William Hallin",
+      "url": "https://hallin.media/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "HallinMedia",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://hallin.media/meta.png"
+      }
+    },
+    "datePublished": "2025-02-01",
+    "dateModified": "2025-02-02"
+  }
+</script>
 
 <!-- Umami -->
 <script
