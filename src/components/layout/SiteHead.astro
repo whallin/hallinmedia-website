@@ -69,7 +69,9 @@ const { title, description = "", article, faqData, datePublished, dateModified }
 <meta name="twitter:image:alt" content={description} />
 
 <!-- JSON-LD Markup -->
-<script type="application/ld+json">
+<script
+  type="application/ld+json"
+  set:html={`
   {
     "@context": "https://schema.org",
     "@graph": [
@@ -180,120 +182,100 @@ const { title, description = "", article, faqData, datePublished, dateModified }
           "https://hallin.media/"
         ]
       }
-    ]
-  }
-</script>
-
-<!-- JSON-LD: FAQ Page -->
-{
-  (faqData || Astro.url.pathname.includes("/faq")) && (
-    <script
-      type="application/ld+json"
-      set:html={`
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
       ${
-        faqData
-          ? JSON.stringify(
-              faqData.flatMap((category) =>
-                category.data.questions.map((faq) => ({
-                  "@type": "Question",
-                  name: faq.question[Astro.currentLocale],
-                  acceptedAnswer: {
-                    "@type": "Answer",
-                    text: faq.answer[Astro.currentLocale]
-                      .replace(/<br\s*\/?>/gi, " ")
-                      .replace(/<[^>]+>/g, "")
-                      .replace(/\s+/g, " ")
-                      .trim(),
-                  },
-                }))
-              )
-            ).slice(1, -1)
-          : "[]"
+        faqData || Astro.url.pathname.includes("/faq")
+          ? `,
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          ${
+            faqData
+              ? JSON.stringify(
+                  faqData.flatMap((category) =>
+                    category.data.questions.map((faq) => ({
+                      "@type": "Question",
+                      name: faq.question[Astro.currentLocale],
+                      acceptedAnswer: {
+                        "@type": "Answer",
+                        text: faq.answer[Astro.currentLocale]
+                          .replace(/<br\s*\/?>/gi, " ")
+                          .replace(/<[^>]+>/g, "")
+                          .replace(/\s+/g, " ")
+                          .trim(),
+                      },
+                    }))
+                  )
+                ).slice(1, -1)
+              : "[]"
+          }
+        ]
+      }`
+          : ""
+      }
+      ${
+        Astro.url.pathname.includes("/legal/")
+          ? `,
+      {
+        "@type": "Article",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "${Astro.url}"
+        },
+        "headline": "${title}",
+        "description": "${description}",
+        "image": "https://hallin.media/meta.png",
+        "author": {
+          "@type": "Organization",
+          "name": "HallinMedia",
+          "url": "https://hallin.media/"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "HallinMedia",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://hallin.media/meta.png"
+          }
+        },
+        ${datePublished ? `"datePublished": "${datePublished}",` : ""}
+        ${dateModified ? `"dateModified": "${dateModified}"` : ""}
+      }`
+          : ""
+      }
+      ${
+        Astro.url.pathname.includes("/blog/") || Astro.url.pathname.includes("/portfolio/")
+          ? `,
+      {
+        "@type": "${Astro.url.pathname.includes("/blog/") ? "BlogPosting" : "Article"}",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "${Astro.url}"
+        },
+        "headline": "${title}",
+        "description": "${description}",
+        "image": "https://hallin.media/meta.png",
+        "author": {
+          "@type": "Person",
+          "name": "William Hallin",
+          "url": "https://hallin.media/"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "HallinMedia",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://hallin.media/meta.png"
+          }
+        },
+        ${datePublished ? `"datePublished": "${datePublished}",` : ""}
+        ${dateModified ? `"dateModified": "${dateModified}"` : ""}
+      }`
+          : ""
       }
     ]
   }
 `}
-    />
-  )
-}
-
-<!-- JSON-LD: Article (Legal) -->
-{
-  Astro.url.pathname.includes("/legal/") && (
-    <script
-      type="application/ld+json"
-      set:html={`
-    {
-      "@context": "https://schema.org",
-      "@type": "Article",
-      "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "${Astro.url}"
-      },
-      "headline": "${title}",
-      "description": "${description}",
-      "image": "https://hallin.media/meta.png",
-      "author": {
-        "@type": "Organization",
-        "name": "HallinMedia",
-        "url": "https://hallin.media/"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "HallinMedia",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://hallin.media/meta.png"
-        }
-      },
-      ${datePublished ? `"datePublished": "${datePublished}",` : ""}
-      ${dateModified ? `"dateModified": "${dateModified}"` : ""}
-    }
-    `}
-    />
-  )
-}
-
-<!-- JSON-LD: Article (Blog & Portfolio) -->
-{
-  (Astro.url.pathname.includes("/blog/") || Astro.url.pathname.includes("/portfolio/")) && (
-    <script
-      type="application/ld+json"
-      set:html={`
-    {
-      "@context": "https://schema.org",
-      "@type": "${Astro.url.pathname.includes("/blog/") ? "BlogPosting" : "Article"}",
-      "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "${Astro.url}"
-      },
-      "headline": "${title}",
-      "description": "${description}",
-      "image": "https://hallin.media/meta.png",
-      "author": {
-        "@type": "Person",
-        "name": "William Hallin",
-        "url": "https://hallin.media/"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "HallinMedia",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://hallin.media/meta.png"
-        }
-      },
-      ${datePublished ? `"datePublished": "${datePublished}",` : ""}
-      ${dateModified ? `"dateModified": "${dateModified}"` : ""}
-    }
-    `}
-    />
-  )
-}
+/>
 
 <!-- Umami -->
 <script
