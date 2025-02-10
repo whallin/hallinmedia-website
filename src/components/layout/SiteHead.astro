@@ -1,4 +1,6 @@
 ---
+import { getAbsoluteLocaleUrlList } from "astro:i18n";
+
 interface Props {
   title: string;
   description?: string;
@@ -6,6 +8,7 @@ interface Props {
 }
 
 const { title, description = "", article } = Astro.props;
+const canonicalUrls = getAbsoluteLocaleUrlList(Astro.url.pathname);
 ---
 
 <meta charset="UTF-8" />
@@ -23,8 +26,14 @@ const { title, description = "", article } = Astro.props;
 <!-- Meta -->
 <meta name="description" content={description} />
 <meta name="author" content="William Hallin" />
-<link rel="canonical" href={Astro.url} />
 <link rel="sitemap" href="/sitemap-index.xml" />
+<link rel="canonical" href={Astro.url} />
+{
+  canonicalUrls.map((url) => {
+    const locale = new URL(url).pathname.split("/")[1] || "en";
+    return <link rel="alternate" hreflang={locale} href={url} />;
+  })
+}
 
 <!-- Favicon -->
 <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
