@@ -8,9 +8,18 @@ interface Props {
   description: string;
   buttonText: string;
   pricingText?: string;
+  contactLink?: string;
+  pricingLink?: string;
 }
 
-const { title, description, buttonText, pricingText } = Astro.props as Props;
+const {
+  title,
+  description,
+  buttonText,
+  pricingText,
+  contactLink = getRelativeLocaleUrl(`${Astro.currentLocale}`, "contact"),
+  pricingLink = getRelativeLocaleUrl(`${Astro.currentLocale}`, "contact#pricing"),
+} = Astro.props as Props;
 ---
 
 <section
@@ -22,7 +31,7 @@ const { title, description, buttonText, pricingText } = Astro.props as Props;
   </p>
   <div class="flex w-full flex-col gap-2 sm:flex-row">
     <a
-      href={getRelativeLocaleUrl(`${Astro.currentLocale}`, "contact")}
+      href={contactLink}
       class="inline-flex items-center justify-center gap-2 rounded-md border bg-red-500 px-4 py-2 text-sm font-medium text-stone-50 transition duration-200 hover:bg-red-700 active:scale-95"
     >
       {buttonText}
@@ -31,7 +40,7 @@ const { title, description, buttonText, pricingText } = Astro.props as Props;
     {
       pricingText && (
         <a
-          href={getRelativeLocaleUrl(`${Astro.currentLocale}`, "contact#pricing")}
+          href={pricingLink}
           class="inline-flex items-center justify-center gap-2 rounded-lg border border-red-300 px-4 py-2 transition duration-200 hover:border-red-500 hover:text-red-700 active:scale-95 sm:w-auto sm:justify-normal"
         >
           {pricingText}

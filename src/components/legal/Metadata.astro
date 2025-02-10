@@ -1,0 +1,119 @@
+---
+import PhBuildingsDuotone from "../../components/icons/PhBuildingsDuotone.astro";
+import PhCalendarDuotone from "../../components/icons/PhCalendarDuotone.astro";
+import PhClockCounterClockwiseDuotone from "../../components/icons/PhClockCounterClockwiseDuotone.astro";
+import PhEnvelopeDuotone from "../../components/icons/PhEnvelopeDuotone.astro";
+import PhHeartDuotone from "../../components/icons/PhHeartDuotone.astro";
+import PhSparkleDuotone from "../../components/icons/PhSparkleDuotone.astro";
+
+const translations = {
+  en: {
+    audience: "Audience",
+    jurisdiction: "Jurisdiction",
+    effective_date: "Effective date",
+    last_edited: "Last edited",
+    compliance: "Compliance",
+  },
+  sv: {
+    audience: "Målgrupp",
+    jurisdiction: "Jurisdiktion",
+    effective_date: "Effektivt datum",
+    last_edited: "Senast redigerad",
+    compliance: "Tillämpning",
+  },
+};
+
+const { item, audienceColor } = Astro.props;
+---
+
+<aside class="grid gap-6 rounded-lg border border-stone-200 p-6 font-mono text-sm text-stone-600">
+  <div class="grid gap-4 sm:grid-cols-2">
+    <dl class="space-y-2">
+      <div
+        class={`flex items-center gap-2 selection:bg-${audienceColor}-300 selection:text-${audienceColor}-800`}
+      >
+        <dt class="sr-only">{translations[Astro.currentLocale].audience}</dt>
+        <dd class="flex items-center gap-2">
+          <span class={`text-${audienceColor}-500`}>
+            {
+              item.data.audience === "B2B" ? (
+                <PhEnvelopeDuotone class="h-4 w-4" />
+              ) : item.data.audience === "B2C" ? (
+                <PhHeartDuotone class="h-4 w-4" />
+              ) : (
+                <PhSparkleDuotone class="h-4 w-4" />
+              )
+            }
+          </span>
+          <p>
+            {translations[Astro.currentLocale].audience}: {
+              item.data.audience === "Both" ? "B2B + B2C" : item.data.audience
+            }
+          </p>
+        </dd>
+      </div>
+      {
+        item.data.jurisdiction && (
+          <div class="flex items-center gap-2 selection:bg-green-300 selection:text-green-800">
+            <dt class="sr-only">{translations[Astro.currentLocale].jurisdiction}</dt>
+            <dd class="flex items-center gap-2">
+              <PhBuildingsDuotone class="h-4 w-4 text-green-500" />
+              <p>
+                {translations[Astro.currentLocale].jurisdiction}: {item.data.jurisdiction}
+              </p>
+            </dd>
+          </div>
+        )
+      }
+    </dl>
+
+    <dl class="space-y-2 selection:bg-indigo-300 selection:text-indigo-800">
+      <div class="flex items-center gap-2">
+        <dt class="sr-only">{translations[Astro.currentLocale].effective_date}</dt>
+        <dd class="flex items-center gap-2">
+          <PhCalendarDuotone class="h-4 w-4 text-indigo-500" />
+          <p>
+            {translations[Astro.currentLocale].effective_date}: {
+              new Date(item.data.effectiveDate).toLocaleDateString()
+            }
+          </p>
+        </dd>
+      </div>
+      <div class="flex items-center gap-2">
+        <dt class="sr-only">{translations[Astro.currentLocale].last_edited}</dt>
+        <dd class="flex items-center gap-2">
+          <PhClockCounterClockwiseDuotone class="h-4 w-4 text-indigo-500" />
+          <p>
+            {translations[Astro.currentLocale].last_edited}: {
+              new Date(item.data.lastEdited).toLocaleDateString()
+            }
+          </p>
+        </dd>
+      </div>
+    </dl>
+  </div>
+
+  {
+    item.data.compliance && item.data.compliance.length > 0 && (
+      <div class="border-t border-stone-200 pt-4 selection:bg-red-300 selection:text-red-800">
+        <div class="flex flex-col justify-between gap-4 sm:flex-row sm:items-center sm:gap-0">
+          <div>
+            <h3 class="mb-2 text-xs font-medium text-stone-500">
+              {translations[Astro.currentLocale].compliance}
+            </h3>
+            <div class="flex flex-wrap gap-2">
+              {item.data.compliance.map((compliance) => (
+                <span class="rounded-full border border-stone-500 px-3 py-1 text-xs transition duration-200 hover:-translate-y-1 hover:border-red-500 hover:text-red-700">
+                  {compliance}
+                </span>
+              ))}
+            </div>
+          </div>
+          <span class="h-fit w-fit rounded-full border border-stone-500 px-3 py-1 font-mono text-xs">
+            v{item.data.version}
+          </span>
+        </div>
+      </div>
+    )
+  }
+</aside>
