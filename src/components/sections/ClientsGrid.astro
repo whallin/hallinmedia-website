@@ -27,10 +27,7 @@ const { clients } = Astro.props;
             ontouchend={`document.querySelector('.heart-icon').style.color = 'oklch(0.637 0.237 25.331)'`}
           >
             {client.data.featured && (
-              <figure
-                class="absolute top-4 right-4 text-xl text-[var(--dominant-color)] select-none"
-                aria-label="Featured client"
-              >
+              <figure class="absolute top-4 right-4 text-xl text-[var(--dominant-color)] select-none">
                 ★
               </figure>
             )}
@@ -49,9 +46,7 @@ const { clients } = Astro.props;
                 {client.data.name}
               </h2>
               <div class="flex items-center gap-2 text-stone-500 group-hover:bg-[var(--dominant-color)] group-hover:text-stone-50 group-active:bg-[var(--dominant-color)] group-active:text-stone-50">
-                <div class="font-mono text-sm whitespace-nowrap select-none" aria-hidden="true">
-                  ->
-                </div>
+                <div class="font-mono text-sm whitespace-nowrap select-none">-></div>
               </div>
             </header>
           </section>
