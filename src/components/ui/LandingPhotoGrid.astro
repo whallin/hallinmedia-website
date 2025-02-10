@@ -1,22 +1,17 @@
 ---
 import { Picture } from "astro:assets";
 import Img1 from "../../assets/images/landing-photo-grid/1.jpg";
+import Img10 from "../../assets/images/landing-photo-grid/10.jpg";
 import Img2 from "../../assets/images/landing-photo-grid/2.jpg";
 import Img3 from "../../assets/images/landing-photo-grid/3.jpg";
 import Img4 from "../../assets/images/landing-photo-grid/4.jpg";
 import Img5 from "../../assets/images/landing-photo-grid/5.jpg";
+import Img6 from "../../assets/images/landing-photo-grid/6.jpg";
+import Img7 from "../../assets/images/landing-photo-grid/7.jpg";
+import Img8 from "../../assets/images/landing-photo-grid/8.jpg";
+import Img9 from "../../assets/images/landing-photo-grid/9.jpg";
 
 const images = [
-  {
-    src: Img3,
-    alt: {
-      en: "A young cinematographer, Tim Svanborg",
-      sv: "En ung filmfotograf, Tim Svanborg",
-    },
-    specs: "ISO 6400, 1/1250s, f/5.6",
-    hoverColor: "#d86640",
-    colSpan: "",
-  },
   {
     src: Img1,
     alt: {
@@ -35,7 +30,17 @@ const images = [
     },
     specs: "ISO 1250, 1/80s, f/6.3",
     hoverColor: "#c37b2f",
-    colSpan: "sm:col-span-2",
+    colSpan: "sm:col-span-1",
+  },
+  {
+    src: Img3,
+    alt: {
+      en: "A young cinematographer, Tim Svanborg",
+      sv: "En ung filmfotograf, Tim Svanborg",
+    },
+    specs: "ISO 6400, 1/1250s, f/5.6",
+    hoverColor: "#d86640",
+    colSpan: "",
   },
   {
     src: Img4,
@@ -44,8 +49,8 @@ const images = [
       sv: "En sångerska på den svenska konserten, Attentatfest Umeå",
     },
     specs: "ISO 12800, 1/320s, f/5.6",
-    hoverColor: "#b85519",
-    colSpan: "",
+    hoverColor: "#1f221a",
+    colSpan: "sm:col-span-2",
   },
   {
     src: Img5,
@@ -55,6 +60,56 @@ const images = [
     },
     specs: "ISO 640, 1/50s, f/5.6",
     hoverColor: "#a31e27",
+    colSpan: "sm:col-span-3",
+  },
+  {
+    src: Img6,
+    alt: {
+      en: "People dancing at the nightclub Cinco",
+      sv: "Människor som dansar på nattklubben Cinco",
+    },
+    specs: "ISO 25000, 1/125s, f/4.0",
+    hoverColor: "#005afe",
+    colSpan: "",
+  },
+  {
+    src: Img7,
+    alt: {
+      en: "A man at a stall on Skellefteå square",
+      sv: "En man vid ett stånd på Skellefteås torg",
+    },
+    specs: "ISO 500, 1/100s, f/5.0",
+    hoverColor: "#c05629",
+    colSpan: "sm:col-span-2",
+  },
+  {
+    src: Img8,
+    alt: {
+      en: "Description for image 10",
+      sv: "Beskrivning för bild 10",
+    },
+    specs: "ISO 100, 1/6s, f/22.0",
+    hoverColor: "#674ea7",
+    colSpan: "sm:col-span-2",
+  },
+  {
+    src: Img9,
+    alt: {
+      en: "Skellefteå skyline from Sara Kulturhus",
+      sv: "Skellefteås horisont från Sara Kulturhus",
+    },
+    specs: "ISO 1250, 1/160s, f/5.0",
+    hoverColor: "#cc0000",
+    colSpan: "",
+  },
+  {
+    src: Img10,
+    alt: {
+      en: "The skyline of Härnösand from Vårdkasberget",
+      sv: "Härnösands horisont från Vårdkasberget",
+    },
+    specs: "ISO 100, 1/320s, f/4.0",
+    hoverColor: "#c8d0eb",
     colSpan: "sm:col-span-3",
   },
 ];
