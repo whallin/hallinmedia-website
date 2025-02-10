@@ -1,5 +1,5 @@
 ---
-import { getAbsoluteLocaleUrl } from "astro:i18n";
+import { getRelativeLocaleUrl, getAbsoluteLocaleUrl } from "astro:i18n";
 
 interface Props {
   title: string;
@@ -29,9 +29,15 @@ const { title, description = "", article } = Astro.props;
 <link rel="canonical" href={Astro.url} />
 {
   [
-    getAbsoluteLocaleUrl("en", Astro.url.pathname),
-    getAbsoluteLocaleUrl("sv", Astro.url.pathname),
-  ].map((url) => <link rel="alternate" hreflang={url.includes("/sv/") ? "sv" : "en"} href={url} />)
+    {
+      lang: "en",
+      url: getAbsoluteLocaleUrl("en", Astro.url.pathname.replace(`/${Astro.currentLocale}`, "")),
+    },
+    {
+      lang: "sv",
+      url: getAbsoluteLocaleUrl("sv", Astro.url.pathname.replace(`/${Astro.currentLocale}`, "")),
+    },
+  ].map(({ lang, url }) => <link rel="alternate" hreflang={lang} href={url} />)
 }
 
 <!-- Favicon -->
