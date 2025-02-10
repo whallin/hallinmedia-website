@@ -2,14 +2,14 @@
 import { Picture } from "astro:assets";
 import { getCollection, render, type CollectionEntry } from "astro:content";
 import { getRelativeLocaleUrl } from "astro:i18n";
-import BlogHeader from "../../components/blog/BlogHeader.astro";
-import BlogMeta from "../../components/blog/BlogMeta.astro";
-import RelatedPosts from "../../components/blog/RelatedPosts.astro";
-import CtaBanner from "../../components/sections/CtaBanner.astro";
-import MainLayout from "../../layouts/MainLayout.astro";
+import BlogHeader from "../../../components/blog/BlogHeader.astro";
+import BlogMeta from "../../../components/blog/BlogMeta.astro";
+import RelatedPosts from "../../../components/blog/RelatedPosts.astro";
+import CtaBanner from "../../../components/sections/CtaBanner.astro";
+import MainLayout from "../../../layouts/MainLayout.astro";
 
 export async function getStaticPaths() {
-  const blogPosts = await getCollection("blogEnCollection");
+  const blogPosts = await getCollection("blogSvCollection");
   return blogPosts.map((post) => ({
     params: { slug: post.id },
     props: { post, allPosts: blogPosts },
@@ -17,21 +17,21 @@ export async function getStaticPaths() {
 }
 
 type Props = {
-  post: CollectionEntry<"blogEnCollection">;
-  allPosts: CollectionEntry<"blogEnCollection">[];
+  post: CollectionEntry<"blogSvCollection">;
+  allPosts: CollectionEntry<"blogSvCollection">[];
 };
 
 const { post, allPosts } = Astro.props;
 const { Content, remarkPluginFrontmatter } = await render(post);
 const categoryColor = {
   Design: "sky",
-  Photography: "fuchsia",
+  Fotografi: "fuchsia",
   Video: "rose",
-  Marketing: "emerald",
-  Technology: "amber",
-  Business: "indigo",
-  Tutorials: "pink",
-  Insights: "teal",
+  Marknadsföring: "emerald",
+  Teknik: "amber",
+  Företagande: "indigo",
+  Guider: "pink",
+  Insikter: "teal",
 }[post.data.category];
 ---
 
@@ -94,10 +94,10 @@ const categoryColor = {
     }
 
     <CtaBanner
-      title="Enjoyed this post?"
-      description={`If you found this article helpful or interesting, consider sharing it with others who might benefit from it. You can also explore more content in the ${post.data.category} category.`}
-      buttonText={`More ${post.data.category} posts`}
-      pricingText="Share on LinkedIn"
+      title="Gillade du detta inlägg?"
+      description={`Om du tyckte att den här artikeln var användbar eller intressant, dela den gärna med andra som kan ha nytta av den. Du kan också läsa mer innehåll från kategorin ${post.data.category}.`}
+      buttonText={`Mer ${post.data.category} inlägg`}
+      pricingText="Dela på LinkedIn"
       contactLink={getRelativeLocaleUrl(
         `${Astro.currentLocale}`,
         `/blog?category=${post.data.category.toLowerCase()}`

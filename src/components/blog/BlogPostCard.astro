@@ -2,6 +2,17 @@
 import { Picture } from "astro:assets";
 import { getRelativeLocaleUrl } from "astro:i18n";
 
+const translations = {
+  en: {
+    minutes_read: "min read",
+    read_more: "Read more",
+  },
+  sv: {
+    minutes_read: "min att läsa",
+    read_more: "Läs mer",
+  },
+};
+
 const { post } = Astro.props;
 ---
 
@@ -55,12 +66,13 @@ const { post } = Astro.props;
           {new Date(post.data.publishedDate).toLocaleDateString()}
         </time>
         <span class="font-mono text-xs font-light text-stone-400">
-          {post.data.readTime} min read
+          {post.data.readTime}
+          {translations[Astro.currentLocale].minutes_read}
         </span>
       </div>
       <div class="flex items-center justify-end gap-2 group-hover:text-red-500">
         <span class="underline decoration-dashed decoration-from-font underline-offset-4">
-          Read more
+          {translations[Astro.currentLocale].read_more}
         </span>
         <div
           class="font-mono text-sm font-light whitespace-nowrap transition duration-200 select-none group-hover:translate-x-0.5"
