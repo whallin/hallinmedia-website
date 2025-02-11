@@ -5,6 +5,7 @@ import LatestPosts from "../../components/sections/LatestPosts.astro";
 import SpotifyPlaying from "../../components/sections/SpotifyPlaying.astro";
 import LandingPhotoGrid from "../../components/ui/LandingPhotoGrid.astro";
 import MainLayout from "../../layouts/MainLayout.astro";
+import PhSparkleDuotone from "../../components/icons/PhSparkleDuotone.astro";
 
 const age = new Date().getFullYear() - 2005 - (new Date().getMonth() < 7 ? 1 : 0);
 ---
@@ -65,6 +66,26 @@ const age = new Date().getFullYear() - 2005 - (new Date().getMonth() < 7 ? 1 : 0
         >.
       </p>
     </article>
+    <nav class="flex flex-col gap-2 text-sm font-light sm:flex-row">
+      <a
+        href={getRelativeLocaleUrl(`${Astro.currentLocale}`, "contact")}
+        data-umami-event="landing_cta_contact"
+        data-umami-event-origin={Astro.url}
+        class="inline-flex items-center justify-center gap-2 rounded-md border bg-red-500 px-4 py-2 text-stone-50 transition hover:bg-red-700 active:scale-95 active:bg-red-700 sm:w-full"
+      >
+        <PhHandWavingDuotone class="h-4 w-4" />
+        Contact me
+      </a>
+      <a
+        href={getRelativeLocaleUrl(`${Astro.currentLocale}`, "portfolio")}
+        data-umami-event="landing_cta_portfolio"
+        data-umami-event-origin={Astro.url}
+        class="inline-flex items-center justify-center gap-2 rounded-lg border border-red-300 px-4 py-2 transition hover:border-red-500 hover:text-red-700 active:scale-95 active:border-red-500 active:text-red-700 sm:w-full"
+      >
+        <PhSparkleDuotone class="h-4 w-4" />
+        Browse portfolio
+      </a>
+    </nav>
     <aside>
       <SpotifyPlaying />
     </aside>
