@@ -28,6 +28,15 @@ function truncateDescription(text: string, maxLength: number): string {
 
 const { title, description = "", article, faqData, datePublished, dateModified } = Astro.props;
 const truncatedDescription = truncateDescription(description, 160);
+
+const translations = {
+  en: {
+    skip_to_main_content: "Skip to main content",
+  },
+  sv: {
+    skip_to_main_content: "Hoppa till huvud innehåll",
+  },
+};
 ---
 
 <!doctype html>
@@ -42,9 +51,17 @@ const truncatedDescription = truncateDescription(description, 160);
       dateModified={dateModified}
     />
   </head>
+
   <body class="mx-8 my-12 max-w-2xl bg-amber-50 md:mx-auto">
+    <a href="#main" class="sr-only focus:not-sr-only">
+      <span class="z-10 rounded bg-red-100 px-4 py-2 font-bold text-red-900 shadow-md">
+        {translations[Astro.currentLocale].skip_to_main_content}
+      </span>
+    </a>
     <Navbar />
-    <slot />
+    <main id="main" tabindex="-1">
+      <slot />
+    </main>
     <Footer />
   </body>
 </html>

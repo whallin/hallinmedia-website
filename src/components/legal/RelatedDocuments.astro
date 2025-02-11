@@ -4,9 +4,13 @@ import { getRelativeLocaleUrl } from "astro:i18n";
 const translations = {
   en: {
     related_documents: "Related Documents",
+    newWindow_label: "opens in new window",
+    read_more: "Read more about",
   },
   sv: {
     related_documents: "Relaterade dokument",
+    newWindow_label: "öppnas i nytt fönster",
+    read_more: "Läs mer om",
   },
 };
 
@@ -16,10 +20,10 @@ const { docId, item, allLegalItems } = Astro.props;
 {
   item.data.relatedDocuments && item.data.relatedDocuments.length > 0 && (
     <aside class="mt-8 selection:bg-red-300 selection:text-red-800">
-      <h2 class="mb-4 text-2xl font-light text-stone-900 italic">
+      <h2 class="mb-4 text-2xl font-light text-stone-900 italic" id="related-documents-heading">
         {translations[Astro.currentLocale].related_documents}
       </h2>
-      <nav>
+      <nav aria-labelledby="related-documents-heading">
         <ul class="flex flex-col gap-4 sm:flex-row sm:flex-wrap">
           {item.data.relatedDocuments.map((docSlug) => {
             const relatedDoc = allLegalItems.find((doc) => doc.id === docSlug);
@@ -30,6 +34,7 @@ const { docId, item, allLegalItems } = Astro.props;
                   class="flex w-full items-center justify-center gap-2 rounded-lg border border-stone-300 px-4 py-2 text-sm text-stone-700 transition hover:border-red-500 hover:text-red-700 active:scale-90 active:border-red-500 active:text-red-700 sm:w-auto sm:justify-normal"
                   data-umami-event={`related-doc_${docId}_${docSlug}`}
                   data-umami-event-origin={Astro.url}
+                  aria-label={`${translations[Astro.currentLocale].read_more} ${relatedDoc ? relatedDoc.data.title : docSlug}`}
                 >
                   {relatedDoc ? relatedDoc.data.title : `/${docSlug}`}
                 </a>

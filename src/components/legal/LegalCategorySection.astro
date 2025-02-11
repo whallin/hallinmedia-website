@@ -2,14 +2,25 @@
 import LegalDocumentCard from "./LegalDocumentCard.astro";
 
 const { category, docs } = Astro.props;
+
+const translations = {
+  en: {
+    legal_documents_label: "Legal Documents",
+  },
+  sv: {
+    legal_documents_label: "Juridiska dokument",
+  },
+};
 ---
 
-<section class="flex flex-col gap-4">
+<section class="flex flex-col gap-4" aria-labelledby="category-heading">
   <header>
-    <h2 class="font-serif text-3xl font-light text-stone-900 italic">{category}</h2>
+    <h2 id="category-heading" class="font-serif text-3xl font-light text-stone-900 italic">
+      {category}
+    </h2>
   </header>
-  <nav>
-    <ul class="grid gap-4">
+  <nav aria-label={translations[Astro.currentLocale].legal_documents_label}>
+    <ul class="grid gap-4" role="list">
       {docs.map((doc) => <LegalDocumentCard doc={doc} />)}
     </ul>
   </nav>

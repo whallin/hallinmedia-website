@@ -17,13 +17,16 @@ const translations = {
 
 <article
   class="relative rounded-lg border border-stone-300 bg-amber-50 p-6 text-sm font-light text-stone-700 selection:bg-[var(--dominant-color)] selection:text-[color-mix(in_oklab,var(--dominant-color),white_70%)]"
+  aria-labelledby="client-notice-title"
+  role="note"
 >
   <header
     class="absolute -top-3 left-4 flex h-6 w-6 items-center justify-center rounded-full border border-stone-300 bg-amber-50 text-[var(--dominant-color)]"
+    aria-hidden="true"
   >
     <PhHeartDuotone class="h-4 w-4" />
   </header>
-  <h1 class="mb-2 font-serif text-xl text-stone-900 italic">
+  <h1 id="client-notice-title" class="mb-2 font-serif text-xl text-stone-900 italic">
     {translations[Astro.currentLocale].title}
   </h1>
   <p class="leading-relaxed">

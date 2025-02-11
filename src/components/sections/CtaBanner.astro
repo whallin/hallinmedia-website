@@ -12,6 +12,17 @@ interface Props {
   pricingLink?: string;
 }
 
+const translations = {
+  en: {
+    cta_label: "Call to action",
+    opens_same_window: "opens in same window",
+  },
+  sv: {
+    cta_label: "Uppmaning till handling",
+    opens_same_window: "öppnas i samma fönster",
+  },
+};
+
 const {
   title,
   description,
@@ -24,23 +35,28 @@ const {
 
 <article
   class="mt-8 rounded border border-red-400 bg-amber-50 p-6 text-sm font-light text-stone-700"
+  aria-labelledby="cta-title"
 >
   <header class="mb-2">
-    <h2 class="text-xl text-stone-900 italic">{title}</h2>
+    <h2 id="cta-title" class="text-xl text-stone-900 italic">{title}</h2>
   </header>
   <p class="mb-4">
     {description}
   </p>
-  <nav class="flex flex-col gap-2 sm:flex-row">
+  <nav
+    class="flex flex-col gap-2 sm:flex-row"
+    aria-label={translations[Astro.currentLocale].cta_label}
+  >
     <a
       href={contactLink}
       data-umami-event={`cta_${Astro.url.pathname}_contact`}
       data-umami-event-url={contactLink}
       data-umami-event-origin={Astro.url}
       class="inline-flex items-center justify-center gap-2 rounded-md border bg-red-500 px-4 py-2 text-stone-50 transition hover:bg-red-700 active:scale-95 active:bg-red-700"
+      aria-label={`${buttonText} - ${translations[Astro.currentLocale].opens_same_window}`}
     >
       {buttonText}
-      <PhHandWavingDuotone class="h-4 w-4" />
+      <PhHandWavingDuotone class="h-4 w-4" aria-hidden="true" />
     </a>
     {
       pricingText && (
@@ -50,9 +66,10 @@ const {
           data-umami-event-url={pricingLink}
           data-umami-event-origin={Astro.url}
           class="inline-flex items-center justify-center gap-2 rounded-lg border border-red-300 px-4 py-2 transition hover:border-red-500 hover:text-red-700 active:scale-95 active:border-red-500 active:text-red-700"
+          aria-label={`${pricingText} - ${translations[Astro.currentLocale].opens_same_window}`}
         >
           {pricingText}
-          <PhArrowSquareOutDuotone class="h-4 w-4" />
+          <PhArrowSquareOutDuotone class="h-4 w-4" aria-hidden="true" />
         </a>
       )
     }

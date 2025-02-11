@@ -4,9 +4,13 @@ import { getRelativeLocaleUrl } from "astro:i18n";
 const translations = {
   en: {
     related_posts: "Related Posts",
+    related_posts_label: "Related blog posts",
+    read_more: "Read more about",
   },
   sv: {
     related_posts: "Relaterade inlägg",
+    related_posts_label: "Relaterade blogginlägg",
+    read_more: "Läs mer om",
   },
 };
 
@@ -28,11 +32,14 @@ const categoryStyles = {
 };
 ---
 
-<section class="mt-8 selection:bg-red-300/80 selection:text-red-800">
-  <h2 class="mb-4 text-2xl font-light text-stone-900/90 italic">
+<section
+  class="mt-8 selection:bg-red-300/80 selection:text-red-800"
+  aria-labelledby="related-posts-heading"
+>
+  <h2 id="related-posts-heading" class="mb-4 text-2xl font-light text-stone-900/90 italic">
     {translations[Astro.currentLocale].related_posts}
   </h2>
-  <nav>
+  <nav aria-label={translations[Astro.currentLocale].related_posts_label}>
     <ul class="flex flex-col gap-4 sm:flex-row sm:flex-wrap">
       {
         relatedPosts.map((postSlug) => {
@@ -44,6 +51,7 @@ const categoryStyles = {
                 class={`flex items-center gap-2 rounded-lg border border-stone-300/80 px-4 py-2 text-sm text-stone-700/90 transition active:scale-90 ${categoryStyles[categoryColor]}`}
                 data-umami-event={`related-post_${postId}_${postSlug}`}
                 data-umami-event-origin={Astro.url}
+                aria-label={`${translations[Astro.currentLocale].read_more} ${relatedPost ? relatedPost.data.title : postSlug}`}
               >
                 {relatedPost ? relatedPost.data.title : `/${postSlug}`}
               </a>

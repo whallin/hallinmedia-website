@@ -16,9 +16,12 @@ const translations = {
 
 <section
   class="group relative flex w-fit items-center gap-3 text-xs font-light text-stone-600 active:opacity-50"
+  aria-labelledby="spotify-playing-title"
 >
   <figure
     class="invisible absolute -top-8 left-1/2 z-10 -translate-x-1/2 rounded bg-stone-800 px-2 py-1 text-xs whitespace-nowrap text-stone-50 opacity-0 transition group-hover:visible group-hover:opacity-100 group-active:visible group-active:opacity-100"
+    role="tooltip"
+    aria-hidden="true"
   >
     <div class="flex items-center gap-2">
       <div class="flex flex-col items-center">
@@ -39,6 +42,7 @@ const translations = {
     data-umami-event-url="#"
     data-umami-event-origin={Astro.url}
     class="flex items-center gap-3"
+    aria-describedby="spotify-playing-title"
   >
     <Image
       id="s-cover"
@@ -47,11 +51,15 @@ const translations = {
       width="32"
       height="32"
       class="rounded-full border border-stone-200 bg-stone-200 transition select-none group-hover:shadow-lg group-hover:shadow-green-600/40 group-active:shadow-lg group-active:shadow-green-600/40 motion-safe:animate-[spin_10s_linear_infinite]"
+      aria-hidden="true"
     />
     <article class="flex flex-col gap-1 selection:bg-green-300 selection:text-green-700">
-      <p class="font-serif">{translations[Astro.currentLocale].last_played}</p>
+      <p id="spotify-playing-title" class="font-serif">
+        {translations[Astro.currentLocale].last_played}
+      </p>
       <address
-        class="font-mono text-green-600 underline decoration-dashed decoration-from-font underline-offset-4 group-hover:bg-green-600 group-hover:text-stone-50 group-hover:no-underline group-active:bg-green-600 group-active:text-stone-50 group-active:no-underline"
+        class="font-mono text-green-600 not-italic underline decoration-dashed decoration-from-font underline-offset-4 group-hover:bg-green-600 group-hover:text-stone-50 group-hover:no-underline group-active:bg-green-600 group-active:text-stone-50 group-active:no-underline"
+        id="s-address"
       >
         <span id="s-artist">Artist</span> - <span id="s-track">Track</span>
       </address>
@@ -70,6 +78,8 @@ const translations = {
     const sLink = document.getElementById("s-link") as HTMLAnchorElement;
     sLink.href = data.url;
     sLink.setAttribute("data-umami-event-url", data.url);
+    const address = document.getElementById("s-address")!;
+    address.setAttribute("aria-label", `Currently playing: ${data.name} by ${data.artist}`);
 
     document.getElementById("s-duration")!.textContent =
       `${new Date(data.duration_ms).getMinutes()}:${String(new Date(data.duration_ms).getSeconds()).padStart(2, "0")}`;

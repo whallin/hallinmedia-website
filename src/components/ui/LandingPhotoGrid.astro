@@ -11,6 +11,17 @@ import Img7 from "../../assets/images/landing-photo-grid/7.jpg";
 import Img8 from "../../assets/images/landing-photo-grid/8.jpg";
 import Img9 from "../../assets/images/landing-photo-grid/9.jpg";
 
+const translations = {
+  en: {
+    photo_grid: "Photo grid showcasing various subjects and locations",
+    photo_details: "Photo details:",
+  },
+  sv: {
+    photo_grid: "Fotogalleri som visar olika motiv och platser",
+    photo_details: "Foto detaljer:",
+  },
+};
+
 const images = [
   {
     src: Img1,
@@ -115,22 +126,32 @@ const images = [
 ];
 ---
 
-<section class="grid gap-2 sm:grid-cols-3">
+<section
+  class="grid gap-2 sm:grid-cols-3"
+  aria-label={translations[Astro.currentLocale].photo_grid}
+>
   {
-    images.map((image) => (
+    images.map((image, index) => (
       <article
         class={`group ${image.colSpan} transition hover:-translate-y-1 active:-translate-y-1`}
+        aria-labelledby={`image-${index}-title`}
       >
         <div class="relative h-72 w-full" style={`--border-color: ${image.hoverColor}`}>
           <Picture
             src={image.src}
             alt={image.alt[Astro.currentLocale]}
-            widths={[320, 480, 768]}
+            widths={[320, 480, 640, 768, 1024]}
             formats={["avif", "webp", "jpeg"]}
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
             class="h-full w-full rounded-lg border-2 border-stone-300 object-cover transition select-none group-hover:border-[var(--border-color)] group-hover:drop-shadow-lg group-active:border-[var(--border-color)] group-active:drop-shadow-lg"
+            role="img"
+            aria-labelledby={`image-${index}-title`}
           />
-          <time class="absolute bottom-4 left-4 z-10 rounded-full border border-stone-500 bg-amber-50 px-2 py-1 text-xs font-light text-stone-700 transition group-hover:border-[var(--border-color)] group-hover:text-[var(--border-color)] group-active:border-[var(--border-color)] group-active:text-[var(--border-color)] selection:bg-[var(--border-color)] selection:text-[color-mix(in_oklab,var(--border-color),white_70%)]">
+          <time
+            class="absolute bottom-4 left-4 z-10 rounded-full border border-stone-500 bg-amber-50 px-2 py-1 text-xs font-light text-stone-700 transition group-hover:border-[var(--border-color)] group-hover:text-[var(--border-color)] group-active:border-[var(--border-color)] group-active:text-[var(--border-color)] selection:bg-[var(--border-color)] selection:text-[color-mix(in_oklab,var(--border-color),white_70%)]"
+            id={`image-${index}-title`}
+            aria-label={`${translations[Astro.currentLocale].photo_details} ${image.specs}`}
+          >
             {image.specs}
           </time>
         </div>

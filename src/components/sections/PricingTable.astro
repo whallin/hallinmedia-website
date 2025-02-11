@@ -28,13 +28,17 @@ const translations = {
 };
 ---
 
-<section id="pricing" class="flex flex-col gap-6">
+<section
+  id="pricing"
+  class="flex flex-col gap-6"
+  aria-labelledby="pricing-heading pricing-description"
+>
   <wbr class="hidden text-green-500 opacity-100 selection:bg-green-300 selection:text-green-700" />
   <header class="flex flex-col gap-4 selection:bg-red-300 selection:text-red-800">
-    <h2 class="font-serif text-3xl font-light text-stone-900 italic">
+    <h2 id="pricing-heading" class="font-serif text-3xl font-light text-stone-900 italic">
       {translations[Astro.currentLocale].heading}
     </h2>
-    <p class="font-serif text-sm font-light text-stone-700">
+    <p id="pricing-description" class="font-serif text-sm font-light text-stone-700">
       {translations[Astro.currentLocale].description}
     </p>
   </header>
@@ -60,22 +64,38 @@ const translations = {
             red: "text-red-500 selection:bg-red-300 selection:text-red-700",
           };
           return (
-            <article class={`flex flex-col gap-2 ${colorClasses[category.data.color]}`}>
+            <article
+              class={`flex flex-col gap-2 ${colorClasses[category.data.color]}`}
+              aria-labelledby={`category-${category.id}-heading`}
+            >
               <header>
-                <h3 class="text-lg font-light text-stone-900 italic">
+                <h3
+                  id={`category-${category.id}-heading`}
+                  class="text-lg font-light text-stone-900 italic"
+                >
                   <IconComponent
                     class={`mr-1 inline-block h-6 w-6 ${colorClasses[category.data.color].split(" ")[0]}`}
+                    aria-hidden="true"
                   />
                   {category.data.categoryName[Astro.currentLocale]}
                 </h3>
               </header>
-              <hr class="border-stone-300" />
+              <hr class="border-stone-300" aria-hidden="true" />
               <dl class="space-y-2">
                 {category.data.services.map((service) => (
-                  <div class="group relative flex cursor-help items-center justify-between">
+                  <div
+                    class="group relative flex cursor-help items-center justify-between"
+                    tabindex="0"
+                    role="button"
+                    aria-describedby={`tooltip-${category.id}-${service.name.en.replace(/\s+/g, "-").toLowerCase()}`}
+                  >
                     <dt class="peer text-sm font-light text-stone-700 underline decoration-stone-300 decoration-dashed decoration-from-font underline-offset-4 transition hover:text-stone-900 hover:decoration-stone-900 active:text-stone-900 active:decoration-stone-900 has-[div.opacity-100]:text-stone-900 has-[div.opacity-100]:decoration-stone-900">
                       {service.name[Astro.currentLocale]}
-                      <div class="pointer-events-none absolute z-10 mt-2 w-64 rounded-sm bg-stone-800 px-2 py-1 text-xs font-light text-white opacity-0 transition select-none group-hover:opacity-100 peer-hover:opacity-100">
+                      <div
+                        id={`tooltip-${category.id}-${service.name.en.replace(/\s+/g, "-").toLowerCase()}`}
+                        class="pointer-events-none absolute z-10 mt-2 w-64 rounded-sm bg-stone-800 px-2 py-1 text-xs font-light text-white opacity-0 transition select-none group-hover:opacity-100 peer-hover:opacity-100"
+                        role="tooltip"
+                      >
                         {service.description[Astro.currentLocale]}
                       </div>
                     </dt>

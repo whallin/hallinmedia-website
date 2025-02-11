@@ -44,19 +44,25 @@ const translations = {
     partialFaqText:
       "This is just a portion of the frequently asked questions I receive. If the list below doesn't answer your questions,",
     checkFaqLink: "feel free to check the FAQ page.",
+    opens_same_window: "opens in same window",
   },
   sv: {
     faqHeading: "Vanliga frågor",
     partialFaqText:
       "Detta är bara en del av de vanligaste frågorna jag får. Om listan nedan inte svarar på dina frågor,",
     checkFaqLink: "kolla gärna på FAQ-sidan.",
+    opens_same_window: "öppnas i samma fönster",
   },
 };
 ---
 
-<section id="faq" class="flex flex-col gap-6 selection:bg-red-300 selection:text-red-800">
+<section
+  id="faq"
+  class="flex flex-col gap-6 selection:bg-red-300 selection:text-red-800"
+  aria-labelledby="faq-heading"
+>
   <header class="flex flex-col gap-4">
-    <h2 class="font-serif text-3xl font-light text-stone-900 italic">
+    <h2 id="faq-heading" class="font-serif text-3xl font-light text-stone-900 italic">
       {translations[Astro.currentLocale].faqHeading}
     </h2>
     {
@@ -68,6 +74,7 @@ const translations = {
             data-umami-event="faq-partial_read-more"
             data-umami-event-origin={Astro.url}
             class="text-red-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-50 active:bg-red-500 active:text-stone-50 [&:active]:no-underline [&:active]:opacity-50 [&:hover]:no-underline"
+            aria-label={`FAQ - ${translations[Astro.currentLocale].opens_same_window}`}
           >
             {translations[Astro.currentLocale].checkFaqLink}
           </a>
@@ -92,15 +99,25 @@ const translations = {
                       ? "border-red-200 open:border-red-400"
                       : "border-stone-300 open:border-stone-400",
                   ]}
+                  aria-expanded="false"
                 >
-                  <summary class="cursor-pointer font-serif font-light text-stone-900 italic transition group-hover:opacity-75 group-active:opacity-50">
+                  <summary
+                    class="cursor-pointer font-serif font-light text-stone-900 italic transition group-hover:opacity-75 group-active:opacity-50"
+                    role="button"
+                    tabindex="0"
+                  >
                     {faq.question[Astro.currentLocale]}
-                    {faq.featured && <span class="ml-2 text-red-400 not-italic">★</span>}
+                    {faq.featured && (
+                      <span class="ml-2 text-red-400 not-italic" aria-hidden="true">
+                        ★
+                      </span>
+                    )}
                   </summary>
                   <hr class="my-4 border-stone-300" />
                   <div
                     class="my-2 font-serif text-sm text-stone-700"
                     set:html={`${faq.answer[Astro.currentLocale]}`}
+                    role="region"
                   />
                 </details>
               </dd>
@@ -116,15 +133,25 @@ const translations = {
                     ? "border-red-200 open:border-red-400"
                     : "border-stone-300 open:border-stone-400",
                 ]}
+                aria-expanded="false"
               >
-                <summary class="cursor-pointer font-serif font-light text-stone-900 italic transition group-hover:opacity-75 group-active:opacity-50">
+                <summary
+                  class="cursor-pointer font-serif font-light text-stone-900 italic transition group-hover:opacity-75 group-active:opacity-50"
+                  role="button"
+                  tabindex="0"
+                >
                   {faq.question[Astro.currentLocale]}
-                  {faq.featured && <span class="ml-2 text-red-400 not-italic">★</span>}
+                  {faq.featured && (
+                    <span class="ml-2 text-red-400 not-italic" aria-hidden="true">
+                      ★
+                    </span>
+                  )}
                 </summary>
                 <hr class="my-4 border-stone-300" />
                 <div
                   class="my-2 font-serif text-sm text-stone-700"
                   set:html={`${faq.answer[Astro.currentLocale]}`}
+                  role="region"
                 />
               </details>
             </dd>

@@ -9,13 +9,25 @@ const translations = {
     published: "Published",
     updated: "Updated",
     minutes_read: "min read",
+    minutes: "minutes",
     tags: "Tags",
+    tag_label: "Tag:",
+    published_date: "Published date:",
+    updated_date: "Updated date:",
+    author_label: "Author:",
+    reading_time: "Reading time:",
   },
   sv: {
     published: "Publicerat",
     updated: "Uppdaterad",
     minutes_read: "min att läsa",
+    minutes: "minuter",
     tags: "Taggar",
+    tag_label: "Tagg:",
+    published_date: "Publiceringsdatum:",
+    updated_date: "Uppdateringsdatum:",
+    author_label: "Författare:",
+    reading_time: "Lästid:",
   },
 };
 
@@ -37,12 +49,20 @@ const categoryStyles = {
 };
 ---
 
-<article class="grid gap-6 rounded-lg border border-stone-200 p-6 font-mono text-sm text-stone-600">
+<article
+  class="grid gap-6 rounded-lg border border-stone-200 p-6 font-mono text-sm text-stone-600"
+  aria-labelledby="meta-title"
+>
+  <h2 id="meta-title" class="sr-only">Article Metadata</h2>
   <section class="grid gap-4 sm:grid-cols-2">
     <div class="space-y-2">
       <div class="flex items-center gap-2 selection:bg-sky-300 selection:text-sky-800">
-        <time class="flex items-center gap-2" datetime={new Date(publishedDate).toISOString()}>
-          <PhCalendarDuotone class="h-4 w-4 text-sky-500" />
+        <time
+          class="flex items-center gap-2"
+          datetime={new Date(publishedDate).toISOString()}
+          aria-label={`${translations[Astro.currentLocale].published_date} ${new Date(publishedDate).toLocaleDateString()}`}
+        >
+          <PhCalendarDuotone class="h-4 w-4 text-sky-500" aria-hidden="true" />
           <p>
             {translations[Astro.currentLocale].published}: {
               new Date(publishedDate).toLocaleDateString()
@@ -53,8 +73,12 @@ const categoryStyles = {
       {
         updatedDate && (
           <div class="flex items-center gap-2 selection:bg-amber-300 selection:text-amber-800">
-            <time class="flex items-center gap-2" datetime={new Date(updatedDate).toISOString()}>
-              <PhClockCounterClockwiseDuotone class="h-4 w-4 text-amber-500" />
+            <time
+              class="flex items-center gap-2"
+              datetime={new Date(updatedDate).toISOString()}
+              aria-label={`${translations[Astro.currentLocale].updated_date} ${new Date(updatedDate).toLocaleDateString()}`}
+            >
+              <PhClockCounterClockwiseDuotone class="h-4 w-4 text-amber-500" aria-hidden="true" />
               <p>
                 {translations[Astro.currentLocale].updated}:{" "}
                 {new Date(updatedDate).toLocaleDateString()}
@@ -68,15 +92,19 @@ const categoryStyles = {
     <div class="space-y-2">
       <address
         class="flex items-center gap-2 not-italic selection:bg-emerald-300 selection:text-emerald-800"
+        aria-label={`${translations[Astro.currentLocale].author_label} ${author}`}
       >
         <div class="flex items-center gap-2">
-          <PhUserDuotone class="h-4 w-4 text-emerald-500" />
+          <PhUserDuotone class="h-4 w-4 text-emerald-500" aria-hidden="true" />
           <p>{author}</p>
         </div>
       </address>
-      <div class="flex items-center gap-2 selection:bg-fuchsia-300 selection:text-fuchsia-800">
+      <div
+        class="flex items-center gap-2 selection:bg-fuchsia-300 selection:text-fuchsia-800"
+        aria-label={`${translations[Astro.currentLocale].reading_time} ${readingTime} ${translations[Astro.currentLocale].minutes}`}
+      >
         <div class="flex items-center gap-2">
-          <PhTimerDuotone class="h-4 w-4 text-fuchsia-500" />
+          <PhTimerDuotone class="h-4 w-4 text-fuchsia-500" aria-hidden="true" />
           <p>{readingTime} {translations[Astro.currentLocale].minutes_read}</p>
         </div>
       </div>
@@ -85,14 +113,18 @@ const categoryStyles = {
 
   {
     tags && tags.length > 0 && (
-      <section class="border-t border-stone-200 pt-4 selection:bg-red-300 selection:text-red-800">
-        <h2 class="mb-2 text-xs font-medium text-stone-500">
+      <section
+        class="border-t border-stone-200 pt-4 selection:bg-red-300 selection:text-red-800"
+        aria-labelledby="tags-title"
+      >
+        <h2 id="tags-title" class="mb-2 text-xs font-medium text-stone-500">
           {translations[Astro.currentLocale].tags}
         </h2>
         <ul class="flex flex-wrap gap-2">
           {tags.map((tag) => (
             <li
               class={`rounded-full border border-stone-500 px-3 py-1 text-xs transition hover:-translate-y-1 active:-translate-y-1 ${categoryStyles[categoryColor]}`}
+              aria-label={`${translations[Astro.currentLocale].tag_label} ${tag}`}
             >
               #{tag}
             </li>

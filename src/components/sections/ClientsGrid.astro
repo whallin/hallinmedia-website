@@ -6,6 +6,15 @@ interface Props {
   clients: any[];
 }
 
+const translations = {
+  en: {
+    view_details: "View details for",
+  },
+  sv: {
+    view_details: "Visa detaljer för",
+  },
+};
+
 const { clients } = Astro.props;
 ---
 
@@ -17,17 +26,23 @@ const { clients } = Astro.props;
         <a
           href={getRelativeLocaleUrl(`${Astro.currentLocale}`, `/clients/${client.id}`)}
           class="transition active:scale-95"
+          aria-label={`${translations[Astro.currentLocale].view_details} ${client.data.name}`}
         >
           <section
             class="group relative flex flex-col gap-6 overflow-hidden rounded-lg border border-stone-300 bg-amber-50 px-4 py-6 transition hover:-translate-y-1 hover:border-[var(--dominant-color)] hover:drop-shadow-[0_4px_4px_rgb(0,0,0,0.05)] active:-translate-y-1 active:border-[var(--dominant-color)] active:drop-shadow-[0_4px_4px_rgb(0,0,0,0.05)]"
             style={`--dominant-color: ${dominantColor}`}
+            role="article"
+            aria-labelledby={`client-${client.id}-title`}
             onmouseenter={`document.querySelector('.heart-icon').style.color = '${dominantColor}'`}
             onmouseleave={`document.querySelector('.heart-icon').style.color = 'oklch(0.637 0.237 25.331)'`}
             ontouchstart={`document.querySelector('.heart-icon').style.color = '${dominantColor}'`}
             ontouchend={`document.querySelector('.heart-icon').style.color = 'oklch(0.637 0.237 25.331)'`}
           >
             {client.data.featured && (
-              <figure class="absolute top-4 right-4 text-xl text-[var(--dominant-color)] select-none">
+              <figure
+                class="absolute top-4 right-4 text-xl text-[var(--dominant-color)] select-none"
+                aria-hidden="true"
+              >
                 ★
               </figure>
             )}
@@ -42,10 +57,16 @@ const { clients } = Astro.props;
               />
             </figure>
             <header class="flex justify-between">
-              <h2 class="text-xl font-light text-stone-700 italic underline decoration-dashed decoration-from-font underline-offset-4 group-hover:text-[var(--dominant-color)] group-active:text-[var(--dominant-color)]">
+              <h2
+                id={`client-${client.id}-title`}
+                class="text-xl font-light text-stone-700 italic underline decoration-dashed decoration-from-font underline-offset-4 group-hover:text-[var(--dominant-color)] group-active:text-[var(--dominant-color)]"
+              >
                 {client.data.name}
               </h2>
-              <div class="flex items-center gap-2 text-stone-500 group-hover:bg-[var(--dominant-color)] group-hover:text-stone-50 group-active:bg-[var(--dominant-color)] group-active:text-stone-50">
+              <div
+                class="flex items-center gap-2 text-stone-500 group-hover:bg-[var(--dominant-color)] group-hover:text-stone-50 group-active:bg-[var(--dominant-color)] group-active:text-stone-50"
+                aria-hidden="true"
+              >
                 <div class="font-mono text-sm whitespace-nowrap select-none">-></div>
               </div>
             </header>

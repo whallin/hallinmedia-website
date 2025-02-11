@@ -48,9 +48,12 @@ const latestPosts = blogPosts
   .slice(0, 5);
 ---
 
-<section class="flex flex-col gap-6 selection:bg-red-300 selection:text-red-800">
+<section
+  class="flex flex-col gap-6 selection:bg-red-300 selection:text-red-800"
+  aria-labelledby="latest-posts-heading"
+>
   <header class="flex flex-col gap-2">
-    <h2 class="font-serif text-3xl font-light text-stone-900 italic">
+    <h2 id="latest-posts-heading" class="font-serif text-3xl font-light text-stone-900 italic">
       {translations[Astro.currentLocale].heading}
     </h2>
     <p class="font-serif text-sm font-light text-stone-700">
@@ -66,25 +69,39 @@ const latestPosts = blogPosts
   </header>
   {
     latestPosts.map((post) => (
-      <article>
+      <article aria-labelledby={`post-${post.id}-title`}>
         <a
           href={`/blog/${post.id}`}
           data-umami-event={`latest-blog_${post.id}`}
           data-umami-event-origin={Astro.url}
           class="group flex flex-col gap-1 font-light active:opacity-50 sm:flex-row sm:items-center sm:justify-between"
+          aria-describedby={`post-${post.id}-date post-${post.id}-readtime`}
         >
           <header class="flex flex-col gap-1">
-            <time class="font-mono text-xs text-stone-500" datetime={post.data.publishedDate}>
-              {new Date(post.data.publishedDate).toISOString().split("T")[0]} • {post.data.readTime}{" "}
-              {translations[Astro.currentLocale].articleReadTime}
+            <time
+              id={`post-${post.id}-date`}
+              class="font-mono text-xs text-stone-500"
+              datetime={post.data.publishedDate}
+            >
+              {new Date(post.data.publishedDate).toISOString().split("T")[0]} •{" "}
+              <span id={`post-${post.id}-readtime`}>
+                {post.data.readTime} {translations[Astro.currentLocale].articleReadTime}
+              </span>
             </time>
-            <h3 class="font-serif text-xl text-stone-700 italic underline decoration-dashed decoration-from-font underline-offset-4 group-hover:text-red-500 group-active:text-red-500">
+            <h3
+              id={`post-${post.id}-title`}
+              class="font-serif text-xl text-stone-700 italic underline decoration-dashed decoration-from-font underline-offset-4 group-hover:text-red-500 group-active:text-red-500"
+            >
               {post.data.title}
             </h3>
           </header>
           <footer class="flex items-center gap-2 text-stone-500 group-hover:bg-red-500 group-hover:text-stone-50 group-active:bg-red-500 group-active:text-stone-50">
-            <div class="font-mono text-sm">{translations[Astro.currentLocale].articleCTA}</div>
-            <div class="font-mono text-sm select-none">-></div>
+            <div class="font-mono text-sm" aria-hidden="true">
+              {translations[Astro.currentLocale].articleCTA}
+            </div>
+            <div class="font-mono text-sm select-none" aria-hidden="true">
+              ->
+            </div>
           </footer>
         </a>
       </article>

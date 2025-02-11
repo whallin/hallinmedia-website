@@ -15,18 +15,33 @@ const categoryStyles = {
   pink: "hover:border-pink-500 hover:text-pink-700 active:border-pink-500 active:text-pink-700",
   teal: "hover:border-teal-500 hover:text-teal-700 active:border-teal-500 active:text-teal-700",
 };
+
+const translations = {
+  en: {
+    category_label: "Category:",
+  },
+  sv: {
+    category_label: "Kategori:",
+  },
+};
 ---
 
 <header class="flex flex-col gap-6 selection:bg-red-300 selection:text-red-800">
-  <nav>
+  <nav aria-label="Blog category navigation">
     <span
-      class={`h-fit w-fit rounded-full border border-stone-500 px-3 py-1 font-mono text-xs font-light text-stone-600 transition  hover:-translate-y-1 active:-translate-y-1 ${categoryStyles[categoryColor]}`}
+      class={`h-fit w-fit rounded-full border border-stone-500 px-3 py-1 font-mono text-xs font-light text-stone-600 transition hover:-translate-y-1 active:-translate-y-1 ${categoryStyles[categoryColor]}`}
+      role="status"
+      aria-label={`${translations[Astro.currentLocale].category_label} ${category}`}
     >
       {category}
     </span>
   </nav>
-  <article>
-    <h1 class="text-4xl font-light break-words text-stone-900 italic sm:text-6xl">
+  <article aria-labelledby="blog-title">
+    <h1
+      id="blog-title"
+      class="text-4xl font-light break-words text-stone-900 italic sm:text-6xl"
+      tabindex="0"
+    >
       {title}
     </h1>
   </article>

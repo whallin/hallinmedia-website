@@ -11,31 +11,49 @@ const translations = {
     solution: "Solution",
     process: "Process",
     results: "Results",
+    image_caption: "Process image {index}",
+    video_caption: "Case study video {index}",
+    video_title: "Case study video {index} - {name}",
   },
   sv: {
     problem: "Problem",
     solution: "Lösning",
     process: "Process",
     results: "Resultat",
+    image_caption: "Processbild {index}",
+    video_caption: "Fallstudievideo {index}",
+    video_title: "Fallstudievideo {index} - {name}",
   },
 };
 
 const { content } = Astro.props;
 ---
 
-<hr class="border-stone-300" />
-<article class="flex flex-col gap-6">
+<hr class="border-stone-300" aria-hidden="true" />
+<article class="flex flex-col gap-6" aria-labelledby="case-study-heading">
   <div class="mb-2 grid gap-6 sm:grid-cols-2">
-    <article class="flex flex-col gap-2 selection:bg-red-300 selection:text-red-800">
-      <h2 class="flex items-center gap-2 text-2xl font-light text-stone-900 italic">
-        <PhQuestionDuotone class="h-6 w-6 text-red-500" />
+    <article
+      class="flex flex-col gap-2 selection:bg-red-300 selection:text-red-800"
+      aria-labelledby="problem-heading"
+    >
+      <h2
+        id="problem-heading"
+        class="flex items-center gap-2 text-2xl font-light text-stone-900 italic"
+      >
+        <PhQuestionDuotone class="h-6 w-6 text-red-500" aria-hidden="true" />
         {translations[Astro.currentLocale].problem}
       </h2>
       <p class="text-sm font-light text-stone-700">{content?.problem}</p>
     </article>
-    <article class="flex flex-col gap-2 selection:bg-green-300 selection:text-green-800">
-      <h2 class="flex items-center gap-2 text-2xl font-light text-stone-900 italic">
-        <PhSparkleDuotone class="mr-1 h-6 w-6 text-green-500" />
+    <article
+      class="flex flex-col gap-2 selection:bg-green-300 selection:text-green-800"
+      aria-labelledby="solution-heading"
+    >
+      <h2
+        id="solution-heading"
+        class="flex items-center gap-2 text-2xl font-light text-stone-900 italic"
+      >
+        <PhSparkleDuotone class="mr-1 h-6 w-6 text-green-500" aria-hidden="true" />
         {translations[Astro.currentLocale].solution}
       </h2>
       <p class="text-sm font-light text-stone-700">{content?.solution}</p>
@@ -73,29 +91,44 @@ const { content } = Astro.props;
           class={`relative overflow-hidden rounded-lg border-2 border-stone-300 transition hover:-translate-y-1 hover:border-[var(--dominant-color)] hover:drop-shadow-lg active:-translate-y-1 active:border-[var(--dominant-color)] active:drop-shadow-lg ${
             index === 0 ? "sm:col-span-2 lg:col-span-2 lg:row-span-2" : ""
           }`}
+          aria-labelledby={`image-${index}-caption`}
         >
           <Picture
             src={image}
             alt={`Process image ${index + 1}`}
-            widths={[320, 480, 768]}
+            widths={[400, 600, 800, 1000, 1200]}
             formats={["avif", "webp", "jpeg"]}
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, (min-width: 1025px) 33vw"
             class="absolute inset-0 size-full object-cover select-none"
+            role="img"
           />
+          <figcaption id={`image-${index}-caption`} class="sr-only">
+            {translations[Astro.currentLocale].image_caption.replace("{index}", index + 1)}
+          </figcaption>
         </figure>
       ))
     }
   </figure>
 
   {
-    content?.videos?.map((video) => (
-      <figure class="aspect-video w-full transition select-none hover:-translate-y-1 hover:drop-shadow-lg">
+    content?.videos?.map((video, index) => (
+      <figure
+        class="aspect-video w-full transition select-none hover:-translate-y-1 hover:drop-shadow-lg"
+        aria-labelledby={`video-${index}-caption`}
+      >
         <iframe
           src={video}
           class="size-full rounded-lg border-2 border-stone-300 transition hover:border-[var(--dominant-color)]"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allow="encrypted-media; picture-in-picture"
           allowfullscreen
+          title={translations[Astro.currentLocale].video_title
+            .replace("{index}", index + 1)
+            .replace("{name}", content?.name || "")}
+          aria-describedby={`video-${index}-caption`}
         />
+        <figcaption id={`video-${index}-caption`} class="sr-only">
+          {translations[Astro.currentLocale].video_caption.replace("{index}", index + 1)}
+        </figcaption>
       </figure>
     ))
   }

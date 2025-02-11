@@ -3,17 +3,36 @@ import { Image, Picture } from "astro:assets";
 import { getRelativeLocaleUrl } from "astro:i18n";
 import PortfolioTags from "./PortfolioTags.astro";
 
+const translations = {
+  en: {
+    project_category: "Project category: {category}",
+    client_page: "Visit {name} client page",
+  },
+  sv: {
+    project_category: "Projektkategori: {category}",
+    client_page: "Besök {name} kundsida",
+  },
+};
+
 const { workId, item, client } = Astro.props;
 ---
 
 <header class="flex flex-col gap-2 selection:bg-red-300 selection:text-red-800">
   <section class="flex flex-col-reverse gap-4 sm:flex-row sm:items-center sm:justify-between">
-    <h1 class="max-w-md text-4xl font-light text-stone-900 italic sm:text-6xl">
+    <h1
+      class="max-w-md text-4xl font-light text-stone-900 italic sm:text-6xl"
+      id="portfolio-title"
+      tabindex="0"
+    >
       {item.data.title}
     </h1>
     <time
       class="w-fit rounded-full border border-stone-500 px-3 py-1 text-xs font-light text-stone-600"
       datetime={item.data.date}
+      aria-label={translations[Astro.currentLocale].project_category.replace(
+        "{category}",
+        item.data.category
+      )}
     >
       {item.data.category}
     </time>
@@ -21,14 +40,15 @@ const { workId, item, client } = Astro.props;
 
   {
     item.data.featuredImage && (
-      <figure>
+      <figure aria-labelledby="portfolio-title">
         <Picture
           src={item.data.featuredImage}
           alt={item.data.featuredImageAlt || item.data.title}
-          widths={[320, 480, 768]}
+          widths={[320, 640, 960, 1280]}
           formats={["avif", "webp", "jpeg"]}
-          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
           class="mt-6 mb-4 aspect-video rounded-lg border-2 border-stone-300 object-cover transition select-none hover:-translate-y-1 hover:border-[var(--dominant-color)] hover:drop-shadow-lg active:-translate-y-1 active:border-[var(--dominant-color)] active:drop-shadow-lg sm:mt-12"
+          role="img"
         />
       </figure>
     )
@@ -45,6 +65,10 @@ const { workId, item, client } = Astro.props;
             data-umami-event={`portfolio_${workId}_${client.id}`}
             data-umami-event-origin={Astro.url}
             class="block h-full transition hover:opacity-70 active:scale-95 active:opacity-70"
+            aria-label={translations[Astro.currentLocale].client_page.replace(
+              "{name}",
+              client.data.name
+            )}
           >
             <Image
               src={client.data.logo}

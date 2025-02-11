@@ -1,20 +1,41 @@
 ---
 const { doc } = Astro.props;
 const IconComponent = await import(`../../components/icons/${doc.data.icon}.astro`);
+
+const translations = {
+  en: {
+    read_more: "Read more about",
+    published_on: "Published on",
+    compliance_tags: "Compliance tags",
+    compliance: "Compliance:",
+  },
+  sv: {
+    read_more: "Läs mer om",
+    published_on: "Publicerad den",
+    compliance_tags: "Regelkrav",
+    compliance: "Regelkrav:",
+  },
+};
 ---
 
 <article
   class="group relative overflow-hidden rounded-lg border border-stone-300 bg-amber-50/50 p-4 transition hover:-translate-y-1 hover:border-red-500 hover:drop-shadow-[0_4px_4px_rgb(0,0,0,0.05)] active:-translate-y-1 active:border-red-500 active:drop-shadow-[0_4px_4px_rgb(0,0,0,0.05)]"
+  aria-labelledby={`title-${doc.id}`}
 >
-  <a href={`/legal/${doc.id}`}>
+  <a
+    href={`/legal/${doc.id}`}
+    aria-label={`${translations[Astro.currentLocale].read_more} ${doc.data.title}`}
+  >
     <IconComponent.default
       class="absolute top-1/2 -right-22 z-0 aspect-square h-[calc(100%+6rem)] w-auto -translate-y-1/2 text-red-500/20 transition group-hover:scale-110 group-active:scale-110"
+      aria-hidden="true"
     />
     <header class="relative z-10 flex flex-col gap-2">
-      <h3 class="text-lg font-medium text-stone-900">{doc.data.title}</h3>
+      <h3 id={`title-${doc.id}`} class="text-lg font-medium text-stone-900">{doc.data.title}</h3>
       <time
         class="font-mono text-xs text-stone-500"
         datetime={new Date(doc.data.publishedDate).toISOString()}
+        aria-label={`${translations[Astro.currentLocale].published_on} ${new Date(doc.data.publishedDate).toLocaleDateString()}`}
       >
         <div class="flex gap-2">
           <span>{new Date(doc.data.publishedDate).toLocaleDateString()}</span>•
@@ -28,14 +49,17 @@ const IconComponent = await import(`../../components/icons/${doc.data.icon}.astr
         </div>
       </time>
     </header>
-    <section class="relative z-10 my-2">
-      <p class="text-stone-600">{doc.data.description}</p>
-      <nav>
+    <section class="relative z-10 my-2" aria-labelledby={`description-${doc.id}`}>
+      <p id={`description-${doc.id}`} class="text-stone-600">{doc.data.description}</p>
+      <nav aria-label={translations[Astro.currentLocale].compliance_tags}>
         <ul class="mt-4 mb-2 flex flex-wrap gap-2">
           {
             doc.data.compliance?.map((compliance) => (
               <li>
-                <span class="rounded-full border border-stone-300 bg-amber-50 px-2.5 py-1 text-xs font-medium text-stone-700 transition hover:border-red-300 hover:text-red-700 active:border-red-300 active:text-red-700">
+                <span
+                  class="rounded-full border border-stone-300 bg-amber-50 px-2.5 py-1 text-xs font-medium text-stone-700 transition hover:border-red-300 hover:text-red-700 active:border-red-300 active:text-red-700"
+                  aria-label={`${translations[Astro.currentLocale].compliance} ${compliance}`}
+                >
                   {compliance}
                 </span>
               </li>

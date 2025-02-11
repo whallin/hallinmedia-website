@@ -2,29 +2,38 @@
 const translations = {
   en: {
     social_media: "Social Media",
+    twitter_label: "Twitter / X (opens in new tab)",
+    linkedin_label: "LinkedIn (opens in new tab)",
+    instagram_label: "Instagram (opens in new tab)",
+    facebook_label: "Facebook (opens in new tab)",
   },
   sv: {
     social_media: "Sociala medier",
+    twitter_label: "Twitter / X (öppnas i ny flik)",
+    linkedin_label: "LinkedIn (öppnas i ny flik)",
+    instagram_label: "Instagram (öppnas i ny flik)",
+    facebook_label: "Facebook (öppnas i ny flik)",
   },
 };
 
 const { clientId, socialLinks } = Astro.props;
 ---
 
-<article>
+<article aria-labelledby="social-media-heading">
   <header>
-    <h3 class="mb-2 font-serif text-2xl font-light text-stone-900 italic">
+    <h3 id="social-media-heading" class="mb-2 font-serif text-2xl font-light text-stone-900 italic">
       {translations[Astro.currentLocale].social_media}
     </h3>
   </header>
   <section>
-    <nav>
+    <nav aria-label="Social media links">
       <ul class="flex flex-wrap gap-4 text-sm text-stone-700">
         {
           socialLinks.twitter && (
             <li>
               <a
                 href={socialLinks.twitter}
+                aria-label={translations[Astro.currentLocale].twitter_label}
                 data-umami-event={`client_${clientId}_twitter`}
                 data-umami-event-url={socialLinks.twitter}
                 data-umami-event-origin={Astro.url}
@@ -42,6 +51,7 @@ const { clientId, socialLinks } = Astro.props;
             <li>
               <a
                 href={socialLinks.linkedin}
+                aria-label={translations[Astro.currentLocale].linkedin_label}
                 data-umami-event={`client_${clientId}_linkedin`}
                 data-umami-event-url={socialLinks.linkedin}
                 data-umami-event-origin={Astro.url}
@@ -59,6 +69,7 @@ const { clientId, socialLinks } = Astro.props;
             <li>
               <a
                 href={socialLinks.instagram}
+                aria-label={translations[Astro.currentLocale].instagram_label}
                 data-umami-event={`client_${clientId}_instagram`}
                 data-umami-event-url={socialLinks.instagram}
                 data-umami-event-origin={Astro.url}
@@ -76,6 +87,7 @@ const { clientId, socialLinks } = Astro.props;
             <li>
               <a
                 href={socialLinks.facebook}
+                aria-label={translations[Astro.currentLocale].facebook_label}
                 data-umami-event={`client_${clientId}_facebook`}
                 data-umami-event-url={socialLinks.facebook}
                 data-umami-event-origin={Astro.url}
