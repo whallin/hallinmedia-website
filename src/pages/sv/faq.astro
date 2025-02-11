@@ -13,10 +13,14 @@ const faqCollection = await getCollection("faqCollection");
   description="Visit the FAQ page for answers to common questions. Get clear information for a smooth experience. Visit now for quick support."
   faqData={faqCollection}
 >
-  <article class="space-y-12 font-serif selection:bg-red-300 selection:text-red-800">
-    <header class="flex flex-col-reverse gap-4 sm:flex-row sm:items-center sm:justify-between">
+  <article role="main" class="space-y-12 font-serif selection:bg-red-300 selection:text-red-800">
+    <header
+      role="banner"
+      class="flex flex-col-reverse gap-4 sm:flex-row sm:items-center sm:justify-between"
+    >
       <h1 class="max-w-md text-4xl font-light text-stone-900 italic">Vanliga frågor</h1>
       <PhQuestionDuotone
+        aria-hidden="true"
         class="motion-opacity-loop-60 motion-duration-2000 motion-ease h-8 w-8 text-red-500 sm:h-12 sm:w-12"
       />
     </header>

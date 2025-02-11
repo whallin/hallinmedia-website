@@ -14,15 +14,17 @@ const age = new Date().getFullYear() - 2005 - (new Date().getMonth() < 7 ? 1 : 0
   title="Home"
   description="William Hallin is a photographer and designer in Skellefteå, Sweden. He boosts brands by crafting engaging visuals, backed by over five years of experience worldwide. See how HallinMedia can refresh your brand with creative solutions."
 >
-  <main class="space-y-12 font-serif">
+  <main class="space-y-12 font-serif" role="main">
     <header
       class="flex flex-col-reverse gap-4 selection:bg-red-300 selection:text-red-800 sm:flex-row sm:items-center sm:justify-between"
+      aria-labelledby="main-heading"
     >
-      <h1 class="max-w-md text-4xl font-light text-stone-900 italic sm:text-6xl">
+      <h1 id="main-heading" class="max-w-md text-4xl font-light text-stone-900 italic sm:text-6xl">
         The details are everything.
       </h1>
       <PhHandWavingDuotone
         class="motion-rotate-loop-16 motion-duration-2000 motion-ease h-8 w-8 text-red-500 sm:h-16 sm:w-16"
+        aria-hidden="true"
       />
     </header>
     <article
@@ -68,6 +70,7 @@ const age = new Date().getFullYear() - 2005 - (new Date().getMonth() < 7 ? 1 : 0
     </article>
     <nav
       class="flex flex-col gap-2 text-sm font-light selection:bg-red-300 selection:text-red-800 sm:flex-row"
+      aria-label="Main navigation"
     >
       <a
         href={getRelativeLocaleUrl(`${Astro.currentLocale}`, "contact")}
@@ -88,13 +91,15 @@ const age = new Date().getFullYear() - 2005 - (new Date().getMonth() < 7 ? 1 : 0
         Browse portfolio
       </a>
     </nav>
-    <aside>
+    <aside aria-label="Currently playing on Spotify">
       <SpotifyPlaying />
     </aside>
-    <section>
+    <section aria-labelledby="photo-grid-heading">
+      <h2 id="photo-grid-heading" class="sr-only">Photo gallery</h2>
       <LandingPhotoGrid />
     </section>
-    <section id="blog">
+    <section id="blog" aria-labelledby="blog-heading">
+      <h2 id="blog-heading" class="sr-only">Latest blog posts</h2>
       <LatestPosts />
     </section>
   </main>

@@ -31,31 +31,36 @@ const audienceColor =
   datePublished={item.data.publishedDate}
   dateModified={item.data.lastEdited}
 >
-  <article class="space-y-8 font-serif">
+  <article class="space-y-8 font-serif" aria-labelledby="article-title">
     <header class="space-y-6 selection:bg-red-300 selection:text-red-800">
       <span
         class="inline-block rounded-full border border-stone-500 px-3 py-1 font-mono text-xs font-light text-stone-600"
+        aria-label={`Document type: ${item.data.documentType}`}
       >
         {item.data.documentType}
       </span>
-      <h1 class="text-4xl font-light break-words text-stone-900 italic sm:text-6xl">
+      <h1
+        id="article-title"
+        class="text-4xl font-light break-words text-stone-900 italic sm:text-6xl"
+      >
         {item.data.title}
       </h1>
     </header>
 
     <Metadata item={item} audienceColor={audienceColor} />
 
-    <hr class="border-stone-300" />
+    <hr class="border-stone-300" aria-hidden="true" />
 
     <section
       class="prose prose-stone mt-8 max-w-none text-sm font-light text-stone-700 selection:bg-red-300 selection:text-red-800"
+      aria-label="Document content"
     >
       <div>
         <Content />
       </div>
     </section>
 
-    <hr class="border-stone-300" />
+    <hr class="border-stone-300" aria-hidden="true" />
 
     <RelatedDocuments docId={item.id} item={item} allLegalItems={allLegalItems} />
 
@@ -65,6 +70,7 @@ const audienceColor =
       buttonText="Contact me"
       pricingText="Send an email"
       pricingLink=`mailto:william@hallin.media?subject=Legal inquiry: ${item.data.title}`
+      aria-label="Contact section"
     />
   </article>
 </MainLayout>

@@ -31,17 +31,28 @@ const dominantColor = client?.data.dominantColor || "oklch(0.637 0.237 25.331)";
   datePublished={item.data.date}
   dateModified={item.data.date}
 >
-  <article class="flex flex-col gap-8 font-serif" style={`--dominant-color: ${dominantColor}`}>
+  <article
+    class="flex flex-col gap-8 font-serif"
+    style={`--dominant-color: ${dominantColor}`}
+    aria-labelledby="portfolio-title"
+  >
     <PortfolioHeader workId={item.id} item={item} client={client} />
 
-    <p class="text-sm font-light text-stone-700 selection:bg-red-300 selection:text-red-800">
+    <p
+      class="text-sm font-light text-stone-700 selection:bg-red-300 selection:text-red-800"
+      id="portfolio-description"
+    >
       {item.data.description}
     </p>
 
     {item.data.type === "case-study" && <CaseStudySection content={item.data.content} />}
 
-    <hr class="border-stone-300" />
-    <section class="mt-8 selection:bg-red-300 selection:text-red-800">
+    <hr class="border-stone-300" aria-hidden="true" />
+    <section
+      class="mt-8 selection:bg-red-300 selection:text-red-800"
+      aria-labelledby="portfolio-content"
+    >
+      <h2 id="portfolio-content" class="sr-only">Project Details</h2>
       <div class="prose prose-stone max-w-none text-sm font-light text-stone-700">
         <Content />
       </div>

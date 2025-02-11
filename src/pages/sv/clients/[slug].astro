@@ -28,22 +28,36 @@ const portfolioPosts = await getCollection("portfolioSvCollection").then((posts)
 ---
 
 <MainLayout title={data.name} description={data.description.sv}>
-  <main class="flex flex-col gap-12 font-serif" style={`--dominant-color: ${dominantColor}`}>
-    <ClientHeader logo={data.logo} name={data.name} dominantColor={dominantColor} />
+  <main
+    class="flex flex-col gap-12 font-serif"
+    style={`--dominant-color: ${dominantColor}`}
+    role="main"
+  >
+    <ClientHeader
+      logo={data.logo}
+      name={data.name}
+      dominantColor={dominantColor}
+      aria-labelledby="client-header"
+    />
 
-    {data.subcontracted && <ClientNotice dominantColor={dominantColor} />}
+    {data.subcontracted && <ClientNotice dominantColor={dominantColor} role="alert" />}
 
-    <div class="flex flex-col gap-8">
+    <div class="flex flex-col gap-8" aria-labelledby="client-info">
       <ClientAbout
         clientId={client.id}
         name={data.name}
         description={data.description.sv}
         websiteUrl={data.websiteUrl}
         dominantColor={dominantColor}
+        aria-describedby="client-description"
       >
         {
           data.socialLinks && (
-            <ClientSocialLinks clientId={client.id} socialLinks={data.socialLinks} />
+            <ClientSocialLinks
+              clientId={client.id}
+              socialLinks={data.socialLinks}
+              aria-label="Sociala medie-länkar"
+            />
           )
         }
       </ClientAbout>
@@ -55,6 +69,7 @@ const portfolioPosts = await getCollection("portfolioSvCollection").then((posts)
           posts={portfolioPosts}
           dominantColor={dominantColor}
           currentLocale={Astro.currentLocale}
+          aria-labelledby="portfolio-section"
         />
       )
     }
@@ -64,6 +79,7 @@ const portfolioPosts = await getCollection("portfolioSvCollection").then((posts)
       description=`${data.name} är nöjda med vårt samarbete. Vad hindrar oss från att bli nästa samarbetsduo? Låt oss börja diskutera dina idéer och projekt för att se vad vi kan skapa tillsammans!`
       buttonText="Skicka ett meddelande"
       pricingText="Se priser"
+      aria-labelledby="cta-section"
     />
   </main>
 </MainLayout>

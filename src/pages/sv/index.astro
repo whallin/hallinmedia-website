@@ -14,15 +14,17 @@ const age = new Date().getFullYear() - 2005 - (new Date().getMonth() < 7 ? 1 : 0
   title="Hem"
   description="William Hallin är en fotograf och designer i Skellefteå. Han hjälper varumärken genom att skapa engagerande visuella lösningar, med över fem års erfarenhet från hela världen. Se hur HallinMedia kan stärka ditt varumärke med kreativa lösningar."
 >
-  <main class="space-y-12 font-serif">
+  <main class="space-y-12 font-serif" role="main">
     <header
       class="flex flex-col-reverse gap-4 selection:bg-red-300 selection:text-red-800 sm:flex-row sm:items-center sm:justify-between"
+      aria-labelledby="main-heading"
     >
-      <h1 class="max-w-md text-4xl font-light text-stone-900 italic sm:text-6xl">
+      <h1 id="main-heading" class="max-w-md text-4xl font-light text-stone-900 italic sm:text-6xl">
         Detaljerna betyder allt.
       </h1>
       <PhHandWavingDuotone
         class="motion-rotate-loop-16 motion-duration-2000 motion-ease h-8 w-8 text-red-500 sm:h-16 sm:w-16"
+        aria-hidden="true"
       />
     </header>
     <article
@@ -68,6 +70,7 @@ const age = new Date().getFullYear() - 2005 - (new Date().getMonth() < 7 ? 1 : 0
     </article>
     <nav
       class="flex flex-col gap-2 text-sm font-light selection:bg-red-300 selection:text-red-800 sm:flex-row"
+      aria-label="Huvudnavigering"
     >
       <a
         href={getRelativeLocaleUrl(`${Astro.currentLocale}`, "contact")}
@@ -76,7 +79,7 @@ const age = new Date().getFullYear() - 2005 - (new Date().getMonth() < 7 ? 1 : 0
         class="inline-flex items-center justify-center gap-2 rounded-md border bg-red-500 px-4 py-2 text-stone-50 transition hover:bg-red-700 active:scale-95 active:bg-red-700 sm:w-full"
       >
         <PhHandWavingDuotone class="h-4 w-4" />
-        Contact me
+        Kontakta mig
       </a>
       <a
         href={getRelativeLocaleUrl(`${Astro.currentLocale}`, "portfolio")}
@@ -85,16 +88,18 @@ const age = new Date().getFullYear() - 2005 - (new Date().getMonth() < 7 ? 1 : 0
         class="inline-flex items-center justify-center gap-2 rounded-lg border border-red-300 px-4 py-2 transition hover:border-red-500 hover:text-red-700 active:scale-95 active:border-red-500 active:text-red-700 sm:w-full"
       >
         <PhSparkleDuotone class="h-4 w-4" />
-        Browse portfolio
+        Bläddra i portföljen
       </a>
     </nav>
-    <aside>
+    <aside aria-label="Nuvarande Spotify-spelning">
       <SpotifyPlaying />
     </aside>
-    <section>
+    <section aria-labelledby="photo-grid-heading">
+      <h2 id="photo-grid-heading" class="sr-only">Foto galleri</h2>
       <LandingPhotoGrid />
     </section>
-    <section id="blog">
+    <section id="blog" aria-labelledby="blog-heading">
+      <h2 id="blog-heading" class="sr-only">Senaste blogginlägg</h2>
       <LatestPosts />
     </section>
   </main>

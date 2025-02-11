@@ -15,12 +15,15 @@ import MainLayout from "../layouts/MainLayout.astro";
   title="Contact"
   description="Discover my services to enhance your brand. Ready to make your vision a reality? Contact me to discuss your project and achieve your goals together."
 >
-  <article class="space-y-12 font-serif">
+  <article class="space-y-12 font-serif" aria-labelledby="page-title">
     <header class="selection:bg-red-300 selection:text-red-800">
       <div class="flex flex-col-reverse gap-4 sm:flex-row sm:items-center sm:justify-between">
-        <h1 class="max-w-md text-4xl font-light text-stone-900 italic">Chat with me</h1>
+        <h1 id="page-title" class="max-w-md text-4xl font-light text-stone-900 italic">
+          Chat with me
+        </h1>
         <IconPhHandPeaceDuotone
           class="flip -motion-rotate-loop-24/mirror motion-duration-2000 motion-ease h-8 w-8 origin-bottom text-red-500 motion-safe:rotate-12 sm:h-12 sm:w-12"
+          aria-hidden="true"
         />
       </div>
     </header>
@@ -56,10 +59,14 @@ import MainLayout from "../layouts/MainLayout.astro";
         />
       </div>
     </section>
-    <address id="contacts" class="flex flex-col gap-8 sm:flex-row sm:justify-between">
+    <address
+      id="contacts"
+      class="flex flex-col gap-8 sm:flex-row sm:justify-between"
+      aria-label="Contact information"
+    >
       <div class="flex flex-col gap-2 selection:bg-amber-300 selection:text-amber-700">
         <h2 class="flex items-center gap-2 text-2xl font-light text-stone-900">
-          <IconPhEnvelopeDuotone class="h-6 w-6 text-amber-500" />
+          <IconPhEnvelopeDuotone class="h-6 w-6 text-amber-500" aria-hidden="true" />
           Email
         </h2>
         <a
@@ -72,7 +79,7 @@ import MainLayout from "../layouts/MainLayout.astro";
       </div>
       <div class="flex flex-col gap-2 selection:bg-red-300 selection:text-red-800">
         <h2 class="flex items-center gap-2 text-2xl font-light text-stone-900">
-          <IconPhPhoneCallDuotone class="h-6 w-6 text-red-500" />
+          <IconPhPhoneCallDuotone class="h-6 w-6 text-red-500" aria-hidden="true" />
           Mobile
         </h2>
         <a
@@ -85,7 +92,7 @@ import MainLayout from "../layouts/MainLayout.astro";
       </div>
       <div class="flex flex-col gap-2 selection:bg-blue-300 selection:text-blue-700">
         <h2 class="flex items-center gap-2 text-2xl font-light text-stone-900">
-          <IconPhLinkedinLogoDuotone class="h-6 w-6 text-blue-500" />
+          <IconPhLinkedinLogoDuotone class="h-6 w-6 text-blue-500" aria-hidden="true" />
           LinkedIn
         </h2>
         <a
@@ -100,8 +107,14 @@ import MainLayout from "../layouts/MainLayout.astro";
     </address>
     <PricingTable />
     <FaqList slice={5} showFeaturedOnly={true} />
-    <section id="legalities" class="space-y-4 selection:bg-red-300 selection:text-red-800">
-      <h2 class="font-serif text-3xl font-light text-stone-900 italic">Legalities</h2>
+    <section
+      id="legalities"
+      class="space-y-4 selection:bg-red-300 selection:text-red-800"
+      aria-labelledby="legalities-heading"
+    >
+      <h2 id="legalities-heading" class="font-serif text-3xl font-light text-stone-900 italic">
+        Legalities
+      </h2>
       <p class="font-serif text-sm font-light text-stone-700">
         Sometimes the admin side of things can get in the way of the fun stuff, especially when it
         comes to legal bits. I make sure all the essential paperwork and terms are sorted for you

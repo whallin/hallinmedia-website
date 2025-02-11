@@ -53,22 +53,24 @@ const categoryStyles = {
   datePublished={post.data.publishedDate}
   dateModified={post.data.updatedDate}
 >
-  <article class="flex flex-col gap-8 font-serif">
+  <article class="flex flex-col gap-8 font-serif" aria-labelledby="article-title">
     <BlogHeader
       category={post.data.category}
       title={post.data.title}
       categoryColor={categoryColor}
+      id="article-title"
     />
 
     {
       post.data.featuredImage && (
         <Picture
           src={post.data.featuredImage}
-          alt={post.data.featuredImageAlt}
+          alt={post.data.featuredImageAlt || "Featured image for the article"}
           widths={[320, 480, 640, 768, 1024, 1280]}
           formats={["avif", "webp", "jpeg"]}
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 60vw"
           class={`aspect-video w-full rounded-lg border-2 border-stone-300 object-cover transition select-none hover:-translate-y-1 hover:drop-shadow-lg ${categoryStyles}`}
+          aria-describedby="image-description"
         />
       )
     }
@@ -84,11 +86,12 @@ const categoryStyles = {
 
     <section
       class="prose prose-stone my-8 max-w-none text-sm font-light text-stone-700 selection:bg-red-300 selection:text-red-800"
+      aria-label="Article content"
     >
       <Content />
     </section>
 
-    <hr class="border-stone-300" />
+    <hr class="border-stone-300" aria-hidden="true" />
 
     {
       post.data.relatedPosts && post.data.relatedPosts.length > 0 && (

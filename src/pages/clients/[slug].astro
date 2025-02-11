@@ -28,22 +28,36 @@ const portfolioPosts = await getCollection("portfolioEnCollection").then((posts)
 ---
 
 <MainLayout title={data.name} description={data.description.en}>
-  <main class="flex flex-col gap-12 font-serif" style={`--dominant-color: ${dominantColor}`}>
-    <ClientHeader logo={data.logo} name={data.name} dominantColor={dominantColor} />
+  <main
+    class="flex flex-col gap-12 font-serif"
+    style={`--dominant-color: ${dominantColor}`}
+    role="main"
+  >
+    <ClientHeader
+      logo={data.logo}
+      name={data.name}
+      dominantColor={dominantColor}
+      aria-labelledby="client-header"
+    />
 
-    {data.subcontracted && <ClientNotice dominantColor={dominantColor} />}
+    {data.subcontracted && <ClientNotice dominantColor={dominantColor} role="alert" />}
 
-    <div class="flex flex-col gap-8">
+    <div class="flex flex-col gap-8" aria-labelledby="client-info">
       <ClientAbout
         clientId={client.id}
         name={data.name}
         description={data.description.en}
         websiteUrl={data.websiteUrl}
         dominantColor={dominantColor}
+        aria-describedby="client-description"
       >
         {
           data.socialLinks && (
-            <ClientSocialLinks clientId={client.id} socialLinks={data.socialLinks} />
+            <ClientSocialLinks
+              clientId={client.id}
+              socialLinks={data.socialLinks}
+              aria-label="Social media links"
+            />
           )
         }
       </ClientAbout>
@@ -55,6 +69,7 @@ const portfolioPosts = await getCollection("portfolioEnCollection").then((posts)
           posts={portfolioPosts}
           dominantColor={dominantColor}
           currentLocale={Astro.currentLocale}
+          aria-labelledby="portfolio-section"
         />
       )
     }
@@ -64,6 +79,7 @@ const portfolioPosts = await getCollection("portfolioEnCollection").then((posts)
       description=`${data.name} was pleased with our collaboration. What's stopping us from being the next collaboration duo? Let's start discussing your ideas and projects to see what we can create together!`
       buttonText="Send a message"
       pricingText="See pricing"
+      aria-labelledby="cta-section"
     />
   </main>
 </MainLayout>

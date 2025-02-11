@@ -27,6 +27,7 @@ const groupedDocs = allLegalDocs.reduce((acc: Record<string, typeof allLegalDocs
       <h1 class="max-w-md text-4xl font-light text-stone-900 italic">Juridik</h1>
       <IconPhGavelDuotone
         class="-motion-rotate-loop-16 flip motion-ease motion-duration-2000 h-8 w-8 origin-bottom-left text-red-500 sm:h-12 sm:w-12"
+        aria-hidden="true"
       />
     </header>
     <article class="mt-12 flex flex-col gap-4 text-sm font-light text-stone-700">
@@ -42,11 +43,11 @@ const groupedDocs = allLegalDocs.reduce((acc: Record<string, typeof allLegalDocs
           data-umami-event="legal_email-question"
           data-umami-event-origin={Astro.url}
           class="text-red-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-50 hover:no-underline active:opacity-50"
-          >mejla mig</a
+          aria-label="Mejla mig med juridiska frågor">mejla mig</a
         >.
       </p>
 
-      <div class="mt-6 space-y-8">
+      <div class="mt-6 space-y-8" role="region" aria-label="Juridiska dokument">
         {
           Object.entries(groupedDocs).map(([category, docs]) => (
             <LegalCategorySection category={category} docs={docs} />
