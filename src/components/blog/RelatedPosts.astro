@@ -10,7 +10,7 @@ const translations = {
   },
 };
 
-const { relatedPosts, allPosts, categoryColor, currentLocale } = Astro.props;
+const { postId, relatedPosts, allPosts, categoryColor, currentLocale } = Astro.props;
 
 const categoryStyles = {
   sky: "hover:border-sky-500 hover:text-sky-700 active:border-sky-500 active:text-sky-700",
@@ -42,6 +42,8 @@ const categoryStyles = {
               <a
                 href={getRelativeLocaleUrl(currentLocale, `/blog/${postSlug}`)}
                 class={`flex items-center gap-2 rounded-lg border border-stone-300/80 px-4 py-2 text-sm text-stone-700/90 transition active:scale-90 ${categoryStyles[categoryColor]}`}
+                data-umami-event={`related-post_${postId}_${postSlug}`}
+                data-umami-event-origin={Astro.url}
               >
                 {relatedPost ? relatedPost.data.title : `/${postSlug}`}
               </a>

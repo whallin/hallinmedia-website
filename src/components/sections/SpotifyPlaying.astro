@@ -30,7 +30,15 @@ const translations = {
       </time>
     </div>
   </figure>
-  <a id="s-link" href="#" target="_blank" class="flex items-center gap-3">
+  <a
+    id="s-link"
+    href="#"
+    target="_blank"
+    data-umami-event="spotify_href"
+    data-umami-event-url="#"
+    data-umami-event-origin={Astro.url}
+    class="flex items-center gap-3"
+  >
     <Image
       id="s-cover"
       src="https://api.dicebear.com/9.x/glass/svg?seed=albumcover"
@@ -58,7 +66,9 @@ const translations = {
     document.getElementById("s-track")!.textContent = data.name;
     document.getElementById("s-artist")!.textContent = data.artist;
     (document.getElementById("s-cover") as HTMLImageElement).src = data.album_cover;
-    (document.getElementById("s-link") as HTMLAnchorElement).href = data.url;
+    const sLink = document.getElementById("s-link") as HTMLAnchorElement;
+    sLink.href = data.url;
+    sLink.setAttribute("data-umami-event-url", data.url);
 
     document.getElementById("s-duration")!.textContent =
       `${new Date(data.duration_ms).getMinutes()}:${String(new Date(data.duration_ms).getSeconds()).padStart(2, "0")}`;

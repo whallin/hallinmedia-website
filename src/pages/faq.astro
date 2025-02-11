@@ -25,6 +25,8 @@ const faqCollection = await getCollection("faqCollection");
       questions I am asked, along with their answers. Hopefully, they will help you understand me,
       my services, and my work a bit better. If they don't answer your question, <a
         href={getRelativeLocaleUrl(`${Astro.currentLocale}`, "contact")}
+        data-umami-event="faq_contact"
+        data-umami-event-origin={Astro.url}
         class="text-red-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-50 hover:no-underline active:opacity-50"
         >feel free to get in touch</a
       >.

@@ -64,6 +64,8 @@ import MainLayout from "../../layouts/MainLayout.astro";
         </h2>
         <a
           href="mailto:william@hallin.media?subject=Hej William!"
+          data-umami-event="contact_email"
+          data-umami-event-origin={Astro.url}
           class="w-fit font-mono text-sm text-amber-500 not-italic underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-amber-500 hover:text-amber-100 hover:no-underline active:opacity-50"
           >william@hallin.media</a
         >
@@ -75,6 +77,8 @@ import MainLayout from "../../layouts/MainLayout.astro";
         </h2>
         <a
           href="tel:+46706159279"
+          data-umami-event="contact_phone"
+          data-umami-event-origin={Astro.url}
           class="w-fit font-mono text-sm text-red-500 not-italic underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-red-100 hover:no-underline active:opacity-50"
           >070-615 92 79</a
         >
@@ -86,6 +90,8 @@ import MainLayout from "../../layouts/MainLayout.astro";
         </h2>
         <a
           href="https://www.linkedin.com/in/whallin"
+          data-umami-event="contact_linkedin"
+          data-umami-event-origin={Astro.url}
           target="_blank"
           class="w-fit font-mono text-sm text-blue-500 not-italic underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-blue-500 hover:text-blue-100 hover:no-underline active:opacity-50"
           >/in/whallin</a
@@ -102,6 +108,8 @@ import MainLayout from "../../layouts/MainLayout.astro";
         vi arbetar tillsammans för dig och ditt företag. För att kolla in villkoren, policyerna och
         andra dokument som jag har upprättat för att hålla dig och ditt företag säkra, <a
           href={getRelativeLocaleUrl(`${Astro.currentLocale}`, "legal")}
+          data-umami-event="contact_legal-read-more"
+          data-umami-event-origin={Astro.url}
           class="text-red-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-50 hover:no-underline active:opacity-50"
           >klicka dig bara över till juridiksidan</a
         >.

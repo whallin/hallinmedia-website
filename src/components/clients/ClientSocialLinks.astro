@@ -8,7 +8,7 @@ const translations = {
   },
 };
 
-const { socialLinks } = Astro.props;
+const { clientId, socialLinks } = Astro.props;
 ---
 
 <article>
@@ -25,6 +25,9 @@ const { socialLinks } = Astro.props;
             <li>
               <a
                 href={socialLinks.twitter}
+                data-umami-event={`client_${clientId}_twitter`}
+                data-umami-event-url={socialLinks.twitter}
+                data-umami-event-origin={Astro.url}
                 target="_blank"
                 rel="noopener noreferrer"
                 class="flex items-center gap-2 underline decoration-stone-500 decoration-dashed decoration-from-font underline-offset-4 selection:bg-stone-300 selection:text-stone-700 hover:bg-stone-500 hover:text-stone-100 hover:no-underline active:bg-stone-500 active:text-stone-100 active:no-underline active:opacity-50"
@@ -39,6 +42,9 @@ const { socialLinks } = Astro.props;
             <li>
               <a
                 href={socialLinks.linkedin}
+                data-umami-event={`client_${clientId}_linkedin`}
+                data-umami-event-url={socialLinks.linkedin}
+                data-umami-event-origin={Astro.url}
                 target="_blank"
                 rel="noopener noreferrer"
                 class="flex items-center gap-2 underline decoration-blue-500 decoration-dashed decoration-from-font underline-offset-4 selection:bg-blue-300 selection:text-blue-700 hover:bg-blue-500 hover:text-blue-100 hover:no-underline active:bg-blue-500 active:text-blue-100 active:no-underline active:opacity-50"
@@ -53,6 +59,9 @@ const { socialLinks } = Astro.props;
             <li>
               <a
                 href={socialLinks.instagram}
+                data-umami-event={`client_${clientId}_instagram`}
+                data-umami-event-url={socialLinks.instagram}
+                data-umami-event-origin={Astro.url}
                 target="_blank"
                 rel="noopener noreferrer"
                 class="flex items-center gap-2 underline decoration-pink-500 decoration-dashed decoration-from-font underline-offset-4 selection:bg-pink-300 selection:text-pink-700 hover:bg-pink-500 hover:text-pink-100 hover:no-underline active:bg-pink-500 active:text-pink-100 active:no-underline active:opacity-50"
@@ -67,6 +76,9 @@ const { socialLinks } = Astro.props;
             <li>
               <a
                 href={socialLinks.facebook}
+                data-umami-event={`client_${clientId}_facebook`}
+                data-umami-event-url={socialLinks.facebook}
+                data-umami-event-origin={Astro.url}
                 target="_blank"
                 rel="noopener noreferrer"
                 class="flex items-center gap-2 underline decoration-sky-500 decoration-dashed decoration-from-font underline-offset-4 selection:bg-sky-300 selection:text-sky-700 hover:bg-sky-500 hover:text-sky-100 hover:no-underline active:bg-sky-500 active:text-sky-100 active:no-underline active:opacity-50"

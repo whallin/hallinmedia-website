@@ -12,7 +12,7 @@ const translations = {
   },
 };
 
-const { name, description, websiteUrl } = Astro.props;
+const { clientId, name, description, websiteUrl } = Astro.props;
 ---
 
 <section
@@ -32,6 +32,9 @@ const { name, description, websiteUrl } = Astro.props;
       <footer>
         <a
           href={websiteUrl}
+          data-umami-event={`client_${clientId}_website`}
+          data-umami-event-url={websiteUrl}
+          data-umami-event-origin={Astro.url}
           target="_blank"
           rel="noopener noreferrer"
           class="flex items-center justify-center gap-2 rounded-md border bg-[var(--dominant-color)] px-4 py-2 text-sm font-medium text-stone-50 transition hover:opacity-75 active:scale-95 active:opacity-75"

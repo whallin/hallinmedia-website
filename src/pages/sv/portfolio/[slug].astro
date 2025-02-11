@@ -32,7 +32,7 @@ const dominantColor = client?.data.dominantColor || "oklch(0.637 0.237 25.331)";
   dateModified={item.data.date}
 >
   <article class="flex flex-col gap-8 font-serif" style={`--dominant-color: ${dominantColor}`}>
-    <PortfolioHeader item={item} client={client} />
+    <PortfolioHeader workId={item.id} item={item} client={client} />
 
     <p class="text-sm font-light text-stone-700 selection:bg-red-300 selection:text-red-800">
       {item.data.description}
@@ -47,7 +47,7 @@ const dominantColor = client?.data.dominantColor || "oklch(0.637 0.237 25.331)";
       </div>
     </section>
 
-    <ExternalResources links={item.data.links} />
+    <ExternalResources workId={item.id} links={item.data.links} />
 
     <CtaBanner
       title="Let's create something amazing together"

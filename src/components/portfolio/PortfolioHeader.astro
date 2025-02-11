@@ -3,7 +3,7 @@ import { Image, Picture } from "astro:assets";
 import { getRelativeLocaleUrl } from "astro:i18n";
 import PortfolioTags from "./PortfolioTags.astro";
 
-const { item, client } = Astro.props;
+const { workId, item, client } = Astro.props;
 ---
 
 <header class="flex flex-col gap-2 selection:bg-red-300 selection:text-red-800">
@@ -42,6 +42,8 @@ const { item, client } = Astro.props;
         <address class="h-8 w-32">
           <a
             href={getRelativeLocaleUrl(`${Astro.currentLocale}`, `/clients/${client.id}`)}
+            data-umami-event={`portfolio_${workId}_${client.id}`}
+            data-umami-event-origin={Astro.url}
             class="block h-full transition hover:opacity-70 active:scale-95 active:opacity-70"
           >
             <Image

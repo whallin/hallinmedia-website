@@ -34,11 +34,15 @@ const age = new Date().getFullYear() - 2005 - (new Date().getMonth() < 7 ? 1 : 0
       <p>
         Jag skapar engagerade <a
           href={getRelativeLocaleUrl(`${Astro.currentLocale}`, "portfolio")}
+          data-umami-event="landing_portfolio"
+          data-umami-event-origin={Astro.url}
           class="text-red-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-50 active:opacity-75"
           >visuella upplevelser</a
         > för varumärken och företag. Med mer än 5 års erfarenhet bakom mig har jag haft nöjet att arbeta
         med <a
           href={getRelativeLocaleUrl(`${Astro.currentLocale}`, "clients")}
+          data-umami-event="landing_clients"
+          data-umami-event-origin={Astro.url}
           class="text-red-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-50 active:opacity-75"
           >kunder över hela världen</a
         > för att hjälpa dem att väcka liv i sitt varumärke och få sin verksamhet att växa genom effektiv
@@ -47,11 +51,16 @@ const age = new Date().getFullYear() - 2005 - (new Date().getMonth() < 7 ? 1 : 0
       <p>
         När jag inte är upptagen med arbeten så hittar du mig troligen <a
           href="https://www.instagram.com/williamhallinn"
+          data-umami-event="landing_instagram"
+          data-umami-event-url="https://www.instagram.com/williamhallinn"
+          data-umami-event-origin={Astro.url}
           target="_blank"
           class="text-red-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-50 active:opacity-75"
           >ute med min kamera</a
         > och fångar det fina omkring mig - eller <a
           href="#blog"
+          data-umami-event="landing_latest-blog"
+          data-umami-event-origin={Astro.url}
           class="text-red-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-50 active:opacity-75"
           >skriver om det jag älskar</a
         >.

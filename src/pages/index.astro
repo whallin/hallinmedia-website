@@ -33,11 +33,15 @@ const age = new Date().getFullYear() - 2005 - (new Date().getMonth() < 7 ? 1 : 0
       <p>
         I craft engaging <a
           href={getRelativeLocaleUrl(`${Astro.currentLocale}`, "portfolio")}
+          data-umami-event="landing_portfolio"
+          data-umami-event-origin={Astro.url}
           class="text-red-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-50 active:opacity-75"
           >visual experiences</a
         > for brands and businesses. With 5+ years of experience under my belt, I've had the pleasure
         of working with <a
           href={getRelativeLocaleUrl(`${Astro.currentLocale}`, "clients")}
+          data-umami-event="landing_clients"
+          data-umami-event-origin={Astro.url}
           class="text-red-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-50 active:opacity-75"
           >clients from all around the globe</a
         >, helping them bring their brand to life and grow their business through effective
@@ -46,11 +50,16 @@ const age = new Date().getFullYear() - 2005 - (new Date().getMonth() < 7 ? 1 : 0
       <p>
         When I'm not busy creating, you'll likely <a
           href="https://www.instagram.com/williamhallinn"
+          data-umami-event="landing_instagram"
+          data-umami-event-url="https://www.instagram.com/williamhallinn"
+          data-umami-event-origin={Astro.url}
           target="_blank"
           class="text-red-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-50 active:opacity-75"
           >find me out and about with my camera</a
         >, capturing the beauty around me—or <a
           href="#blog"
+          data-umami-event="landing_latest-blog"
+          data-umami-event-origin={Astro.url}
           class="text-red-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-50 active:opacity-75"
           >writing about the things I love</a
         >.

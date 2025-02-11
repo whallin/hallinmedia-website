@@ -65,6 +65,8 @@ const translations = {
           {translations[Astro.currentLocale].partialFaqText}
           <a
             href={getRelativeLocaleUrl(`${Astro.currentLocale}`, "faq")}
+            data-umami-event="faq-partial_read-more"
+            data-umami-event-origin={Astro.url}
             class="text-red-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-50 active:bg-red-500 active:text-stone-50 [&:active]:no-underline [&:active]:opacity-50 [&:hover]:no-underline"
           >
             {translations[Astro.currentLocale].checkFaqLink}

@@ -10,7 +10,7 @@ const translations = {
   },
 };
 
-const { links } = Astro.props;
+const { workId, links } = Astro.props;
 ---
 
 <section class="mt-8 selection:bg-red-300 selection:text-red-800">
@@ -24,6 +24,9 @@ const { links } = Astro.props;
           <li class="w-full sm:w-auto">
             <a
               href={link.url}
+              data-umami-event={`ext-resource_${workId}_'${link.label}'`}
+              data-umami-event-url={link.url}
+              data-umami-event-origin={Astro.url}
               target="_blank"
               rel="noopener noreferrer"
               class="flex items-center justify-center gap-2 rounded-lg border border-stone-300 px-4 py-2 transition hover:border-red-500 hover:text-red-700 active:scale-90 active:border-red-500 active:text-red-700 sm:justify-normal"

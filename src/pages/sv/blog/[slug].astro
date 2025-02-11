@@ -93,6 +93,7 @@ const categoryStyles = {
     {
       post.data.relatedPosts && post.data.relatedPosts.length > 0 && (
         <RelatedPosts
+          postId={post.id}
           relatedPosts={post.data.relatedPosts}
           allPosts={allPosts}
           categoryColor={categoryColor}

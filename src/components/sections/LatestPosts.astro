@@ -56,6 +56,8 @@ const latestPosts = blogPosts
     <p class="font-serif text-sm font-light text-stone-700">
       {translations[Astro.currentLocale].description}<a
         href="/blog"
+        data-umami-event="latest-blog_read-more"
+        data-umami-event-origin={Astro.url}
         class="text-red-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-50 active:bg-red-500 active:text-stone-50 active:opacity-50"
         >{translations[Astro.currentLocale].linkText}</a
       >
@@ -67,6 +69,8 @@ const latestPosts = blogPosts
       <article>
         <a
           href={`/blog/${post.id}`}
+          data-umami-event={`latest-blog_${post.id}`}
+          data-umami-event-origin={Astro.url}
           class="group flex flex-col gap-1 font-light active:opacity-50 sm:flex-row sm:items-center sm:justify-between"
         >
           <header class="flex flex-col gap-1">

@@ -81,6 +81,8 @@ const socialLinks = [
               <li>
                 <a
                   href={getRelativeLocaleUrl(`${Astro.currentLocale}`, link.path)}
+                  data-umami-event={`footer_nav_${link.path}`}
+                  data-umami-event-origin={Astro.url}
                   class="underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-50 hover:no-underline active:bg-red-500 active:text-stone-50 active:no-underline"
                 >
                   {link.label}
@@ -117,6 +119,9 @@ const socialLinks = [
               <li>
                 <a
                   href={link.href}
+                  data-umami-event={`footer_${link.label}`}
+                  data-umami-event-url={link.href}
+                  data-umami-event-origin={Astro.url}
                   target={link.href.startsWith("http") ? "_blank" : undefined}
                   class={`underline decoration-dashed decoration-from-font underline-offset-4 ${link.classes.base} ${link.classes.hover} ${link.classes.active}`}
                 >
@@ -128,6 +133,9 @@ const socialLinks = [
         </ul>
         <a
           href="https://github.com/whallin/hallinmedia-website"
+          data-umami-event="footer_github"
+          data-umami-event-url="https://github.com/whallin/hallinmedia-website"
+          data-umami-event-origin={Astro.url}
           target="_blank"
           class="font-mono text-xs font-light text-stone-500 hover:bg-stone-500 hover:text-stone-100 active:bg-stone-500 active:text-stone-100"
           >{GIT_HASH}</a

@@ -34,6 +34,9 @@ const {
   <nav class="flex flex-col gap-2 sm:flex-row">
     <a
       href={contactLink}
+      data-umami-event={`cta_${Astro.url.pathname}_contact`}
+      data-umami-event-url={contactLink}
+      data-umami-event-origin={Astro.url}
       class="inline-flex items-center justify-center gap-2 rounded-md border bg-red-500 px-4 py-2 text-stone-50 transition hover:bg-red-700 active:scale-95 active:bg-red-700"
     >
       {buttonText}
@@ -43,6 +46,9 @@ const {
       pricingText && (
         <a
           href={pricingLink}
+          data-umami-event={`cta_${Astro.url.pathname}_pricing`}
+          data-umami-event-url={pricingLink}
+          data-umami-event-origin={Astro.url}
           class="inline-flex items-center justify-center gap-2 rounded-lg border border-red-300 px-4 py-2 transition hover:border-red-500 hover:text-red-700 active:scale-95 active:border-red-500 active:text-red-700 sm:w-auto"
         >
           {pricingText}
