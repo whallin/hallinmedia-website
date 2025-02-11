@@ -1,11 +1,11 @@
 ---
 import { getRelativeLocaleUrl } from "astro:i18n";
 import PhHandWavingDuotone from "../../components/icons/PhHandWavingDuotone.astro";
+import PhSparkleDuotone from "../../components/icons/PhSparkleDuotone.astro";
 import LatestPosts from "../../components/sections/LatestPosts.astro";
 import SpotifyPlaying from "../../components/sections/SpotifyPlaying.astro";
 import LandingPhotoGrid from "../../components/ui/LandingPhotoGrid.astro";
 import MainLayout from "../../layouts/MainLayout.astro";
-import PhSparkleDuotone from "../../components/icons/PhSparkleDuotone.astro";
 
 const age = new Date().getFullYear() - 2005 - (new Date().getMonth() < 7 ? 1 : 0);
 ---
@@ -66,7 +66,9 @@ const age = new Date().getFullYear() - 2005 - (new Date().getMonth() < 7 ? 1 : 0
         >.
       </p>
     </article>
-    <nav class="flex flex-col gap-2 text-sm font-light sm:flex-row">
+    <nav
+      class="flex flex-col gap-2 text-sm font-light selection:bg-red-300 selection:text-red-800 sm:flex-row"
+    >
       <a
         href={getRelativeLocaleUrl(`${Astro.currentLocale}`, "contact")}
         data-umami-event="landing_cta_contact"

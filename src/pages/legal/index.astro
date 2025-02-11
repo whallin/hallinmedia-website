@@ -39,6 +39,8 @@ const groupedDocs = allLegalDocs.reduce((acc: Record<string, typeof allLegalDocs
       <p>
         If you have any questions about my legal documents, feel free to <a
           href="mailto:william@hallin.media?subject=A legal question..."
+          data-umami-event="legal_email-question"
+          data-umami-event-origin={Astro.url}
           class="text-red-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-50 hover:no-underline active:opacity-50"
           >email me</a
         >.
