@@ -77,14 +77,37 @@ const translations = {
   </header>
   <dl class="flex flex-col gap-4">
     {
-      displayFaqCollection.map((category) => (
-        <div class="flex flex-col gap-4">
-          {showCategories && (
+      displayFaqCollection.map((category) =>
+        showCategories ? (
+          <div class="flex flex-col gap-4">
             <dt class="font-serif text-xl font-light text-stone-900 italic">
               {category.data.categoryName[Astro.currentLocale]}
             </dt>
-          )}
-          {category.data.questions.map((faq) => (
+            {category.data.questions.map((faq) => (
+              <dd>
+                <details
+                  class:list={[
+                    "group rounded-sm border p-4 transition hover:border-red-400/75 active:border-red-400/50",
+                    faq.featured
+                      ? "border-red-200 open:border-red-400"
+                      : "border-stone-300 open:border-stone-400",
+                  ]}
+                >
+                  <summary class="cursor-pointer font-serif font-light text-stone-900 italic transition group-hover:opacity-75 group-active:opacity-50">
+                    {faq.question[Astro.currentLocale]}
+                    {faq.featured && <span class="ml-2 text-red-400 not-italic">★</span>}
+                  </summary>
+                  <hr class="my-4 border-stone-300" />
+                  <div
+                    class="my-2 font-serif text-sm text-stone-700"
+                    set:html={`${faq.answer[Astro.currentLocale]}`}
+                  />
+                </details>
+              </dd>
+            ))}
+          </div>
+        ) : (
+          category.data.questions.map((faq) => (
             <dd>
               <details
                 class:list={[
@@ -105,9 +128,9 @@ const translations = {
                 />
               </details>
             </dd>
-          ))}
-        </div>
-      ))
+          ))
+        )
+      )
     }
   </dl>
 </section>
