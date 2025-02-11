@@ -21,14 +21,14 @@ const translations = {
     class="invisible absolute -top-8 left-1/2 z-10 -translate-x-1/2 rounded bg-stone-800 px-2 py-1 text-xs whitespace-nowrap text-stone-50 opacity-0 transition group-hover:visible group-hover:opacity-100 group-active:visible group-active:opacity-100"
   >
     <div class="flex items-center gap-2">
-      <time class="flex flex-col items-center">
+      <div class="flex flex-col items-center">
         <span class="text-[0.6rem] text-stone-400">Duration</span>
-        <span id="s-duration">n/a</span>
-      </time>
-      <time class="flex flex-col items-center">
+        <time id="s-duration" datetime="PT0M0S">n/a</time>
+      </div>
+      <div class="flex flex-col items-center">
         <span class="text-[0.6rem] text-stone-400">Played when?</span>
-        <span id="s-played">n/a</span>
-      </time>
+        <time id="s-played" datetime="1970-01-01T00:00:00.000Z">n/a</time>
+      </div>
     </div>
   </figure>
   <a
@@ -73,6 +73,12 @@ const translations = {
 
     document.getElementById("s-duration")!.textContent =
       `${new Date(data.duration_ms).getMinutes()}:${String(new Date(data.duration_ms).getSeconds()).padStart(2, "0")}`;
+    document
+      .getElementById("s-duration")!
+      .setAttribute(
+        "datetime",
+        `PT${new Date(data.duration_ms).getMinutes()}M${new Date(data.duration_ms).getSeconds()}S`
+      );
 
     document.getElementById("s-played")!.textContent = new Date(data.played_at).toLocaleString([], {
       year: "numeric",
@@ -81,6 +87,9 @@ const translations = {
       hour: "2-digit",
       minute: "2-digit",
     });
+    document
+      .getElementById("s-played")!
+      .setAttribute("datetime", new Date(data.played_at).toISOString());
   };
 
   spotifyPlaying();

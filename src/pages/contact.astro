@@ -43,8 +43,8 @@ import MainLayout from "../layouts/MainLayout.astro";
               >Check out my pricing section</a
             > which gives you a good idea of what I tend to charge for my services.
           </p>
-          <time class="mt-2 font-mono text-xs text-stone-500">
-            Current time in Sweden: <span id="swedishTime"></span>
+          <time id="swedishTime" datetime="" class="mt-2 font-mono text-xs text-stone-500">
+            Current time in Sweden:
           </time>
         </div>
         <Image
@@ -98,8 +98,8 @@ import MainLayout from "../layouts/MainLayout.astro";
         >
       </div>
     </address>
-    <FaqList slice={5} showFeaturedOnly={true} />
     <PricingTable />
+    <FaqList slice={5} showFeaturedOnly={true} />
     <section id="legalities" class="space-y-4 selection:bg-red-300 selection:text-red-800">
       <h2 class="font-serif text-3xl font-light text-stone-900 italic">Legalities</h2>
       <p class="font-serif text-sm font-light text-stone-700">
@@ -120,13 +120,16 @@ import MainLayout from "../layouts/MainLayout.astro";
 
 <script>
   function updateTime() {
-    const swedishTime = new Date().toLocaleTimeString(undefined, {
+    const now = new Date();
+    const swedishTime = now.toLocaleTimeString(undefined, {
       timeZone: "Europe/Stockholm",
       hour: "2-digit",
       minute: "2-digit",
       second: "2-digit",
     });
-    document.getElementById("swedishTime")!.textContent = swedishTime;
+    const timeElement = document.getElementById("swedishTime");
+    timeElement!.textContent = `Current time in Sweden: ${swedishTime}`;
+    timeElement!.setAttribute("datetime", now.toISOString());
   }
 
   updateTime();
