@@ -53,7 +53,9 @@ const dominantColor = client?.data.dominantColor || "oklch(0.637 0.237 25.331)";
       aria-labelledby="portfolio-content"
     >
       <h2 id="portfolio-content" class="sr-only">Project Details</h2>
-      <div class="prose prose-stone max-w-none text-sm font-light text-stone-700">
+      <div
+        class="prose prose-stone prose-a:text-red-500 prose-a:underline prose-a:decoration-dashed prose-a:decoration-from-font prose-a:underline-offset-4 prose-a:hover:bg-red-500 prose-a:hover:text-stone-50 prose-a:active:opacity-75 max-w-none text-sm font-light text-stone-700"
+      >
         <Content />
       </div>
     </section>
