@@ -1,4 +1,6 @@
 ---
+import { getRelativeLocaleUrl } from "astro:i18n";
+
 const { doc } = Astro.props;
 const IconComponent = await import(`../../components/icons/${doc.data.icon}.astro`);
 
@@ -23,7 +25,7 @@ const translations = {
   aria-labelledby={`title-${doc.id}`}
 >
   <a
-    href={`/legal/${doc.id}`}
+    href={getRelativeLocaleUrl(`${Astro.currentLocale}`, `/legal/${doc.id}`)}
     aria-label={`${translations[Astro.currentLocale].read_more} ${doc.data.title}`}
   >
     <IconComponent.default
