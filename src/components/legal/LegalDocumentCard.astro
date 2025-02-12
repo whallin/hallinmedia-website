@@ -50,7 +50,7 @@ const translations = {
       </time>
     </header>
     <section class="relative z-10 my-2" aria-labelledby={`description-${doc.id}`}>
-      <p id={`description-${doc.id}`} class="text-stone-600">{doc.data.description}</p>
+      <p id={`description-${doc.id}`} class="max-w-sm text-stone-600">{doc.data.description}</p>
       <nav aria-label={translations[Astro.currentLocale].compliance_tags}>
         <ul class="mt-4 mb-2 flex flex-wrap gap-2">
           {

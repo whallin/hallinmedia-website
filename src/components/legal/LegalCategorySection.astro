@@ -21,7 +21,11 @@ const translations = {
   </header>
   <nav aria-label={translations[Astro.currentLocale].legal_documents_label}>
     <ul class="grid gap-4" role="list">
-      {docs.map((doc) => <LegalDocumentCard doc={doc} />)}
+      {
+        docs
+          .sort((a, b) => a.data.title.localeCompare(b.data.title))
+          .map((doc) => <LegalDocumentCard doc={doc} />)
+      }
     </ul>
   </nav>
 </section>
