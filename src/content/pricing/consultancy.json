@@ -9,8 +9,8 @@
     {
       "price": 1500,
       "unit": {
-        "en": "SEK/hour",
-        "sv": "kr/timme"
+        "en": "SEK/session",
+        "sv": "kr/möte"
       },
       "name": {
         "en": "Creative Brainstorming",
