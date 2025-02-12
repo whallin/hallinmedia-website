@@ -29,11 +29,14 @@ const translations = {
     aria-label={`${translations[Astro.currentLocale].read_more} ${doc.data.title}`}
   >
     <IconComponent.default
-      class="absolute top-1/2 -right-22 z-0 aspect-square h-[calc(100%+6rem)] w-auto -translate-y-1/2 text-red-500/20 transition group-hover:scale-110 group-active:scale-110"
+      class="absolute top-1/2 -right-1/12 hidden h-[calc(100%+6rem)] -translate-y-1/2 text-red-500/20 transition group-hover:scale-110 group-active:scale-110 sm:block"
       aria-hidden="true"
     />
     <header class="relative z-10 flex flex-col gap-2">
-      <h3 id={`title-${doc.id}`} class="text-lg font-medium text-stone-900">{doc.data.title}</h3>
+      <div class="space-y-1 sm:block">
+        <IconComponent.default class="h-6 w-6 text-red-500 sm:hidden" aria-hidden="true" />
+        <h3 id={`title-${doc.id}`} class="text-lg font-medium text-stone-900">{doc.data.title}</h3>
+      </div>
       <time
         class="font-mono text-xs text-stone-500"
         datetime={new Date(doc.data.publishedDate).toISOString()}
@@ -54,7 +57,7 @@ const translations = {
     <section class="relative z-10 my-2" aria-labelledby={`description-${doc.id}`}>
       <p id={`description-${doc.id}`} class="max-w-sm text-stone-600">{doc.data.description}</p>
       <nav aria-label={translations[Astro.currentLocale].compliance_tags}>
-        <ul class="mt-4 mb-2 flex flex-wrap gap-2">
+        <ul class="mt-4 mb-2 flex flex-wrap gap-2 gap-y-4">
           {
             doc.data.compliance?.map((compliance) => (
               <li>
