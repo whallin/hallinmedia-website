@@ -49,9 +49,9 @@ const groupedDocs = allLegalDocs.reduce((acc: Record<string, typeof allLegalDocs
 
       <div class="mt-6 space-y-8" role="region" aria-label="Juridiska dokument">
         {
-          Object.entries(groupedDocs).map(([category, docs]) => (
-            <LegalCategorySection category={category} docs={docs} />
-          ))
+          Object.entries(groupedDocs)
+            .sort(([categoryA], [categoryB]) => categoryA.localeCompare(categoryB))
+            .map(([category, docs]) => <LegalCategorySection category={category} docs={docs} />)
         }
       </div>
     </article>
