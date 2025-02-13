@@ -15,7 +15,7 @@
     {
       "label": "Bun: Start Development Server",
       "type": "shell",
-      "command": "bun run dev",
+      "command": "bun run --bun dev",
       "problemMatcher": [],
       "presentation": {
         "group": "dev-servers",
