@@ -78,7 +78,9 @@ const { item, audienceColor } = Astro.props;
           <p>
             <span class="sr-only">{translations[Astro.currentLocale].audience_type}: </span>
             {translations[Astro.currentLocale].audience}: {
-              item.data.audience === "Both" || "Båda" ? "B2B + B2C" : item.data.audience
+              item.data.audience === "Both" || item.data.audience === "Båda"
+                ? "B2B + B2C"
+                : item.data.audience
             }
           </p>
         </div>
