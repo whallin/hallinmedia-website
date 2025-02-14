@@ -96,7 +96,7 @@ const socialLinks = [
   <hr class="border-stone-300" aria-hidden="true" />
   <div class="flex flex-col gap-8 md:justify-between">
     <section
-      class="flex justify-between gap-4 font-serif text-sm"
+      class="flex justify-between gap-4 font-serif text-sm selection:bg-red-300 selection:text-red-800"
       aria-labelledby="navigation-heading"
     >
       <h3 id="navigation-heading" class="font-medium text-stone-700">
@@ -172,7 +172,7 @@ const socialLinks = [
           data-umami-event-url="https://github.com/whallin/hallinmedia-website"
           data-umami-event-origin={Astro.url}
           target="_blank"
-          class="font-mono text-xs font-light text-stone-500 not-italic hover:bg-stone-500 hover:text-stone-100 active:bg-stone-500 active:text-stone-100"
+          class="font-mono text-xs font-light text-stone-500 not-italic selection:bg-stone-300 selection:text-stone-800 hover:bg-stone-500 hover:text-stone-100 active:bg-stone-500 active:text-stone-100"
           aria-label={translations[Astro.currentLocale].github_label}>{GIT_HASH}</a
         >
       </section>

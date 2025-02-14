@@ -59,12 +59,12 @@ const { clients } = Astro.props;
             <header class="flex justify-between">
               <h2
                 id={`client-${client.id}-title`}
-                class="text-xl font-light text-stone-700 italic underline decoration-dashed decoration-from-font underline-offset-4 group-hover:text-[var(--dominant-color)] group-active:text-[var(--dominant-color)]"
+                class="text-xl font-light text-stone-700 italic underline decoration-dashed decoration-from-font underline-offset-4 group-hover:text-[var(--dominant-color)] group-active:text-[var(--dominant-color)] selection:bg-[var(--dominant-color)] selection:text-stone-50"
               >
                 {client.data.name}
               </h2>
               <div
-                class="flex items-center gap-2 text-stone-500 group-hover:bg-[var(--dominant-color)] group-hover:text-stone-50 group-active:bg-[var(--dominant-color)] group-active:text-stone-50"
+                class="flex items-center gap-2 text-stone-500 group-hover:bg-[var(--dominant-color)] group-hover:text-stone-50 group-active:bg-[var(--dominant-color)] group-active:text-stone-50 selection:bg-[var(--dominant-color)] selection:text-stone-50"
                 aria-hidden="true"
               >
                 <div class="font-mono text-sm whitespace-nowrap select-none">-></div>
