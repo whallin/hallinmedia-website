@@ -287,3 +287,5 @@ $RECYCLE.BIN/
 *.lnk
 
 # End of https://www.toptal.com/developers/gitignore/api/windows,linux,macos,git,node,go,rust,rust-analyzer,svelte,astro
+
+.jampack/

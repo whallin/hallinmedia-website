@@ -21,7 +21,7 @@
   },
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build",
+    "build": "astro build && jampack ./dist",
     "preview": "astro preview",
     "astro": "astro"
   },
@@ -39,6 +39,7 @@
     "tailwindcss": "^4.0.5"
   },
   "devDependencies": {
+    "@divriots/jampack": "^0.33.0",
     "@tailwindcss/typography": "^0.5.16",
     "@types/bun": "^1.2.2",
     "prettier": "^3.5.0",
