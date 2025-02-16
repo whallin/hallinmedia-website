@@ -1,16 +1,16 @@
 export default {
   html: {
-    sort_attributes: false,
+    sort_attributes: true,
   },
   js: {
     compressor: "swc",
   },
   css: {
-    inline_critical_css: false,
+    inline_critical_css: true,
   },
   image: {
     external: {
-      process: "download",
+      process: "off",
     },
     cdn: {
       process: "optimize",
