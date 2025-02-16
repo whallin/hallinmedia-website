@@ -18,7 +18,7 @@ export default {
     compress: true,
     jpeg: {
       options: {
-        quality: 70,
+        quality: 75,
         mozjpeg: true,
       },
     },
@@ -30,12 +30,12 @@ export default {
     webp: {
       options_lossless: {
         effort: 4,
-        quality: 80,
+        quality: 90,
         mode: "lossless",
       },
       options_lossly: {
         effort: 4,
-        quality: 70,
+        quality: 75,
         mode: "lossly",
       },
     },

@@ -140,7 +140,7 @@ const images = [
           <Picture
             src={image.src}
             alt={image.alt[Astro.currentLocale]}
-            widths={[320, 480, 640, 768]}
+            widths={[320, 480, 640, 768, 1024]}
             formats={["avif", "webp", "jpeg"]}
             sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
             class="h-full w-full rounded-lg border-2 border-stone-300 object-cover transition select-none group-hover:border-[var(--border-color)] group-hover:drop-shadow-lg group-active:border-[var(--border-color)] group-active:drop-shadow-lg"
