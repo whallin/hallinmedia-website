@@ -46,7 +46,7 @@ const { workId, item, client } = Astro.props;
           alt={item.data.featuredImageAlt || item.data.title}
           widths={[320, 480, 640, 768, 1024, 1280]}
           formats={["avif", "webp", "jpeg"]}
-          sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+          sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 25vw"
           class="mt-6 mb-4 aspect-video rounded-lg border-2 border-stone-300 object-cover transition select-none hover:-translate-y-1 hover:border-[var(--dominant-color)] hover:drop-shadow-lg active:-translate-y-1 active:border-[var(--dominant-color)] active:drop-shadow-lg sm:mt-12"
           role="img"
         />
