@@ -1,6 +1,6 @@
 export default {
   html: {
-    sort_attributes: true,
+    sort_attributes: false,
   },
   js: {
     compressor: "swc",
