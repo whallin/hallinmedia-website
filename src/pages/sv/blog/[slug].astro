@@ -68,7 +68,7 @@ const categoryStyles = {
           alt={post.data.featuredImageAlt || "Artikelns huvudbild"}
           widths={[320, 480, 640, 768, 1024, 1280]}
           formats={["avif", "webp", "jpeg"]}
-          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 80vw, 60vw"
+          sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
           class={`aspect-video w-full rounded-lg border-2 border-stone-300 object-cover transition select-none hover:-translate-y-1 hover:drop-shadow-lg ${categoryStyles}`}
           aria-describedby="image-description"
         />

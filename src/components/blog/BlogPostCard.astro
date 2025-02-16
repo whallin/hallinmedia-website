@@ -51,8 +51,8 @@ const { post } = Astro.props;
       <Picture
         src={post.data.featuredImage}
         alt={post.data.featuredImageAlt}
-        widths={[320, 640, 960, 1280]}
-        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+        widths={[320, 480, 640, 768]}
+        sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
         class="h-48 w-full bg-stone-300 object-cover transition select-none group-hover:scale-105 group-active:scale-105"
         formats={["avif", "webp", "jpeg"]}
       />

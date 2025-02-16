@@ -96,9 +96,9 @@ const { content } = Astro.props;
           <Picture
             src={image}
             alt={`Process image ${index + 1}`}
-            widths={[400, 600, 800, 1000, 1200]}
+            widths={[320, 480, 640, 768]}
             formats={["avif", "webp", "jpeg"]}
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, (min-width: 1025px) 33vw"
+            sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
             class="absolute inset-0 size-full object-cover select-none"
             role="img"
           />
