@@ -1,12 +1,12 @@
 // @ts-check
-import { defineConfig, envField } from "astro/config";
-import tailwindcss from "@tailwindcss/vite";
-import icon from "astro-icon";
-import { execSync } from "child_process";
+import cloudflare from "@astrojs/cloudflare";
 import mdx from "@astrojs/mdx";
 import partytown from "@astrojs/partytown";
 import sitemap from "@astrojs/sitemap";
-import cloudflare from "@astrojs/cloudflare";
+import tailwindcss from "@tailwindcss/vite";
+import icon from "astro-icon";
+import { defineConfig, envField } from "astro/config";
+import { execSync } from "child_process";
 
 const getGitHash = () => {
   try {
