@@ -30,19 +30,9 @@ const locale = Astro.currentLocale === "en" || Astro.currentLocale === "sv" ? As
     height={48}
     class="h-12 w-12 rounded-md select-none"
   />
-  <div class="min-w-0 flex-1" id="spotify-info" title="KAISUI - Style">
-    <strong
-      id="spotify-title"
-      class="block max-w-48 truncate text-sm text-stone-900 hover:text-clip dark:text-stone-100"
-    >
-      Style
-    </strong>
-    <span
-      id="spotify-artist"
-      class="block max-w-48 truncate text-xs text-stone-500 hover:text-clip dark:text-stone-400"
-    >
-      KAISUI
-    </span>
+  <div class="w-48 min-w-0" id="spotify-info" title="KAISUI - Style">
+    <strong id="spotify-title" class="block truncate text-sm text-stone-900 dark:text-stone-100"> Style </strong>
+    <span id="spotify-artist" class="block truncate text-xs text-stone-500 dark:text-stone-400"> KAISUI </span>
     <time id="spotify-duration" class="block font-mono text-xs text-green-600" datetime="PT1M24S">1:24</time>
   </div>
   <Icon
