@@ -3,7 +3,7 @@ import { Icon } from "astro-icon/components";
 import { getCollection } from "astro:content";
 import { getRelativeLocaleUrl } from "astro:i18n";
 import Button from "../../components/common/Button.astro";
-import FAQList from "../../components/sections/FAQList.astro";
+import FaqList from "../../components/sections/FaqList.astro";
 import Layout from "../../layouts/Layout.astro";
 
 const locale = Astro.currentLocale === "en" || Astro.currentLocale === "sv" ? Astro.currentLocale : "en";
@@ -20,7 +20,7 @@ const faqSchema = {
         "@type": "Answer",
         text: q.answer[locale].replace(/<[^>]*>/g, ""),
       },
-    })),
+    }))
   ),
 };
 ---
@@ -46,6 +46,6 @@ const faqSchema = {
         <Icon name="ph:arrow-right" class="flex-shrink-0" aria-hidden="true" />
       </Button>
     </nav>
-    <FAQList showFeaturedFirst={true} showHeadings={true} />
+    <FaqList showFeaturedFirst={true} showHeadings={true} />
   </section>
 </Layout>

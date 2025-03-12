@@ -4,7 +4,7 @@ import { getRelativeLocaleUrl } from "astro:i18n";
 import Button from "../../components/common/Button.astro";
 import ContactForm from "../../components/form/ContactForm.astro";
 import ClientBar from "../../components/sections/ClientBar.astro";
-import FAQList from "../../components/sections/FAQList.astro";
+import FaqList from "../../components/sections/FaqList.astro";
 import FeaturedServices from "../../components/sections/FeaturedServices.astro";
 import ProcessSection from "../../components/sections/ProcessSection.astro";
 import StatsSection from "../../components/sections/StatsSection.astro";
@@ -51,7 +51,7 @@ const locale = Astro.currentLocale === "en" || Astro.currentLocale === "sv" ? As
           ></span>
         </h2>
       </header>
-      <FAQList showHeadings={false} showFeaturedFirst={true} maxItems={5} />
+      <FaqList showHeadings={false} showFeaturedFirst={true} maxItems={5} />
       <Button variant="secondary" href={getRelativeLocaleUrl(locale, "faq")}>
         <Icon name="ph:question-duotone" class="flex-shrink-0" aria-hidden="true" />
         See all questions and answers
