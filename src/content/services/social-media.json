@@ -1,0 +1,156 @@
+{
+  "serviceName": {
+    "en": "Social Media Management",
+    "sv": "Sociala Medier-hantering"
+  },
+  "shortDescription": {
+    "en": "Smart social media management that builds your online presence and connects with your audience. I create engaging content that grows your following and drives real business results.",
+    "sv": "Smart hantering av sociala medier som bygger din online-närvaro och skapar kontakt med din publik. Jag skapar engagerande innehåll som ökar ditt följarantal och driver verkliga affärsresultat."
+  },
+  "longDescription": {
+    "en": "Social media is a powerful way to reach and engage with your audience. I help you make the most of these platforms, creating content that people want to see, share, and respond to.<br /><br />Using a mix of engaging posts, stories, and targeted advertising, I build a strong online presence for your brand. Every piece of content is carefully planned to reach the right people and achieve your business goals.<br /><br />I track what works and adjust our approach based on real data, ensuring your social media efforts deliver meaningful results. Whether you want more followers, better engagement, or increased sales, I'll help you get there.",
+    "sv": "Sociala medier är ett kraftfullt sätt att nå och engagera din publik. Jag hjälper dig att få ut det mesta av dessa plattformar och skapar innehåll som folk vill se, dela och reagera på.<br /><br />Med en blandning av engagerande inlägg, stories och riktad annonsering bygger jag en stark online-närvaro för ditt varumärke. Varje innehållsdel är noggrant planerad för att nå rätt personer och uppnå dina affärsmål.<br /><br />Jag följer vad som fungerar och justerar vårt tillvägagångssätt baserat på verklig data, vilket säkerställer att dina sociala medier-insatser ger meningsfulla resultat. Oavsett om du vill ha fler följare, bättre engagemang eller ökad försäljning hjälper jag dig att nå dit."
+  },
+  "icon": "ph:share-network-duotone",
+  "color": "purple",
+  "pricing": {
+    "startingFrom": 2000,
+    "unit": {
+      "en": "month",
+      "sv": "månad"
+    },
+    "note": {
+      "en": "Basic package includes 8 strategic posts per platform monthly, community management, and performance reporting. Premium includes 15 posts per platform monthly with advanced analytics and paid campaign management. Ad spend not included.",
+      "sv": "Grundpaket inkluderar 8 strategiska inlägg per plattform månadsvis, community management och prestationsrapportering. Premium inkluderar 15 inlägg per plattform månadsvis med avancerad analys och hantering av betalda kampanjer. Annonskostnader tillkommer."
+    }
+  },
+  "keyFeatures": [
+    {
+      "title": {
+        "en": "Content that connects",
+        "sv": "Innehåll som skapar kontakt"
+      },
+      "description": {
+        "en": "Engaging posts and stories that speak directly to your audience, building real connections and loyal followers.",
+        "sv": "Engagerande inlägg och berättelser som talar direkt till din publik, bygger äkta kontakter och lojala följare."
+      },
+      "icon": "ph:pencil-duotone"
+    },
+    {
+      "title": {
+        "en": "Active community",
+        "sv": "Aktiv gemenskap"
+      },
+      "description": {
+        "en": "I build and nurture your social media community, turning followers into brand advocates who spread your message.",
+        "sv": "Jag bygger och vårdar din sociala medier-gemenskap, förvandlar följare till varumärkesförespråkare som sprider ditt budskap."
+      },
+      "icon": "ph:users-three-duotone"
+    },
+    {
+      "title": {
+        "en": "Data-driven growth",
+        "sv": "Datadriven tillväxt"
+      },
+      "description": {
+        "en": "Clear insights and reports show you exactly what's working, helping your social media presence grow steadily.",
+        "sv": "Tydliga insikter och rapporter visar dig exakt vad som fungerar, hjälper din närvaro på sociala medier att växa stadigt."
+      },
+      "icon": "ph:chart-line-up-duotone"
+    },
+    {
+      "title": {
+        "en": "Smart advertising",
+        "sv": "Smart annonsering"
+      },
+      "description": {
+        "en": "Targeted paid campaigns that reach the right people at the right time, making the most of your advertising budget.",
+        "sv": "Riktade betalda kampanjer som når rätt personer vid rätt tidpunkt, maximerar din reklambudget."
+      },
+      "icon": "ph:target-duotone"
+    }
+  ],
+  "processSteps": [
+    {
+      "title": {
+        "en": "Research",
+        "sv": "Research"
+      },
+      "description": {
+        "en": "Analyze your audience and competitors to build an effective strategy.",
+        "sv": "Analyserar din målgrupp och konkurrenter för att bygga en effektiv strategi."
+      }
+    },
+    {
+      "title": {
+        "en": "Plan",
+        "sv": "Planera"
+      },
+      "description": {
+        "en": "Create a content calendar that aligns with your goals.",
+        "sv": "Skapar en innehållskalender som ligger i linje med dina mål."
+      }
+    },
+    {
+      "title": {
+        "en": "Create",
+        "sv": "Skapa"
+      },
+      "description": {
+        "en": "Develop engaging content that resonates with your audience.",
+        "sv": "Utvecklar engagerande innehåll som når fram till din målgrupp."
+      }
+    },
+    {
+      "title": {
+        "en": "Engage",
+        "sv": "Engagera"
+      },
+      "description": {
+        "en": "Manage your community and track performance to drive growth.",
+        "sv": "Hanterar din community och följer upp prestandan för att driva tillväxt."
+      }
+    }
+  ],
+  "cta": {
+    "en": "Transform your social presence",
+    "sv": "Förvandla din sociala närvaro"
+  },
+  "featured": false,
+  "featuredClients": ["atlasos", "creavite"],
+  "seo": {
+    "en": {
+      "title": "Strategic Social Media Management - Community building & Engagement",
+      "description": "Build meaningful connections with your audience through strategic social media management. I help brands create engaging content, foster authentic relationships, and drive measurable growth across platforms.",
+      "keywords": [
+        "social media strategy",
+        "community management",
+        "content planning",
+        "social engagement",
+        "platform growth",
+        "brand storytelling",
+        "social analytics",
+        "audience development",
+        "social advertising",
+        "digital community building"
+      ]
+    },
+    "sv": {
+      "title": "Strategisk hantering av Sociala medier - Community-byggande & Engagemang",
+      "description": "Bygg meningsfulla kopplingar med din publik genom strategisk hantering av sociala medier. Jag hjälper varumärken att skapa engagerande innehåll, främja äkta relationer och driva mätbar tillväxt över plattformar.",
+      "keywords": [
+        "strategi för sociala medier",
+        "community-hantering",
+        "innehållsplanering",
+        "socialt engagemang",
+        "plattformstillväxt",
+        "varumärkesberättande",
+        "social analys",
+        "publikutveckling",
+        "social annonsering",
+        "digital community-byggande"
+      ]
+    }
+  },
+  "relatedServices": ["communication", "content-writing", "design", "video"]
+}

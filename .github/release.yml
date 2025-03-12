@@ -1,0 +1,36 @@
+changelog:
+  exclude:
+    labels:
+      - chore
+      - ci
+    authors:
+      - dependabot[bot]
+  categories:
+    - title: 🚀 Features
+      labels:
+        - Feature request
+    - title: ✨ Enhancements
+      labels:
+        - Enhancement
+    - title: 🐛 Bug Fixes
+      labels:
+        - Bug
+        - Fix
+    - title: 📚 Documentation
+      labels:
+        - Documentation
+    - title: ⚡ Performance Improvements
+      labels:
+        - Performance
+    - title: 🛠️ Maintenance
+      labels:
+        - Chore
+    - title: 🔒 Security
+      labels:
+        - Security
+    - title: 📦 Dependency Updates
+      labels:
+        - dependencies
+    - title: Other Changes
+      labels:
+        - '*'

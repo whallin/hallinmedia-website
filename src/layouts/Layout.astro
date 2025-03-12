@@ -1,0 +1,55 @@
+---
+import { Icon } from "astro-icon/components";
+import Footer from "../components/layout/Footer.astro";
+import HtmlHead from "../components/layout/HtmlHead.astro";
+import Navbar from "../components/layout/Navbar.astro";
+import "../styles/global.css";
+
+interface Props {
+  title?: string;
+  description?: string;
+  article?: boolean;
+  header?: string;
+  headerIcon?: string;
+  headerDescription?: string;
+  keywords?: string[];
+  schema?: Record<string, any>;
+}
+
+const { title, description, article, header, headerIcon, headerDescription, keywords, schema } = Astro.props;
+---
+
+<!doctype html>
+<html lang={Astro.currentLocale}>
+  <head>
+    <HtmlHead title={title} description={description} article={article} keywords={keywords} />
+    {schema && <script type="application/ld+json" set:html={JSON.stringify(schema)} />}
+  </head>
+  <body class="bg-amber-50 tracking-tight selection:bg-red-900 selection:text-red-200 dark:bg-stone-900">
+    <Navbar />
+    <main class="mx-6 my-18 space-y-24">
+      {
+        header && (
+          <header class="mb-8 max-w-2xl space-y-6 sm:mx-auto">
+            <h1
+              id="core-services-heading"
+              class="relative font-serif text-3xl text-stone-700 italic dark:text-stone-100"
+            >
+              <span class="relative z-10 inline-flex flex-col gap-2 bg-amber-50 pr-4 sm:flex-row sm:items-center dark:bg-stone-900">
+                {headerIcon && <Icon name={headerIcon} class="h-6 w-6 flex-shrink-0 text-red-500" aria-hidden="true" />}
+                {header}
+              </span>
+              <span
+                class="absolute top-1/2 right-0 left-0 -z-0 hidden h-px bg-stone-200 sm:block dark:bg-stone-700"
+                aria-hidden="true"
+              />
+            </h1>
+            {headerDescription && <p class="font-serif text-stone-500 dark:text-stone-400">{headerDescription}</p>}
+          </header>
+        )
+      }
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

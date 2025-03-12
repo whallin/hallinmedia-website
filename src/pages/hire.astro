@@ -1,0 +1,62 @@
+---
+import { Icon } from "astro-icon/components";
+import { getRelativeLocaleUrl } from "astro:i18n";
+import Button from "../components/common/Button.astro";
+import ContactForm from "../components/form/ContactForm.astro";
+import ClientBar from "../components/sections/ClientBar.astro";
+import FAQList from "../components/sections/FAQList.astro";
+import FeaturedServices from "../components/sections/FeaturedServices.astro";
+import ProcessSection from "../components/sections/ProcessSection.astro";
+import StatsSection from "../components/sections/StatsSection.astro";
+import TestimonialsSection from "../components/sections/TestimonialsSection.astro";
+import Layout from "../layouts/Layout.astro";
+
+const locale = Astro.currentLocale === "en" || Astro.currentLocale === "sv" ? Astro.currentLocale : "en";
+---
+
+<Layout
+  title="Anlita en digital kreatör för ditt projekt"
+  description="Söker du expertis inom design, foto och webb? Med över 4 års erfarenhet hjälper jag dig från koncept till färdig produkt. Se mina tjänster och låt oss skapa något unikt tillsammans."
+  header="Anställ mig"
+  headerIcon="ph:handshake-duotone"
+  headerDescription="Letar du efter en erfaren skapare för ditt nästa projekt? Med över 4+ år av erfarenhet inom design, foto och webb hjälper jag dig från idé till färdig produkt. Upptäck mina tjänster, arbetsprocess och vad tidigare kunder säger - och låt oss tillsammans skapa något extraordinärt."
+>
+  <div class="mx-auto max-w-2xl space-y-16">
+    <FeaturedServices />
+    <StatsSection />
+    <ProcessSection />
+    <ClientBar />
+    <TestimonialsSection />
+    <section class="space-y-8">
+      <header class="relative text-stone-700 dark:text-stone-100">
+        <h2 class="relative font-serif text-2xl font-semibold text-stone-700 dark:text-stone-100">
+          <span class="relative z-10 inline-flex flex-col gap-2 bg-amber-50 pr-4 dark:bg-stone-900">
+            Starta ett projekt idag
+          </span>
+          <span class="absolute top-1/2 right-0 left-0 -z-0 h-px bg-stone-200 dark:bg-stone-700" aria-hidden="true"
+          ></span>
+        </h2>
+      </header>
+      <div class="rounded-lg border border-stone-200 p-6 dark:border-stone-700">
+        <ContactForm />
+      </div>
+    </section>
+    <section class="space-y-8">
+      <header class="relative text-stone-700 dark:text-stone-100">
+        <h2 class="relative font-serif text-2xl font-semibold text-stone-700 dark:text-stone-100">
+          <span class="relative z-10 inline-flex flex-col gap-2 bg-amber-50 pr-4 dark:bg-stone-900">
+            Vanliga frågor
+          </span>
+          <span class="absolute top-1/2 right-0 left-0 -z-0 h-px bg-stone-200 dark:bg-stone-700" aria-hidden="true"
+          ></span>
+        </h2>
+      </header>
+      <FAQList showHeadings={false} showFeaturedFirst={true} maxItems={5} />
+      <Button variant="secondary" href={getRelativeLocaleUrl(locale, "faq")}>
+        <Icon name="ph:question-duotone" class="flex-shrink-0" aria-hidden="true" />
+        Se alla frågor och svar
+        <Icon name="ph:arrow-right" class="flex-shrink-0" aria-hidden="true" />
+      </Button>
+    </section>
+  </div>
+</Layout>

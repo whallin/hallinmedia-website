@@ -4,9 +4,12 @@
     "en": "Umeå Kulturförening Humlan is a non-profit organisation dedicated to promoting free culture. Founded in 1981 at the Faculty of Arts at Umeå University, its name, \"Humlan,\" reflects its origins. Over the years, the association has engaged in various cultural activities, including music, film, poetry, theatre, clubs, and festivals.",
     "sv": "Umeå Kulturförening Humlan är en ideell förening som arbetar för att främja den fria kulturen. Föreningen grundades 1981 vid Konstnärliga fakulteten vid Umeå universitet, och namnet \"Humlan\" speglar dess ursprung. Under årens lopp har föreningen bedrivit olika kulturaktiviteter, inklusive musik, film, poesi, teater, klubbar och festivaler."
   },
+  "avatar": "/src/assets/clients/avatars/kulturforening-humlan.svg",
   "logo": "/src/assets/clients/kulturforening-humlan.svg",
   "websiteUrl": "https://www.humlan.org/",
-  "dominantColor": "#8895cb",
+  "dominantColor": {
+    "light": "#8895cb"
+  },
   "socialLinks": {
     "instagram": "https://www.instagram.com/humlanumea/",
     "facebook": "https://www.facebook.com/humlanumeakulturforening/"

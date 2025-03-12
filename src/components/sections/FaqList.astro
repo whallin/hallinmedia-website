@@ -1,163 +1,91 @@
 ---
+import { Icon } from "astro-icon/components";
 import { getCollection } from "astro:content";
-import { getRelativeLocaleUrl } from "astro:i18n";
 
-interface Props {
-  slice?: number;
-  showCategories?: boolean;
-  showFeaturedOnly?: boolean;
+export interface Props {
+  showHeadings?: boolean;
+  showFeaturedFirst?: boolean;
+  maxItems?: number;
 }
 
-const { slice, showCategories, showFeaturedOnly } = Astro.props;
-const faqCollection = await getCollection("faqCollection");
+const { showHeadings = true, showFeaturedFirst = true, maxItems = Infinity } = Astro.props;
+const locale = Astro.currentLocale === "en" || Astro.currentLocale === "sv" ? Astro.currentLocale : "en";
+const faqEntries = await getCollection("faqCollection");
 
-const filteredFaqCollection = faqCollection
-  .map((category) => ({
-    ...category,
-    data: {
-      ...category.data,
-      questions: showFeaturedOnly
-        ? category.data.questions.filter((q) => q.featured)
-        : category.data.questions,
-    },
-  }))
-  .filter((category) => category.data.questions.length > 0);
+const allQuestions = faqEntries.flatMap((category) =>
+  category.data.questions.map((q) => ({ ...q, categoryName: category.data.categoryName[locale] })),
+);
 
-let remainingItems = slice || Infinity;
-const displayFaqCollection = filteredFaqCollection
-  .map((category) => {
-    const questions = category.data.questions.slice(0, remainingItems);
-    remainingItems -= questions.length;
-    return {
-      ...category,
-      data: {
-        ...category.data,
-        questions,
-      },
-    };
-  })
-  .filter((category) => category.data.questions.length > 0);
-
-const translations = {
-  en: {
-    faqHeading: "FAQ",
-    partialFaqText:
-      "This is just a portion of the frequently asked questions I receive. If the list below doesn't answer your questions,",
-    checkFaqLink: "feel free to check the FAQ page.",
-    opens_same_window: "opens in same window",
-  },
-  sv: {
-    faqHeading: "Vanliga frågor",
-    partialFaqText:
-      "Detta är bara en del av de vanligaste frågorna jag får. Om listan nedan inte svarar på dina frågor,",
-    checkFaqLink: "kolla gärna på FAQ-sidan.",
-    opens_same_window: "öppnas i samma fönster",
-  },
-};
+const displayQuestions = allQuestions
+  .sort((a, b) => (showFeaturedFirst ? (b.featured ? 1 : 0) - (a.featured ? 1 : 0) : 0))
+  .slice(0, maxItems);
 ---
 
-<section
-  id="faq"
-  class="flex flex-col gap-6 selection:bg-red-300 selection:text-red-800"
-  aria-labelledby="faq-heading"
->
-  <header class="flex flex-col gap-4">
-    <h2 id="faq-heading" class="font-serif text-3xl font-light text-stone-900 italic">
-      {translations[Astro.currentLocale].faqHeading}
-    </h2>
-    {
-      slice && displayFaqCollection.length < faqCollection.length && (
-        <p class="font-serif text-sm font-light text-stone-700">
-          {translations[Astro.currentLocale].partialFaqText}
-          <a
-            href={getRelativeLocaleUrl(`${Astro.currentLocale}`, "faq")}
-            data-umami-event="faq-partial_read-more"
-            data-umami-event-origin={Astro.url}
-            class="text-red-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-50 active:bg-red-500 active:text-stone-50 [&:active]:no-underline [&:active]:opacity-50 [&:hover]:no-underline"
-            aria-label={`FAQ - ${translations[Astro.currentLocale].opens_same_window}`}
-          >
-            {translations[Astro.currentLocale].checkFaqLink}
-          </a>
-        </p>
-      )
-    }
-  </header>
-  <dl class="flex flex-col gap-4">
-    {
-      displayFaqCollection.map((category) =>
-        showCategories ? (
-          <div class="flex flex-col gap-4">
-            <dt class="font-serif text-xl font-light text-stone-900 italic">
-              {category.data.categoryName[Astro.currentLocale]}
-            </dt>
-            {category.data.questions.map((faq) => (
-              <dd>
+<div class={`space-y-${showHeadings ? "8" : "3"}`}>
+  {
+    showHeadings ? (
+      faqEntries.map((category) => (
+        <article class="space-y-4">
+          <h2 class="font-serif text-xl text-stone-700 dark:text-stone-200">{category.data.categoryName[locale]}</h2>
+          <div class="space-y-3" role="list">
+            {category.data.questions
+              .sort((a, b) => (showFeaturedFirst ? (b.featured ? 1 : 0) - (a.featured ? 1 : 0) : 0))
+              .map((item) => (
                 <details
-                  class:list={[
-                    "group rounded-sm border p-4 transition hover:border-red-400/75 active:border-red-400/50",
-                    faq.featured
-                      ? "border-red-200 open:border-red-400"
-                      : "border-stone-300 open:border-stone-400",
-                  ]}
-                  aria-expanded="false"
+                  class="group overflow-hidden rounded-lg border border-stone-200 dark:border-stone-700"
+                  role="listitem"
                 >
-                  <summary
-                    class="cursor-pointer font-serif font-light text-stone-900 italic transition group-hover:opacity-75 group-active:opacity-50"
-                    role="button"
-                    tabindex="0"
-                  >
-                    {faq.question[Astro.currentLocale]}
-                    {faq.featured && (
-                      <span class="ml-2 text-red-400 not-italic" aria-hidden="true">
-                        ★
+                  <summary class="flex cursor-pointer items-center justify-between p-4 transition hover:bg-amber-100/50 active:opacity-50 dark:hover:bg-stone-800 dark:active:bg-stone-800/50 [&::-webkit-details-marker]:hidden">
+                    <div class="flex min-w-0 items-center gap-2">
+                      {item.featured && (
+                        <Icon name="ph:star-duotone" class="h-4 w-4 shrink-0 text-yellow-500" aria-hidden="true" />
+                      )}
+                      <span class="mr-2 font-medium break-words text-stone-700 sm:truncate dark:text-stone-200">
+                        {item.question[locale]}
                       </span>
-                    )}
+                    </div>
+                    <Icon
+                      name="ph:caret-down-bold"
+                      class="h-5 w-5 shrink-0 text-stone-500 transition-transform group-open:rotate-180 dark:text-stone-400"
+                      aria-hidden="true"
+                    />
                   </summary>
-                  <hr class="my-4 border-stone-300" />
-                  <div
-                    class="my-2 font-serif text-sm text-stone-700"
-                    set:html={`${faq.answer[Astro.currentLocale]}`}
-                    role="region"
-                  />
+                  <div class="p-4">
+                    <div class="max-w-none text-stone-600 dark:text-stone-300" set:html={item.answer[locale]} />
+                  </div>
                 </details>
-              </dd>
-            ))}
+              ))}
           </div>
-        ) : (
-          category.data.questions.map((faq) => (
-            <dd>
-              <details
-                class:list={[
-                  "group rounded-sm border p-4 transition hover:border-red-400/75 active:border-red-400/50",
-                  faq.featured
-                    ? "border-red-200 open:border-red-400"
-                    : "border-stone-300 open:border-stone-400",
-                ]}
-                aria-expanded="false"
-              >
-                <summary
-                  class="cursor-pointer font-serif font-light text-stone-900 italic transition group-hover:opacity-75 group-active:opacity-50"
-                  role="button"
-                  tabindex="0"
-                >
-                  {faq.question[Astro.currentLocale]}
-                  {faq.featured && (
-                    <span class="ml-2 text-red-400 not-italic" aria-hidden="true">
-                      ★
-                    </span>
-                  )}
-                </summary>
-                <hr class="my-4 border-stone-300" />
-                <div
-                  class="my-2 font-serif text-sm text-stone-700"
-                  set:html={`${faq.answer[Astro.currentLocale]}`}
-                  role="region"
-                />
-              </details>
-            </dd>
-          ))
-        )
-      )
-    }
-  </dl>
-</section>
+        </article>
+      ))
+    ) : (
+      <div class="space-y-3" role="list">
+        {displayQuestions.map((item) => (
+          <details
+            class="group overflow-hidden rounded-lg border border-stone-200 dark:border-stone-700"
+            role="listitem"
+          >
+            <summary class="flex cursor-pointer items-center justify-between p-4 transition hover:bg-amber-100/50 active:opacity-50 dark:hover:bg-stone-800 dark:active:bg-stone-800/50 [&::-webkit-details-marker]:hidden">
+              <div class="flex min-w-0 items-center gap-2 font-serif">
+                {item.featured && (
+                  <Icon name="ph:star-duotone" class="h-4 w-4 shrink-0 text-yellow-500" aria-hidden="true" />
+                )}
+                <span class="mr-2 font-medium break-words text-stone-700 sm:truncate dark:text-stone-200">
+                  {item.question[locale]}
+                </span>
+              </div>
+              <Icon
+                name="ph:caret-down-bold"
+                class="h-5 w-5 shrink-0 text-stone-500 transition-transform group-open:rotate-180 dark:text-stone-400"
+                aria-hidden="true"
+              />
+            </summary>
+            <div class="p-4">
+              <div class="max-w-none text-stone-600 dark:text-stone-300" set:html={item.answer[locale]} />
+            </div>
+          </details>
+        ))}
+      </div>
+    )
+  }
+</div>

@@ -1,0 +1,441 @@
+{
+  "categoryName": {
+    "en": "Digital Design",
+    "sv": "Digital design"
+  },
+  "icon": "ph:paint-brush-duotone",
+  "color": "text-green-500",
+  "order": 3,
+  "services": [
+    {
+      "name": {
+        "en": "Document Templates",
+        "sv": "Dokumentmallar"
+      },
+      "description": {
+        "en": "Professional templates for business documents and presentations.",
+        "sv": "Professionella mallar för företagsdokument och presentationer."
+      },
+      "basePrice": 3000,
+      "unit": {
+        "en": "template set",
+        "sv": "mallset"
+      },
+      "options": [
+        {
+          "name": {
+            "en": "Office Suite Templates",
+            "sv": "Office-svitmallar"
+          },
+          "price": 3000
+        },
+        {
+          "name": {
+            "en": "Presentation Templates",
+            "sv": "Presentationsmallar"
+          },
+          "price": 4500
+        },
+        {
+          "name": {
+            "en": "Complete Business Package",
+            "sv": "Komplett företagspaket"
+          },
+          "price": 6500
+        }
+      ],
+      "addons": [
+        {
+          "name": {
+            "en": "Custom Charts & Diagrams",
+            "sv": "Anpassade diagram"
+          },
+          "price": 1500
+        },
+        {
+          "name": {
+            "en": "Template Training Session",
+            "sv": "Mallutbildningssession"
+          },
+          "price": 800,
+          "unit": {
+            "en": "hour",
+            "sv": "timme"
+          }
+        }
+      ],
+      "note": {
+        "en": "Templates provided in either Microsoft Office or Google Workspace formats. Includes style guide for consistent usage.",
+        "sv": "Mallar tillhandahålls i antingen Microsoft Office och Google Workspace-format. Inkluderar stilguide för konsekvent användning."
+      }
+    },
+    {
+      "name": {
+        "en": "Print Design",
+        "sv": "Tryckdesign"
+      },
+      "description": {
+        "en": "Professional design for printed materials including business stationery, marketing collateral, and large-format graphics. All designs optimised for both digital and print reproduction.",
+        "sv": "Professionell design för tryckt material inklusive företagsmaterial, marknadsföringsmaterial och storformatsgrafik. Alla designer optimerade för både digital och tryckt reproduktion."
+      },
+      "basePrice": 2000,
+      "unit": {
+        "en": "project",
+        "sv": "projekt"
+      },
+      "options": [
+        {
+          "name": {
+            "en": "Business Cards & Stationery",
+            "sv": "Visitkort & Kontorsmaterial"
+          },
+          "price": 2000,
+          "unit": {
+            "en": "set",
+            "sv": "set"
+          }
+        },
+        {
+          "name": {
+            "en": "Large Format (Posters, Banners)",
+            "sv": "Storformat (Affischer, Banderoller)"
+          },
+          "price": 3000,
+          "unit": {
+            "en": "item",
+            "sv": "artikel"
+          }
+        },
+        {
+          "name": {
+            "en": "Brochures & Catalogues",
+            "sv": "Broschyrer & Kataloger"
+          },
+          "price": 3500,
+          "unit": {
+            "en": "item",
+            "sv": "artikel"
+          }
+        }
+      ],
+      "addons": [
+        {
+          "name": {
+            "en": "Print File Preparation",
+            "sv": "Tryckfilsförberedelse"
+          },
+          "price": 400
+        }
+      ],
+      "note": {
+        "en": "Includes print-ready files in CMYK colour space, mockups, and PDF proofs. Print coordination service available, excludes printing costs.",
+        "sv": "Inkluderar tryckfärdiga filer i CMYK-färgrymd, mockups och PDF-korrektur. Tryckkoordineringstjänst tillgänglig, exklusive tryckkostnader."
+      }
+    },
+    {
+      "name": {
+        "en": "Illustration & Graphics",
+        "sv": "Illustration & Grafik"
+      },
+      "description": {
+        "en": "Custom digital illustrations, icon sets, and graphical elements tailored for your brand. Includes both vector and raster artwork suitable for various applications.",
+        "sv": "Anpassade digitala illustrationer, ikonuppsättningar och grafiska element skräddarsydda för ditt varumärke. Inkluderar både vektor- och rastergrafik lämplig för olika användningsområden."
+      },
+      "basePrice": 600,
+      "unit": {
+        "en": "hour",
+        "sv": "timme"
+      },
+      "options": [
+        {
+          "name": {
+            "en": "Custom Icons & Simple Graphics",
+            "sv": "Anpassade ikoner & enkel grafik"
+          },
+          "price": 600,
+          "unit": {
+            "en": "hour",
+            "sv": "timme"
+          }
+        },
+        {
+          "name": {
+            "en": "Complex Illustrations",
+            "sv": "Komplexa illustrationer"
+          },
+          "price": 950,
+          "unit": {
+            "en": "hour",
+            "sv": "timme"
+          }
+        },
+        {
+          "name": {
+            "en": "Infographics",
+            "sv": "Infografik"
+          },
+          "price": 1200,
+          "unit": {
+            "en": "item",
+            "sv": "artikel"
+          }
+        }
+      ],
+      "addons": [
+        {
+          "name": {
+            "en": "Animation",
+            "sv": "Animation"
+          },
+          "price": 2000,
+          "unit": {
+            "en": "graphic",
+            "sv": "grafik"
+          }
+        }
+      ],
+      "note": {
+        "en": "Minimum 3-hour booking for custom illustration projects. Includes source files and optimised versions for web/print. Two revision rounds included.",
+        "sv": "Minimum 3 timmars bokning för anpassade illustrationsprojekt. Inkluderar källfiler och optimerade versioner för webb/tryck. Två revideringsrundor ingår."
+      }
+    },
+    {
+      "name": {
+        "en": "Marketing Package Design",
+        "sv": "Marknadsföringspaketdesign"
+      },
+      "description": {
+        "en": "Comprehensive design package for marketing campaigns and brand presence, tailored to enhance your visual communication.",
+        "sv": "Omfattande designpaket för marknadsföringskampanjer och varumärkesnärvaro."
+      },
+      "basePrice": 3500,
+      "unit": {
+        "en": "package",
+        "sv": "paket"
+      },
+      "options": [
+        {
+          "name": {
+            "en": "Basic Marketing Kit",
+            "sv": "Grundläggande marknadsföringskit"
+          },
+          "price": 3500
+        },
+        {
+          "name": {
+            "en": "Premium Marketing Kit",
+            "sv": "Premium marknadsföringskit"
+          },
+          "price": 6000
+        },
+        {
+          "name": {
+            "en": "Event Package",
+            "sv": "Eventpaket"
+          },
+          "price": 7500
+        }
+      ],
+      "addons": [
+        {
+          "name": {
+            "en": "Social Media Templates",
+            "sv": "Sociala medier-mallar"
+          },
+          "price": 2000
+        },
+        {
+          "name": {
+            "en": "Email Template Design",
+            "sv": "E-postmallsdesign"
+          },
+          "price": 2500
+        }
+      ],
+      "note": {
+        "en": "Basic package includes brand-consistent designs for up to 5 different marketing materials. Premium includes up to 10 with additional consultation.",
+        "sv": "Grundpaketet inkluderar varumärkeskonsekventa designer för upp till 5 olika marknadsföringsmaterial. Premium inkluderar upp till 10."
+      }
+    },
+    {
+      "name": {
+        "en": "UI/UX Design",
+        "sv": "UI/UX-design"
+      },
+      "description": {
+        "en": "User interface and experience design for web and mobile applications, including wireframes, prototypes, and usability testing. Specialising in responsive and accessible design solutions.",
+        "sv": "Användargränssnitts- och upplevelsedesign för webb och mobilapplikationer, inklusive wireframes, prototyper och användbarhetstester. Specialisering inom responsiv och tillgänglig design."
+      },
+      "basePrice": 750,
+      "unit": {
+        "en": "hour",
+        "sv": "timme"
+      },
+      "options": [
+        {
+          "name": {
+            "en": "Basic UI Design",
+            "sv": "Grundläggande UI-design"
+          },
+          "price": 750,
+          "unit": {
+            "en": "hour",
+            "sv": "timme"
+          }
+        },
+        {
+          "name": {
+            "en": "Advanced UX Research & Design",
+            "sv": "Avancerad UX-forskning & design"
+          },
+          "price": 950,
+          "unit": {
+            "en": "hour",
+            "sv": "timme"
+          }
+        }
+      ],
+      "addons": [
+        {
+          "name": {
+            "en": "Interactive Prototype",
+            "sv": "Interaktiv prototyp"
+          },
+          "price": 3000
+        },
+        {
+          "name": {
+            "en": "User Testing Session",
+            "sv": "Användartestning session"
+          },
+          "price": 3500,
+          "unit": {
+            "en": "session",
+            "sv": "session"
+          }
+        }
+      ],
+      "note": {
+        "en": "Minimum project engagement of 10 hours. Includes comprehensive design system documentation and handover files in Figma format. Additional development consultancy available.",
+        "sv": "Minimum projektengagemang på 10 timmar. Inkluderar omfattande designsystemdokumentation och överlämningsfiler i Figma-format. Ytterligare utvecklingskonsultation tillgänglig."
+      }
+    },
+    {
+      "name": {
+        "en": "Brand Identity Design",
+        "sv": "Varumärkesidentitetsdesign"
+      },
+      "description": {
+        "en": "Comprehensive brand identity design including logo development, colour schemes, typography, and basic brand guidelines. Focused on creating cohesive visual identities across all platforms.",
+        "sv": "Omfattande varumärkesidentitetsdesign inklusive logotyputveckling, färgscheman, typografi och grundläggande varumärkesriktlinjer. Fokus på att skapa sammanhängande visuella identiteter över alla plattformar."
+      },
+      "basePrice": 4500,
+      "unit": {
+        "en": "project",
+        "sv": "projekt"
+      },
+      "options": [
+        {
+          "name": {
+            "en": "Essential Brand Package",
+            "sv": "Grundläggande varumärkespaket"
+          },
+          "price": 4500,
+          "unit": {
+            "en": "package",
+            "sv": "paket"
+          }
+        },
+        {
+          "name": {
+            "en": "Premium Brand Package",
+            "sv": "Premium varumärkespaket"
+          },
+          "price": 6000,
+          "unit": {
+            "en": "package",
+            "sv": "paket"
+          }
+        }
+      ],
+      "addons": [
+        {
+          "name": {
+            "en": "Additional Logo Variations",
+            "sv": "Extra logotypvariationer"
+          },
+          "price": 1500
+        },
+        {
+          "name": {
+            "en": "Brand Style Guide",
+            "sv": "Varumärkesmanual"
+          },
+          "price": 2500
+        }
+      ],
+      "note": {
+        "en": "Includes three revision rounds, all source files, and a comprehensive brand guidelines document. Essential package includes core brand elements; Premium adds extended applications and social media kit.",
+        "sv": "Inkluderar tre revideringsrundor, alla källfiler och ett omfattande varumärkesmanual. Grundpaketet inkluderar kärnvarumärkeselement; Premium lägger till utökade applikationer och sociala medier-kit."
+      }
+    },
+    {
+      "name": {
+        "en": "Web Design",
+        "sv": "Webbdesign"
+      },
+      "description": {
+        "en": "Custom website design optimised for all devices and screen sizes, delivering intuitive user experiences.",
+        "sv": "Anpassad webbdesign optimerad för alla enheter och skärmstorlekar."
+      },
+      "basePrice": 7500,
+      "unit": {
+        "en": "project",
+        "sv": "projekt"
+      },
+      "options": [
+        {
+          "name": {
+            "en": "Landing Page",
+            "sv": "Landningssida"
+          },
+          "price": 7500
+        },
+        {
+          "name": {
+            "en": "Multi-page Website",
+            "sv": "Flersidors webbplats"
+          },
+          "price": 15000
+        },
+        {
+          "name": {
+            "en": "E-commerce Website",
+            "sv": "E-handelswebbplats"
+          },
+          "price": 25000
+        }
+      ],
+      "addons": [
+        {
+          "name": {
+            "en": "Custom Animations",
+            "sv": "Anpassade animationer"
+          },
+          "price": 2000
+        },
+        {
+          "name": {
+            "en": "SEO Optimisation",
+            "sv": "SEO-optimering"
+          },
+          "price": 5000
+        }
+      ],
+      "note": {
+        "en": "Prices are for design only. Development costs quoted separately. Includes mobile-first design approach.",
+        "sv": "Priser gäller endast design. Utvecklingskostnader offereras separat. Inkluderar mobile-first designstrategi."
+      }
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 import { glob } from 'astro/loaders';
 import { defineCollection, reference, z } from 'astro:content';
 
-// Pricing
+// FAQ
 const faqCollection = defineCollection({
   loader: glob({ pattern: '*.json', base: './src/content/faq' }),
   schema: z
@@ -40,25 +40,65 @@ const pricingCollection = defineCollection({
       }),
       icon: z.string().min(1, 'Icon is required'),
       color: z.string(),
+      order: z.number().int().min(0).default(0),
       services: z
         .array(
-          z
-            .object({
-              price: z.number().positive('Price must be positive'),
-              unit: z.object({
-                en: z.string().min(1, 'English unit is required'),
-                sv: z.string().min(1, 'Swedish unit is required'),
-              }),
-              name: z.object({
-                en: z.string().min(1, 'English name is required'),
-                sv: z.string().min(1, 'Swedish name is required'),
-              }),
-              description: z.object({
-                en: z.string().min(1, 'English description is required'),
-                sv: z.string().min(1, 'Swedish description is required'),
-              }),
-            })
-            .strict(),
+          z.object({
+            name: z.object({
+              en: z.string().min(1, 'English name is required'),
+              sv: z.string().min(1, 'Swedish name is required'),
+            }),
+            description: z.object({
+              en: z.string().min(1, 'English description is required'),
+              sv: z.string().min(1, 'Swedish description is required'),
+            }),
+            basePrice: z.number().positive('Price must be positive'),
+            unit: z.object({
+              en: z.string().min(1, 'English unit is required'),
+              sv: z.string().min(1, 'Swedish unit is required'),
+            }),
+            note: z
+              .object({
+                en: z.string().optional(),
+                sv: z.string().optional(),
+              })
+              .optional(),
+            options: z
+              .array(
+                z.object({
+                  name: z.object({
+                    en: z.string().min(1),
+                    sv: z.string().min(1),
+                  }),
+                  price: z.number().positive(),
+                  unit: z
+                    .object({
+                      en: z.string().min(1),
+                      sv: z.string().min(1),
+                    })
+                    .optional(),
+                }),
+              )
+              .optional(),
+            addons: z
+              .array(
+                z.object({
+                  name: z.object({
+                    en: z.string().min(1),
+                    sv: z.string().min(1),
+                  }),
+                  price: z.number().positive(),
+                  unit: z
+                    .object({
+                      en: z.string().min(1),
+                      sv: z.string().min(1),
+                    })
+                    .optional(),
+                  optional: z.boolean().default(true),
+                }),
+              )
+              .optional(),
+          }),
         )
         .nonempty('At least one service is required'),
     })
@@ -76,12 +116,18 @@ const clientsCollection = defineCollection({
           en: z.string().min(1, 'English description is required'),
           sv: z.string().min(1, 'Swedish description is required'),
         }),
+        avatar: image(),
         logo: image(),
         logoDark: image().optional(),
-        dominantColor: z
-          .string()
-          .regex(/^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$/, 'Must be a valid hex color')
-          .optional(),
+        dominantColor: z.object({
+          light: z
+            .string()
+            .regex(/^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$/, 'Must be a valid hex color'),
+          dark: z
+            .string()
+            .regex(/^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$/, 'Must be a valid hex color')
+            .optional(),
+        }),
         websiteUrl: z.string().url('Must be a valid URL').optional(),
         socialLinks: z
           .object({
@@ -94,8 +140,181 @@ const clientsCollection = defineCollection({
           .optional(),
         featured: z.boolean().default(false),
         subcontracted: z.boolean().default(false),
+        testimonial: z
+          .object({
+            quote: z.object({
+              en: z.string().min(1, 'English quote is required'),
+              sv: z.string().min(1, 'Swedish quote is required'),
+            }),
+            author: z.object({
+              avatar: image().optional(),
+              name: z.string().min(1, 'Author name is required'),
+              title: z.object({
+                en: z.string().min(1, 'English title is required'),
+                sv: z.string().min(1, 'Swedish title is required'),
+              }),
+            }),
+            featured: z.boolean().default(false),
+          })
+          .optional(),
       })
       .strict(),
+});
+
+// Services
+const servicesCollection = defineCollection({
+  loader: glob({ pattern: '*.json', base: './src/content/services' }),
+  schema: z
+    .object({
+      serviceName: z.object({
+        en: z.string().min(1, 'English service name is required'),
+        sv: z.string().min(1, 'Swedish service name is required'),
+      }),
+      shortDescription: z.object({
+        en: z.string().min(1, 'English short description is required'),
+        sv: z.string().min(1, 'Swedish short description is required'),
+      }),
+      longDescription: z.object({
+        en: z.string().min(1, 'English detailed description is required'),
+        sv: z.string().min(1, 'Swedish detailed description is required'),
+      }),
+      icon: z.string().min(1, 'Icon identifier is required'),
+      color: z.string().min(1, 'Must be a valid Tailwind color name'),
+      pricing: z
+        .object({
+          startingFrom: z.number().positive('Starting price must be positive').optional(),
+          unit: z.object({
+            en: z.enum([
+              'hour',
+              'project',
+              'month',
+              'unit',
+              'word',
+              'template',
+              'session',
+              'image',
+              'page',
+              'article',
+            ]),
+            sv: z.enum([
+              'timme',
+              'projekt',
+              'månad',
+              'enhet',
+              'ord',
+              'mall',
+              'session',
+              'bild',
+              'sida',
+              'artikel',
+            ]),
+          }),
+          note: z
+            .object({
+              en: z.string().optional(),
+              sv: z.string().optional(),
+            })
+            .optional(),
+        })
+        .optional(),
+      keyFeatures: z
+        .array(
+          z.object({
+            title: z.object({
+              en: z.string().min(1),
+              sv: z.string().min(1),
+            }),
+            description: z
+              .object({
+                en: z.string().optional(),
+                sv: z.string().optional(),
+              })
+              .optional(),
+            icon: z.string().optional(),
+          }),
+        )
+        .min(1, 'At least one key feature required'),
+      processSteps: z
+        .array(
+          z.object({
+            title: z.object({
+              en: z.string().min(1),
+              sv: z.string().min(1),
+            }),
+            description: z.object({
+              en: z.string(),
+              sv: z.string(),
+            }),
+          }),
+        )
+        .optional(),
+      cta: z
+        .object({
+          en: z.string().min(1, 'English CTA is required').max(120),
+          sv: z.string().min(1, 'Swedish CTA is required').max(120),
+        })
+        .optional(),
+      relatedServices: z.array(reference('servicesCollection')).optional(),
+      featuredClients: z.array(reference('clientsCollection')).optional(),
+      featured: z.boolean().default(false),
+      seo: z
+        .object({
+          en: z
+            .object({
+              title: z.string().optional(),
+              description: z.string().optional(),
+              keywords: z.array(z.string()).optional(),
+            })
+            .optional(),
+          sv: z
+            .object({
+              title: z.string().optional(),
+              description: z.string().optional(),
+              keywords: z.array(z.string()).optional(),
+            })
+            .optional(),
+        })
+        .optional(),
+      cities: z
+        .array(
+          z.object({
+            name: z.object({
+              en: z.string().min(1, 'English city name is required'),
+              sv: z.string().min(1, 'Swedish city name is required'),
+            }),
+            slug: z
+              .string()
+              .min(1, 'City slug is required')
+              .regex(/^[a-z0-9-]+$/, 'Slug must be lowercase with hyphens'),
+            localSeo: z.object({
+              en: z.object({
+                title: z.string().min(1, 'English SEO title is required'),
+                description: z.string().min(1, 'English SEO description is required'),
+                keywords: z.array(z.string()).min(1, 'At least one keyword required'),
+              }),
+              sv: z.object({
+                title: z.string().min(1, 'Swedish SEO title is required'),
+                description: z.string().min(1, 'Swedish SEO description is required'),
+                keywords: z.array(z.string()).min(1, 'At least one keyword required'),
+              }),
+            }),
+            localContent: z.object({
+              en: z.object({
+                heading: z.string().min(1, 'English heading is required'),
+                intro: z.string().min(1, 'English intro is required'),
+                specificBenefits: z.array(z.string()).min(3, 'List 3+ local benefits'),
+              }),
+              sv: z.object({
+                heading: z.string().min(1, 'Swedish heading is required'),
+                intro: z.string().min(1, 'Swedish intro is required'),
+                specificBenefits: z.array(z.string()).min(3, 'List 3+ local benefits'),
+              }),
+            }),
+          }),
+        )
+        .optional(),
+    })
+    .strict(),
 });
 
 // Legal
@@ -110,7 +329,7 @@ const baseLegalSchema = z
     version: z.string(),
     effectiveDate: z.string().datetime('Invalid date format'),
     jurisdiction: z.string().optional(),
-    audience: z.enum(['B2B', 'B2C', 'Both']).default('Both'),
+    audience: z.enum(['B2B', 'B2C', 'All']).default('All'),
     compliance: z.array(z.string()).optional(),
     relatedDocuments: z.array(z.string()).optional(),
   })
@@ -147,7 +366,7 @@ const legalSvCollection = defineCollection({
       'Riktlinjer',
       'Annan',
     ]),
-    audience: z.enum(['B2B', 'B2C', 'Båda']).default('Båda'),
+    audience: z.enum(['B2B', 'B2C', 'Alla']).default('Alla'),
   }),
 });
 
@@ -320,4 +539,5 @@ export const collections = {
   blogSvCollection,
   portfolioEnCollection,
   portfolioSvCollection,
+  servicesCollection,
 };

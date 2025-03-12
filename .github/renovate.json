@@ -1,0 +1,52 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    ":dependencyDashboard",
+    ":semanticPrefixFixDepsChoreOthers",
+    ":ignoreModulesAndTests",
+    "group:monorepos",
+    "group:recommended",
+    "replacements:all",
+    "workarounds:all"
+  ],
+  "packageRules": [
+    {
+      "matchUpdateTypes": ["minor", "patch"],
+      "automerge": true
+    },
+    {
+      "matchManagers": ["dockerfile", "docker-compose"],
+      "addLabels": ["docker"]
+    },
+    {
+      "matchManagers": ["github-actions"],
+      "addLabels": ["github-actions"]
+    },
+    {
+      "matchManagers": ["npm"],
+      "addLabels": ["javascript"]
+    },
+    {
+      "matchManagers": ["pip_requirements", "pip_setup", "pipenv", "poetry"],
+      "addLabels": ["python"]
+    },
+    {
+      "matchManagers": ["cargo"],
+      "addLabels": ["rust"]
+    },
+    {
+      "matchManagers": ["gomod"],
+      "addLabels": ["go"]
+    },
+    {
+      "matchManagers": ["devcontainer"],
+      "addLabels": ["devcontainer"]
+    },
+    {
+      "matchPackagePatterns": ["*"],
+      "addLabels": ["dependencies"]
+    }
+  ],
+  "assigneesFromCodeOwners": true,
+  "reviewersFromCodeOwners": true
+}

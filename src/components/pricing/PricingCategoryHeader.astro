@@ -1,0 +1,44 @@
+---
+import { Icon } from "astro-icon/components";
+
+interface Props {
+  title: string;
+  icon: string;
+  color: string;
+}
+
+const { title, icon, color } = Astro.props;
+---
+
+<header class="relative cursor-pointer text-stone-700 dark:text-stone-100" data-pricing-header>
+  <h2
+    class="relative font-serif text-2xl font-semibold text-stone-700 transition-opacity hover:opacity-75 active:opacity-50 dark:text-stone-100"
+  >
+    <span class="relative z-10 inline-flex items-center gap-2 bg-amber-50 pr-4 dark:bg-stone-900">
+      <Icon name={icon} class={`h-6 w-6 ${color}`} aria-hidden="true" />
+      {title}
+      <Icon name="ph:caret-down" class="h-5 w-5 transform transition-transform" data-chevron aria-hidden="true" />
+    </span>
+    <span
+      class="absolute top-1/2 right-0 left-0 -z-0 hidden h-px bg-stone-200 sm:block dark:bg-stone-700"
+      aria-hidden="true"></span>
+  </h2>
+</header>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const headers = document.querySelectorAll("[data-pricing-header]");
+    headers.forEach((header) => {
+      header.addEventListener("click", () => {
+        const content = header.parentElement?.querySelector(".pricing-content") as HTMLElement;
+        const chevron = header.querySelector("[data-chevron]");
+        if (content) {
+          content.classList.toggle("hidden");
+          if (chevron) {
+            chevron.classList.toggle("rotate-180");
+          }
+        }
+      });
+    });
+  });
+</script>

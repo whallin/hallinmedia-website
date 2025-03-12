@@ -4,9 +4,12 @@
     "en": "Lastbilsstation is a logistics and transportation company based in Skellefteå, Sweden. It specialises in freight and cargo transport services, offering efficient and reliable solutions for moving goods.",
     "sv": "Lastbilsstation är ett logistik- och transportföretag baserat i Skellefteå. Företaget specialiserar sig på frakt- och godstransporttjänster och erbjuder effektiva och tillförlitliga lösningar för att flytta gods."
   },
+  "avatar": "/src/assets/clients/avatars/lastbilsstation.svg",
   "logo": "/src/assets/clients/lastbilsstation.svg",
   "logoDark": "/src/assets/clients/lastbilsstation-dark.svg",
-  "dominantColor": "#73a8da",
+  "dominantColor": {
+    "light": "#73a8da"
+  },
   "websiteUrl": "https://www.lastbilsstation.se/",
   "socialLinks": {
     "linkedin": "https://www.linkedin.com/company/lastbilsstation/",

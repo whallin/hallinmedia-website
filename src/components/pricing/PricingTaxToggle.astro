@@ -1,0 +1,116 @@
+---
+const translations = {
+  en: {
+    withTax: "Prices including VAT (25%)",
+    withoutTax: "Prices excluding VAT (25%)",
+    toggleLabel: "Show prices excluding VAT",
+    viewingPrices: "Showing prices with",
+  },
+  sv: {
+    withTax: "Priser inkl. moms (25%)",
+    withoutTax: "Priser exkl. moms (25%)",
+    toggleLabel: "Visa priser exklusive moms",
+    viewingPrices: "Visar priser med",
+  },
+};
+
+const locale = Astro.currentLocale === "en" || Astro.currentLocale === "sv" ? Astro.currentLocale : "en";
+---
+
+<aside
+  class="flex flex-wrap items-center justify-between gap-4 rounded-lg border border-stone-200 bg-amber-50 p-4 dark:border-stone-700 dark:bg-stone-800"
+>
+  <div class="flex flex-col gap-1">
+    <span class="text-sm font-semibold text-stone-600 dark:text-stone-300">{translations[locale].viewingPrices}</span>
+    <span class="font-serif text-sm text-stone-600 dark:text-stone-300" id="taxStatus">
+      {translations[locale].withTax}
+    </span>
+  </div>
+  <button
+    id="taxToggle"
+    class="relative inline-flex h-6 w-11 cursor-pointer items-center rounded-full bg-stone-400 transition hover:opacity-75 active:opacity-50 data-[checked=true]:bg-red-500 dark:bg-stone-700"
+    role="switch"
+    aria-checked="true"
+  >
+    <span class="sr-only" id="toggleText">{translations[locale].toggleLabel}</span>
+    <span
+      class="inline-block h-4 w-4 translate-x-6 transform rounded-full bg-stone-50 transition-transform"
+      id="taxToggleKnob"
+      aria-hidden="true"></span>
+  </button>
+</aside>
+
+<script define:vars={{ translations, locale }}>
+  document.addEventListener("DOMContentLoaded", () => {
+    const elements = {
+      toggle: document.getElementById("taxToggle"),
+      knob: document.getElementById("taxToggleKnob"),
+      status: document.getElementById("taxStatus"),
+      toggleText: document.getElementById("toggleText"),
+    };
+
+    let includeTax = false;
+
+    function updateTaxToggleUI() {
+      elements.status.textContent = includeTax ? translations[locale].withTax : translations[locale].withoutTax;
+      elements.toggleText.textContent = translations[locale].toggleLabel;
+      elements.knob.classList.toggle("translate-x-6", !includeTax);
+      elements.knob.classList.toggle("translate-x-1", includeTax);
+      elements.toggle.setAttribute("aria-checked", (!includeTax).toString());
+      elements.toggle.setAttribute("data-checked", (!includeTax).toString());
+    }
+
+    function updatePricesInDocument() {
+      const taxMultiplier = includeTax ? 1.25 : 1;
+      const numberFormat = new Intl.NumberFormat(locale === "sv" ? "sv-SE" : "en-GB");
+
+      document.querySelectorAll("[data-base-price]").forEach((element) => {
+        const basePrice = parseFloat(element.getAttribute("data-base-price") || "0");
+        const finalPrice = basePrice * taxMultiplier;
+        element.textContent = numberFormat.format(finalPrice);
+      });
+
+      const totalLabel = document.querySelector(".sticky p.font-serif.text-sm");
+      const taxAmountElement = document.getElementById("tax-amount");
+      const taxAmountValueElement = document.getElementById("tax-amount-value");
+      const totalPriceElement = document.getElementById("total-price");
+
+      if (totalLabel) {
+        totalLabel.textContent = includeTax
+          ? locale === "sv"
+            ? "Inklusive moms"
+            : "Including VAT"
+          : locale === "sv"
+            ? "Exklusive moms"
+            : "Excluding VAT";
+      }
+
+      if (taxAmountElement && taxAmountValueElement && totalPriceElement) {
+        const baseTotal = parseFloat(totalPriceElement.getAttribute("data-base-price") || "0");
+        if (includeTax) {
+          const taxAmount = baseTotal * 0.25;
+          taxAmountElement.classList.remove("hidden");
+          taxAmountValueElement.textContent = numberFormat.format(taxAmount);
+        } else {
+          taxAmountElement.classList.add("hidden");
+        }
+      }
+    }
+
+    function handleTaxToggle() {
+      includeTax = !includeTax;
+      updateTaxToggleUI();
+      updatePricesInDocument();
+
+      document.dispatchEvent(
+        new CustomEvent("taxStateChanged", {
+          detail: { includeTax },
+        }),
+      );
+    }
+
+    elements.toggle.addEventListener("click", handleTaxToggle);
+    updateTaxToggleUI();
+    updatePricesInDocument();
+  });
+</script>

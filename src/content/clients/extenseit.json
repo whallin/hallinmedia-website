@@ -4,8 +4,11 @@
     "en": "ExtenseIT is a web agency based in Härnösand, Sweden, specialising in creating digital solutions. Founded with a focus on problem-solving, the company aims to alleviate clients' burdens by enhancing their digital presence. ExtenseIT offers comprehensive services, including web design, web systems, branding, and web hosting.",
     "sv": "ExtenseIT är en webbyrå baserad i Härnösand som specialiserar sig på att skapa digitala lösningar. Företaget har ett fokus på problemlösning och strävar efter att minska kundernas bördor genom att förbättra deras digitala närvaro. ExtenseIT erbjuder omfattande tjänster, inklusive webbdesign, webbsystem, varumärkesutveckling och webbhotell."
   },
+  "avatar": "/src/assets/clients/avatars/extenseit.svg",
   "logo": "/src/assets/clients/extenseit.svg",
-  "dominantColor": "#2f84ff",
+  "dominantColor": {
+    "light": "#2f84ff"
+  },
   "websiteUrl": "https://extenseit.se/",
   "socialLinks": {
     "linkedin": "https://www.linkedin.com/company/extenseit-ab",

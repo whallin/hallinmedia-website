@@ -1,0 +1,161 @@
+{
+  "serviceName": {
+    "en": "Email Design",
+    "sv": "E-postdesign"
+  },
+  "shortDescription": {
+    "en": "Make your emails impossible to ignore. From newsletters to campaigns, we'll design responsive emails that look great everywhere and drive real results.",
+    "sv": "Gör dina e-postmeddelanden omöjliga att ignorera. Från nyhetsbrev till kampanjer designar vi responsiva e-postmeddelanden som ser fantastiska ut överallt och driver verkliga resultat."
+  },
+  "longDescription": {
+    "en": "Email remains one of the most effective ways to reach your audience. I create beautiful, responsive emails that work perfectly across all devices and email clients.<br /><br />Whether you need regular newsletters that keep customers engaged, promotional campaigns that drive sales, or automated sequences that welcome new subscribers, I'll help you stand out in crowded inboxes. Every email is crafted with care, from the subject line to the call-to-action.<br /><br />My designs balance visual appeal with proven marketing tactics, ensuring your emails don't just get opened—they get results.",
+    "sv": "E-post förblir ett av de mest effektiva sätten att nå din målgrupp. Jag skapar vackra, responsiva e-postmeddelanden som fungerar perfekt på alla enheter och e-postklienter.<br /><br />Oavsett om du behöver regelbundna nyhetsbrev som håller kunderna engagerade, reklamkampanjer som driver försäljning eller automatiserade sekvenser som välkomnar nya prenumeranter, hjälper jag dig att sticka ut i överfulla inkorgar. Varje e-postmeddelande utformas med omsorg, från ämnesraden till uppmaningen.<br /><br />Mina designer balanserar visuell tilltalande med beprövad marknadsföringstaktik, vilket säkerställer att dina e-postmeddelanden inte bara öppnas—de får resultat."
+  },
+  "icon": "ph:envelope-simple-duotone",
+  "color": "green",
+  "pricing": {
+    "startingFrom": 1500,
+    "unit": {
+      "en": "template",
+      "sv": "mall"
+    },
+    "note": {
+      "en": "Includes strategic design, responsive development, cross-client testing, and both HTML and plain text versions. Campaign packages and template systems available for ongoing marketing needs.",
+      "sv": "Inkluderar strategisk design, responsiv utveckling, klienttestning och både HTML och oformaterade textversioner. Kampanjpaket och mallsystem tillgängliga för löpande marknadsföringsbehov."
+    }
+  },
+  "keyFeatures": [
+    {
+      "title": {
+        "en": "Emails that get opened",
+        "sv": "E-post som öppnas"
+      },
+      "description": {
+        "en": "Stand out in crowded inboxes with eye-catching designs that make your subscribers want to click and read your messages.",
+        "sv": "Stick ut i överfulla inkorgar med iögonfallande designer som får dina prenumeranter att vilja klicka och läsa dina meddelanden."
+      },
+      "icon": "ph:cursor-click-duotone"
+    },
+    {
+      "title": {
+        "en": "Works everywhere",
+        "sv": "Fungerar överallt"
+      },
+      "description": {
+        "en": "Feel confident your emails look perfect on every device and email app, from mobile phones to desktop computers.",
+        "sv": "Känn dig trygg med att dina e-postmeddelanden ser perfekta ut på alla enheter och e-postappar, från mobiltelefoner till datorer."
+      },
+      "icon": "ph:device-mobile-duotone"
+    },
+    {
+      "title": {
+        "en": "Drives action",
+        "sv": "Driver handling"
+      },
+      "description": {
+        "en": "Turn readers into customers with strategically designed layouts that guide people towards taking action.",
+        "sv": "Förvandla läsare till kunder med strategiskt utformade layouter som guidar människor mot att agera."
+      },
+      "icon": "ph:chart-line-up-duotone"
+    },
+    {
+      "title": {
+        "en": "Brand perfect",
+        "sv": "Varumärkesperfekt"
+      },
+      "description": {
+        "en": "Keep your brand consistent with email designs that match your visual identity whilst allowing for flexible content needs.",
+        "sv": "Behåll ditt varumärke konsekvent med e-postdesigner som matchar din visuella identitet samtidigt som de tillåter flexibla innehållsbehov."
+      },
+      "icon": "ph:paint-brush-duotone"
+    }
+  ],
+  "processSteps": [
+    {
+      "title": {
+        "en": "Define goals",
+        "sv": "Definiera mål"
+      },
+      "description": {
+        "en": "Understanding your campaign goals and target audience to create an effective email strategy.",
+        "sv": "Förstå dina kampanjmål och målgrupp för att skapa en effektiv e-poststrategi."
+      }
+    },
+    {
+      "title": {
+        "en": "Design & build",
+        "sv": "Design & bygg"
+      },
+      "description": {
+        "en": "Creating engaging email designs that look great and work perfectly across all devices.",
+        "sv": "Skapar engagerande e-postdesigner som ser fantastiska ut och fungerar perfekt på alla enheter."
+      }
+    },
+    {
+      "title": {
+        "en": "Test & optimise",
+        "sv": "Testa & optimera"
+      },
+      "description": {
+        "en": "Thorough testing across email clients and devices to ensure everything works flawlessly.",
+        "sv": "Grundlig testning över e-postklienter och enheter för att säkerställa att allt fungerar felfritt."
+      }
+    },
+    {
+      "title": {
+        "en": "Launch & track",
+        "sv": "Lansera & spåra"
+      },
+      "description": {
+        "en": "Setting up your campaign for success with proper tracking and performance monitoring.",
+        "sv": "Förbereder din kampanj för framgång med korrekt spårning och prestandaövervakning."
+      }
+    }
+  ],
+  "cta": {
+    "en": "Elevate your email marketing",
+    "sv": "Lyft din e-postmarknadsföring"
+  },
+  "relatedServices": [
+    "design",
+    "communication",
+    "content-writing",
+    "social-media"
+  ],
+  "featuredClients": ["creavite"],
+  "featured": false,
+  "seo": {
+    "en": {
+      "title": "Conversion-focused Email Design & Campaign Development",
+      "description": "Craft high-performing email campaigns that cut through inbox clutter. My responsive email designs blend visual appeal with proven marketing tactics to boost open rates and drive conversions.",
+      "keywords": [
+        "conversion email design",
+        "responsive newsletter templates",
+        "email campaign strategy",
+        "email marketing specialist",
+        "e-commerce email design",
+        "B2B email templates",
+        "inbox optimisation",
+        "email engagement expert",
+        "campaign performance",
+        "email marketing results"
+      ]
+    },
+    "sv": {
+      "title": "Konverteringsfokuserad e-postdesign & Kampanjutveckling",
+      "description": "Skapa högpresterande e-postkampanjer som skär genom inkorgsstöket. Mina responsiva e-postdesigner kombinerar visuell attraktivitet med beprövad marknadsföringstaktik för att öka öppningsfrekvensen och driva konverteringar.",
+      "keywords": [
+        "konverterande e-postdesign",
+        "responsiva nyhetsbrevmallar",
+        "e-postkampanjstrategi",
+        "e-postmarknadsföringsspecialist",
+        "e-handels-e-postdesign",
+        "B2B-e-postmallar",
+        "inkorgsoptimering",
+        "e-postengagemangsexpert",
+        "kampanjprestanda",
+        "e-postmarknadsföringsresultat"
+      ]
+    }
+  }
+}

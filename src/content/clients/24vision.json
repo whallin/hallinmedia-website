@@ -4,8 +4,11 @@
     "en": "24vision is a digital marketing company offering comprehensive solutions to enhance brand visibility and drive organic growth. Their services include content creation, strategy development, planning, editing, optimisation, and analysis to help clients succeed on social media platforms.",
     "sv": "24vision är ett företag inom digital marknadsföring som erbjuder kompletta lösningar för att öka varumärkens synlighet och driva organisk tillväxt. Deras tjänster inkluderar innehållsskapande, strategiutveckling, planering, redigering, optimering och analys för att hjälpa kunderna att lyckas på sociala medieplattformar."
   },
+  "avatar": "/src/assets/clients/avatars/24vision.svg",
   "logo": "/src/assets/clients/24vision.svg",
-  "dominantColor": "#1f893c",
+  "dominantColor": {
+    "light": "#1f893c"
+  },
   "websiteUrl": "https://www.24vision.se/",
   "socialLinks": {
     "linkedin": "https://www.linkedin.com/company/24vision",

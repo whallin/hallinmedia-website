@@ -4,8 +4,11 @@
     "en": "Creavite is a digital design platform specializing in high-quality graphics for online communities and servers. They provide a variety of both free and paid templates for Discord, Minecraft, and FiveM servers, including profile pictures, banners, server icons, and more.",
     "sv": "Creavite är en digital plattform för design som erbjuder högkvalitativ grafik för online-communityn och servrar. De erbjuder en mängd olika både gratis och betalda mallar för Discord-, Minecraft- och FiveM-servrar, inklusive profilbilder, banners, serverikoner och mer."
   },
+  "avatar": "/src/assets/clients/avatars/creavite.svg",
   "logo": "/src/assets/clients/creavite.svg",
-  "dominantColor": "#0fbcf9",
+  "dominantColor": {
+    "light": "#0fbcf9"
+  },
   "websiteUrl": "https://auto.creavite.co/",
   "socialLinks": {
     "linkedin": "https://www.linkedin.com/company/creavite",

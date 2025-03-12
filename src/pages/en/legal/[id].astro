@@ -1,0 +1,132 @@
+---
+import { Icon } from "astro-icon/components";
+import { getCollection, render } from "astro:content";
+import Layout from "../../../layouts/Layout.astro";
+
+export async function getStaticPaths() {
+  const legalDocs = await getCollection("legalEnCollection");
+  return legalDocs.map((doc) => ({
+    params: { id: doc.id },
+    props: { doc },
+  }));
+}
+
+const { doc } = Astro.props;
+const { Content } = await render(doc);
+const allDocs = await getCollection("legalEnCollection");
+const docTitleMap = Object.fromEntries(allDocs.map((d) => [d.id, d.data.title]));
+
+const documentTypeColors = {
+  Terms: "text-blue-500",
+  Privacy: "text-green-500",
+  Policy: "text-yellow-500",
+  Agreement: "text-red-500",
+  Statement: "text-purple-500",
+  Notice: "text-orange-500",
+  Procedure: "text-teal-500",
+  Guidelines: "text-pink-500",
+  Other: "text-gray-500",
+} as const;
+---
+
+<Layout
+  title=`${doc.data.title} - Legal documents & conditions`
+  description={doc.data.description}
+  article={true}
+  header={doc.data.title}
+  headerIcon={doc.data.icon}
+  headerDescription={doc.data.description}
+>
+  <article class="mx-auto max-w-2xl space-y-8">
+    <header
+      class="flex flex-wrap items-start gap-4 rounded-lg border border-stone-200 p-4 sm:justify-between sm:gap-0 dark:border-stone-700"
+    >
+      <dl class="flex flex-col gap-1">
+        <dt class="font-mono text-xs font-medium text-stone-500 dark:text-stone-400">Document type</dt>
+        <dd class={`flex items-center gap-1 text-sm font-medium ${documentTypeColors[doc.data.documentType]}`}>
+          <Icon name={doc.data.icon} class="h-4 w-4" aria-hidden="true" />
+          {doc.data.documentType}
+        </dd>
+      </dl>
+      <dl class="flex flex-col gap-1">
+        <dt class="font-mono text-xs font-medium text-stone-500 dark:text-stone-400">Published</dt>
+        <dd class="flex items-center gap-1 text-sm text-stone-500 dark:text-stone-400">
+          <Icon name="ph:calendar-duotone" class="h-4 w-4" aria-hidden="true" />
+          <time datetime={doc.data.publishedDate}>{new Date(doc.data.publishedDate).toLocaleDateString("sv-SE")}</time>
+        </dd>
+      </dl>
+      <dl class="flex flex-col gap-1">
+        <dt class="font-mono text-xs font-medium text-stone-500 dark:text-stone-400">Updated</dt>
+        <dd class="flex items-center gap-1 text-sm text-stone-500 dark:text-stone-400">
+          <Icon name="ph:calendar-check-duotone" class="h-4 w-4" aria-hidden="true" />
+          <time datetime={doc.data.lastEdited}>{new Date(doc.data.lastEdited).toLocaleDateString("sv-SE")}</time>
+        </dd>
+      </dl>
+      <dl class="flex flex-col gap-1">
+        <dt class="font-mono text-xs font-medium text-stone-500 dark:text-stone-400">Version</dt>
+        <dd class="flex items-center gap-1 text-sm text-stone-500 dark:text-stone-400">
+          <Icon name="ph:code-duotone" class="h-4 w-4" aria-hidden="true" />
+          {doc.data.version}
+        </dd>
+      </dl>
+      {
+        doc.data.jurisdiction && (
+          <dl class="flex flex-col gap-1">
+            <dt class="font-mono text-xs font-medium text-stone-500 dark:text-stone-400">Jurisdiction</dt>
+            <dd class="flex items-center gap-1 text-sm text-stone-500 dark:text-stone-400">
+              <Icon name="ph:map-pin-duotone" class="h-4 w-4" aria-hidden="true" />
+              {doc.data.jurisdiction}
+            </dd>
+          </dl>
+        )
+      }
+      <dl class="flex flex-col gap-1">
+        <dt class="font-mono text-xs font-medium text-stone-500 dark:text-stone-400">Audience</dt>
+        <dd class="flex items-center gap-1 text-sm text-stone-500 dark:text-stone-400">
+          <Icon name="ph:users-duotone" class="h-4 w-4" aria-hidden="true" />
+          {doc.data.audience}
+        </dd>
+      </dl>
+    </header>
+    <main
+      class="prose prose-stone prose-li:text-stone-500 prose-li:dark:text-stone-400 prose-li:font-serif dark:prose-invert prose-headings:text-stone-700 prose-headings:dark:text-stone-100 prose-headings:font-serif prose-p:text-stone-500 prose-p:dark:text-stone-400 prose-p:font-serif prose-a:text-red-500 prose-a:underline prose-a:decoration-dashed prose-a:decoration-from-font prose-a:underline-offset-4 prose-a:hover:bg-red-500 prose-a:hover:text-stone-100 prose-a:active:opacity-50 text-justify"
+    >
+      <Content />
+    </main>
+    {
+      (doc.data.compliance || doc.data.relatedDocuments) && (
+        <footer class="mt-8 space-y-4 rounded-lg border border-stone-200 p-6 dark:border-stone-700">
+          {doc.data.compliance && (
+            <section class="space-y-2">
+              <h2 class="font-serif font-medium text-stone-700 dark:text-stone-100">Compliance and standards</h2>
+              <ul class="flex flex-wrap gap-2">
+                {doc.data.compliance.map((standard) => (
+                  <li class="rounded-full bg-amber-100 px-3 py-1 text-sm text-amber-800 dark:bg-amber-900 dark:text-amber-100">
+                    {standard}
+                  </li>
+                ))}
+              </ul>
+            </section>
+          )}
+          {doc.data.relatedDocuments && (
+            <section class="space-y-2">
+              <h2 class="font-serif font-medium text-stone-700 dark:text-stone-100">Related documents</h2>
+              <ul class="flex flex-wrap gap-2">
+                {doc.data.relatedDocuments.map((docId) => (
+                  <li>
+                    <a
+                      href={`/legal/${docId}`}
+                      class="dark:text-amber-1000 inline-block rounded-full bg-amber-100 px-3 py-1 text-sm text-amber-800 transition hover:opacity-75 active:scale-95 active:opacity-50 dark:bg-amber-900 dark:text-amber-100"
+                    >
+                      {docTitleMap[docId] || docId}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          )}
+        </footer>
+      )
+    }
+  </article>
+</Layout>

@@ -1,0 +1,115 @@
+---
+import { Icon } from "astro-icon/components";
+import { Picture } from "astro:assets";
+import { getRelativeLocaleUrl } from "astro:i18n";
+import ImgAvatar from "../../assets/avatars/william-sara.png";
+import Button from "../common/Button.astro";
+
+const translations = {
+  en: {
+    heading: "A Personal Note on Visual Storytelling",
+    intro: "Dear reader,",
+    p1: "In a world overflowing with information, the visual narrative has quickly become the medium that truly captures attention and leaves lasting impressions. Through my lens and design tools, I help craft unique visual languages — those that speak directly to the audience's hearts.",
+    p2: "Whether through a perfectly framed photograph, a thoughtfully designed graphic, or a compelling video sequence, I believe every brand deserves to tell its story in a way that is authentic, unforgettable, and honest.",
+    p3: "Let's create something remarkable together. I'd love to hear about your vision and explore how we can bring it to life. Feel free to reach out anytime — ",
+    emailaway: "I'm just an email away!",
+    yourstruly: "Yours truly,",
+    mvh: "Med vänliga hälsningar,",
+    schedulecall: "Schedule a call",
+    sendmsg: "Send me a message",
+    aria_schedule: "Boka ett samtal med William Hallin",
+    aria_message: "Skicka ett meddelande till William Hallin",
+    aria_contact_options: "Kontaktalternativ",
+  },
+  sv: {
+    heading: "En personlig hälsning om visuellt berättande",
+    intro: "Käre läsare,",
+    p1: "I en värld översvämmad av information har det visuella berättandet snabbt blivit det medium som fångar uppmärksamheten och lämnar långvariga intryck. Genom mitt objektiv och mina designverktyg hjälper jag att skapa unika visuella språk - språk som talar direkt till publikens hjärtan.",
+    p2: "Oavsett om det är ett perfekt komponerat fotografi, en genomtänkt grafisk design eller en övertygande videosnutt, så anser jag att varje varumärke förtjänar att berätta sin historia på ett autentiskt, oförglömligt och ärligt sätt.",
+    p3: "Låt oss skapa något minnesvärt ihop. Jag lyssnar gärna på era idéer och utforskar hur vi kan förverkliga dem. Du är välkommen att kontakta mig när som helst - ",
+    emailaway: "jag är bara ett mejl bort!",
+    yourstruly: "Med vänliga hälsningar,",
+    mvh: "Yours truly,",
+    schedulecall: "Boka ett samtal",
+    sendmsg: "Skicka ett meddelande",
+    aria_schedule: "Boka ett samtal med William Hallin",
+    aria_message: "Skicka ett meddelande till William Hallin",
+    aria_contact_options: "Kontaktalternativ",
+  },
+};
+
+const locale = Astro.currentLocale === "en" || Astro.currentLocale === "sv" ? Astro.currentLocale : "en";
+---
+
+<article
+  class="max-w-xl rounded-lg border border-stone-200 bg-amber-100/25 p-6 sm:mx-auto sm:rotate-2 dark:border-stone-700 dark:bg-stone-800"
+  aria-labelledby="personal-letter-heading"
+>
+  <section class="w-full">
+    <header class="mb-4 flex flex-col gap-4 sm:flex-row">
+      <figure class="sm:absolute sm:-top-8 sm:-left-8" aria-hidden="true">
+        <Picture
+          src={ImgAvatar}
+          alt="William Hallin"
+          width={64}
+          height={64}
+          widths={[32, 64, 128]}
+          formats={["avif", "webp", "jpeg"]}
+          class="rounded-full border-6 border-amber-50 select-none dark:border-stone-900"
+        />
+      </figure>
+      <h2
+        id="personal-letter-heading"
+        class="font-handwrite text-2xl text-stone-700 italic underline decoration-red-500 decoration-wavy decoration-from-font underline-offset-4 dark:text-stone-100"
+      >
+        {translations[locale].heading}
+      </h2>
+    </header>
+    <article class="space-y-4 font-serif leading-8 text-stone-500 dark:text-stone-400">
+      <p>
+        {translations[locale].intro}
+      </p>
+      <p>
+        {translations[locale].p1}
+      </p>
+      <p>
+        {translations[locale].p2}
+      </p>
+      <p>
+        {translations[locale].p3}<strong>{translations[locale].emailaway}</strong>
+      </p>
+      <footer class="font-handwrite text-lg">
+        <p class="group relative overflow-hidden" aria-hidden="true">
+          <span class="inline-block transition-transform duration-300 group-hover:-translate-y-full">
+            {translations[locale].yourstruly}
+          </span>
+          <span
+            class="absolute left-0 inline-block translate-y-full transition-transform duration-300 group-hover:translate-y-0"
+          >
+            {translations[locale].mvh}
+          </span>
+        </p>
+        <p class="font-handwrite text-red-500">William H.</p>
+      </footer>
+    </article>
+    <nav class="mt-6 flex flex-col gap-2 sm:flex-row" aria-label={translations[locale].aria_contact_options}>
+      <Button
+        href="https://meetings.hubspot.com/william-hallin"
+        target="_blank"
+        rel="noopener noreferrer"
+        arialabel={translations[locale].aria_schedule}
+      >
+        <Icon name="ph:calendar-duotone" aria-hidden="true" />
+        {translations[locale].schedulecall}
+      </Button>
+      <Button
+        href={getRelativeLocaleUrl(locale, "contact")}
+        variant="secondary"
+        arialabel={translations[locale].aria_message}
+      >
+        <Icon name="ph:envelope-duotone" aria-hidden="true" />
+        {translations[locale].sendmsg}
+      </Button>
+    </nav>
+  </section>
+</article>

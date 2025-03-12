@@ -1,0 +1,94 @@
+---
+import { Icon } from "astro-icon/components";
+import { getCollection } from "astro:content";
+import { getRelativeLocaleUrl } from "astro:i18n";
+import Button from "./common/Button.astro";
+
+const translations = {
+  en: {
+    heading: "Latest blog posts",
+    description:
+      "Explore thought-provoking articles covering industry insights, creative processes, and professional tips. Dive into a wealth of knowledge that will enhance your understanding of digital creativity and business innovation.",
+    readmore: "Read more",
+    minread: "min read",
+    cta: "Browse all posts",
+    details: "Post details",
+    readabout: "Read more about",
+    browse: "Browse all blog posts",
+  },
+  sv: {
+    heading: "Senaste blogginläggen",
+    description:
+      "Utforska tankeväckande artiklar som täcker branschinsikter, kreativa processer och professionella tips. Fördjupa dig i en kunskapsbank som kommer att öka din förståelse för digital kreativitet och affärsinnovation.",
+    readmore: "Läs mer",
+    minread: "min läsning",
+    cta: "Bläddra bland alla inlägg",
+    details: "Inläggsdetaljer",
+    readabout: "Läs mer om",
+    browse: "Bläddra bland alla blogginlägg",
+  },
+};
+
+const locale = Astro.currentLocale === "en" || Astro.currentLocale === "sv" ? Astro.currentLocale : "en";
+const posts = await getCollection(Astro.currentLocale === "sv" ? "blogSvCollection" : "blogEnCollection");
+const allPosts = posts
+  .sort((a, b) => new Date(b.data.publishedDate).getTime() - new Date(a.data.publishedDate).getTime())
+  .slice(0, 5);
+
+const calculateReadTime = (content: string) => {
+  const wordCount = content.split(/\s+/).length;
+  return Math.ceil(wordCount / 200);
+};
+---
+
+<section class="relative max-w-2xl sm:mx-auto" aria-labelledby="latest-posts-heading">
+  <header class="mb-8 space-y-6">
+    <h2 id="latest-posts-heading" class="relative font-serif text-3xl text-stone-700 italic dark:text-stone-100">
+      <span
+        class="relative z-10 inline-flex flex-col gap-2 bg-amber-50 pr-4 sm:flex-row sm:items-center dark:bg-stone-900"
+      >
+        <Icon name="ph:newspaper-duotone" class="h-6 w-6 text-red-500" aria-hidden="true" />
+        {translations[locale].heading}
+      </span>
+      <span
+        class="absolute top-1/2 right-0 left-0 -z-0 hidden h-px bg-stone-200 sm:block dark:bg-stone-700"
+        aria-hidden="true"></span>
+    </h2>
+    <p class="font-serif text-stone-500 dark:text-stone-400">
+      {translations[locale].description}
+    </p>
+  </header>
+  <ol class="mb-8 divide-y divide-stone-200 dark:divide-stone-700">
+    {
+      allPosts.map((post, index) => (
+        <li class="py-4">
+          <article>
+            <h3 class="mb-1 font-serif text-lg font-semibold text-stone-700 dark:text-stone-100">{post.data.title}</h3>
+            <div class="flex flex-wrap justify-between gap-2 text-sm text-stone-500 dark:text-stone-400">
+              <div class="flex gap-2" aria-label={translations[locale].details}>
+                <time datetime={post.data.publishedDate}>{new Date(post.data.publishedDate).toLocaleDateString()}</time>
+                <span aria-hidden="true">•</span>
+                <span>
+                  {calculateReadTime(post.body ?? "")} {translations[locale].minread}
+                </span>
+              </div>
+              <a
+                href={`/blog/${post.id}`}
+                class="inline-flex items-center gap-1 font-semibold text-red-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-100 active:opacity-50"
+                aria-label={`${translations[locale].readabout} ${post.data.title}`}
+              >
+                {translations[locale].readmore}
+                <Icon name="ph:arrow-right" aria-hidden="true" />
+              </a>
+            </div>
+          </article>
+        </li>
+      ))
+    }
+  </ol>
+  <Button href={getRelativeLocaleUrl(locale, `blog`)} variant="secondary" arialabel={translations[locale].browse}>
+    <Icon name="ph:newspaper-duotone" aria-hidden="true" />
+    {translations[locale].cta}
+    <Icon name="ph:arrow-right" aria-hidden="true" />
+  </Button>
+</section>

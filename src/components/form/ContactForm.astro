@@ -1,0 +1,282 @@
+---
+import { Icon } from "astro-icon/components";
+import Button from "../common/Button.astro";
+
+const translations = {
+  en: {
+    name: "Name",
+    email: "Email",
+    projectType: "Project type",
+    chooseProjectType: "Choose project type",
+    photography: "Photography",
+    video: "Video production",
+    design: "Graphic design",
+    communication: "Communication",
+    other: "Other / Combination",
+    companySize: "Company size",
+    chooseCompanySize: "Choose company size",
+    individual: "Individual",
+    employees: "employees",
+    budget: "Budget (SEK)",
+    chooseBudget: "Choose budget",
+    under1k: "Under 1,000 SEK",
+    between1k5k: "1,000 - 5,000 SEK",
+    between5k15k: "5,000 - 15,000 SEK",
+    between15k30k: "15,000 - 30,000 SEK",
+    between30k50k: "30,000 - 50,000 SEK",
+    above50k: "Above 50,000 SEK",
+    unsure: "Unsure / Negotiable",
+    deadline: "Desired deadline",
+    chooseDeadline: "Choose deadline",
+    asap: "As soon as possible",
+    within1Month: "Within 1 month",
+    within3Months: "Within 3 months",
+    within6Months: "Within 6 months",
+    flexible: "Flexible",
+    projectDescription: "Project description",
+    submit: "Submit inquiry",
+    sending: "Sending...",
+    success: "Message sent! I'll reply soon.",
+    error: "Error sending message. Try again.",
+    contactInfo: "Contact information",
+    projectDetails: "Project details",
+    budgetAndDeadline: "Budget and deadline",
+  },
+  sv: {
+    name: "Namn",
+    email: "E-post",
+    projectType: "Projekttyp",
+    chooseProjectType: "Välj projekttyp",
+    photography: "Fotografering",
+    video: "Videoproduktion",
+    design: "Grafisk design",
+    communication: "Kommunikation",
+    other: "Annat / Kombination",
+    companySize: "Företagsstorlek",
+    chooseCompanySize: "Välj företagsstorlek",
+    individual: "Privatperson",
+    employees: "anställda",
+    budget: "Budget (SEK)",
+    chooseBudget: "Välj budget",
+    under1k: "Under 1 000 SEK",
+    between1k5k: "1 000 - 5 000 SEK",
+    between5k15k: "5 000 - 15 000 SEK",
+    between15k30k: "15 000 - 30 000 SEK",
+    between30k50k: "30 000 - 50 000 SEK",
+    above50k: "Över 50 000 SEK",
+    unsure: "Osäker / Diskuterbart",
+    deadline: "Önskad deadline",
+    chooseDeadline: "Välj deadline",
+    asap: "Så snart som möjligt",
+    within1Month: "Inom 1 månad",
+    within3Months: "Inom 3 månader",
+    within6Months: "Inom 6 månader",
+    flexible: "Flexibel",
+    projectDescription: "Projektbeskrivning",
+    submit: "Skicka förfrågan",
+    sending: "Skickar...",
+    success: "Meddelandet skickat! Jag svarar snart.",
+    error: "Fel vid skickande. Försök igen.",
+    contactInfo: "Kontaktinformation",
+    projectDetails: "Projektdetaljer",
+    budgetAndDeadline: "Budget och deadline",
+  },
+};
+
+const locale = Astro.currentLocale === "en" || Astro.currentLocale === "sv" ? Astro.currentLocale : "en";
+
+const formFields = {
+  contactInfo: [
+    {
+      id: "name",
+      type: "text",
+      icon: "ph:user-circle-duotone",
+      required: true,
+      placeholder: {
+        en: "William Hallin",
+        sv: "William Hallin",
+      },
+    },
+    {
+      id: "email",
+      type: "email",
+      icon: "ph:envelope-duotone",
+      required: true,
+      placeholder: {
+        en: "your@email.com",
+        sv: "din@e-post.se",
+      },
+    },
+  ],
+  projectDetails: [
+    {
+      id: "projectType",
+      type: "select",
+      icon: "ph:briefcase-duotone",
+      required: true,
+      options: ["photography", "video", "design", "communication", "other"],
+    },
+    {
+      id: "companySize",
+      type: "select",
+      icon: "ph:buildings-duotone",
+      required: true,
+      options: ["individual", "1-10", "11-50", "51-200", "201+"],
+    },
+  ],
+  budgetAndDeadline: [
+    {
+      id: "budget",
+      type: "select",
+      icon: "ph:currency-circle-dollar-duotone",
+      required: true,
+      options: ["under1k", "between1k5k", "between5k15k", "between15k30k", "between30k50k", "above50k", "unsure"],
+    },
+    {
+      id: "deadline",
+      type: "select",
+      icon: "ph:calendar-duotone",
+      required: true,
+      options: ["asap", "within1Month", "within3Months", "within6Months", "flexible"],
+    },
+  ],
+  description: [
+    {
+      id: "projectDescription",
+      type: "textarea",
+      icon: "ph:note-pencil-duotone",
+      required: true,
+      rows: 4,
+      placeholder: {
+        en: "Tell me about your project...",
+        sv: "Berätta om ditt projekt...",
+      },
+    },
+  ],
+};
+---
+
+<form
+  id="contact-form"
+  class="space-y-6"
+  action="/api/contact"
+  method="POST"
+  aria-label={translations[locale].contactInfo}
+>
+  {
+    Object.entries(formFields).map(([section, fields]) => (
+      <fieldset class={`grid gap-6 ${section !== "description" ? "sm:grid-cols-2" : ""}`}>
+        <legend class="sr-only">{translations[locale][section as keyof (typeof translations)[typeof locale]]}</legend>
+        {fields.map((field) => (
+          <div>
+            <label for={field.id} class="font-serif text-sm text-stone-600 dark:text-stone-400">
+              <Icon name={field.icon} class="-mt-1 inline-block h-4 w-4 text-red-500" aria-hidden="true" />
+              {translations[locale][field.id as keyof (typeof translations)[typeof locale]]}
+              {field.required && <span class="ml-0.5 text-red-500">*</span>}
+            </label>
+            {field.type === "select" ? (
+              <select
+                id={field.id}
+                name={field.id}
+                required={field.required}
+                class="mt-1 w-full rounded-md border border-stone-200 bg-amber-100/25 px-3 py-2 text-stone-900 placeholder-stone-400 focus:border-red-500 focus:ring-red-500 focus:outline-none dark:border-stone-700 dark:bg-stone-900 dark:text-stone-100 dark:placeholder-stone-500"
+              >
+                <option value="">
+                  {
+                    translations[locale][
+                      `choose${field.id.charAt(0).toUpperCase() + field.id.slice(1)}` as keyof (typeof translations)[typeof locale]
+                    ]
+                  }
+                </option>
+                {"options" in field &&
+                  field.options.map((option) => (
+                    <option value={option}>
+                      {field.id === "companySize" && option !== "individual"
+                        ? `${option} ${translations[locale].employees}`
+                        : translations[locale][option as keyof (typeof translations)[typeof locale]]}
+                    </option>
+                  ))}
+              </select>
+            ) : field.type === "textarea" ? (
+              <textarea
+                id={field.id}
+                name={field.id}
+                rows={"rows" in field ? field.rows : 4}
+                required={field.required}
+                placeholder={field.placeholder[locale]}
+                class="mt-1 w-full rounded-md border border-stone-200 bg-amber-100/25 px-3 py-2 text-stone-900 placeholder-stone-400 focus:border-red-500 focus:ring-red-500 focus:outline-none dark:border-stone-700 dark:bg-stone-900 dark:text-stone-100 dark:placeholder-stone-500"
+              />
+            ) : (
+              <input
+                id={field.id}
+                name={field.id}
+                required={field.required}
+                placeholder={field.placeholder[locale]}
+                class="mt-1 w-full rounded-md border border-stone-200 bg-amber-100/25 px-3 py-2 text-stone-900 placeholder-stone-400 focus:border-red-500 focus:ring-red-500 focus:outline-none dark:border-stone-700 dark:bg-stone-900 dark:text-stone-100 dark:placeholder-stone-500"
+              />
+            )}
+          </div>
+        ))}
+      </fieldset>
+    ))
+  }
+  <div>
+    <Button type="submit" id="submit-button">
+      <Icon name="ph:paper-plane-right-duotone" aria-hidden="true" />
+      <span id="button-text">{translations[locale].submit}</span>
+    </Button>
+  </div>
+</form>
+
+<script define:vars={{ translations, locale }}>
+  const form = document.getElementById("contact-form");
+  const submitButton = document.getElementById("submit-button");
+  const buttonText = document.getElementById("button-text");
+
+  function updateButtonState(state, isDisabled = true) {
+    if (!submitButton || !buttonText) return;
+
+    const states = {
+      default: { text: translations[locale].submit, class: "bg-red-500" },
+      loading: { text: translations[locale].sending, class: "bg-stone-500" },
+      success: { text: translations[locale].success, class: "bg-green-500" },
+      error: { text: translations[locale].error, class: "bg-amber-500" },
+    };
+
+    submitButton.disabled = isDisabled;
+    buttonText.textContent = states[state].text;
+    submitButton.className = submitButton.className.replace(/bg-\w+-500/g, states[state].class);
+
+    if (isDisabled) {
+      submitButton.classList.add("pointer-events-none");
+    } else {
+      submitButton.classList.remove("pointer-events-none");
+    }
+  }
+
+  if (form) {
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      try {
+        updateButtonState("loading");
+
+        const response = await fetch("/api/contact/project", {
+          method: "POST",
+          body: new FormData(form),
+        });
+
+        if (response.ok) {
+          updateButtonState("success");
+          form.reset();
+        } else {
+          throw new Error("Submission failed");
+        }
+      } catch {
+        updateButtonState("error");
+      } finally {
+        setTimeout(() => updateButtonState("default", false), 3000);
+      }
+    });
+  }
+</script>

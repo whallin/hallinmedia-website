@@ -1,0 +1,18 @@
+{
+  "name": "Skellefteå Symfoniorkester",
+  "description": {
+    "en": "Skellefteå Orkesterförening is an organization committed to supporting and promoting music life in Skellefteå. The organization consists of active musicians from Skellefteå Symphony Orchestra and non-music members who want to contribute to the development of orchestral music.",
+    "sv": "Skellefteå Orkesterförening är en förening som engagerar sig i att stödja och främja musiklivet i Skellefteå. Föreningen består av aktiva musiker från Skellefteå Symfoniorkester samt icke musicerande medlemmar som vill bidra till orkestermusikens utveckling."
+  },
+  "avatar": "/src/assets/clients/avatars/skelleftea-symfoniorkester.svg",
+  "logo": "/src/assets/clients/skelleftea-symfoniorkester.svg",
+  "logoDark": "/src/assets/clients/skelleftea-symfoniorkester-dark.svg",
+  "dominantColor": {
+    "light": "#100301",
+    "dark": "#effcfe"
+  },
+  "websiteUrl": "https://www.orkester.se/",
+  "socialLinks": {
+    "facebook": "https://www.facebook.com/skellefteasymfoniorkester/"
+  }
+}

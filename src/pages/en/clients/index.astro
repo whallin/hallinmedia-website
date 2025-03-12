@@ -1,0 +1,101 @@
+---
+import { Icon } from "astro-icon/components";
+import { Image } from "astro:assets";
+import { getCollection } from "astro:content";
+import { getRelativeLocaleUrl } from "astro:i18n";
+import Button from "../../../components/common/Button.astro";
+import Layout from "../../../layouts/Layout.astro";
+
+const locale = Astro.currentLocale === "en" || Astro.currentLocale === "sv" ? Astro.currentLocale : "en";
+const clientsCollection = await getCollection("clientsCollection");
+const sortedClients = clientsCollection.sort((a, b) => {
+  return a.data.name.localeCompare(b.data.name);
+});
+---
+
+<Layout
+  header="My awesome customers"
+  headerIcon="ph:users-duotone"
+  title="Client portfolio"
+  description="Discover my successful partnerships with leading brands. See how I help businesses grow digitally through customised creative solutions."
+  headerDescription="Discover a network of successful partnerships with leading brands and organisations. Each client represents a unique story of innovation and creativity, where together we have created digital solutions that drive real business value. See how we can turn your visions into reality — become part of our growing success story."
+>
+  <section class="max-w-2xl sm:mx-auto">
+    <nav class="my-8 flex flex-col justify-between gap-2 sm:flex-row" aria-label="Main navigation">
+      <Button href={getRelativeLocaleUrl(locale, "portfolio")}>
+        <Icon name="ph:magic-wand-duotone" class="flex-shrink-0" aria-hidden="true" />
+        See my works
+        <Icon name="ph:arrow-right" class="flex-shrink-0" aria-hidden="true" />
+      </Button>
+      <Button href={getRelativeLocaleUrl(locale, "hire")} variant="secondary">
+        <Icon name="ph:handshake-duotone" class="flex-shrink-0" aria-hidden="true" />
+        Hire me
+        <Icon name="ph:arrow-right" class="flex-shrink-0" aria-hidden="true" />
+      </Button>
+    </nav>
+    <ul class="grid gap-4 sm:grid-cols-2">
+      {
+        sortedClients.map((client) => {
+          return (
+            <li class="transition hover:-translate-y-1 active:scale-95 active:opacity-50">
+              <a
+                href={getRelativeLocaleUrl(`${locale}`, `clients/${client.id}`)}
+                aria-label={`Show details for ${client.data.name}`}
+              >
+                <article
+                  class="group relative flex flex-col gap-6 overflow-hidden rounded-lg border border-stone-300 bg-amber-50 px-4 py-6 dark:border-stone-700 dark:bg-stone-900"
+                  style={`--dominant-color: ${client.data.dominantColor.light}; ${client.data.dominantColor.dark ? `--dominant-color-dark: ${client.data.dominantColor.dark}` : `--dominant-color-dark: ${client.data.dominantColor.light}`}`}
+                >
+                  {client.data.featured && (
+                    <Icon
+                      name="ph:star-duotone"
+                      class="absolute top-4 right-4 text-[var(--dominant-color)] select-none dark:text-[var(--dominant-color-dark)]"
+                      aria-hidden="true"
+                    />
+                  )}
+                  <figure class="absolute inset-x-0 -bottom-4 h-3/4 bg-[radial-gradient(ellipse_at_bottom,var(--dominant-color)_0%,transparent_70%)] opacity-15 transition-opacity group-hover:opacity-30 dark:bg-[radial-gradient(ellipse_at_bottom,var(--dominant-color-dark)_0%,transparent_70%)]" />
+                  <figure class="flex h-16 items-center justify-center transition-transform group-hover:scale-105">
+                    {client.data.logoDark ? (
+                      <>
+                        <Image
+                          src={client.data.logo}
+                          alt={client.data.name}
+                          width="128"
+                          height="64"
+                          class="max-h-16 w-fit max-w-32 select-none dark:hidden"
+                        />
+                        <Image
+                          src={client.data.logoDark}
+                          alt={client.data.name}
+                          width="128"
+                          height="64"
+                          class="hidden max-h-16 w-fit max-w-32 select-none dark:block"
+                        />
+                      </>
+                    ) : (
+                      <Image
+                        src={client.data.logo}
+                        alt={client.data.name}
+                        width="128"
+                        height="64"
+                        class="max-h-16 w-fit max-w-32 select-none"
+                      />
+                    )}
+                  </figure>
+                  <h2 class="z-10 flex items-center justify-between font-serif text-xl font-light text-stone-700 italic underline decoration-dashed decoration-from-font underline-offset-4 group-hover:text-[color-mix(in_oklab,var(--dominant-color)_90%,black_10%)] dark:text-stone-100 group-hover:dark:text-[color-mix(in_oklab,var(--dominant-color)_40%,white_60%)]">
+                    {client.data.name}
+                    <Icon
+                      name="ph:arrow-right"
+                      class="text-stone-500 group-hover:bg-[var(--dominant-color)] group-hover:text-[color-mix(in_oklab,var(--dominant-color)_20%,white_80%)] group-hover:dark:bg-[var(--dominant-color-dark)] dark:group-hover:text-[color-mix(in_oklab,var(--dominant-color-dark)_40%,black_60%)]"
+                      aria-hidden="true"
+                    />
+                  </h2>
+                </article>
+              </a>
+            </li>
+          );
+        })
+      }
+    </ul>
+  </section>
+</Layout>

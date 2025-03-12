@@ -1,205 +1,221 @@
 ---
+import { Icon } from "astro-icon/components";
 import { Image } from "astro:assets";
-import { GIT_HASH } from "astro:env/client";
 import { getRelativeLocaleUrl } from "astro:i18n";
-import ImgAvatar from "../../assets/images/avatar.jpeg";
+import ImgWordmarkDark from "../../assets/wordmark-dark.svg";
+import ImgWordmark from "../../assets/wordmark.svg";
+import ThemeSwitcher from "../common/ThemeSwitcher.astro";
 
 const translations = {
   en: {
-    title: "Photographer & Designer",
-    alt: "Portrait of William Hallin",
-    navTitle: "Explore",
-    home: "home",
-    portfolio: "portfolio",
-    clients: "clients",
-    contact: "contact",
-    blog: "blog",
-    legal: "legal",
-    services: "services",
-    general: "General",
-    resources: "Resources",
-    footer_label: "Website Footer",
-    navigation_label: "Website Navigation",
-    contact_label: "Contact Information",
-    social_label: "Social Media Links",
-    github_label: "View source code on GitHub (opens in new window)",
-    newWindow_label: "opens in new window",
+    home: "Home",
+    portfolio: "Portfolio",
+    clients: "Clients",
+    faq: "FAQ",
+    pricing: "Pricing",
+    pricingCalculator: "Pricing Calculator",
+    about: "About me",
+    "hire-me": "Hire me",
+    contact: "Contact me",
+    blog: "Blog",
+    services: "Services",
+    photography: "Photography",
+    video: "Video Production",
+    design: "Digital Design",
+    communication: "Communication",
+    licensing: "Licensing",
+    legal: "Legal",
+    terms: "Terms of Service",
+    privacy: "Privacy Policy",
+    refund: "Refund Policy",
+    socials: "Socials",
+    copyright: "All rights reserved.",
+    navigate: "Navigate to",
+    visit: "Visit my",
+    profile: "profile (opens in new tab)",
+    cookieSettings: "Cookie Settings",
   },
   sv: {
-    title: "Fotograf & Designer",
-    alt: "Porträtt av William Hallin",
-    navTitle: "Utforska",
-    home: "hem",
-    portfolio: "portfölj",
-    clients: "kunder",
-    contact: "kontakt",
-    blog: "blogg",
-    legal: "juridik",
-    services: "tjänster",
-    general: "Allmän",
-    resources: "Resurser",
-    footer_label: "Webbplatsens sidfot",
-    navigation_label: "Webbplatsens navigering",
-    contact_label: "Kontaktinformation",
-    social_label: "Sociala medier länkar",
-    github_label: "Visa källkod på GitHub (öppnas i nytt fönster)",
-    newWindow_label: "öppnas i nytt fönster",
+    home: "Hem",
+    portfolio: "Arbeten",
+    clients: "Kunder",
+    faq: "Vanliga frågor",
+    pricing: "Priser",
+    pricingCalculator: "Priskalkylator",
+    about: "Om mig",
+    "hire-me": "Anställ mig",
+    contact: "Kontaka mig",
+    blog: "Blogg",
+    services: "Tjänster",
+    photography: "Fotografering",
+    video: "Videoproduktion",
+    design: "Digital design",
+    communication: "Kommunikation",
+    licensing: "Licensiering",
+    legal: "Juridik",
+    terms: "Användarvillkor",
+    privacy: "Sekretesspolicy",
+    refund: "Återbetalningspolicy",
+    socials: "Sociala medier",
+    copyright: "Alla rättigheter förbehållna.",
+    navigate: "Gå till",
+    visit: "Besök min",
+    profile: "profil (öppnas i ny flik)",
+    cookieSettings: "Cookie-inställningar",
   },
 };
 
-const navLinks = [
-  {
-    category: `${translations[Astro.currentLocale].general}`,
-    links: [
-      { path: "/", label: `/${translations[Astro.currentLocale].home}` },
-      { path: "portfolio", label: `/${translations[Astro.currentLocale].portfolio}` },
-      { path: "clients", label: `/${translations[Astro.currentLocale].clients}` },
-      // { path: "services", label: `/${translations[Astro.currentLocale].services}` },
-    ],
-  },
-  {
-    category: `${translations[Astro.currentLocale].resources}`,
-    links: [
-      { path: "contact", label: `/${translations[Astro.currentLocale].contact}` },
-      { path: "faq", label: "/faq" },
-      { path: "blog", label: `/${translations[Astro.currentLocale].blog}` },
-      { path: "legal", label: `/${translations[Astro.currentLocale].legal}` },
-    ],
-  },
+const footerLinks = [
+  { category: "company", key: "home", path: "/" },
+  { category: "company", key: "clients", path: "clients" },
+  { category: "company", key: "faq", path: "faq" },
+  { category: "company", key: "pricing", path: "pricing" },
+  { category: "company", key: "pricingCalculator", path: "pricing/calculator" },
+  { category: "personal", key: "about", path: "about" },
+  { category: "personal", key: "hire-me", path: "hire" },
+  { category: "personal", key: "contact", path: "contact" },
+  { category: "personal", key: "portfolio", path: "portfolio" },
+  { category: "personal", key: "blog", path: "blog" },
+  { category: "services", key: "photography", path: "services/photography" },
+  { category: "services", key: "video", path: "services/video" },
+  { category: "services", key: "design", path: "services/design" },
+  { category: "services", key: "communication", path: "services/communication" },
+  { category: "legal", key: "terms", path: "legal/terms-of-service" },
+  { category: "legal", key: "privacy", path: "legal/privacy-policy" },
+  { category: "legal", key: "refund", path: "legal/refund-policy" },
+  { category: "legal", key: "licensing", path: "licensing" },
 ];
 
 const socialLinks = [
-  {
-    href: "mailto:william@hallin.media?subject=Hey!",
-    label: "mailto:",
-    classes: {
-      base: "decoration-amber-500 selection:bg-amber-300 selection:text-amber-700",
-      hover: "hover:bg-amber-500 hover:text-amber-100",
-      active: "active:bg-amber-500 active:text-amber-100",
-    },
-  },
-  {
-    href: "tel:+46706159279",
-    label: "tel:",
-    classes: {
-      base: "decoration-red-500 selection:bg-red-300 selection:text-red-700",
-      hover: "hover:bg-red-500 hover:text-red-100",
-      active: "active:bg-red-500 active:text-red-100",
-    },
-  },
-  {
-    href: "https://www.instagram.com/williamhallinn",
-    label: "instagram",
-    classes: {
-      base: "decoration-pink-500 selection:bg-pink-300 selection:text-pink-700",
-      hover: "hover:bg-pink-500 hover:text-pink-100",
-      active: "active:bg-pink-500 active:text-pink-100",
-    },
-  },
-  {
-    href: "https://www.linkedin.com/in/williamhallin",
-    label: "linkedin",
-    classes: {
-      base: "decoration-blue-500 selection:bg-blue-300 selection:text-blue-700",
-      hover: "hover:bg-blue-500 hover:text-blue-100",
-      active: "active:bg-blue-500 active:text-blue-100",
-    },
-  },
+  { platform: "Instagram", icon: "ph:instagram-logo-duotone", url: "https://www.instagram.com/williamhallinn" },
+  { platform: "YouTube", icon: "ph:youtube-logo-duotone", url: "https://www.youtube.com/@hallinmedia" },
+  { platform: "LinkedIn", icon: "ph:linkedin-logo-duotone", url: "https://www.linkedin.com/in/whallin" },
+  { platform: "GitHub", icon: "ph:github-logo-duotone", url: "https://github.com/whallin" },
 ];
+
+const locale = Astro.currentLocale === "en" || Astro.currentLocale === "sv" ? Astro.currentLocale : "en";
+const buildNumber = import.meta.env.GIT_HASH || "whallin/hallinmedia-website";
 ---
 
-<footer class="mt-12 flex flex-col gap-8" aria-labelledby="footer-heading">
-  <h2 id="footer-heading" class="sr-only">{translations[Astro.currentLocale].footer_label}</h2>
-  <hr class="border-stone-300" aria-hidden="true" />
-  <div class="flex flex-col gap-8 md:justify-between">
-    <section
-      class="flex justify-between gap-4 font-serif text-sm selection:bg-red-300 selection:text-red-800"
-      aria-labelledby="navigation-heading"
-    >
-      <h3 id="navigation-heading" class="font-medium text-stone-700">
-        {translations[Astro.currentLocale].navTitle}
-      </h3>
-      <nav aria-label={translations[Astro.currentLocale].navigation_label} class="text-stone-500">
-        <ul class="flex flex-wrap justify-end gap-6 font-light">
-          {
-            navLinks.map((category) => (
-              <li class="flex flex-col items-end gap-1">
-                <span class="font-medium text-stone-700">{category.category}</span>
-                <ul class="flex flex-col items-end gap-2">
-                  {category.links.map((link) => (
-                    <li>
-                      <a
-                        href={getRelativeLocaleUrl(`${Astro.currentLocale}`, link.path)}
-                        data-umami-event={`footer_nav_${link.path}`}
-                        data-umami-event-origin={Astro.url}
-                        class="underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-50 hover:no-underline active:bg-red-500 active:text-stone-50 active:no-underline"
-                      >
-                        {link.label}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </li>
-            ))
-          }
-        </ul>
-      </nav>
-    </section>
+<footer class="mx-6 mt-12 mb-6 max-w-2xl md:mx-auto">
+  <nav
+    class="mb-8 grid grid-cols-1 gap-8 text-sm font-light text-stone-500 sm:grid-cols-2 md:grid-cols-4 dark:text-stone-400"
+  >
+    {
+      ["company", "personal", "services", "legal"].map((category) => {
+        const categoryTitle =
+          category === "company"
+            ? "HallinMedia"
+            : category === "personal"
+              ? "William Hallin"
+              : translations[locale][category as keyof (typeof translations)[typeof locale]];
 
-    <address
-      class="flex flex-col justify-between gap-4 sm:flex-row sm:items-center"
-      aria-label={translations[Astro.currentLocale].contact_label}
-    >
-      <section aria-labelledby="author-info">
-        <figure class="flex items-center gap-4 font-serif">
-          <Image
-            src={ImgAvatar}
-            alt={translations[Astro.currentLocale].alt}
-            width="128"
-            height="128"
-            class="h-8 w-8 rounded-full border border-stone-300 object-cover drop-shadow-xs select-none"
-          />
-          <figcaption class="flex flex-col selection:bg-red-300 selection:text-red-800">
-            <span id="author-info" class="font-medium">William Hallin</span>
-            <span class="text-sm font-light text-stone-700 italic">
-              {translations[Astro.currentLocale].title}
-            </span>
-          </figcaption>
-        </figure>
-      </section>
-      <section class="space-y-1 sm:text-right" aria-labelledby="social-links-heading">
-        <h3 id="social-links-heading" class="sr-only">
-          {translations[Astro.currentLocale].social_label}
-        </h3>
-        <ul class="flex flex-wrap gap-2 font-serif text-sm" role="list">
-          {
-            socialLinks.map((link) => (
-              <li role="listitem">
+        return (
+          <section aria-labelledby={`footer-${category}-heading`}>
+            <h3 id={`footer-${category}-heading`} class="mb-2 font-semibold">
+              {category === "services" ? (
                 <a
-                  href={link.href}
-                  data-umami-event={`footer_${link.label}`}
-                  data-umami-event-url={link.href}
-                  data-umami-event-origin={Astro.url}
-                  target={link.href.startsWith("http") ? "_blank" : undefined}
-                  class={`underline decoration-dashed decoration-from-font underline-offset-4 ${link.classes.base} ${link.classes.hover} ${link.classes.active}`}
-                  aria-label={`${link.label} (${translations[Astro.currentLocale].newWindow_label})`}
+                  href={getRelativeLocaleUrl(locale, "services")}
+                  class="hover:bg-red-500 hover:text-stone-100 active:opacity-50"
+                  aria-label={translations[locale].services}
                 >
-                  {link.label}
+                  {categoryTitle}
                 </a>
-              </li>
-            ))
-          }
-        </ul>
+              ) : category === "legal" ? (
+                <a
+                  href={getRelativeLocaleUrl(locale, "legal")}
+                  class="hover:bg-red-500 hover:text-stone-100 active:opacity-50"
+                  aria-label={translations[locale].legal}
+                >
+                  {categoryTitle}
+                </a>
+              ) : (
+                categoryTitle
+              )}
+            </h3>
+            <ul class="space-y-1">
+              {footerLinks
+                .filter((link) => link.category === category)
+                .map((item) => (
+                  <li>
+                    <a
+                      href={getRelativeLocaleUrl(locale, item.path)}
+                      class="hover:bg-red-500 hover:text-stone-100 active:opacity-50"
+                      aria-label={`${translations[locale].navigate} ${translations[locale][item.key as keyof (typeof translations)[typeof locale]]}`}
+                    >
+                      {translations[locale][item.key as keyof (typeof translations)[typeof locale]]}
+                    </a>
+                  </li>
+                ))}
+            </ul>
+          </section>
+        );
+      })
+    }
+  </nav>
+  <section
+    class="flex flex-col text-sm font-light text-stone-500 sm:flex-row sm:justify-between sm:gap-4 dark:text-stone-400"
+    aria-labelledby="social-links-heading"
+  >
+    <h3 id="social-links-heading" class="mb-2 font-semibold">{translations[locale].socials}</h3>
+    <ul class="flex flex-col flex-wrap gap-1 sm:flex-row sm:justify-end sm:gap-4">
+      {
+        socialLinks.map((social) => (
+          <li>
+            <a
+              href={social.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="flex w-fit items-center gap-1 hover:bg-red-500 hover:text-stone-100 active:opacity-50"
+              aria-label={`${translations[locale].visit} ${social.platform} ${translations[locale].profile}`}
+            >
+              <Icon name={social.icon} aria-hidden="true" />
+              {social.platform}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+  <section
+    class="mt-8 mb-16 flex flex-col justify-between gap-8 border-t border-stone-200 pt-8 sm:flex-row sm:items-center sm:gap-0 dark:border-stone-700"
+  >
+    <div class="flex flex-col gap-4 sm:flex-row sm:items-center">
+      <div class="flex h-fit items-center justify-between">
         <a
-          href="https://github.com/whallin/hallinmedia-website"
-          data-umami-event="footer_github"
-          data-umami-event-url="https://github.com/whallin/hallinmedia-website"
-          data-umami-event-origin={Astro.url}
-          target="_blank"
-          class="font-mono text-xs font-light text-stone-500 not-italic selection:bg-stone-300 selection:text-stone-800 hover:bg-stone-500 hover:text-stone-100 active:bg-stone-500 active:text-stone-100"
-          aria-label={translations[Astro.currentLocale].github_label}>{GIT_HASH}</a
+          href={getRelativeLocaleUrl(locale, "/")}
+          class="w-fit transition select-none hover:opacity-75 active:scale-95 active:opacity-50"
+          aria-label={`${translations[locale].navigate} ${translations[locale].home}`}
         >
-      </section>
-    </address>
-  </div>
+          <Image src={ImgWordmark} alt="HallinMedia logo" width={64} height={64} class="dark:hidden" />
+          <Image src={ImgWordmarkDark} alt="HallinMedia logo" width={64} height={64} class="hidden dark:block" />
+        </a>
+      </div>
+      <div class="text-sm text-stone-500 dark:text-stone-400">
+        <p>© {new Date().getFullYear()} NWG Digital AB. {translations[locale].copyright}</p>
+        <div
+          class="mt-1 flex flex-wrap items-center gap-2 font-mono text-xs underline decoration-dashed decoration-from-font underline-offset-4"
+        >
+          <a
+            href="https://github.com/whallin/hallinmedia-website"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="hover:bg-stone-600 hover:text-stone-100 active:opacity-50"
+            aria-label={`${translations[locale].visit} GitHub ${translations[locale].profile}`}
+          >
+            {buildNumber}
+          </a>
+          <button
+            type="button"
+            id="hs_show_banner_button"
+            class="cursor-pointer hover:bg-stone-600 hover:text-stone-100 active:opacity-50"
+            onclick="(function(){var _hsp=window._hsp=window._hsp||[];_hsp.push(['showBanner'])})()"
+          >
+            {translations[locale].cookieSettings}
+          </button>
+        </div>
+      </div>
+    </div>
+    <ThemeSwitcher />
+  </section>
 </footer>

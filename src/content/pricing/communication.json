@@ -1,0 +1,215 @@
+{
+  "categoryName": {
+    "en": "Communication",
+    "sv": "Kommunikation"
+  },
+  "icon": "ph:megaphone-duotone",
+  "color": "text-purple-500",
+  "order": 4,
+  "services": [
+    {
+      "name": {
+        "en": "Content Creation",
+        "sv": "Innehållsproduktion"
+      },
+      "description": {
+        "en": "Professional content writing with a journalistic approach, specialising in news articles, blog posts, and business communications. SEO-optimised content available.",
+        "sv": "Professionellt innehållsskapande med journalistiskt perspektiv, specialisering inom nyhetsartiklar, blogginlägg och företagskommunikation. SEO-optimerat innehåll tillgängligt."
+      },
+      "basePrice": 600,
+      "unit": {
+        "en": "article",
+        "sv": "artikel"
+      },
+      "options": [
+        {
+          "name": {
+            "en": "Social Media Content",
+            "sv": "Sociala medier-innehåll"
+          },
+          "price": 600,
+          "unit": {
+            "en": "post",
+            "sv": "inlägg"
+          }
+        },
+        {
+          "name": {
+            "en": "Blog Posts & Articles",
+            "sv": "Blogginlägg & artiklar"
+          },
+          "price": 1500,
+          "unit": {
+            "en": "article",
+            "sv": "artikel"
+          }
+        },
+        {
+          "name": {
+            "en": "Technical Writing",
+            "sv": "Tekniskt skrivande"
+          },
+          "price": 900,
+          "unit": {
+            "en": "page",
+            "sv": "sida"
+          }
+        }
+      ],
+      "addons": [
+        {
+          "name": {
+            "en": "SEO Optimisation",
+            "sv": "SEO-optimering"
+          },
+          "price": 800,
+          "unit": {
+            "en": "article",
+            "sv": "artikel"
+          }
+        },
+        {
+          "name": {
+            "en": "Translation Service",
+            "sv": "Översättningstjänst"
+          },
+          "price": 1.5,
+          "unit": {
+            "en": "word",
+            "sv": "ord"
+          }
+        }
+      ],
+      "note": {
+        "en": "Articles include one round of revisions. Blog posts are 800-1200 words unless specified otherwise. SEO optimisation includes keyword research and meta description.",
+        "sv": "Artiklar inkluderar en revideringsrunda. Blogginlägg är 800-1200 ord om inget annat anges. SEO-optimering inkluderar nyckelordsanalys och metabeskrivning."
+      }
+    },
+    {
+      "name": {
+        "en": "Social Media Management",
+        "sv": "Hantering av sociala medier"
+      },
+      "description": {
+        "en": "Strategic social media management with a focus on engaging storytelling and community building. Includes content planning, creation, and analytics reporting.",
+        "sv": "Strategisk hantering av sociala medier med fokus på engagerande berättande och community-building. Inkluderar innehållsplanering, skapande och analysrapportering."
+      },
+      "basePrice": 2000,
+      "unit": {
+        "en": "month",
+        "sv": "månad"
+      },
+      "options": [
+        {
+          "name": {
+            "en": "Basic Package (2 platforms)",
+            "sv": "Grundpaket (2 plattformar)"
+          },
+          "price": 2000,
+          "unit": {
+            "en": "month",
+            "sv": "månad"
+          }
+        },
+        {
+          "name": {
+            "en": "Premium Package (4 platforms)",
+            "sv": "Premiumpaket (4 plattformar)"
+          },
+          "price": 3000,
+          "unit": {
+            "en": "month",
+            "sv": "månad"
+          }
+        }
+      ],
+      "addons": [
+        {
+          "name": {
+            "en": "Additional Platform",
+            "sv": "Extra plattform"
+          },
+          "price": 600,
+          "unit": {
+            "en": "month",
+            "sv": "månad"
+          }
+        },
+        {
+          "name": {
+            "en": "Paid Advertising Management",
+            "sv": "Hantering av betald annonsering"
+          },
+          "price": 800,
+          "unit": {
+            "en": "month",
+            "sv": "månad"
+          }
+        }
+      ],
+      "note": {
+        "en": "Basic package includes 8 posts per platform monthly. Premium includes 15 posts per platform monthly. Analytics reports provided monthly. Ad spend not included.",
+        "sv": "Grundpaket inkluderar 8 inlägg per plattform månadsvis. Premium inkluderar 15 inlägg per plattform månadsvis. Analysrapporter tillhandahålls månadsvis. Annonskostnader tillkommer."
+      }
+    },
+    {
+      "name": {
+        "en": "Content Strategy",
+        "sv": "Innehållsstrategi"
+      },
+      "description": {
+        "en": "Strategic content planning and analysis for digital platforms. Includes audience analysis and content calendar planning.",
+        "sv": "Strategisk innehållsplanering och analys för digitala plattformar. Inkluderar målgruppsanalys och innehållskalenderplanering."
+      },
+      "basePrice": 2500,
+      "unit": {
+        "en": "project",
+        "sv": "projekt"
+      },
+      "options": [
+        {
+          "name": {
+            "en": "Basic Strategy Package",
+            "sv": "Grundläggande strategipaket"
+          },
+          "price": 2500,
+          "unit": {
+            "en": "package",
+            "sv": "paket"
+          }
+        },
+        {
+          "name": {
+            "en": "Advanced Strategy Package",
+            "sv": "Avancerat strategipaket"
+          },
+          "price": 6000,
+          "unit": {
+            "en": "package",
+            "sv": "paket"
+          }
+        }
+      ],
+      "addons": [
+        {
+          "name": {
+            "en": "Competitor Analysis",
+            "sv": "Konkurrentanalys"
+          },
+          "price": 1500
+        },
+        {
+          "name": {
+            "en": "Content Calendar (3 months)",
+            "sv": "Innehållskalender (3 månader)"
+          },
+          "price": 2500
+        }
+      ],
+      "note": {
+        "en": "Basic package includes 3-month content strategy. Advanced package includes 6-month strategy with quarterly reviews. All documents delivered in both English and Swedish.",
+        "sv": "Grundpaketet inkluderar 3-månaders innehållsstrategi. Avancerat paket inkluderar 6-månaders strategi med kvartalsvisa genomgångar. Alla dokument levereras på både engelska och svenska."
+      }
+    }
+  ]
+}

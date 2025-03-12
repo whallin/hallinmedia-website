@@ -1,0 +1,184 @@
+{
+  "categoryName": {
+    "en": "Photography",
+    "sv": "Fotografering"
+  },
+  "icon": "ph:camera-duotone",
+  "color": "text-red-500",
+  "order": 1,
+  "services": [
+    {
+      "name": {
+        "en": "Product Photography",
+        "sv": "Produktfotografering"
+      },
+      "description": {
+        "en": "Professional product photography optimised for e-commerce and marketing materials, including simple background options and lifestyle setups.",
+        "sv": "Professionell produktfotografering optimerad för e-handel och marknadsföringsmaterial, inklusive enkel bakgrund och lifestyle-uppsättningar."
+      },
+      "basePrice": 350,
+      "unit": {
+        "en": "image",
+        "sv": "bild"
+      },
+      "options": [
+        {
+          "name": {
+            "en": "Basic Product Shot (Simple Background)",
+            "sv": "Grundläggande produktbild (Enkel bakgrund)"
+          },
+          "price": 350,
+          "unit": {
+            "en": "image",
+            "sv": "bild"
+          }
+        },
+        {
+          "name": {
+            "en": "Lifestyle Product Shot",
+            "sv": "Lifestyle produktbild"
+          },
+          "price": 500,
+          "unit": {
+            "en": "image",
+            "sv": "bild"
+          }
+        }
+      ],
+      "note": {
+        "en": "Minimum order of 5 products. Bulk discounts available for 10+ images. Includes basic retouching and two file formats.",
+        "sv": "Minimibeställning 5 produkter. Volymrabatter tillgängliga för 10+ bilder. Inkluderar grundläggande retuschering och två filformat."
+      }
+    },
+    {
+      "name": {
+        "en": "Photo Editing",
+        "sv": "Fotoredigering"
+      },
+      "description": {
+        "en": "Professional photo editing including advanced colour correction, skin retouching, and creative image enhancement. Specialising in commercial and portrait retouching.",
+        "sv": "Professionell fotoredigering inklusive avancerad färgkorrigering, hudretuschering och kreativ bildförbättring. Specialisering inom kommersiell- och porträttretuschering."
+      },
+      "basePrice": 450,
+      "unit": {
+        "en": "hour",
+        "sv": "timme"
+      },
+      "options": [
+        {
+          "name": {
+            "en": "Basic Retouching",
+            "sv": "Grundläggande retuschering"
+          },
+          "price": 450,
+          "unit": {
+            "en": "hour",
+            "sv": "timme"
+          }
+        },
+        {
+          "name": {
+            "en": "Commercial Product Editing",
+            "sv": "Kommersiell produktredigering"
+          },
+          "price": 550,
+          "unit": {
+            "en": "hour",
+            "sv": "timme"
+          }
+        },
+        {
+          "name": {
+            "en": "Advanced Retouching",
+            "sv": "Avancerad retuschering"
+          },
+          "price": 650,
+          "unit": {
+            "en": "hour",
+            "sv": "timme"
+          }
+        }
+      ],
+      "addons": [
+        {
+          "name": {
+            "en": "Background Removal/Replacement",
+            "sv": "Bakgrundsborttagning/ersättning"
+          },
+          "price": 150,
+          "unit": {
+            "en": "image",
+            "sv": "bild"
+          }
+        }
+      ],
+      "note": {
+        "en": "Minimum 1-hour booking per project. Bulk discounts available for 10+ images. Includes up to 2 revision rounds per image. Files delivered in both print and web-ready formats.",
+        "sv": "Minimum 1 timmes bokning per projekt. Volymrabatter tillgängliga för 10+ bilder. Inkluderar upp till 2 revideringsrundor per bild. Filer levereras i både tryck- och webbklart format."
+      }
+    },
+    {
+      "name": {
+        "en": "On-Location Photography - Full Day",
+        "sv": "Platsfotografering - Heldag"
+      },
+      "description": {
+        "en": "Professional photography service for up to 8 hours on location, including professional camera equipment, lighting gear, and backup equipment.",
+        "sv": "Professionell fotograferingstjänst upp till 8 timmar på plats, inklusive professionell kamerautrustning, belysning och reservutrustning."
+      },
+      "basePrice": 4500,
+      "unit": {
+        "en": "day",
+        "sv": "dag"
+      },
+      "options": [
+        {
+          "name": {
+            "en": "Standard Coverage",
+            "sv": "Standardtäckning"
+          },
+          "price": 4500,
+          "unit": {
+            "en": "day",
+            "sv": "dag"
+          }
+        },
+        {
+          "name": {
+            "en": "Extended Coverage (10 hours)",
+            "sv": "Utökad täckning (10 timmar)"
+          },
+          "price": 6000,
+          "unit": {
+            "en": "day",
+            "sv": "dag"
+          }
+        }
+      ],
+      "addons": [
+        {
+          "name": {
+            "en": "Same-Day Preview Selection",
+            "sv": "Förhandsvisning samma dag"
+          },
+          "price": 1200
+        },
+        {
+          "name": {
+            "en": "Extra Photographer",
+            "sv": "Extra fotograf"
+          },
+          "price": 2800,
+          "unit": {
+            "en": "day",
+            "sv": "dag"
+          }
+        }
+      ],
+      "note": {
+        "en": "Includes 25 professionally retouched photographs. Additional images available at a reduced rate. Includes both high-resolution and web-optimised files. Travel costs apply outside Skellefteå municipality.",
+        "sv": "Inkluderar 25 professionellt retuscherade fotografier. Extra bilder tillgängliga till reducerat pris. Inkluderar både högupplösta och webb-optimerade filer. Resekostnader tillkommer utanför Skellefteå kommun."
+      }
+    }
+  ]
+}

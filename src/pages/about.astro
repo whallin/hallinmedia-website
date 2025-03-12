@@ -1,0 +1,93 @@
+---
+import { Icon } from "astro-icon/components";
+import { Picture } from "astro:assets";
+import { getRelativeLocaleUrl } from "astro:i18n";
+import ImgAvatar from "../assets/avatars/william-foto.png";
+import Button from "../components/common/Button.astro";
+import ClientBar from "../components/sections/ClientBar.astro";
+import TechStack from "../components/sections/TechStack.astro";
+import SpotifyPlaying from "../components/SpotifyPlaying.astro";
+import Layout from "../layouts/Layout.astro";
+
+const locale = Astro.currentLocale === "en" || Astro.currentLocale === "sv" ? Astro.currentLocale : "en";
+---
+
+<Layout
+  title="Om William Hallin"
+  description="Lär känna William Hallin - en passionerad fotograf och videoproducent som kombinerar kreativitet med teknisk expertis. Upptäck min resa och hur jag kan hjälpa dig förverkliga dina visioner."
+  header="Om William Hallin"
+  headerIcon="ph:smiley-duotone"
+>
+  <section class="max-w-2xl sm:mx-auto">
+    <article class="flex flex-col-reverse gap-8 sm:flex-row sm:gap-12">
+      <section class="space-y-6" aria-label="Om William">
+        <blockquote class="border-l-4 border-red-500 pl-4 font-serif text-stone-500 italic dark:text-stone-400">
+          "Jag har alltid varit fascinerad av hur man kan berätta historier genom bild och video. Det är mer än bara ett
+          jobb för mig; det är min hobby."
+        </blockquote>
+        <div class="space-y-4">
+          <p class="font-serif text-stone-500 dark:text-stone-400">
+            William Hallin är en frilansande fotograf och videoproducent baserad i Skellefteå, Västerbottens län. Hallin
+            har sedan tidiga år visat stort intresse för mediaproduktion och grafisk design, och detta intresse har
+            följt med honom genom åren.
+          </p>
+          <div class="my-6 flex items-center gap-4">
+            <div class="h-px flex-1 bg-stone-200 dark:bg-stone-700"></div>
+            <Icon name="ph:camera-duotone" class="h-6 w-6 text-red-500" aria-hidden="true" />
+            <div class="h-px flex-1 bg-stone-200 dark:bg-stone-700"></div>
+          </div>
+          <p class="font-serif text-stone-500 dark:text-stone-400">
+            Under de senare åren på gymnasiet började William Hallin på riktigt med sitt frilansande, med starten av
+            aktiebolaget Newgent Digital och HallinMedia som varumärken. Frilansandet började inom live- och
+            TV-produktionsindustrin, men har sakta men säkert övergått till mer generella foto- och videoproduktioner
+            för företagskunder samt journalistiska mediehus av olika slag.
+          </p>
+          <div class="my-6 flex items-center gap-4">
+            <div class="h-px flex-1 bg-stone-200 dark:bg-stone-700"></div>
+            <Icon name="ph:paint-brush-duotone" class="h-6 w-6 text-red-500" aria-hidden="true" />
+            <div class="h-px flex-1 bg-stone-200 dark:bg-stone-700"></div>
+          </div>
+          <p class="font-serif text-stone-500 dark:text-stone-400">
+            Nu är William Hallin {
+              Math.floor((new Date().getTime() - new Date("2005-08-05").getTime()) / (1000 * 60 * 60 * 24 * 365.25))
+            } år och arbetar främst med företagskunder, både lokalt och internationellt, med allt från fotografering och
+            videoproduktion till grafisk design och illustration av informationsmaterial, marknadsföringsmaterial och annat
+            som kan behöva tryckas, skrivas ut eller publiceras på webben.
+          </p>
+          <p class="font-serif text-stone-500 italic dark:text-stone-400">
+            Vilka framtidens kunder är för HallinMedia är oklart. Oavsett om du behöver en bild tagen, en reklamfilm
+            producerad eller en reklamaffisch designad så finns tjänsterna här. Det kanske till och med är så att du är
+            HallinMedias nästa kund?
+          </p>
+        </div>
+      </section>
+      <aside class="flex gap-8 sm:flex-col sm:items-center">
+        <Picture
+          src={ImgAvatar}
+          alt="William Hallin"
+          width={512}
+          height={512}
+          widths={[64, 128, 256, 512]}
+          formats={["avif", "webp", "jpeg"]}
+          loading="eager"
+          class="h-20 w-20 max-w-48 rounded-full select-none sm:h-fit sm:w-fit"
+        />
+        <SpotifyPlaying />
+      </aside>
+    </article>
+    <nav class="mt-8 flex flex-col justify-between gap-2 sm:flex-row" aria-label="Huvudåtgärder">
+      <Button href={getRelativeLocaleUrl(locale, "contact")}>
+        <Icon name="ph:hand-waving-duotone" class="flex-shrink-0" aria-hidden="true" />
+        Kontaka William
+        <Icon name="ph:arrow-right" class="flex-shrink-0" aria-hidden="true" />
+      </Button>
+      <Button href={getRelativeLocaleUrl(locale, "services")} variant="secondary">
+        <Icon name="ph:magic-wand-duotone" class="flex-shrink-0" aria-hidden="true" />
+        Se alla tjänster
+        <Icon name="ph:arrow-right" class="flex-shrink-0" aria-hidden="true" />
+      </Button>
+    </nav>
+  </section>
+  <ClientBar />
+  <TechStack />
+</Layout>

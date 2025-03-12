@@ -1,0 +1,442 @@
+---
+import { Icon } from "astro-icon/components";
+import { Image } from "astro:assets";
+import type { CollectionEntry } from "astro:content";
+import { getRelativeLocaleUrl } from "astro:i18n";
+import Button from "../common/Button.astro";
+import ContactForm from "../form/ContactForm.astro";
+import ProcessSection from "./ProcessSection.astro";
+
+interface Props {
+  service: CollectionEntry<"servicesCollection">;
+  city?: {
+    name: { [key: string]: string };
+    slug: string;
+    localContent: {
+      [key: string]: {
+        heading: string;
+        intro: string;
+        specificBenefits: string[];
+      };
+    };
+  };
+  featuredClients: CollectionEntry<"clientsCollection">[];
+  relatedServices: CollectionEntry<"servicesCollection">[];
+}
+
+const translations = {
+  en: {
+    startProject: "Start your project today",
+    questions: "Schedule a free consultation",
+    keyFeatures: "Key Features",
+    clients: "Featured Clients",
+    featured: "Featured",
+    viewAllClients: "View all clients",
+    pricing: "Pricing",
+    startingFrom: "Starting from",
+    calculateCost: "Calculate cost",
+    requestQuote: "Request quote",
+    readyToStart: "Ready to get started?",
+    relatedServices: "Related Services",
+    availableLocations: "Available locations",
+    currency: "SEK",
+  },
+  sv: {
+    startProject: "Starta ditt projekt idag",
+    questions: "Boka en gratis konsultation",
+    keyFeatures: "Viktiga aspekter",
+    clients: "Utvalda kunder",
+    featured: "Utvald",
+    viewAllClients: "Se alla kunder",
+    pricing: "Priser",
+    startingFrom: "Pris från",
+    calculateCost: "Beräkna kostnad",
+    requestQuote: "Be om offert",
+    readyToStart: "Redo att komma igång?",
+    relatedServices: "Relaterade tjänster",
+    availableLocations: "Tillgängliga platser",
+    currency: "kr",
+  },
+};
+
+const colorVariants = {
+  red: {
+    bg: "bg-red-500/50",
+    text: "text-red-500",
+    border: "border-red-500",
+    accent: "bg-red-500/10 dark:bg-red-500/20",
+    hover: "hover:border-red-500",
+  },
+  blue: {
+    bg: "bg-blue-600/50",
+    text: "text-blue-600",
+    border: "border-blue-600",
+    accent: "bg-blue-600/10 dark:bg-blue-600/20",
+    hover: "hover:border-blue-600",
+  },
+  green: {
+    bg: "bg-green-600/50",
+    text: "text-green-600",
+    border: "border-green-600",
+    accent: "bg-green-600/10 dark:bg-green-600/20",
+    hover: "hover:border-green-600",
+  },
+  purple: {
+    bg: "bg-purple-500/50",
+    text: "text-purple-500",
+    border: "border-purple-500",
+    accent: "bg-purple-500/10 dark:bg-purple-500/20",
+    hover: "hover:border-purple-500",
+  },
+};
+
+const locale = Astro.currentLocale === "en" || Astro.currentLocale === "sv" ? Astro.currentLocale : "en";
+const { service, city, featuredClients, relatedServices } = Astro.props;
+const { data } = service;
+const colors = colorVariants[data.color as keyof typeof colorVariants];
+---
+
+<section class="mx-auto max-w-2xl space-y-16">
+  <section class="space-y-8">
+    <p class="font-serif text-stone-700 dark:text-stone-100" set:html={data.longDescription[locale]} />
+    <nav class="flex flex-col justify-between gap-3 sm:flex-row">
+      <Button href={getRelativeLocaleUrl(locale, "hire")}>
+        <Icon name="ph:handshake-duotone" class="flex-shrink-0" aria-hidden="true" />
+        {translations[locale].startProject}
+        <Icon name="ph:arrow-right" class="flex-shrink-0" aria-hidden="true" />
+      </Button>
+      <Button
+        href="https://meetings.hubspot.com/william-hallin"
+        target="_blank"
+        rel="noopener noreferrer"
+        variant="secondary"
+      >
+        <Icon name="ph:calendar-duotone" class="flex-shrink-0" aria-hidden="true" />
+        {translations[locale].questions}
+        <Icon name="ph:arrow-right" class="flex-shrink-0" aria-hidden="true" />
+      </Button>
+    </nav>
+  </section>
+  {
+    data.keyFeatures && (
+      <section class="space-y-8" aria-labelledby="key-features-heading">
+        <header>
+          <h2
+            id="key-features-heading"
+            class="relative font-serif text-2xl font-semibold text-stone-700 dark:text-stone-100"
+          >
+            <span class="relative z-10 inline-flex items-center gap-2 bg-amber-50 pr-4 dark:bg-stone-900">
+              <Icon name="ph:sparkle-duotone" class={`h-6 w-6 ${colors.text}`} aria-hidden="true" />
+              {translations[locale].keyFeatures}
+            </span>
+            <span class="absolute top-1/2 right-0 left-0 -z-0 h-px bg-stone-200 dark:bg-stone-700" aria-hidden="true" />
+          </h2>
+        </header>
+        <div class="grid gap-4 sm:grid-cols-2">
+          {data.keyFeatures.map((feature) => (
+            <div
+              class={`group rounded-lg border border-stone-200 p-6 transition ${colors.hover} dark:border-stone-700`}
+            >
+              <div class="mb-4 flex items-center gap-3">
+                {feature.icon && (
+                  <span class={`inline-flex rounded-lg p-2 ${colors.accent}`}>
+                    <Icon name={feature.icon} class={`h-5 w-5 ${colors.text}`} aria-hidden="true" />
+                  </span>
+                )}
+                <h3 class="font-serif font-medium text-stone-700 dark:text-stone-100">{feature.title[locale]}</h3>
+              </div>
+              {feature.description && (
+                <p class="font-serif text-stone-500 dark:text-stone-400">{feature.description[locale]}</p>
+              )}
+            </div>
+          ))}
+        </div>
+      </section>
+    )
+  }
+  {
+    city && (
+      <section class="space-y-8" aria-labelledby="local-benefits-heading">
+        <div class={`space-y-4 rounded-lg border ${colors.border} ${colors.accent} p-6`}>
+          <p class="font-serif leading-relaxed text-stone-700 dark:text-stone-100">{city.localContent[locale].intro}</p>
+          <ul class="grid gap-4 sm:grid-cols-2">
+            {city.localContent[locale].specificBenefits.map((benefit) => (
+              <li class="group flex items-start gap-2">
+                <Icon
+                  name="ph:check-circle-duotone"
+                  class={`mt-1 h-5 w-5 flex-shrink-0 ${colors.text}`}
+                  aria-hidden="true"
+                />
+                <span class="text-stone-500 dark:text-stone-400">{benefit}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+    )
+  }
+  {
+    featuredClients.length > 0 && (
+      <section class="space-y-8" aria-labelledby="clients-heading">
+        <header>
+          <h2
+            id="clients-heading"
+            class="relative font-serif text-2xl font-semibold text-stone-700 dark:text-stone-100"
+          >
+            <span class="relative z-10 inline-flex items-center gap-2 bg-amber-50 pr-4 dark:bg-stone-900">
+              <Icon name="ph:users-three-duotone" class={`h-6 w-6 ${colors.text}`} aria-hidden="true" />
+              {translations[locale].clients}
+            </span>
+            <span class="absolute top-1/2 right-0 left-0 -z-0 h-px bg-stone-200 dark:bg-stone-700" aria-hidden="true" />
+          </h2>
+        </header>
+        <div class="grid gap-4 sm:grid-cols-2">
+          {featuredClients.map((client) => (
+            <a
+              href={getRelativeLocaleUrl(locale, `clients/${client.id}`)}
+              class="group relative overflow-hidden rounded-lg border border-stone-200 bg-amber-50/50 p-6 transition hover:-translate-y-1 hover:border-[var(--dominant-color)] active:scale-95 active:opacity-50 dark:border-stone-700 dark:bg-stone-800/50 dark:hover:border-[var(--dominant-color-dark)]"
+              style={`--dominant-color: ${client.data.dominantColor.light}; ${
+                client.data.dominantColor.dark
+                  ? `--dominant-color-dark: ${client.data.dominantColor.dark}`
+                  : `--dominant-color-dark: ${client.data.dominantColor.light}`
+              }`}
+            >
+              <div class="mb-4 flex items-center justify-between">
+                <span class="flex h-4 items-center">
+                  {client.data.logoDark ? (
+                    <>
+                      <Image
+                        src={client.data.logo}
+                        alt={client.data.name}
+                        width={128}
+                        height={48}
+                        class="h-full w-auto object-contain object-left dark:hidden"
+                      />
+                      <Image
+                        src={client.data.logoDark}
+                        alt={client.data.name}
+                        width={128}
+                        height={48}
+                        class="hidden h-full w-auto object-contain object-left dark:block"
+                      />
+                    </>
+                  ) : (
+                    <Image
+                      src={client.data.logo}
+                      alt={client.data.name}
+                      width={128}
+                      height={48}
+                      class="h-full w-auto object-contain object-left"
+                    />
+                  )}
+                </span>
+                {client.data.featured && (
+                  <span class="flex items-center gap-1 rounded-full bg-amber-100 px-2 py-1 text-xs font-medium text-amber-700 dark:bg-amber-900/50 dark:text-amber-100">
+                    <Icon name="ph:star-duotone" class="h-3 w-3" aria-hidden="true" />
+                    {translations[locale].featured}
+                  </span>
+                )}
+              </div>
+              <div class="space-y-2">
+                <h3 class="font-serif text-lg font-medium text-stone-700 group-hover:text-[var(--dominant-color)] dark:text-stone-100 dark:group-hover:text-[var(--dominant-color-dark)]">
+                  {client.data.name}
+                </h3>
+                <p class="line-clamp-2 font-serif text-sm text-stone-500 dark:text-stone-400">
+                  {client.data.description[locale]}
+                </p>
+              </div>
+              {client.data.testimonial && (
+                <blockquote class="relative mt-4 pt-4">
+                  <span class="absolute inset-x-0 top-0 h-px bg-stone-200 dark:bg-stone-700" aria-hidden="true" />
+                  <p class="font-serif text-sm text-stone-500 italic dark:text-stone-400">
+                    "{client.data.testimonial.quote[locale]}"
+                  </p>
+                </blockquote>
+              )}
+            </a>
+          ))}
+        </div>
+        {featuredClients.length === 6 && (
+          <div class="mt-8 flex justify-center">
+            <Button href={getRelativeLocaleUrl(locale, "clients")} variant="secondary">
+              <Icon name="ph:users-three-duotone" class="flex-shrink-0" aria-hidden="true" />
+              {translations[locale].viewAllClients}
+              <Icon name="ph:arrow-right" class="flex-shrink-0" aria-hidden="true" />
+            </Button>
+          </div>
+        )}
+      </section>
+    )
+  }
+  <ProcessSection customSteps={data.processSteps} />
+  {
+    data.pricing && (
+      <section class="space-y-8" aria-labelledby="pricing-heading">
+        <header>
+          <h2
+            id="pricing-heading"
+            class="relative font-serif text-2xl font-semibold text-stone-700 dark:text-stone-100"
+          >
+            <span class="relative z-10 inline-flex items-center gap-2 bg-amber-50 pr-4 dark:bg-stone-900">
+              <Icon name="ph:coins-duotone" class={`h-6 w-6 ${colors.text}`} aria-hidden="true" />
+              {translations[locale].pricing}
+            </span>
+            <span class="absolute top-1/2 right-0 left-0 -z-0 h-px bg-stone-200 dark:bg-stone-700" aria-hidden="true" />
+          </h2>
+        </header>
+        <div
+          class={`group relative overflow-hidden rounded-lg border border-stone-200 transition ${colors.hover} dark:border-stone-700`}
+        >
+          <div
+            class="radial-blob absolute h-96 w-96 -translate-x-1/2 -translate-y-1/2 rounded-full opacity-0 transition-opacity group-hover:opacity-25"
+            style={{
+              background: `radial-gradient(circle, ${
+                data.color === "red"
+                  ? "#dc2626"
+                  : data.color === "blue"
+                    ? "#2563eb"
+                    : data.color === "green"
+                      ? "#16a34a"
+                      : data.color === "purple"
+                        ? "#9333ea"
+                        : "#dc2626"
+              } 0%, transparent 70%)`,
+            }}
+            aria-hidden="true"
+          />
+          <div class="relative z-10 p-6">
+            <div class="flex flex-col items-start justify-between gap-8">
+              <div class="space-y-4">
+                <span class={`inline-flex rounded-lg p-3 ${colors.accent}`}>
+                  <Icon name="ph:coins-duotone" class={`h-6 w-6 ${colors.text}`} aria-hidden="true" />
+                </span>
+                <div class="space-y-2">
+                  <p class="font-serif text-sm text-stone-500 dark:text-stone-400">
+                    {translations[locale].startingFrom}
+                  </p>
+                  <div class="flex items-baseline gap-2">
+                    <p class={`font-handwrite text-4xl ${colors.text}`}>
+                      {data.pricing.startingFrom} {translations[locale].currency}
+                    </p>
+                    <span class="font-serif text-sm text-stone-500 dark:text-stone-400">
+                      /{data.pricing.unit[locale]}
+                    </span>
+                  </div>
+                  {data.pricing.note && (
+                    <p class="font-serif text-sm text-stone-500 dark:text-stone-400">{data.pricing.note[locale]}</p>
+                  )}
+                </div>
+              </div>
+              <div class="flex w-full gap-2">
+                <Button href={getRelativeLocaleUrl(locale, "pricing/calculator")}>
+                  <Icon name="ph:calculator-duotone" class="flex-shrink-0" aria-hidden="true" />
+                  {translations[locale].calculateCost}
+                </Button>
+                <Button href={getRelativeLocaleUrl(locale, "hire")} variant="secondary">
+                  <Icon name="ph:chat-teardrop-dots-duotone" class="flex-shrink-0" aria-hidden="true" />
+                  {translations[locale].requestQuote}
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    )
+  }
+  <section class="space-y-8">
+    <header>
+      <h2 class="relative font-serif text-2xl font-semibold text-stone-700 dark:text-stone-100">
+        <span class="relative z-10 inline-flex items-center gap-2 bg-amber-50 pr-4 dark:bg-stone-900">
+          <Icon name="ph:handshake-duotone" class={`h-6 w-6 ${colors.text}`} aria-hidden="true" />
+          {translations[locale].readyToStart}
+        </span>
+        <span class="absolute top-1/2 right-0 left-0 -z-0 h-px bg-stone-200 dark:bg-stone-700" aria-hidden="true"
+        ></span>
+      </h2>
+    </header>
+    <div class="rounded-lg border border-stone-200 p-6 dark:border-stone-700">
+      <ContactForm />
+    </div>
+  </section>
+  {
+    relatedServices.length > 0 && (
+      <section class="space-y-8" aria-labelledby="related-services-heading">
+        <header>
+          <h2
+            id="related-services-heading"
+            class="relative font-serif text-2xl font-semibold text-stone-700 dark:text-stone-100"
+          >
+            <span class="relative z-10 inline-flex items-center gap-2 bg-amber-50 pr-4 dark:bg-stone-900">
+              <Icon name="ph:link-duotone" class={`h-6 w-6 ${colors.text}`} aria-hidden="true" />
+              {translations[locale].relatedServices}
+            </span>
+            <span class="absolute top-1/2 right-0 left-0 -z-0 h-px bg-stone-200 dark:bg-stone-700" aria-hidden="true" />
+          </h2>
+        </header>
+        <div class="grid gap-4 sm:grid-cols-2">
+          {relatedServices.map((relatedService) => {
+            const relatedColors = colorVariants[relatedService.data.color as keyof typeof colorVariants];
+            return (
+              <a
+                href={getRelativeLocaleUrl(locale, `services/${relatedService.id}`)}
+                class={`group rounded-lg border border-stone-200 p-6 transition ${relatedColors.hover} active:scale-95 active:opacity-50 dark:border-stone-700`}
+              >
+                <div class="flex items-center gap-4">
+                  <span class={`rounded-lg p-3 ${relatedColors.accent}`}>
+                    <Icon name={relatedService.data.icon} class={`h-6 w-6 ${relatedColors.text}`} aria-hidden="true" />
+                  </span>
+                  <div>
+                    <h3 class="font-serif font-medium text-stone-700 dark:text-stone-100">
+                      {relatedService.data.serviceName[locale]}
+                    </h3>
+                    <p class="line-clamp-2 text-sm text-stone-500 dark:text-stone-400">
+                      {relatedService.data.shortDescription[locale]}
+                    </p>
+                  </div>
+                </div>
+              </a>
+            );
+          })}
+        </div>
+      </section>
+    )
+  }
+  {
+    !city && data.cities && (
+      <div class="space-y-6">
+        <h2 class="relative font-serif text-2xl font-semibold text-stone-700 dark:text-stone-100">
+          <span class="relative z-10 inline-flex items-center gap-2 bg-amber-50 pr-4 dark:bg-stone-900">
+            <Icon name="ph:map-pin-duotone" class={`h-6 w-6 ${colors.text}`} aria-hidden="true" />
+            {translations[locale].availableLocations}
+          </span>
+          <span class="absolute top-1/2 right-0 left-0 -z-0 h-px bg-stone-200 dark:bg-stone-700" aria-hidden="true" />
+        </h2>
+        <div class="grid gap-4 sm:grid-cols-2">
+          {data.cities.map((city) => (
+            <a
+              href={getRelativeLocaleUrl(locale, `services/${service.id}/${city.slug}`)}
+              class={`group rounded-lg border border-stone-200 p-6 transition ${colors.hover} active:scale-95 active:opacity-50 dark:border-stone-700`}
+            >
+              <div class="flex flex-col gap-1">
+                <h3 class="font-serif font-medium text-stone-700 dark:text-stone-100">{city.name[locale]}</h3>
+                <p class="line-clamp-2 text-sm text-stone-500 dark:text-stone-400">{city.localContent[locale].intro}</p>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    )
+  }
+</section>
+
+<script>
+  document.querySelectorAll(".radial-blob").forEach((blob) => {
+    const article = blob.closest(".group");
+
+    article?.addEventListener("mousemove", (e) => {
+      const rect = article.getBoundingClientRect();
+      (blob as HTMLElement).style.left = `${(e as MouseEvent).clientX - rect.left}px`;
+      (blob as HTMLElement).style.top = `${(e as MouseEvent).clientY - rect.top}px`;
+    });
+  });
+</script>

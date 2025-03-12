@@ -1,0 +1,149 @@
+---
+import LicenseComparison from "../components/sections/LicenseComparison.astro";
+import LicenseContact from "../components/sections/LicenseContact.astro";
+import LicenseGuidelines from "../components/sections/LicenseGuidelines.astro";
+import LicenseTypes from "../components/sections/LicenseTypes.astro";
+import Layout from "../layouts/Layout.astro";
+
+const licenseTypes = [
+  {
+    icon: "ph:seal-duotone",
+    title: "Standardlicens",
+    description: "Grundläggande användningsrättigheter för definierade ändamål och begränsad tidsram.",
+    includes: [
+      "Webbpublikationer och sociala medier",
+      "Tryckt material i begränsad upplaga (upp till ~1000 ex.)",
+      "Intern företagskommunikation",
+      "12 månaders användningsperiod",
+      "Nationell användning (Sverige)",
+    ],
+    excludes: [
+      "Kommersiella produkter för återförsäljning",
+      "Omfattande reklamkampanjer",
+      "Modifieringar av innehållet",
+      "Vidaredistribution eller överlåtelse till tredje part",
+      "Internationell användning",
+    ],
+    price: "Från 2 000 kr exkl. moms per innehållsobjekt",
+  },
+  {
+    icon: "ph:seal-check-duotone",
+    title: "Utökad licens",
+    description: "Bredare användningsrättigheter för kommersiella tillämpningar och längre varaktighet.",
+    includes: [
+      "Alla standardlicensfunktioner",
+      "Kommersiella produkter för återförsäljning",
+      "Utökade reklamkampanjer",
+      "Mindre innehållsmodifieringar",
+      "24 månaders användningsperiod",
+      "Användning inom EU/EES",
+    ],
+    excludes: [
+      "Exklusiva användningsrättigheter",
+      "Global användning utan begränsningar",
+      "Omfattande innehållsmodifieringar",
+      "Vidaredistribution eller överlåtelse till tredje part",
+    ],
+    price: "Från 6 000 kr exkl. moms per innehållsobjekt",
+  },
+  {
+    icon: "ph:crown-duotone",
+    title: "Exklusiv licens",
+    description: "Exklusiva rättigheter att använda innehåll inom specifika branscher eller territorier.",
+    includes: [
+      "Alla utökade licensfunktioner",
+      "Exklusiva användningsrättigheter inom definierat område",
+      "Bransch- eller territoriell exklusivitet",
+      "Omfattande modifieringsrättigheter",
+      "Förhandlingsbar användningsperiod",
+      "Global användning möjlig",
+    ],
+    excludes: ["Obegränsad global exklusivitet", "Överföring av upphovsrätt", "Permanent överlåtelse av rättigheter"],
+    price: "Från 12 000 kr exkl. moms per innehållsobjekt",
+  },
+];
+
+const comparisonTable = {
+  headers: ["", "Standard", "Utökad", "Exklusiv"],
+  rows: [
+    {
+      feature: "Webbanvändning",
+      standard: { icon: "ph:check-circle-duotone", status: true },
+      extended: { icon: "ph:check-circle-duotone", status: true },
+      exclusive: { icon: "ph:check-circle-duotone", status: true },
+      description: "Användning på webbplatser, bloggar och digitala plattformar",
+    },
+    {
+      feature: "Tryckmaterial",
+      standard: { text: "~1000 ex." },
+      extended: { text: "Obegränsat" },
+      exclusive: { text: "Obegränsat" },
+      description: "Broschyrer, rapporter, visitkort och annat tryckt material",
+    },
+    {
+      feature: "Geografisk omfattning",
+      standard: { icon: "twemoji:flag-sweden", text: "Sverige" },
+      extended: { icon: "twemoji:flag-european-union", text: "EU/EES" },
+      exclusive: { icon: "ph:globe-duotone", status: true },
+      description: "Territorier där innehållet får användas",
+    },
+    {
+      feature: "Produkter för återförsäljning",
+      standard: { icon: "ph:x-circle-duotone", status: false },
+      extended: { icon: "ph:check-circle-duotone", status: true },
+      exclusive: { icon: "ph:check-circle-duotone", status: true },
+      description: "Användning på produkter avsedda för försäljning",
+    },
+    {
+      feature: "Innehållsmodifiering",
+      standard: { icon: "ph:x-circle-duotone", status: false },
+      extended: { text: "Begränsad" },
+      exclusive: { icon: "ph:check-circle-duotone", status: true },
+      description: "Möjlighet att redigera, beskära eller anpassa innehållet",
+    },
+    {
+      feature: "Användningsperiod",
+      standard: { text: "12 mån" },
+      extended: { text: "24 mån" },
+      exclusive: { text: "Förhandlingsbar" },
+      description: "Tidsperiod under vilken innehållet får användas",
+    },
+    {
+      feature: "Modellrättigheter",
+      standard: { text: "Standardavtal" },
+      extended: { text: "Utökade" },
+      exclusive: { text: "Omfattande" },
+      description: "Omfattning av medgivande från avbildade personer",
+    },
+    {
+      feature: "Kvalitetskrav",
+      standard: { text: "Original" },
+      extended: { text: "Hög" },
+      exclusive: { text: "Maximal" },
+      description: "Krav på reproduktionskvalitet och färghantering",
+    },
+    {
+      feature: "Exklusivitet",
+      standard: { icon: "ph:x-circle-duotone", status: false },
+      extended: { icon: "ph:x-circle-duotone", status: false },
+      exclusive: { icon: "ph:check-circle-duotone", status: true },
+      description: "Ensamrätt inom specifikt område eller bransch",
+    },
+  ],
+};
+---
+
+<Layout
+  title="Licensiering av material"
+  description="Flexibla licenslösningar för professionell användning av fotografier, videor och kreativt innehåll. Välj mellan standard-, utökade och exklusiva licenser för ditt företags behov."
+  header="Licensiering"
+  headerIcon="ph:certificate-duotone"
+  headerDescription="Välj rätt licenslösning för ditt företags behov. Från standardlicenser för enkel användning till exklusiva rättigheter - här hittar du flexibla alternativ som passar din verksamhet. Utforska mina licenstyper och få full kontroll över hur du använder ditt kreativa innehåll."
+>
+  <section class="max-w-2xl space-y-8 sm:mx-auto">
+    <LicenseTypes licenseTypes={licenseTypes} />
+    <LicenseComparison headers={comparisonTable.headers} rows={comparisonTable.rows} />
+    <LicenseContact />
+    <LicenseGuidelines />
+  </section>
+</Layout>

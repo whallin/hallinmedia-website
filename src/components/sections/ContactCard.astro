@@ -1,0 +1,71 @@
+---
+import { Icon } from "astro-icon/components";
+
+interface ContactVariant {
+  text: string;
+  border: string;
+}
+
+const contactVariants: Record<string, ContactVariant> = {
+  red: { text: "text-red-500", border: "hover:border-red-500" },
+  green: { text: "text-green-500", border: "hover:border-green-500" },
+  blue: { text: "text-blue-500", border: "hover:border-blue-500" },
+  yellow: { text: "text-yellow-500", border: "hover:border-yellow-500" },
+  pink: { text: "text-pink-500", border: "hover:border-pink-500" },
+  gray: { text: "text-gray-500", border: "hover:border-gray-500" },
+  indigo: { text: "text-indigo-500", border: "hover:border-indigo-500" },
+};
+
+export interface ContactItem {
+  name: string;
+  value: string;
+  icon: string;
+  href: string;
+  color: string;
+}
+
+interface Props {
+  contacts: ContactItem[];
+  layout?: "primary" | "grid";
+}
+
+const { contacts, layout = "primary" } = Astro.props;
+---
+
+{
+  contacts.map((platform) => {
+    const colors = contactVariants[platform.color];
+    return layout === "primary" ? (
+      <a
+        href={platform.href}
+        target="_blank"
+        rel="noopener noreferrer"
+        class={`group flex items-center gap-4 rounded-lg border border-stone-200 p-4 transition ${colors.border} active:scale-95 active:opacity-50 dark:border-stone-700`}
+      >
+        <Icon name={platform.icon} class={`h-6 w-6 flex-shrink-0 ${colors.text}`} aria-hidden="true" />
+        <div class="space-y-1">
+          <div class="font-serif font-medium text-stone-700 dark:text-stone-100">{platform.name}</div>
+          <div class="font-serif text-stone-500 dark:text-stone-400">{platform.value}</div>
+        </div>
+        <Icon
+          name="ph:arrow-right"
+          class="ml-auto h-5 w-5 flex-shrink-0 text-stone-400 transition-transform group-hover:translate-x-1"
+          aria-hidden="true"
+        />
+      </a>
+    ) : (
+      <a
+        href={platform.href}
+        target="_blank"
+        rel="noopener noreferrer"
+        class={`flex items-center gap-3 rounded-lg border border-stone-200 p-3 transition ${colors.border} active:scale-95 active:opacity-50 dark:border-stone-700`}
+      >
+        <Icon name={platform.icon} class={`h-5 w-5 flex-shrink-0 ${colors.text}`} aria-hidden="true" />
+        <div class="space-y-0.5">
+          <div class="font-serif text-sm font-medium text-stone-700 dark:text-stone-100">{platform.name}</div>
+          <div class="font-serif text-sm text-stone-500 dark:text-stone-400">{platform.value}</div>
+        </div>
+      </a>
+    );
+  })
+}

@@ -1,6 +1,7 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
-@plugin "tailwindcss-motion";
+
+@custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
   --font-sans:
@@ -10,6 +11,8 @@
     "Source Serif 4 Variable", ui-serif, Georgia, Cambria, "Times New Roman",
     Times, serif;
   --font-mono:
-    "Geist Mono Variable", ui-monospace, SFMono-Regular, Menlo, Monaco,
-    Consolas, "Liberation Mono", "Courier New", monospace;
+    "Kode Mono Variable", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+  --font-handwrite:
+    "Schoolbell", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
 }

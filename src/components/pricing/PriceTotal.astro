@@ -1,0 +1,62 @@
+---
+const translations = {
+  en: {
+    totalCost: "Estimated total cost",
+    excludingVAT: "Excluding VAT",
+    includingVAT: "Including VAT",
+    VATAmount: "VAT amount",
+    partialVAT: "VAT amount: ",
+    currency: "SEK",
+  },
+  sv: {
+    totalCost: "Uppskattad totalkostnad",
+    excludingVAT: "Exklusive moms",
+    includingVAT: "Inklusive moms",
+    VATAmount: "Momsbelopp",
+    partialVAT: "varav moms: ",
+    currency: "kr",
+  },
+};
+
+const locale = Astro.currentLocale === "en" || Astro.currentLocale === "sv" ? Astro.currentLocale : "en";
+---
+
+<aside
+  class="sticky bottom-8 z-20 rounded-lg border border-stone-200 bg-amber-50/90 p-6 shadow-xs backdrop-blur-sm dark:border-stone-700 dark:bg-stone-800/90"
+>
+  <dl>
+    <div class="flex items-center justify-between">
+      <h3 class="font-serif text-xl font-medium text-stone-700 dark:text-stone-100">
+        {translations[locale].totalCost}
+      </h3>
+      <dd class="font-serif text-3xl font-medium text-stone-700 tabular-nums dark:text-stone-100">
+        <span id="total-price" data-base-price="0" class="max-w-60 truncate">0</span>
+        {" "}{translations[locale].currency}
+      </dd>
+    </div>
+    <div class="flex flex-row flex-wrap items-center justify-between gap-1">
+      <dt class="font-serif text-sm text-stone-500 dark:text-stone-400" id="tax-status-label">
+        {translations[locale].excludingVAT}
+      </dt>
+      <dd id="tax-amount" class="hidden font-serif text-sm text-stone-500 dark:text-stone-400">
+        <span class="sr-only">{translations[locale].VATAmount}</span>
+        {translations[locale].partialVAT}
+        <span id="tax-amount-value" class="tabular-nums">0</span>
+        {" "}{translations[locale].currency}
+      </dd>
+    </div>
+  </dl>
+</aside>
+
+<script define:vars={{ translations, locale }}>
+  document.addEventListener("DOMContentLoaded", () => {
+    const taxStatusLabel = document.getElementById("tax-status-label");
+
+    document.addEventListener("taxStateChanged", (event) => {
+      if (taxStatusLabel) {
+        const { includeTax } = event.detail;
+        taxStatusLabel.textContent = includeTax ? translations[locale].includingVAT : translations[locale].excludingVAT;
+      }
+    });
+  });
+</script>

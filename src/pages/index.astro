@@ -1,106 +1,78 @@
 ---
+import { Icon } from "astro-icon/components";
+import { Picture } from "astro:assets";
 import { getRelativeLocaleUrl } from "astro:i18n";
-import PhHandWavingDuotone from "../components/icons/PhHandWavingDuotone.astro";
-import PhSparkleDuotone from "../components/icons/PhSparkleDuotone.astro";
-import LatestPosts from "../components/sections/LatestPosts.astro";
-import SpotifyPlaying from "../components/sections/SpotifyPlaying.astro";
-import LandingPhotoGrid from "../components/ui/LandingPhotoGrid.astro";
-import MainLayout from "../layouts/MainLayout.astro";
+import ImgAvatar from "../assets/avatars/william-foto.png";
+import Button from "../components/common/Button.astro";
+import LatestBlogPosts from "../components/LatestBlogPosts.astro";
+import ClientBar from "../components/sections/ClientBar.astro";
+import CoreServices from "../components/sections/CoreServices.astro";
+import LandingPhotos from "../components/sections/LandingPhotos.astro";
+import PersonalLetter from "../components/sections/PersonalLetter.astro";
+import Layout from "../layouts/Layout.astro";
 
-const age = new Date().getFullYear() - 2005 - (new Date().getMonth() < 7 ? 1 : 0);
+const locale = Astro.currentLocale === "en" || Astro.currentLocale === "sv" ? Astro.currentLocale : "en";
 ---
 
-<MainLayout
-  title="Home"
-  description="William Hallin is a photographer and designer in Skellefteå, Sweden. He boosts brands by crafting engaging visuals, backed by over five years of experience worldwide. See how HallinMedia can refresh your brand with creative solutions."
+<Layout
+  title="Digital kreatör & fotograf i Skellefteå"
+  description="Expertis inom visuell kommunikation, webbdesign och varumärkesutveckling. Över 4 års erfarenhet av att hjälpa företag växa genom kreativa digitala lösningar."
 >
-  <main class="space-y-12 font-serif" role="main">
-    <header
-      class="flex flex-col-reverse gap-4 selection:bg-red-300 selection:text-red-800 sm:flex-row sm:items-center sm:justify-between"
-      aria-labelledby="main-heading"
-    >
-      <h1 id="main-heading" class="max-w-md text-4xl font-light text-stone-900 italic sm:text-6xl">
-        The details are everything.
-      </h1>
-      <PhHandWavingDuotone
-        class="motion-rotate-loop-16 motion-duration-2000 motion-ease h-8 w-8 text-red-500 sm:h-16 sm:w-16"
-        aria-hidden="true"
-      />
-    </header>
-    <article
-      class="mt-12 space-y-4 text-sm font-light text-stone-700 selection:bg-red-300 selection:text-red-800"
-    >
-      <p>
-        I'm a {age}-year-old <b>photographer</b> and <b>digital designer</b> based in Skellefteå, Sweden.
+  <div class="max-w-2xl sm:mx-auto" aria-labelledby="intro-heading">
+    <div class="space-y-4">
+      <div class="flex flex-col gap-4">
+        <Picture
+          src={ImgAvatar}
+          alt="William Hallin"
+          width={32}
+          height={32}
+          widths={[32, 64, 128]}
+          formats={["avif", "webp", "jpeg"]}
+          loading="eager"
+          class="rounded-full select-none"
+          aria-hidden="true"
+        />
+        <h1 id="intro-heading" class="w-full font-serif font-semibold text-stone-700 italic dark:text-stone-100">
+          <span class="group relative block overflow-hidden">
+            <span class="inline-block transition-transform duration-300 group-hover:-translate-y-full">
+              William Hallin
+            </span>
+            <span
+              class="absolute left-0 inline-block translate-y-full transition-transform duration-300 group-hover:translate-y-0"
+            >
+              HallinMedia
+            </span>
+          </span>
+        </h1>
+      </div>
+      <p class="font-serif text-stone-500 dark:text-stone-400">
+        Jag skapar <a
+          href={getRelativeLocaleUrl(locale, "portfolio")}
+          class="inline-block text-red-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-100 active:opacity-50"
+          >engagerade visuella upplevelser
+        </a> för varumärken och företag. Med mer än 5 års erfarenhet bakom mig har jag haft nöjet att arbeta med <a
+          href={getRelativeLocaleUrl(locale, "clients")}
+          class="text-red-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-100 active:opacity-50"
+          >kunder över hela världen</a
+        > för att hjälpa dem väcka liv i sina varumärken och få sin verksamhet växa genom effektiv kommunikation.
       </p>
-      <p>
-        I craft engaging <a
-          href={getRelativeLocaleUrl(`${Astro.currentLocale}`, "portfolio")}
-          data-umami-event="landing_portfolio"
-          data-umami-event-origin={Astro.url}
-          class="text-red-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-50 active:opacity-75"
-          >visual experiences</a
-        > for brands and businesses. With 5+ years of experience under my belt, I've had the pleasure
-        of working with <a
-          href={getRelativeLocaleUrl(`${Astro.currentLocale}`, "clients")}
-          data-umami-event="landing_clients"
-          data-umami-event-origin={Astro.url}
-          class="text-red-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-50 active:opacity-75"
-          >clients from all around the globe</a
-        >, helping them bring their brand to life and grow their business through effective
-        communication.
-      </p>
-      <p>
-        When I'm not busy creating, you'll likely <a
-          href="https://www.instagram.com/williamhallinn"
-          data-umami-event="landing_instagram"
-          data-umami-event-url="https://www.instagram.com/williamhallinn"
-          data-umami-event-origin={Astro.url}
-          target="_blank"
-          class="text-red-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-50 active:opacity-75"
-          >find me out and about with my camera</a
-        >, capturing the beauty around me—or <a
-          href="#blog"
-          data-umami-event="landing_latest-blog"
-          data-umami-event-origin={Astro.url}
-          class="text-red-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-50 active:opacity-75"
-          >writing about the things I love</a
-        >.
-      </p>
-    </article>
-    <nav
-      class="flex flex-col gap-2 text-sm font-light selection:bg-red-300 selection:text-red-800 sm:flex-row"
-      aria-label="Main navigation"
-    >
-      <a
-        href={getRelativeLocaleUrl(`${Astro.currentLocale}`, "contact")}
-        data-umami-event="landing_cta_contact"
-        data-umami-event-origin={Astro.url}
-        class="inline-flex items-center justify-center gap-2 rounded-md border bg-red-500 px-4 py-2 text-stone-50 transition hover:bg-red-700 active:scale-95 active:bg-red-700 sm:w-full"
-      >
-        <PhHandWavingDuotone class="h-4 w-4" />
-        Contact me
-      </a>
-      <a
-        href={getRelativeLocaleUrl(`${Astro.currentLocale}`, "portfolio")}
-        data-umami-event="landing_cta_portfolio"
-        data-umami-event-origin={Astro.url}
-        class="inline-flex items-center justify-center gap-2 rounded-lg border border-red-300 px-4 py-2 transition hover:border-red-500 hover:text-red-700 active:scale-95 active:border-red-500 active:text-red-700 sm:w-full"
-      >
-        <PhSparkleDuotone class="h-4 w-4" />
-        Browse portfolio
-      </a>
+    </div>
+    <nav class="mt-8 flex flex-col justify-between gap-2 sm:flex-row" aria-label="Huvudåtgärder">
+      <Button href={getRelativeLocaleUrl(locale, "contact")}>
+        <Icon name="ph:hand-waving-duotone" class="flex-shrink-0" aria-hidden="true" />
+        Kontakta mig
+        <Icon name="ph:arrow-right" class="flex-shrink-0" aria-hidden="true" />
+      </Button>
+      <Button href={getRelativeLocaleUrl(locale, "portfolio")} variant="secondary">
+        <Icon name="ph:sparkle-duotone" class="flex-shrink-0" aria-hidden="true" />
+        Bläddra i min portfölj
+        <Icon name="ph:arrow-right" class="flex-shrink-0" aria-hidden="true" />
+      </Button>
     </nav>
-    <aside aria-label="Currently playing on Spotify">
-      <SpotifyPlaying />
-    </aside>
-    <section aria-labelledby="photo-grid-heading">
-      <h2 id="photo-grid-heading" class="sr-only">Photo gallery</h2>
-      <LandingPhotoGrid />
-    </section>
-    <section id="blog" aria-labelledby="blog-heading">
-      <h2 id="blog-heading" class="sr-only">Latest blog posts</h2>
-      <LatestPosts />
-    </section>
-  </main>
-</MainLayout>
+  </div>
+  <ClientBar />
+  <LandingPhotos />
+  <PersonalLetter />
+  <CoreServices />
+  <LatestBlogPosts />
+</Layout>

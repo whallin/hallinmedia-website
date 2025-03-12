@@ -1,0 +1,123 @@
+---
+import { Picture } from "astro:assets";
+import ImgDSC00534 from "../../assets/landing-photo-grid/DSC00534.jpg";
+import ImgDSC01278 from "../../assets/landing-photo-grid/DSC01278.jpg";
+import ImgDSC02052 from "../../assets/landing-photo-grid/DSC02052.jpg";
+import ImgDSC02114 from "../../assets/landing-photo-grid/DSC02114.jpg";
+import ImgDSC02239 from "../../assets/landing-photo-grid/DSC02239.jpg";
+import ImgDSC02343 from "../../assets/landing-photo-grid/DSC02343.jpg";
+import ImgDSC03000 from "../../assets/landing-photo-grid/DSC03000.jpg";
+import ImgDSC03216 from "../../assets/landing-photo-grid/DSC03216.jpg";
+import ImgDSC03640 from "../../assets/landing-photo-grid/DSC03640.jpg";
+
+const photos = [
+  {
+    src: ImgDSC03000,
+    settings: "ISO 3200, 1/200s, f/5.6",
+    model: "Sony A7IV",
+  },
+  {
+    src: ImgDSC02114,
+    settings: "ISO 8000, 1/100s, f/6.3",
+    model: "Sony A7IV",
+  },
+  {
+    src: ImgDSC00534,
+    settings: "ISO 8000, 1/125s, f/5.6",
+    model: "Sony A7IV",
+  },
+  {
+    src: ImgDSC02239,
+    settings: "ISO 2000, 1/50s, f/5.6",
+    model: "Sony A7IV",
+  },
+  {
+    src: ImgDSC03216,
+    settings: "ISO 6400, 1/200s, f/5.6",
+    model: "Sony A7IV",
+  },
+  {
+    src: ImgDSC02343,
+    settings: "ISO 1250, 1/80s, f/5.6",
+    model: "Sony A7IV",
+  },
+  {
+    src: ImgDSC01278,
+    settings: "ISO 100, 1/6s, f/22.0",
+    model: "Sony A7IV",
+  },
+  {
+    src: ImgDSC02052,
+    settings: "ISO 12k, 1/100s, f/6.3",
+    model: "Sony A7IV",
+  },
+  {
+    src: ImgDSC03640,
+    settings: "ISO 6400, 1/320s, f/5.6",
+    model: "Sony A7IV",
+  },
+];
+
+const translations = {
+  en: {
+    photo_gallery: "Photo gallery",
+    photo_list: "List of photos",
+    photo_item: "Photo {index} - Click to view larger",
+    photo_viewer: "Photo viewer",
+    photo_settings: "Photo settings",
+    camera_model: "Camera model",
+    enlarged_photo: "Enlarged photo",
+  },
+  sv: {
+    photo_gallery: "Fotogalleri",
+    photo_list: "Lista med foton",
+    photo_item: "Foto {index} - Klicka för att se större",
+    photo_viewer: "Fotovisare",
+    photo_settings: "Fotoinställningar",
+    camera_model: "Kameramodell",
+    enlarged_photo: "Förstorat foto",
+  },
+};
+
+const locale = Astro.currentLocale === "en" || Astro.currentLocale === "sv" ? Astro.currentLocale : "en";
+
+// TODO: Add a modal for enlarging the photos - alternatively, just zoom in on the image in the same container
+---
+
+<section class="@container" aria-label={translations[locale].photo_gallery}>
+  <article
+    class="grid max-w-3xl gap-2 sm:mx-auto @md:grid-cols-2 @xl:grid-cols-3"
+    role="list"
+    aria-label={translations[locale].photo_list}
+  >
+    {
+      photos.map((photo, index) => (
+        <figure
+          class="group relative cursor-pointer overflow-hidden transition duration-300 hover:-translate-y-1 hover:shadow-xl @md:[&:nth-last-child(1):nth-child(odd)]:col-span-2 @xl:[&:nth-last-child(1):nth-child(odd)]:col-span-1"
+          data-settings={photo.settings}
+          data-model={photo.model}
+          data-index={index}
+          role="listitem"
+          tabindex="0"
+        >
+          <Picture
+            src={photo.src}
+            alt={translations[locale].photo_item.replace("{index}", (index + 1).toString())}
+            width={2048}
+            height={2048}
+            widths={[128, 256, 512, 1024, 2048]}
+            formats={["avif", "webp", "jpeg"]}
+            loading={index < 3 ? "eager" : "lazy"}
+            class="aspect-square w-full rounded-sm object-cover select-none"
+          />
+          <figcaption class="absolute right-1 bottom-1 translate-y-4 rounded bg-stone-900/50 px-1.5 py-0.5 font-mono text-[11px] text-stone-100 opacity-0 backdrop-blur transition delay-100 duration-300 group-hover:translate-0 group-hover:opacity-100">
+            {photo.settings}
+          </figcaption>
+          <figcaption class="absolute top-1 left-1 -translate-y-4 rounded bg-stone-900/50 px-1.5 py-0.5 font-mono text-[11px] text-stone-100 opacity-0 backdrop-blur transition delay-100 duration-300 group-hover:translate-0 group-hover:opacity-100">
+            {photo.model}
+          </figcaption>
+        </figure>
+      ))
+    }
+  </article>
+</section>

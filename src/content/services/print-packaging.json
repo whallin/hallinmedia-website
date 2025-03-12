@@ -1,0 +1,161 @@
+{
+  "serviceName": {
+    "en": "Print Design",
+    "sv": "Tryckdesign"
+  },
+  "shortDescription": {
+    "en": "Transform your products into eye-catching packages that customers can't resist. From shelf-ready designs to sustainable solutions, we'll make your brand stand out.",
+    "sv": "Förvandla dina produkter till iögonfallande förpackningar som kunderna inte kan motstå. Från butiksfärdiga designer till hållbara lösningar hjälper vi ditt varumärke att sticka ut."
+  },
+  "longDescription": {
+    "en": "Your product packaging is often the first thing customers see and touch. It needs to grab attention, tell your story, and protect what's inside—all whilst looking brilliant.<br /><br />Whether you need retail packaging that flies off the shelves, promotional materials that make an impact, or eco-friendly solutions that align with your values, I'll help create designs that work as hard as you do.<br /><br />Every project starts with understanding your brand and customers, leading to packaging that not only looks fantastic but also performs brilliantly in the real world.",
+    "sv": "Din produktförpackning är ofta det första kunderna ser och rör vid. Den måste fånga uppmärksamhet, berätta din historia och skydda innehållet—allt medan den ser strålande ut.<br /><br />Oavsett om du behöver butiksförpackningar som flyger från hyllorna, reklamaterial som gör intryck eller miljövänliga lösningar som passar dina värderingar, hjälper jag dig skapa designer som jobbar lika hårt som du.<br /><br />Varje projekt börjar med att förstå ditt varumärke och dina kunder, vilket leder till förpackningar som inte bara ser fantastiska ut utan också presterar briljant i verkliga världen."
+  },
+  "icon": "ph:package-duotone",
+  "color": "green",
+  "pricing": {
+    "startingFrom": 5000,
+    "unit": {
+      "en": "project",
+      "sv": "projekt"
+    },
+    "note": {
+      "en": "Includes concept development, print-ready files, and production specifications. Material samples and print tests quoted separately. Multiple design variations available.",
+      "sv": "Inkluderar konceptutveckling, tryckfärdiga filer och produktionsspecifikationer. Materialprover och trycktester offereras separat. Flera designvariationer tillgängliga."
+    }
+  },
+  "keyFeatures": [
+    {
+      "title": {
+        "en": "Stand out on the shelf",
+        "sv": "Stick ut i hyllan"
+      },
+      "description": {
+        "en": "Eye-catching designs that make your products impossible to ignore, helping you attract customers and boost sales.",
+        "sv": "Iögonfallande designer som gör dina produkter omöjliga att ignorera, hjälper dig attrahera kunder och öka försäljningen."
+      },
+      "icon": "ph:shopping-bag-duotone"
+    },
+    {
+      "title": {
+        "en": "Earth-friendly solutions",
+        "sv": "Miljövänliga lösningar"
+      },
+      "description": {
+        "en": "I help you choose sustainable materials and efficient designs that protect both your products and our planet.",
+        "sv": "Jag hjälper dig välja hållbara material och effektiva designer som skyddar både dina produkter och vår planet."
+      },
+      "icon": "ph:leaf-duotone"
+    },
+    {
+      "title": {
+        "en": "Perfect production",
+        "sv": "Perfekt produktion"
+      },
+      "description": {
+        "en": "Get designs that look fantastic and are ready to print, with all the technical details sorted for smooth manufacturing.",
+        "sv": "Få designer som ser fantastiska ut och är redo att tryckas, med alla tekniska detaljer ordnade för smidig tillverkning."
+      },
+      "icon": "ph:gear-duotone"
+    },
+    {
+      "title": {
+        "en": "Cost-effective quality",
+        "sv": "Kostnadseffektiv kvalitet"
+      },
+      "description": {
+        "en": "Expert guidance on materials and production methods to achieve the best results within your budget.",
+        "sv": "Expert vägledning om material och produktionsmetoder för att uppnå bästa resultat inom din budget."
+      },
+      "icon": "ph:currency-circle-dollar-duotone"
+    }
+  ],
+  "processSteps": [
+    {
+      "title": {
+        "en": "Plan your project",
+        "sv": "Planera ditt projekt"
+      },
+      "description": {
+        "en": "We discuss your requirements and goals to determine the best materials and design approach for your needs.",
+        "sv": "Vi diskuterar dina krav och mål för att bestämma de bästa materialen och designtillvägagångssättet för dina behov."
+      }
+    },
+    {
+      "title": {
+        "en": "Create & review",
+        "sv": "Skapa & granska"
+      },
+      "description": {
+        "en": "Developing design concepts and making adjustments based on your feedback to get the perfect result.",
+        "sv": "Utvecklar designkoncept och gör justeringar baserat på din feedback för att få det perfekta resultatet."
+      }
+    },
+    {
+      "title": {
+        "en": "Perfect & prepare",
+        "sv": "Perfektion & förberedelse"
+      },
+      "description": {
+        "en": "Finalizing designs and preparing all technical specifications for production.",
+        "sv": "Slutför designer och förbereder alla tekniska specifikationer för produktion."
+      }
+    },
+    {
+      "title": {
+        "en": "Print & deliver",
+        "sv": "Tryck & leverera"
+      },
+      "description": {
+        "en": "Overseeing the printing process and ensuring quality delivery of your final products.",
+        "sv": "Övervakar tryckprocessen och säkerställer kvalitetsleverans av dina slutprodukter."
+      }
+    }
+  ],
+  "cta": {
+    "en": "Design your packaging",
+    "sv": "Designa din förpackning"
+  },
+  "relatedServices": ["design", "brand-identity", "document-design"],
+  "featuredClients": [
+    "24vision",
+    "conodra",
+    "sannegardens-pizzeria",
+    "the-babes"
+  ],
+  "featured": false,
+  "seo": {
+    "en": {
+      "title": "Bespoke Packaging Design Services - Creative Print Solutions",
+      "description": "Transform your product presentation with expertly crafted packaging designs that captivate customers and elevate your brand. Specialising in sustainable materials and innovative print solutions.",
+      "keywords": [
+        "bespoke packaging",
+        "creative print solutions",
+        "product packaging design",
+        "sustainable packaging",
+        "retail display design",
+        "custom packaging solutions",
+        "brand packaging services",
+        "eco-conscious design",
+        "professional print design",
+        "packaging consultation"
+      ]
+    },
+    "sv": {
+      "title": "Skräddarsydd förpackningsdesign - Kreativa trycklösningar",
+      "description": "Förvandla din produktpresentation med expertdesignade förpackningar som fängslar kunder och lyfter ditt varumärke. Specialiserade på hållbara material och innovativa trycklösningar.",
+      "keywords": [
+        "skräddarsydd förpackning",
+        "kreativa trycklösningar",
+        "produktförpackningsdesign",
+        "hållbar förpackning",
+        "butiksexponering",
+        "anpassade förpackningar",
+        "varumärkesförpackning",
+        "miljömedveten design",
+        "professionell tryckdesign",
+        "förpackningskonsultation"
+      ]
+    }
+  }
+}

@@ -1,0 +1,182 @@
+---
+import { Icon } from "astro-icon/components";
+import { Picture } from "astro:assets";
+import { getCollection, render } from "astro:content";
+import { getRelativeLocaleUrl } from "astro:i18n";
+import Layout from "../../layouts/Layout.astro";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("blogSvCollection");
+  return posts.map((post) => ({
+    params: { id: post.id },
+    props: { post },
+  }));
+}
+
+const locale = Astro.currentLocale === "en" || Astro.currentLocale === "sv" ? Astro.currentLocale : "en";
+const { post } = Astro.props;
+const { Content } = await render(post);
+
+const calculateReadTime = (content: string) => {
+  const wordCount = content.split(/\s+/).length;
+  return Math.ceil(wordCount / 200);
+};
+
+const formattedDate = new Date(post.data.publishedDate).toLocaleDateString(locale, {
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+});
+
+const relatedPosts = post.data.relatedPosts
+  ? await getCollection("blogSvCollection", ({ id }) => post.data.relatedPosts?.includes(id))
+  : [];
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  mainEntityOfPage: {
+    "@type": "WebPage",
+    "@id": Astro.url,
+  },
+  headline: post.data.title,
+  description: post.data.description,
+  image: post.data.featuredImage.src,
+  author: {
+    "@type": "Person",
+    name: post.data.author,
+    url: "https://hallin.media/avatar.jpeg",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "HallinMedia",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://hallin.media/meta.png",
+    },
+  },
+  datePublished: new Date(post.data.publishedDate).toISOString().split("T")[0],
+  dateModified: new Date(post.data.updatedDate || post.data.publishedDate).toISOString().split("T")[0],
+};
+---
+
+<Layout
+  title=`${post.data.seo?.title || post.data.title} - Blogg`
+  description={post.data.seo?.description || post.data.description}
+  keywords={post.data.seo?.keywords || []}
+  article={true}
+  schema={articleSchema}
+>
+  <article class="mx-auto max-w-2xl space-y-12 break-words">
+    <header class="space-y-6">
+      <div class="space-y-4">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <span
+            class="inline-flex items-center rounded-full bg-amber-100 px-3 py-1 text-sm font-medium text-amber-800 dark:bg-amber-900 dark:text-amber-100"
+          >
+            {post.data.category}
+          </span>
+          <time class="flex items-center gap-2 font-mono text-sm text-stone-500 dark:text-stone-400">
+            <Icon name="ph:clock-duotone" class="h-5 w-5 text-red-500" aria-hidden="true" />
+            <span>{calculateReadTime(post.body || "")} min läsning</span>
+          </time>
+        </div>
+        <h1 class="font-serif text-4xl font-semibold text-stone-700 dark:text-stone-100">
+          {post.data.title}
+        </h1>
+        <p class="font-serif text-lg text-stone-500 dark:text-stone-400">
+          {post.data.description}
+        </p>
+      </div>
+      <div class="flex items-center gap-4">
+        <Icon name="ph:user-duotone" class="h-6 w-6 text-red-500" aria-hidden="true" />
+        <div>
+          <span class="font-serif font-medium text-stone-700 dark:text-stone-100">{post.data.author}</span>
+          <time datetime={post.data.publishedDate} class="block font-mono text-sm text-stone-500 dark:text-stone-400">
+            {formattedDate}
+          </time>
+        </div>
+      </div>
+    </header>
+    <figure>
+      <Picture
+        src={post.data.featuredImage}
+        alt={post.data.featuredImageAlt}
+        width={1920}
+        height={1920}
+        widths={[640, 768, 1024, 1280, 1920]}
+        formats={["avif", "webp"]}
+        class="aspect-video w-full rounded-lg object-cover select-none"
+      />
+    </figure>
+    <main
+      class="prose prose-stone prose-li:text-stone-500 prose-li:dark:text-stone-400 prose-li:font-serif dark:prose-invert prose-headings:text-stone-700 prose-headings:dark:text-stone-100 prose-headings:font-serif prose-p:text-stone-500 prose-p:dark:text-stone-400 prose-p:font-serif prose-a:text-red-500 prose-a:underline prose-a:decoration-dashed prose-a:decoration-from-font prose-a:underline-offset-4 prose-a:hover:bg-red-500 prose-a:hover:text-stone-100 prose-a:active:opacity-50"
+    >
+      <Content />
+    </main>
+    <footer class="space-y-16 border-t border-stone-200 pt-12 dark:border-stone-700">
+      <script
+        src="https://giscus.app/client.js"
+        data-repo="whallin/hallinmedia-website"
+        data-repo-id="R_kgDOKc4lgw"
+        data-category="Giscus Comments"
+        data-category-id="DIC_kwDOKc4lg84Ca-9R"
+        data-mapping="pathname"
+        data-strict="1"
+        data-reactions-enabled="0"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="gruvbox_light"
+        data-lang="en"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async></script>
+      <section class="space-y-4">
+        <h2 class="relative font-serif text-2xl font-semibold text-stone-700 dark:text-stone-100">
+          <span class="relative z-10 inline-flex items-center gap-2 bg-amber-50 pr-4 dark:bg-stone-900">
+            <Icon name="ph:tag-duotone" class="h-6 w-6 text-red-500" aria-hidden="true" />
+            Taggar
+          </span>
+          <span class="absolute top-1/2 right-0 left-0 -z-0 h-px bg-stone-200 dark:bg-stone-700" aria-hidden="true"
+          ></span>
+        </h2>
+        <ul class="flex flex-wrap gap-2">
+          {
+            post.data.tags.map((tag: string) => (
+              <li class="rounded-full bg-amber-100/50 px-3 py-1 text-sm text-stone-700 dark:bg-stone-800 dark:text-stone-300">
+                #{tag}
+              </li>
+            ))
+          }
+        </ul>
+      </section>
+      {
+        relatedPosts.length > 0 && (
+          <section class="space-y-4">
+            <h2 class="relative font-serif text-2xl font-semibold text-stone-700 dark:text-stone-100">
+              <span class="relative z-10 inline-flex items-center gap-2 bg-amber-50 pr-4 dark:bg-stone-900">
+                <Icon name="ph:link-duotone" class="h-6 w-6 text-red-500" aria-hidden="true" />
+                Relaterade inlägg
+              </span>
+              <span
+                class="absolute top-1/2 right-0 left-0 -z-0 h-px bg-stone-200 dark:bg-stone-700"
+                aria-hidden="true"
+              />
+            </h2>
+            <nav class="grid gap-4 sm:grid-cols-2">
+              {relatedPosts.map((relatedPost) => (
+                <a
+                  href={getRelativeLocaleUrl(locale, `blog/${relatedPost.id}`)}
+                  class="group relative overflow-hidden rounded-lg border border-stone-200 bg-amber-100/25 p-6 transition hover:border-red-500/50 active:scale-95 active:opacity-50 dark:border-stone-700 dark:bg-stone-800"
+                >
+                  <h3 class="mb-2 font-serif text-xl text-stone-700 dark:text-stone-100">{relatedPost.data.title}</h3>
+                  <p class="font-serif text-sm text-stone-500 dark:text-stone-400">{relatedPost.data.description}</p>
+                </a>
+              ))}
+            </nav>
+          </section>
+        )
+      }
+    </footer>
+  </article>
+</Layout>

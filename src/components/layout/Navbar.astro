@@ -1,115 +1,73 @@
 ---
 import { getRelativeLocaleUrl } from "astro:i18n";
+import LanguageSelector from "../common/LanguageSelector.astro";
 
 const translations = {
   en: {
     home: "home",
-    portfolio: "portfolio",
-    clients: "clients",
-    contact: "contact",
-    main_nav_label: "Main navigation",
-    lang_switch_en: "Switch to English",
-    lang_switch_sv: "Switch to Swedish",
-    new_window: "opens in new window",
+    portfolio: "works",
+    services: "services",
+    contact: "hire-me",
+    navigate: "Navigate to",
+    page: "page",
+    mainNavigation: "Main navigation",
+    navigationMenu: "Navigation menu",
   },
   sv: {
     home: "hem",
-    portfolio: "portfölj",
-    clients: "kunder",
-    contact: "kontakt",
-    main_nav_label: "Huvudnavigering",
-    lang_switch_en: "Byt till engelska",
-    lang_switch_sv: "Byt till svenska",
-    new_window: "öppnas i nytt fönster",
+    portfolio: "arbeten",
+    services: "tjänster",
+    contact: "anställ-mig",
+    navigate: "Gå till",
+    page: "sida",
+    mainNavigation: "Huvudnavigering",
+    navigationMenu: "Navigeringsmeny",
   },
 };
+
+const navItems = [
+  { key: "home", path: "/" },
+  { key: "portfolio", path: "portfolio" },
+  { key: "services", path: "services" },
+  { key: "contact", path: "hire" },
+];
+
+const locale = Astro.currentLocale === "en" || Astro.currentLocale === "sv" ? Astro.currentLocale : "en";
 ---
 
-<header class="mb-8">
+<header class="mx-6 mt-12 mb-6 max-w-2xl md:mx-auto">
   <nav
-    aria-label={translations[Astro.currentLocale].main_nav_label}
-    class="flex justify-between font-mono text-sm font-light text-stone-500"
+    class="flex justify-between gap-6 font-mono text-sm font-light text-stone-500 dark:text-stone-400"
+    aria-label={translations[locale].mainNavigation}
   >
-    <menu class="flex flex-wrap gap-2 selection:bg-red-300 selection:text-red-800 sm:gap-4">
-      <li>
-        <a
-          href={getRelativeLocaleUrl(`${Astro.currentLocale}`, "/")}
-          aria-current={Astro.url.pathname === "/" ||
-          Astro.url.pathname === `/${Astro.currentLocale}/` ||
-          Astro.url.pathname === `/${Astro.currentLocale}`
-            ? "page"
-            : undefined}
-          class="hover:bg-red-500 hover:text-stone-50 active:bg-red-500 active:text-stone-50 active:opacity-50"
-          class:list={[
-            Astro.url.pathname === "/" ||
-            Astro.url.pathname === `/${Astro.currentLocale}/` ||
-            Astro.url.pathname === `/${Astro.currentLocale}`
-              ? "text-red-500"
-              : "",
-          ]}>/{translations[Astro.currentLocale].home}</a
-        >
-      </li>
-      <li>
-        <a
-          href={getRelativeLocaleUrl(`${Astro.currentLocale}`, "portfolio")}
-          aria-current={Astro.url.pathname.includes("/portfolio") ? "page" : undefined}
-          class="hover:bg-red-500 hover:text-stone-50 active:bg-red-500 active:text-stone-50 active:opacity-50"
-          class:list={[Astro.url.pathname.includes("/portfolio") ? "text-red-500" : ""]}
-          >/{translations[Astro.currentLocale].portfolio}</a
-        >
-      </li>
-      <li>
-        <a
-          href={getRelativeLocaleUrl(`${Astro.currentLocale}`, "clients")}
-          aria-current={Astro.url.pathname.includes("/clients") ? "page" : undefined}
-          class="hover:bg-red-500 hover:text-stone-50 active:bg-red-500 active:text-stone-50 active:opacity-50"
-          class:list={[Astro.url.pathname.includes("/clients") ? "text-red-500" : ""]}
-          >/{translations[Astro.currentLocale].clients}</a
-        >
-      </li>
-      <li>
-        <a
-          href={getRelativeLocaleUrl(`${Astro.currentLocale}`, "contact")}
-          aria-current={Astro.url.pathname.includes("/contact") ? "page" : undefined}
-          class="hover:bg-red-500 hover:text-stone-50 active:bg-red-500 active:text-stone-50 active:opacity-50"
-          class:list={[Astro.url.pathname.includes("/contact") ? "text-red-500" : ""]}
-          >/{translations[Astro.currentLocale].contact}</a
-        >
-      </li>
+    <menu class="flex flex-wrap gap-2 sm:gap-4" aria-label={translations[locale].navigationMenu}>
+      {
+        navItems.map((item) => {
+          const isHome = item.path === "/";
+          const currentPath = Astro.url.pathname.replace(/\/$/, "");
+          const localePath = Astro.currentLocale === "en" ? "" : `/${Astro.currentLocale}`;
+          const isActive =
+            currentPath === `${localePath}${isHome ? "" : `/${item.path}`}` ||
+            (isHome && (currentPath === "/" || currentPath === localePath));
+
+          return (
+            <li role="none">
+              <a
+                href={getRelativeLocaleUrl(locale, item.path)}
+                aria-current={isActive ? "page" : undefined}
+                class="hover:bg-red-500 hover:text-stone-100 active:opacity-50"
+                class:list={[isActive ? "text-red-500" : ""]}
+                role="menuitem"
+              >
+                /{translations[locale][item.key as keyof (typeof translations)[typeof locale]]}
+              </a>
+            </li>
+          );
+        })
+      }
     </menu>
-    <menu
-      aria-label={translations[Astro.currentLocale].main_nav_label}
-      class="flex flex-wrap justify-end gap-2"
-    >
-      <li>
-        <a
-          href={getRelativeLocaleUrl(
-            "en",
-            Astro.url.pathname.replace(`/${Astro.currentLocale}`, "")
-          )}
-          aria-label={`${translations[Astro.currentLocale].lang_switch_en} (${translations[Astro.currentLocale].new_window})`}
-          class="selection:bg-blue-300 selection:text-blue-700 hover:bg-blue-600 hover:text-stone-50 active:bg-blue-600 active:text-stone-50 active:opacity-50"
-          class:list={[
-            Astro.url.pathname.includes(`/${Astro.currentLocale}`) ? "" : "text-blue-600",
-          ]}
-          hreflang="en"
-          lang="en">EN</a
-        >
-      </li>
-      <li>
-        <a
-          href={getRelativeLocaleUrl(
-            "sv",
-            Astro.url.pathname.replace(`/${Astro.currentLocale}`, "")
-          )}
-          aria-label={`${translations[Astro.currentLocale].lang_switch_sv} (${translations[Astro.currentLocale].new_window})`}
-          class="selection:bg-amber-300 selection:text-amber-700 hover:bg-amber-500 hover:text-stone-50 active:bg-amber-500 active:text-stone-50 active:opacity-50"
-          class:list={[Astro.url.pathname.includes("/sv") ? "text-amber-500" : ""]}
-          hreflang="sv"
-          lang="sv">SV</a
-        >
-      </li>
-    </menu>
+    <LanguageSelector />
   </nav>
 </header>
-<hr class="mb-12 border-stone-300" aria-hidden="true" />
+
+<hr class="mx-6 max-w-2xl border-stone-200 md:mx-auto dark:border-stone-700" aria-hidden="true" />

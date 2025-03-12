@@ -4,8 +4,11 @@
     "en": "Kaffepunkten is a company specialising in coffee solutions tailored for businesses, restaurants, cafés, and hotels. They offer a wide range of coffee machines to meet various needs, whether for brewed coffee, whole beans, or instant coffee.",
     "sv": "Kaffepunkten är ett företag som specialiserar sig på kaffelösningar för företag, restauranger, caféer och hotell. De erbjuder ett brett sortiment av kaffemaskiner för att möta olika behov, oavsett om det handlar om bryggkaffe, hela bönor eller snabbkaffe."
   },
+  "avatar": "/src/assets/clients/avatars/kaffepunkten.svg",
   "logo": "/src/assets/clients/kaffepunkten.svg",
-  "dominantColor": "#7f3311",
+  "dominantColor": {
+    "light": "#7f3311"
+  },
   "websiteUrl": "https://kaffepunkten.se/",
   "socialLinks": {
     "linkedin": "https://www.linkedin.com/company/kaffepunkten",

@@ -1,0 +1,79 @@
+---
+import { Icon } from "astro-icon/components";
+
+const translations = {
+  en: {
+    heading: "Statistics",
+  },
+  sv: {
+    heading: "Statistik",
+  },
+};
+
+const stats = [
+  {
+    icon: "ph:calendar-duotone",
+    value: "4+",
+    label: {
+      en: "Years of experience",
+      sv: "År av erfarenhet",
+    },
+  },
+  {
+    icon: "ph:users-duotone",
+    value: "25+",
+    label: {
+      en: "Satisfied customers",
+      sv: "Nöjda kunder",
+    },
+  },
+  {
+    icon: "ph:check-circle-duotone",
+    value: "50+",
+    label: {
+      en: "Projects completed",
+      sv: "Projekt slutförda",
+    },
+  },
+];
+
+const locale = Astro.currentLocale === "en" || Astro.currentLocale === "sv" ? Astro.currentLocale : "en";
+---
+
+<section aria-labelledby="stats-heading">
+  <h2 id="stats-heading" class="sr-only">{translations[locale].heading}</h2>
+  <ul class="grid gap-6 sm:grid-cols-3" role="list">
+    {
+      stats.map((stat) => (
+        <li class="group relative overflow-hidden rounded-lg border border-stone-200 p-6 text-center transition-colors hover:border-red-500/50 dark:border-stone-700">
+          <figure class="pointer-events-none absolute inset-0" aria-hidden="true">
+            <div
+              class="radial-blob absolute -z-10 h-64 w-64 -translate-x-1/2 -translate-y-1/2 rounded-full opacity-0 transition-opacity group-hover:opacity-25"
+              style="background: radial-gradient(circle, #dc2626 0%, transparent 70%)"
+              aria-hidden="true"
+            />
+          </figure>
+          <Icon
+            name={stat.icon}
+            class="absolute right-0 bottom-0 -mr-6 -mb-6 h-24 w-24 text-red-500/20"
+            aria-hidden="true"
+          />
+          <p class="relative text-3xl font-bold text-red-500">{stat.value}</p>
+          <p class="relative font-serif text-stone-500 dark:text-stone-400">{stat.label[locale]}</p>
+        </li>
+      ))
+    }
+  </ul>
+</section>
+
+<script>
+  document.querySelectorAll(".radial-blob").forEach((blob) => {
+    const article = blob.closest(".group");
+
+    article?.addEventListener("mousemove", (e) => {
+      const rect = article.getBoundingClientRect();
+      (blob as HTMLElement).style.left = `${(e as MouseEvent).clientX - rect.left}px`;
+      (blob as HTMLElement).style.top = `${(e as MouseEvent).clientY - rect.top}px`;
+    });
+  });
+</script>

@@ -1,0 +1,97 @@
+---
+import { Icon } from "astro-icon/components";
+
+interface ComparisonCell {
+  icon?: string;
+  status?: boolean;
+  text?: string;
+}
+
+interface ComparisonRow {
+  feature: string;
+  description: string;
+  standard: ComparisonCell;
+  extended: ComparisonCell;
+  exclusive: ComparisonCell;
+}
+
+interface Props {
+  headers: string[];
+  rows: ComparisonRow[];
+}
+
+const translations = {
+  en: {
+    heading: "License Comparison",
+  },
+  sv: {
+    heading: "Licensjämförelse",
+  },
+};
+
+const locale = Astro.currentLocale === "en" || Astro.currentLocale === "sv" ? Astro.currentLocale : "en";
+const { headers, rows } = Astro.props;
+---
+
+<section class="space-y-4">
+  <h2 class="relative font-serif text-lg text-stone-700 dark:text-stone-100">
+    <span class="relative z-10 inline-flex flex-col gap-2 bg-amber-50 pr-4 dark:bg-stone-900"
+      >{translations[locale].heading}</span
+    >
+    <span class="absolute top-1/2 right-0 left-0 -z-0 h-px bg-stone-200 dark:bg-stone-700" aria-hidden="true"></span>
+  </h2>
+  <div class="overflow-x-auto rounded-lg border border-stone-200 bg-amber-50 dark:border-stone-700 dark:bg-stone-800">
+    <table class="w-full text-left font-serif text-sm text-stone-500 dark:text-stone-400">
+      <thead class="bg-amber-100/50 text-xs text-stone-700 uppercase dark:bg-stone-700 dark:text-stone-100">
+        <tr>
+          {
+            headers.map((header, index) => (
+              <th
+                scope="col"
+                class={`px-4 py-3 ${
+                  index < headers.length - 1 ? "border-r border-amber-200 dark:border-stone-600" : ""
+                } ${index > 0 ? "text-center" : ""}`}
+              >
+                {header}
+              </th>
+            ))
+          }
+        </tr>
+      </thead>
+      <tbody>
+        {
+          rows.map((row, rowIndex) => (
+            <tr class={`${rowIndex < rows.length - 1 ? "border-b border-stone-200 dark:border-stone-700" : ""}`}>
+              <th scope="row" class="border-r border-stone-200 px-4 py-2 dark:border-stone-700">
+                <div class="font-medium text-stone-700 dark:text-stone-100">{row.feature}</div>
+                {row.description && (
+                  <div class="mt-1 text-xs font-normal text-stone-500 dark:text-stone-400">{row.description}</div>
+                )}
+              </th>
+              {(["standard", "extended", "exclusive"] as const).map((col, colIndex) => {
+                const cell = row[col];
+                return (
+                  <td
+                    class={`px-4 py-2 text-center ${
+                      colIndex < 2 ? "border-r border-stone-200 dark:border-stone-700" : ""
+                    }`}
+                  >
+                    {cell.icon ? (
+                      <Icon
+                        name={cell.icon}
+                        class={`mx-auto h-5 w-5 ${cell.status ? "text-green-500" : "text-red-500"}`}
+                        aria-hidden="true"
+                      />
+                    ) : (
+                      <span>{cell.text}</span>
+                    )}
+                  </td>
+                );
+              })}
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
+  </div>
+</section>

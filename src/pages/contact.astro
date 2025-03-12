@@ -1,150 +1,255 @@
 ---
-import { Image } from "astro:assets";
+import { Icon } from "astro-icon/components";
+import { Picture } from "astro:assets";
 import { getRelativeLocaleUrl } from "astro:i18n";
-import ImgAvatar from "../assets/images/avatar.jpeg";
-import FaqList from "../components/sections/FaqList.astro";
-import IconPhEnvelopeDuotone from "../components/icons/PhEnvelopeDuotone.astro";
-import IconPhHandPeaceDuotone from "../components/icons/PhHandPeaceDuotone.astro";
-import IconPhLinkedinLogoDuotone from "../components/icons/PhLinkedinLogoDuotone.astro";
-import IconPhPhoneCallDuotone from "../components/icons/PhPhoneCallDuotone.astro";
-import PricingTable from "../components/sections/PricingTable.astro";
-import MainLayout from "../layouts/MainLayout.astro";
+import ImgAvatar from "../assets/avatars/william-foto.png";
+import Button from "../components/common/Button.astro";
+import ContactCard from "../components/sections/ContactCard.astro";
+import Layout from "../layouts/Layout.astro";
+
+const locale = Astro.currentLocale === "en" || Astro.currentLocale === "sv" ? Astro.currentLocale : "en";
+
+interface ContactVariant {
+  text: string;
+  border: string;
+}
+
+const contactVariants: Record<string, ContactVariant> = {
+  red: {
+    text: "text-red-500",
+    border: "hover:border-red-500",
+  },
+  green: {
+    text: "text-green-500",
+    border: "hover:border-green-500",
+  },
+  blue: {
+    text: "text-blue-500",
+    border: "hover:border-blue-500",
+  },
+  yellow: {
+    text: "text-yellow-500",
+    border: "hover:border-yellow-500",
+  },
+  pink: {
+    text: "text-pink-500",
+    border: "hover:border-pink-500",
+  },
+  gray: {
+    text: "text-gray-500",
+    border: "hover:border-gray-500",
+  },
+  indigo: {
+    text: "text-indigo-500",
+    border: "hover:border-indigo-500",
+  },
+};
+
+const primaryContacts = [
+  {
+    name: "E-post",
+    value: "william@hallin.media",
+    icon: "ph:envelope-simple-duotone",
+    href: "mailto:william@hallin.media",
+    color: "yellow",
+  },
+  {
+    name: "WhatsApp",
+    value: "070-615 92 79",
+    icon: "ph:whatsapp-logo-duotone",
+    href: "https://wa.me/46706159279",
+    color: "green",
+  },
+  {
+    name: "Telefon",
+    value: "070-615 92 79",
+    icon: "ph:phone-duotone",
+    href: "tel:+46706159279",
+    color: "red",
+  },
+  {
+    name: "LinkedIn",
+    value: "@whallin",
+    icon: "ph:linkedin-logo-duotone",
+    href: "https://www.linkedin.com/in/whallin/",
+    color: "blue",
+  },
+];
+
+const socialProfiles = [
+  {
+    name: "Instagram",
+    value: "@williamhallinn",
+    icon: "ph:instagram-logo-duotone",
+    href: "https://www.instagram.com/williamhallinn",
+    color: "pink",
+  },
+  {
+    name: "YouTube",
+    value: "@hallinmedia",
+    icon: "ph:youtube-logo-duotone",
+    href: "https://www.youtube.com/@hallinmedia",
+    color: "red",
+  },
+  {
+    name: "GitHub",
+    value: "@whallin",
+    icon: "ph:github-logo-duotone",
+    href: "https://github.com/whallin",
+    color: "gray",
+  },
+  {
+    name: "Discord",
+    value: "@whallin",
+    icon: "ph:discord-logo-duotone",
+    href: "https://discord.com/",
+    color: "indigo",
+  },
+];
+
+const callToActions = [
+  {
+    title: "Vill du se vad jag kan göra?",
+    description: "Gå igenom min portfölj och se exempel på tidigare projekt.",
+    icon: "ph:sparkle-duotone",
+    href: getRelativeLocaleUrl(locale, "portfolio"),
+    buttonText: "Se mina arbeten",
+  },
+  {
+    title: "Behöver du en tjänst?",
+    description: "Läs mer om de tjänster jag erbjuder och hur de kan hjälpa dig.",
+    icon: "ph:magic-wand-duotone",
+    href: getRelativeLocaleUrl(locale, "services"),
+    buttonText: "Utforska mina tjänster",
+  },
+];
 ---
 
-<MainLayout
-  title="Contact"
-  description="Discover my services to enhance your brand. Ready to make your vision a reality? Contact me to discuss your project and achieve your goals together."
+<Layout
+  title="Kontakta William Hallin"
+  description="Vill du diskutera ditt nästa projekt? Nå mig via telefon, e-post eller boka ett kostnadsfritt uppstartssamtal. Jag finns här för att hjälpa dig förverkliga din vision."
+  header="Kontaka mig"
+  headerIcon="ph:hand-waving-duotone"
 >
-  <article class="space-y-12 font-serif" aria-labelledby="page-title">
-    <header class="selection:bg-red-300 selection:text-red-800">
-      <div class="flex flex-col-reverse gap-4 sm:flex-row sm:items-center sm:justify-between">
-        <h1 id="page-title" class="max-w-md text-4xl font-light text-stone-900 italic">
-          Chat with me
-        </h1>
-        <IconPhHandPeaceDuotone
-          class="flip -motion-rotate-loop-24/mirror motion-duration-2000 motion-ease h-8 w-8 origin-bottom text-red-500 motion-safe:rotate-12 sm:h-12 sm:w-12"
-          aria-hidden="true"
-        />
-      </div>
-    </header>
-    <section class="font-serif text-sm font-light text-stone-700">
-      <div class="flex flex-col-reverse gap-4 sm:flex-row sm:items-center sm:gap-24">
-        <div class="flex flex-col gap-2 selection:bg-red-300 selection:text-red-800">
-          <p>
-            I'm always looking for new chances to work with brands and businesses. If you're
-            interested in collaborating, <a
-              href="#contacts"
-              class="text-red-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-50 hover:no-underline active:opacity-50"
-              >please get in touch</a
-            >. If you're just curious about my work and want to chat, feel free to reach out, and
-            maybe we can meet for coffee.
+  <section class="max-w-2xl sm:mx-auto">
+    <div class="flex flex-col-reverse gap-8 sm:flex-row sm:gap-12">
+      <main class="space-y-8">
+        <article class="space-y-4">
+          <p class="font-serif text-stone-500 dark:text-stone-400">
+            Redo att diskutera ditt nästa projekt? Här hittar du alla sätt att nå mig - från direkta kanaler som telefon
+            och e-post till sociala medier. Jag erbjuder även kostnadsfria uppstartssamtal där vi kan utforska dina
+            idéer tillsammans. Välj det sätt som passar dig bäst för att starta vår dialog.
           </p>
-          <p>
-            Curious about my pricing? <a
-              href="#pricing"
-              class="text-red-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-50 hover:no-underline active:opacity-50"
-              >Check out my pricing section</a
-            > which gives you a good idea of what I tend to charge for my services.
-          </p>
-          <time id="swedishTime" datetime="" class="mt-2 font-mono text-xs text-stone-500">
-            Current time in Sweden:
-          </time>
-        </div>
-        <Image
+          <div class="flex items-center gap-2">
+            <Icon name="ph:clock-duotone" class="h-5 w-5 text-red-500" aria-hidden="true" />
+            <span class="font-serif text-stone-500 dark:text-stone-400">
+              Svensk lokal tid: <time id="localTime" datetime="00:00">00:00</time>
+            </span>
+          </div>
+        </article>
+        <section class="space-y-6">
+          <h2 class="font-serif text-lg text-stone-700 dark:text-stone-100">Primära kontaktvägar</h2>
+          <ContactCard contacts={primaryContacts} layout="primary" />
+          <aside class="rounded-lg border border-stone-200 p-4 dark:border-stone-700">
+            <p class="flex items-center gap-4 font-serif text-stone-500 sm:gap-2 dark:text-stone-400">
+              <Icon name="ph:info-duotone" class="h-5 w-5 flex-shrink-0 text-red-500" aria-hidden="true" />
+              Normal svarstid är inom 12-48 timmar på vardagar.
+            </p>
+          </aside>
+        </section>
+      </main>
+      <aside>
+        <Picture
           src={ImgAvatar}
-          alt="Portrait of William Hallin"
-          width="256"
-          height="256"
-          class="h-12 w-12 rounded-full border border-stone-300 object-cover drop-shadow-xs select-none sm:h-24 sm:w-24"
+          alt="William Hallin"
+          width={512}
+          height={512}
+          widths={[64, 128, 256, 512]}
+          formats={["avif", "webp", "jpeg"]}
+          loading="eager"
+          class="h-20 w-20 max-w-48 rounded-full select-none sm:h-fit sm:w-fit"
         />
-      </div>
-    </section>
-    <address
-      id="contacts"
-      class="flex flex-col gap-8 sm:flex-row sm:justify-between"
-      aria-label="Contact information"
-    >
-      <div class="flex flex-col gap-2 selection:bg-amber-300 selection:text-amber-700">
-        <h2 class="flex items-center gap-2 text-2xl font-light text-stone-900">
-          <IconPhEnvelopeDuotone class="h-6 w-6 text-amber-500" aria-hidden="true" />
-          Email
-        </h2>
-        <a
-          href="mailto:william@hallin.media?subject=Hey William!"
-          data-umami-event="contact_email"
-          data-umami-event-origin={Astro.url}
-          class="w-fit font-mono text-sm text-amber-500 not-italic underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-amber-500 hover:text-amber-100 hover:no-underline active:opacity-50"
-          >william@hallin.media</a
-        >
-      </div>
-      <div class="flex flex-col gap-2 selection:bg-red-300 selection:text-red-800">
-        <h2 class="flex items-center gap-2 text-2xl font-light text-stone-900">
-          <IconPhPhoneCallDuotone class="h-6 w-6 text-red-500" aria-hidden="true" />
-          Mobile
-        </h2>
-        <a
-          href="tel:+46706159279"
-          data-umami-event="contact_phone"
-          data-umami-event-origin={Astro.url}
-          class="w-fit font-mono text-sm text-red-500 not-italic underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-red-100 hover:no-underline active:opacity-50"
-          >+46 70-615 92 79</a
-        >
-      </div>
-      <div class="flex flex-col gap-2 selection:bg-blue-300 selection:text-blue-700">
-        <h2 class="flex items-center gap-2 text-2xl font-light text-stone-900">
-          <IconPhLinkedinLogoDuotone class="h-6 w-6 text-blue-500" aria-hidden="true" />
-          LinkedIn
-        </h2>
-        <a
-          href="https://www.linkedin.com/in/whallin"
-          data-umami-event="contact_linkedin"
-          data-umami-event-origin={Astro.url}
-          target="_blank"
-          class="w-fit font-mono text-sm text-blue-500 not-italic underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-blue-500 hover:text-blue-100 hover:no-underline active:opacity-50"
-          >/in/whallin</a
-        >
-      </div>
-    </address>
-    <PricingTable />
-    <FaqList slice={5} showFeaturedOnly={true} />
-    <section
-      id="legalities"
-      class="space-y-4 selection:bg-red-300 selection:text-red-800"
-      aria-labelledby="legalities-heading"
-    >
-      <h2 id="legalities-heading" class="font-serif text-3xl font-light text-stone-900 italic">
-        Legalities
+      </aside>
+    </div>
+    <section class="mt-8 space-y-6">
+      <h2 class="relative font-serif text-lg text-stone-700 dark:text-stone-100">
+        <span class="relative z-10 inline-flex flex-col gap-2 bg-amber-50 pr-4 dark:bg-stone-900">
+          Övriga profiler
+        </span>
+        <span class="absolute top-1/2 right-0 left-0 -z-0 h-px bg-stone-200 dark:bg-stone-700" aria-hidden="true"
+        ></span>
       </h2>
-      <p class="font-serif text-sm font-light text-stone-700">
-        Sometimes the admin side of things can get in the way of the fun stuff, especially when it
-        comes to legal bits. I make sure all the essential paperwork and terms are sorted for you
-        and your business when we work together. To check out the terms, policies, and other
-        documents I've set up to keep you and your business safe, just <a
-          href={getRelativeLocaleUrl(`${Astro.currentLocale}`, "legal")}
-          data-umami-event="contact_legal-read-more"
-          data-umami-event-origin={Astro.url}
-          class="text-red-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-50 hover:no-underline active:opacity-50"
-          >pop over to the legalities page</a
-        >.
-      </p>
+      <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+        <ContactCard contacts={socialProfiles} layout="grid" />
+      </div>
     </section>
-  </article>
-</MainLayout>
+    <section class="mt-8 space-y-6">
+      <header class="mb-6">
+        <h2 class="relative font-serif text-lg text-stone-700 dark:text-stone-100">
+          <span
+            class="relative z-10 inline-flex flex-col gap-2 bg-amber-50 pr-4 sm:flex-row sm:items-center dark:bg-stone-900"
+          >
+            <Icon name="ph:smiley-duotone" class="h-6 w-6 flex-shrink-0 text-red-500" aria-hidden="true" />
+            Vad vill du göra härnäst?
+          </span>
+          <span
+            class="absolute top-1/2 right-0 left-0 -z-0 hidden h-px bg-stone-200 sm:block dark:bg-stone-700"
+            aria-hidden="true"></span>
+        </h2>
+      </header>
+      <div class="grid gap-6 sm:grid-cols-2">
+        {
+          callToActions.map((cta) => (
+            <article class="rounded-lg border border-stone-200 p-6 dark:border-stone-700">
+              <div class="flex items-center gap-3">
+                <Icon name={cta.icon} class="h-6 w-6 flex-shrink-0 text-red-500" aria-hidden="true" />
+                <h3 class="font-serif font-medium text-stone-700 dark:text-stone-100">{cta.title}</h3>
+              </div>
+              <p class="mt-3 font-serif text-stone-500 dark:text-stone-400">{cta.description}</p>
+              <a
+                href={cta.href}
+                class="mt-4 inline-flex items-center gap-2 font-serif text-red-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-100 active:opacity-50"
+              >
+                {cta.buttonText}
+                <Icon name="ph:arrow-right" class="h-4 w-4 flex-shrink-0" aria-hidden="true" />
+              </a>
+            </article>
+          ))
+        }
+      </div>
+      <aside class="rounded-lg border border-stone-200 bg-amber-50 p-6 dark:border-stone-700 dark:bg-stone-800">
+        <div class="flex items-center gap-3">
+          <Icon name="ph:lightbulb-duotone" class="h-6 w-6 flex-shrink-0 text-red-500" aria-hidden="true" />
+          <h3 class="font-serif font-medium text-stone-700 dark:text-stone-100">Funderar du på ett projekt?</h3>
+        </div>
+        <p class="mt-3 mb-4 font-serif text-stone-500 dark:text-stone-400">
+          Oavsett om du har en klar idé eller bara vill diskutera möjligheter, boka ett kostnadsfritt uppstartssamtal
+          där vi kan gå igenom dina behov.
+        </p>
+        <Button href="https://meetings.hubspot.com/william-hallin" target="_blank" rel="noopener noreferrer">
+          <Icon name="ph:calendar-duotone" class="h-4 w-4 flex-shrink-0" aria-hidden="true" />
+          Boka ett gratis möte
+        </Button>
+      </aside>
+    </section>
+  </section>
+</Layout>
 
 <script>
-  function updateTime() {
-    const now = new Date();
-    const swedishTime = now.toLocaleTimeString(undefined, {
-      timeZone: "Europe/Stockholm",
-      hour: "2-digit",
-      minute: "2-digit",
-      second: "2-digit",
-    });
-    const timeElement = document.getElementById("swedishTime");
-    timeElement!.textContent = `Current time in Sweden: ${swedishTime}`;
-    timeElement!.setAttribute("datetime", now.toISOString());
+  function updateLocalTime() {
+    const timeElement = document.getElementById("localTime");
+    if (timeElement) {
+      const now = new Date();
+      const timeString = now.toLocaleTimeString("sv-SE", {
+        hour: "2-digit",
+        minute: "2-digit",
+      });
+      const isoString = now.toISOString();
+      timeElement.textContent = timeString;
+      timeElement.setAttribute("datetime", isoString);
+    }
   }
 
-  updateTime();
-  setInterval(updateTime, 1000);
+  updateLocalTime();
+  setInterval(updateLocalTime, 60000);
 </script>

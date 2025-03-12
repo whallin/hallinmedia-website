@@ -1,0 +1,184 @@
+{
+  "categoryName": {
+    "en": "Video Production",
+    "sv": "Videoproduktion"
+  },
+  "icon": "ph:video-camera-duotone",
+  "color": "text-blue-500",
+  "order": 2,
+  "services": [
+    {
+      "name": {
+        "en": "Video Editing",
+        "sv": "Videoredigering"
+      },
+      "description": {
+        "en": "Professional video editing services including colour correction, sound mixing, basic motion graphics, and exports in multiple formats.",
+        "sv": "Professionell videoredigering inklusive färgkorrigering, ljudmixning, grundläggande motion graphics och export i flera format."
+      },
+      "basePrice": 550,
+      "unit": {
+        "en": "hour",
+        "sv": "timme"
+      },
+      "options": [
+        {
+          "name": {
+            "en": "Basic Edit",
+            "sv": "Grundläggande redigering"
+          },
+          "price": 550,
+          "unit": {
+            "en": "hour",
+            "sv": "timme"
+          }
+        },
+        {
+          "name": {
+            "en": "Advanced Edit (Motion Graphics)",
+            "sv": "Avancerad redigering (Motion Graphics)"
+          },
+          "price": 850,
+          "unit": {
+            "en": "hour",
+            "sv": "timme"
+          }
+        }
+      ],
+      "note": {
+        "en": "Minimum 2 hours per project. Complex motion graphics or 3D effects quoted separately. Includes export in up to three formats and two revision rounds.",
+        "sv": "Minimum 2 timmar per projekt. Komplexa motion graphics eller 3D-effekter offereras separat. Inkluderar export i upp till tre format och två revideringsrundor."
+      }
+    },
+    {
+      "name": {
+        "en": "Video Production - Half Day",
+        "sv": "Videoproduktion - Halvdag"
+      },
+      "description": {
+        "en": "Professional video production services for up to 4 hours, including essential camera equipment and basic lighting setup.",
+        "sv": "Professionella videoproduktionstjänster upp till 4 timmar, inklusive grundläggande kamerautrustning och belysning."
+      },
+      "basePrice": 2800,
+      "unit": {
+        "en": "session",
+        "sv": "session"
+      },
+      "options": [
+        {
+          "name": {
+            "en": "Basic Package",
+            "sv": "Grundpaket"
+          },
+          "price": 2800,
+          "unit": {
+            "en": "half-day",
+            "sv": "halvdag"
+          }
+        },
+        {
+          "name": {
+            "en": "Premium Package (Additional Lighting & Sound)",
+            "sv": "Premiumpaket (Extra belysning & ljud)"
+          },
+          "price": 3900,
+          "unit": {
+            "en": "half-day",
+            "sv": "halvdag"
+          }
+        }
+      ],
+      "addons": [
+        {
+          "name": {
+            "en": "Additional Hour",
+            "sv": "Extra timme"
+          },
+          "price": 800,
+          "unit": {
+            "en": "hour",
+            "sv": "timme"
+          }
+        },
+        {
+          "name": {
+            "en": "Raw Footage",
+            "sv": "Råmaterial"
+          },
+          "price": 1000
+        }
+      ],
+      "note": {
+        "en": "Travel costs apply outside of Skellefteå municipality. Equipment selection tailored to project requirements. Footage delivered in 4K resolution where applicable.",
+        "sv": "Resekostnader tillkommer utanför Skellefteå kommun. Val av utrustning anpassas efter projektets krav. Material levereras i 4K-upplösning där det är tillämpligt."
+      }
+    },
+    {
+      "name": {
+        "en": "Video Production - Full Day",
+        "sv": "Videoproduktion - Heldag"
+      },
+      "description": {
+        "en": "Comprehensive video production services for up to 8 hours, including professional camera equipment, lighting, and basic sound recording.",
+        "sv": "Omfattande videoproduktionstjänster upp till 8 timmar, inklusive professionell kamerautrustning, belysning och grundläggande ljudinspelning."
+      },
+      "basePrice": 4500,
+      "unit": {
+        "en": "day",
+        "sv": "dag"
+      },
+      "options": [
+        {
+          "name": {
+            "en": "Standard Production",
+            "sv": "Standardproduktion"
+          },
+          "price": 4500,
+          "unit": {
+            "en": "day",
+            "sv": "dag"
+          }
+        },
+        {
+          "name": {
+            "en": "Premium Production",
+            "sv": "Premiumproduktion"
+          },
+          "price": 6500,
+          "unit": {
+            "en": "day",
+            "sv": "dag"
+          }
+        }
+      ],
+      "addons": [
+        {
+          "name": {
+            "en": "Drone Footage",
+            "sv": "Drönarfilmning"
+          },
+          "price": 1800,
+          "unit": {
+            "en": "day",
+            "sv": "dag"
+          }
+        },
+        {
+          "name": {
+            "en": "Extra Camera Operator",
+            "sv": "Extra kameraoperatör"
+          },
+          "price": 2800,
+          "unit": {
+            "en": "day",
+            "sv": "dag"
+          }
+        }
+      ],
+      "note": {
+        "en": "Includes basic post-production and colour grading. Complex editing charged separately. 50% deposit required for bookings. Includes delivery in both high-resolution and web-optimised formats.",
+        "sv": "Inkluderar grundläggande efterproduktion och färgkorrigering. Komplex redigering debiteras separat. 50% deposition krävs för bokningar. Inkluderar leverans i både högupplöst och webb-optimerat format."
+      }
+    }
+  ]
+}

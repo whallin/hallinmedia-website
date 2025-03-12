@@ -1,0 +1,183 @@
+---
+import { Icon } from "astro-icon/components";
+import { Image } from "astro:assets";
+import ImgAdobeAe from "../../assets/tech-stack/adobe-ae.svg";
+import ImgAffinityDesigner from "../../assets/tech-stack/affinity-designer.svg";
+import ImgAffinityPhoto from "../../assets/tech-stack/affinity-photo.svg";
+import ImgAffinityPublisher from "../../assets/tech-stack/affinity-publisher.svg";
+import ImgCavarly from "../../assets/tech-stack/cavarly.svg";
+import ImgDavinci from "../../assets/tech-stack/davinci.svg";
+import ImgDxoPhotolab from "../../assets/tech-stack/dxo-photolab.svg";
+import ImgFigma from "../../assets/tech-stack/figma.svg";
+import ImgFlStudio from "../../assets/tech-stack/fl-studio.png";
+import ImgSonarworks from "../../assets/tech-stack/sonarworks.svg";
+
+const locale = Astro.currentLocale === "en" || Astro.currentLocale === "sv" ? Astro.currentLocale : "en";
+
+const translations = {
+  en: {
+    heading: "William's toolbox",
+    description:
+      "Explore the professional tools that help me craft stunning visuals and immersive experiences. Below, you'll discover my hand-picked collection of industry-leading software—perfect whether you're looking to collaborate or seeking inspiration for your own creative journey.",
+  },
+  sv: {
+    heading: "Williams verktygslåda",
+    description:
+      "Utforska de professionella verktygen som hjälper mig skapa fantastiska visuella upplevelser. Nedan hittar du min handplockade samling av branschledande programvara—perfekt oavsett om du vill samarbeta eller söker inspiration för din egen kreativa resa.",
+  },
+};
+
+const techCategories = [
+  {
+    title: {
+      en: "Photo Stack",
+      sv: "Fotostacken",
+    },
+    icon: "ph:camera-duotone",
+    description: {
+      en: "For photo editing and processing, I rely on Affinity Photo and DxO PhotoLab. DxO handles RAW processing and initial colour grading, while Affinity Photo is my go-to for advanced retouching and compositing.",
+      sv: "För fotoredigering och bildbehandling använder jag Affinity Photo och DxO PhotoLab. DxO hanterar RAW-behandling och initial färgkorrigering, medan Affinity Photo är mitt förstahandsval för avancerad retuschering och bildkomposition.",
+    },
+    tools: [
+      {
+        name: "Affinity Photo",
+        image: ImgAffinityPhoto,
+      },
+      {
+        name: "DxO PhotoLab",
+        image: ImgDxoPhotolab,
+      },
+    ],
+  },
+  {
+    title: {
+      en: "Video Stack",
+      sv: "Videostacken",
+    },
+    icon: "ph:video-camera-duotone",
+    description: {
+      en: "DaVinci Resolve Studio is my primary software for video editing and colour grading, while After Effects handles motion graphics and visual effects. For other motion graphics, I turn to Cavalry for its efficient animation workflow.",
+      sv: "DaVinci Resolve Studio är min primära mjukvara för videoredigering och färgkorrigering, medan After Effects hanterar rörlig grafik och visuella effekter. För annan rörlig grafik använder jag Cavalry för dess effektiva animationsarbetsflöde.",
+    },
+    tools: [
+      {
+        name: "Cavarly",
+        image: ImgCavarly,
+      },
+      {
+        name: "After Effects",
+        image: ImgAdobeAe,
+      },
+      {
+        name: "DaVinci Resolve Studio",
+        image: ImgDavinci,
+      },
+    ],
+  },
+  {
+    title: {
+      en: "Audio Stack",
+      sv: "Ljudstacken",
+    },
+    icon: "ph:speaker-high-duotone",
+    description: {
+      en: "FL Studio is my DAW of choice for music production and sound design in video projects. I use Sonarworks SoundID Reference to ensure accurate monitoring and consistent audio quality across various playback systems.",
+      sv: "FL Studio är min DAW för musikproduktion och ljuddesign i videoprojekt. Jag använder Sonarworks SoundID Reference för att säkerställa korrekt lyssning och konsekvent ljudkvalitet över olika uppspelningssystem.",
+    },
+    tools: [
+      {
+        name: "SoundID Reference",
+        image: ImgSonarworks,
+      },
+      {
+        name: "FL Studio",
+        image: ImgFlStudio,
+      },
+    ],
+  },
+  {
+    title: {
+      en: "Design Stack",
+      sv: "Designstacken",
+    },
+    icon: "ph:paint-brush-duotone",
+    description: {
+      en: "The Affinity suite addresses my print and vector design needs, using Publisher for layouts and Designer for illustrations. Figma is my preferred tool for UI/UX design and interactive prototypes, particularly for web projects.",
+      sv: "Affinity-sviten hanterar mina behov av print- och vektordesign, med Publisher för layouter och Designer för illustrationer. Figma är mitt förstahandsval för UI/UX-design och interaktiva prototyper, särskilt för webbprojekt.",
+    },
+    tools: [
+      {
+        name: "Figma",
+        image: ImgFigma,
+      },
+      {
+        name: "Affinity Publisher",
+        image: ImgAffinityPublisher,
+      },
+      {
+        name: "Affinity Designer",
+        image: ImgAffinityDesigner,
+      },
+    ],
+  },
+];
+---
+
+<section class="max-w-2xl sm:mx-auto" aria-labelledby="core-services-heading">
+  <header class="mb-8 space-y-6">
+    <h2 id="core-services-heading" class="relative font-serif text-3xl text-stone-700 italic dark:text-stone-100">
+      <span
+        class="relative z-10 inline-flex flex-col gap-2 bg-amber-50 pr-4 sm:flex-row sm:items-center dark:bg-stone-900"
+      >
+        <Icon name="ph:toolbox-duotone" class="h-6 w-6 text-red-500" aria-hidden="true" />
+        {translations[locale].heading}
+      </span>
+      <span
+        class="absolute top-1/2 right-0 left-0 -z-0 hidden h-px bg-stone-200 sm:block dark:bg-stone-700"
+        aria-hidden="true"></span>
+    </h2>
+    <p class="font-serif text-stone-500 dark:text-stone-400">
+      {translations[locale].description}
+    </p>
+  </header>
+  <div class="grid grid-cols-1 space-y-12">
+    {
+      techCategories
+        .sort((a, b) => b.tools.length - a.tools.length)
+        .map((category) => (
+          <article class="flex flex-col gap-6 sm:flex-row sm:items-start sm:gap-8">
+            <figure class="shrink-0">
+              <div class="flex w-32 -space-x-4" role="list" aria-label={category.title[locale]}>
+                {category.tools.map((tool) => (
+                  <div class="relative">
+                    <div class="peer">
+                      <Image
+                        src={tool.image}
+                        alt={tool.name}
+                        width={48}
+                        height={48}
+                        class="rounded-full border border-stone-200 transition select-none hover:scale-110 dark:border-stone-700"
+                      />
+                    </div>
+                    <figcaption class="pointer-events-none absolute bottom-full left-1/2 mb-2 -translate-x-1/2 rounded-md bg-stone-900 px-2 py-1 font-mono text-xs whitespace-nowrap text-stone-100 opacity-0 transition-opacity peer-hover:opacity-100 dark:bg-stone-700">
+                      {tool.name}
+                      <div class="absolute top-full left-1/2 h-2 w-2 -translate-x-1/2 -translate-y-1/2 rotate-45 bg-stone-900 dark:bg-stone-700" />
+                    </figcaption>
+                  </div>
+                ))}
+              </div>
+            </figure>
+            <div class="space-y-3">
+              <header>
+                <h3 class="font-handwrite flex items-center gap-2 text-xl text-stone-700 underline decoration-red-500 decoration-wavy decoration-from-font underline-offset-4 dark:text-stone-100">
+                  <Icon name={category.icon} class="h-6 w-6 text-red-500" aria-hidden="true" />
+                  {category.title[locale]}
+                </h3>
+              </header>
+              <p class="font-serif text-stone-500 dark:text-stone-400">{category.description[locale]}</p>
+            </div>
+          </article>
+        ))
+    }
+  </div>
+</section>

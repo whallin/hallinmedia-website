@@ -4,8 +4,11 @@
     "en": "Conodra offers premium hosting solutions, specialising in high-performance dedicated servers and virtual private servers (VPS), all backed by enterprise-grade DDoS protection. They provide a robust network infrastructure with low-latency global connections to major service providers, ensuring reliable and fast connectivity.",
     "sv": "Conodra erbjuder hostinglösningar som specialiserar sig på högpresterande dedikerade servrar och virtuella privata servrar (VPS), som alla skyddas av DDoS-skydd i högsta klass. De tillhandahåller en robust nätverksinfrastruktur med globala anslutningar med låg svarstid till stora serviceleverantörer, vilket garanterar en tillförlitlig och snabb anslutning."
   },
+  "avatar": "/src/assets/clients/avatars/conodra.svg",
   "logo": "/src/assets/clients/conodra.svg",
-  "dominantColor": "#0a60ff",
+  "dominantColor": {
+    "light": "#0a60ff"
+  },
   "websiteUrl": "https://conodra.com/",
   "socialLinks": {
     "twitter": "https://x.com/conodra",

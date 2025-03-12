@@ -1,0 +1,75 @@
+---
+import { Icon } from "astro-icon/components";
+
+interface LicenseType {
+  icon: string;
+  title: string;
+  description: string;
+  includes: string[];
+  excludes: string[];
+  price: string;
+}
+
+interface Props {
+  licenseTypes: LicenseType[];
+}
+
+const translations = {
+  en: {
+    heading: "License Types",
+    includes: "Includes:",
+    excludes: "Excludes:",
+  },
+  sv: {
+    heading: "Licenstyper",
+    includes: "Inkluderar:",
+    excludes: "Inkluderar inte:",
+  },
+};
+
+const locale = Astro.currentLocale === "en" || Astro.currentLocale === "sv" ? Astro.currentLocale : "en";
+const { licenseTypes } = Astro.props;
+---
+
+<section class="space-y-6">
+  <h2 class="relative font-serif text-lg text-stone-700 dark:text-stone-100">
+    <span class="relative z-10 inline-flex flex-col gap-2 bg-amber-50 pr-4 dark:bg-stone-900"
+      >{translations[locale].heading}</span
+    >
+    <span class="absolute top-1/2 right-0 left-0 -z-0 h-px bg-stone-200 dark:bg-stone-700" aria-hidden="true"></span>
+  </h2>
+  {
+    licenseTypes.map((license) => (
+      <article class="group relative overflow-hidden rounded-lg border border-stone-200 bg-amber-50 p-6 transition hover:border-red-500 dark:border-stone-700 dark:bg-stone-800">
+        <div class="flex items-center gap-2">
+          <Icon name={license.icon} class="h-6 w-6 flex-shrink-0 text-red-500" aria-hidden="true" />
+          <h3 class="font-serif font-medium text-stone-700 dark:text-stone-100">{license.title}</h3>
+        </div>
+        <p class="mt-3 font-serif text-stone-500 dark:text-stone-400">{license.description}</p>
+        <dl class="mt-4 space-y-4">
+          <div>
+            <dt class="mb-2 text-sm font-medium text-stone-700 dark:text-stone-200">{translations[locale].includes}</dt>
+            <dd>
+              <ul class="ml-5 list-disc space-y-1 font-serif text-sm text-stone-500 dark:text-stone-400">
+                {license.includes.map((item) => (
+                  <li>{item}</li>
+                ))}
+              </ul>
+            </dd>
+          </div>
+          <div>
+            <dt class="mb-2 text-sm font-medium text-stone-700 dark:text-stone-200">{translations[locale].excludes}</dt>
+            <dd>
+              <ul class="ml-5 list-disc space-y-1 font-serif text-sm text-stone-500 dark:text-stone-400">
+                {license.excludes.map((item) => (
+                  <li>{item}</li>
+                ))}
+              </ul>
+            </dd>
+          </div>
+        </dl>
+        <p class="font-handwrite mt-4 text-red-500 underline decoration-wavy decoration-from-font">{license.price}</p>
+      </article>
+    ))
+  }
+</section>

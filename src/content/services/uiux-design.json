@@ -1,0 +1,162 @@
+{
+  "serviceName": {
+    "en": "UI/UX Design",
+    "sv": "UI/UX-design"
+  },
+  "shortDescription": {
+    "en": "Creating websites and apps that are beautiful and easy to use. I design digital experiences that your users will love and help your business grow.",
+    "sv": "Skapar webbplatser och appar som är vackra och lätta att använda. Jag designar digitala upplevelser som dina användare kommer att älska och som hjälper ditt företag att växa."
+  },
+  "longDescription": {
+    "en": "A well-designed website or app can make all the difference to your business. I create digital experiences that are both beautiful and functional, making it easy for your users to find what they need.<br /><br />From planning and wireframes to the final polished design, I focus on what works best for your users while meeting your business goals. Every button, menu, and page is thoughtfully crafted to create a smooth, enjoyable experience.<br /><br />Working closely with you throughout the process, I ensure the final product not only looks great but delivers real results for your business.",
+    "sv": "En väldesignad webbplats eller app kan göra stor skillnad för ditt företag. Jag skapar digitala upplevelser som är både vackra och funktionella, vilket gör det enkelt för dina användare att hitta vad de behöver.<br /><br />Från planering och wireframes till den slutliga polerade designen fokuserar jag på vad som fungerar bäst för dina användare samtidigt som jag uppfyller dina affärsmål. Varje knapp, meny och sida är omsorgsfullt utformad för att skapa en smidig, trevlig upplevelse.<br /><br />Genom att arbeta nära dig genom hela processen säkerställer jag att slutprodukten inte bara ser bra ut utan levererar verkliga resultat för ditt företag."
+  },
+  "icon": "ph:layout-duotone",
+  "color": "green",
+  "pricing": {
+    "startingFrom": 750,
+    "unit": {
+      "en": "hour",
+      "sv": "timme"
+    },
+    "note": {
+      "en": "Minimum project engagement of 10 hours. Includes comprehensive design system documentation and handover files in Figma format.",
+      "sv": "Minimum projektengagemang på 10 timmar. Inkluderar omfattande designsystemdokumentation och överlämningsfiler i Figma-format."
+    }
+  },
+  "keyFeatures": [
+    {
+      "title": {
+        "en": "User-first design",
+        "sv": "Användarfokuserad design"
+      },
+      "description": {
+        "en": "I create digital experiences that are easy and enjoyable to use, helping your customers find exactly what they need.",
+        "sv": "Jag skapar digitala upplevelser som är enkla och trevliga att använda, och hjälper dina kunder att hitta precis vad de behöver."
+      },
+      "icon": "ph:users-three-duotone"
+    },
+    {
+      "title": {
+        "en": "Clear communication",
+        "sv": "Tydlig kommunikation"
+      },
+      "description": {
+        "en": "Your website or app will guide users naturally, making complex tasks simple and helping them take action with confidence.",
+        "sv": "Din webbplats eller app kommer att guida användare naturligt, göra komplexa uppgifter enkla och hjälpa dem att agera med självförtroende."
+      },
+      "icon": "ph:squares-four-duotone"
+    },
+    {
+      "title": {
+        "en": "Works everywhere",
+        "sv": "Fungerar överallt"
+      },
+      "description": {
+        "en": "Your design will look and work perfectly on all devices, from mobile phones to large desktop screens.",
+        "sv": "Din design kommer att se ut och fungera perfekt på alla enheter, från mobiltelefoner till stora datorskärmar."
+      },
+      "icon": "ph:devices-duotone"
+    },
+    {
+      "title": {
+        "en": "Proven success",
+        "sv": "Bevisad framgång"
+      },
+      "description": {
+        "en": "I thoroughly test with real users to ensure your design achieves its goals and helps grow your business.",
+        "sv": "Jag testar grundligt med riktiga användare för att säkerställa att din design uppnår sina mål och hjälper till att växa ditt företag."
+      },
+      "icon": "ph:test-tube-duotone"
+    }
+  ],
+  "processSteps": [
+    {
+      "title": {
+        "en": "Plan & research",
+        "sv": "Planera & undersök"
+      },
+      "description": {
+        "en": "We start by understanding your needs and goals through research and discussions to create a solid foundation for design.",
+        "sv": "Vi börjar med att förstå dina behov och mål genom undersökning och diskussioner för att skapa en solid grund för design."
+      }
+    },
+    {
+      "title": {
+        "en": "Design & build",
+        "sv": "Design & bygg"
+      },
+      "description": {
+        "en": "Creating wireframes and interactive designs, working closely with you to ensure we're meeting your vision.",
+        "sv": "Skapar wireframes och interaktiva designer, arbetar nära dig för att säkerställa att vi möter din vision."
+      }
+    },
+    {
+      "title": {
+        "en": "Test & refine",
+        "sv": "Testa & förbättra"
+      },
+      "description": {
+        "en": "Testing the designs with real users and making improvements based on feedback and results.",
+        "sv": "Testar designerna med riktiga användare och gör förbättringar baserat på feedback och resultat."
+      }
+    },
+    {
+      "title": {
+        "en": "Launch & support",
+        "sv": "Lansera & support"
+      },
+      "description": {
+        "en": "Delivering final designs with documentation and supporting you through implementation.",
+        "sv": "Levererar slutgiltiga designer med dokumentation och stödjer dig genom implementering."
+      }
+    }
+  ],
+  "cta": {
+    "en": "Book a consultation",
+    "sv": "Boka en konsultation"
+  },
+  "featuredClients": [
+    "24vision",
+    "atlasos",
+    "conodra",
+    "creative-kids",
+    "creavite"
+  ],
+  "featured": false,
+  "seo": {
+    "en": {
+      "title": "User Experience & Interface Design",
+      "description": "Create intuitive digital experiences that delight your users. My UI/UX design services help businesses craft websites and applications that are both beautiful and highly functional.",
+      "keywords": [
+        "user experience design",
+        "interface design",
+        "website usability",
+        "digital product design",
+        "user research",
+        "interaction design",
+        "responsive design",
+        "accessibility design",
+        "user testing",
+        "conversion optimisation"
+      ]
+    },
+    "sv": {
+      "title": "Användarupplevelse & Gränssnittsdesign",
+      "description": "Skapa intuitiva digitala upplevelser som förtjusar dina användare. Mina UI/UX-designtjänster hjälper företag att skapa webbplatser och applikationer som är både vackra och mycket funktionella.",
+      "keywords": [
+        "användarupplevelsedesign",
+        "gränssnittsdesign",
+        "webbplatsanvändbarhet",
+        "digital produktdesign",
+        "användarforskning",
+        "interaktionsdesign",
+        "responsiv design",
+        "tillgänglighetsdesign",
+        "användartestning",
+        "konverteringsoptimering"
+      ]
+    }
+  },
+  "relatedServices": ["design", "brand-identity", "communication"]
+}

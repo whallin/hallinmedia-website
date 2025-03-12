@@ -1,0 +1,125 @@
+# Legal Document Roadmap for Swedish AB
+
+---
+
+"Based on the already existing legal documents in the /legal/ directory, create the following additional legal documents for me:
+
+- Licensing Agreement
+
+See todo.mdx for the purpose of these documents, and see content.config.ts for the full legalCollection content schema.
+
+Only write the Swedish version of these documents, as I'll manually translate it into English later.
+
+You must keep a similiar layout, tonality, structure, flow, and level of legal protection as the already exisiting legal documents in the legal content directory."
+
+---
+
+## 1. Mandatory EU/Swedish Requirements ✅
+
+| Document                                   | Slug                             | Purpose                                               | Key Considerations                                                                        | Document Type | Jurisdiction | Audience | Compliance   |
+| ------------------------------------------ | -------------------------------- | ----------------------------------------------------- | ----------------------------------------------------------------------------------------- | ------------- | ------------ | -------- | ------------ |
+| 3.7 ✅ **Privacy Policy**                  | `/legal/privacy-policy`          | GDPR compliance - explains data collection/processing | Must include cookie info, third-party services (Google Analytics), data retention periods | privacy       | EU           | both     | GDPR         |
+| 3.7 ✅ **Cookie Policy**                   | `/legal/cookie-policy`           | Informs about tracking technologies                   | Requires separate pop-up consent management (Cookiebot recommended)                       | policy        | EU           | both     | GDPR         |
+| 3.7 ✅ **Right of Withdrawal** (Ångerrätt) | `/legal/right-of-withdrawal`     | 14-day cancellation right for B2C sales               | Must be prominent during checkout, Swedish template from Konsumentverket                  | notice        | SE           | b2c      | Consumer Law |
+| **Accessibility Statement**                | `/legal/accessibility-statement` | WCAG compliance declaration                           | Required if working with public sector, use EU standard template                          | statement     | EU           | both     | WCAG         |
+
+## 2. Business Operations 📑
+
+| Document                                  | Slug                                  | Purpose                                    | Key Considerations                                                     | Document Type | Jurisdiction | Audience | Compliance     |
+| ----------------------------------------- | ------------------------------------- | ------------------------------------------ | ---------------------------------------------------------------------- | ------------- | ------------ | -------- | -------------- |
+| 3.7 ✅ **Terms of Service**               | `/legal/terms-of-service`             | General rules for website/service use      | Include AB info (org.nr, VAT), payment terms, termination clauses      | terms         | SE           | both     | E-commerce Law |
+| 3.7 ✅ **Master Service Agreement** (MSA) | `/legal/master-service-agreement-msa` | Framework for B2B client relationships     | Define project phases, intellectual property transfer, confidentiality | agreement     | SE           | b2b      | Contract Law   |
+| 3.7 ✅ **Service Level Agreement** (SLA)  | `/legal/service-level-agreement-sla`  | Quality standards for B2B services         | Response times, revision limits, equipment failure protocols           | agreement     | SE           | b2b      | Contract Law   |
+| **Data Processing Agreement** (DPA)       | `/legal/data-processing-agreement`    | GDPR requirement when handling client data | Needed if processing customer data for B2B clients                     | agreement     | EU           | b2b      | GDPR           |
+
+## 3. Photography Specific 📸
+
+| Document                             | Slug                           | Purpose                           | Key Considerations                                                     | Document Type | Jurisdiction | Audience | Compliance    |
+| ------------------------------------ | ------------------------------ | --------------------------------- | ---------------------------------------------------------------------- | ------------- | ------------ | -------- | ------------- |
+| 3.7 ✅ **Copyright Notice**          | `/legal/copyright-notice`      | Protects visual content ownership | Specify "© [Year] [AB Name]. All rights reserved." in footer          | notice        | Global       | both     | Copyright Law |
+| 3.7 ✅ **Licensing Agreement**       | `/legal/image-licensing`       | Image usage rights management     | Differentiate between commercial/editorial use, territory restrictions | agreement     | Global       | both     | Copyright Law |
+| 3.7 ✅ **Guidelines for Publishing** | `/legal/publishing-guidelines` | Controls client image usage       | Model release status, credit requirements, social media tagging rules  | guidelines    | Global       | both     | Copyright Law |
+
+## 4. Financial & Logistics 💰
+
+| Document                         | Slug                        | Purpose                                | Key Considerations                                                    | Document Type | Jurisdiction | Audience | Compliance     |
+| -------------------------------- | --------------------------- | -------------------------------------- | --------------------------------------------------------------------- | ------------- | ------------ | -------- | -------------- |
+| **Credit Application**           | `/legal/credit-application` | B2B payment terms                      | Net 30/60 days, late fees (ränta enligt skadeståndslagen)             | agreement     | SE           | b2b      | Credit Law     |
+| 3.7 ✅ **Delivery Terms**        | `/legal/delivery-terms`     | Sets expectations for product/services | Digital delivery timeframes, physical print shipping (Postnord terms) | terms         | SE           | both     | E-commerce Law |
+| 3.7 ✅ **Returns/Refund Policy** | `/legal/returns-policy`     | Manages customer expectations          | Legal requirement for e-commerce, 30-day window recommended           | policy        | SE           | b2c      | Consumer Law   |
+
+## 5. Risk Management ⚠️
+
+| Document                         | Slug                         | Purpose                               | Key Considerations                                             | Document Type | Jurisdiction | Audience | Compliance     |
+| -------------------------------- | ---------------------------- | ------------------------------------- | -------------------------------------------------------------- | ------------- | ------------ | -------- | -------------- |
+| 3.7 ✅ **Disclaimer**            | `/legal/disclaimer`          | Limits liability for website content  | "Images may differ from actual results" for styled shoots      | notice        | SE           | both     | Liability Law  |
+| **Complaint Handling Procedure** | `/legal/complaint-procedure` | ARN compliance for dispute resolution | 7-day response commitment, mediation steps before legal action | procedure     | SE           | both     | ARN Guidelines |
+
+## Implementation Checklist:
+
+1. [ ] GDPR Foundation
+
+   - Create Privacy Policy with:
+     • Explicit list of collected data types (including cookies/pixels)
+     • Legal basis for processing (consent/contract/legitimate interest)
+     • Data retention timeline (e.g., "client data deleted after 7 years per accounting laws")
+     • Third-party processors list (Google Analytics, Stripe, etc.)
+     • User rights section (access/rectification/erasure)
+   - Implement Cookie Policy with:
+     • Cookie consent banner (Cookiebot/OneTrust)
+     • Script to block cookies until consent
+     • Categorization (necessary/analytics/marketing)
+     • Renew consent every 12 months
+
+2. [ ] AB Registration Compliance
+
+   - Add to all document footers:
+     "© 2024 [AB Name], Org.nr: 556xxx-xxxx | VAT: SE556xxxxxxxx01"
+     "Registered office: [Street Address], [Postcode Stockholm]"
+     "Contact: juridik@abname.se"
+   - Link to Bolagsverket's public registry entry
+   - Update Terms of Service with:
+     • Board members list
+     • Authorized signatories
+     • Annual report accessibility
+
+3. [ ] B2B/B2C Separation
+       B2C Flow:
+
+   - Add Right of Withdrawal checkbox during checkout
+   - Auto-include Returns Policy PDF in order confirmation
+   - 14-day countdown timer in customer portal
+
+   B2B Flow:
+
+   - Integrate MSA into contract workflow:
+     • E-signature requirement (BankID)
+     • Project phase approvals
+     • IP transfer triggers
+   - SLA monitoring dashboard:
+     • Response time tracking
+     • Revision counters
+     • Penalty clauses activation
+
+4. [ ] Photography Controls
+
+   - Publishing Guidelines should include:
+     • Model release status indicators (✅/❌)
+     • Social media tagging rules (@photographer + @agency)
+     • Embargo periods for unpublished work
+     • Download tracking (watermarked vs. final files)
+   - Add digital signature requirement for Licensing Agreement
+   - Connect Copyright Notice to EXIF metadata in deliverables
+
+5. [ ] Complaint Handling
+   - Implement ARN-aligned process:
+     1. Complaint received → timestamped
+     2. Auto-acknowledgment within 24h
+     3. Case manager assigned (with escalation path)
+     4. Resolution proposal by day 5
+     5. Final response by day 7
+   - Train customer service on mediation phrases
+   - Publicly display complaint statistics (quarterly)
+   - Archive all complaints for 3 years
+
+**Pro Tip:** Conduct legal review every 6 months using the Swedish Consumer Agency's checklist (Konsumentverkets kontrollista för e-handel).

@@ -1,0 +1,125 @@
+---
+title: Att bygga hallin.media - en ny början
+description: Min resa att bygga en ny hemsida med Astro och Tailwind CSS, från idé till verklighet - utan designskisser men med kreativt självförtroende.
+author: William Hallin
+publishedDate: "2025-03-12T10:30:00.000Z"
+updatedDate: "2025-03-12T10:30:00.000Z"
+tags: [webbutveckling, astro, tailwind-css, webbdesign, utveckling, kreativitet]
+featured: true
+featuredImage: /src/assets/blog/building-hallinmedia/thumbnail.png
+featuredImageAlt: hallin.media
+draft: false
+seo:
+  {
+    title: "Att bygga en modern hemsida med Astro och Tailwind CSS - min utvecklingsresa",
+    description: "Följ min resa att bygga hallin.media från grunden med Astro och Tailwind CSS. En personlig berättelse om kreativ webbutveckling utan traditionella designskisser.",
+    keywords:
+      [
+        "webbutveckling",
+        "astro",
+        "tailwind css",
+        "personlig hemsida",
+        "webbdesign",
+        "kreativ utveckling",
+        "hallin.media",
+        "statisk hemsida",
+      ],
+  }
+category: Teknik
+---
+
+import { Picture } from "astro:assets";
+import ImgOldWebsite from "/src/assets/blog/building-hallinmedia/old-website.png";
+
+Jag anser mig vara rätt så kreativ när det kommer till skrift, men hur ska man förklara något som inte ens är självklart för en själv? Det jag syftar på är webbutvecklingen av den här exakta hemsidan du är på just nu.
+
+Jag är, by no means, en expert på webbutveckling. Jag har aldrig tagit en kurs i någon form av programmering förutom de obligatoriska momenten på tekniken i högstadiet, men utöver det är jag knappast någon utvecklare av något slag. Mina rötter ligger i det kreativa; det är där jag bor och trivs.
+
+När jag ser en hemsida, säkert värd miljoner, kan jag inte låta bli att drägla över den. Jag tänker tankar som: “Hur har de gjort det här?” och “Hur lång tid tog detta?”. Sen när man försöker återskapa samma effekt själv, eller samma layout, så brister det helt. Man blir missnöjd, och önskan att få göra något lika snyggt och stilrent finns kvar inom en.
+
+Så, vad gör jag nu när jag behöver fräscha upp min digitala look på nätet? Ska jag anlita en webbutvecklare? Då måste jag ha en plan och design klar innan. Ska jag konsultera någon annan med en design jag kommer med? Men jag har inte tid att göra den där designen!
+
+Någonstans kände jag att jag bara ville dyka rakt in i det hela. Så bra som det må vara att ha en UI-design och ett designspråk innan man bygger appar eller hemsidor, så kände jag verkligen inte orken för det den här gången. Vad hindrade mig egentligen från att bara komma igång? Att bara börja skriva kod och bygga mina idéer direkt?
+
+## Kapittel 1: bunx create-astro@latest
+
+Okej, jag överdrev kanske lite innan om mina tidigare erfarenheter. Helt kunskapslös är jag inte när det kommer till webben och dess tekniker.
+
+Jag har byggt hemsidor åt mig själv och även hjälpt andra med deras och då kommer researchen rent naturligt av vad det finns för tekniker, hur man ens skriver koden från första början, osv. Dock att se till att allt det man gör faktiskt blir korrekt och “best practice” är en helt annan sak, och det är där jag känner att jag kanske inte är så stark.
+
+En slutsats jag kunde dra nästan direkt var att jag ville ha en statisk hemsida. Jag har tidigare använt mig av <a>Astro</a> och där visste jag direkt att jag ville stanna.
+
+Astro är ett ramverk för att bygga statiska hemsidor, rätt så komplexa sådana mår jag säga. Astro är rätt så lätt att komma igång med och det är rätt så lätt att förstå sig på. Nu är detta dock ingen instruktionsbok för Astro, men jag hoppas du kan ta mina ord för det jag säger.
+
+Med ett tomt Astro-projekt skapat och klart i handen var det bara att sätta igång.
+
+_Men hur börjar man egentligen, utan en design?_
+
+## Kapittel 2: En tom canvas
+
+<figure>
+  <Picture
+    src={ImgOldWebsite}
+    alt="Skärmdump av HallinMedia hemsidan"
+    width={1920}
+    height={1080}
+    widths={[640, 768, 1024, 1280, 1920]}
+    formats={["avif", "webp"]}
+    class="aspect-video rounded-lg object-cover shadow-sm select-none"
+  />
+  <figcaption class="text-center italic">
+    En skärmdump av min gamla hemsida. Jag hade en vision om att den skulle vara
+    enkel och stilren.
+  </figcaption>
+</figure>
+
+Jag hade ju trots allt redan en hemsida sedan tidigare. Den var inte något jag var särskilt stolt eller nöjd över, men den uppfyllde ändå mina krav på något sätt. Det enda jag behövde var en webb-närvaro, och det gav den mig trots allt.
+
+Designspråket var jag utan tvekan nöjd med som det var. HallinMedia har sin röda "Live"-färg, som den kallas, och typografin är en blandning av serif-typsnitt för titlar och text, medan sans-typsnitt strösslades in lite här och där för knappar och interaktiva eller mindre viktiga saker. Tack vare att jag hade skapat detta designspråk tidigare blev det faktiskt otroligt mycket lättare att komma igång.
+
+Fördelen med att ha det visuella tänket förberett sedan tidigare är att man då kan låta de kreativa tankarna flöda när det gäller layout och innehåll. Det var helt enkelt dags att sätta på layoutmössan och börja tänka på hur jag ville att min hemsida skulle vara visuellt uppbyggd.
+
+Allt från att jag kommer på layouten till "Om mig"-sidan i duschen, till att jag får idéer om innehåll och struktur till prissidan innan jag ska sova — _ja, så var det verkligen att skapa denna hemsida._ Vissa kanske kallar det en arbetsskada, men jag vill kalla det för passiv kreativitet.
+
+Med dessa layouter och idéer i huvudet var det dags att sätta igång och börja skriva kod. Här börjar utmaningen, kanske du tänker nu? Jag hade ingen design, ingen fysisk skiss, bara en idé i huvudet - hur kan jag rimligtvis komma igång med koden? När jag tänker på det nu i efterhand låter det ganska sjukt. Det är även för mig väldigt oklart hur jag egentligen kom igång, men det handlar mycket om att bara våga pröva. Att våga testa saker, se vad som fastnar eller inte, och utveckla sig själv därifrån.
+
+<a>Tailwind CSS</a> har varit en ren fröjd att ha tillgång till för hemsidan.
+Hade det inte varit för Tailwind hade jag inte haft lika bra tempo eller
+möjlighet att få ner mina idéer på "papper". Tailwind är ett CSS-ramverk som gör
+det möjligt att skriva CSS snabbt och enkelt, vilket jag verkligen uppskattar.
+Det har låtit mig snabbt pröva olika idéer fram och tillbaka utan att behöva
+ägna över 40 timmar åt YouTube-tutorials.
+
+Tack vare att jag kunde få ner mina idéer så snabbt som jag gjorde till kod, spelade det ingen roll att dessa visuella idéer bara fanns i mitt huvud. Jag kunde skriva stödord i en att-göra-lista åt mig själv om jag inte kunde pröva mina idéer just då, för att senare trigga idé-tankarna igen.
+
+Sakta men säkert började hemsidan ta form. Jag hade en layout och ett innehåll som jag var nöjd med, jag hade en färgpalett som jag kände mig bekväm med, och jag hade en typografi som jag tyckte passade in. Det var dags att börja fylla på med innehåll.
+
+## Kapittel 3: Fartblind för orden
+
+Jag har alltid tyckt om att skriva när jag gillar ämnet jag författar om. Jag har skrivit noveller, dikter, och så vidare, men det är alltid det kreativa i dokumentation och berättande texter som har lockat mig. Så hur skulle det gå för mig att författa en hel hemsida? Inte bara på svenska, utan även på engelska, hade jag sagt till mig själv.
+
+_Varför egentligen?_
+
+Först och främst såg jag ursprungligen skapandet av en tvåspråkig hemsida som en utmaning för mig själv, bara för att hantera det logistiska som följer med kodningens värld och att behöva implementera logik för att hantera flera språk. Som tur är underlättade Astro en hel del med lokaliseringen och gjorde detta till en mindre utmaning än vad jag initialt hade trott.
+
+Den andra motivationen till att lokalisera sajten var att jag ville nå ut till en bredare publik. Jag bor i ett landskap som präglas av nya språk och kulturer varje dag. Jag pratar så klart om Skellefteå. Det kommer så otroligt många nya människor hit varje dag, och det är fantastiskt att se så många olika kulturer delta i samhället genom olika aktiviteter. Så varför skulle mina tjänster egentligen _inte_ kunna finnas tillgängliga för alla nya människor som kanske vill starta och driva företag här lokalt?
+
+Det här blev helt enkelt mitt wakeup-call att se till att min hemsida är tillgänglig på både svenska och engelska för att öka tillgängligheten för alla som eventuellt är i behov av min expertis.
+
+_Men hur vet man vad man behöver skriva?_
+
+Jag hade ju redan en hel del innehåll från min gamla hemsida som jag kunde återanvända. Det enda jag kände var att det kanske behövde poleras och få lite kärlek innan jag vågade återanvända det igen. Men annars var det bara att köra på tyckte jag.
+
+I min att-göra-lista hade jag skrivit ner många av de sidor som idag finns på hemsidan. Jag visste att jag ville ha dessa på min hemsida och vilket syfte de skulle ha. Detta gällde dock inte bara sidorna, utan även tjänster, beskrivningar, rubriker, juridiska dokument, osv. Helt enkelt var allt redan ganska väl kartlagt, så det fanns inte mycket att vänta på; det var bara att sätta igång.
+
+## Kapittel 4: Den nya början
+
+Så, vart är jag nu egentligen? Jag har en hemsida som jag är nöjd med, jag har innehåll som flyter när man läser det, och jag har en känsla av att jag äntligen har gjort något bra. Jag har skapat en hemsida som jag är stolt över, och jag har gjort det helt själv.
+
+_“New year, new me”_ brukar man säga, och det var väl lite av den största motivationen för den makeover min hemsida skulle få. Som nyutexaminerad student och redo att verkligen satsa allt på egenföretagande inom den kreativa industrin behövdes en närvaro som proaktivt kunde sköta sig själv. Jag menar att all, åtminstone grundläggande, information skulle finnas tillgänglig på ett och samma ställe för att besvara frågor från eventuella kunder.
+
+> Det ska inte krävas ett telefonsamtal eller mejl för varje fråga eller ärende; viss information ska bara kunna finnas tillgänglig om man söker efter den, tycker jag.
+
+Jag stör mig på att jag inte har gjort detta tidigare. Jag har alltid varit en person som velat ha en hemsida, och det är väl det typiska med portfoliohemsidor också; _man blir bara aldrig klar_. Det finns alltid något man kan ändra och justera för att få hemsidan, och därmed sig själv som varumärke, att se ännu bättre ut. Men nu känner jag att jag skulle kunna lämna hemsidan som den är och vara nöjd ett bra tag, och kanske till och med fokusera på annat som jag behöver arbeta med rent administrativt.
+
+_Vem vet, kanske jag till och med kan börja skriva på en blogg?_

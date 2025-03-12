@@ -1,0 +1,53 @@
+---
+import { Icon } from "astro-icon/components";
+
+interface Props {
+  name: string;
+  disabled?: boolean;
+}
+
+const translations = {
+  sv: {
+    decrease: "Minska antal",
+    increase: "Öka antal",
+  },
+  en: {
+    decrease: "Decrease quantity",
+    increase: "Increase quantity",
+  },
+};
+
+const locale = Astro.currentLocale === "en" || Astro.currentLocale === "sv" ? Astro.currentLocale : "en";
+const { name, disabled = true } = Astro.props;
+---
+
+<div class="flex items-center gap-2 rounded-md">
+  <button
+    type="button"
+    class="flex h-8 w-8 items-center justify-center rounded-md border border-stone-200 text-stone-600 transition hover:border-red-500 hover:text-red-500 disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:border-stone-200 disabled:hover:text-stone-600 dark:border-stone-700 dark:text-stone-400 dark:hover:border-red-500 dark:hover:text-red-500"
+    data-action="decrement"
+    disabled={disabled}
+  >
+    <Icon name="ph:minus-bold" class="h-3 w-3" />
+    <span class="sr-only">{translations[locale].decrease}</span>
+  </button>
+  <input
+    type="number"
+    name={name}
+    class="h-8 w-12 rounded-md border border-stone-200 bg-transparent text-center text-sm text-stone-700 focus:border-red-500 focus:ring-0 focus:outline-none disabled:cursor-not-allowed disabled:opacity-50 dark:border-stone-700 dark:text-stone-300 [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none"
+    value="1"
+    min="1"
+    max="50"
+    disabled={disabled}
+    onclick="this.select()"
+  />
+  <button
+    type="button"
+    class="flex h-8 w-8 items-center justify-center rounded-md border border-stone-200 text-stone-600 transition hover:border-red-500 hover:text-red-500 disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:border-stone-200 disabled:hover:text-stone-600 dark:border-stone-700 dark:text-stone-400 dark:hover:border-red-500 dark:hover:text-red-500"
+    data-action="increment"
+    disabled={disabled}
+  >
+    <Icon name="ph:plus-bold" class="h-3 w-3" />
+    <span class="sr-only">{translations[locale].increase}</span>
+  </button>
+</div>

@@ -1,0 +1,167 @@
+---
+import { Icon } from "astro-icon/components";
+
+interface Props {
+  service: {
+    name: { en: string; sv: string };
+    description: { en: string; sv: string };
+    note?: { en: string; sv: string };
+    basePrice: number;
+    unit: { en: string; sv: string };
+    options?: Array<{
+      name: { en: string; sv: string };
+      price: number;
+      unit?: { en: string; sv: string };
+    }>;
+    addons?: Array<{
+      name: { en: string; sv: string };
+      price: number;
+      unit?: { en: string; sv: string };
+      optional?: boolean;
+    }>;
+  };
+}
+
+const translations = {
+  en: {
+    options: "Options",
+    addons: "Add-ons",
+    currency: "SEK",
+    optional: "optional",
+    addition: "Addition",
+    startingAt: "Starting at",
+    per: "per",
+  },
+  sv: {
+    options: "Alternativ",
+    addons: "Tillägg",
+    currency: "kr",
+    optional: "valfritt",
+    addition: "Tillägg",
+    startingAt: "Pris från",
+    per: "per",
+  },
+};
+
+const locale = Astro.currentLocale === "en" || Astro.currentLocale === "sv" ? Astro.currentLocale : "en";
+const { service } = Astro.props;
+---
+
+<article class="rounded-lg border border-stone-200 dark:border-stone-700">
+  <div class="border-stone-200 bg-amber-100/25 p-4 sm:p-6 dark:border-stone-700 dark:bg-stone-800">
+    <div class="flex flex-col gap-4">
+      <div class="flex flex-col gap-2">
+        <h3 class="font-serif text-lg font-medium text-stone-700 dark:text-stone-100">
+          {service.name[locale]}
+        </h3>
+        <p class="font-serif text-stone-500 dark:text-stone-400">{service.description[locale]}</p>
+        {
+          service.note && (
+            <aside class="mt-2 rounded-md border border-red-200 bg-red-100/25 p-3 dark:border-red-700 dark:bg-red-800/25">
+              <p class="flex flex-col gap-2 text-sm text-red-700 dark:text-red-400">
+                <Icon name="ph:info-duotone" class="flex-shrink-0" aria-hidden="true" />
+                {service.note[locale]}
+              </p>
+            </aside>
+          )
+        }
+      </div>
+      <dl class="flex items-center justify-between border-t border-stone-200 pt-4 dark:border-stone-700">
+        <dt class="text-sm text-stone-500 dark:text-stone-400">
+          {
+            service.unit[locale] === "procent" || service.unit[locale] === "percent"
+              ? translations[locale].addition
+              : `${translations[locale].startingAt} (${translations[locale].per} ${service.unit[locale]})`
+          }
+        </dt>
+        <dd class="font-serif text-lg font-medium text-stone-700 dark:text-stone-100">
+          {
+            service.unit[locale] === "procent" || service.unit[locale] === "percent" ? (
+              <>{service.basePrice}%</>
+            ) : (
+              <>
+                <span
+                  id={`price-${service.name[locale].toLowerCase().replace(/\s+/g, "-")}`}
+                  data-base-price={service.basePrice}
+                >
+                  {service.basePrice.toLocaleString(locale === "sv" ? "sv-SE" : "en-GB")}
+                </span>{" "}
+                {translations[locale].currency}
+              </>
+            )
+          }
+        </dd>
+      </dl>
+    </div>
+  </div>
+  {
+    (service.options || service.addons) && (
+      <div class="divide-y divide-stone-200 dark:divide-stone-700">
+        {service.options && service.options.length > 0 && (
+          <div class="p-4 sm:p-6">
+            <h4 class="mb-4 font-serif font-medium text-stone-700 dark:text-stone-100">
+              {translations[locale].options}
+            </h4>
+            <dl class="space-y-4">
+              {service.options.map((option) => (
+                <div class="flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between">
+                  <dt class="font-serif text-stone-500 dark:text-stone-400">{option.name[locale]}</dt>
+                  <dd class="text-right font-serif text-stone-700 dark:text-stone-100">
+                    {option.unit?.sv === "procent" || option.unit?.en === "percent" ? (
+                      <>{option.price}%</>
+                    ) : (
+                      <>
+                        <span
+                          id={`price-option-${option.name[locale].toLowerCase().replace(/\s+/g, "-")}`}
+                          data-base-price={option.price}
+                        >
+                          {option.price.toLocaleString(locale === "sv" ? "sv-SE" : "en-GB")}
+                        </span>{" "}
+                        {translations[locale].currency}
+                        {option.unit && ` / ${option.unit[locale]}`}
+                      </>
+                    )}
+                  </dd>
+                </div>
+              ))}
+            </dl>
+          </div>
+        )}
+
+        {service.addons && service.addons.length > 0 && (
+          <div class="p-4 sm:p-6">
+            <h4 class="mb-4 font-serif font-medium text-stone-700 dark:text-stone-100">
+              {translations[locale].addons}
+            </h4>
+            <dl class="space-y-4">
+              {service.addons.map((addon) => (
+                <div class="flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between">
+                  <dt class="font-serif text-stone-500 dark:text-stone-400">
+                    {addon.name[locale]}
+                    {addon.optional && ` (${translations[locale].optional})`}
+                  </dt>
+                  <dd class="text-right font-serif text-stone-700 dark:text-stone-100">
+                    {addon.unit?.sv === "procent" || addon.unit?.en === "percent" ? (
+                      <>{addon.price}%</>
+                    ) : (
+                      <>
+                        <span
+                          id={`price-addon-${addon.name[locale].toLowerCase().replace(/\s+/g, "-")}`}
+                          data-base-price={addon.price}
+                        >
+                          {addon.price.toLocaleString(locale === "sv" ? "sv-SE" : "en-GB")}
+                        </span>{" "}
+                        {translations[locale].currency}
+                        {addon.unit && ` / ${addon.unit[locale]}`}
+                      </>
+                    )}
+                  </dd>
+                </div>
+              ))}
+            </dl>
+          </div>
+        )}
+      </div>
+    )
+  }
+</article>

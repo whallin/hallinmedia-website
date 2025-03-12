@@ -1,0 +1,215 @@
+---
+import { Icon } from "astro-icon/components";
+import { Image, Picture } from "astro:assets";
+import { getCollection } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
+
+export async function getStaticPaths() {
+  const clients = await getCollection("clientsCollection");
+  return clients.map((client) => ({
+    params: { id: client.id },
+    props: { client },
+  }));
+}
+
+const { client } = Astro.props;
+const { data } = client;
+const locale = Astro.currentLocale === "en" || Astro.currentLocale === "sv" ? Astro.currentLocale : "en";
+const portfolioPosts = await getCollection("portfolioEnCollection").then((posts) =>
+  posts
+    .filter((post) => post.data.client?.id === client.id)
+    .sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime()),
+);
+---
+
+<Layout title=`${data.name} - Klientportfolio` description={data.description[locale]} header={data.name}>
+  <section
+    class="max-w-2xl space-y-16 sm:mx-auto"
+    style={`--dominant-color: ${client.data.dominantColor.light}; ${client.data.dominantColor.dark ? `--dominant-color-dark: ${client.data.dominantColor.dark}` : `--dominant-color-dark: ${client.data.dominantColor.light}`}`}
+  >
+    <header class="mb-6 flex flex-col-reverse justify-between gap-6 sm:flex-row sm:items-start">
+      <div class="space-y-6">
+        <div class="flex h-auto max-h-20 w-auto max-w-48">
+          {
+            data.logoDark ? (
+              <>
+                <Image src={data.logo} alt={data.name} class="object-contain select-none dark:hidden" />
+                <Image src={data.logoDark} alt={data.name} class="hidden object-contain select-none dark:block" />
+              </>
+            ) : (
+              <Image src={data.logo} alt={data.name} class="object-contain select-none" />
+            )
+          }
+        </div>
+        <p class="text-sm leading-relaxed text-stone-700 dark:text-stone-300">
+          {data.description[locale]}
+        </p>
+      </div>
+      {
+        data.featured && (
+          <span class="flex w-fit flex-shrink-0 items-center gap-2 rounded-full bg-amber-100 px-4 py-1 text-sm text-amber-700 dark:bg-amber-900/50 dark:text-amber-100">
+            <Icon name="ph:star-duotone" class="h-4 w-4" aria-hidden="true" />
+            Utvald kund
+          </span>
+        )
+      }
+    </header>
+    <section class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+      {
+        data.websiteUrl && (
+          <a
+            href={data.websiteUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex items-center justify-center gap-2 rounded-md bg-[var(--dominant-color)] px-6 py-2.5 text-sm font-medium text-stone-100 transition hover:opacity-75 active:scale-95 active:opacity-50 dark:bg-[var(--dominant-color-dark)] dark:text-stone-800"
+          >
+            Besök {data.websiteUrl.replace(/^(https?:\/\/)?(www\.)?|\/$/g, "")}
+            <Icon name="ph:arrow-square-out-duotone" class="h-4 w-4" aria-hidden="true" />
+          </a>
+        )
+      }
+      {
+        data.socialLinks && (
+          <nav aria-label="Social Links">
+            <ul class="flex flex-wrap gap-4 text-sm">
+              {data.socialLinks.twitter && (
+                <li>
+                  <a
+                    href={data.socialLinks.twitter}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="group flex items-center gap-2 text-stone-700 underline decoration-stone-500 decoration-dashed underline-offset-4 hover:bg-stone-500 hover:text-stone-100 hover:no-underline active:opacity-50 dark:text-stone-300"
+                  >
+                    <Icon
+                      name="ph:twitter-logo-duotone"
+                      class="h-4 w-4 text-stone-500 group-hover:text-stone-100"
+                      aria-hidden="true"
+                    />
+                    <span>Twitter / X</span>
+                  </a>
+                </li>
+              )}
+              {data.socialLinks.linkedin && (
+                <li>
+                  <a
+                    href={data.socialLinks.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="group flex items-center gap-2 text-stone-700 underline decoration-blue-500 decoration-dashed underline-offset-4 hover:bg-blue-500 hover:text-blue-100 hover:no-underline active:opacity-50 dark:text-stone-300"
+                  >
+                    <Icon
+                      name="ph:linkedin-logo-duotone"
+                      class="h-4 w-4 text-blue-500 group-hover:text-blue-100"
+                      aria-hidden="true"
+                    />
+                    <span>LinkedIn</span>
+                  </a>
+                </li>
+              )}
+              {data.socialLinks.instagram && (
+                <li>
+                  <a
+                    href={data.socialLinks.instagram}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="group flex items-center gap-2 text-stone-700 underline decoration-pink-500 decoration-dashed underline-offset-4 hover:bg-pink-500 hover:text-pink-100 hover:no-underline active:opacity-50 dark:text-stone-300"
+                  >
+                    <Icon
+                      name="ph:instagram-logo-duotone"
+                      class="h-4 w-4 text-pink-500 group-hover:text-pink-100"
+                      aria-hidden="true"
+                    />
+                    <span>Instagram</span>
+                  </a>
+                </li>
+              )}
+              {data.socialLinks.facebook && (
+                <li>
+                  <a
+                    href={data.socialLinks.facebook}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="group flex items-center gap-1 text-stone-700 underline decoration-sky-500 decoration-dashed underline-offset-4 hover:bg-sky-500 hover:text-sky-100 hover:no-underline active:opacity-50 dark:text-stone-300"
+                  >
+                    <Icon
+                      name="ph:facebook-logo-duotone"
+                      class="h-4 w-4 text-sky-500 group-hover:text-sky-100"
+                      aria-hidden="true"
+                    />
+                    <span>Facebook</span>
+                  </a>
+                </li>
+              )}
+            </ul>
+          </nav>
+        )
+      }
+    </section>
+    {
+      data.subcontracted && (
+        <aside class="relative rounded-lg border border-stone-300 bg-amber-50/50 p-6 text-sm font-light text-stone-700 dark:border-stone-700 dark:bg-stone-800/50 dark:text-stone-300">
+          <div class="absolute -top-3 left-4 flex h-6 w-6 items-center justify-center rounded-full border border-stone-300 bg-amber-50 text-[var(--dominant-color)] dark:border-stone-700 dark:bg-stone-900 dark:text-[var(--dominant-color-dark)]">
+            <Icon name="ph:heart-duotone" class="h-4 w-4" aria-hidden="true" />
+          </div>
+          <h2 class="mb-2 font-serif text-xl text-stone-900 italic dark:text-stone-100">Samarbetsmeddelande</h2>
+          <p class="leading-relaxed">
+            Detta projekt genomfördes som underleverantör i ett större samarbete. Som frilansande är jag stolt över mitt
+            bidrag till projektet, men på grund av sekretessavtal kan jag tyvärr inte dela specifika detaljer om arbetet
+            eller resultaten här på min hemsida.
+          </p>
+        </aside>
+      )
+    }
+    <section class="space-y-8">
+      {
+        data.testimonial && (
+          <blockquote class="relative rounded-lg border border-stone-300 bg-amber-50/50 p-6 text-sm font-light text-stone-700 dark:border-stone-700 dark:bg-stone-800/50 dark:text-stone-300">
+            <div class="absolute -top-3 left-4 flex h-6 w-6 items-center justify-center rounded-full border border-stone-300 bg-amber-50 text-[var(--dominant-color)] dark:border-stone-700 dark:bg-stone-900 dark:text-[var(--dominant-color-dark)]">
+              <Icon name="ph:quotes-duotone" class="h-4 w-4" aria-hidden="true" />
+            </div>
+            <p class="mb-4 font-serif text-lg text-stone-900 italic dark:text-stone-100">
+              "{data.testimonial.quote[locale]}"
+            </p>
+            <footer class="flex items-center gap-4">
+              <Picture
+                src={client.data.testimonial?.author.avatar ?? client.data.avatar}
+                alt={client.data.name}
+                width={128}
+                height={128}
+                widths={[48, 64, 128]}
+                formats={["avif", "webp", "jpeg"]}
+                class="h-12 w-12 rounded-full select-none"
+              />
+              <div>
+                <cite class="font-serif font-medium text-stone-900 not-italic dark:text-stone-100">
+                  {data.testimonial.author.name}
+                </cite>
+                <p class="text-sm text-stone-600 dark:text-stone-400">{data.testimonial.author.title[locale]}</p>
+              </div>
+            </footer>
+          </blockquote>
+        )
+      }
+      {
+        portfolioPosts.length > 0 && (
+          <section aria-label="Related Work" class="space-y-8">
+            <header class="flex items-center justify-between">
+              <h2 class="font-serif text-3xl font-light text-stone-900 italic dark:text-stone-100">
+                Relaterade arbeten
+              </h2>
+              <Icon name="ph:sparkle-duotone" class="h-8 w-8 text-red-500" aria-hidden="true" />
+            </header>
+            <div class="grid gap-4 sm:grid-cols-2">
+              {portfolioPosts.map((post) => (
+                <article class="group relative overflow-hidden rounded-lg border border-stone-300 bg-amber-50/50 p-4 transition hover:-translate-y-1 active:scale-95 active:opacity-50 dark:border-stone-700 dark:bg-stone-800/50">
+                  <h3 class="mb-2 font-serif text-xl text-stone-900 dark:text-stone-100">{post.data.title}</h3>
+                  <p class="text-sm font-light text-stone-700 dark:text-stone-300">{post.data.description}</p>
+                </article>
+              ))}
+            </div>
+          </section>
+        )
+      }
+    </section>
+  </section>
+</Layout>

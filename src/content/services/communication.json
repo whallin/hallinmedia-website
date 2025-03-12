@@ -1,0 +1,341 @@
+{
+  "serviceName": {
+    "en": "Communication",
+    "sv": "Kommunikation"
+  },
+  "shortDescription": {
+    "en": "Craft clear, compelling messages that build your brand's authority and drive real action. We help you communicate effectively with your audience across all channels.",
+    "sv": "Skapa tydliga, övertygande budskap som bygger ditt varumärkes auktoritet och driver verklig handling. Vi hjälper dig kommunicera effektivt med din målgrupp över alla kanaler."
+  },
+  "longDescription": {
+    "en": "In today's busy world, how you communicate is just as important as what you say. With expertise in both journalism and digital communication, I help you cut through the noise and deliver messages that truly connect with your audience.<br /><br />Whether you need a comprehensive communication strategy or targeted campaign messaging, I combine data-driven insights with engaging storytelling to create content that achieves your goals. Every message is carefully crafted to strengthen your brand's position and create meaningful connections with your audience.<br /><br />From crafting clear company messaging to developing compelling campaigns, I help you communicate in a way that builds trust, drives engagement, and delivers measurable results for your business.",
+    "sv": "I dagens hektiska värld är hur du kommunicerar lika viktigt som vad du säger. Med expertis inom både journalistik och digital kommunikation hjälper jag dig skära genom bruset och leverera budskap som verkligen når fram till din målgrupp.<br /><br />Oavsett om du behöver en omfattande kommunikationsstrategi eller riktade kampanjbudskap kombinerar jag datadrivna insikter med engagerande storytelling för att skapa innehåll som når dina mål. Varje budskap är noggrant utformat för att stärka ditt varumärkes position och skapa meningsfulla kopplingar med din målgrupp.<br /><br />Från att utforma tydliga företagsbudskap till att utveckla övertygande kampanjer hjälper jag dig kommunicera på ett sätt som bygger förtroende, driver engagemang och ger mätbara resultat för ditt företag."
+  },
+  "icon": "ph:megaphone-duotone",
+  "color": "purple",
+  "pricing": {
+    "startingFrom": 600,
+    "unit": {
+      "en": "article",
+      "sv": "artikel"
+    },
+    "note": {
+      "en": "Prices include one round of revisions. Articles are typically 800-1200 words unless specified otherwise. SEO optimisation available as an add-on. Content strategy packages start from SEK 3,500.",
+      "sv": "Priserna inkluderar en revideringsrunda. Artiklar är vanligtvis 800-1200 ord om inget annat anges. SEO-optimering finns som tillägg. Innehållsstrategipaket börjar från 3 500 kr."
+    }
+  },
+  "keyFeatures": [
+    {
+      "title": {
+        "en": "Message that connects",
+        "sv": "Budskap som når fram"
+      },
+      "description": {
+        "en": "Transform complex ideas into clear messages that your audience understands and responds to, driving real action.",
+        "sv": "Omvandla komplexa idéer till tydliga budskap som din målgrupp förstår och reagerar på, driver verklig handling."
+      },
+      "icon": "ph:file-text-duotone"
+    },
+    {
+      "title": {
+        "en": "Distinctive voice",
+        "sv": "Distinkt röst"
+      },
+      "description": {
+        "en": "Build trust with a strong, memorable brand voice that your audience recognises and connects with across all channels.",
+        "sv": "Bygg förtroende med en stark, minnesvärd varumärkesröst som din målgrupp känner igen och anknyter till över alla kanaler."
+      },
+      "icon": "ph:microphone-stage-duotone"
+    },
+    {
+      "title": {
+        "en": "Channel-perfect content",
+        "sv": "Kanalanpassat innehåll"
+      },
+      "description": {
+        "en": "Get content perfectly tailored for each platform, from social media and websites to presentations and reports.",
+        "sv": "Få innehåll perfekt anpassat för varje plattform, från sociala medier och webbplatser till presentationer och rapporter."
+      },
+      "icon": "ph:share-network-duotone"
+    },
+    {
+      "title": {
+        "en": "Bilingual impact",
+        "sv": "Tvåspråkig genomslagskraft"
+      },
+      "description": {
+        "en": "Reach both Swedish and English audiences effectively with messaging that feels natural and impactful in both languages.",
+        "sv": "Nå både svenska och engelska målgrupper effektivt med budskap som känns naturliga och slagkraftiga på båda språken."
+      },
+      "icon": "ph:translate-duotone"
+    }
+  ],
+  "processSteps": [
+    {
+      "title": {
+        "en": "Understand",
+        "sv": "Förstå"
+      },
+      "description": {
+        "en": "Learn about your goals, audience, and key messages.",
+        "sv": "Lär känna dina mål, målgrupp och huvudbudskap."
+      }
+    },
+    {
+      "title": {
+        "en": "Plan",
+        "sv": "Planera"
+      },
+      "description": {
+        "en": "Create a clear strategy for reaching your audience effectively.",
+        "sv": "Skapar en tydlig strategi för att nå din målgrupp effektivt."
+      }
+    },
+    {
+      "title": {
+        "en": "Create",
+        "sv": "Skapa"
+      },
+      "description": {
+        "en": "Develop targeted content that connects with your audience.",
+        "sv": "Utvecklar riktat innehåll som når fram till din målgrupp."
+      }
+    },
+    {
+      "title": {
+        "en": "Launch",
+        "sv": "Lansera"
+      },
+      "description": {
+        "en": "Deliver your message and track its performance.",
+        "sv": "Levererar ditt budskap och följer upp dess resultat."
+      }
+    }
+  ],
+  "cta": {
+    "en": "Elevate your message",
+    "sv": "Förstärk ditt budskap"
+  },
+  "relatedServices": [
+    "content-writing",
+    "social-media",
+    "email-design",
+    "design"
+  ],
+  "featuredClients": [
+    "atlasos",
+    "creavite",
+    "extenseit",
+    "kaffepunkten",
+    "norran",
+    "the-babes"
+  ],
+  "featured": true,
+  "seo": {
+    "en": {
+      "title": "Strategic Business Communication Services",
+      "description": "Expert communication services that help businesses connect meaningfully with their audiences. I craft clear, strategic messages that build relationships and drive action across all channels.",
+      "keywords": [
+        "business messaging",
+        "strategic communications",
+        "corporate messaging",
+        "communication strategy",
+        "brand voice development",
+        "multichannel communication",
+        "message clarity",
+        "audience engagement",
+        "communication planning",
+        "brand storytelling"
+      ]
+    },
+    "sv": {
+      "title": "Strategisk företagskommunikation",
+      "description": "Expert på strategisk kommunikation som hjälper företag nå sina målgrupper effektivt. Jag utvecklar tydliga, målinriktade budskap som bygger varumärkesvärde och driver resultat.",
+      "keywords": [
+        "företagskommunikation",
+        "strategisk kommunikation",
+        "budskapsutveckling",
+        "varumärkeskommunikation",
+        "kommunikationsstrategi",
+        "målgruppsanpassning",
+        "kommunikationsplanering",
+        "PR-tjänster",
+        "marknadskommunikation",
+        "intern kommunikation"
+      ]
+    }
+  },
+  "cities": [
+    {
+      "name": {
+        "en": "Skellefteå",
+        "sv": "Skellefteå"
+      },
+      "slug": "skelleftea",
+      "localSeo": {
+        "en": {
+          "title": "Strategic Communications Partner in Skellefteå - Business messaging",
+          "description": "Expert communication services for Skellefteå's growing industries. From corporate messaging to stakeholder engagement, I help you communicate effectively in a rapidly evolving market.",
+          "keywords": [
+            "corporate communications skelleftea",
+            "business messaging strategy",
+            "stakeholder communications",
+            "content strategy north",
+            "industrial sector content",
+            "marketing communications",
+            "multilingual business content"
+          ]
+        },
+        "sv": {
+          "title": "Strategisk Kommunikationspartner i Skellefteå - Företagskommunikation",
+          "description": "Expert på kommunikationstjänster för Skellefteås växande industrier. Från företagskommunikation till intressentengagemang hjälper jag dig kommunicera effektivt i en snabbt föränderlig marknad.",
+          "keywords": [
+            "företagskommunikation skellefteå",
+            "kommunikationsstrategi",
+            "intressentkommunikation",
+            "innehållsstrategi norr",
+            "industrisektorkommunikation",
+            "marknadskommunikation",
+            "flerspråkigt företagsinnehåll"
+          ]
+        }
+      },
+      "localContent": {
+        "en": {
+          "heading": "Strategic communication in Skellefteå",
+          "intro": "In a city experiencing unprecedented industrial growth, your message needs to resonate with both established communities and newcomers. I help you navigate Skellefteå's changing communication landscape, crafting messages that build trust and drive engagement across our diverse, expanding audience.",
+          "specificBenefits": [
+            "Specialised messaging for the green technology and battery industry sectors",
+            "Multilingual content optimised for both local and international audiences",
+            "Crisis communication preparedness for industrial operations",
+            "Strategic storytelling that bridges traditional industry with innovation"
+          ]
+        },
+        "sv": {
+          "heading": "Strategisk kommunikation i Skellefteå",
+          "intro": "I en stad som upplever en oöverträffad industriell tillväxt behöver ditt budskap nå fram till både etablerade gemenskaper och nykomlingar. Jag hjälper dig navigera Skellefteås föränderliga kommunikationslandskap och skapar budskap som bygger förtroende och driver engagemang över vår mångsidiga, växande publik.",
+          "specificBenefits": [
+            "Specialiserade budskap för grön teknik- och batteriindustrisektorer",
+            "Flerspråkigt innehåll optimerat för både lokala och internationella målgrupper",
+            "Kriskommunikationsberedskap för industriella verksamheter",
+            "Strategiskt berättande som förenar traditionell industri med innovation"
+          ]
+        }
+      }
+    },
+    {
+      "name": {
+        "en": "Umeå",
+        "sv": "Umeå"
+      },
+      "slug": "umea",
+      "localSeo": {
+        "en": {
+          "title": "Cultural Communications in Umeå",
+          "description": "Specialised communication services for Umeå's knowledge sector. Transforming complex research and cultural initiatives into engaging content that resonates with diverse audiences.",
+          "keywords": [
+            "academic communications umea",
+            "research content strategy",
+            "cultural sector messaging",
+            "knowledge translation",
+            "scientific communications",
+            "public engagement content",
+            "academic outreach"
+          ]
+        },
+        "sv": {
+          "title": "Kulturell kommunikation i Umeå",
+          "description": "Specialiserade kommunikationstjänster för Umeås kunskapssektor. Omvandlar komplex forskning och kulturella initiativ till engagerande innehåll som når fram till olika målgrupper.",
+          "keywords": [
+            "akademisk kommunikation umeå",
+            "forskningsinnehållsstrategi",
+            "kultursektorkommunikation",
+            "kunskapsöversättning",
+            "vetenskapskommunikation",
+            "publikengagemang",
+            "akademisk utåtriktad verksamhet"
+          ]
+        }
+      },
+      "localContent": {
+        "en": {
+          "heading": "Knowledge-driven communication in Umeå",
+          "intro": "In Umeå's vibrant academic and cultural ecosystem, your message needs to bridge intellectual rigour with broad accessibility. I help translate complex ideas into compelling narratives that engage diverse audiences, from academic circles to the wider community.",
+          "specificBenefits": [
+            "Expert translation of academic research into engaging public content",
+            "Cultural sector communication strategies that drive audience engagement",
+            "Research impact storytelling for funding applications and public outreach",
+            "Cross-disciplinary communication bridging sciences and humanities"
+          ]
+        },
+        "sv": {
+          "heading": "Kunskapsdriven kommunikation i Umeå",
+          "intro": "I Umeås livliga akademiska och kulturella ekosystem behöver ditt budskap överbrygga intellektuell stringens med bred tillgänglighet. Jag hjälper till att översätta komplexa idéer till övertygande berättelser som engagerar olika målgrupper, från akademiska kretsar till den bredare allmänheten.",
+          "specificBenefits": [
+            "Expert på att översätta akademisk forskning till engagerande publikt innehåll",
+            "Kommunikationsstrategier för kultursektorn som driver publikengagemang",
+            "Forskningseffektberättande för finansieringsansökningar och publik räckvidd",
+            "Tvärvetenskaplig kommunikation som förenar naturvetenskap och humaniora"
+          ]
+        }
+      }
+    },
+    {
+      "name": {
+        "en": "Luleå",
+        "sv": "Luleå"
+      },
+      "slug": "lulea",
+      "localSeo": {
+        "en": {
+          "title": "Technical Communications in Luleå - Industrial Content Strategy",
+          "description": "Expert technical communication services for Luleå's engineering and industrial sectors. Making complex information accessible whilst maintaining precision and authority.",
+          "keywords": [
+            "technical communications lulea",
+            "industrial content strategy",
+            "engineering documentation",
+            "technical writing services",
+            "industrial messaging",
+            "b2b communications",
+            "technical documentation"
+          ]
+        },
+        "sv": {
+          "title": "Teknisk kommunikation i Luleå - Industriell innehållsstrategi",
+          "description": "Expert på teknisk kommunikation för Luleås ingenjörs- och industrisektorer. Gör komplex information tillgänglig samtidigt som precision och auktoritet bibehålls.",
+          "keywords": [
+            "teknisk kommunikation luleå",
+            "industriell innehållsstrategi",
+            "ingenjörsdokumentation",
+            "tekniskt skrivande",
+            "industriell kommunikation",
+            "b2b-kommunikation",
+            "teknisk dokumentation"
+          ]
+        }
+      },
+      "localContent": {
+        "en": {
+          "heading": "Technical communication excellence in Luleå",
+          "intro": "For Luleå's technology-driven enterprises, effective communication means making complex innovations accessible and compelling. I specialise in transforming technical expertise into clear, impactful messages that resonate with both industry experts and broader stakeholders.",
+          "specificBenefits": [
+            "Technical documentation and process communication expertise",
+            "B2B communication strategies for engineering and technology sectors",
+            "Internal communication systems for large-scale industrial operations",
+            "Compliance and safety communication protocols for regulated industries"
+          ]
+        },
+        "sv": {
+          "heading": "Teknisk kommunikationsexcellens i Luleå",
+          "intro": "För Luleås teknikdrivna företag innebär effektiv kommunikation att göra komplexa innovationer tillgängliga och övertygande. Jag specialiserar mig på att omvandla teknisk expertis till tydliga, slagkraftiga budskap som når fram till både branschexperter och bredare intressenter.",
+          "specificBenefits": [
+            "Expertis inom teknisk dokumentation och processkommunikation",
+            "B2B-kommunikationsstrategier för ingenjörs- och tekniksektorer",
+            "Interna kommunikationssystem för storskaliga industriella verksamheter",
+            "Efterlevnads- och säkerhetskommunikationsprotokoll för reglerade industrier"
+          ]
+        }
+      }
+    }
+  ]
+}

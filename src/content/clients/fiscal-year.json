@@ -4,8 +4,12 @@
     "en": "Fiscal Year is a digital economic agency based in Sweden, serving clients nationwide. They offer support in areas ranging from time-consuming administration to financial management and leading operational work.",
     "sv": "Fiscal Year är en digital affärsbyrå baserad i Sverige med kunder över hela landet. De erbjuder stöd inom områden som sträcker sig från tidskrävande administration till ekonomisk förvaltning och ledning av det operativa arbetet."
   },
+  "avatar": "/src/assets/clients/avatars/fiscal-year.svg",
   "logo": "/src/assets/clients/fiscal-year.svg",
-  "dominantColor": "#5d5d5d",
+  "dominantColor": {
+    "light": "#5d5d5d",
+    "dark": "#a2a2a2"
+  },
   "websiteUrl": "https://www.fiscalyear.se/",
   "socialLinks": {
     "linkedin": "https://www.linkedin.com/company/fiscal-year",

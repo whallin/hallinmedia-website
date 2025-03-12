@@ -11,19 +11,19 @@
         "sv": "Erbjuder du ändringar efter leverans?"
       },
       "answer": {
-        "en": "My standard quotes include up to <strong>three rounds of revisions</strong> to ensure complete satisfaction. Any additional revisions can be arranged at my standard hourly rate, if needed.",
-        "sv": "I mina standardofferter ingår upp till <strong>tre omgångar av ändringar</strong> för att säkerställa att du blir nöjd. Eventuella ytterligare ändringar kan vid behov göras till min vanliga timtaxa."
+        "en": "My standard quotes include up to three rounds of revisions to ensure complete satisfaction. Any additional revisions can be arranged at my standard hourly rate, should you require them.",
+        "sv": "I mina standardofferter ingår upp till tre omgångar av ändringar för att säkerställa att du blir nöjd. Eventuella ytterligare ändringar kan vid behov göras till min vanliga timtaxa."
       }
     },
     {
       "featured": true,
       "question": {
-        "en": "What's the typical timeline for project delivery?",
+        "en": "What is the typical timeline for project delivery?",
         "sv": "Vad är den typiska tidsramen för projektleveranser?"
       },
       "answer": {
-        "en": "<strong>Standard projects</strong> are typically completed within 2-3 weeks. <strong>Complex projects</strong> may take 4-6 weeks. A detailed timeline will be provided during our initial consultation.",
-        "sv": "<strong>Standardprojekt</strong> är vanligtvis klara inom 2-3 veckor. <strong>Komplexa projekt</strong> kan ta 4-6 veckor. En detaljerad tidsram kommer att presenteras under det inledande mötet."
+        "en": "Standard projects are typically completed within 2-3 weeks. Complex projects may take 4-6 weeks. A detailed timeline will be provided during our initial consultation.",
+        "sv": "Standardprojekt är vanligtvis klara inom 2-3 veckor. Komplexa projekt kan ta 4-6 veckor. En detaljerad tidsram kommer att presenteras under det inledande mötet."
       }
     },
     {
@@ -33,8 +33,8 @@
         "sv": "Hur följer du upp och rapporterar projektets framsteg?"
       },
       "answer": {
-        "en": "I provide regular updates through a secure <a href='https://client.newgent.digital/' target='_blank' data-umami-event='faq_answer-link' data-umami-event-url='https://client.newgent.digital/' class='text-red-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-50 hover:no-underline active:opacity-50'>client portal</a> where you can track progress in real-time, access project files, and communicate directly with me. You'll receive <u>weekly status reports</u> and can request updates at any time.",
-        "sv": "Jag ger regelbundna uppdateringar via en säker <a href='https://client.newgent.digital/' target='_blank' data-umami-event='faq_answer-link' data-umami-event-url='https://client.newgent.digital/' class='text-red-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-50 hover:no-underline active:opacity-50'>kundportal</a> där du kan följa framstegen i realtid, få tillgång till projektfiler och kommunicera direkt med mig. Du får <u>statusrapporter varje vecka</u> och kan när som helst begära uppdateringar."
+        "en": "I provide regular updates through a secure <a href='https://client.newgent.digital/' target='_blank' data-umami-event='faq_answer-link' data-umami-event-url='https://client.newgent.digital/' class='text-red-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-50 active:opacity-50'>client portal</a>, where you can track progress in real-time, access project files and communicate directly with me. You will receive weekly status reports and can request updates at any time.",
+        "sv": "Jag ger regelbundna uppdateringar via en säker <a href='https://client.newgent.digital/' target='_blank' data-umami-event='faq_answer-link' data-umami-event-url='https://client.newgent.digital/' class='text-red-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-50 active:opacity-50'>kundportal</a> där du kan följa framstegen i realtid, få tillgång till projektfiler och kommunicera direkt med mig. Du får statusrapporter varje vecka och kan när som helst begära uppdateringar."
       }
     },
     {
@@ -44,8 +44,8 @@
         "sv": "Vilka filformat kommer jag att få?"
       },
       "answer": {
-        "en": "Final deliverables are usually provided in industry-standard formats:<br>- <strong>Images</strong>: PNG, JPG, TIFF, PSD<br>- <strong>Videos</strong>: MP4 (H.264, H.265), MOV (ProRes, DNxHR), AVI<br>- <strong>Documents</strong>: PDF, DOCX, PPTX, XLSX<br>- <strong>Audio</strong>: WAV, MP3, AAC<br>Source files are available upon request. All files are compatible with both Windows and macOS systems.",
-        "sv": "Slutleveranserna ges vanligtvis i standardformat för branschen:<br>- <strong>Bilder</strong>: PNG, JPG, TIFF, PSD<br>- <strong>Videor</strong>: MP4 (H.264, H.265), MOV (ProRes, DNxHR), AVI<br>- <strong>Dokument</strong>: PDF, DOCX, PPTX, XLSX<br>- <strong>Ljud</strong>: WAV, MP3, AAC<br>Källfiler finns tillgängliga på begäran. Alla filer är kompatibla med både Windows- och macOS-system."
+        "en": "Final deliverables are provided in industry-standard formats:<br>• Images: PNG, JPG, TIFF, PSD<br>• Videos: MP4 (H.264, H.265), MOV (ProRes, DNxHR), AVI<br>• Documents: PDF, DOCX, PPTX, XLSX<br>• Audio: WAV, MP3, AAC<br><br>Source files are available upon request. All files are compatible with both Windows and macOS systems.",
+        "sv": "Slutleveranserna ges vanligtvis i standardformat för branschen:<br>• Bilder: PNG, JPG, TIFF, PSD<br>• Videor: MP4 (H.264, H.265), MOV (ProRes, DNxHR), AVI<br>• Dokument: PDF, DOCX, PPTX, XLSX<br>• Ljud: WAV, MP3, AAC<br><br>Källfiler finns tillgängliga på begäran. Alla filer är kompatibla med både Windows- och macOS-system."
       }
     },
     {
@@ -55,8 +55,8 @@
         "sv": "Vilka program är källfilerna kompatibla med?"
       },
       "answer": {
-        "en": "Source files are usually created using industry-standard software:<br>- <strong>Adobe Suite</strong>: Photoshop, Illustrator, InDesign, Acrobat<br>- <strong>Affinity Suite</strong>: Designer, Publisher, Photo<br>- <strong>Figma</strong><br>- <strong>DaVinci Resolve <u>Studio</u></strong> <i>(not the free version)</i><br>- <strong>Microsoft Office</strong>: Word, PowerPoint, Excel<br><br>Please note that accessing and editing these source files may require you to obtain appropriate software licences. Extended licensing costs may apply depending on your intended use if you wish to edit the source files personally.",
-        "sv": "Källfiler skapas vanligtvis med hjälp av programvara som är standard i branschen:<br>- <strong>Adobe Suite</strong>: Photoshop, Illustrator, InDesign, Acrobat<br>- <strong>Affinity Suite</strong>: Designer, Publisher, Photo<br>- <strong>Figma</strong><br>- <strong>DaVinci Resolve <u>Studio</u></strong> <i>(inte den kostnadsfria versionen)</i><br>- <strong>Microsoft Office</strong>: Word, PowerPoint, Excel<br><br>Observera att åtkomst till - och redigering av - dessa källfiler kan kräva att du skaffar lämpliga programvarulicenser. Utökade licenskostnader kan tillkomma beroende på din avsedda användning om du vill redigera källfilerna på egen hand."
+        "en": "Source files are created using industry-standard software:<br>• Adobe Suite: Photoshop, Illustrator, InDesign, Acrobat<br>• Affinity Suite: Designer, Publisher, Photo<br>• Figma<br>• DaVinci Resolve Studio (not the free version)<br>• Microsoft Office: Word, PowerPoint, Excel<br><br>Please note that accessing and editing these source files may require appropriate software licences. Additional licensing costs may apply depending on your intended use if you wish to edit the source files yourself.",
+        "sv": "Källfiler skapas vanligtvis med hjälp av programvara som är standard i branschen:<br>• Adobe Suite: Photoshop, Illustrator, InDesign, Acrobat<br>• Affinity Suite: Designer, Publisher, Photo<br>• Figma<br>• DaVinci Resolve Studio (inte den kostnadsfria versionen)<br>• Microsoft Office: Word, PowerPoint, Excel<br><br>Observera att åtkomst till - och redigering av - dessa källfiler kan kräva att du skaffar lämpliga programvarulicenser. Utökade licenskostnader kan tillkomma beroende på din avsedda användning om du vill redigera källfilerna på egen hand."
       }
     }
   ]

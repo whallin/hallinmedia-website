@@ -1,0 +1,79 @@
+---
+import { Icon } from "astro-icon/components";
+import { Picture } from "astro:assets";
+import { getRelativeLocaleUrl } from "astro:i18n";
+import ImgAvatar from "../../assets/avatars/william-foto.png";
+import Button from "../../components/common/Button.astro";
+import LatestBlogPosts from "../../components/LatestBlogPosts.astro";
+import ClientBar from "../../components/sections/ClientBar.astro";
+import CoreServices from "../../components/sections/CoreServices.astro";
+import LandingPhotos from "../../components/sections/LandingPhotos.astro";
+import PersonalLetter from "../../components/sections/PersonalLetter.astro";
+import Layout from "../../layouts/Layout.astro";
+
+const locale = Astro.currentLocale === "en" || Astro.currentLocale === "sv" ? Astro.currentLocale : "en";
+---
+
+<Layout
+  title="Digital creator & photographer in Skellefteå"
+  description="Expertise in visual communication, web design and brand development. Over 4 years of experience in helping businesses grow through creative digital solutions."
+>
+  <div class="max-w-2xl sm:mx-auto" aria-labelledby="intro-heading">
+    <div class="space-y-4">
+      <div class="flex flex-col gap-4">
+        <Picture
+          src={ImgAvatar}
+          alt="William Hallin"
+          width={32}
+          height={32}
+          widths={[32, 64, 128]}
+          formats={["avif", "webp", "jpeg"]}
+          loading="eager"
+          class="rounded-full select-none"
+          aria-hidden="true"
+        />
+        <h1 id="intro-heading" class="w-full font-serif font-semibold text-stone-700 italic dark:text-stone-100">
+          <span class="group relative block overflow-hidden">
+            <span class="inline-block transition-transform duration-300 group-hover:-translate-y-full">
+              William Hallin
+            </span>
+            <span
+              class="absolute left-0 inline-block translate-y-full transition-transform duration-300 group-hover:translate-y-0"
+            >
+              HallinMedia
+            </span>
+          </span>
+        </h1>
+      </div>
+      <p class="font-serif text-stone-500 dark:text-stone-400">
+        I create <a
+          href={getRelativeLocaleUrl(locale, "portfolio")}
+          class="inline-block text-red-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-100 active:opacity-50"
+          >engaging visual experiences</a
+        > for brands and businesses. With more than 5 years of experience behind me, I've had the pleasure of working with
+        <a
+          href={getRelativeLocaleUrl(locale, "clients")}
+          class="text-red-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-100 active:opacity-50"
+          >clients all over the world</a
+        > to help them bring their brands to life and grow their business through effective communication.
+      </p>
+    </div>
+    <nav class="mt-8 flex flex-col justify-between gap-2 sm:flex-row" aria-label="Key actions">
+      <Button href={getRelativeLocaleUrl(locale, "contact")}>
+        <Icon name="ph:hand-waving-duotone" class="flex-shrink-0" aria-hidden="true" />
+        Contact me
+        <Icon name="ph:arrow-right" class="flex-shrink-0" aria-hidden="true" />
+      </Button>
+      <Button href={getRelativeLocaleUrl(locale, "services")} variant="secondary">
+        <Icon name="ph:sparkle-duotone" class="flex-shrink-0" aria-hidden="true" />
+        Browse my services
+        <Icon name="ph:arrow-right" class="flex-shrink-0" aria-hidden="true" />
+      </Button>
+    </nav>
+  </div>
+  <ClientBar />
+  <LandingPhotos />
+  <PersonalLetter />
+  <CoreServices />
+  <LatestBlogPosts />
+</Layout>

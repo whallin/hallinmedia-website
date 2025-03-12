@@ -4,8 +4,11 @@
     "en": "AtlasOS is an open-source modification of Windows designed for tech enthusiasts and gamers. It aims to enhance privacy, usability, and performance by removing unnecessary background processes, telemetry, and pre-installed apps.",
     "sv": "AtlasOS är en modifierad version av Windows baserad på öppen källkod, utformad för teknikentusiaster och gamers. Syftet är att förbättra sekretess, användbarhet och prestanda genom att ta bort onödiga bakgrundsprocesser, telemetri och förinstallerade appar."
   },
+  "avatar": "/src/assets/clients/avatars/atlasos.svg",
   "logo": "/src/assets/clients/atlasos.svg",
-  "dominantColor": "#1a90ff",
+  "dominantColor": {
+    "light": "#1a90ff"
+  },
   "websiteUrl": "https://atlasos.net/",
   "socialLinks": {
     "twitter": "https://x.com/atlasos"

@@ -1,0 +1,84 @@
+---
+import { Icon } from "astro-icon/components";
+import { Image } from "astro:assets";
+import { getCollection } from "astro:content";
+import { getRelativeLocaleUrl } from "astro:i18n";
+
+const translations = {
+  en: {
+    sr: "Featured clients",
+    question: "Peeked your interest? —",
+    cta: "explore all clients",
+    viewCase: "View {name} client profil",
+  },
+  sv: {
+    sr: "Utvalda kunder",
+    question: "Fångade ditt intresse?",
+    cta: "Utforska alla kunder",
+    viewCase: "Se kundprofil för {name}",
+  },
+};
+
+const clients = await getCollection("clientsCollection");
+const featuredClients = clients.filter((client) => client.data.featured).slice(0, 5);
+const locale = Astro.currentLocale === "en" || Astro.currentLocale === "sv" ? Astro.currentLocale : "en";
+---
+
+<section class="mx-auto max-w-3xl" aria-label={translations[locale].sr}>
+  <ul class="flex flex-wrap items-center justify-evenly gap-6">
+    {
+      featuredClients.map((client) => (
+        <li id={client.id}>
+          <a
+            href={getRelativeLocaleUrl(locale, `clients/${client.id}`)}
+            aria-label={translations[locale].viewCase.replace("{name}", client.data.name)}
+          >
+            <figure class="flex h-12 w-24 items-center justify-center transition select-none hover:opacity-75 active:scale-95 active:opacity-50">
+              {client.data.logoDark ? (
+                <>
+                  <Image
+                    src={client.data.logo}
+                    alt={client.data.name}
+                    width={96}
+                    height={48}
+                    class="h-full w-auto dark:hidden"
+                    loading="eager"
+                  />
+                  <Image
+                    src={client.data.logoDark}
+                    alt={client.data.name}
+                    width={96}
+                    height={48}
+                    class="hidden h-full w-auto dark:block"
+                    loading="eager"
+                  />
+                </>
+              ) : (
+                <Image
+                  src={client.data.logo}
+                  alt={client.data.name}
+                  width={96}
+                  height={48}
+                  class="h-full w-auto"
+                  loading="eager"
+                />
+              )}
+            </figure>
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+  <footer class="mt-8 text-center font-serif text-sm text-stone-500 dark:text-stone-400">
+    <p>
+      {translations[locale].question}
+      <a
+        href={getRelativeLocaleUrl(locale, "clients")}
+        class="inline-flex items-center gap-1 font-semibold text-red-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-100 active:opacity-50"
+      >
+        {translations[locale].cta}
+        <Icon name="ph:arrow-right" aria-hidden="true" />
+      </a>
+    </p>
+  </footer>
+</section>

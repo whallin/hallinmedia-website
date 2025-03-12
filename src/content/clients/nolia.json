@@ -4,8 +4,11 @@
     "en": "Nolia is a leading trade fair, conference, and event company based in Northern Sweden. Established in 1965, it organises and hosts a wide range of events, including exhibitions, conferences, and trade shows, focusing on fostering business opportunities and community engagement across various industries.",
     "sv": "Nolia är ett ledande mäss-, konferens- och eventbolag baserat i norra Sverige. Företaget grundades 1965 och organiserar samt står värd för ett brett utbud av evenemang, inklusive utställningar, konferenser och mässor, med fokus på att främja affärsmöjligheter och samhällsengagemang inom olika branscher."
   },
+  "avatar": "/src/assets/clients/avatars/nolia.svg",
   "logo": "/src/assets/clients/nolia.svg",
-  "dominantColor": "#eb663c",
+  "dominantColor": {
+    "light": "#eb663c"
+  },
   "websiteUrl": "https://www.nolia.se/",
   "socialLinks": {
     "linkedin": "https://www.linkedin.com/company/nolia",

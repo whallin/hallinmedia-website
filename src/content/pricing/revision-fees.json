@@ -1,0 +1,183 @@
+{
+  "categoryName": {
+    "en": "Revision Fees",
+    "sv": "Revideringsavgifter"
+  },
+  "icon": "ph:arrows-counter-clockwise-duotone",
+  "color": "text-indigo-500",
+  "order": 8,
+  "services": [
+    {
+      "name": {
+        "en": "Content Revisions",
+        "sv": "Innehållsrevideringar"
+      },
+      "description": {
+        "en": "Additional content editing and revision rounds for written content, including articles, website copy, and marketing materials. All revisions follow our quality assurance process.",
+        "sv": "Extra innehållsredigering och revideringsrundor för skrivet innehåll, inklusive artiklar, webbtexter och marknadsföringsmaterial."
+      },
+      "basePrice": 350,
+      "unit": {
+        "en": "round",
+        "sv": "runda"
+      },
+      "options": [
+        {
+          "name": {
+            "en": "Basic Content Revision",
+            "sv": "Grundläggande innehållsrevidering"
+          },
+          "price": 350,
+          "unit": {
+            "en": "round",
+            "sv": "runda"
+          }
+        },
+        {
+          "name": {
+            "en": "Comprehensive Content Revision",
+            "sv": "Omfattande innehållsrevidering"
+          },
+          "price": 600,
+          "unit": {
+            "en": "round",
+            "sv": "runda"
+          }
+        }
+      ],
+      "note": {
+        "en": "Basic revision includes grammar, spelling, and minor content adjustments. Comprehensive revision includes structural changes and content rewriting. Available in both British English and Swedish.",
+        "sv": "Grundläggande revidering inkluderar grammatik, stavning och mindre innehållsjusteringar. Omfattande revidering inkluderar strukturella ändringar och omskrivning av innehåll. Tillgänglig på både engelska och svenska."
+      }
+    },
+    {
+      "name": {
+        "en": "Design Revisions",
+        "sv": "Designrevideringar"
+      },
+      "description": {
+        "en": "Additional revision rounds beyond those included in the standard package. Applies to UI/UX, brand identity, and graphic design projects. Each round includes detailed feedback implementation.",
+        "sv": "Extra revideringsrundor utöver de som ingår i standardpaketet. Gäller UI/UX, varumärkesidentitet och grafisk design."
+      },
+      "basePrice": 450,
+      "unit": {
+        "en": "round",
+        "sv": "runda"
+      },
+      "options": [
+        {
+          "name": {
+            "en": "Minor Revisions",
+            "sv": "Mindre revideringar"
+          },
+          "price": 450,
+          "unit": {
+            "en": "round",
+            "sv": "runda"
+          }
+        },
+        {
+          "name": {
+            "en": "Major Revisions",
+            "sv": "Större revideringar"
+          },
+          "price": 850,
+          "unit": {
+            "en": "round",
+            "sv": "runda"
+          }
+        }
+      ],
+      "note": {
+        "en": "Minor revisions include colour adjustments, typography changes, and small layout modifications. Major revisions involve significant layout changes or conceptual adjustments. Each round includes up to three iterations.",
+        "sv": "Mindre revideringar inkluderar färgjusteringar, typografiändringar och små layoutmodifieringar. Större revideringar innebär betydande layoutförändringar eller konceptuella justeringar. Varje runda inkluderar upp till tre iterationer."
+      }
+    },
+    {
+      "name": {
+        "en": "Photo & Video Revisions",
+        "sv": "Foto- & Videorevideringar"
+      },
+      "description": {
+        "en": "Additional editing rounds for photo and video content beyond the standard package inclusions. Includes colour correction and technical adjustments.",
+        "sv": "Extra redigeringsrundor för foto- och videoinnehåll utöver standardpaketets inkluderingar."
+      },
+      "basePrice": 400,
+      "unit": {
+        "en": "hour",
+        "sv": "timme"
+      },
+      "options": [
+        {
+          "name": {
+            "en": "Photo Retouching Revision",
+            "sv": "Fotoretuschering revidering"
+          },
+          "price": 400,
+          "unit": {
+            "en": "hour",
+            "sv": "timme"
+          }
+        },
+        {
+          "name": {
+            "en": "Video Edit Revision",
+            "sv": "Videoredigering revidering"
+          },
+          "price": 500,
+          "unit": {
+            "en": "hour",
+            "sv": "timme"
+          }
+        }
+      ],
+      "note": {
+        "en": "Minimum 1-hour booking. Includes export in all previously agreed formats. Changes to project scope may require a new quotation.",
+        "sv": "Minimum 1 timmes bokning. Inkluderar export i alla tidigare överenskomna format. Ändringar i projektomfattning kan kräva ny offert."
+      }
+    },
+    {
+      "name": {
+        "en": "Rush Revision Service",
+        "sv": "Express revideringstjänst"
+      },
+      "description": {
+        "en": "Expedited revision service for urgent changes and modifications needed outside standard revision timeframes. Includes priority handling.",
+        "sv": "Påskyndad revideringstjänst för brådskande ändringar och modifieringar som behövs utanför standard revideringstider."
+      },
+      "basePrice": 50,
+      "unit": {
+        "en": "percent",
+        "sv": "procent"
+      },
+      "options": [
+        {
+          "name": {
+            "en": "Next-Day Revision",
+            "sv": "Revidering nästa dag"
+          },
+          "price": 50,
+          "unit": {
+            "en": "percent",
+            "sv": "procent"
+          }
+        },
+        {
+          "name": {
+            "en": "Same-Day Revision",
+            "sv": "Revidering samma dag"
+          },
+          "price": 100,
+          "unit": {
+            "en": "percent",
+            "sv": "procent"
+          }
+        }
+      ],
+      "note": {
+        "en": "Percentage surcharge applies to standard revision rates. Same-day revisions must be requested before 12:00. Subject to availability and current workload.",
+        "sv": "Procentuellt pristillägg tillkommer på standardrevideringsavgifter. Revideringar samma dag måste begäras före 12:00. Med förbehåll för tillgänglighet och aktuell arbetsbelastning."
+      }
+    }
+  ]
+}

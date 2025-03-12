@@ -1,0 +1,54 @@
+---
+import { Icon } from "astro-icon/components";
+import { getCollection } from "astro:content";
+import { getRelativeLocaleUrl } from "astro:i18n";
+import Button from "../../../components/common/Button.astro";
+import PricingCategoryHeader from "../../../components/pricing/PricingCategoryHeader.astro";
+import PricingServiceCard from "../../../components/pricing/PricingServiceCard.astro";
+import PricingTaxToggle from "../../../components/pricing/PricingTaxToggle.astro";
+import Layout from "../../../layouts/Layout.astro";
+
+const pricingCategories = await getCollection("pricingCollection");
+const sortedCategories = pricingCategories.sort((a, b) => a.data.order - b.data.order);
+const locale = Astro.currentLocale === "en" || Astro.currentLocale === "sv" ? Astro.currentLocale : "en";
+---
+
+<Layout
+  title="Pricing of creative services"
+  description="See my clear and competitive prices for photo, video, and design. Flexible packages and customised solutions for all budgets. No hidden fees — just honest pricing for quality services."
+  header="Pricing"
+  headerIcon="ph:coins-duotone"
+  headerDescription="Invest wisely in your digital presence with my transparent and flexible pricing options. From single photo sessions to comprehensive branding packages, you'll find professional solutions for every budget. Explore my services and discover how I can maximise the value of your investment."
+>
+  <section class="mx-auto max-w-2xl space-y-16">
+    <nav class="my-8 flex flex-col justify-between gap-2 sm:flex-row" aria-label="Main navigation">
+      <Button href={getRelativeLocaleUrl(locale, "hire")}>
+        <Icon name="ph:handshake-duotone" class="flex-shrink-0" aria-hidden="true" />
+        Begin your projekt today
+        <Icon name="ph:arrow-right" class="flex-shrink-0" aria-hidden="true" />
+      </Button>
+      <Button href={getRelativeLocaleUrl(locale, "pricing/calculator")} variant="secondary">
+        <Icon name="ph:calculator-duotone" class="flex-shrink-0" aria-hidden="true" />
+        Visit the pricing calculator
+        <Icon name="ph:arrow-right" class="flex-shrink-0" aria-hidden="true" />
+      </Button>
+    </nav>
+    <PricingTaxToggle />
+    {
+      sortedCategories.map((category) => (
+        <article class="space-y-8">
+          <PricingCategoryHeader
+            title={category.data.categoryName[locale]}
+            icon={category.data.icon}
+            color={category.data.color}
+          />
+          <div class="pricing-content hidden space-y-8">
+            {category.data.services.map((service) => (
+              <PricingServiceCard service={service} />
+            ))}
+          </div>
+        </article>
+      ))
+    }
+  </section>
+</Layout>

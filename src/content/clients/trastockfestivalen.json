@@ -4,8 +4,11 @@
     "en": "Trästockfestivalen is Sweden's largest free music and cultural festival, held annually in the picturesque Nordanå area in Skellefteå, Sweden. Established 33 years ago by a group of passionate local musicians, the festival was created with the vision of making music and culture accessible to everyone, regardless of their financial circumstances.",
     "sv": "Trästockfestivalen är Sveriges största gratis musik- och kulturfestival och hålls årligen i det pittoreska Nordanåområdet i Skellefteå. Festivalen grundades för 33 år sedan av en grupp passionerade lokala musiker, med visionen att göra musik och kultur tillgänglig för alla, oavsett ekonomiska förutsättningar."
   },
+  "avatar": "/src/assets/clients/avatars/trastockfestivalen.svg",
   "logo": "/src/assets/clients/trastockfestivalen.svg",
-  "dominantColor": "#f5dd5c",
+  "dominantColor": {
+    "light": "#f5dd5c"
+  },
   "websiteUrl": "https://www.trastockfestivalen.se/",
   "socialLinks": {
     "instagram": "https://www.instagram.com/trastockfestivalen",

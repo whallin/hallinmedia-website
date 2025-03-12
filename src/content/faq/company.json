@@ -7,34 +7,34 @@
     {
       "featured": false,
       "question": {
-        "en": "What are your business registration details?",
+        "en": "What are your company registration details?",
         "sv": "Vad är dina företagsregistreringsuppgifter?"
       },
       "answer": {
-        "en": "I operate through <strong>NWG Digital AB</strong> (Org.nr 559437-9300), registered as a Swedish limited company (<em>aktiebolag</em>) with <a href='https://www.bolagsverket.se/' target='_blank' data-umami-event='faq_answer-link' data-umami-event-url='https://www.bolagsverket.se/' rel='noopener noreferrer' class='text-red-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-50 hover:no-underline active:opacity-50'>Bolagsverket</a>.",
-        "sv": "Jag bedriver verksamhet genom <strong>NWG Digital AB</strong> (Org.nr 559437-9300), registrerat som ett svenskt aktiebolag hos <a href='https://www.bolagsverket.se/' target='_blank' data-umami-event='faq_answer-link' data-umami-event-url='https://www.bolagsverket.se/' rel='noopener noreferrer' class='text-red-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-50 hover:no-underline active:opacity-50'>Bolagsverket</a>."
+        "en": "I operate through NWG Digital AB (organisation number 559437-9300), registered as a Swedish limited company (aktiebolag) with <a href='https://www.bolagsverket.se/' target='_blank' data-umami-event='faq_answer-link' data-umami-event-url='https://www.bolagsverket.se/' rel='noopener noreferrer' class='text-red-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-50 active:opacity-50'>Bolagsverket</a>.",
+        "sv": "Jag bedriver verksamhet genom NWG Digital AB (Org.nr 559437-9300), registrerat som ett svenskt aktiebolag hos <a href='https://www.bolagsverket.se/' target='_blank' data-umami-event='faq_answer-link' data-umami-event-url='https://www.bolagsverket.se/' rel='noopener noreferrer' class='text-red-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-50 active:opacity-50'>Bolagsverket</a>."
       }
     },
     {
       "featured": false,
       "question": {
-        "en": "What is your VAT number?",
+        "en": "What is your VAT registration number?",
         "sv": "Vad är ditt momsregistreringsnummer?"
       },
       "answer": {
-        "en": "The VAT number for <strong>NWG Digital AB</strong> is <u>SE559386006601</u>.",
-        "sv": "Momsregistreringsnumret för <strong>NWG Digital AB</strong> är <u>SE559386006601</u>."
+        "en": "The VAT registration number for NWG Digital AB is SE559386006601.",
+        "sv": "Momsregistreringsnumret för NWG Digital AB är SE559386006601."
       }
     },
     {
       "featured": false,
       "question": {
-        "en": "Through which entity are contracts formalized?",
+        "en": "Through which legal entity are contracts formalised?",
         "sv": "Genom vilken aktör görs avtal upp?"
       },
       "answer": {
-        "en": "All contracts and formal agreements are made through <strong>NWG Digital AB</strong>.",
-        "sv": "Alla avtal och formella överenskommelser görs genom <strong>NWG Digital AB</strong>."
+        "en": "All contracts and formal agreements are made through NWG Digital AB.",
+        "sv": "Alla avtal och formella överenskommelser görs genom NWG Digital AB."
       }
     },
     {
@@ -44,8 +44,8 @@
         "sv": "Vad är \"NWG Digital AB\"/\"Newgent\"?"
       },
       "answer": {
-        "en": "<strong>NWG Digital AB</strong>, better known as <em>Newgent (Digital)</em>, is a Swedish-based and registered aktiebolag. Newgent exists primarily to simplify administrative and financial tasks for business-to-business (B2B) sales both within Sweden and internationally—similar to a creative service agency.<br><br>Most documents you encounter when working with me will likely refer to <strong>\"Newgent Digital\"</strong> or <strong>\"NWG Digital AB\"</strong> in some form. This could be a correspondence address or the bank account designated for receiving your payment.<br><br>You can learn more about Newgent Digital at <a href='https://newgent.digital/' target='_blank' data-umami-event='faq_answer-link' data-umami-event-url='https://newgent.digital/' class='text-red-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-50 hover:no-underline active:opacity-50'>www.newgent.digital</a>.",
-        "sv": "<strong>NWG Digital AB</strong>, bättre känt som <em>Newgent (Digital)</em>, är ett svenskbaserat och -registrerat aktiebolag. Newgent existerar främst för att förenkla administrativa och finansiella rutiner för företag-till-företag-försäljning (B2B) både inom Sverige och internationellt - i stil med en kreativ servicebyrå.<br><br>De flesta dokument du stöter på när du arbetar med mig kommer sannolikt att referera till <strong>\"Newgent Digital\"</strong> eller <strong>\"NWG Digital AB\"</strong> i någon form. Detta kan vara en postadress eller det bankkonto som är avsett för att ta emot din betalning.<br><br>Du kan läsa mer om Newgent Digital på <a href='https://newgent.digital/' target='_blank' data-umami-event='faq_answer-link' data-umami-event-url='https://newgent.digital/' class='text-red-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-50 hover:no-underline active:opacity-50'>www.newgent.digital</a>."
+        "en": "NWG Digital AB, also known as Newgent (Digital), is a Swedish-registered limited company (aktiebolag). Newgent exists primarily to facilitate administrative and financial operations for business-to-business (B2B) services both within Sweden and internationally—functioning as a creative service agency.<br><br>Most documentation you receive whilst working with me will reference either \"Newgent Digital\" or \"NWG Digital AB\". This includes correspondence addresses and bank account details for payments.<br><br>You can learn more about Newgent Digital at <a href='https://newgent.digital/' target='_blank' data-umami-event='faq_answer-link' data-umami-event-url='https://newgent.digital/' class='text-red-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-50 active:opacity-50'>www.newgent.digital</a>.",
+        "sv": "NWG Digital AB, även känt som Newgent (Digital), är ett svenskbaserat och -registrerat aktiebolag. Newgent existerar främst för att förenkla administrativa och finansiella rutiner för företag-till-företag-försäljning (B2B) både inom Sverige och internationellt - i stil med en kreativ servicebyrå.<br><br>De flesta dokument du stöter på när du arbetar med mig kommer sannolikt att referera till \"Newgent Digital\" eller \"NWG Digital AB\" i någon form. Detta kan vara en postadress eller det bankkonto som är avsett för att ta emot din betalning.<br><br>Du kan läsa mer om Newgent Digital på <a href='https://newgent.digital/' target='_blank' data-umami-event='faq_answer-link' data-umami-event-url='https://newgent.digital/' class='text-red-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-50 active:opacity-50'>www.newgent.digital</a>."
       }
     }
   ]

@@ -1,0 +1,145 @@
+---
+import { Icon } from "astro-icon/components";
+import { Picture } from "astro:assets";
+import { getCollection } from "astro:content";
+import { getRelativeLocaleUrl } from "astro:i18n";
+import Layout from "../../../layouts/Layout.astro";
+
+const locale = Astro.currentLocale === "en" || Astro.currentLocale === "sv" ? Astro.currentLocale : "en";
+const enPosts = await getCollection("blogEnCollection", ({ data }) => !data.draft);
+const sortedPosts = enPosts.sort(
+  (a, b) => new Date(b.data.publishedDate).getTime() - new Date(a.data.publishedDate).getTime(),
+);
+
+const calculateReadTime = (content: string) => {
+  const wordCount = content.split(/\s+/).length;
+  return Math.ceil(wordCount / 200);
+};
+---
+
+<Layout
+  title="Blog"
+  description="Explore expert insights in photography, design, and development. Practical guides and industry analyses to help you grow in digital creation."
+  header="Blog"
+  headerIcon="ph:newspaper-duotone"
+  headerDescription="Dive into a world of creative knowledge and technical expertise. From hands-on tutorials to industry analyses, I share in-depth insights into photography, design and digital development. Whether you're a beginner or an expert, there's something here to inspire and develop your skills. Explore, learn and grow with me."
+>
+  <section class="max-w-2xl sm:mx-auto">
+    {
+      sortedPosts.filter((post) => post.data.featured).length > 0 && (
+        <section class="my-16 space-y-8">
+          <header class="relative text-stone-700 dark:text-stone-100">
+            <h2 class="relative font-serif text-2xl font-semibold">
+              <span class="relative z-10 inline-flex items-center gap-2 bg-amber-50 pr-4 dark:bg-stone-900">
+                <Icon name="ph:star-duotone" class="h-6 w-6 text-yellow-500" aria-hidden="true" />
+                Featured posts
+              </span>
+              <span
+                class="absolute top-1/2 right-0 left-0 -z-0 h-px bg-stone-200 dark:bg-stone-700"
+                aria-hidden="true"
+              />
+            </h2>
+          </header>
+          <div class="grid grid-cols-1 gap-8">
+            {sortedPosts
+              .filter((post) => post.data.featured)
+              .map((post) => (
+                <article class="group relative overflow-hidden rounded-lg border border-stone-200 bg-amber-50 transition hover:border-red-500/50 active:scale-95 active:opacity-50 dark:border-stone-700 dark:bg-stone-800">
+                  <a href={getRelativeLocaleUrl(locale, `blog/${post.id}`)} class="flex flex-col sm:flex-row">
+                    <div class="aspect-square w-full">
+                      <Picture
+                        src={post.data.featuredImage}
+                        alt={post.data.featuredImageAlt}
+                        width={1920}
+                        height={1920}
+                        widths={[640, 768, 1024, 1280]}
+                        formats={["avif", "webp"]}
+                        class="h-full w-full object-cover"
+                      />
+                    </div>
+                    <div class="flex flex-col justify-between p-6">
+                      <div class="space-y-4">
+                        <span class="inline-flex items-center rounded-full bg-amber-100 px-3 py-1 text-sm font-medium text-amber-800 dark:bg-amber-900 dark:text-amber-100">
+                          {post.data.category}
+                        </span>
+                        <h3 class="font-serif text-xl font-medium text-stone-700 dark:text-stone-100">
+                          {post.data.title}
+                        </h3>
+                        <p class="line-clamp-3 font-serif text-stone-500 dark:text-stone-400">
+                          {post.data.description}
+                        </p>
+                      </div>
+                      <footer class="mt-4 flex flex-wrap items-center gap-2 font-mono text-sm text-stone-500 dark:text-stone-400">
+                        <time datetime={post.data.publishedDate}>
+                          {new Date(post.data.publishedDate).toLocaleDateString("en-GB", {
+                            year: "numeric",
+                            month: "numeric",
+                            day: "numeric",
+                          })}
+                        </time>
+                        <span aria-hidden="true">•</span>
+                        <span>{calculateReadTime(post.body ?? "")} min read</span>
+                      </footer>
+                    </div>
+                  </a>
+                </article>
+              ))}
+          </div>
+        </section>
+      )
+    }
+    <section class="space-y-8">
+      <header class="relative text-stone-700 dark:text-stone-100">
+        <h2 class="relative font-serif text-2xl font-semibold">
+          <span class="relative z-10 inline-flex items-center gap-2 bg-amber-50 pr-4 dark:bg-stone-900">
+            <Icon name="ph:clock-duotone" class="h-6 w-6 text-red-500" aria-hidden="true" />
+            Latest posts
+          </span>
+          <span class="absolute top-1/2 right-0 left-0 -z-0 h-px bg-stone-200 dark:bg-stone-700" aria-hidden="true"
+          ></span>
+        </h2>
+      </header>
+      <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
+        {
+          sortedPosts.map((post) => (
+            <article class="group relative overflow-hidden rounded-lg border border-stone-200 bg-amber-50 transition hover:border-red-500/50 active:scale-95 active:opacity-50 dark:border-stone-700 dark:bg-stone-800">
+              <a href={getRelativeLocaleUrl(locale, `blog/${post.id}`)} class="flex flex-col">
+                <div class="aspect-square h-48 w-full">
+                  <Picture
+                    src={post.data.featuredImage}
+                    alt={post.data.featuredImageAlt}
+                    width={1920}
+                    height={1920}
+                    widths={[640, 768, 1024, 1280]}
+                    formats={["avif", "webp"]}
+                    class="h-full w-full object-cover"
+                  />
+                </div>
+                <div class="flex flex-col justify-between p-6">
+                  <div class="space-y-4">
+                    <span class="inline-flex items-center rounded-full bg-amber-100 px-3 py-1 text-sm font-medium text-amber-800 dark:bg-amber-900 dark:text-amber-100">
+                      {post.data.category}
+                    </span>
+                    <h3 class="font-serif text-xl font-medium text-stone-700 dark:text-stone-100">{post.data.title}</h3>
+                    <p class="line-clamp-2 font-serif text-stone-500 dark:text-stone-400">{post.data.description}</p>
+                  </div>
+                  <footer class="mt-4 flex flex-wrap items-center gap-2 font-mono text-sm text-stone-500 dark:text-stone-400">
+                    <time datetime={post.data.publishedDate}>
+                      {new Date(post.data.publishedDate).toLocaleDateString("en-GB", {
+                        year: "numeric",
+                        month: "numeric",
+                        day: "numeric",
+                      })}
+                    </time>
+                    <span aria-hidden="true">•</span>
+                    <span>{calculateReadTime(post.body ?? "")} min read</span>
+                  </footer>
+                </div>
+              </a>
+            </article>
+          ))
+        }
+      </div>
+    </section>
+  </section>
+</Layout>

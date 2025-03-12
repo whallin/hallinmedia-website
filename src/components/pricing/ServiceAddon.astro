@@ -1,0 +1,85 @@
+---
+import QuantityInput from "../form/QuantityInput.astro";
+
+interface Props {
+  serviceName: string;
+  addonName: Record<string, string>;
+  price: number;
+  unit?: Record<string, string>;
+  disabled?: boolean;
+}
+
+const translations = {
+  en: {
+    basePriceAddition: "Addition to base price",
+    currency: "SEK",
+  },
+  sv: {
+    basePriceAddition: "Tillägg på grundpriset",
+    currency: "kr",
+  },
+};
+
+const locale = Astro.currentLocale === "en" || Astro.currentLocale === "sv" ? Astro.currentLocale : "en";
+const { serviceName, addonName, price, unit, disabled = true } = Astro.props;
+const isPercentage = unit?.sv === "procent" || unit?.en === "percent";
+const sanitizedName = (name: string) => name.toLowerCase().replace(/\s+/g, "-");
+---
+
+<div class="flex flex-col justify-between gap-2 sm:flex-row sm:items-start" role="group" aria-label={addonName[locale]}>
+  <div class="flex items-center gap-3">
+    <input
+      type="checkbox"
+      id={`addon-${sanitizedName(serviceName)}-${sanitizedName(addonName[locale])}`}
+      name={`addon-${sanitizedName(serviceName)}-${sanitizedName(addonName[locale])}`}
+      value={price}
+      class="h-4 w-4 rounded border-stone-300 text-red-500 focus:ring-red-500 dark:border-stone-600"
+      disabled={disabled}
+      aria-describedby={`addon-desc-${sanitizedName(serviceName)}-${sanitizedName(addonName[locale])}`}
+    />
+    <div class="flex flex-col">
+      <label
+        for={`addon-${sanitizedName(serviceName)}-${sanitizedName(addonName[locale])}`}
+        class="font-serif text-sm text-stone-600 dark:text-stone-300"
+      >
+        {addonName[locale]}
+      </label>
+      {
+        isPercentage && (
+          <span
+            id={`addon-desc-${sanitizedName(serviceName)}-${sanitizedName(addonName[locale])}`}
+            class="text-xs text-stone-500 dark:text-stone-400"
+          >
+            {translations[locale].basePriceAddition}
+          </span>
+        )
+      }
+      <span class="text-xs text-stone-500 dark:text-stone-400">
+        {
+          isPercentage ? (
+            `${price}%`
+          ) : (
+            <>
+              <span
+                id={`price-addon-${sanitizedName(serviceName)}-${sanitizedName(addonName[locale])}`}
+                data-base-price={price}
+              >
+                {price.toLocaleString(locale === "sv" ? "sv-SE" : "en-GB")}
+              </span>{" "}
+              {translations[locale].currency}
+              {unit && `/${unit[locale]}`}
+            </>
+          )
+        }
+      </span>
+    </div>
+  </div>
+  {
+    !isPercentage && (
+      <QuantityInput
+        name={`quantity-addon-${sanitizedName(serviceName)}-${sanitizedName(addonName[locale])}`}
+        disabled={disabled}
+      />
+    )
+  }
+</div>

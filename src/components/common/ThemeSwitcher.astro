@@ -1,0 +1,41 @@
+---
+import { Icon } from "astro-icon/components";
+
+const translations = {
+  en: {
+    toggle: "Toggle dark mode",
+  },
+  sv: {
+    toggle: "Växla mörkt läge",
+  },
+};
+
+const locale = Astro.currentLocale === "en" || Astro.currentLocale === "sv" ? Astro.currentLocale : "en";
+---
+
+<button
+  id="theme-toggle"
+  class="w-fit cursor-pointer rounded-md border border-stone-400 p-2 transition hover:opacity-75 active:scale-95 active:opacity-50 dark:border-stone-700"
+>
+  <span class="text-stone-700 dark:hidden" aria-hidden="true">
+    <Icon name="ph:moon-stars-duotone" />
+  </span>
+  <span class="hidden text-stone-100 dark:inline" aria-hidden="true">
+    <Icon name="ph:sun-duotone" />
+  </span>
+  <span class="sr-only">{translations[locale].toggle}</span>
+</button>
+
+<script>
+  const isDark =
+    localStorage.theme === "dark" || (!localStorage.theme && window.matchMedia("(prefers-color-scheme: dark)").matches);
+
+  localStorage.theme = isDark ? "dark" : "light";
+  document.documentElement.classList.toggle("dark", isDark);
+
+  document.getElementById("theme-toggle")?.addEventListener("click", () => {
+    const isDark = localStorage.theme === "light";
+    localStorage.theme = isDark ? "dark" : "light";
+    document.documentElement.classList.toggle("dark", isDark);
+  });
+</script>

@@ -1,0 +1,19 @@
+{
+  "name": "RFSL Skellefteå",
+  "description": {
+    "en": "RFSL, the Swedish Federation for Lesbian, Gay, Bisexual, Transgender, Queer and Intersex Rights, is a non-profit organisation founded in 1950. RFSL works for an equal world where the human rights of all LGBTI people are respected and no one is left out.",
+    "sv": "RFSL, Riksförbundet för homosexuellas, bisexuellas, transpersoners, queeras och intersexpersoners rättigheter, är en ideell organisation som grundades 1950. RFSL arbetar för en jämlik värld där alla hbtqi-personers mänskliga rättigheter respekteras och ingen lämnas utanför."
+  },
+  "avatar": "/src/assets/clients/avatars/rfsl.svg",
+  "logo": "/src/assets/clients/rfsl.svg",
+  "logoDark": "/src/assets/clients/rfsl-dark.svg",
+  "dominantColor": {
+    "light": "#e31f27",
+    "dark": "#1ce0d8"
+  },
+  "websiteUrl": "https://skelleftea.rfsl.se/",
+  "socialLinks": {
+    "instagram": "https://www.instagram.com/rfsl.skelleftea/",
+    "facebook": "https://www.facebook.com/groups/610434459013356/"
+  }
+}

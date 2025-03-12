@@ -1,0 +1,439 @@
+---
+import { Icon } from "astro-icon/components";
+import { getCollection } from "astro:content";
+import { getRelativeLocaleUrl } from "astro:i18n";
+import Button from "../../../components/common/Button.astro";
+import PriceTotal from "../../../components/pricing/PriceTotal.astro";
+import PricingTaxToggle from "../../../components/pricing/PricingTaxToggle.astro";
+import ServiceAddon from "../../../components/pricing/ServiceAddon.astro";
+import ServiceCard from "../../../components/pricing/ServiceCard.astro";
+import ServiceHeader from "../../../components/pricing/ServiceHeader.astro";
+import ServiceOption from "../../../components/pricing/ServiceOption.astro";
+import Layout from "../../../layouts/Layout.astro";
+
+const pricingCategories = await getCollection("pricingCollection");
+const sortedCategories = pricingCategories.sort((a, b) => a.data.order - b.data.order);
+const locale = Astro.currentLocale === "en" || Astro.currentLocale === "sv" ? Astro.currentLocale : "en";
+---
+
+<Layout
+  title="Interactive price calculator for your project"
+  description="Calculate the cost of your creative project with our interactive calculator. Customise services, explore options and get an instant price estimate. A powerful tool to plan your budget without surprises."
+  header="Pricing Calculator"
+  headerIcon="ph:calculator-duotone"
+  headerDescription="Take control of your project budget with my interactive price calculator. Customise services, explore options, and get a transparent overview of costs in real time. A powerful tool to help you plan your project with precision and confidence — no surprises."
+>
+  <section class="mx-auto max-w-2xl space-y-12">
+    <nav class="flex flex-col justify-between gap-3 sm:flex-row" aria-label="Main navigation">
+      <Button href={getRelativeLocaleUrl(locale, "hire")}>
+        <Icon name="ph:handshake-duotone" class="flex-shrink-0" aria-hidden="true" />
+        Begin your project today
+        <Icon name="ph:arrow-right" class="flex-shrink-0" aria-hidden="true" />
+      </Button>
+      <Button href={getRelativeLocaleUrl(locale, "contact")} variant="secondary">
+        <Icon name="ph:file-text-duotone" class="flex-shrink-0" aria-hidden="true" />
+        Request a quote
+        <Icon name="ph:arrow-right" class="flex-shrink-0" aria-hidden="true" />
+      </Button>
+    </nav>
+    <PricingTaxToggle />
+    <form id="calculator-form" class="space-y-12">
+      {
+        sortedCategories.map((category) => (
+          <div class="space-y-8">
+            <header class="relative cursor-pointer text-stone-700 dark:text-stone-100" data-pricing-header>
+              <h2 class="flex cursor-pointer items-center justify-between gap-3 font-serif text-2xl font-medium text-stone-700 transition-opacity hover:opacity-75 active:opacity-50 dark:text-stone-100">
+                <span class="relative z-10 flex items-center gap-3 truncate bg-amber-50 pr-4 dark:bg-stone-900">
+                  <Icon name={category.data.icon} class={`flex-shrink-0 ${category.data.color}`} aria-hidden="true" />
+                  {category.data.categoryName[locale]}
+                  <Icon
+                    name="ph:caret-down"
+                    class="h-5 w-5 flex-shrink-0 transform transition-transform"
+                    data-chevron
+                    aria-hidden="true"
+                  />
+                </span>
+                <span
+                  class="absolute top-1/2 right-0 left-0 -z-0 hidden h-px bg-stone-200 sm:block dark:bg-stone-700"
+                  aria-hidden="true"
+                />
+              </h2>
+            </header>
+            <div class="pricing-content space-y-6">
+              {category.data.services.map((service) => (
+                <ServiceCard service={service}>
+                  <ServiceHeader
+                    slot="header"
+                    serviceName={service.name}
+                    description={service.description}
+                    basePrice={service.basePrice}
+                    unit={service.unit}
+                    hasOptions={service.options && service.options.length > 0}
+                  />
+                  {service.options && service.options.length > 0 && (
+                    <Fragment slot="options">
+                      {service.options.map((option) => (
+                        <ServiceOption
+                          serviceName={service.name[locale]}
+                          optionName={option.name}
+                          price={option.price}
+                          unit={option.unit}
+                        />
+                      ))}
+                    </Fragment>
+                  )}
+                  {service.addons && service.addons.length > 0 && (
+                    <Fragment slot="addons">
+                      {service.addons.map((addon) => (
+                        <ServiceAddon
+                          serviceName={service.name[locale]}
+                          addonName={addon.name}
+                          price={addon.price}
+                          unit={addon.unit}
+                        />
+                      ))}
+                    </Fragment>
+                  )}
+                </ServiceCard>
+              ))}
+            </div>
+          </div>
+        ))
+      }
+      <PriceTotal />
+    </form>
+  </section>
+</Layout>
+
+<script>
+  // DOM Elements
+  const elements = {
+    form: document.getElementById("calculator-form"),
+    priceGroups: document.querySelectorAll("dl"),
+    totalPriceContainer: document.querySelector('[role="complementary"]'),
+    totalPrice: document.getElementById("total-price"),
+    taxAmount: document.getElementById("tax-amount"),
+    taxAmountValue: document.getElementById("tax-amount-value"),
+    taxToggle: document.getElementById("taxToggle"),
+    inputs: {
+      services: document.querySelectorAll<HTMLInputElement>('input[type="checkbox"][name^="service-"]'),
+      options: document.querySelectorAll<HTMLInputElement>('input[type="radio"][name^="option-"]'),
+      addons: document.querySelectorAll<HTMLInputElement>('input[type="checkbox"][name^="addon-"]'),
+    },
+  };
+
+  // Types and Interfaces
+  interface QuantityControls {
+    input: HTMLInputElement | null;
+    buttons: NodeListOf<HTMLButtonElement>;
+    container: Element;
+  }
+
+  // Utility Functions
+  const isPercentageUnit = (element: HTMLElement): boolean => {
+    const container = element.closest('[role="group"]') || element.closest(".p-6");
+    if (!container) return false;
+
+    const indicators = [
+      container.querySelector('[aria-describedby*="desc"]')?.nextElementSibling?.textContent?.includes("%"),
+      container.querySelector('[role="complementary"]')?.textContent?.includes("%"),
+      container.querySelector("output")?.textContent?.includes("%"),
+    ];
+
+    return indicators.some(Boolean);
+  };
+
+  const getQuantityValue = (controls: QuantityControls): number => {
+    return controls.input ? parseInt(controls.input.value) || 1 : 1;
+  };
+
+  const getQuantityControls = (container: Element): QuantityControls => ({
+    input: container.querySelector<HTMLInputElement>('input[type="number"]'),
+    buttons: container.querySelectorAll<HTMLButtonElement>("button[data-action]"),
+    container,
+  });
+
+  const updateQuantityControls = (container: Element, isEnabled: boolean) => {
+    const controls = getQuantityControls(container);
+    if (controls.input) {
+      controls.input.disabled = !isEnabled;
+      controls.buttons.forEach((btn) => (btn.disabled = !isEnabled));
+    }
+  };
+
+  // Event Handlers
+  const handleServiceChange = (checkbox: HTMLInputElement) => {
+    const serviceName = checkbox.name.replace("service-", "");
+    const serviceContainer = checkbox.closest("article");
+    if (!serviceContainer) return;
+
+    // Handle options
+    const options = serviceContainer.querySelectorAll<HTMLInputElement>(`input[name="option-${serviceName}"]`);
+    options.forEach((option) => {
+      const optionGroup = option.closest('[role="group"]');
+      option.disabled = !checkbox.checked;
+      option.checked = false;
+      if (optionGroup) {
+        updateQuantityControls(optionGroup, checkbox.checked && option.checked);
+      }
+    });
+
+    // Select cheapest option if available
+    if (checkbox.checked && options.length) {
+      const cheapestOption = Array.from(options).reduce((a, b) => (parseFloat(a.value) < parseFloat(b.value) ? a : b));
+      cheapestOption.checked = true;
+      const optionGroup = cheapestOption.closest('[role="group"]');
+      if (optionGroup) {
+        updateQuantityControls(optionGroup, true);
+      }
+    }
+
+    // Handle addons
+    const addons = serviceContainer.querySelectorAll<HTMLInputElement>(`input[name^="addon-${serviceName}"]`);
+    addons.forEach((addon) => {
+      const addonGroup = addon.closest('[role="group"]');
+      addon.disabled = !checkbox.checked;
+      addon.checked = false;
+      if (addonGroup) {
+        updateQuantityControls(addonGroup, checkbox.checked && addon.checked);
+      }
+    });
+
+    // Handle service quantity
+    const serviceHeader = serviceContainer.querySelector("header");
+    if (serviceHeader) {
+      updateQuantityControls(serviceHeader, checkbox.checked);
+    }
+
+    calculateTotal();
+  };
+
+  const handleQuantityChange = (input: HTMLInputElement) => {
+    const value = parseInt(input.value);
+    const min = parseInt(input.min) || 1;
+    const max = parseInt(input.max) || 50;
+
+    if (isNaN(value) || value < min) {
+      input.value = min.toString();
+    } else if (value > max) {
+      input.value = max.toString();
+    }
+
+    const container = input.closest(".flex");
+    if (container) {
+      const decBtn = container.querySelector<HTMLButtonElement>('[data-action="decrement"]');
+      if (decBtn) {
+        decBtn.disabled = input.disabled || value <= min;
+      }
+    }
+    calculateTotal();
+  };
+
+  const setupQuantityControls = (container: Element) => {
+    // Find all quantity control groups within the container that have both an input and buttons
+    container.querySelectorAll(".flex").forEach((group) => {
+      // Only process groups that have the quantity control structure
+      if (!group.querySelector('input[type="number"]') || !group.querySelector("button[data-action]")) {
+        return;
+      }
+
+      const input = group.querySelector<HTMLInputElement>('input[type="number"]')!;
+      const decBtn = group.querySelector<HTMLButtonElement>('button[data-action="decrement"]')!;
+      const incBtn = group.querySelector<HTMLButtonElement>('button[data-action="increment"]')!;
+
+      // Remove any existing listeners (to prevent stacking)
+      const newInput = input.cloneNode(true) as HTMLInputElement;
+      input.parentNode?.replaceChild(newInput, input);
+
+      // Set up new input event listeners
+      newInput.addEventListener("input", () => handleQuantityChange(newInput));
+      newInput.addEventListener("change", () => handleQuantityChange(newInput));
+
+      // Set up button event listeners
+      decBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        const currentValue = parseInt(newInput.value) || 1;
+        const min = parseInt(newInput.min) || 1;
+
+        if (currentValue > min) {
+          newInput.value = (currentValue - 1).toString();
+          handleQuantityChange(newInput);
+        }
+      });
+
+      incBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        const currentValue = parseInt(newInput.value) || 1;
+        const max = parseInt(newInput.max) || 50;
+
+        if (currentValue < max) {
+          newInput.value = (currentValue + 1).toString();
+          handleQuantityChange(newInput);
+        }
+      });
+    });
+  };
+
+  // Initialize Event Listeners
+  elements.inputs.services.forEach((checkbox) => {
+    checkbox.addEventListener("change", () => handleServiceChange(checkbox));
+  });
+
+  elements.inputs.options.forEach((option) => {
+    option.addEventListener("change", () => {
+      const optionGroup = option.closest('[role="group"]');
+      if (optionGroup) {
+        // Update quantity controls for all options in the same group
+        const allOptions = document.querySelectorAll<HTMLInputElement>(`input[name="${option.name}"]`);
+        allOptions.forEach((opt) => {
+          const group = opt.closest('[role="group"]');
+          if (group) {
+            updateQuantityControls(group, opt.checked);
+          }
+        });
+      }
+      calculateTotal();
+    });
+  });
+
+  elements.inputs.addons.forEach((addon) => {
+    addon.addEventListener("change", () => {
+      const addonGroup = addon.closest('[role="group"]');
+      if (addonGroup) {
+        updateQuantityControls(addonGroup, addon.checked);
+      }
+      calculateTotal();
+    });
+  });
+
+  // Setup quantity controls for all containers
+  document.querySelectorAll(".p-6").forEach(setupQuantityControls);
+
+  // Price Calculation
+  function calculateTotal() {
+    const taxIncluded = elements.taxToggle?.getAttribute("aria-checked") === "false";
+    const locale = document.documentElement.lang === "sv" ? "sv-SE" : "en-GB";
+
+    // Calculate base price (non-percentage items)
+    const baseTotal = Array.from(elements.inputs.services)
+      .filter((checkbox) => checkbox.checked)
+      .reduce((total, checkbox) => {
+        const serviceContainer = checkbox.closest("article");
+        if (!serviceContainer) return total;
+
+        const serviceName = checkbox.name.replace("service-", "");
+        const selectedOption = serviceContainer.querySelector<HTMLInputElement>(
+          `input[name="option-${serviceName}"]:checked`,
+        );
+
+        // Add service or option price
+        if (selectedOption && !isPercentageUnit(selectedOption)) {
+          const optionGroup = selectedOption.closest('[role="group"]');
+          if (optionGroup) {
+            const controls = getQuantityControls(optionGroup);
+            total += parseFloat(selectedOption.value) * getQuantityValue(controls);
+          }
+        } else if (
+          !isPercentageUnit(checkbox) &&
+          !serviceContainer.querySelector(`input[name="option-${serviceName}"]`)
+        ) {
+          const serviceHeader = serviceContainer.querySelector("header");
+          if (serviceHeader) {
+            const controls = getQuantityControls(serviceHeader);
+            total += parseFloat(checkbox.dataset.basePrice || "0") * getQuantityValue(controls);
+          }
+        }
+
+        // Add non-percentage addon prices
+        serviceContainer
+          .querySelectorAll<HTMLInputElement>(`input[name^="addon-${serviceName}"]:checked`)
+          .forEach((addon) => {
+            if (!isPercentageUnit(addon)) {
+              const addonGroup = addon.closest('[role="group"]');
+              if (addonGroup) {
+                const controls = getQuantityControls(addonGroup);
+                total += parseFloat(addon.value) * getQuantityValue(controls);
+              }
+            }
+          });
+
+        return total;
+      }, 0);
+
+    // Apply percentage-based items
+    const totalWithPercentages = Array.from(elements.inputs.services)
+      .filter((checkbox) => checkbox.checked)
+      .reduce((total, checkbox) => {
+        const serviceContainer = checkbox.closest("article");
+        if (!serviceContainer) return total;
+
+        const serviceName = checkbox.name.replace("service-", "");
+        const selectedOption = serviceContainer.querySelector<HTMLInputElement>(
+          `input[name="option-${serviceName}"]:checked`,
+        );
+
+        // Apply option percentage
+        if (selectedOption && isPercentageUnit(selectedOption)) {
+          total *= 1 + parseFloat(selectedOption.value) / 100;
+        }
+        // Apply service percentage
+        else if (isPercentageUnit(checkbox)) {
+          total *= 1 + parseFloat(checkbox.dataset.basePrice || "0") / 100;
+        }
+
+        // Apply addon percentages
+        serviceContainer
+          .querySelectorAll<HTMLInputElement>(`input[name^="addon-${serviceName}"]:checked`)
+          .forEach((addon) => {
+            if (isPercentageUnit(addon)) {
+              total *= 1 + parseFloat(addon.value) / 100;
+            }
+          });
+
+        return total;
+      }, baseTotal);
+
+    const finalTotal = taxIncluded ? totalWithPercentages * 1.25 : totalWithPercentages;
+
+    // Update UI
+    if (elements.totalPrice) {
+      elements.totalPrice.dataset.basePrice = totalWithPercentages.toString();
+      elements.totalPrice.textContent = finalTotal.toLocaleString(locale);
+    }
+
+    if (elements.taxAmount && elements.taxAmountValue) {
+      if (taxIncluded) {
+        elements.taxAmount.classList.remove("hidden");
+        elements.taxAmountValue.textContent = (totalWithPercentages * 0.25).toLocaleString(locale);
+      } else {
+        elements.taxAmount.classList.add("hidden");
+      }
+    }
+  }
+
+  // Listen for tax toggle changes
+  document.addEventListener("taxStateChanged", (() => calculateTotal()) as EventListener);
+
+  // Initialize collapsible categories
+  document.addEventListener("DOMContentLoaded", () => {
+    const headers = document.querySelectorAll("[data-pricing-header]");
+    headers.forEach((header, index) => {
+      const content = header.nextElementSibling as HTMLElement;
+
+      // Initially collapse all sections except the first one
+      if (index > 0 && content) {
+        content.classList.add("hidden");
+        const chevron = header.querySelector("[data-chevron]");
+        chevron?.classList.add("rotate-180");
+      }
+
+      header.addEventListener("click", () => {
+        if (content) {
+          content.classList.toggle("hidden");
+          const chevron = header.querySelector("[data-chevron]");
+          chevron?.classList.toggle("rotate-180");
+        }
+      });
+    });
+  });
+</script>

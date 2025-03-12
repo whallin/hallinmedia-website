@@ -1,79 +1,145 @@
 ---
-import { getCollection, render } from "astro:content";
+import { Icon } from "astro-icon/components";
+import { Picture } from "astro:assets";
+import { getCollection } from "astro:content";
 import { getRelativeLocaleUrl } from "astro:i18n";
-import BlogPostCard from "../../components/blog/BlogPostCard.astro";
-import IconPhNewspaperDuotone from "../../components/icons/PhNewspaperDuotone.astro";
-import MainLayout from "../../layouts/MainLayout.astro";
+import Layout from "../../layouts/Layout.astro";
 
-// Fetch all blog posts with read time
-const blogPosts = await getCollection("blogEnCollection").then(async (posts) => {
-  const postsWithReadTime = await Promise.all(
-    posts.map(async (post) => {
-      const { remarkPluginFrontmatter } = await render(post);
-      return {
-        ...post,
-        data: {
-          ...post.data,
-          readTime: Math.ceil(remarkPluginFrontmatter.readingTime),
-        },
-      };
-    })
-  );
+const locale = Astro.currentLocale === "en" || Astro.currentLocale === "sv" ? Astro.currentLocale : "en";
+const svPosts = await getCollection("blogSvCollection", ({ data }) => !data.draft);
+const sortedPosts = svPosts.sort(
+  (a, b) => new Date(b.data.publishedDate).getTime() - new Date(a.data.publishedDate).getTime(),
+);
 
-  return postsWithReadTime.sort((a, b) => {
-    // Featured posts first
-    if (a.data.featured && !b.data.featured) return -1;
-    if (!a.data.featured && b.data.featured) return 1;
-    // Then sort by date
-    return new Date(b.data.publishedDate).getTime() - new Date(a.data.publishedDate).getTime();
-  });
-});
+const calculateReadTime = (content: string) => {
+  const wordCount = content.split(/\s+/).length;
+  return Math.ceil(wordCount / 200);
+};
 ---
 
-<MainLayout
-  title="Blog"
-  description="Visit the HallinMedia blog for engaging articles on technology and personal stories in English and Swedish. Join the conversation!"
+<Layout
+  title="Blogg"
+  description="Utforska expertinsikter inom fotografi, design och utveckling. Praktiska guider och branschanalyser som hjälper dig växa inom digitalt skapande."
+  header="Blogg"
+  headerIcon="ph:newspaper-duotone"
+  headerDescription="Dyk in i en värld av kreativ kunskap och teknisk expertis. Här delar jag med mig av djupgående insikter inom fotografi, design och digital utveckling - från praktiska tutorials till branschanalyser. Oavsett om du är nybörjare eller expert finns här något som kan inspirera och utveckla dina färdigheter. Utforska, lär dig och väx tillsammans med mig."
 >
-  <main class="flex flex-col gap-12 font-serif selection:bg-red-300 selection:text-red-800">
-    <header class="flex flex-col-reverse justify-between gap-4 sm:flex-row sm:items-center">
-      <h1 class="max-w-md text-4xl font-light break-words text-stone-900 italic">My "newspaper"</h1>
-      <IconPhNewspaperDuotone
-        class="motion-preset-expand h-8 w-8 text-red-500 sm:h-12 sm:w-12"
-        aria-hidden="true"
-      />
-    </header>
-    <article class="flex flex-col gap-4 text-sm font-light text-stone-700">
-      <p>
-        My blog, or as I like to call it, my newspaper, is a place for all my various publications.
-        It includes everything from my experiences and discoveries to personal opinions and things
-        I'd like to share. Most of my posts are quite short and to the point, though some might be
-        more complex and elaborate.
-      </p>
-      <p>
-        Feel free to see if any title piques your interest—remember, all blog posts are available in
-        both <a
-          href={getRelativeLocaleUrl("en", "blog")}
-          class="text-blue-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-blue-500 hover:text-stone-50 hover:no-underline active:opacity-50"
-          aria-label="English version of the blog">English</a
-        > and <a
-          href={getRelativeLocaleUrl("sv", "blog")}
-          class="text-amber-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-amber-500 hover:text-stone-50 hover:no-underline active:opacity-50"
-          aria-label="Swedish version of the blog">Swedish</a
-        > and have support for commenting (as long as you have a <a
-          href="https://github.com/"
-          target="_blank"
-          data-umami-event="blog_github"
-          data-umami-event-url="https://github.com/"
-          data-umami-event-origin={Astro.url}
-          class="text-red-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-50 hover:no-underline active:opacity-50"
-          aria-label="GitHub (opens in new tab)"
-          rel="noopener noreferrer">GitHub</a
-        > account).
-      </p>
-    </article>
-
-    <div class="grid gap-4 sm:grid-cols-2" role="list">
-      {blogPosts.map((post) => <BlogPostCard post={post} role="listitem" />)}
-    </div>
-  </main>
-</MainLayout>
+  <section class="max-w-2xl sm:mx-auto">
+    {
+      sortedPosts.filter((post) => post.data.featured).length > 0 && (
+        <section class="my-16 space-y-8">
+          <header class="relative text-stone-700 dark:text-stone-100">
+            <h2 class="relative font-serif text-2xl font-semibold">
+              <span class="relative z-10 inline-flex items-center gap-2 bg-amber-50 pr-4 dark:bg-stone-900">
+                <Icon name="ph:star-duotone" class="h-6 w-6 text-yellow-500" aria-hidden="true" />
+                Utvalda inlägg
+              </span>
+              <span
+                class="absolute top-1/2 right-0 left-0 -z-0 h-px bg-stone-200 dark:bg-stone-700"
+                aria-hidden="true"
+              />
+            </h2>
+          </header>
+          <div class="grid grid-cols-1 gap-8">
+            {sortedPosts
+              .filter((post) => post.data.featured)
+              .map((post) => (
+                <article class="group relative overflow-hidden rounded-lg border border-stone-200 bg-amber-50 transition hover:border-red-500/50 active:scale-95 active:opacity-50 dark:border-stone-700 dark:bg-stone-800">
+                  <a href={getRelativeLocaleUrl(locale, `blog/${post.id}`)} class="flex flex-col sm:flex-row">
+                    <div class="aspect-square w-full">
+                      <Picture
+                        src={post.data.featuredImage}
+                        alt={post.data.featuredImageAlt}
+                        width={1920}
+                        height={1920}
+                        widths={[640, 768, 1024, 1280]}
+                        formats={["avif", "webp"]}
+                        class="h-full w-full object-cover"
+                      />
+                    </div>
+                    <div class="flex flex-col justify-between p-6">
+                      <div class="space-y-4">
+                        <span class="inline-flex items-center rounded-full bg-amber-100 px-3 py-1 text-sm font-medium text-amber-800 dark:bg-amber-900 dark:text-amber-100">
+                          {post.data.category}
+                        </span>
+                        <h3 class="font-serif text-xl font-medium text-stone-700 dark:text-stone-100">
+                          {post.data.title}
+                        </h3>
+                        <p class="line-clamp-3 font-serif text-stone-500 dark:text-stone-400">
+                          {post.data.description}
+                        </p>
+                      </div>
+                      <footer class="mt-4 flex flex-wrap items-center gap-2 font-mono text-sm text-stone-500 dark:text-stone-400">
+                        <time datetime={post.data.publishedDate}>
+                          {new Date(post.data.publishedDate).toLocaleDateString("sv-SE", {
+                            year: "numeric",
+                            month: "numeric",
+                            day: "numeric",
+                          })}
+                        </time>
+                        <span aria-hidden="true">•</span>
+                        <span>{calculateReadTime(post.body ?? "")} min läsning</span>
+                      </footer>
+                    </div>
+                  </a>
+                </article>
+              ))}
+          </div>
+        </section>
+      )
+    }
+    <section class="space-y-8">
+      <header class="relative text-stone-700 dark:text-stone-100">
+        <h2 class="relative font-serif text-2xl font-semibold">
+          <span class="relative z-10 inline-flex items-center gap-2 bg-amber-50 pr-4 dark:bg-stone-900">
+            <Icon name="ph:clock-duotone" class="h-6 w-6 text-red-500" aria-hidden="true" />
+            Senaste inläggen
+          </span>
+          <span class="absolute top-1/2 right-0 left-0 -z-0 h-px bg-stone-200 dark:bg-stone-700" aria-hidden="true"
+          ></span>
+        </h2>
+      </header>
+      <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
+        {
+          sortedPosts.map((post) => (
+            <article class="group relative overflow-hidden rounded-lg border border-stone-200 bg-amber-50 transition hover:border-red-500/50 active:scale-95 active:opacity-50 dark:border-stone-700 dark:bg-stone-800">
+              <a href={getRelativeLocaleUrl(locale, `blog/${post.id}`)} class="flex flex-col">
+                <div class="aspect-square h-48 w-full">
+                  <Picture
+                    src={post.data.featuredImage}
+                    alt={post.data.featuredImageAlt}
+                    width={1920}
+                    height={1920}
+                    widths={[640, 768, 1024, 1280]}
+                    formats={["avif", "webp"]}
+                    class="h-full w-full object-cover"
+                  />
+                </div>
+                <div class="flex flex-col justify-between p-6">
+                  <div class="space-y-4">
+                    <span class="inline-flex items-center rounded-full bg-amber-100 px-3 py-1 text-sm font-medium text-amber-800 dark:bg-amber-900 dark:text-amber-100">
+                      {post.data.category}
+                    </span>
+                    <h3 class="font-serif text-xl font-medium text-stone-700 dark:text-stone-100">{post.data.title}</h3>
+                    <p class="line-clamp-2 font-serif text-stone-500 dark:text-stone-400">{post.data.description}</p>
+                  </div>
+                  <footer class="mt-4 flex flex-wrap items-center gap-2 font-mono text-sm text-stone-500 dark:text-stone-400">
+                    <time datetime={post.data.publishedDate}>
+                      {new Date(post.data.publishedDate).toLocaleDateString("sv-SE", {
+                        year: "numeric",
+                        month: "numeric",
+                        day: "numeric",
+                      })}
+                    </time>
+                    <span aria-hidden="true">•</span>
+                    <span>{calculateReadTime(post.body ?? "")} min läsning</span>
+                  </footer>
+                </div>
+              </a>
+            </article>
+          ))
+        }
+      </div>
+    </section>
+  </section>
+</Layout>

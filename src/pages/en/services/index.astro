@@ -1,0 +1,197 @@
+---
+import { Icon } from "astro-icon/components";
+import { Image } from "astro:assets";
+import { getCollection } from "astro:content";
+import { getRelativeLocaleUrl } from "astro:i18n";
+import Button from "../../../components/common/Button.astro";
+import Layout from "../../../layouts/Layout.astro";
+
+const locale = Astro.currentLocale === "en" || Astro.currentLocale === "sv" ? Astro.currentLocale : "en";
+const services = await getCollection("servicesCollection");
+const clients = await getCollection("clientsCollection");
+const clientsMap = new Map(clients.map((entry) => [entry.id, entry]));
+
+type ColorVariant = {
+  border: string;
+  iconBg: string;
+  iconColor: string;
+  price: string;
+  cta: string;
+};
+
+const colorVariants: Record<"red" | "blue" | "green" | "purple", ColorVariant> = {
+  red: {
+    border: "hover:border-red-500/50",
+    iconBg: "bg-red-500/10 dark:bg-red-500/20 group-hover:bg-red-500/30 border-red-500/20",
+    iconColor: "text-red-500",
+    price: "text-red-500",
+    cta: "text-red-500 hover:bg-red-500",
+  },
+  blue: {
+    border: "hover:border-blue-600/50",
+    iconBg: "bg-blue-600/10 dark:bg-blue-600/20 group-hover:bg-blue-600/30 border-blue-600/20",
+    iconColor: "text-blue-600",
+    price: "text-blue-600",
+    cta: "text-blue-600 hover:bg-blue-600",
+  },
+  green: {
+    border: "hover:border-green-600/50",
+    iconBg: "bg-green-600/10 dark:bg-green-600/20 group-hover:bg-green-600/30 border-green-600/20",
+    iconColor: "text-green-600",
+    price: "text-green-600",
+    cta: "text-green-600 hover:bg-green-600",
+  },
+  purple: {
+    border: "hover:border-purple-500/50",
+    iconBg: "bg-purple-500/10 dark:bg-purple-500/20 group-hover:bg-purple-500/30 border-purple-500/20",
+    iconColor: "text-purple-500",
+    price: "text-purple-500",
+    cta: "text-purple-500 hover:bg-purple-500",
+  },
+};
+---
+
+<Layout
+  title="Creative services in photography, video & design"
+  description="Discover my full range of creative services for businesses. From professional photography and video production to graphic design and communication. Customised solutions to help your brand grow."
+  header="Services"
+  headerIcon="ph:magic-wand-duotone"
+  headerDescription="Explore my comprehensive range of digital services, from creative photography to strategic design. With over 4+ years of experience, I deliver customised solutions that help your brand stand out and reach new heights. Discover how together we can turn your vision into reality."
+>
+  <div class="mx-auto max-w-2xl space-y-16">
+    <nav class="flex flex-col justify-between gap-3 sm:flex-row">
+      <Button href="https://meetings.hubspot.com/william-hallin" target="_blank" rel="noopener noreferrer">
+        <Icon name="ph:calendar-duotone" class="flex-shrink-0" aria-hidden="true" />
+        Schedule a free meeting
+        <Icon name="ph:arrow-right" class="flex-shrink-0" aria-hidden="true" />
+      </Button>
+      <Button href={getRelativeLocaleUrl(locale, "hire")} variant="secondary">
+        <Icon name="ph:handshake-duotone" class="flex-shrink-0" aria-hidden="true" />
+        Start your project today
+        <Icon name="ph:arrow-right" class="flex-shrink-0" aria-hidden="true" />
+      </Button>
+    </nav>
+    <div class="grid gap-6 sm:grid-cols-2">
+      {
+        services
+          .sort((a, b) => a.data.serviceName[locale].localeCompare(b.data.serviceName[locale]))
+          .map((service) => {
+            const colors = colorVariants[service.data.color as keyof typeof colorVariants];
+            return (
+              <article
+                class={`group relative overflow-hidden rounded-lg border border-stone-200 p-6 transition-colors ${colors.border} dark:border-stone-700`}
+              >
+                <figure class="pointer-events-none absolute inset-0" aria-hidden="true">
+                  <div
+                    class="radial-blob absolute h-96 w-96 -translate-x-1/2 -translate-y-1/2 rounded-full opacity-0 transition-opacity group-hover:opacity-25"
+                    style={{
+                      background: `radial-gradient(circle, ${
+                        service.data.color === "red"
+                          ? "#dc2626"
+                          : service.data.color === "blue"
+                            ? "#2563eb"
+                            : service.data.color === "green"
+                              ? "#16a34a"
+                              : "#9333ea"
+                      } 0%, transparent 70%)`,
+                    }}
+                    aria-hidden="true"
+                  />
+                </figure>
+                <div class="relative z-10 flex h-full flex-col space-y-4">
+                  <div class="flex items-center gap-4">
+                    <figure class={`rounded-lg border p-3 transition-colors ${colors.iconBg}`}>
+                      <Icon name={service.data.icon} class={`h-6 w-6 ${colors.iconColor}`} aria-hidden="true" />
+                    </figure>
+                    <dl class="flex-1">
+                      <dt>
+                        <h2 class="font-serif text-lg font-medium text-stone-700 dark:text-stone-100">
+                          {service.data.serviceName[locale]}
+                        </h2>
+                      </dt>
+                      {service.data.pricing && (
+                        <dd class={`text-sm ${colors.price}`}>
+                          Från{" "}
+                          <strong class="font-handwrite">
+                            {service.data.pricing.startingFrom} SEK/{service.data.pricing.unit[locale]}
+                          </strong>
+                        </dd>
+                      )}
+                    </dl>
+                  </div>
+                  <p class="line-clamp-3 font-serif text-stone-500 dark:text-stone-400">
+                    {service.data.shortDescription[locale]}
+                  </p>
+                  <ul class="mb-6 flex flex-col gap-2" role="list">
+                    {service.data.keyFeatures.map((feature) => (
+                      <li class="flex items-start gap-2">
+                        <Icon
+                          name="ph:check-circle-duotone"
+                          class={`mt-1 h-4 w-4 shrink-0 ${colors.iconColor}`}
+                          aria-hidden="true"
+                        />
+                        <span class="font-serif text-sm text-stone-600 dark:text-stone-300">
+                          {feature.title[locale]}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                  <footer class="mt-auto flex items-center justify-between">
+                    {service.data.featuredClients && (
+                      <ul class="flex -space-x-2" role="list" aria-label="Featured clients">
+                        {service.data.featuredClients
+                          .map((clientRef) => clientsMap.get(clientRef.id))
+                          .filter(Boolean)
+                          .sort((a, b) => (b?.data.featured ? 1 : 0) - (a?.data.featured ? 1 : 0))
+                          .slice(0, 3)
+                          .map((clientEntry) => (
+                            <li class="relative">
+                              {clientEntry?.data.avatar && (
+                                <Image
+                                  src={clientEntry.data.avatar}
+                                  alt={clientEntry.data.name}
+                                  width={64}
+                                  height={64}
+                                  class="h-6 w-6 rounded-full border border-stone-200 select-none dark:border-stone-700"
+                                  aria-hidden="true"
+                                />
+                              )}
+                            </li>
+                          ))}
+                        {service.data.featuredClients.length > 3 && (
+                          <li class="relative">
+                            <div class="flex h-6 w-6 items-center justify-center rounded-full border border-stone-200 bg-amber-50 text-[10px] text-stone-400 select-none dark:border-stone-700 dark:bg-stone-800 dark:text-stone-500">
+                              +{service.data.featuredClients.length - 3}
+                            </div>
+                          </li>
+                        )}
+                      </ul>
+                    )}
+                    <a
+                      href={getRelativeLocaleUrl(locale, `services/${service.id}`)}
+                      class={`${colors.cta} flex items-center gap-1 text-sm font-semibold underline decoration-dashed decoration-from-font underline-offset-4 hover:text-stone-100 active:opacity-50`}
+                    >
+                      {service.data.cta?.[locale] || "Learn more"}
+                      <Icon name="ph:arrow-right" class="h-4 w-4" aria-hidden="true" />
+                    </a>
+                  </footer>
+                </div>
+              </article>
+            );
+          })
+      }
+    </div>
+  </div>
+</Layout>
+
+<script>
+  document.querySelectorAll(".radial-blob").forEach((blob) => {
+    const article = blob.closest(".group");
+
+    article?.addEventListener("mousemove", (e) => {
+      const rect = article.getBoundingClientRect();
+      (blob as HTMLElement).style.left = `${(e as MouseEvent).clientX - rect.left}px`;
+      (blob as HTMLElement).style.top = `${(e as MouseEvent).clientY - rect.top}px`;
+    });
+  });
+</script>

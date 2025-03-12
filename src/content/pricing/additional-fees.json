@@ -1,0 +1,162 @@
+{
+  "categoryName": {
+    "en": "Additional Fees",
+    "sv": "Ytterligare avgifter"
+  },
+  "icon": "ph:warning-circle-duotone",
+  "color": "text-yellow-500",
+  "order": 6,
+  "services": [
+    {
+      "name": {
+        "en": "Mileage Compensation",
+        "sv": "Milersättning"
+      },
+      "description": {
+        "en": "Standard mileage rate for travel outside the local Skellefteå area. Calculated per kilometre from office location.",
+        "sv": "Standard milersättning för resor utanför Skellefteåområdet. Beräknas per kilometer från kontorsplats."
+      },
+      "basePrice": 25,
+      "unit": {
+        "en": "mile",
+        "sv": "mil"
+      },
+      "note": {
+        "en": "Minimum chargeable distance is 30km return journey. Additional parking fees and tolls charged at cost.",
+        "sv": "Minimisträcka för debitering är 30km tur och retur. Tillkommande parkeringsavgifter och vägavgifter debiteras till självkostnadspris."
+      }
+    },
+    {
+      "name": {
+        "en": "Equipment Hire",
+        "sv": "Uthyrning av utrustning"
+      },
+      "description": {
+        "en": "Professional equipment hire for specialised projects. All equipment fully tested, calibrated and insured.",
+        "sv": "Uthyrning av professionell utrustning för specialiserade projekt. All utrustning är testad och försäkrad."
+      },
+      "basePrice": 500,
+      "unit": {
+        "en": "day",
+        "sv": "dag"
+      },
+      "options": [
+        {
+          "name": {
+            "en": "Sound Equipment",
+            "sv": "Ljudutrustning"
+          },
+          "price": 400,
+          "unit": {
+            "en": "day",
+            "sv": "dag"
+          }
+        },
+        {
+          "name": {
+            "en": "Calibration Tools",
+            "sv": "Kalibreringsverktyg"
+          },
+          "price": 400,
+          "unit": {
+            "en": "day",
+            "sv": "dag"
+          }
+        },
+        {
+          "name": {
+            "en": "Camera Equipment",
+            "sv": "Kamerautrustning"
+          },
+          "price": 1200,
+          "unit": {
+            "en": "day",
+            "sv": "dag"
+          }
+        },
+        {
+          "name": {
+            "en": "Complete Camera and Sound Kit",
+            "sv": "Komplett kamera- och ljudkit"
+          },
+          "price": 1500,
+          "unit": {
+            "en": "day",
+            "sv": "dag"
+          }
+        }
+      ],
+      "addons": [
+        {
+          "name": {
+            "en": "Equipment Delivery",
+            "sv": "Leverans"
+          },
+          "price": 200,
+          "unit": {
+            "en": "delivery",
+            "sv": "leverans"
+          }
+        },
+        {
+          "name": {
+            "en": "Equipment Training",
+            "sv": "Utrustningsutbildning"
+          },
+          "price": 800,
+          "unit": {
+            "en": "hour",
+            "sv": "timme"
+          }
+        }
+      ],
+      "note": {
+        "en": "Refundable security deposit required. Insurance excess and software licences not included. Equipment must be returned in original condition.",
+        "sv": "Återbetalningsbar deposition krävs. Självrisk och programvarulicenser ingår ej. Utrustning måste återlämnas i ursprungligt skick."
+      }
+    },
+    {
+      "name": {
+        "en": "Location Scouting",
+        "sv": "Platsspaning"
+      },
+      "description": {
+        "en": "Professional location scouting service for photo and video shoots. Includes detailed location reports and permit assistance.",
+        "sv": "Professionell platsspaningsservice för foto- och videoinspelningar. Inkluderar detaljerade platsrapporter och tillståndsassistans."
+      },
+      "basePrice": 200,
+      "unit": {
+        "en": "location",
+        "sv": "plats"
+      },
+      "addons": [
+        {
+          "name": {
+            "en": "Travel Expenses",
+            "sv": "Resekostnader"
+          },
+          "price": 25,
+          "unit": {
+            "en": "mile",
+            "sv": "mil"
+          }
+        },
+        {
+          "name": {
+            "en": "Location Permits",
+            "sv": "Platstillstånd"
+          },
+          "price": 400,
+          "unit": {
+            "en": "permit",
+            "sv": "tillstånd"
+          }
+        }
+      ],
+      "note": {
+        "en": "Minimum booking of 2 locations. Permit fees vary by venue. Includes detailed location report with photos and logistics information.",
+        "sv": "Minimumbokning är 2 platser. Tillståndsavgifter varierar beroende på plats. Inkluderar detaljerad platsrapport med foton och logistikinformation."
+      }
+    }
+  ]
+}

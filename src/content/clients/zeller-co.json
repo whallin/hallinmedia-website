@@ -4,9 +4,13 @@
     "en": "AB Zeller & Co is an international trading company specialising in the automotive, manufacturing, architecture, and construction industries. Since its establishment in 1985, the company has been committed to effectively addressing customer challenges, whether by delivering the right component at the right price or providing optimal logistics solutions.",
     "sv": "AB Zeller & Co är ett internationellt handelsföretag specialiserat på fordons-, tillverknings-, arkitektur- och byggindustrin. Sedan starten 1985 har Zeller & Co strävat efter att effektivt möta kundernas utmaningar, vare sig det gäller att leverera rätt komponent till rätt pris eller tillhandahålla optimala logistiklösningar."
   },
+  "avatar": "/src/assets/clients/avatars/zeller-co.svg",
   "logo": "/src/assets/clients/zeller-co.svg",
   "logoDark": "/src/assets/clients/zeller-co-dark.svg",
-  "dominantColor": "#000000",
+  "dominantColor": {
+    "light": "#000000",
+    "dark": "#ffffff"
+  },
   "websiteUrl": "https://www.zeller.se/",
   "socialLinks": {
     "linkedin": "https://www.linkedin.com/company/ab-zeller-&-co"

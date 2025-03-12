@@ -4,8 +4,11 @@
     "en": "Mänskliga Rättighetsdagarna (MR-dagarna) is an annual event centred on human rights, primarily held in Sweden. It acts as a platform for dialogue, education, and inspiration, uniting organisations, activists, academics, and policymakers to discuss vital human rights issues.",
     "sv": "Mänskliga Rättighetsdagarna (MR-dagarna) är ett årligt evenemang i Sverige som fokuserar på mänskliga rättigheter. Det är en plattform för dialog, utbildning och inspiration där organisationer, aktivister, akademiker och beslutsfattare samlas för att diskutera viktiga frågor inom mänskliga rättigheter."
   },
+  "avatar": "/src/assets/clients/avatars/mr-dagarna.svg",
   "logo": "/src/assets/clients/mr-dagarna.svg",
-  "dominantColor": "#970e7e",
+  "dominantColor": {
+    "light": "#970e7e"
+  },
   "websiteUrl": "https://www.mrdagarna.se/",
   "socialLinks": {
     "linkedin": "https://www.linkedin.com/company/manskliga-rattighetsdagarna/",

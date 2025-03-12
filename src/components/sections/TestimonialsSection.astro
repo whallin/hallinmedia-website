@@ -1,0 +1,112 @@
+---
+import { Image, Picture } from "astro:assets";
+import { getCollection } from "astro:content";
+import { getRelativeLocaleUrl } from "astro:i18n";
+
+const translations = {
+  en: {
+    heading: "What do the customers say?",
+  },
+  sv: {
+    heading: "Vad säger kunderna?",
+  },
+};
+
+const locale = Astro.currentLocale === "en" || Astro.currentLocale === "sv" ? Astro.currentLocale : "en";
+const featuredTestimonials = (await getCollection("clientsCollection"))
+  .filter((client) => client.data.testimonial?.featured)
+  .sort((a, b) => {
+    if (a.data.featured !== b.data.featured) {
+      return b.data.featured ? 1 : -1;
+    }
+    return a.data.name.localeCompare(b.data.name);
+  });
+---
+
+{
+  featuredTestimonials.length > 0 && (
+    <section class="space-y-8">
+      <header class="relative text-stone-700 dark:text-stone-100">
+        <h2 class="relative font-serif text-2xl font-semibold text-stone-700 dark:text-stone-100">
+          <span class="relative z-10 inline-flex flex-col gap-2 bg-amber-50 pr-4 dark:bg-stone-900">
+            {translations[locale].heading}
+          </span>
+          <span class="absolute top-1/2 right-0 left-0 -z-0 h-px bg-stone-200 dark:bg-stone-700" aria-hidden="true" />
+        </h2>
+      </header>
+      <div class="grid gap-4">
+        {featuredTestimonials.map((client) => (
+          <article
+            class="group relative overflow-hidden rounded-lg border border-stone-200 p-6 transition-colors hover:border-[var(--dominant-color)] dark:border-stone-700 dark:hover:border-[var(--dominant-color-dark)]"
+            style={`--dominant-color: ${client.data.dominantColor.light}; ${client.data.dominantColor.dark ? `--dominant-color-dark: ${client.data.dominantColor.dark}` : `--dominant-color-dark: ${client.data.dominantColor.light}`}`}
+          >
+            <div
+              class="absolute inset-y-0 left-0 w-1 bg-[var(--dominant-color)] dark:bg-[var(--dominant-color-dark)]"
+              aria-hidden="true"
+            />
+            <figure class="relative">
+              <blockquote class="font-serif text-lg text-stone-500 italic dark:text-stone-400">
+                "{client.data.testimonial?.quote[locale]}"
+              </blockquote>
+              <figcaption class="mt-6 flex items-center gap-4">
+                <Picture
+                  src={client.data.testimonial?.author.avatar ?? client.data.avatar}
+                  alt={client.data.name}
+                  width={128}
+                  height={128}
+                  widths={[48, 64, 128]}
+                  formats={["avif", "webp", "jpeg"]}
+                  class="h-12 w-12 rounded-full border-2 border-stone-50 select-none dark:border-stone-900"
+                />
+                <div class="flex flex-1 items-center justify-between gap-4">
+                  <div>
+                    <h3 class="font-serif font-medium text-stone-900 dark:text-stone-100">
+                      {client.data.testimonial?.author.name}
+                    </h3>
+                    <p class="text-sm text-stone-500 dark:text-stone-400">
+                      {client.data.testimonial?.author.title[locale]}
+                    </p>
+                  </div>
+                  {client.data.logoDark ? (
+                    <a
+                      href={getRelativeLocaleUrl(locale, `clients/${client.id}`)}
+                      class="transition hover:opacity-75 active:scale-95 active:opacity-50"
+                    >
+                      <Image
+                        src={client.data.logo}
+                        alt={client.data.name}
+                        width={96}
+                        height={48}
+                        class="max-h-8 w-24 object-contain object-right select-none dark:hidden"
+                      />
+                      <Image
+                        src={client.data.logoDark}
+                        alt={client.data.name}
+                        width={96}
+                        height={48}
+                        class="hidden max-h-8 w-24 object-contain object-right select-none dark:block"
+                      />
+                    </a>
+                  ) : (
+                    <a
+                      href={getRelativeLocaleUrl(locale, `clients/${client.id}`)}
+                      class="transition hover:opacity-75 active:scale-95 active:opacity-50"
+                    >
+                      <Image
+                        src={client.data.logo}
+                        alt={client.data.name}
+                        width={96}
+                        height={48}
+                        class="max-h-8 w-24 object-contain object-right select-none"
+                      />
+                    </a>
+                  )}
+                </div>
+              </figcaption>
+            </figure>
+          </article>
+        ))}
+      </div>
+    </section>
+  )
+}

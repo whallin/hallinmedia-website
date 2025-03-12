@@ -1,0 +1,133 @@
+---
+import { getCollection } from "astro:content";
+import ServiceContent from "../../../components/sections/ServiceContent.astro";
+import Layout from "../../../layouts/Layout.astro";
+
+export async function getStaticPaths() {
+  const services = await getCollection("servicesCollection");
+  return services.flatMap((service) => {
+    if (!service.data.cities) return [];
+    return service.data.cities.map((city) => ({
+      params: {
+        id: service.id,
+        city: city.slug,
+      },
+      props: {
+        service,
+        city,
+      },
+    }));
+  });
+}
+
+const { service, city } = Astro.props;
+const { data } = service;
+const locale = Astro.currentLocale === "en" || Astro.currentLocale === "sv" ? Astro.currentLocale : "en";
+
+const relatedServices = data.relatedServices
+  ? await Promise.all(
+      data.relatedServices.map(async (ref) => {
+        return await ref.id;
+      }),
+    ).then(async (ids) => {
+      const services = await getCollection("servicesCollection");
+      return services.filter((service) => ids.includes(service.id));
+    })
+  : [];
+
+const featuredClients = data.featuredClients
+  ? await Promise.all(
+      data.featuredClients.map(async (ref) => {
+        return await ref.id;
+      }),
+    ).then(async (ids) => {
+      const clients = await getCollection("clientsCollection");
+      const allClients = clients.filter((client) => ids.includes(client.id));
+      return allClients
+        .sort((a, b) => {
+          if (a.data.featured && !b.data.featured) return -1;
+          if (!a.data.featured && b.data.featured) return 1;
+          return 0;
+        })
+        .slice(0, 6);
+    })
+  : [];
+
+const reviews = featuredClients
+  .filter(
+    (client): client is typeof client & { data: { testimonial: NonNullable<typeof client.data.testimonial> } } =>
+      client.data.testimonial !== undefined,
+  )
+  .map((client) => ({
+    "@type": "Review",
+    name: client.data.name,
+    reviewBody: client.data.testimonial.quote[locale],
+    reviewRating: {
+      "@type": "Rating",
+      bestRating: "5",
+      ratingValue: "5",
+      worstRating: "1",
+    },
+    datePublished: new Date().toISOString().split("T")[0],
+    author: {
+      "@type": "Person",
+      name: client.data.testimonial.author.name,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: client.data.name,
+    },
+  }));
+
+const averageRating =
+  reviews.length > 0
+    ? (reviews.reduce((sum, review) => sum + Number(review.reviewRating.ratingValue), 0) / reviews.length)
+        .toFixed(1)
+        .replace(/\.0$/, "")
+    : "0";
+
+const productSchema = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  name: city.localSeo[locale].title,
+  image: "https://hallin.media/meta.png",
+  description: city.localSeo[locale].description,
+  brand: {
+    "@type": "Brand",
+    name: "HallinMedia",
+  },
+  offers: {
+    "@type": "Offer",
+    url: Astro.url,
+    priceCurrency: "SEK",
+    price: data.pricing?.startingFrom || 0,
+    priceValidUntil: new Date(new Date().setFullYear(new Date().getFullYear() + 1)).toISOString().split("T")[0],
+    availability: "https://schema.org/InStock",
+    itemCondition: "https://schema.org/NewCondition",
+  },
+  aggregateRating:
+    reviews.length > 0
+      ? {
+          "@type": "AggregateRating",
+          ratingValue: averageRating,
+          bestRating: "5",
+          worstRating: "1",
+          ratingCount: reviews.length.toString(),
+          reviewCount: reviews.length.toString(),
+        }
+      : undefined,
+  review: reviews,
+};
+---
+
+<Layout
+  title={city.localSeo[locale].title}
+  description={city.localSeo[locale].description}
+  keywords={city.localSeo[locale].keywords}
+  header={city.localContent[locale].heading}
+  headerIcon={data.icon}
+  headerDescription={data.shortDescription[locale]}
+  schema={productSchema}
+>
+  <ServiceContent service={service} city={city} featuredClients={featuredClients} relatedServices={relatedServices} />
+</Layout>

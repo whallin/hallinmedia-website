@@ -1,0 +1,66 @@
+---
+interface Props {
+  service: any;
+}
+
+const translations = {
+  en: {
+    options: "Options",
+    addons: "Add-ons",
+  },
+  sv: {
+    options: "Alternativ",
+    addons: "Tillägg",
+  },
+};
+
+const locale = Astro.currentLocale === "en" || Astro.currentLocale === "sv" ? Astro.currentLocale : "en";
+const { service } = Astro.props;
+---
+
+<article
+  class="overflow-hidden rounded-lg border border-stone-200 bg-amber-100/25 transition-colors hover:border-red-500 dark:border-stone-700 dark:bg-stone-900"
+  aria-labelledby={`service-title-${service.name[locale].toLowerCase().replace(/\s+/g, "-")}`}
+>
+  <div class="divide-y divide-stone-200 dark:divide-stone-700">
+    <header class="p-6">
+      <slot name="header" />
+    </header>
+    {
+      service.options && service.options.length > 0 && (
+        <section
+          class="p-6"
+          aria-labelledby={`options-title-${service.name[locale].toLowerCase().replace(/\s+/g, "-")}`}
+        >
+          <h2
+            id={`options-title-${service.name[locale].toLowerCase().replace(/\s+/g, "-")}`}
+            class="mb-4 font-serif font-medium text-stone-700 dark:text-stone-100"
+          >
+            {translations[locale].options}
+          </h2>
+          <div class="space-y-3">
+            <slot name="options" />
+          </div>
+        </section>
+      )
+    }
+    {
+      service.addons && service.addons.length > 0 && (
+        <section
+          class="p-6"
+          aria-labelledby={`addons-title-${service.name[locale].toLowerCase().replace(/\s+/g, "-")}`}
+        >
+          <h2
+            id={`addons-title-${service.name[locale].toLowerCase().replace(/\s+/g, "-")}`}
+            class="mb-4 font-serif font-medium text-stone-700 dark:text-stone-100"
+          >
+            {translations[locale].addons}
+          </h2>
+          <div class="space-y-3">
+            <slot name="addons" />
+          </div>
+        </section>
+      )
+    }
+  </div>
+</article>

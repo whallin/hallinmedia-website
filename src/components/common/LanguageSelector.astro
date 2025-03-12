@@ -1,0 +1,47 @@
+---
+import { Icon } from "astro-icon/components";
+import { getRelativeLocaleUrl } from "astro:i18n";
+
+const locales = [
+  { code: "en", icon: "twemoji:flag-united-kingdom" },
+  { code: "sv", icon: "twemoji:flag-sweden" },
+];
+
+const translations = {
+  en: {
+    english: "English",
+    swedish: "Swedish",
+    language_selector: "Language selector",
+  },
+  sv: {
+    english: "Engelska",
+    swedish: "Svenska",
+    language_selector: "Språkval",
+  },
+};
+
+const astroLocale = Astro.currentLocale === "en" || Astro.currentLocale === "sv" ? Astro.currentLocale : "en";
+---
+
+<menu aria-label={translations[astroLocale].language_selector}>
+  {
+    locales.map(
+      (locale) =>
+        Astro.currentLocale !== locale.code && (
+          <li>
+            <a
+              href={getRelativeLocaleUrl(locale.code, Astro.url.pathname.replace(`/${Astro.currentLocale}`, ""))}
+              class="transition-opacity hover:opacity-75 active:opacity-50"
+              hreflang={locale.code}
+              lang={locale.code}
+            >
+              <Icon name={locale.icon} class="h-6 w-6" aria-hidden="true" />
+              <span class="sr-only">
+                {locale.code === "en" ? translations[astroLocale].english : translations[astroLocale].swedish}
+              </span>
+            </a>
+          </li>
+        ),
+    )
+  }
+</menu>

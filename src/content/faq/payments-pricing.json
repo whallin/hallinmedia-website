@@ -11,8 +11,8 @@
         "sv": "Hur hanteras betalningar?"
       },
       "answer": {
-        "en": "I accept payments through <strong>Stripe</strong>, supporting all major payment methods, including credit/debit cards, Klarna, PayPal, Sofort, and more.<br><br>For Swedish clients, I also accept <strong>Bankgiro</strong> payments. Electronic invoices are managed via <a href='https://www.bokio.se' target='_blank' data-umami-event='faq_answer-link' data-umami-event-url='https://www.bokio.se/' rel='noopener noreferrer' class='text-red-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-50 hover:no-underline active:opacity-50'>Bokio</a> using Crediflow in the <u>PEPPOL BIS Billing 3</u> format.",
-        "sv": "Jag tar emot betalningar via <strong>Stripe</strong>, som erbjuder alla stora betalningsmetoder, inklusive kredit- och betalkort, Klarna, PayPal, Sofort med mera.<br><br>För svenska kunder tar jag även emot <strong>Bankgirobetalningar</strong>. Elektroniska fakturor hanteras via <a href='https://www.bokio.se' target='_blank' data-umami-event='faq_answer-link' data-umami-event-url='https://www.bokio.se/' rel='noopener noreferrer' class='text-red-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-50 hover:no-underline active:opacity-50'>Bokio</a> med hjälp av Crediflow i formatet <u>PEPPOL BIS Billing 3</u>."
+        "en": "I accept payments through Stripe, which supports all major payment methods, including credit/debit cards, Klarna, PayPal, Sofort and more.<br><br>For Swedish clients, I also accept Bankgiro payments. Electronic invoices are processed via <a href='https://www.bokio.se' target='_blank' data-umami-event='faq_answer-link' data-umami-event-url='https://www.bokio.se/' rel='noopener noreferrer' class='text-red-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-50 active:opacity-50'>Bokio</a> using Crediflow in the PEPPOL BIS Billing 3 format.",
+        "sv": "Jag tar emot betalningar via Stripe, som erbjuder alla stora betalningsmetoder, inklusive kredit- och betalkort, Klarna, PayPal, Sofort med mera.<br><br>För svenska kunder tar jag även emot Bankgirobetalningar. Elektroniska fakturor hanteras via <a href='https://www.bokio.se' target='_blank' data-umami-event='faq_answer-link' data-umami-event-url='https://www.bokio.se/' rel='noopener noreferrer' class='text-red-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-50 active:opacity-50'>Bokio</a> med hjälp av Crediflow i formatet PEPPOL BIS Billing 3."
       }
     },
     {
@@ -22,8 +22,8 @@
         "sv": "Vad har du för prisstrukturer?"
       },
       "answer": {
-        "en": "I offer flexible pricing options: <strong>one-time project fees</strong> and <strong>monthly retainers</strong>. All payments are securely processed through <strong>Stripe</strong>, with invoice options available for enterprise clients.",
-        "sv": "Jag erbjuder flexibla prisalternativ: <strong>engångsavgifter för projekt</strong> och <strong>månadsbetalningar</strong>. Alla betalningar behandlas säkert via <strong>Stripe</strong>, med fakturaalternativ tillgängliga för företagskunder."
+        "en": "I offer two primary pricing structures:<br>• One-time project fees with clear deliverables and milestones<br>• Monthly retainers for ongoing services and support<br><br>All payments are securely processed through Stripe. Enterprise clients may opt for traditional invoicing with agreed payment terms.",
+        "sv": "Jag erbjuder två huvudsakliga prisstrukturer:<br>• Engångsavgifter för projekt med tydliga leveranser och milstolpar<br>• Månadsbetalningar för löpande tjänster och support<br><br>Alla betalningar behandlas säkert via Stripe. Företagskunder kan välja traditionell fakturering med överenskomna betalningsvillkor."
       }
     },
     {
@@ -33,8 +33,8 @@
         "sv": "Visas priserna med eller utan moms?"
       },
       "answer": {
-        "en": "All prices are listed in <strong>SEK</strong> with VAT (MOMS) excluded. I'm registered for VAT and F-tax with <a href='https://www.skatteverket.se/' target='_blank' data-umami-event='faq_answer-link' data-umami-event-url='https://www.skatteverket.se/' rel='noopener noreferrer' class='text-red-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-50 hover:no-underline active:opacity-50'>Skatteverket</a> under <strong>NWG Digital AB</strong> (Org.nr 559386-0066, VAT SE559386006601).",
-        "sv": "Alla priser anges i <strong>SEK</strong> exklusive moms. Jag är registrerad för moms och F-skatt hos <a href='https://www.skatteverket.se/' target='_blank' data-umami-event='faq_answer-link' data-umami-event-url='https://www.skatteverket.se/' rel='noopener noreferrer' class='text-red-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-50 hover:no-underline active:opacity-50'>Skatteverket</a> under <strong>NWG Digital AB</strong> (Org.nr 559386-0066, VAT SE559386006601)."
+        "en": "All prices are listed in SEK excluding VAT (MOMS). I am registered for VAT and F-tax with <a href='https://www.skatteverket.se/' target='_blank' data-umami-event='faq_answer-link' data-umami-event-url='https://www.skatteverket.se/' rel='noopener noreferrer' class='text-red-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-50 active:opacity-50'>Skatteverket</a> under NWG Digital AB (Org.nr 559386-0066, VAT SE559386006601).",
+        "sv": "Alla priser anges i SEK exklusive moms. Jag är registrerad för moms och F-skatt hos <a href='https://www.skatteverket.se/' target='_blank' data-umami-event='faq_answer-link' data-umami-event-url='https://www.skatteverket.se/' rel='noopener noreferrer' class='text-red-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-50 active:opacity-50'>Skatteverket</a> under NWG Digital AB (Org.nr 559386-0066, VAT SE559386006601)."
       }
     },
     {
@@ -44,19 +44,19 @@
         "sv": "Hur beräknas momsen för min specifika situation?"
       },
       "answer": {
-        "en": "<strong>The application of VAT depends on your location and business status:</strong><br>- <u>EU Businesses</u>: The reverse charge mechanism applies (provide a VAT ID for self-assessment)<br>- <u>Swedish Consumers</u>: A 25% VAT is added, as required by Swedish law<br>- <u>Non-EU Clients</u>: Typically, 0% VAT is charged<br><br>The applicable VAT will always be clearly itemised on invoices. Business clients must provide valid VAT identification numbers for reverse charge treatment.",
-        "sv": "<strong>Tillämpningen av moms beror på var du befinner dig och din företagsform:</strong><br>- <u>Företag inom EU</u>: Omvänd skattskyldighet gäller (ange ett moms-ID för självdeklaration)<br>- <u>Svenska privatpersoner:</u>: 25 % moms tillkommer, i enlighet med svensk lag<br>- <u>Kunder utanför EU</u>: Vanligtvis debiteras 0 % moms<br><br>Den gällande momsen kommer alltid att tydligt specificeras på fakturan. Företagskunder måste uppge giltiga momsregistreringsnummer för att kunna tillämpa omvänd skattskyldighet."
+        "en": "VAT application varies based on your location and business status:<br>• EU Businesses: Reverse charge mechanism applies (valid VAT ID required)<br>• Swedish Consumers: 25% VAT applies, as per Swedish law<br>• Non-EU Clients: Generally 0% VAT<br><br>All applicable VAT will be clearly itemised on your invoice. Business clients must provide valid VAT identification numbers to qualify for reverse charge treatment.",
+        "sv": "Tillämpningen av moms beror på var du befinner dig och din företagsform:<br>• Företag inom EU: Omvänd skattskyldighet gäller (giltigt moms-ID krävs)<br>• Svenska privatpersoner: 25 % moms tillkommer, i enlighet med svensk lag<br>• Kunder utanför EU: Vanligtvis 0 % moms<br><br>Den gällande momsen kommer alltid att tydligt specificeras på din faktura. Företagskunder måste uppge giltiga momsregistreringsnummer för att kunna tillämpa omvänd skattskyldighet."
       }
     },
     {
       "featured": false,
       "question": {
-        "en": "How are international payments processed?",
+        "en": "How are international payments handled?",
         "sv": "Hur hanteras internationella betalningar?"
       },
       "answer": {
-        "en": "International payments are processed through <strong>Stripe</strong> with automatic currency conversion or via manual invoicing and payment by bank transfer in SEK. Electronic invoices adhere to <u>PEPPOL BIS Billing 3</u> standards through Crediflow.",
-        "sv": "Internationella betalningar hanteras via <strong>Stripe</strong> med automatisk valutakonvertering eller via manuell fakturering och betalning via banköverföring i SEK. Elektroniska fakturor följer <u>PEPPOL BIS Billing 3-standarder</u> via Crediflow."
+        "en": "International payments are processed through Stripe with automatic currency conversion, or via bank transfer in SEK. For enterprise clients, I support PEPPOL BIS Billing 3 standard electronic invoicing through Crediflow.",
+        "sv": "Internationella betalningar hanteras via Stripe med automatisk valutakonvertering eller via banköverföring i SEK. För företagskunder stödjer jag elektronisk fakturering enligt PEPPOL BIS Billing 3-standard via Crediflow."
       }
     }
   ]

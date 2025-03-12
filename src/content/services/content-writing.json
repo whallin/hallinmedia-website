@@ -1,0 +1,161 @@
+{
+  "serviceName": {
+    "en": "Content Writing",
+    "sv": "Innehållsskrivande"
+  },
+  "shortDescription": {
+    "en": "Transform your expertise into powerful stories that connect with your audience. We craft clear, engaging content that educates, inspires, and convinces readers to take action.",
+    "sv": "Förvandla din expertis till kraftfulla berättelser som når din målgrupp. Vi skapar tydligt, engagerande innehåll som utbildar, inspirerar och övertygar läsare att agera."
+  },
+  "longDescription": {
+    "en": "Great content starts with understanding what moves your audience. I help you find the right words to share your expertise, build trust, and turn readers into customers.<br /><br />Every piece of content serves a clear purpose—whether that's boosting your search rankings, establishing thought leadership, or driving sales. I focus on creating clear, compelling content that speaks directly to your readers' needs whilst advancing your business goals.<br /><br />From SEO-optimised blog posts and attention-grabbing website copy to powerful email campaigns and social media content, I help you tell your story in a way that resonates with your audience and delivers measurable results.",
+    "sv": "Bra innehåll börjar med att förstå vad som berör din målgrupp. Jag hjälper dig hitta rätt ord för att dela din expertis, bygga förtroende och förvandla läsare till kunder.<br /><br />Varje innehållsdel tjänar ett tydligt syfte—oavsett om det handlar om att förbättra dina sökrankningar, etablera thought leadership eller driva försäljning. Jag fokuserar på att skapa tydligt, övertygande innehåll som talar direkt till dina läsares behov samtidigt som det främjar dina affärsmål.<br /><br />Från SEO-optimerade blogginlägg och uppmärksamhetsväckande webbkopia till kraftfulla e-postkampanjer och innehåll för sociala medier hjälper jag dig berätta din historia på ett sätt som resonerar med din målgrupp och ger mätbara resultat."
+  },
+  "icon": "ph:article-duotone",
+  "color": "purple",
+  "pricing": {
+    "startingFrom": 600,
+    "unit": {
+      "en": "article",
+      "sv": "artikel"
+    },
+    "note": {
+      "en": "Price includes content strategy alignment, research, writing and one round of revisions. Standard articles range from 800-1500 words with SEO optimisation included. Volume discounts available for content series.",
+      "sv": "Priset inkluderar innehållsstrategisamordning, research, skrivande och en revideringsomgång. Standardartiklar omfattar 800-1500 ord med SEO-optimering inkluderad. Volymrabatter tillgängliga för innehållsserier."
+    }
+  },
+  "keyFeatures": [
+    {
+      "title": {
+        "en": "Words That Convert",
+        "sv": "Ord Som Konverterar"
+      },
+      "description": {
+        "en": "Get content that speaks directly to your audience and motivates them to take action, whether it's making a purchase or signing up.",
+        "sv": "Få innehåll som talar direkt till din målgrupp och motiverar dem att agera, oavsett om det gäller att göra ett köp eller registrera sig."
+      },
+      "icon": "ph:target-duotone"
+    },
+    {
+      "title": {
+        "en": "Search-friendly content",
+        "sv": "Sökmotorvänligt innehåll"
+      },
+      "description": {
+        "en": "Rank higher in search results with content that's naturally optimised for both readers and search engines.",
+        "sv": "Ranka högre i sökresultat med innehåll som är naturligt optimerat för både läsare och sökmotorer."
+      },
+      "icon": "ph:magnifying-glass-duotone"
+    },
+    {
+      "title": {
+        "en": "Builds trust",
+        "sv": "Bygger förtroende"
+      },
+      "description": {
+        "en": "Establish your expertise with well-researched, authoritative content that positions your brand as a trusted industry voice.",
+        "sv": "Etablera din expertis med välresearchat, auktoritativt innehåll som positionerar ditt varumärke som en betrodd branschröst."
+      },
+      "icon": "ph:clipboard-text-duotone"
+    },
+    {
+      "title": {
+        "en": "Works everywhere",
+        "sv": "Fungerar överallt"
+      },
+      "description": {
+        "en": "Get content that works across all your channels - from your website and social media to emails and marketing materials.",
+        "sv": "Få innehåll som fungerar över alla dina kanaler - från din webbplats och sociala medier till e-post och marknadsföringsmaterial."
+      },
+      "icon": "ph:files-duotone"
+    }
+  ],
+  "processSteps": [
+    {
+      "title": {
+        "en": "Research & brief",
+        "sv": "Research & brief"
+      },
+      "description": {
+        "en": "Gather information and define the goals and style for your content.",
+        "sv": "Samlar information och definierar målen och stilen för ditt innehåll."
+      }
+    },
+    {
+      "title": {
+        "en": "Draft",
+        "sv": "Utkast"
+      },
+      "description": {
+        "en": "Write the initial version focusing on structure and key messages.",
+        "sv": "Skriver den första versionen med fokus på struktur och huvudbudskap."
+      }
+    },
+    {
+      "title": {
+        "en": "Review & refine",
+        "sv": "Granska & förfina"
+      },
+      "description": {
+        "en": "Polish the content based on your feedback and optimise for impact.",
+        "sv": "Putsar innehållet baserat på din feedback och optimerar för genomslagskraft."
+      }
+    },
+    {
+      "title": {
+        "en": "Finalise",
+        "sv": "Slutför"
+      },
+      "description": {
+        "en": "Final check and deliver in your preferred format.",
+        "sv": "Slutkontroll och leverans i ditt önskade format."
+      }
+    }
+  ],
+  "cta": {
+    "en": "Transform your content",
+    "sv": "Förvandla ditt innehåll"
+  },
+  "featured": false,
+  "relatedServices": [
+    "communication",
+    "social-media",
+    "document-design",
+    "email-design"
+  ],
+  "featuredClients": ["atlasos", "creavite", "extenseit", "norran"],
+  "seo": {
+    "en": {
+      "title": "Compelling Content Writing Services - Professional Copywriting",
+      "description": "Transform your expertise into engaging content that resonates with your audience. My professional writing services deliver clear, persuasive copy that builds authority and drives engagement.",
+      "keywords": [
+        "professional copywriting",
+        "content marketing",
+        "business writing",
+        "blog content",
+        "web copy",
+        "SEO writing",
+        "brand storytelling",
+        "editorial services",
+        "content strategy",
+        "business communications"
+      ]
+    },
+    "sv": {
+      "title": "Professionellt innehållsskrivande - Strategisk content marketing",
+      "description": "Expertis inom innehållsproduktion som engagerar din målgrupp och driver affärsresultat. Jag skapar övertygande, SEO-optimerat innehåll som stärker ditt varumärke och ökar konverteringar.",
+      "keywords": [
+        "innehållsproduktion",
+        "digital innehållsstrategi",
+        "professionellt skrivande",
+        "SEO-innehåll",
+        "content marketing Sverige",
+        "varumärkesberättande",
+        "webbtexter",
+        "företagskommunikation",
+        "innehållsutveckling",
+        "konverterande texter"
+      ]
+    }
+  }
+}

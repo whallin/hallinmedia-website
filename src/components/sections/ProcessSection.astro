@@ -1,0 +1,132 @@
+---
+import { Icon } from "astro-icon/components";
+
+interface ProcessStep {
+  title: {
+    en: string;
+    sv: string;
+  };
+  description: {
+    en: string;
+    sv: string;
+  };
+}
+
+interface Props {
+  customSteps?: ProcessStep[];
+}
+
+const { customSteps } = Astro.props;
+
+const translations = {
+  en: {
+    heading: "The Process",
+    step: "Step",
+  },
+  sv: {
+    heading: "Arbetsprocessen",
+    step: "Steg",
+  },
+};
+
+const defaultProcess = [
+  {
+    step: 1,
+    title: {
+      en: "Initial contact",
+      sv: "Inledande kontakt",
+    },
+    description: {
+      en: "We discuss your project and goals over the phone or via a video call.",
+      sv: "Vi diskuterar ditt projekt och dina mål över telefon eller via ett videosamtal.",
+    },
+    icon: "ph:chat-circle-duotone",
+  },
+  {
+    step: 2,
+    title: {
+      en: "Planning",
+      sv: "Planering",
+    },
+    description: {
+      en: "I create a detailed project plan and quote based on your needs.",
+      sv: "Jag skapar en detaljerad projektplan och offert baserad på dina behov.",
+    },
+    icon: "ph:notepad-duotone",
+  },
+  {
+    step: 3,
+    title: {
+      en: "Production",
+      sv: "Produktion",
+    },
+    description: {
+      en: "I execute the project with ongoing check-ins and status updates.",
+      sv: "Jag genomför projektet med löpande avstämningar och statusuppdateringar.",
+    },
+    icon: "ph:gear-duotone",
+  },
+  {
+    step: 4,
+    title: {
+      en: "Delivery",
+      sv: "Leverans",
+    },
+    description: {
+      en: "You receive your material and we ensure everything meets your expectations.",
+      sv: "Du får ditt material, och vi säkerställer att allt möter dina förväntningar.",
+    },
+    icon: "ph:package-duotone",
+  },
+];
+
+const processSteps = customSteps
+  ? customSteps.map((step, index) => ({
+      step: index + 1,
+      title: step.title,
+      description: step.description,
+      icon: defaultProcess[index]?.icon || "ph:circle-dashed-duotone",
+    }))
+  : defaultProcess;
+
+const locale = Astro.currentLocale === "en" || Astro.currentLocale === "sv" ? Astro.currentLocale : "en";
+---
+
+<section class="space-y-8" aria-labelledby="process-title">
+  <header class="relative text-stone-700 dark:text-stone-100">
+    <h2 class="relative font-serif text-2xl font-semibold text-stone-700 dark:text-stone-100">
+      <span class="relative z-10 inline-flex flex-col gap-2 bg-amber-50 pr-4 dark:bg-stone-900">
+        {translations[locale].heading}
+      </span>
+      <span class="absolute top-1/2 right-0 left-0 -z-0 h-px bg-stone-200 dark:bg-stone-700" aria-hidden="true"></span>
+    </h2>
+  </header>
+  <ol class="grid gap-4 sm:grid-cols-2" role="list">
+    {
+      processSteps.map((step, index) => (
+        <li class={processSteps.length % 2 !== 0 && index === processSteps.length - 1 ? "sm:col-span-2" : ""}>
+          <article
+            class="group flex h-full flex-col gap-4 rounded-lg border border-stone-200 p-6 transition hover:border-red-500/50 dark:border-stone-700"
+            aria-current={step.step === 1 ? "step" : undefined}
+          >
+            <div class="flex items-center gap-4">
+              <div
+                class="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg border border-stone-200 transition group-hover:border-red-500/50 group-hover:bg-red-500/10 dark:border-stone-700"
+                aria-hidden="true"
+              >
+                <Icon name={step.icon} class="h-6 w-6 text-red-500" aria-hidden="true" />
+              </div>
+              <div>
+                <span class="font-mono text-sm text-red-500">
+                  {translations[locale].step} {step.step}
+                </span>
+                <h3 class="font-serif font-medium text-stone-700 dark:text-stone-100">{step.title[locale]}</h3>
+              </div>
+            </div>
+            <p class="font-serif text-stone-500 dark:text-stone-400">{step.description[locale]}</p>
+          </article>
+        </li>
+      ))
+    }
+  </ol>
+</section>

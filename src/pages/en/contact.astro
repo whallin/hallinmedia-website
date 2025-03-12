@@ -1,0 +1,255 @@
+---
+import { Icon } from "astro-icon/components";
+import { Picture } from "astro:assets";
+import { getRelativeLocaleUrl } from "astro:i18n";
+import ImgAvatar from "../../assets/avatars/william-foto.png";
+import Button from "../../components/common/Button.astro";
+import ContactCard from "../../components/sections/ContactCard.astro";
+import Layout from "../../layouts/Layout.astro";
+
+const locale = Astro.currentLocale === "en" || Astro.currentLocale === "sv" ? Astro.currentLocale : "en";
+
+interface ContactVariant {
+  text: string;
+  border: string;
+}
+
+const contactVariants: Record<string, ContactVariant> = {
+  red: {
+    text: "text-red-500",
+    border: "hover:border-red-500",
+  },
+  green: {
+    text: "text-green-500",
+    border: "hover:border-green-500",
+  },
+  blue: {
+    text: "text-blue-500",
+    border: "hover:border-blue-500",
+  },
+  yellow: {
+    text: "text-yellow-500",
+    border: "hover:border-yellow-500",
+  },
+  pink: {
+    text: "text-pink-500",
+    border: "hover:border-pink-500",
+  },
+  gray: {
+    text: "text-gray-500",
+    border: "hover:border-gray-500",
+  },
+  indigo: {
+    text: "text-indigo-500",
+    border: "hover:border-indigo-500",
+  },
+};
+
+const primaryContacts = [
+  {
+    name: "Email",
+    value: "william@hallin.media",
+    icon: "ph:envelope-simple-duotone",
+    href: "mailto:william@hallin.media",
+    color: "yellow",
+  },
+  {
+    name: "WhatsApp",
+    value: "070-615 92 79",
+    icon: "ph:whatsapp-logo-duotone",
+    href: "https://wa.me/46706159279",
+    color: "green",
+  },
+  {
+    name: "Mobile",
+    value: "070-615 92 79",
+    icon: "ph:phone-duotone",
+    href: "tel:+46706159279",
+    color: "red",
+  },
+  {
+    name: "LinkedIn",
+    value: "@whallin",
+    icon: "ph:linkedin-logo-duotone",
+    href: "https://www.linkedin.com/in/whallin/",
+    color: "blue",
+  },
+];
+
+const socialProfiles = [
+  {
+    name: "Instagram",
+    value: "@williamhallinn",
+    icon: "ph:instagram-logo-duotone",
+    href: "https://www.instagram.com/williamhallinn",
+    color: "pink",
+  },
+  {
+    name: "YouTube",
+    value: "@hallinmedia",
+    icon: "ph:youtube-logo-duotone",
+    href: "https://www.youtube.com/@hallinmedia",
+    color: "red",
+  },
+  {
+    name: "GitHub",
+    value: "@whallin",
+    icon: "ph:github-logo-duotone",
+    href: "https://github.com/whallin",
+    color: "gray",
+  },
+  {
+    name: "Discord",
+    value: "@whallin",
+    icon: "ph:discord-logo-duotone",
+    href: "https://discord.com/",
+    color: "indigo",
+  },
+];
+
+const callToActions = [
+  {
+    title: "Want to see what I can do?",
+    description: "Browse my portfolio and see examples of past projects.",
+    icon: "ph:sparkle-duotone",
+    href: getRelativeLocaleUrl(locale, "portfolio"),
+    buttonText: "See my work",
+  },
+  {
+    title: "Do you need a favour?",
+    description: "Find out more about the services I offer and how they can help you.",
+    icon: "ph:magic-wand-duotone",
+    href: getRelativeLocaleUrl(locale, "services"),
+    buttonText: "Explore my services",
+  },
+];
+---
+
+<Layout
+  title="Contact William Hallin"
+  description="Want to discuss your next project? Reach me by phone, email or book a free start-up call. I am here to help you realise your vision."
+  header="Contact me"
+  headerIcon="ph:hand-waving-duotone"
+>
+  <section class="max-w-2xl sm:mx-auto">
+    <div class="flex flex-col-reverse gap-8 sm:flex-row sm:gap-12">
+      <main class="space-y-8">
+        <article class="space-y-4">
+          <p class="font-serif text-stone-500 dark:text-stone-400">
+            Ready to discuss your next project? Here you will find all the ways to reach me — from direct channels like
+            phone and email to social media. I also offer free start-up calls where we can explore your ideas together.
+            Choose the way that suits you best to start our dialogue.
+          </p>
+          <div class="flex items-center gap-2">
+            <Icon name="ph:clock-duotone" class="h-5 w-5 text-red-500" aria-hidden="true" />
+            <span class="font-serif text-stone-500 dark:text-stone-400">
+              Swedish time: <time id="localTime" datetime="00:00">00:00</time>
+            </span>
+          </div>
+        </article>
+        <section class="space-y-6">
+          <h2 class="font-serif text-lg text-stone-700 dark:text-stone-100">Primary contact channels</h2>
+          <ContactCard contacts={primaryContacts} layout="primary" />
+          <aside class="rounded-lg border border-stone-200 p-4 dark:border-stone-700">
+            <p class="flex items-center gap-4 font-serif text-stone-500 sm:gap-2 dark:text-stone-400">
+              <Icon name="ph:info-duotone" class="h-5 w-5 flex-shrink-0 text-red-500" aria-hidden="true" />
+              Normal response time is within 12-48 hours on weekdays.
+            </p>
+          </aside>
+        </section>
+      </main>
+      <aside>
+        <Picture
+          src={ImgAvatar}
+          alt="William Hallin"
+          width={512}
+          height={512}
+          widths={[64, 128, 256, 512]}
+          formats={["avif", "webp", "jpeg"]}
+          loading="eager"
+          class="h-20 w-20 max-w-48 rounded-full select-none sm:h-fit sm:w-fit"
+        />
+      </aside>
+    </div>
+    <section class="mt-8 space-y-6">
+      <h2 class="relative font-serif text-lg text-stone-700 dark:text-stone-100">
+        <span class="relative z-10 inline-flex flex-col gap-2 bg-amber-50 pr-4 dark:bg-stone-900">
+          Other profiles
+        </span>
+        <span class="absolute top-1/2 right-0 left-0 -z-0 h-px bg-stone-200 dark:bg-stone-700" aria-hidden="true"
+        ></span>
+      </h2>
+      <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+        <ContactCard contacts={socialProfiles} layout="grid" />
+      </div>
+    </section>
+    <section class="mt-8 space-y-6">
+      <header class="mb-6">
+        <h2 class="relative font-serif text-lg text-stone-700 dark:text-stone-100">
+          <span
+            class="relative z-10 inline-flex flex-col gap-2 bg-amber-50 pr-4 sm:flex-row sm:items-center dark:bg-stone-900"
+          >
+            <Icon name="ph:smiley-duotone" class="h-6 w-6 flex-shrink-0 text-red-500" aria-hidden="true" />
+            What do you want to do next?
+          </span>
+          <span
+            class="absolute top-1/2 right-0 left-0 -z-0 hidden h-px bg-stone-200 sm:block dark:bg-stone-700"
+            aria-hidden="true"></span>
+        </h2>
+      </header>
+      <div class="grid gap-6 sm:grid-cols-2">
+        {
+          callToActions.map((cta) => (
+            <article class="rounded-lg border border-stone-200 p-6 dark:border-stone-700">
+              <div class="flex items-center gap-3">
+                <Icon name={cta.icon} class="h-6 w-6 flex-shrink-0 text-red-500" aria-hidden="true" />
+                <h3 class="font-serif font-medium text-stone-700 dark:text-stone-100">{cta.title}</h3>
+              </div>
+              <p class="mt-3 font-serif text-stone-500 dark:text-stone-400">{cta.description}</p>
+              <a
+                href={cta.href}
+                class="mt-4 inline-flex items-center gap-2 font-serif text-red-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-100 active:opacity-50"
+              >
+                {cta.buttonText}
+                <Icon name="ph:arrow-right" class="h-4 w-4 flex-shrink-0" aria-hidden="true" />
+              </a>
+            </article>
+          ))
+        }
+      </div>
+      <aside class="rounded-lg border border-stone-200 bg-amber-50 p-6 dark:border-stone-700 dark:bg-stone-800">
+        <div class="flex items-center gap-3">
+          <Icon name="ph:lightbulb-duotone" class="h-6 w-6 flex-shrink-0 text-red-500" aria-hidden="true" />
+          <h3 class="font-serif font-medium text-stone-700 dark:text-stone-100">Thinking about a project?</h3>
+        </div>
+        <p class="mt-3 mb-4 font-serif text-stone-500 dark:text-stone-400">
+          Whether you have a clear idea or just want to discuss possibilities, book a free start-up call where we can go
+          over your needs.
+        </p>
+        <Button href="https://meetings.hubspot.com/william-hallin" target="_blank" rel="noopener noreferrer">
+          <Icon name="ph:calendar-duotone" class="h-4 w-4 flex-shrink-0" aria-hidden="true" />
+          Book a free meeting
+        </Button>
+      </aside>
+    </section>
+  </section>
+</Layout>
+
+<script>
+  function updateLocalTime() {
+    const timeElement = document.getElementById("localTime");
+    if (timeElement) {
+      const now = new Date();
+      const timeString = now.toLocaleTimeString("sv-SE", {
+        hour: "2-digit",
+        minute: "2-digit",
+      });
+      const isoString = now.toISOString();
+      timeElement.textContent = timeString;
+      timeElement.setAttribute("datetime", isoString);
+    }
+  }
+
+  updateLocalTime();
+  setInterval(updateLocalTime, 60000);
+</script>

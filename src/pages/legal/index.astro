@@ -1,59 +1,66 @@
 ---
+import { Icon } from "astro-icon/components";
 import { getCollection } from "astro:content";
-import IconPhGavelDuotone from "../../components/icons/PhGavelDuotone.astro";
-import LegalCategorySection from "../../components/legal/LegalCategorySection.astro";
-import MainLayout from "../../layouts/MainLayout.astro";
+import Layout from "../../layouts/Layout.astro";
 
-const allLegalDocs = (await getCollection("legalEnCollection")).sort(
-  (a, b) => new Date(b.data.publishedDate).getTime() - new Date(a.data.publishedDate).getTime()
+const locale = Astro.currentLocale === "en" || Astro.currentLocale === "sv" ? Astro.currentLocale : "en";
+const legalDocs = await getCollection("legalSvCollection");
+const sortedDocs = legalDocs.sort(
+  (a, b) => new Date(b.data.publishedDate).getTime() - new Date(a.data.publishedDate).getTime(),
 );
 
-const groupedDocs = allLegalDocs.reduce((acc: Record<string, typeof allLegalDocs>, doc) => {
-  const category = doc.data.documentType;
-  if (!acc[category]) {
-    acc[category] = [];
-  }
-  acc[category].push(doc);
-  return acc;
-}, {});
+const documentTypeColors = {
+  Villkor: "text-blue-500",
+  Integritet: "text-green-500",
+  Policy: "text-yellow-500",
+  Avtal: "text-red-500",
+  Uttalande: "text-purple-500",
+  Meddelande: "text-orange-500",
+  Procedur: "text-teal-500",
+  Riktlinjer: "text-pink-500",
+  Annan: "text-gray-500",
+} as const;
 ---
 
-<MainLayout
-  title="Legal"
-  description="Explore the legal directory for crucial documents and policies for smooth transactions. Find guidelines on publishing, copyright, GDPR, and DMCA compliance."
+<Layout
+  header="Juridik"
+  headerIcon="ph:gavel-duotone"
+  title="Juridiska dokument & villkor"
+  description="Transparenta avtalsvillkor och juridiska dokument som säkerställer ett tryggt samarbete. Utforska mina policyer och riktlinjer för en professionell affärsrelation."
+  headerDescription="Din trygghet är min prioritet. Här hittar du alla juridiska dokument som styr vårt samarbete - från avtalsvillkor till integritetspolicyer. Varje dokument är noggrant utformat för maximal transparens och tydlighet, så att du kan känna dig helt säker i vårt samarbete. Utforska dokumenten för att förstå hur vi tillsammans skapar en professionell och säker arbetsmiljö."
 >
-  <main class="font-serif selection:bg-red-300 selection:text-red-800">
-    <header class="flex flex-col-reverse justify-between gap-4 sm:flex-row sm:items-center">
-      <h1 class="max-w-md text-4xl font-light text-stone-900 italic">Legalities</h1>
-      <IconPhGavelDuotone
-        class="-motion-rotate-loop-16 flip motion-ease motion-duration-2000 h-8 w-8 origin-bottom-left text-red-500 sm:h-12 sm:w-12"
-        aria-hidden="true"
-      />
-    </header>
-    <article class="mt-12 flex flex-col gap-4 text-sm font-light text-stone-700">
-      <p>
-        Sometimes, paperwork, especially legal documents, can get in the way of fun. I make sure all
-        the necessary documents and conditions are ready for you and your business when we work
-        together. You're more than welcome to look around and see what terms and policies are
-        available for you.
-      </p>
-      <p>
-        If you have any questions about my legal documents, feel free to <a
-          href="mailto:william@hallin.media?subject=A legal question..."
-          data-umami-event="legal_email-question"
-          data-umami-event-origin={Astro.url}
-          class="text-red-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-50 hover:no-underline active:opacity-50"
-          aria-label="Email me with legal questions">email me</a
-        >.
-      </p>
-
-      <div class="mt-6 space-y-8" role="region" aria-label="Legal documents">
-        {
-          Object.entries(groupedDocs)
-            .sort(([categoryA], [categoryB]) => categoryA.localeCompare(categoryB))
-            .map(([category, docs]) => <LegalCategorySection category={category} docs={docs} />)
-        }
-      </div>
-    </article>
-  </main>
-</MainLayout>
+  <section class="max-w-2xl space-y-8 sm:mx-auto">
+    <div class="grid gap-4 sm:grid-cols-2">
+      {
+        sortedDocs.map((doc) => (
+          <a
+            href={`/legal/${doc.id}`}
+            class="group relative flex flex-col gap-4 rounded-lg border border-stone-200 p-6 transition hover:border-red-500 active:scale-95 active:opacity-50 dark:border-stone-700"
+          >
+            <span class={`text-sm font-medium ${documentTypeColors[doc.data.documentType]}`}>
+              {doc.data.documentType}
+            </span>
+            <div class="flex items-center gap-2">
+              <Icon
+                name={doc.data.icon}
+                class={`h-6 w-6 flex-shrink-0 ${documentTypeColors[doc.data.documentType]}`}
+                aria-hidden="true"
+              />
+              <h2 class="font-serif font-medium text-stone-700 dark:text-stone-100">{doc.data.title}</h2>
+            </div>
+            <p class="line-clamp-3 font-serif text-stone-500 dark:text-stone-400">{doc.data.description}</p>
+            <div class="mt-auto flex items-center gap-4 text-sm text-stone-500 dark:text-stone-400">
+              <span class="flex items-center gap-1">
+                <Icon name="ph:calendar-duotone" class="h-4 w-4" aria-hidden="true" />
+                {new Date(doc.data.lastEdited).toLocaleDateString("sv-SE")}
+              </span>
+              <span class="flex items-center gap-1">
+                <Icon name="ph:code-duotone" class="h-4 w-4" aria-hidden="true" />v{doc.data.version}
+              </span>
+            </div>
+          </a>
+        ))
+      }
+    </div>
+  </section>
+</Layout>

@@ -1,0 +1,71 @@
+---
+import QuantityInput from "../form/QuantityInput.astro";
+
+interface Props {
+  serviceName: Record<string, string>;
+  description: Record<string, string>;
+  basePrice: number;
+  unit?: Record<string, string>;
+  hasOptions?: boolean;
+}
+
+const translations = {
+  en: {
+    startingFrom: "Starting from",
+    currency: "SEK",
+  },
+  sv: {
+    startingFrom: "Från",
+    currency: "kr",
+  },
+};
+
+const locale = Astro.currentLocale === "en" || Astro.currentLocale === "sv" ? Astro.currentLocale : "en";
+const { serviceName, description, basePrice, unit, hasOptions } = Astro.props;
+const isPercentage = unit?.sv === "procent" || unit?.en === "percent";
+const sanitizedName = serviceName[locale].toLowerCase().replace(/\s+/g, "-");
+---
+
+<div class="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
+  <div class="flex max-w-md items-start gap-3">
+    <input
+      type="checkbox"
+      id={`service-${sanitizedName}`}
+      name={`service-${sanitizedName}`}
+      class="mt-1 h-4 w-4 rounded border-stone-300 text-red-500 focus:ring-red-500 dark:border-stone-600"
+      data-base-price={basePrice}
+    />
+    <label for={`service-${sanitizedName}`}>
+      <strong class="font-serif text-lg font-medium text-stone-700 dark:text-stone-100">
+        {serviceName[locale]}
+      </strong>
+      <p class="mt-1 font-serif text-sm text-stone-500 dark:text-stone-400">
+        {description[locale]}
+      </p>
+    </label>
+  </div>
+  <div class="flex flex-col gap-2">
+    <p class="text-right font-serif text-lg font-medium text-stone-700 dark:text-stone-100">
+      {
+        isPercentage ? (
+          <>
+            <span>{basePrice}</span>%
+          </>
+        ) : (
+          <>
+            {hasOptions && (
+              <span class="block text-sm font-normal text-stone-500 dark:text-stone-400">
+                {translations[locale].startingFrom}
+              </span>
+            )}
+            <span id={`price-${sanitizedName}`} data-base-price={basePrice}>
+              {basePrice.toLocaleString(locale === "sv" ? "sv-SE" : "en-GB")}
+            </span>{" "}
+            {translations[locale].currency}
+          </>
+        )
+      }
+    </p>
+    {!isPercentage && !hasOptions && <QuantityInput name={`quantity-service-${sanitizedName}`} disabled={true} />}
+  </div>
+</div>
