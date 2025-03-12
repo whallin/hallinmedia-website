@@ -6,7 +6,7 @@ export default {
     compressor: "swc",
   },
   css: {
-    inline_critical_css: true,
+    inline_critical_css: false,
   },
   image: {
     external: {
