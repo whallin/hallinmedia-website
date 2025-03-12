@@ -1,3 +1,4 @@
+import { getSecret } from 'astro:env/server';
 import { Resend } from 'resend';
 
 // Common interfaces for contact forms
@@ -38,7 +39,7 @@ export const LICENSING_REQUIRED_FIELDS: (keyof LicensingForm)[] = [
 ];
 
 // Initialize Resend client
-export const resend = new Resend(import.meta.env.RESEND_API_KEY);
+export const resend = new Resend(getSecret('RESEND_API_KEY'));
 
 // Email template functions
 export function createProjectEmailHTML(data: ProjectForm): string {
