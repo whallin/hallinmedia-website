@@ -6,15 +6,6 @@ import sitemap from "@astrojs/sitemap";
 import tailwindcss from "@tailwindcss/vite";
 import icon from "astro-icon";
 import { defineConfig, envField } from "astro/config";
-import { execSync } from "child_process";
-
-const getGitHash = () => {
-  try {
-    return execSync("git rev-parse --short HEAD").toString().trim();
-  } catch (error) {
-    return "local";
-  }
-};
 
 // https://astro.build/config
 export default defineConfig({
@@ -103,11 +94,6 @@ export default defineConfig({
 
   env: {
     schema: {
-      GIT_HASH: envField.string({
-        context: "client",
-        access: "public",
-        default: getGitHash(),
-      }),
       RESEND_API_KEY: envField.string({
         context: "server",
         access: "secret",

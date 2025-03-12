@@ -6,6 +6,15 @@ import ImgWordmarkDark from "../../assets/wordmark-dark.svg";
 import ImgWordmark from "../../assets/wordmark.svg";
 import ThemeSwitcher from "../common/ThemeSwitcher.astro";
 
+const commitHash = await (async () => {
+  try {
+    const { execSync } = await import("child_process");
+    return execSync("git rev-parse --short HEAD").toString().trim();
+  } catch {
+    return "unknown";
+  }
+})();
+
 const translations = {
   en: {
     home: "Home",
@@ -94,7 +103,6 @@ const socialLinks = [
 ];
 
 const locale = Astro.currentLocale === "en" || Astro.currentLocale === "sv" ? Astro.currentLocale : "en";
-const buildNumber = import.meta.env.GIT_HASH || "whallin/hallinmedia-website";
 ---
 
 <footer class="mx-6 mt-12 mb-6 max-w-2xl md:mx-auto">
@@ -203,7 +211,7 @@ const buildNumber = import.meta.env.GIT_HASH || "whallin/hallinmedia-website";
             class="hover:bg-stone-600 hover:text-stone-100 active:opacity-50"
             aria-label={`${translations[locale].visit} GitHub ${translations[locale].profile}`}
           >
-            {buildNumber}
+            {commitHash}
           </a>
           <button
             type="button"
