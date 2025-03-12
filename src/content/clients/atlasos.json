@@ -12,5 +12,20 @@
   "websiteUrl": "https://atlasos.net/",
   "socialLinks": {
     "twitter": "https://x.com/atlasos"
+  },
+  "testimonial": {
+    "quote": {
+      "en": "Knock-out brilliant! Working with William has always been a pleasure.",
+      "sv": "Helt briljant! Att arbeta med William har alltid varit ett nöje."
+    },
+    "author": {
+      "avatar": "/src/assets/clients/avatars/atlas-jack.png",
+      "name": "Jack Holmes",
+      "title": {
+        "en": "Co-founder",
+        "sv": "Medgrundare"
+      }
+    },
+    "featured": true
   }
 }
