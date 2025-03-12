@@ -30,7 +30,7 @@ const locale = Astro.currentLocale === "en" || Astro.currentLocale === "sv" ? As
     height={48}
     class="h-12 w-12 rounded-md select-none"
   />
-  <div class="min-w-0 flex-1">
+  <div class="min-w-0 flex-1" id="spotify-info" title="KAISUI - Style">
     <strong
       id="spotify-title"
       class="block max-w-48 truncate text-sm text-stone-900 hover:text-clip dark:text-stone-100"
@@ -62,6 +62,7 @@ const locale = Astro.currentLocale === "en" || Astro.currentLocale === "sv" ? As
       (document.getElementById("spotify-cover") as HTMLImageElement).src = data.album_cover;
       (document.getElementById("spotify-title") as HTMLElement).textContent = data.name;
       (document.getElementById("spotify-artist") as HTMLElement).textContent = data.artist;
+      (document.getElementById("spotify-info") as HTMLElement).title = `${data.artist} - ${data.name}`;
 
       const minutes = Math.floor(data.duration_ms / 1000 / 60);
       const seconds = Math.floor((data.duration_ms / 1000) % 60);
