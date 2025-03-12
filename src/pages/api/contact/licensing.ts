@@ -1,14 +1,14 @@
+export const prerender = false;
+
 import type { APIRoute } from 'astro';
-import { validateOrigin, corsHeaders } from '../../../utils/security';
 import type { LicensingForm } from '../../../utils/email';
 import {
+  createLicensingEmailHTML,
   LICENSING_REQUIRED_FIELDS,
   resend,
-  createLicensingEmailHTML,
   validateFormData,
 } from '../../../utils/email';
-
-export const prerender = false;
+import { corsHeaders, validateOrigin } from '../../../utils/security';
 
 export const POST: APIRoute = async ({ request }) => {
   if (request.method === 'OPTIONS') {

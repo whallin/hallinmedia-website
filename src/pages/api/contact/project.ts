@@ -1,14 +1,14 @@
+export const prerender = false;
+
 import type { APIRoute } from 'astro';
-import { validateOrigin, corsHeaders } from '../../../utils/security';
 import type { ProjectForm } from '../../../utils/email';
 import {
+  createProjectEmailHTML,
   PROJECT_REQUIRED_FIELDS,
   resend,
-  createProjectEmailHTML,
   validateFormData,
 } from '../../../utils/email';
-
-export const prerender = false;
+import { corsHeaders, validateOrigin } from '../../../utils/security';
 
 export const POST: APIRoute = async ({ request }) => {
   if (request.method === 'OPTIONS') {
