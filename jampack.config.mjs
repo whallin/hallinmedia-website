@@ -3,7 +3,7 @@ export default {
     sort_attributes: false,
   },
   js: {
-    compressor: "swc",
+    compressor: "esbuild",
   },
   css: {
     inline_critical_css: false,
