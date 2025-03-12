@@ -8,7 +8,7 @@ import Layout from "../../layouts/Layout.astro";
 const locale = Astro.currentLocale === "en" || Astro.currentLocale === "sv" ? Astro.currentLocale : "en";
 const svPosts = await getCollection("blogSvCollection", ({ data }) => !data.draft);
 const sortedPosts = svPosts.sort(
-  (a, b) => new Date(b.data.publishedDate).getTime() - new Date(a.data.publishedDate).getTime(),
+  (a, b) => new Date(b.data.publishedDate).getTime() - new Date(a.data.publishedDate).getTime()
 );
 
 const calculateReadTime = (content: string) => {
@@ -44,9 +44,9 @@ const calculateReadTime = (content: string) => {
             {sortedPosts
               .filter((post) => post.data.featured)
               .map((post) => (
-                <article class="group relative overflow-hidden rounded-lg border border-stone-200 bg-amber-50 transition hover:border-red-500/50 active:scale-95 active:opacity-50 dark:border-stone-700 dark:bg-stone-800">
+                <article class="group relative overflow-hidden rounded-lg border border-stone-200 bg-amber-50 transition hover:border-amber-500 active:scale-95 active:opacity-50 dark:border-stone-700 dark:bg-stone-800">
                   <a href={getRelativeLocaleUrl(locale, `blog/${post.id}`)} class="flex flex-col sm:flex-row">
-                    <div class="aspect-square w-full">
+                    <div class="aspect-square w-full overflow-hidden">
                       <Picture
                         src={post.data.featuredImage}
                         alt={post.data.featuredImageAlt}
@@ -54,7 +54,7 @@ const calculateReadTime = (content: string) => {
                         height={1920}
                         widths={[640, 768, 1024, 1280]}
                         formats={["avif", "webp"]}
-                        class="h-full w-full object-cover"
+                        class="h-full w-full object-cover transition-transform group-hover:scale-105 group-hover:rotate-1"
                       />
                     </div>
                     <div class="flex flex-col justify-between p-6">
@@ -104,7 +104,7 @@ const calculateReadTime = (content: string) => {
           sortedPosts.map((post) => (
             <article class="group relative overflow-hidden rounded-lg border border-stone-200 bg-amber-50 transition hover:border-red-500/50 active:scale-95 active:opacity-50 dark:border-stone-700 dark:bg-stone-800">
               <a href={getRelativeLocaleUrl(locale, `blog/${post.id}`)} class="flex flex-col">
-                <div class="aspect-square h-48 w-full">
+                <div class="aspect-square h-48 w-full overflow-hidden">
                   <Picture
                     src={post.data.featuredImage}
                     alt={post.data.featuredImageAlt}
@@ -112,7 +112,7 @@ const calculateReadTime = (content: string) => {
                     height={1920}
                     widths={[640, 768, 1024, 1280]}
                     formats={["avif", "webp"]}
-                    class="h-full w-full object-cover"
+                    class="h-full w-full object-cover transition-transform group-hover:scale-105 group-hover:rotate-1"
                   />
                 </div>
                 <div class="flex flex-col justify-between p-6">
