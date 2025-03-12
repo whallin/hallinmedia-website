@@ -8,7 +8,7 @@ import Layout from "../../layouts/Layout.astro";
 const locale = Astro.currentLocale === "en" || Astro.currentLocale === "sv" ? Astro.currentLocale : "en";
 const svPosts = await getCollection("blogSvCollection", ({ data }) => !data.draft);
 const sortedPosts = svPosts.sort(
-  (a, b) => new Date(b.data.publishedDate).getTime() - new Date(a.data.publishedDate).getTime()
+  (a, b) => new Date(b.data.publishedDate).getTime() - new Date(a.data.publishedDate).getTime(),
 );
 
 const calculateReadTime = (content: string) => {
