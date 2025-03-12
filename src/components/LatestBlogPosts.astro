@@ -73,7 +73,7 @@ const calculateReadTime = (content: string) => {
                 </span>
               </div>
               <a
-                href={`/blog/${post.id}`}
+                href={getRelativeLocaleUrl(locale, `blog/${post.id}`)}
                 class="inline-flex items-center gap-1 font-semibold text-red-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-100 active:opacity-50"
                 aria-label={`${translations[locale].readabout} ${post.data.title}`}
               >
