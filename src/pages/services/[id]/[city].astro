@@ -28,7 +28,7 @@ const relatedServices = data.relatedServices
   ? await Promise.all(
       data.relatedServices.map(async (ref) => {
         return await ref.id;
-      }),
+      })
     ).then(async (ids) => {
       const services = await getCollection("servicesCollection");
       return services.filter((service) => ids.includes(service.id));
@@ -39,7 +39,7 @@ const featuredClients = data.featuredClients
   ? await Promise.all(
       data.featuredClients.map(async (ref) => {
         return await ref.id;
-      }),
+      })
     ).then(async (ids) => {
       const clients = await getCollection("clientsCollection");
       const allClients = clients.filter((client) => ids.includes(client.id));
@@ -56,7 +56,7 @@ const featuredClients = data.featuredClients
 const reviews = featuredClients
   .filter(
     (client): client is typeof client & { data: { testimonial: NonNullable<typeof client.data.testimonial> } } =>
-      client.data.testimonial !== undefined,
+      client.data.testimonial !== undefined
   )
   .map((client) => ({
     "@type": "Review",
@@ -96,6 +96,14 @@ const productSchema = {
     "@type": "Brand",
     name: "HallinMedia",
   },
+  hasMerchantReturnPolicy: {
+    "@type": "MerchantReturnPolicy",
+    applicableCountry: ["SE", "NO", "FI", "DK", "EU"],
+    returnPolicyCategory: "https://schema.org/MerchantReturnFiniteReturnWindow",
+    merchantReturnDays: "14",
+    returnMethod: "https://schema.org/ReturnByMail",
+    returnFees: "https://schema.org/FreeReturn",
+  },
   offers: {
     "@type": "Offer",
     url: Astro.url,
@@ -104,6 +112,29 @@ const productSchema = {
     priceValidUntil: new Date(new Date().setFullYear(new Date().getFullYear() + 1)).toISOString().split("T")[0],
     availability: "https://schema.org/InStock",
     itemCondition: "https://schema.org/NewCondition",
+    shippingDetails: {
+      "@type": "OfferShippingDetails",
+      shippingRate: {
+        "@type": "MonetaryAmount",
+        value: "0",
+        currency: "SEK",
+      },
+      deliveryTime: {
+        "@type": "ShippingDeliveryTime",
+        handlingTime: {
+          "@type": "QuantitativeValue",
+          minValue: 0,
+          maxValue: 1,
+          unitCode: "DAY",
+        },
+        transitTime: {
+          "@type": "QuantitativeValue",
+          minValue: 1,
+          maxValue: 7,
+          unitCode: "DAY",
+        },
+      },
+    },
   },
   aggregateRating:
     reviews.length > 0
