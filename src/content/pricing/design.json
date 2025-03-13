@@ -12,6 +12,7 @@
         "en": "Document Templates",
         "sv": "Dokumentmallar"
       },
+      "sku": "HM-DES-TEMP-BASE",
       "description": {
         "en": "Professional templates for business documents and presentations.",
         "sv": "Professionella mallar för företagsdokument och presentationer."
@@ -27,6 +28,7 @@
             "en": "Office Suite Templates",
             "sv": "Office-svitmallar"
           },
+          "sku": "HM-DES-TEMP-OFF",
           "price": 3000
         },
         {
@@ -34,6 +36,7 @@
             "en": "Presentation Templates",
             "sv": "Presentationsmallar"
           },
+          "sku": "HM-DES-TEMP-PRES",
           "price": 4500
         },
         {
@@ -41,6 +44,7 @@
             "en": "Complete Business Package",
             "sv": "Komplett företagspaket"
           },
+          "sku": "HM-DES-TEMP-BIZ",
           "price": 6500
         }
       ],
@@ -50,6 +54,7 @@
             "en": "Custom Charts & Diagrams",
             "sv": "Anpassade diagram"
           },
+          "sku": "HM-DES-TEMP-ADD-CHART",
           "price": 1500
         },
         {
@@ -57,6 +62,7 @@
             "en": "Template Training Session",
             "sv": "Mallutbildningssession"
           },
+          "sku": "HM-DES-TEMP-ADD-TRAIN",
           "price": 800,
           "unit": {
             "en": "hour",
@@ -74,6 +80,7 @@
         "en": "Print Design",
         "sv": "Tryckdesign"
       },
+      "sku": "HM-DES-PRINT-BASE",
       "description": {
         "en": "Professional design for printed materials including business stationery, marketing collateral, and large-format graphics. All designs optimised for both digital and print reproduction.",
         "sv": "Professionell design för tryckt material inklusive företagsmaterial, marknadsföringsmaterial och storformatsgrafik. Alla designer optimerade för både digital och tryckt reproduktion."
@@ -89,6 +96,7 @@
             "en": "Business Cards & Stationery",
             "sv": "Visitkort & Kontorsmaterial"
           },
+          "sku": "HM-DES-PRINT-CARD",
           "price": 2000,
           "unit": {
             "en": "set",
@@ -100,6 +108,7 @@
             "en": "Large Format (Posters, Banners)",
             "sv": "Storformat (Affischer, Banderoller)"
           },
+          "sku": "HM-DES-PRINT-LARGE",
           "price": 3000,
           "unit": {
             "en": "item",
@@ -111,6 +120,7 @@
             "en": "Brochures & Catalogues",
             "sv": "Broschyrer & Kataloger"
           },
+          "sku": "HM-DES-PRINT-BROCH",
           "price": 3500,
           "unit": {
             "en": "item",
@@ -124,6 +134,7 @@
             "en": "Print File Preparation",
             "sv": "Tryckfilsförberedelse"
           },
+          "sku": "HM-DES-PRINT-ADD-PREP",
           "price": 400
         }
       ],
@@ -137,6 +148,7 @@
         "en": "Illustration & Graphics",
         "sv": "Illustration & Grafik"
       },
+      "sku": "HM-DES-ILLUS-BASE",
       "description": {
         "en": "Custom digital illustrations, icon sets, and graphical elements tailored for your brand. Includes both vector and raster artwork suitable for various applications.",
         "sv": "Anpassade digitala illustrationer, ikonuppsättningar och grafiska element skräddarsydda för ditt varumärke. Inkluderar både vektor- och rastergrafik lämplig för olika användningsområden."
@@ -152,6 +164,7 @@
             "en": "Custom Icons & Simple Graphics",
             "sv": "Anpassade ikoner & enkel grafik"
           },
+          "sku": "HM-DES-ILLUS-ICON",
           "price": 600,
           "unit": {
             "en": "hour",
@@ -163,6 +176,7 @@
             "en": "Complex Illustrations",
             "sv": "Komplexa illustrationer"
           },
+          "sku": "HM-DES-ILLUS-COMP",
           "price": 950,
           "unit": {
             "en": "hour",
@@ -174,6 +188,7 @@
             "en": "Infographics",
             "sv": "Infografik"
           },
+          "sku": "HM-DES-ILLUS-INFO",
           "price": 1200,
           "unit": {
             "en": "item",
@@ -187,6 +202,7 @@
             "en": "Animation",
             "sv": "Animation"
           },
+          "sku": "HM-DES-ILLUS-ADD-ANIM",
           "price": 2000,
           "unit": {
             "en": "graphic",
@@ -204,6 +220,7 @@
         "en": "Marketing Package Design",
         "sv": "Marknadsföringspaketdesign"
       },
+      "sku": "HM-DES-MKTG-BASE",
       "description": {
         "en": "Comprehensive design package for marketing campaigns and brand presence, tailored to enhance your visual communication.",
         "sv": "Omfattande designpaket för marknadsföringskampanjer och varumärkesnärvaro."
@@ -219,6 +236,7 @@
             "en": "Basic Marketing Kit",
             "sv": "Grundläggande marknadsföringskit"
           },
+          "sku": "HM-DES-MKTG-BASIC",
           "price": 3500
         },
         {
@@ -226,6 +244,7 @@
             "en": "Premium Marketing Kit",
             "sv": "Premium marknadsföringskit"
           },
+          "sku": "HM-DES-MKTG-PREM",
           "price": 6000
         },
         {
@@ -233,6 +252,7 @@
             "en": "Event Package",
             "sv": "Eventpaket"
           },
+          "sku": "HM-DES-MKTG-EVENT",
           "price": 7500
         }
       ],
@@ -242,6 +262,7 @@
             "en": "Social Media Templates",
             "sv": "Sociala medier-mallar"
           },
+          "sku": "HM-DES-MKTG-ADD-SOC",
           "price": 2000
         },
         {
@@ -249,6 +270,7 @@
             "en": "Email Template Design",
             "sv": "E-postmallsdesign"
           },
+          "sku": "HM-DES-MKTG-ADD-EMAIL",
           "price": 2500
         }
       ],
@@ -262,6 +284,7 @@
         "en": "UI/UX Design",
         "sv": "UI/UX-design"
       },
+      "sku": "HM-DES-UX-BASE",
       "description": {
         "en": "User interface and experience design for web and mobile applications, including wireframes, prototypes, and usability testing. Specialising in responsive and accessible design solutions.",
         "sv": "Användargränssnitts- och upplevelsedesign för webb och mobilapplikationer, inklusive wireframes, prototyper och användbarhetstester. Specialisering inom responsiv och tillgänglig design."
@@ -277,6 +300,7 @@
             "en": "Basic UI Design",
             "sv": "Grundläggande UI-design"
           },
+          "sku": "HM-DES-UX-UI",
           "price": 750,
           "unit": {
             "en": "hour",
@@ -288,6 +312,7 @@
             "en": "Advanced UX Research & Design",
             "sv": "Avancerad UX-forskning & design"
           },
+          "sku": "HM-DES-UX-ADV",
           "price": 950,
           "unit": {
             "en": "hour",
@@ -301,6 +326,7 @@
             "en": "Interactive Prototype",
             "sv": "Interaktiv prototyp"
           },
+          "sku": "HM-DES-UX-ADD-PROT",
           "price": 3000
         },
         {
@@ -308,6 +334,7 @@
             "en": "User Testing Session",
             "sv": "Användartestning session"
           },
+          "sku": "HM-DES-UX-ADD-TEST",
           "price": 3500,
           "unit": {
             "en": "session",
@@ -325,6 +352,7 @@
         "en": "Brand Identity Design",
         "sv": "Varumärkesidentitetsdesign"
       },
+      "sku": "HM-DES-BRAND-BASE",
       "description": {
         "en": "Comprehensive brand identity design including logo development, colour schemes, typography, and basic brand guidelines. Focused on creating cohesive visual identities across all platforms.",
         "sv": "Omfattande varumärkesidentitetsdesign inklusive logotyputveckling, färgscheman, typografi och grundläggande varumärkesriktlinjer. Fokus på att skapa sammanhängande visuella identiteter över alla plattformar."
@@ -340,6 +368,7 @@
             "en": "Essential Brand Package",
             "sv": "Grundläggande varumärkespaket"
           },
+          "sku": "HM-DES-BRAND-ESS",
           "price": 4500,
           "unit": {
             "en": "package",
@@ -351,6 +380,7 @@
             "en": "Premium Brand Package",
             "sv": "Premium varumärkespaket"
           },
+          "sku": "HM-DES-BRAND-PREM",
           "price": 6000,
           "unit": {
             "en": "package",
@@ -364,6 +394,7 @@
             "en": "Additional Logo Variations",
             "sv": "Extra logotypvariationer"
           },
+          "sku": "HM-DES-BRAND-ADD-LOGO",
           "price": 1500
         },
         {
@@ -371,6 +402,7 @@
             "en": "Brand Style Guide",
             "sv": "Varumärkesmanual"
           },
+          "sku": "HM-DES-BRAND-ADD-GUIDE",
           "price": 2500
         }
       ],
@@ -384,6 +416,7 @@
         "en": "Web Design",
         "sv": "Webbdesign"
       },
+      "sku": "HM-DES-WEB-BASE",
       "description": {
         "en": "Custom website design optimised for all devices and screen sizes, delivering intuitive user experiences.",
         "sv": "Anpassad webbdesign optimerad för alla enheter och skärmstorlekar."
@@ -399,6 +432,7 @@
             "en": "Landing Page",
             "sv": "Landningssida"
           },
+          "sku": "HM-DES-WEB-LAND",
           "price": 7500
         },
         {
@@ -406,6 +440,7 @@
             "en": "Multi-page Website",
             "sv": "Flersidors webbplats"
           },
+          "sku": "HM-DES-WEB-MULTI",
           "price": 15000
         },
         {
@@ -413,6 +448,7 @@
             "en": "E-commerce Website",
             "sv": "E-handelswebbplats"
           },
+          "sku": "HM-DES-WEB-ECOM",
           "price": 25000
         }
       ],
@@ -422,6 +458,7 @@
             "en": "Custom Animations",
             "sv": "Anpassade animationer"
           },
+          "sku": "HM-DES-WEB-ADD-ANIM",
           "price": 2000
         },
         {
@@ -429,6 +466,7 @@
             "en": "SEO Optimisation",
             "sv": "SEO-optimering"
           },
+          "sku": "HM-DES-WEB-ADD-SEO",
           "price": 5000
         }
       ],

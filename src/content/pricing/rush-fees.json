@@ -12,6 +12,7 @@
         "en": "Next-Day Delivery",
         "sv": "Leverans nästa dag"
       },
+      "sku": "HM-RUSH-NEXT-BASE",
       "description": {
         "en": "Expedited project completion and delivery by the end of the next business day. Includes priority communication and rapid feedback rounds.",
         "sv": "Påskyndad projektleverans till slutet av nästa arbetsdag. Inkluderar prioriterad kommunikation och återkopplingsrundor."
@@ -31,6 +32,7 @@
         "en": "Same-Day Delivery",
         "sv": "Leverans samma dag"
       },
+      "sku": "HM-RUSH-SAME-BASE",
       "description": {
         "en": "Immediate priority handling and delivery of your project within the same business day. Subject to availability and project scope.",
         "sv": "Prioriterad hantering och leverans av ditt projekt inom samma arbetsdag. Med förbehåll för tillgänglighet och projektets omfattning."
@@ -50,6 +52,7 @@
         "en": "After-Hours Service",
         "sv": "Service utanför kontorstid"
       },
+      "sku": "HM-RUSH-AH-BASE",
       "description": {
         "en": "Work performed outside regular business hours (09:00-17:00). Available for urgent projects and time-sensitive updates.",
         "sv": "Arbete som utförs utanför ordinarie kontorstid (09:00-17:00). Tillgängligt för brådskande projekt och tidskänsliga uppdateringar."
@@ -65,6 +68,7 @@
             "en": "Evening Rate (17:00-22:00)",
             "sv": "Kvällstaxa (17:00-22:00)"
           },
+          "sku": "HM-RUSH-AH-EVE",
           "price": 75,
           "unit": {
             "en": "percent",
@@ -76,6 +80,7 @@
             "en": "Night Rate (22:00-09:00)",
             "sv": "Nattaxa (22:00-09:00)"
           },
+          "sku": "HM-RUSH-AH-NIGHT",
           "price": 100,
           "unit": {
             "en": "percent",
@@ -93,6 +98,7 @@
         "en": "Weekend/Holiday Work",
         "sv": "Helg/Helgdagsarbete"
       },
+      "sku": "HM-RUSH-WH-BASE",
       "description": {
         "en": "Services provided during weekends or Swedish public holidays. Includes priority handling and emergency support for time-critical projects.",
         "sv": "Tjänster som tillhandahålls under helger eller svenska helgdagar. Inkluderar akutsupport och prioriterad hantering."
@@ -108,6 +114,7 @@
             "en": "Weekend Rate",
             "sv": "Helgtaxa"
           },
+          "sku": "HM-RUSH-WH-WEEK",
           "price": 150,
           "unit": {
             "en": "percent",
@@ -119,6 +126,7 @@
             "en": "Holiday Rate",
             "sv": "Helgdagstaxa"
           },
+          "sku": "HM-RUSH-WH-HOL",
           "price": 200,
           "unit": {
             "en": "percent",

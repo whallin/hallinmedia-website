@@ -12,6 +12,7 @@
         "en": "Content Revisions",
         "sv": "Innehållsrevideringar"
       },
+      "sku": "HM-REV-CONT-BASE",
       "description": {
         "en": "Additional content editing and revision rounds for written content, including articles, website copy, and marketing materials. All revisions follow our quality assurance process.",
         "sv": "Extra innehållsredigering och revideringsrundor för skrivet innehåll, inklusive artiklar, webbtexter och marknadsföringsmaterial."
@@ -27,6 +28,7 @@
             "en": "Basic Content Revision",
             "sv": "Grundläggande innehållsrevidering"
           },
+          "sku": "HM-REV-CONT-BASIC",
           "price": 350,
           "unit": {
             "en": "round",
@@ -38,6 +40,7 @@
             "en": "Comprehensive Content Revision",
             "sv": "Omfattande innehållsrevidering"
           },
+          "sku": "HM-REV-CONT-COMP",
           "price": 600,
           "unit": {
             "en": "round",
@@ -55,6 +58,7 @@
         "en": "Design Revisions",
         "sv": "Designrevideringar"
       },
+      "sku": "HM-REV-DES-BASE",
       "description": {
         "en": "Additional revision rounds beyond those included in the standard package. Applies to UI/UX, brand identity, and graphic design projects. Each round includes detailed feedback implementation.",
         "sv": "Extra revideringsrundor utöver de som ingår i standardpaketet. Gäller UI/UX, varumärkesidentitet och grafisk design."
@@ -70,6 +74,7 @@
             "en": "Minor Revisions",
             "sv": "Mindre revideringar"
           },
+          "sku": "HM-REV-DES-MIN",
           "price": 450,
           "unit": {
             "en": "round",
@@ -81,6 +86,7 @@
             "en": "Major Revisions",
             "sv": "Större revideringar"
           },
+          "sku": "HM-REV-DES-MAJ",
           "price": 850,
           "unit": {
             "en": "round",
@@ -98,6 +104,7 @@
         "en": "Photo & Video Revisions",
         "sv": "Foto- & Videorevideringar"
       },
+      "sku": "HM-REV-PV-BASE",
       "description": {
         "en": "Additional editing rounds for photo and video content beyond the standard package inclusions. Includes colour correction and technical adjustments.",
         "sv": "Extra redigeringsrundor för foto- och videoinnehåll utöver standardpaketets inkluderingar."
@@ -113,6 +120,7 @@
             "en": "Photo Retouching Revision",
             "sv": "Fotoretuschering revidering"
           },
+          "sku": "HM-REV-PV-PHOTO",
           "price": 400,
           "unit": {
             "en": "hour",
@@ -124,6 +132,7 @@
             "en": "Video Edit Revision",
             "sv": "Videoredigering revidering"
           },
+          "sku": "HM-REV-PV-VIDEO",
           "price": 500,
           "unit": {
             "en": "hour",
@@ -141,6 +150,7 @@
         "en": "Rush Revision Service",
         "sv": "Express revideringstjänst"
       },
+      "sku": "HM-REV-RUSH-BASE",
       "description": {
         "en": "Expedited revision service for urgent changes and modifications needed outside standard revision timeframes. Includes priority handling.",
         "sv": "Påskyndad revideringstjänst för brådskande ändringar och modifieringar som behövs utanför standard revideringstider."
@@ -156,6 +166,7 @@
             "en": "Next-Day Revision",
             "sv": "Revidering nästa dag"
           },
+          "sku": "HM-REV-RUSH-NEXT",
           "price": 50,
           "unit": {
             "en": "percent",
@@ -167,6 +178,7 @@
             "en": "Same-Day Revision",
             "sv": "Revidering samma dag"
           },
+          "sku": "HM-REV-RUSH-SAME",
           "price": 100,
           "unit": {
             "en": "percent",

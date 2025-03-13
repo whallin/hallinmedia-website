@@ -12,6 +12,7 @@
         "en": "Source Files",
         "sv": "Källfiler"
       },
+      "sku": "HM-ADD-SRC-BASE",
       "description": {
         "en": "Access to all original source files from your project, enabling future modifications and updates. Includes organised file structure and documentation.",
         "sv": "Tillgång till alla ursprungliga källfiler från ditt projekt, vilket möjliggör framtida ändringar och uppdateringar. Inkluderar organiserad filstruktur och dokumentation."
@@ -31,6 +32,7 @@
         "en": "Content Updates",
         "sv": "Innehållsuppdateringar"
       },
+      "sku": "HM-ADD-UPD-BASE",
       "description": {
         "en": "Regular content maintenance and updates to keep your digital presence current and engaging. Includes performance monitoring and optimisation suggestions.",
         "sv": "Regelbundet innehållsunderhåll och uppdateringar för att hålla din digitala närvaro aktuell och engagerande. Inkluderar prestandaövervakning och optimeringsförslag."
@@ -46,6 +48,7 @@
             "en": "Basic (up to 4 updates)",
             "sv": "Grundläggande (upp till 4 uppdateringar)"
           },
+          "sku": "HM-ADD-UPD-BASIC",
           "price": 800,
           "unit": {
             "en": "month",
@@ -57,6 +60,7 @@
             "en": "Advanced (up to 10 updates)",
             "sv": "Avancerad (upp till 10 uppdateringar)"
           },
+          "sku": "HM-ADD-UPD-ADV",
           "price": 1200,
           "unit": {
             "en": "month",
@@ -74,6 +78,7 @@
         "en": "Basic Support Plan",
         "sv": "Grundläggande supportplan"
       },
+      "sku": "HM-ADD-SUP-BASE",
       "description": {
         "en": "Essential post-project support including email assistance and basic troubleshooting for delivered work.",
         "sv": "Grundläggande support efter projektet inklusive e-postassistans och grundläggande felsökning för levererat arbete."
@@ -89,6 +94,7 @@
             "en": "Email Support",
             "sv": "E-postsupport"
           },
+          "sku": "HM-ADD-SUP-EMAIL",
           "price": 400,
           "unit": {
             "en": "month",
@@ -100,6 +106,7 @@
             "en": "Phone Support",
             "sv": "Telefonsupport"
           },
+          "sku": "HM-ADD-SUP-PHONE",
           "price": 800,
           "unit": {
             "en": "month",
@@ -117,6 +124,7 @@
         "en": "Premium Support Plan",
         "sv": "Premium supportplan"
       },
+      "sku": "HM-ADD-PSUP-BASE",
       "description": {
         "en": "Comprehensive support package with priority assistance and advanced troubleshooting. Includes regular check-ins and preventive maintenance.",
         "sv": "Omfattande supportpaket med prioriterad assistans och avancerad felsökning. Inkluderar regelbundna avstämningar och förebyggande underhåll."
@@ -132,6 +140,7 @@
             "en": "24/7 Support",
             "sv": "24/7 support"
           },
+          "sku": "HM-ADD-PSUP-24-7",
           "price": 1200,
           "unit": {
             "en": "month",
@@ -143,6 +152,7 @@
             "en": "On-site Support",
             "sv": "Support på plats"
           },
+          "sku": "HM-ADD-PSUP-SITE",
           "price": 1600,
           "unit": {
             "en": "month",
@@ -156,6 +166,7 @@
             "en": "Education Sessions",
             "sv": "Utbildningssessioner"
           },
+          "sku": "HM-ADD-PSUP-EDU",
           "price": 600,
           "unit": {
             "en": "hour",

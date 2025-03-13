@@ -12,6 +12,7 @@
         "en": "Content Creation",
         "sv": "Innehållsproduktion"
       },
+      "sku": "HM-COM-CONT-BASE",
       "description": {
         "en": "Professional content writing with a journalistic approach, specialising in news articles, blog posts, and business communications. SEO-optimised content available.",
         "sv": "Professionellt innehållsskapande med journalistiskt perspektiv, specialisering inom nyhetsartiklar, blogginlägg och företagskommunikation. SEO-optimerat innehåll tillgängligt."
@@ -27,6 +28,7 @@
             "en": "Social Media Content",
             "sv": "Sociala medier-innehåll"
           },
+          "sku": "HM-COM-CONT-SOC",
           "price": 600,
           "unit": {
             "en": "post",
@@ -38,6 +40,7 @@
             "en": "Blog Posts & Articles",
             "sv": "Blogginlägg & artiklar"
           },
+          "sku": "HM-COM-CONT-BLOG",
           "price": 1500,
           "unit": {
             "en": "article",
@@ -49,6 +52,7 @@
             "en": "Technical Writing",
             "sv": "Tekniskt skrivande"
           },
+          "sku": "HM-COM-CONT-TECH",
           "price": 900,
           "unit": {
             "en": "page",
@@ -62,6 +66,7 @@
             "en": "SEO Optimisation",
             "sv": "SEO-optimering"
           },
+          "sku": "HM-COM-CONT-ADD-SEO",
           "price": 800,
           "unit": {
             "en": "article",
@@ -73,6 +78,7 @@
             "en": "Translation Service",
             "sv": "Översättningstjänst"
           },
+          "sku": "HM-COM-CONT-ADD-TRANS",
           "price": 1.5,
           "unit": {
             "en": "word",
@@ -90,6 +96,7 @@
         "en": "Social Media Management",
         "sv": "Hantering av sociala medier"
       },
+      "sku": "HM-COM-SOC-BASE",
       "description": {
         "en": "Strategic social media management with a focus on engaging storytelling and community building. Includes content planning, creation, and analytics reporting.",
         "sv": "Strategisk hantering av sociala medier med fokus på engagerande berättande och community-building. Inkluderar innehållsplanering, skapande och analysrapportering."
@@ -105,6 +112,7 @@
             "en": "Basic Package (2 platforms)",
             "sv": "Grundpaket (2 plattformar)"
           },
+          "sku": "HM-COM-SOC-BASIC",
           "price": 2000,
           "unit": {
             "en": "month",
@@ -116,6 +124,7 @@
             "en": "Premium Package (4 platforms)",
             "sv": "Premiumpaket (4 plattformar)"
           },
+          "sku": "HM-COM-SOC-PREM",
           "price": 3000,
           "unit": {
             "en": "month",
@@ -129,6 +138,7 @@
             "en": "Additional Platform",
             "sv": "Extra plattform"
           },
+          "sku": "HM-COM-SOC-ADD-PLAT",
           "price": 600,
           "unit": {
             "en": "month",
@@ -140,6 +150,7 @@
             "en": "Paid Advertising Management",
             "sv": "Hantering av betald annonsering"
           },
+          "sku": "HM-COM-SOC-ADD-AD",
           "price": 800,
           "unit": {
             "en": "month",
@@ -157,6 +168,7 @@
         "en": "Content Strategy",
         "sv": "Innehållsstrategi"
       },
+      "sku": "HM-COM-STRAT-BASE",
       "description": {
         "en": "Strategic content planning and analysis for digital platforms. Includes audience analysis and content calendar planning.",
         "sv": "Strategisk innehållsplanering och analys för digitala plattformar. Inkluderar målgruppsanalys och innehållskalenderplanering."
@@ -172,6 +184,7 @@
             "en": "Basic Strategy Package",
             "sv": "Grundläggande strategipaket"
           },
+          "sku": "HM-COM-STRAT-BASIC",
           "price": 2500,
           "unit": {
             "en": "package",
@@ -183,6 +196,7 @@
             "en": "Advanced Strategy Package",
             "sv": "Avancerat strategipaket"
           },
+          "sku": "HM-COM-STRAT-ADV",
           "price": 6000,
           "unit": {
             "en": "package",
@@ -196,6 +210,7 @@
             "en": "Competitor Analysis",
             "sv": "Konkurrentanalys"
           },
+          "sku": "HM-COM-STRAT-ADD-COMP",
           "price": 1500
         },
         {
@@ -203,6 +218,7 @@
             "en": "Content Calendar (3 months)",
             "sv": "Innehållskalender (3 månader)"
           },
+          "sku": "HM-COM-STRAT-ADD-CAL",
           "price": 2500
         }
       ],

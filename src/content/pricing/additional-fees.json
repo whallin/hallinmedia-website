@@ -12,6 +12,7 @@
         "en": "Mileage Compensation",
         "sv": "Milersättning"
       },
+      "sku": "HM-FEE-MILE-BASE",
       "description": {
         "en": "Standard mileage rate for travel outside the local Skellefteå area. Calculated per kilometre from office location.",
         "sv": "Standard milersättning för resor utanför Skellefteåområdet. Beräknas per kilometer från kontorsplats."
@@ -31,6 +32,7 @@
         "en": "Equipment Hire",
         "sv": "Uthyrning av utrustning"
       },
+      "sku": "HM-FEE-EQUIP-BASE",
       "description": {
         "en": "Professional equipment hire for specialised projects. All equipment fully tested, calibrated and insured.",
         "sv": "Uthyrning av professionell utrustning för specialiserade projekt. All utrustning är testad och försäkrad."
@@ -46,6 +48,7 @@
             "en": "Sound Equipment",
             "sv": "Ljudutrustning"
           },
+          "sku": "HM-FEE-EQUIP-SOUND",
           "price": 400,
           "unit": {
             "en": "day",
@@ -57,6 +60,7 @@
             "en": "Calibration Tools",
             "sv": "Kalibreringsverktyg"
           },
+          "sku": "HM-FEE-EQUIP-CAL",
           "price": 400,
           "unit": {
             "en": "day",
@@ -68,6 +72,7 @@
             "en": "Camera Equipment",
             "sv": "Kamerautrustning"
           },
+          "sku": "HM-FEE-EQUIP-CAM",
           "price": 1200,
           "unit": {
             "en": "day",
@@ -79,6 +84,7 @@
             "en": "Complete Camera and Sound Kit",
             "sv": "Komplett kamera- och ljudkit"
           },
+          "sku": "HM-FEE-EQUIP-FULL",
           "price": 1500,
           "unit": {
             "en": "day",
@@ -92,6 +98,7 @@
             "en": "Equipment Delivery",
             "sv": "Leverans"
           },
+          "sku": "HM-FEE-EQUIP-DEL",
           "price": 200,
           "unit": {
             "en": "delivery",
@@ -103,6 +110,7 @@
             "en": "Equipment Training",
             "sv": "Utrustningsutbildning"
           },
+          "sku": "HM-FEE-EQUIP-TRN",
           "price": 800,
           "unit": {
             "en": "hour",
@@ -120,6 +128,7 @@
         "en": "Location Scouting",
         "sv": "Platsspaning"
       },
+      "sku": "HM-FEE-LOC-BASE",
       "description": {
         "en": "Professional location scouting service for photo and video shoots. Includes detailed location reports and permit assistance.",
         "sv": "Professionell platsspaningsservice för foto- och videoinspelningar. Inkluderar detaljerade platsrapporter och tillståndsassistans."
@@ -135,6 +144,7 @@
             "en": "Travel Expenses",
             "sv": "Resekostnader"
           },
+          "sku": "HM-FEE-LOC-TRAV",
           "price": 25,
           "unit": {
             "en": "mile",
@@ -146,6 +156,7 @@
             "en": "Location Permits",
             "sv": "Platstillstånd"
           },
+          "sku": "HM-FEE-LOC-PERM",
           "price": 400,
           "unit": {
             "en": "permit",
