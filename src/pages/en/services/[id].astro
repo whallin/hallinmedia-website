@@ -19,7 +19,7 @@ const relatedServices = data.relatedServices
   ? await Promise.all(
       data.relatedServices.map(async (ref) => {
         return await ref.id;
-      })
+      }),
     ).then(async (ids) => {
       const services = await getCollection("servicesCollection");
       return services.filter((service) => ids.includes(service.id));
@@ -30,7 +30,7 @@ const featuredClients = data.featuredClients
   ? await Promise.all(
       data.featuredClients.map(async (ref) => {
         return await ref.id;
-      })
+      }),
     ).then(async (ids) => {
       const clients = await getCollection("clientsCollection");
       const allClients = clients.filter((client) => ids.includes(client.id));
@@ -47,7 +47,7 @@ const featuredClients = data.featuredClients
 const reviews = featuredClients
   .filter(
     (client): client is typeof client & { data: { testimonial: NonNullable<typeof client.data.testimonial> } } =>
-      client.data.testimonial !== undefined
+      client.data.testimonial !== undefined,
   )
   .map((client) => ({
     "@type": "Review",
