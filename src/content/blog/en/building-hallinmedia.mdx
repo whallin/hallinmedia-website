@@ -1,0 +1,124 @@
+---
+title: Building hallin.media - A new beginning
+description: My journey of building a new website with Astro and Tailwind CSS, from concept to reality - without design mockups but with creative confidence.
+author: William Hallin
+publishedDate: "2025-03-12T10:30:00.000Z"
+updatedDate: "2025-03-12T15:40:00.000Z"
+tags:
+  [web-development, astro, tailwind-css, web-design, development, creativity]
+featured: true
+featuredImage: /src/assets/blog/building-hallinmedia/thumbnail.png
+featuredImageAlt: hallin.media
+draft: false
+seo:
+  {
+    title: "Building a modern website with Astro and Tailwind CSS - My development journey",
+    description: "Follow my journey of building hallin.media from scratch using Astro and Tailwind CSS. A personal story about creative web development without traditional design mockups.",
+    keywords:
+      [
+        "web development",
+        "astro",
+        "tailwind css",
+        "personal website",
+        "web design",
+        "creative development",
+        "hallin.media",
+        "static website",
+      ],
+  }
+category: Technology
+---
+
+import { Picture } from "astro:assets";
+import ImgOldWebsite from "/src/assets/blog/building-hallinmedia/old-website.png";
+
+I consider myself to be quite creative when it comes to writing, but how do you explain something that isn't even obvious to you? What I'm referring to is the web development of this exact website you're on right now.
+
+I am, by no means, an expert in web development. I've never taken a course in any form of programming other than the compulsory elements of "Teknik" in secondary school, but beyond that I'm hardly a developer of any kind. My roots are in the creative arts; it's where I live and thrive.
+
+When I see a website, probably worth millions, I can't help but drool over it. I think thoughts like: "How did they do this?" and "How long did this take?". Then when you try to recreate the same effect yourself, or the same layout, it completely falls apart. You become dissatisfied, and the desire to make something as nice and stylish remains.
+
+So, what do I do now that I need to freshen up my digital look online? Should I hire a web developer? Then I need to have a plan and design ready first. Should I consult someone else with a design I come up with? But I don't have time to do that design!
+
+Somewhere I felt like I just wanted to dive right in. As great as it is to have a UI design and a design language before building apps or websites, I really didn't feel up to it this time. Really, what was stopping me from just getting started? To just start writing code and building my ideas right away?
+
+## Chapter 1: bunx create-astro@latest
+
+Okay, maybe I exaggerated a bit about my previous experiences. I am not completely clueless when it comes to the web and its techniques.
+
+I have built websites for myself and also helped others with theirs, and then the research comes naturally of what techniques there are, how to even write the code from the beginning, etc. However, making sure that everything you do is actually correct and "best practice" is a completely different thing, and that's where I feel my ground is a bit shaky.
+
+One conclusion I could draw almost straight away was that I wanted a static website. I've used <a href="https://astro.build/" target="_blank" rel="noopener noreferrer">Astro</a> in the past, and I knew right away that I wanted to stick with it.
+
+Astro is a framework for building static websites, quite complex ones I might add. Astro is pretty easy to get started with, and it is pretty easy to learn. Now, this is not an Astro instruction manual, but I hope you will take my word for it.
+
+With a blank Astro project created and in hand, it was time to get started.
+
+_But how do you actually start, without a design?_
+
+## Chapter 2: An empty canvas
+
+<figure>
+  <Picture
+    src={ImgOldWebsite}
+    alt="Screenshot of the HallinMedia website"
+    width={1920}
+    height={1080}
+    widths={[640, 768, 1024, 1280, 1920]}
+    formats={["avif", "webp"]}
+    class="aspect-video rounded-lg object-cover shadow-sm select-none"
+  />
+  <figcaption class="text-center italic">
+    A screenshot of my old website. I had a vision of it being clean and simple.
+  </figcaption>
+</figure>
+
+After all, I had a website already. It wasn't something I was particularly proud of or happy with, but it still met my requirements in some way. All I needed was a web presence, and it gave me that after all.
+
+The design language I was undoubtedly happy with as it was. HallinMedia has its red "Live" colour, as it's called, and the typography is a mix of serif fonts for titles and text, while sans fonts sprinkled in here and there for buttons and interactive or less important things. Thanks to the fact that I had created this design language beforehand, it was actually incredibly easier to get started.
+
+The advantage of having the visual thinking already prepared is that you can then let the creative thoughts flow in terms of layout and content. It was simply time to put on my layout cap and start thinking about how I wanted my website to be visually structured.
+
+From coming up with the layout of the "About me" page in the shower, to getting ideas for the content and structure of the awards page before I go to sleep — _well, that's what creating this website was really like._ Some might call it a work injury, but I like to call it passive creativity.
+
+With these layouts and ideas in mind, it was time to get to work and start writing code. You might be thinking, this is where the challenge begins. I had no design, no physical sketch, just an idea in my head — how could I possibly get started with the code? Thinking about it now in hindsight, it sounds pretty crazy. It's also very vague to me how I actually got started, but it's a lot about just daring to try. To dare to try things, see what sticks or not, and evolve from there.
+
+<a href="https://tailwindcss.com/">Tailwind CSS</a>
+has been a pure joy to use for the website. If it wasn't for Tailwind, I
+wouldn't have had the same pace or ability to get my ideas down on "paper".
+Tailwind is a CSS framework that allows you to write CSS quickly and easily,
+which I really value. It has allowed me to quickly iterate back and forth on
+different ideas without having to spend over 40 hours on YouTube tutorials.
+
+Thanks to being able to get my ideas down as quickly as I did into code, it didn't matter that these visual ideas were only ideas. I could write notes in a to-do list for myself if I couldn't explore my ideas at that moment, to trigger the idea thoughts again later.
+
+Slowly but surely, the website started to take shape. I had a layout and content that I was happy with, I had a colour palette that I felt comfortable with, and I had a typography that I thought fit in. It was time to start adding content.
+
+## Chatper 3: Speed blind to the words
+
+I have always enjoyed writing when I enjoy the subject I'm writing about. I've written short stories, poems, and so on, but it's always been the creative nature of documentary and narrative writing that has attracted me. So how would I go about writing a whole website? Not only in Swedish, but also in English, I had told myself.
+
+_Why, actually?_
+
+Firstly, I initially saw the creation of a bilingual website as a challenge for myself, just to deal with the logistics that come with coding and having to implement logic to handle multiple languages. Luckily, Astro made localisation a lot easier and made this less of a challenge than I had initially thought.
+
+The second motivation for localising the site was to reach out to a wider audience. I live in a landscape that is characterised by new languages and cultures every day. I'm of course talking about Skellefteå. There are so many new people coming here every day, and it's great to see so many cultures participating in the community through different activities. So why shouldn't my services be available to all the new people who might want to start and run a business here locally?
+Det här blev helt enkelt mitt wakeup-call att se till att min hemsida är tillgänglig på både svenska och engelska för att öka tillgängligheten för alla som eventuellt är i behov av min expertis.
+
+_But how do you know what to write?_
+
+I already had a lot of content from my old website that I could reuse. The only thing I felt was that maybe it needed to be polished and get some love before I dared to use it again. But other than that, it was just a matter of getting on with it, I thought.
+
+In my to-do list, I had written down a number of the pages that are now on the website. I knew that I wanted these on my site and what purpose they would serve. However, this didn't just apply to the pages, but also to services, descriptions, headings, legal documents, etc. Quite simply, everything was already pretty well mapped out, so there wasn't much to wait for; it was just a matter of getting started.
+
+## Chapter 4: The new beginning
+
+So, where am I now? I have a website that I'm happy with, I have content which flows when you read it, and I have a feeling that I've finally done something good. I've created a website that I'm proud of, and I've done it all by myself.
+
+_"New year, new me"_ they say, and that was probably one of the biggest motivations for the makeover my website was going to get. As a recent graduate and ready to really go all in on entrepreneurship in the creative industry, I needed a presence that could proactively look after itself. By this I mean that all, at least basic, information would be available in one place to answer questions from potential clients.
+
+> It should'nt be necessary to make a phone call or send an email for every question or issue; some information should only be available if you search for it, in my opinion.
+
+It bothers me that I haven't done this sooner. I've always been a person who wanted to have a website, and I guess that's the typical thing about portfolio websites too; _you're just never done_. There's always something you can change and tweak to make the website, and thus yourself as a brand, look even more beautiful. But now I feel that I could leave the website as it is and be happy for a while, and maybe even focus on other things that I need to work on administratively.
+
+_Who knows, maybe I can even start writing a blog?_
