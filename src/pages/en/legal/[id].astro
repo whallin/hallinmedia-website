@@ -1,6 +1,7 @@
 ---
 import { Icon } from "astro-icon/components";
 import { getCollection, render } from "astro:content";
+import { getRelativeLocaleUrl } from "astro:i18n";
 import Layout from "../../../layouts/Layout.astro";
 
 export async function getStaticPaths() {
@@ -11,6 +12,7 @@ export async function getStaticPaths() {
   }));
 }
 
+const locale = Astro.currentLocale === "en" || Astro.currentLocale === "sv" ? Astro.currentLocale : "en";
 const { doc } = Astro.props;
 const { Content } = await render(doc);
 const allDocs = await getCollection("legalEnCollection");
@@ -115,7 +117,7 @@ const documentTypeColors = {
                 {doc.data.relatedDocuments.map((docId) => (
                   <li>
                     <a
-                      href={`/legal/${docId}`}
+                      href={getRelativeLocaleUrl(locale, `legal/${doc.id}`)}
                       class="dark:text-amber-1000 inline-block rounded-full bg-amber-100 px-3 py-1 text-sm text-amber-800 transition hover:opacity-75 active:scale-95 active:opacity-50 dark:bg-amber-900 dark:text-amber-100"
                     >
                       {docTitleMap[docId] || docId}

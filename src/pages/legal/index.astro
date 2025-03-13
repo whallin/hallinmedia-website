@@ -1,12 +1,13 @@
 ---
 import { Icon } from "astro-icon/components";
 import { getCollection } from "astro:content";
+import { getRelativeLocaleUrl } from "astro:i18n";
 import Layout from "../../layouts/Layout.astro";
 
 const locale = Astro.currentLocale === "en" || Astro.currentLocale === "sv" ? Astro.currentLocale : "en";
 const legalDocs = await getCollection("legalSvCollection");
 const sortedDocs = legalDocs.sort(
-  (a, b) => new Date(b.data.publishedDate).getTime() - new Date(a.data.publishedDate).getTime(),
+  (a, b) => new Date(b.data.publishedDate).getTime() - new Date(a.data.publishedDate).getTime()
 );
 
 const documentTypeColors = {
@@ -34,7 +35,7 @@ const documentTypeColors = {
       {
         sortedDocs.map((doc) => (
           <a
-            href={`/legal/${doc.id}`}
+            href={getRelativeLocaleUrl(locale, `legal/${doc.id}`)}
             class="group relative flex flex-col gap-4 rounded-lg border border-stone-200 p-6 transition hover:border-red-500 active:scale-95 active:opacity-50 dark:border-stone-700"
           >
             <span class={`text-sm font-medium ${documentTypeColors[doc.data.documentType]}`}>
