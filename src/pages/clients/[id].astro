@@ -18,7 +18,7 @@ const locale = Astro.currentLocale === "en" || Astro.currentLocale === "sv" ? As
 const portfolioPosts = await getCollection("portfolioEnCollection").then((posts) =>
   posts
     .filter((post) => post.data.client?.id === client.id)
-    .sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime()),
+    .sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime())
 );
 ---
 
@@ -27,7 +27,7 @@ const portfolioPosts = await getCollection("portfolioEnCollection").then((posts)
     class="max-w-2xl space-y-16 sm:mx-auto"
     style={`--dominant-color: ${client.data.dominantColor.light}; ${client.data.dominantColor.dark ? `--dominant-color-dark: ${client.data.dominantColor.dark}` : `--dominant-color-dark: ${client.data.dominantColor.light}`}`}
   >
-    <header class="mb-6 flex flex-col-reverse justify-between gap-6 sm:flex-row sm:items-start">
+    <header class="mb-8 flex flex-col justify-between gap-6 sm:flex-row sm:items-start">
       <div class="space-y-6">
         <div class="flex h-auto max-h-20 w-auto max-w-48">
           {
@@ -54,7 +54,7 @@ const portfolioPosts = await getCollection("portfolioEnCollection").then((posts)
         )
       }
     </header>
-    <section class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+    <section class="flex flex-col gap-8 sm:flex-row sm:items-center sm:justify-between">
       {
         data.websiteUrl && (
           <a
@@ -64,14 +64,14 @@ const portfolioPosts = await getCollection("portfolioEnCollection").then((posts)
             class="flex items-center justify-center gap-2 rounded-md bg-[var(--dominant-color)] px-6 py-2.5 text-sm font-medium text-stone-100 transition hover:opacity-75 active:scale-95 active:opacity-50 dark:bg-[var(--dominant-color-dark)] dark:text-stone-800"
           >
             Besök {data.websiteUrl.replace(/^(https?:\/\/)?(www\.)?|\/$/g, "")}
-            <Icon name="ph:arrow-square-out-duotone" class="h-4 w-4" aria-hidden="true" />
+            <Icon name="ph:arrow-square-out-duotone" class="h-4 w-4 shrink-0" aria-hidden="true" />
           </a>
         )
       }
       {
         data.socialLinks && (
           <nav aria-label="Social Links">
-            <ul class="flex flex-wrap gap-4 text-sm">
+            <ul class="flex flex-wrap items-center justify-evenly gap-4 text-sm sm:justify-end">
               {data.socialLinks.twitter && (
                 <li>
                   <a
