@@ -327,7 +327,7 @@ const colors = colorVariants[data.color as keyof typeof colorVariants];
                   )}
                 </div>
               </div>
-              <div class="flex w-full gap-2">
+              <div class="flex w-full flex-col gap-2 sm:flex-row">
                 <Button href={getRelativeLocaleUrl(locale, "pricing/calculator")}>
                   <Icon name="ph:calculator-duotone" class="flex-shrink-0" aria-hidden="true" />
                   {translations[locale].calculateCost}
