@@ -96,14 +96,6 @@ const productSchema = {
     "@type": "Brand",
     name: "HallinMedia",
   },
-  hasMerchantReturnPolicy: {
-    "@type": "MerchantReturnPolicy",
-    applicableCountry: ["SE", "NO", "FI", "DK", "EU"],
-    returnPolicyCategory: "https://schema.org/MerchantReturnFiniteReturnWindow",
-    merchantReturnDays: "14",
-    returnMethod: "https://schema.org/ReturnByMail",
-    returnFees: "https://schema.org/FreeReturn",
-  },
   offers: {
     "@type": "Offer",
     url: Astro.url,
@@ -112,6 +104,14 @@ const productSchema = {
     priceValidUntil: new Date(new Date().setFullYear(new Date().getFullYear() + 1)).toISOString().split("T")[0],
     availability: "https://schema.org/InStock",
     itemCondition: "https://schema.org/NewCondition",
+    hasMerchantReturnPolicy: {
+      "@type": "MerchantReturnPolicy",
+      applicableCountry: ["SE", "NO", "FI", "DK", "EU"],
+      returnPolicyCategory: "https://schema.org/MerchantReturnFiniteReturnWindow",
+      merchantReturnDays: "14",
+      returnMethod: "https://schema.org/ReturnByMail",
+      returnFees: "https://schema.org/FreeReturn",
+    },
     shippingDetails: {
       "@type": "OfferShippingDetails",
       shippingRate: {
