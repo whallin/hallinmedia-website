@@ -8,7 +8,7 @@ import Layout from "../../../layouts/Layout.astro";
 const locale = Astro.currentLocale === "en" || Astro.currentLocale === "sv" ? Astro.currentLocale : "en";
 const enPosts = await getCollection("blogEnCollection", ({ data }) => !data.draft);
 const sortedPosts = enPosts.sort(
-  (a, b) => new Date(b.data.publishedDate).getTime() - new Date(a.data.publishedDate).getTime(),
+  (a, b) => new Date(b.data.publishedDate).getTime() - new Date(a.data.publishedDate).getTime()
 );
 
 const calculateReadTime = (content: string) => {
@@ -45,8 +45,8 @@ const calculateReadTime = (content: string) => {
               .filter((post) => post.data.featured)
               .map((post) => (
                 <article class="group relative overflow-hidden rounded-lg border border-stone-200 bg-amber-50 transition hover:border-red-500/50 active:scale-95 active:opacity-50 dark:border-stone-700 dark:bg-stone-800">
-                  <a href={getRelativeLocaleUrl(locale, `blog/${post.id}`)} class="flex flex-col sm:flex-row">
-                    <div class="aspect-square w-full">
+                  <a href={getRelativeLocaleUrl(locale, `blog/${post.id}`)} class="flex h-full flex-col sm:flex-row">
+                    <div class="h-48 w-full overflow-hidden sm:h-auto sm:w-1/3">
                       <Picture
                         src={post.data.featuredImage}
                         alt={post.data.featuredImageAlt}
@@ -54,10 +54,10 @@ const calculateReadTime = (content: string) => {
                         height={1920}
                         widths={[640, 768, 1024, 1280]}
                         formats={["avif", "webp"]}
-                        class="h-full w-full object-cover"
+                        class="h-full w-full object-cover transition-transform group-hover:scale-105 group-hover:rotate-1"
                       />
                     </div>
-                    <div class="flex flex-col justify-between p-6">
+                    <div class="flex flex-col justify-between p-6 sm:w-2/3">
                       <div class="space-y-4">
                         <span class="inline-flex items-center rounded-full bg-amber-100 px-3 py-1 text-sm font-medium text-amber-800 dark:bg-amber-900 dark:text-amber-100">
                           {post.data.category}
