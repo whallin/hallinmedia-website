@@ -65,12 +65,12 @@ const calculateReadTime = (content: string) => {
           <article>
             <h3 class="mb-1 font-serif text-lg font-semibold text-stone-700 dark:text-stone-100">{post.data.title}</h3>
             <div class="flex flex-wrap justify-between gap-2 text-sm text-stone-500 dark:text-stone-400">
-              <div class="flex gap-2" aria-label={translations[locale].details}>
+              <div class="flex gap-2 font-mono" aria-label={translations[locale].details}>
                 <time datetime={post.data.publishedDate}>
                   {new Date(post.data.publishedDate).toLocaleDateString(locale === "sv" ? "sv-SE" : "en-GB")}
                 </time>
                 <span aria-hidden="true">•</span>
-                <span class="font-mono">
+                <span>
                   {calculateReadTime(post.body ?? "")} {translations[locale].minread}
                 </span>
               </div>
