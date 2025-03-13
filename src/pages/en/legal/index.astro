@@ -6,19 +6,19 @@ import Layout from "../../../layouts/Layout.astro";
 const locale = Astro.currentLocale === "en" || Astro.currentLocale === "sv" ? Astro.currentLocale : "en";
 const legalDocs = await getCollection("legalEnCollection");
 const sortedDocs = legalDocs.sort(
-  (a, b) => new Date(b.data.publishedDate).getTime() - new Date(a.data.publishedDate).getTime(),
+  (a, b) => new Date(b.data.publishedDate).getTime() - new Date(a.data.publishedDate).getTime()
 );
 
 const documentTypeColors = {
-  Villkor: "text-blue-500",
-  Integritet: "text-green-500",
+  Terms: "text-blue-500",
+  Privacy: "text-green-500",
   Policy: "text-yellow-500",
-  Avtal: "text-red-500",
-  Uttalande: "text-purple-500",
-  Meddelande: "text-orange-500",
-  Procedur: "text-teal-500",
-  Riktlinjer: "text-pink-500",
-  Annan: "text-gray-500",
+  Agreement: "text-red-500",
+  Statement: "text-purple-500",
+  Notice: "text-orange-500",
+  Procedure: "text-teal-500",
+  Guidelines: "text-pink-500",
+  Other: "text-gray-500",
 } as const;
 ---
 
@@ -34,7 +34,7 @@ const documentTypeColors = {
       {
         sortedDocs.map((doc) => (
           <a
-            href={`/legal/${doc.id}`}
+            href={`/en/legal/${doc.id}`}
             class="group relative flex flex-col gap-4 rounded-lg border border-stone-200 p-6 transition hover:border-red-500 active:scale-95 active:opacity-50 dark:border-stone-700"
           >
             <span class={`text-sm font-medium ${documentTypeColors[doc.data.documentType]}`}>
