@@ -6,7 +6,7 @@ import Layout from "../../../layouts/Layout.astro";
 const locale = Astro.currentLocale === "en" || Astro.currentLocale === "sv" ? Astro.currentLocale : "en";
 const legalDocs = await getCollection("legalEnCollection");
 const sortedDocs = legalDocs.sort(
-  (a, b) => new Date(b.data.publishedDate).getTime() - new Date(a.data.publishedDate).getTime()
+  (a, b) => new Date(b.data.publishedDate).getTime() - new Date(a.data.publishedDate).getTime(),
 );
 
 const documentTypeColors = {
