@@ -14,5 +14,20 @@
     "linkedin": "https://www.linkedin.com/company/extenseit-ab",
     "instagram": "https://www.instagram.com/extenseit/",
     "facebook": "https://www.facebook.com/people/Extenseit-AB/61551503837384/"
+  },
+  "testimonial": {
+    "quote": {
+      "en": "A pleasure to work with William, fast, serious, and always exceeds my expectations.",
+      "sv": "En fröjd att jobba med William, snabb, seriös och överträffar alltid mina förväntningar."
+    },
+    "author": {
+      "avatar": "/src/assets/clients/avatars/extenseit-anton.png",
+      "name": "Anton Lundin",
+      "title": {
+        "en": "Chief Financial Officer",
+        "sv": "Finansdirektör"
+      }
+    },
+    "featured": true
   }
 }
