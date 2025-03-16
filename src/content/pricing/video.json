@@ -105,6 +105,10 @@
           "sku": "HM-VID-PROD-ADD-HOUR",
           "taxCode": "txcd_20060000",
           "price": 800,
+          "description": {
+            "en": "Extend your half-day video production session with additional hours of professional filming and equipment usage.",
+            "sv": "Förläng din halvdags videoproduktion med extra timmar av professionell filmning och utrustningsanvändning."
+          },
           "unit": {
             "en": "hour",
             "sv": "timme"
@@ -117,6 +121,10 @@
           },
           "sku": "HM-VID-PROD-ADD-RAW",
           "taxCode": "txcd_10402100",
+          "description": {
+            "en": "Receive all unedited footage from your video shoot, delivered securely in high-resolution format.",
+            "sv": "Få allt oredigerat material från din videoinspelning, levererat säkert i högupplöst format."
+          },
           "price": 1000
         }
       ],
@@ -175,6 +183,10 @@
           },
           "sku": "HM-VID-PROD-ADD-DRONE",
           "taxCode": "txcd_20060000",
+          "description": {
+            "en": "Enhance your video with stunning aerial cinematography, captured by our licensed drone operator using professional-grade equipment.",
+            "sv": "Förbättra din video med fantastiska flygbilder, filmade av vår licensierade drönarpilot med professionell utrustning."
+          },
           "price": 1800,
           "unit": {
             "en": "day",
@@ -188,6 +200,10 @@
           },
           "sku": "HM-VID-PROD-ADD-CAM",
           "taxCode": "txcd_20060000",
+          "description": {
+            "en": "Add an additional professional camera operator to capture multiple angles simultaneously, ensuring comprehensive coverage of your event or production.",
+            "sv": "Lägg till en extra professionell kameraoperatör för att fånga flera vinklar samtidigt och säkerställa omfattande täckning av ditt evenemang eller produktion."
+          },
           "price": 2800,
           "unit": {
             "en": "day",

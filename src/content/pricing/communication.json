@@ -69,6 +69,10 @@
           },
           "sku": "HM-COM-CONT-ADD-SEO",
           "taxCode": "txcd_20060035",
+          "description": {
+            "en": "Enhance your content's search engine visibility with thorough keyword research, meta descriptions, and optimised headings structure.",
+            "sv": "Förbättra ditt innehålls synlighet i sökmotorer med grundlig nyckelordsanalys, metabeskrivningar och optimerad rubrikstruktur."
+          },
           "price": 800,
           "unit": {
             "en": "article",
@@ -82,6 +86,10 @@
           },
           "sku": "HM-COM-CONT-ADD-TRANS",
           "taxCode": "txcd_20060035",
+          "description": {
+            "en": "Professional translation service between Swedish and English, maintaining tone and context whilst ensuring cultural appropriateness.",
+            "sv": "Professionell översättningstjänst mellan svenska och engelska, som bevarar ton och sammanhang samtidigt som kulturell lämplighet säkerställs."
+          },
           "price": 1.5,
           "unit": {
             "en": "word",
@@ -144,6 +152,10 @@
           },
           "sku": "HM-COM-SOC-ADD-PLAT",
           "taxCode": "txcd_20060002",
+          "description": {
+            "en": "Extend your social media presence to an additional platform with tailored content and platform-specific strategy.",
+            "sv": "Utöka din närvaro på sociala medier till ytterligare en plattform med skräddarsytt innehåll och plattformsspecifik strategi."
+          },
           "price": 600,
           "unit": {
             "en": "month",
@@ -157,6 +169,10 @@
           },
           "sku": "HM-COM-SOC-ADD-AD",
           "taxCode": "txcd_20060002",
+          "description": {
+            "en": "Complete management of your social media advertising campaigns, including targeting, budget optimisation, and performance reporting.",
+            "sv": "Komplett hantering av dina annonskampanjer på sociala medier, inklusive målgruppsinriktning, budgetoptimering och resultatrapportering."
+          },
           "price": 800,
           "unit": {
             "en": "month",
@@ -219,6 +235,10 @@
           },
           "sku": "HM-COM-STRAT-ADD-COMP",
           "taxCode": "txcd_20060048",
+          "description": {
+            "en": "Detailed analysis of your competitors' content strategy, identifying gaps and opportunities in your market positioning.",
+            "sv": "Detaljerad analys av dina konkurrenters innehållsstrategi, identifiering av luckor och möjligheter i din marknadspositionering."
+          },
           "price": 1500
         },
         {
@@ -228,6 +248,10 @@
           },
           "sku": "HM-COM-STRAT-ADD-CAL",
           "taxCode": "txcd_20060048",
+          "description": {
+            "en": "Comprehensive three-month content calendar with detailed topics, publishing schedules, and channel-specific content recommendations.",
+            "sv": "Omfattande tremånaders innehållskalender med detaljerade ämnen, publiceringsscheman och kanalspecifika innehållsrekommendationer."
+          },
           "price": 2500
         }
       ],

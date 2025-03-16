@@ -172,6 +172,10 @@
           },
           "sku": "HM-ADD-PSUP-EDU",
           "taxCode": "txcd_20060044",
+          "description": {
+            "en": "Personalised training sessions to help you and your team master your digital solutions. Covers system functionality, content management, and best practices.",
+            "sv": "Personliga utbildningssessioner för att hjälpa dig och ditt team att behärska era digitala lösningar. Omfattar systemfunktionalitet, innehållshantering och bästa praxis."
+          },
           "price": 600,
           "unit": {
             "en": "hour",

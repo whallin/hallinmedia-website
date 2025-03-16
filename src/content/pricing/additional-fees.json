@@ -103,6 +103,10 @@
           "sku": "HM-FEE-EQUIP-DEL",
           "price": 200,
           "taxCode": "txcd_20030000",
+          "description": {
+            "en": "Professional delivery and setup of equipment to your specified location within the Skellefteå region.",
+            "sv": "Professionell leverans och installation av utrustning till din angivna plats inom Skellefteåregionen."
+          },
           "unit": {
             "en": "delivery",
             "sv": "leverans"
@@ -116,6 +120,10 @@
           "sku": "HM-FEE-EQUIP-TRN",
           "price": 800,
           "taxCode": "txcd_20060044",
+          "description": {
+            "en": "Comprehensive on-site training session on proper equipment usage, safety procedures and best practices.",
+            "sv": "Omfattande utbildning på plats om korrekt användning av utrustning, säkerhetsprocedurer och bästa praxis."
+          },
           "unit": {
             "en": "hour",
             "sv": "timme"
@@ -152,6 +160,10 @@
           "sku": "HM-FEE-LOC-TRAV",
           "price": 25,
           "taxCode": "txcd_20030000",
+          "description": {
+            "en": "Travel costs for location scouting beyond the local Skellefteå area, calculated per kilometre from our office.",
+            "sv": "Resekostnader för platsspaning utanför Skellefteåområdet, beräknat per kilometer från vårt kontor."
+          },
           "unit": {
             "en": "mile",
             "sv": "mil"
@@ -165,6 +177,10 @@
           "sku": "HM-FEE-LOC-PERM",
           "price": 400,
           "taxCode": "txcd_20060000",
+          "description": {
+            "en": "Handling and processing of necessary filming permits, including liaison with local authorities and property owners.",
+            "sv": "Hantering och behandling av nödvändiga filmningstillstånd, inklusive kontakt med lokala myndigheter och fastighetsägare."
+          },
           "unit": {
             "en": "permit",
             "sv": "tillstånd"

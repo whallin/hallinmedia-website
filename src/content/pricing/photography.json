@@ -116,6 +116,10 @@
           },
           "sku": "HM-PHOTO-EDIT-ADD-BG",
           "taxCode": "txcd_20060000",
+          "description": {
+            "en": "Professional removal or replacement of image backgrounds. Perfect for e-commerce product photos or creating consistent brand imagery.",
+            "sv": "Professionell borttagning eller ersättning av bildbakgrunder. Perfekt för e-handelsprodukter eller för att skapa enhetlig varumärkesbildspråk."
+          },
           "price": 150,
           "unit": {
             "en": "image",
@@ -178,6 +182,10 @@
           },
           "sku": "HM-PHOTO-LOC-ADD-PREV",
           "taxCode": "txcd_20030000",
+          "description": {
+            "en": "Receive a curated selection of preview images on the same day as your shoot. Ideal for time-sensitive projects and immediate social media content.",
+            "sv": "Få ett urval förhandsvisningsbilder samma dag som fotograferingen. Perfekt för tidskänsliga projekt och omedelbart innehåll för sociala medier."
+          },
           "price": 1200
         },
         {
@@ -187,6 +195,10 @@
           },
           "sku": "HM-PHOTO-LOC-ADD-PHOT",
           "taxCode": "txcd_20030000",
+          "description": {
+            "en": "Additional professional photographer to capture multiple angles or locations simultaneously. Includes separate equipment setup.",
+            "sv": "Extra professionell fotograf för att fånga flera vinklar eller platser samtidigt. Inkluderar separat utrusning."
+          },
           "price": 2800,
           "unit": {
             "en": "day",

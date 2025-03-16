@@ -57,7 +57,11 @@
           },
           "sku": "HM-DES-TEMP-ADD-CHART",
           "taxCode": "txcd_10505001",
-          "price": 1500
+          "price": 1500,
+          "description": {
+            "en": "Bespoke charts and diagrams designed to complement your template set, perfect for data visualisation and reporting.",
+            "sv": "Skräddarsydda diagram designade för att komplettera ditt mallset, perfekt för datavisualisering och rapportering."
+          }
         },
         {
           "name": {
@@ -70,6 +74,10 @@
           "unit": {
             "en": "hour",
             "sv": "timme"
+          },
+          "description": {
+            "en": "Hands-on training to help your team maximise the use of your new templates, ensuring consistent implementation across your organisation.",
+            "sv": "Praktisk utbildning för att hjälpa ditt team maximera användningen av dina nya mallar, säkerställer konsekvent implementering i hela organisationen."
           }
         }
       ],
@@ -140,7 +148,11 @@
           },
           "sku": "HM-DES-PRINT-ADD-PREP",
           "taxCode": "txcd_20060000",
-          "price": 400
+          "price": 400,
+          "description": {
+            "en": "Professional preparation of your files for commercial printing, including colour separation, bleed setup and pre-flight checks.",
+            "sv": "Professionell förberedelse av dina filer för kommersiellt tryck, inklusive färgseparation, utfallsinställning och pre-flight-kontroller."
+          }
         }
       ],
       "note": {
@@ -214,6 +226,10 @@
           "unit": {
             "en": "graphic",
             "sv": "grafik"
+          },
+          "description": {
+            "en": "Convert your static illustrations into engaging animated graphics, suitable for web and social media use.",
+            "sv": "Konvertera dina statiska illustrationer till engagerande animerad grafik, lämplig för webb och sociala medier."
           }
         }
       ],
@@ -272,7 +288,11 @@
           },
           "sku": "HM-DES-MKTG-ADD-SOC",
           "taxCode": "txcd_20060002",
-          "price": 2000
+          "price": 2000,
+          "description": {
+            "en": "Custom-designed templates optimised for various social media platforms, ensuring consistent brand presence across all channels.",
+            "sv": "Skräddarsydda mallar optimerade för olika sociala medieplattformar, säkerställer konsekvent varumärkesnärvaro över alla kanaler."
+          }
         },
         {
           "name": {
@@ -281,7 +301,11 @@
           },
           "sku": "HM-DES-MKTG-ADD-EMAIL",
           "taxCode": "txcd_20060002",
-          "price": 1500
+          "price": 1500,
+          "description": {
+            "en": "Responsive email templates designed to maintain brand consistency across all major email clients and devices.",
+            "sv": "Responsiva e-postmallar designade för att bibehålla varumärkeskonsistens över alla större e-postklienter och enheter."
+          }
         }
       ],
       "note": {
@@ -339,7 +363,11 @@
           },
           "sku": "HM-DES-UX-ADD-PROT",
           "taxCode": "txcd_20060013",
-          "price": 3000
+          "price": 3000,
+          "description": {
+            "en": "Fully interactive prototype demonstrating user flows and interactions, perfect for testing and stakeholder presentations.",
+            "sv": "Fullt interaktiv prototyp som demonstrerar användarflöden och interaktioner, perfekt för testning och intressentpresentationer."
+          }
         },
         {
           "name": {
@@ -352,6 +380,10 @@
           "unit": {
             "en": "session",
             "sv": "session"
+          },
+          "description": {
+            "en": "Structured user testing sessions with detailed analysis and recommendations for improvements based on real user feedback.",
+            "sv": "Strukturerade användartestningssessioner med detaljerad analys och rekommendationer för förbättringar baserade på verklig användarfeedback."
           }
         }
       ],
@@ -410,7 +442,11 @@
           },
           "sku": "HM-DES-BRAND-ADD-LOGO",
           "taxCode": "txcd_20060002",
-          "price": 1500
+          "price": 1500,
+          "description": {
+            "en": "Additional logo variants tailored for specific applications, including monochrome, reversed, and responsive versions.",
+            "sv": "Extra logotypvarianter anpassade för specifika användningsområden, inklusive monokroma, inverterade och responsiva versioner."
+          }
         },
         {
           "name": {
@@ -419,7 +455,11 @@
           },
           "sku": "HM-DES-BRAND-ADD-GUIDE",
           "taxCode": "txcd_20060002",
-          "price": 2500
+          "price": 2500,
+          "description": {
+            "en": "Comprehensive brand guidelines document detailing proper usage of all brand elements across different mediums and applications.",
+            "sv": "Omfattande varumärkesriktlinjer som detaljerar korrekt användning av alla varumärkeselement över olika medier och applikationer."
+          }
         }
       ],
       "note": {
@@ -477,7 +517,11 @@
           },
           "sku": "HM-DES-WEB-ADD-ANIM",
           "taxCode": "txcd_10701200",
-          "price": 2000
+          "price": 2000,
+          "description": {
+            "en": "Bespoke animations and micro-interactions to enhance user engagement and provide visual feedback throughout the website.",
+            "sv": "Skräddarsydda animationer och mikrointeraktioner för att förbättra användarengagemang och ge visuell återkoppling på webbplatsen."
+          }
         },
         {
           "name": {
@@ -486,7 +530,11 @@
           },
           "sku": "HM-DES-WEB-ADD-SEO",
           "taxCode": "txcd_10701200",
-          "price": 5000
+          "price": 5000,
+          "description": {
+            "en": "Comprehensive SEO design implementation including metadata structure, semantic markup, and content hierarchy optimisation.",
+            "sv": "Omfattande SEO-designimplementering inklusive metadatastruktur, semantisk markup och optimering av innehållshierarki."
+          }
         }
       ],
       "note": {
