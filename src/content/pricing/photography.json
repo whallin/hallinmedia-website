@@ -13,6 +13,7 @@
         "sv": "Produktfotografering"
       },
       "sku": "HM-PHOTO-PROD-BASE",
+      "taxCode": "txcd_20030000",
       "description": {
         "en": "Professional product photography optimised for e-commerce and marketing materials, including simple background options and lifestyle setups.",
         "sv": "Professionell produktfotografering optimerad för e-handel och marknadsföringsmaterial, inklusive enkel bakgrund och lifestyle-uppsättningar."
@@ -59,6 +60,7 @@
         "sv": "Fotoredigering"
       },
       "sku": "HM-PHOTO-EDIT-BASE",
+      "taxCode": "txcd_20060000",
       "description": {
         "en": "Professional photo editing including advanced colour correction, skin retouching, and creative image enhancement. Specialising in commercial and portrait retouching.",
         "sv": "Professionell fotoredigering inklusive avancerad färgkorrigering, hudretuschering och kreativ bildförbättring. Specialisering inom kommersiell- och porträttretuschering."
@@ -113,6 +115,7 @@
             "sv": "Bakgrundsborttagning/ersättning"
           },
           "sku": "HM-PHOTO-EDIT-ADD-BG",
+          "taxCode": "txcd_20060000",
           "price": 150,
           "unit": {
             "en": "image",
@@ -131,6 +134,7 @@
         "sv": "Platsfotografering - Heldag"
       },
       "sku": "HM-PHOTO-LOC-BASE",
+      "taxCode": "txcd_20030000",
       "description": {
         "en": "Professional photography service for up to 8 hours on location, including professional camera equipment, lighting gear, and backup equipment.",
         "sv": "Professionell fotograferingstjänst upp till 8 timmar på plats, inklusive professionell kamerautrustning, belysning och reservutrustning."
@@ -173,6 +177,7 @@
             "sv": "Förhandsvisning samma dag"
           },
           "sku": "HM-PHOTO-LOC-ADD-PREV",
+          "taxCode": "txcd_20030000",
           "price": 1200
         },
         {
@@ -181,6 +186,7 @@
             "sv": "Extra fotograf"
           },
           "sku": "HM-PHOTO-LOC-ADD-PHOT",
+          "taxCode": "txcd_20030000",
           "price": 2800,
           "unit": {
             "en": "day",

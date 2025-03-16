@@ -13,6 +13,7 @@
         "sv": "Milersättning"
       },
       "sku": "HM-FEE-MILE-BASE",
+      "taxCode": "txcd_20030000",
       "description": {
         "en": "Standard mileage rate for travel outside the local Skellefteå area. Calculated per kilometre from office location.",
         "sv": "Standard milersättning för resor utanför Skellefteåområdet. Beräknas per kilometer från kontorsplats."
@@ -33,6 +34,7 @@
         "sv": "Uthyrning av utrustning"
       },
       "sku": "HM-FEE-EQUIP-BASE",
+      "taxCode": "txcd_20060000",
       "description": {
         "en": "Professional equipment hire for specialised projects. All equipment fully tested, calibrated and insured.",
         "sv": "Uthyrning av professionell utrustning för specialiserade projekt. All utrustning är testad och försäkrad."
@@ -100,6 +102,7 @@
           },
           "sku": "HM-FEE-EQUIP-DEL",
           "price": 200,
+          "taxCode": "txcd_20030000",
           "unit": {
             "en": "delivery",
             "sv": "leverans"
@@ -112,6 +115,7 @@
           },
           "sku": "HM-FEE-EQUIP-TRN",
           "price": 800,
+          "taxCode": "txcd_20060044",
           "unit": {
             "en": "hour",
             "sv": "timme"
@@ -129,6 +133,7 @@
         "sv": "Platsspaning"
       },
       "sku": "HM-FEE-LOC-BASE",
+      "taxCode": "txcd_20060048",
       "description": {
         "en": "Professional location scouting service for photo and video shoots. Includes detailed location reports and permit assistance.",
         "sv": "Professionell platsspaningsservice för foto- och videoinspelningar. Inkluderar detaljerade platsrapporter och tillståndsassistans."
@@ -146,6 +151,7 @@
           },
           "sku": "HM-FEE-LOC-TRAV",
           "price": 25,
+          "taxCode": "txcd_20030000",
           "unit": {
             "en": "mile",
             "sv": "mil"
@@ -158,6 +164,7 @@
           },
           "sku": "HM-FEE-LOC-PERM",
           "price": 400,
+          "taxCode": "txcd_20060000",
           "unit": {
             "en": "permit",
             "sv": "tillstånd"

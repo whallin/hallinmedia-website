@@ -13,6 +13,7 @@
         "sv": "Videoredigering"
       },
       "sku": "HM-VID-EDIT-BASE",
+      "taxCode": "txcd_20060000",
       "description": {
         "en": "Professional video editing services including colour correction, sound mixing, basic motion graphics, and exports in multiple formats.",
         "sv": "Professionell videoredigering inklusive färgkorrigering, ljudmixning, grundläggande motion graphics och export i flera format."
@@ -59,6 +60,7 @@
         "sv": "Videoproduktion - Halvdag"
       },
       "sku": "HM-VID-PROD-HALF",
+      "taxCode": "txcd_20060000",
       "description": {
         "en": "Professional video production services for up to 4 hours, including essential camera equipment and basic lighting setup.",
         "sv": "Professionella videoproduktionstjänster upp till 4 timmar, inklusive grundläggande kamerautrustning och belysning."
@@ -101,6 +103,7 @@
             "sv": "Extra timme"
           },
           "sku": "HM-VID-PROD-ADD-HOUR",
+          "taxCode": "txcd_20060000",
           "price": 800,
           "unit": {
             "en": "hour",
@@ -113,6 +116,7 @@
             "sv": "Råmaterial"
           },
           "sku": "HM-VID-PROD-ADD-RAW",
+          "taxCode": "txcd_10402100",
           "price": 1000
         }
       ],
@@ -127,6 +131,7 @@
         "sv": "Videoproduktion - Heldag"
       },
       "sku": "HM-VID-PROD-FULL",
+      "taxCode": "txcd_20060000",
       "description": {
         "en": "Comprehensive video production services for up to 8 hours, including professional camera equipment, lighting, and basic sound recording.",
         "sv": "Omfattande videoproduktionstjänster upp till 8 timmar, inklusive professionell kamerautrustning, belysning och grundläggande ljudinspelning."
@@ -169,6 +174,7 @@
             "sv": "Drönarfilmning"
           },
           "sku": "HM-VID-PROD-ADD-DRONE",
+          "taxCode": "txcd_20060000",
           "price": 1800,
           "unit": {
             "en": "day",
@@ -181,6 +187,7 @@
             "sv": "Extra kameraoperatör"
           },
           "sku": "HM-VID-PROD-ADD-CAM",
+          "taxCode": "txcd_20060000",
           "price": 2800,
           "unit": {
             "en": "day",

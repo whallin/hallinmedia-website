@@ -48,6 +48,8 @@ const pricingCollection = defineCollection({
               en: z.string().min(1, 'English name is required'),
               sv: z.string().min(1, 'Swedish name is required'),
             }),
+            sku: z.string().min(1, 'SKU is required'),
+            taxCode: z.string().min(1, 'Stripe tax code is required'),
             description: z.object({
               en: z.string().min(1, 'English description is required'),
               sv: z.string().min(1, 'Swedish description is required'),
@@ -70,6 +72,7 @@ const pricingCollection = defineCollection({
                     en: z.string().min(1),
                     sv: z.string().min(1),
                   }),
+                  sku: z.string().min(1, 'SKU is required'),
                   price: z.number().positive(),
                   unit: z
                     .object({
@@ -87,6 +90,8 @@ const pricingCollection = defineCollection({
                     en: z.string().min(1),
                     sv: z.string().min(1),
                   }),
+                  sku: z.string().min(1, 'SKU is required'),
+                  taxCode: z.string().min(1, 'Stripe tax code is required'),
                   price: z.number().positive(),
                   unit: z
                     .object({

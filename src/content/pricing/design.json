@@ -13,6 +13,7 @@
         "sv": "Dokumentmallar"
       },
       "sku": "HM-DES-TEMP-BASE",
+      "taxCode": "txcd_10504000",
       "description": {
         "en": "Professional templates for business documents and presentations.",
         "sv": "Professionella mallar för företagsdokument och presentationer."
@@ -55,6 +56,7 @@
             "sv": "Anpassade diagram"
           },
           "sku": "HM-DES-TEMP-ADD-CHART",
+          "taxCode": "txcd_10505001",
           "price": 1500
         },
         {
@@ -63,6 +65,7 @@
             "sv": "Mallutbildningssession"
           },
           "sku": "HM-DES-TEMP-ADD-TRAIN",
+          "taxCode": "txcd_20060044",
           "price": 800,
           "unit": {
             "en": "hour",
@@ -81,6 +84,7 @@
         "sv": "Tryckdesign"
       },
       "sku": "HM-DES-PRINT-BASE",
+      "taxCode": "txcd_20060000",
       "description": {
         "en": "Professional design for printed materials including business stationery, marketing collateral, and large-format graphics. All designs optimised for both digital and print reproduction.",
         "sv": "Professionell design för tryckt material inklusive företagsmaterial, marknadsföringsmaterial och storformatsgrafik. Alla designer optimerade för både digital och tryckt reproduktion."
@@ -135,6 +139,7 @@
             "sv": "Tryckfilsförberedelse"
           },
           "sku": "HM-DES-PRINT-ADD-PREP",
+          "taxCode": "txcd_20060000",
           "price": 400
         }
       ],
@@ -149,6 +154,7 @@
         "sv": "Illustration & Grafik"
       },
       "sku": "HM-DES-ILLUS-BASE",
+      "taxCode": "txcd_10505001",
       "description": {
         "en": "Custom digital illustrations, icon sets, and graphical elements tailored for your brand. Includes both vector and raster artwork suitable for various applications.",
         "sv": "Anpassade digitala illustrationer, ikonuppsättningar och grafiska element skräddarsydda för ditt varumärke. Inkluderar både vektor- och rastergrafik lämplig för olika användningsområden."
@@ -203,6 +209,7 @@
             "sv": "Animation"
           },
           "sku": "HM-DES-ILLUS-ADD-ANIM",
+          "taxCode": "txcd_10505001",
           "price": 2000,
           "unit": {
             "en": "graphic",
@@ -221,6 +228,7 @@
         "sv": "Marknadsföringspaketdesign"
       },
       "sku": "HM-DES-MKTG-BASE",
+      "taxCode": "txcd_20060002",
       "description": {
         "en": "Comprehensive design package for marketing campaigns and brand presence, tailored to enhance your visual communication.",
         "sv": "Omfattande designpaket för marknadsföringskampanjer och varumärkesnärvaro."
@@ -263,6 +271,7 @@
             "sv": "Sociala medier-mallar"
           },
           "sku": "HM-DES-MKTG-ADD-SOC",
+          "taxCode": "txcd_20060002",
           "price": 2000
         },
         {
@@ -271,6 +280,7 @@
             "sv": "E-postmallsdesign"
           },
           "sku": "HM-DES-MKTG-ADD-EMAIL",
+          "taxCode": "txcd_20060002",
           "price": 1500
         }
       ],
@@ -285,6 +295,7 @@
         "sv": "UI/UX-design"
       },
       "sku": "HM-DES-UX-BASE",
+      "taxCode": "txcd_20060013",
       "description": {
         "en": "User interface and experience design for web and mobile applications, including wireframes, prototypes, and usability testing. Specialising in responsive and accessible design solutions.",
         "sv": "Användargränssnitts- och upplevelsedesign för webb och mobilapplikationer, inklusive wireframes, prototyper och användbarhetstester. Specialisering inom responsiv och tillgänglig design."
@@ -327,6 +338,7 @@
             "sv": "Interaktiv prototyp"
           },
           "sku": "HM-DES-UX-ADD-PROT",
+          "taxCode": "txcd_20060013",
           "price": 3000
         },
         {
@@ -335,6 +347,7 @@
             "sv": "Användartestning session"
           },
           "sku": "HM-DES-UX-ADD-TEST",
+          "taxCode": "txcd_20060013",
           "price": 3500,
           "unit": {
             "en": "session",
@@ -353,6 +366,7 @@
         "sv": "Varumärkesidentitetsdesign"
       },
       "sku": "HM-DES-BRAND-BASE",
+      "taxCode": "txcd_20060002",
       "description": {
         "en": "Comprehensive brand identity design including logo development, colour schemes, typography, and basic brand guidelines. Focused on creating cohesive visual identities across all platforms.",
         "sv": "Omfattande varumärkesidentitetsdesign inklusive logotyputveckling, färgscheman, typografi och grundläggande varumärkesriktlinjer. Fokus på att skapa sammanhängande visuella identiteter över alla plattformar."
@@ -395,6 +409,7 @@
             "sv": "Extra logotypvariationer"
           },
           "sku": "HM-DES-BRAND-ADD-LOGO",
+          "taxCode": "txcd_20060002",
           "price": 1500
         },
         {
@@ -403,6 +418,7 @@
             "sv": "Varumärkesmanual"
           },
           "sku": "HM-DES-BRAND-ADD-GUIDE",
+          "taxCode": "txcd_20060002",
           "price": 2500
         }
       ],
@@ -417,6 +433,7 @@
         "sv": "Webbdesign"
       },
       "sku": "HM-DES-WEB-BASE",
+      "taxCode": "txcd_10701200",
       "description": {
         "en": "Custom website design optimised for all devices and screen sizes, delivering intuitive user experiences.",
         "sv": "Anpassad webbdesign optimerad för alla enheter och skärmstorlekar."
@@ -459,6 +476,7 @@
             "sv": "Anpassade animationer"
           },
           "sku": "HM-DES-WEB-ADD-ANIM",
+          "taxCode": "txcd_10701200",
           "price": 2000
         },
         {
@@ -467,6 +485,7 @@
             "sv": "SEO-optimering"
           },
           "sku": "HM-DES-WEB-ADD-SEO",
+          "taxCode": "txcd_10701200",
           "price": 5000
         }
       ],

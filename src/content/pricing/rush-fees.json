@@ -13,6 +13,7 @@
         "sv": "Leverans nästa dag"
       },
       "sku": "HM-RUSH-NEXT-BASE",
+      "taxCode": "txcd_20060000",
       "description": {
         "en": "Expedited project completion and delivery by the end of the next business day. Includes priority communication and rapid feedback rounds.",
         "sv": "Påskyndad projektleverans till slutet av nästa arbetsdag. Inkluderar prioriterad kommunikation och återkopplingsrundor."
@@ -33,6 +34,7 @@
         "sv": "Leverans samma dag"
       },
       "sku": "HM-RUSH-SAME-BASE",
+      "taxCode": "txcd_20060000",
       "description": {
         "en": "Immediate priority handling and delivery of your project within the same business day. Subject to availability and project scope.",
         "sv": "Prioriterad hantering och leverans av ditt projekt inom samma arbetsdag. Med förbehåll för tillgänglighet och projektets omfattning."
@@ -53,6 +55,7 @@
         "sv": "Service utanför kontorstid"
       },
       "sku": "HM-RUSH-AH-BASE",
+      "taxCode": "txcd_20030000",
       "description": {
         "en": "Work performed outside regular business hours (09:00-17:00). Available for urgent projects and time-sensitive updates.",
         "sv": "Arbete som utförs utanför ordinarie kontorstid (09:00-17:00). Tillgängligt för brådskande projekt och tidskänsliga uppdateringar."
@@ -99,6 +102,7 @@
         "sv": "Helg/Helgdagsarbete"
       },
       "sku": "HM-RUSH-WH-BASE",
+      "taxCode": "txcd_20030000",
       "description": {
         "en": "Services provided during weekends or Swedish public holidays. Includes priority handling and emergency support for time-critical projects.",
         "sv": "Tjänster som tillhandahålls under helger eller svenska helgdagar. Inkluderar akutsupport och prioriterad hantering."

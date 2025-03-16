@@ -13,6 +13,7 @@
         "sv": "Innehållsproduktion"
       },
       "sku": "HM-COM-CONT-BASE",
+      "taxCode": "txcd_20060035",
       "description": {
         "en": "Professional content writing with a journalistic approach, specialising in news articles, blog posts, and business communications. SEO-optimised content available.",
         "sv": "Professionellt innehållsskapande med journalistiskt perspektiv, specialisering inom nyhetsartiklar, blogginlägg och företagskommunikation. SEO-optimerat innehåll tillgängligt."
@@ -67,6 +68,7 @@
             "sv": "SEO-optimering"
           },
           "sku": "HM-COM-CONT-ADD-SEO",
+          "taxCode": "txcd_20060035",
           "price": 800,
           "unit": {
             "en": "article",
@@ -79,6 +81,7 @@
             "sv": "Översättningstjänst"
           },
           "sku": "HM-COM-CONT-ADD-TRANS",
+          "taxCode": "txcd_20060035",
           "price": 1.5,
           "unit": {
             "en": "word",
@@ -97,6 +100,7 @@
         "sv": "Hantering av sociala medier"
       },
       "sku": "HM-COM-SOC-BASE",
+      "taxCode": "txcd_20060002",
       "description": {
         "en": "Strategic social media management with a focus on engaging storytelling and community building. Includes content planning, creation, and analytics reporting.",
         "sv": "Strategisk hantering av sociala medier med fokus på engagerande berättande och community-building. Inkluderar innehållsplanering, skapande och analysrapportering."
@@ -139,6 +143,7 @@
             "sv": "Extra plattform"
           },
           "sku": "HM-COM-SOC-ADD-PLAT",
+          "taxCode": "txcd_20060002",
           "price": 600,
           "unit": {
             "en": "month",
@@ -151,6 +156,7 @@
             "sv": "Hantering av betald annonsering"
           },
           "sku": "HM-COM-SOC-ADD-AD",
+          "taxCode": "txcd_20060002",
           "price": 800,
           "unit": {
             "en": "month",
@@ -169,6 +175,7 @@
         "sv": "Innehållsstrategi"
       },
       "sku": "HM-COM-STRAT-BASE",
+      "taxCode": "txcd_20060048",
       "description": {
         "en": "Strategic content planning and analysis for digital platforms. Includes audience analysis and content calendar planning.",
         "sv": "Strategisk innehållsplanering och analys för digitala plattformar. Inkluderar målgruppsanalys och innehållskalenderplanering."
@@ -211,6 +218,7 @@
             "sv": "Konkurrentanalys"
           },
           "sku": "HM-COM-STRAT-ADD-COMP",
+          "taxCode": "txcd_20060048",
           "price": 1500
         },
         {
@@ -219,6 +227,7 @@
             "sv": "Innehållskalender (3 månader)"
           },
           "sku": "HM-COM-STRAT-ADD-CAL",
+          "taxCode": "txcd_20060048",
           "price": 2500
         }
       ],
