@@ -39,7 +39,7 @@
         "en": "Professional equipment hire for specialised projects. All equipment fully tested, calibrated and insured.",
         "sv": "Uthyrning av professionell utrustning för specialiserade projekt. All utrustning är testad och försäkrad."
       },
-      "basePrice": 500,
+      "basePrice": 400,
       "unit": {
         "en": "day",
         "sv": "dag"
