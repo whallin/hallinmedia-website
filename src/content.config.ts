@@ -107,6 +107,18 @@ const pricingCollection = defineCollection({
                 }),
               )
               .optional(),
+            bulkDiscounts: z
+              .array(
+                z.object({
+                  threshold: z.number().int().positive('Threshold must be positive'),
+                  discount: z.number().min(0).max(100),
+                  description: z.object({
+                    en: z.string().min(1, 'English description is required'),
+                    sv: z.string().min(1, 'Swedish description is required'),
+                  }),
+                }),
+              )
+              .optional(),
           }),
         )
         .nonempty('At least one service is required'),
