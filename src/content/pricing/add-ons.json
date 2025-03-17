@@ -70,6 +70,32 @@
           }
         }
       ],
+      "bulkDiscounts": [
+        {
+          "quantity": 3,
+          "discount": 5,
+          "description": {
+            "en": "5% off for 3+ month commitment",
+            "sv": "5% rabatt för 3+ månaders åtagande"
+          }
+        },
+        {
+          "quantity": 6,
+          "discount": 10,
+          "description": {
+            "en": "10% off for 6+ month commitment",
+            "sv": "10% rabatt för 6+ månaders åtagande"
+          }
+        },
+        {
+          "quantity": 12,
+          "discount": 15,
+          "description": {
+            "en": "15% off for 12+ month commitment",
+            "sv": "15% rabatt för 12+ månaders åtagande"
+          }
+        }
+      ],
       "note": {
         "en": "Updates can be delivered in both English and Swedish. Price varies based on content complexity and volume. Includes basic SEO maintenance.",
         "sv": "Uppdateringar kan levereras på både engelska och svenska. Priset varierar beroende på innehållets komplexitet och volym. Inkluderar grundläggande SEO-underhåll."
@@ -114,6 +140,32 @@
           "unit": {
             "en": "month",
             "sv": "månad"
+          }
+        }
+      ],
+      "bulkDiscounts": [
+        {
+          "quantity": 3,
+          "discount": 5,
+          "description": {
+            "en": "5% off for 3+ month commitment",
+            "sv": "5% rabatt för 3+ månaders åtagande"
+          }
+        },
+        {
+          "quantity": 6,
+          "discount": 10,
+          "description": {
+            "en": "10% off for 6+ month commitment",
+            "sv": "10% rabatt för 6+ månaders åtagande"
+          }
+        },
+        {
+          "quantity": 12,
+          "discount": 15,
+          "description": {
+            "en": "15% off for 12+ month commitment",
+            "sv": "15% rabatt för 12+ månaders åtagande"
           }
         }
       ],
@@ -180,6 +232,32 @@
           "unit": {
             "en": "hour",
             "sv": "timme"
+          }
+        }
+      ],
+      "bulkDiscounts": [
+        {
+          "quantity": 3,
+          "discount": 5,
+          "description": {
+            "en": "5% off for 3+ month commitment",
+            "sv": "5% rabatt för 3+ månaders åtagande"
+          }
+        },
+        {
+          "quantity": 6,
+          "discount": 10,
+          "description": {
+            "en": "10% off for 6+ month commitment",
+            "sv": "10% rabatt för 6+ månaders åtagande"
+          }
+        },
+        {
+          "quantity": 12,
+          "discount": 15,
+          "description": {
+            "en": "15% off for 12+ month commitment",
+            "sv": "15% rabatt för 12+ månaders åtagande"
           }
         }
       ],

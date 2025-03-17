@@ -84,7 +84,33 @@
       "note": {
         "en": "Templates provided in either Microsoft Office or Google Workspace formats. Includes style guide for consistent usage.",
         "sv": "Mallar tillhandahålls i antingen Microsoft Office och Google Workspace-format. Inkluderar stilguide för konsekvent användning."
-      }
+      },
+      "bulkDiscounts": [
+        {
+          "quantity": 2,
+          "discount": 5,
+          "description": {
+            "en": "5% discount for 2 template sets",
+            "sv": "5% rabatt för 2 mallset"
+          }
+        },
+        {
+          "quantity": 3,
+          "discount": 10,
+          "description": {
+            "en": "10% discount for 3-4 template sets",
+            "sv": "10% rabatt för 3-4 mallset"
+          }
+        },
+        {
+          "quantity": 5,
+          "discount": 15,
+          "description": {
+            "en": "15% discount for 5+ template sets",
+            "sv": "15% rabatt för 5+ mallset"
+          }
+        }
+      ]
     },
     {
       "name": {
@@ -158,7 +184,25 @@
       "note": {
         "en": "Includes print-ready files in CMYK colour space, mockups, and PDF proofs. Print coordination service available, excludes printing costs.",
         "sv": "Inkluderar tryckfärdiga filer i CMYK-färgrymd, mockups och PDF-korrektur. Tryckkoordineringstjänst tillgänglig, exklusive tryckkostnader."
-      }
+      },
+      "bulkDiscounts": [
+        {
+          "quantity": 3,
+          "discount": 5,
+          "description": {
+            "en": "5% discount for 3-4 design items",
+            "sv": "5% rabatt för 3-4 designprojekt"
+          }
+        },
+        {
+          "quantity": 5,
+          "discount": 10,
+          "description": {
+            "en": "10% discount for 5+ design items",
+            "sv": "10% rabatt för 5+ designprojekt"
+          }
+        }
+      ]
     },
     {
       "name": {
@@ -311,7 +355,25 @@
       "note": {
         "en": "Basic package includes brand-consistent designs for up to 5 different marketing materials. Premium includes up to 10 with additional consultation.",
         "sv": "Grundpaketet inkluderar varumärkeskonsekventa designer för upp till 5 olika marknadsföringsmaterial. Premium inkluderar upp till 10."
-      }
+      },
+      "bulkDiscounts": [
+        {
+          "quantity": 2,
+          "discount": 5,
+          "description": {
+            "en": "5% discount for 2 packages",
+            "sv": "5% rabatt för 2 paket"
+          }
+        },
+        {
+          "quantity": 3,
+          "discount": 10,
+          "description": {
+            "en": "10% discount for 3+ packages",
+            "sv": "10% rabatt för 3+ paket"
+          }
+        }
+      ]
     },
     {
       "name": {

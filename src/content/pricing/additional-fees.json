@@ -130,6 +130,16 @@
           }
         }
       ],
+      "bulkDiscounts": [
+        {
+          "threshold": 3,
+          "discount": 5,
+          "description": {
+            "en": "5% discount for rentals of 7+ days",
+            "sv": "5% rabatt för uthyrning 7+ dagar"
+          }
+        }
+      ],
       "note": {
         "en": "Refundable security deposit required. Insurance excess and software licences not included. Equipment must be returned in original condition.",
         "sv": "Återbetalningsbar deposition krävs. Självrisk och programvarulicenser ingår ej. Utrustning måste återlämnas i ursprungligt skick."
@@ -184,6 +194,24 @@
           "unit": {
             "en": "permit",
             "sv": "tillstånd"
+          }
+        }
+      ],
+      "bulkDiscounts": [
+        {
+          "threshold": 5,
+          "discount": 5,
+          "description": {
+            "en": "5% discount for 5-9 locations",
+            "sv": "5% rabatt för 5-9 platser"
+          }
+        },
+        {
+          "threshold": 10,
+          "discount": 10,
+          "description": {
+            "en": "10% discount for 10+ locations",
+            "sv": "10% rabatt för 10+ platser"
           }
         }
       ],

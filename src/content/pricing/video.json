@@ -49,6 +49,32 @@
           }
         }
       ],
+      "bulkDiscounts": [
+        {
+          "quantity": 10,
+          "discount": 5,
+          "description": {
+            "en": "5% off for 10+ hours",
+            "sv": "5% rabatt för 10+ timmar"
+          }
+        },
+        {
+          "quantity": 20,
+          "discount": 10,
+          "description": {
+            "en": "10% off for 20+ hours",
+            "sv": "10% rabatt för 20+ timmar"
+          }
+        },
+        {
+          "quantity": 40,
+          "discount": 15,
+          "description": {
+            "en": "15% off for 40+ hours",
+            "sv": "15% rabatt för 40+ timmar"
+          }
+        }
+      ],
       "note": {
         "en": "Minimum 2 hours per project. Complex motion graphics or 3D effects quoted separately. Includes export in up to three formats and two revision rounds.",
         "sv": "Minimum 2 timmar per projekt. Komplexa motion graphics eller 3D-effekter offereras separat. Inkluderar export i upp till tre format och två revideringsrundor."
@@ -126,6 +152,24 @@
             "sv": "Få allt oredigerat material från din videoinspelning, levererat säkert i högupplöst format."
           },
           "price": 1000
+        }
+      ],
+      "bulkDiscounts": [
+        {
+          "quantity": 3,
+          "discount": 5,
+          "description": {
+            "en": "5% off for 3+ sessions",
+            "sv": "5% rabatt för 3+ sessioner"
+          }
+        },
+        {
+          "quantity": 5,
+          "discount": 10,
+          "description": {
+            "en": "10% off for 5+ sessions",
+            "sv": "10% rabatt för 5+ sessioner"
+          }
         }
       ],
       "note": {
@@ -208,6 +252,32 @@
           "unit": {
             "en": "day",
             "sv": "dag"
+          }
+        }
+      ],
+      "bulkDiscounts": [
+        {
+          "quantity": 2,
+          "discount": 5,
+          "description": {
+            "en": "5% off for 2+ days",
+            "sv": "5% rabatt för 2+ dagar"
+          }
+        },
+        {
+          "quantity": 4,
+          "discount": 10,
+          "description": {
+            "en": "10% off for 4+ days",
+            "sv": "10% rabatt för 4+ dagar"
+          }
+        },
+        {
+          "quantity": 6,
+          "discount": 15,
+          "description": {
+            "en": "15% off for 6+ days",
+            "sv": "15% rabatt för 6+ dagar"
           }
         }
       ],

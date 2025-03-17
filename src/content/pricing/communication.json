@@ -23,6 +23,32 @@
         "en": "article",
         "sv": "artikel"
       },
+      "bulkDiscounts": [
+        {
+          "threshold": 5,
+          "discount": 5,
+          "description": {
+            "en": "5% discount on orders of 5+ articles",
+            "sv": "5% rabatt vid beställning av 5+ artiklar"
+          }
+        },
+        {
+          "threshold": 10,
+          "discount": 10,
+          "description": {
+            "en": "10% discount on orders of 10+ articles",
+            "sv": "10% rabatt vid beställning av 10+ artiklar"
+          }
+        },
+        {
+          "threshold": 20,
+          "discount": 15,
+          "description": {
+            "en": "15% discount on orders of 20+ articles",
+            "sv": "15% rabatt vid beställning av 20+ artiklar"
+          }
+        }
+      ],
       "options": [
         {
           "name": {
@@ -118,6 +144,32 @@
         "en": "month",
         "sv": "månad"
       },
+      "bulkDiscounts": [
+        {
+          "threshold": 3,
+          "discount": 5,
+          "description": {
+            "en": "5% discount for 3+ month commitment",
+            "sv": "5% rabatt vid 3+ månaders åtagande"
+          }
+        },
+        {
+          "threshold": 6,
+          "discount": 10,
+          "description": {
+            "en": "10% discount for 6+ month commitment",
+            "sv": "10% rabatt vid 6+ månaders åtagande"
+          }
+        },
+        {
+          "threshold": 12,
+          "discount": 15,
+          "description": {
+            "en": "15% discount for 12+ month commitment",
+            "sv": "15% rabatt vid 12+ månaders åtagande"
+          }
+        }
+      ],
       "options": [
         {
           "name": {

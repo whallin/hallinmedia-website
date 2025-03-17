@@ -52,7 +52,33 @@
       "note": {
         "en": "Minimum order of 5 products. Bulk discounts available for 10+ images. Includes basic retouching and two file formats.",
         "sv": "Minimibeställning 5 produkter. Volymrabatter tillgängliga för 10+ bilder. Inkluderar grundläggande retuschering och två filformat."
-      }
+      },
+      "bulkDiscounts": [
+        {
+          "threshold": 10,
+          "discount": 5,
+          "description": {
+            "en": "5% discount for 10-19 images",
+            "sv": "5% rabatt för 10-19 bilder"
+          }
+        },
+        {
+          "threshold": 20,
+          "discount": 10,
+          "description": {
+            "en": "10% discount for 20-49 images",
+            "sv": "10% rabatt för 20-49 bilder"
+          }
+        },
+        {
+          "threshold": 50,
+          "discount": 15,
+          "description": {
+            "en": "15% discount for 50+ images",
+            "sv": "15% rabatt för 50+ bilder"
+          }
+        }
+      ]
     },
     {
       "name": {
@@ -130,7 +156,25 @@
       "note": {
         "en": "Minimum 1-hour booking per project. Bulk discounts available for 10+ images. Includes up to 2 revision rounds per image. Files delivered in both print and web-ready formats.",
         "sv": "Minimum 1 timmes bokning per projekt. Volymrabatter tillgängliga för 10+ bilder. Inkluderar upp till 2 revideringsrundor per bild. Filer levereras i både tryck- och webbklart format."
-      }
+      },
+      "bulkDiscounts": [
+        {
+          "threshold": 5,
+          "discount": 5,
+          "description": {
+            "en": "5% discount for 5-9 hours",
+            "sv": "5% rabatt för 5-9 timmar"
+          }
+        },
+        {
+          "threshold": 10,
+          "discount": 10,
+          "description": {
+            "en": "10% discount for 10+ hours",
+            "sv": "10% rabatt för 10+ timmar"
+          }
+        }
+      ]
     },
     {
       "name": {
@@ -209,7 +253,33 @@
       "note": {
         "en": "Includes 25 professionally retouched photographs. Additional images available at a reduced rate. Includes both high-resolution and web-optimised files. Travel costs apply outside Skellefteå municipality.",
         "sv": "Inkluderar 25 professionellt retuscherade fotografier. Extra bilder tillgängliga till reducerat pris. Inkluderar både högupplösta och webb-optimerade filer. Resekostnader tillkommer utanför Skellefteå kommun."
-      }
+      },
+      "bulkDiscounts": [
+        {
+          "threshold": 2,
+          "discount": 5,
+          "description": {
+            "en": "5% discount for 2-3 consecutive days",
+            "sv": "5% rabatt för 2-3 sammanhängande dagar"
+          }
+        },
+        {
+          "threshold": 4,
+          "discount": 10,
+          "description": {
+            "en": "10% discount for 4-5 consecutive days",
+            "sv": "10% rabatt för 4-5 sammanhängande dagar"
+          }
+        },
+        {
+          "threshold": 6,
+          "discount": 15,
+          "description": {
+            "en": "15% discount for 6+ consecutive days",
+            "sv": "15% rabatt för 6+ sammanhängande dagar"
+          }
+        }
+      ]
     }
   ]
 }
