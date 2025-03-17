@@ -87,7 +87,7 @@
       },
       "bulkDiscounts": [
         {
-          "quantity": 2,
+          "threshold": 2,
           "discount": 5,
           "description": {
             "en": "5% discount for 2 template sets",
@@ -95,7 +95,7 @@
           }
         },
         {
-          "quantity": 3,
+          "threshold": 3,
           "discount": 10,
           "description": {
             "en": "10% discount for 3-4 template sets",
@@ -103,7 +103,7 @@
           }
         },
         {
-          "quantity": 5,
+          "threshold": 5,
           "discount": 15,
           "description": {
             "en": "15% discount for 5+ template sets",
@@ -187,7 +187,7 @@
       },
       "bulkDiscounts": [
         {
-          "quantity": 3,
+          "threshold": 3,
           "discount": 5,
           "description": {
             "en": "5% discount for 3-4 design items",
@@ -195,7 +195,7 @@
           }
         },
         {
-          "quantity": 5,
+          "threshold": 5,
           "discount": 10,
           "description": {
             "en": "10% discount for 5+ design items",
@@ -358,7 +358,7 @@
       },
       "bulkDiscounts": [
         {
-          "quantity": 2,
+          "threshold": 2,
           "discount": 5,
           "description": {
             "en": "5% discount for 2 packages",
@@ -366,7 +366,7 @@
           }
         },
         {
-          "quantity": 3,
+          "threshold": 3,
           "discount": 10,
           "description": {
             "en": "10% discount for 3+ packages",

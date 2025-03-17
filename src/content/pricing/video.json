@@ -51,7 +51,7 @@
       ],
       "bulkDiscounts": [
         {
-          "quantity": 10,
+          "threshold": 10,
           "discount": 5,
           "description": {
             "en": "5% off for 10+ hours",
@@ -59,7 +59,7 @@
           }
         },
         {
-          "quantity": 20,
+          "threshold": 20,
           "discount": 10,
           "description": {
             "en": "10% off for 20+ hours",
@@ -67,7 +67,7 @@
           }
         },
         {
-          "quantity": 40,
+          "threshold": 40,
           "discount": 15,
           "description": {
             "en": "15% off for 40+ hours",
@@ -156,7 +156,7 @@
       ],
       "bulkDiscounts": [
         {
-          "quantity": 3,
+          "threshold": 3,
           "discount": 5,
           "description": {
             "en": "5% off for 3+ sessions",
@@ -164,7 +164,7 @@
           }
         },
         {
-          "quantity": 5,
+          "threshold": 5,
           "discount": 10,
           "description": {
             "en": "10% off for 5+ sessions",
@@ -257,7 +257,7 @@
       ],
       "bulkDiscounts": [
         {
-          "quantity": 2,
+          "threshold": 2,
           "discount": 5,
           "description": {
             "en": "5% off for 2+ days",
@@ -265,7 +265,7 @@
           }
         },
         {
-          "quantity": 4,
+          "threshold": 4,
           "discount": 10,
           "description": {
             "en": "10% off for 4+ days",
@@ -273,7 +273,7 @@
           }
         },
         {
-          "quantity": 6,
+          "threshold": 6,
           "discount": 15,
           "description": {
             "en": "15% off for 6+ days",

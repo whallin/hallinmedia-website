@@ -72,7 +72,7 @@
       ],
       "bulkDiscounts": [
         {
-          "quantity": 3,
+          "threshold": 3,
           "discount": 5,
           "description": {
             "en": "5% off for 3+ month commitment",
@@ -80,7 +80,7 @@
           }
         },
         {
-          "quantity": 6,
+          "threshold": 6,
           "discount": 10,
           "description": {
             "en": "10% off for 6+ month commitment",
@@ -88,7 +88,7 @@
           }
         },
         {
-          "quantity": 12,
+          "threshold": 12,
           "discount": 15,
           "description": {
             "en": "15% off for 12+ month commitment",
@@ -145,7 +145,7 @@
       ],
       "bulkDiscounts": [
         {
-          "quantity": 3,
+          "threshold": 3,
           "discount": 5,
           "description": {
             "en": "5% off for 3+ month commitment",
@@ -153,7 +153,7 @@
           }
         },
         {
-          "quantity": 6,
+          "threshold": 6,
           "discount": 10,
           "description": {
             "en": "10% off for 6+ month commitment",
@@ -161,7 +161,7 @@
           }
         },
         {
-          "quantity": 12,
+          "threshold": 12,
           "discount": 15,
           "description": {
             "en": "15% off for 12+ month commitment",
@@ -237,7 +237,7 @@
       ],
       "bulkDiscounts": [
         {
-          "quantity": 3,
+          "threshold": 3,
           "discount": 5,
           "description": {
             "en": "5% off for 3+ month commitment",
@@ -245,7 +245,7 @@
           }
         },
         {
-          "quantity": 6,
+          "threshold": 6,
           "discount": 10,
           "description": {
             "en": "10% off for 6+ month commitment",
@@ -253,7 +253,7 @@
           }
         },
         {
-          "quantity": 12,
+          "threshold": 12,
           "discount": 15,
           "description": {
             "en": "15% off for 12+ month commitment",
