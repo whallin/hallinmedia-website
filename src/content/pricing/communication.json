@@ -150,7 +150,7 @@
           "discount": 5,
           "description": {
             "en": "5% discount for 3+ month commitment",
-            "sv": "5% rabatt vid 3+ månaders åtagande"
+            "sv": "5% rabatt vid 3+ månaders bindningstid"
           }
         },
         {
@@ -158,7 +158,7 @@
           "discount": 10,
           "description": {
             "en": "10% discount for 6+ month commitment",
-            "sv": "10% rabatt vid 6+ månaders åtagande"
+            "sv": "10% rabatt vid 6+ månaders bindningstid"
           }
         },
         {
@@ -166,7 +166,7 @@
           "discount": 15,
           "description": {
             "en": "15% discount for 12+ month commitment",
-            "sv": "15% rabatt vid 12+ månaders åtagande"
+            "sv": "15% rabatt vid 12+ månaders bindningstid"
           }
         }
       ],

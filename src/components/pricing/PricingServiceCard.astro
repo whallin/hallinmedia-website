@@ -19,6 +19,11 @@ interface Props {
       unit?: { en: string; sv: string };
       optional?: boolean;
     }>;
+    bulkDiscounts?: Array<{
+      threshold: number;
+      discount: number;
+      description: { en: string; sv: string };
+    }>;
   };
 }
 
@@ -31,6 +36,11 @@ const translations = {
     addition: "Addition",
     startingAt: "Starting at",
     per: "per",
+    bulkDiscounts: "Volume Discounts",
+    fromUnits: "From",
+    units: "units",
+    discount: "discount",
+    getDiscount: "Get",
   },
   sv: {
     options: "Alternativ",
@@ -40,6 +50,11 @@ const translations = {
     addition: "Tillägg",
     startingAt: "Pris från",
     per: "per",
+    bulkDiscounts: "Volymrabatter",
+    fromUnits: "Från",
+    units: "enheter",
+    discount: "rabatt",
+    getDiscount: "Få",
   },
 };
 
@@ -95,7 +110,7 @@ const { service } = Astro.props;
     </div>
   </div>
   {
-    (service.options || service.addons) && (
+    (service.options || service.addons || service.bulkDiscounts) && (
       <div class="divide-y divide-stone-200 dark:divide-stone-700">
         {service.options && service.options.length > 0 && (
           <div class="p-4 sm:p-6">
@@ -159,6 +174,40 @@ const { service } = Astro.props;
                 </div>
               ))}
             </dl>
+          </div>
+        )}
+
+        {service.bulkDiscounts && service.bulkDiscounts.length > 0 && (
+          <div class="p-4 sm:p-6">
+            <h4 class="mb-4 font-serif font-medium text-stone-700 dark:text-stone-100">
+              {translations[locale].bulkDiscounts}
+            </h4>
+            <div
+              class={`grid gap-3 ${service.bulkDiscounts.length > 1 ? (service.bulkDiscounts.length % 3 === 0 ? "sm:grid-cols-3" : "sm:grid-cols-2") : "sm:grid-cols-1"}`}
+            >
+              {service.bulkDiscounts.map((discount) => (
+                <div class="group relative overflow-hidden border border-dashed border-stone-300 p-4 transition-colors hover:border-red-500 dark:border-stone-700">
+                  <div class="absolute -right-6 -bottom-1/4 opacity-10 transition-opacity group-hover:opacity-20">
+                    <Icon name="ph:percent-duotone" class="h-32 w-32 text-red-500" aria-hidden="true" />
+                  </div>
+                  <div class="relative space-y-2">
+                    <div class="flex justify-between font-mono text-xs text-stone-500 dark:text-stone-400">
+                      {translations[locale].fromUnits}{" "}
+                      <span class="font-medium text-stone-700 dark:text-stone-100">
+                        {discount.threshold} {translations[locale].units}
+                      </span>
+                    </div>
+                    <div class="flex items-baseline">
+                      <span class="font-handwrite text-2xl text-red-500">{discount.discount}%</span>
+                      <span class="font-handwrite ml-2 text-stone-500 dark:text-stone-400">
+                        {translations[locale].discount}
+                      </span>
+                    </div>
+                    <p class="font-serif text-sm text-stone-500 dark:text-stone-400">{discount.description[locale]}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         )}
       </div>
