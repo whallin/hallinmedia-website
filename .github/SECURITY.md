@@ -13,7 +13,7 @@
 I, William Hallin, take the security of our project very seriously. If you feel you've discovered a security issue, please take these steps:
 
 1. **Do not** make the vulnerability public until it has been resolved.
-2. Send your findings to [william@hallin.media](mailto:william@hallin.media).
+2. Send your findings to [abuse@hallin.media](mailto:abuse@hallin.media).
 3. Please provide thorough details regarding the vulnerability.
    - **Description of the issue:**
    - **Steps for reproducing:**
@@ -42,4 +42,4 @@ I'm committed to collaborating with security researchers and the community to en
 
 ---
 
-_If you have any questions or issues about our security policy, please email [william@hallin.media](mailto:william@hallin.media)._
+_If you have any questions or issues about my security policy, please email [abuse@hallin.media](mailto:abuse@hallin.media)._
