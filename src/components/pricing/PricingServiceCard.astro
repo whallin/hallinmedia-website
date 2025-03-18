@@ -72,9 +72,9 @@ const { service } = Astro.props;
         <p class="font-serif text-stone-500 dark:text-stone-400">{service.description[locale]}</p>
         {
           service.note && (
-            <aside class="mt-2 rounded-md border border-red-200 bg-red-100/25 p-3 dark:border-red-700 dark:bg-red-800/25">
-              <p class="flex flex-col gap-2 text-sm text-red-700 dark:text-red-400">
-                <Icon name="ph:info-duotone" class="flex-shrink-0" aria-hidden="true" />
+            <aside class="mt-2 rounded-md border border-amber-200 bg-amber-100/25 p-4 dark:border-amber-900/50 dark:bg-amber-900/25">
+              <p class="flex items-start gap-2 text-sm text-amber-800 dark:text-amber-400">
+                <Icon name="ph:info-duotone" class="h-5 w-5 flex-shrink-0" aria-hidden="true" />
                 {service.note[locale]}
               </p>
             </aside>

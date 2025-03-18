@@ -36,6 +36,21 @@ const locale = Astro.currentLocale === "en" || Astro.currentLocale === "sv" ? As
         <Icon name="ph:arrow-right" class="flex-shrink-0" aria-hidden="true" />
       </Button>
     </nav>
+    <aside
+      class="mt-2 rounded-md border border-amber-200 bg-amber-100/25 p-4 dark:border-amber-900/50 dark:bg-amber-900/25"
+    >
+      <div class="flex flex-col items-start gap-2 text-sm text-amber-800 dark:text-amber-400">
+        <div class="flex items-center gap-2">
+          <Icon name="ph:info-duotone" class="h-6 w-6 flex-shrink-0" aria-hidden="true" />
+          <h2 class="font-semibold">Viktigt om priser</h2>
+        </div>
+        <p class="text-sm">
+          Priskalkylatorn räknar inte med volymrabatter eller andra rabatter som kan gälla för ditt projekt, eftersom
+          rabatterna tilldelas beroende på projektets storlek och omfång. Kontakta mig gärna och begär en gratis offert
+          för att få en mer exakt prisuppskattning.
+        </p>
+      </div>
+    </aside>
     <PricingTaxToggle />
     <form id="calculator-form" class="space-y-12">
       {
@@ -323,7 +338,7 @@ const locale = Astro.currentLocale === "en" || Astro.currentLocale === "sv" ? As
 
         const serviceName = checkbox.name.replace("service-", "");
         const selectedOption = serviceContainer.querySelector<HTMLInputElement>(
-          `input[name="option-${serviceName}"]:checked`,
+          `input[name="option-${serviceName}"]:checked`
         );
 
         // Add service or option price
@@ -369,7 +384,7 @@ const locale = Astro.currentLocale === "en" || Astro.currentLocale === "sv" ? As
 
         const serviceName = checkbox.name.replace("service-", "");
         const selectedOption = serviceContainer.querySelector<HTMLInputElement>(
-          `input[name="option-${serviceName}"]:checked`,
+          `input[name="option-${serviceName}"]:checked`
         );
 
         // Apply option percentage
