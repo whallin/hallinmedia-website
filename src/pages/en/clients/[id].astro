@@ -2,6 +2,7 @@
 import { Icon } from "astro-icon/components";
 import { Image, Picture } from "astro:assets";
 import { getCollection } from "astro:content";
+import { getRelativeLocaleUrl } from "astro:i18n";
 import Layout from "../../../layouts/Layout.astro";
 
 export async function getStaticPaths() {
@@ -192,17 +193,25 @@ const portfolioPosts = await getCollection("portfolioEnCollection").then((posts)
       }
       {
         portfolioPosts.length > 0 && (
-          <section aria-label="Related Work" class="space-y-8">
+          <section class="space-y-8">
             <header class="flex items-center justify-between">
-              <h2 class="font-serif text-3xl font-light text-stone-900 italic dark:text-stone-100">Related works</h2>
-              <Icon name="ph:sparkle-duotone" class="h-8 w-8 text-red-500" aria-hidden="true" />
+              <h2 class="font-serif text-xl font-light text-stone-900 italic dark:text-stone-100">
+                Related works to {data.name}
+              </h2>
+              <Icon name="ph:sparkle-duotone" class="h-6 w-6 text-[var(--dominant-color)]" aria-hidden="true" />
             </header>
             <div class="grid gap-4 sm:grid-cols-2">
               {portfolioPosts.map((post) => (
-                <article class="group relative overflow-hidden rounded-lg border border-stone-300 bg-amber-50/50 p-4 transition hover:-translate-y-1 active:scale-95 active:opacity-50 dark:border-stone-700 dark:bg-stone-800/50">
-                  <h3 class="mb-2 font-serif text-xl text-stone-900 dark:text-stone-100">{post.data.title}</h3>
-                  <p class="text-sm font-light text-stone-700 dark:text-stone-300">{post.data.description}</p>
-                </article>
+                <a href={getRelativeLocaleUrl(locale, `portfolio/${post.id}`)}>
+                  <article class="group relative cursor-pointer overflow-hidden rounded-lg border border-stone-300 bg-amber-50/50 p-4 transition hover:border-[var(--dominant-color)] active:scale-95 active:opacity-50 dark:border-stone-700 dark:bg-stone-800/50">
+                    <h3 class="mb-2 line-clamp-1 font-serif text-lg text-stone-900 dark:text-stone-100">
+                      {post.data.title}
+                    </h3>
+                    <p class="line-clamp-3 text-sm font-light text-stone-700 dark:text-stone-300">
+                      {post.data.description}
+                    </p>
+                  </article>
+                </a>
               ))}
             </div>
           </section>
