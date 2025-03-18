@@ -29,6 +29,33 @@ const documentTypeColors = {
   Riktlinjer: "text-pink-500",
   Annan: "text-gray-500",
 } as const;
+
+const legalSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  mainEntityOfPage: {
+    "@type": "WebPage",
+    "@id": Astro.url,
+  },
+  headline: doc.data.title,
+  description: doc.data.description,
+  image: "https://hallin.media/meta.png",
+  author: {
+    "@type": "Organization",
+    name: "HallinMedia",
+    url: "https://hallin.media/meta.png",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "HallinMedia",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://hallin.media/meta.png",
+    },
+  },
+  datePublished: new Date(doc.data.publishedDate).toISOString().split("T")[0],
+  dateModified: new Date(doc.data.lastEdited || doc.data.publishedDate).toISOString().split("T")[0],
+};
 ---
 
 <Layout
@@ -38,6 +65,7 @@ const documentTypeColors = {
   header={doc.data.title}
   headerIcon={doc.data.icon}
   headerDescription={doc.data.description}
+  schema={legalSchema}
 >
   <article class="mx-auto max-w-2xl space-y-8">
     <header
