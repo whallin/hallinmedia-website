@@ -43,8 +43,8 @@
       "addLabels": ["devcontainer"]
     },
     {
-      "matchPackagePatterns": ["*"],
-      "addLabels": ["dependencies"]
+      "addLabels": ["dependencies"],
+      "matchPackageNames": ["*"]
     }
   ],
   "assigneesFromCodeOwners": true,
