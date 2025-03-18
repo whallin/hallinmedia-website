@@ -338,7 +338,7 @@ const locale = Astro.currentLocale === "en" || Astro.currentLocale === "sv" ? As
 
         const serviceName = checkbox.name.replace("service-", "");
         const selectedOption = serviceContainer.querySelector<HTMLInputElement>(
-          `input[name="option-${serviceName}"]:checked`
+          `input[name="option-${serviceName}"]:checked`,
         );
 
         // Add service or option price
@@ -384,7 +384,7 @@ const locale = Astro.currentLocale === "en" || Astro.currentLocale === "sv" ? As
 
         const serviceName = checkbox.name.replace("service-", "");
         const selectedOption = serviceContainer.querySelector<HTMLInputElement>(
-          `input[name="option-${serviceName}"]:checked`
+          `input[name="option-${serviceName}"]:checked`,
         );
 
         // Apply option percentage
