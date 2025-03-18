@@ -456,7 +456,6 @@ const basePortfolioSchema = ({ image }: { image: any }) =>
     .object({
       title: z.string().min(1, 'Title is required'),
       description: z.string().min(1, 'Description is required'),
-      type: z.enum(['case-study', 'portfolio-item']),
       featured: z.boolean().default(false),
       featuredImage: image(),
       featuredImageAlt: z.string().min(1, 'Image alt text is required'),

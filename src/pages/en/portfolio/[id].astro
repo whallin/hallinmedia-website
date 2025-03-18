@@ -1,0 +1,298 @@
+---
+import type { ImageMetadata } from "astro";
+import { Icon } from "astro-icon/components";
+import { Picture } from "astro:assets";
+import { getCollection, render } from "astro:content";
+import { getRelativeLocaleUrl } from "astro:i18n";
+import Layout from "../../../layouts/Layout.astro";
+
+export async function getStaticPaths() {
+  const portfolioItems = await getCollection("portfolioEnCollection");
+  return portfolioItems.map((item) => ({
+    params: { id: item.id },
+    props: { item },
+  }));
+}
+
+const { item } = Astro.props;
+const { Content } = await render(item);
+const { data } = item;
+const locale = Astro.currentLocale === "en" || Astro.currentLocale === "sv" ? Astro.currentLocale : "en";
+const client = await getCollection("clientsCollection").then((clients) => clients.find((c) => c.id === data.client.id));
+
+const formattedDate = new Date(data.date)
+  .toLocaleDateString("en-GB", {
+    year: "numeric",
+    month: "long",
+  })
+  .replace(/^\w/, (c) => c.toUpperCase());
+
+const portfolioSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  mainEntityOfPage: {
+    "@type": "WebPage",
+    "@id": Astro.url,
+  },
+  headline: data.title,
+  description: data.description,
+  image: data.featuredImage.src,
+  author: {
+    "@type": "Person",
+    name: "William Hallin",
+    url: "https://hallin.media/avatar.jpeg",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "HallinMedia",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://hallin.media/meta.png",
+    },
+  },
+  datePublished: new Date(data.date).toISOString().split("T")[0],
+  dateModified: new Date().toISOString().split("T")[0],
+};
+---
+
+<Layout
+  title={`${data.seo?.title || data.title} - Portfolio`}
+  description={data.seo?.description || data.description}
+  keywords={data.seo?.keywords || []}
+  article={true}
+  schema={portfolioSchema}
+>
+  <section>
+    <article class="mx-auto max-w-2xl space-y-12">
+      <header class="space-y-6">
+        <div class="space-y-4">
+          <div class="flex flex-wrap items-center justify-between gap-2">
+            <span
+              class="inline-flex items-center rounded-full bg-amber-100 px-3 py-1 text-sm font-medium text-amber-800 dark:bg-amber-900 dark:text-amber-100"
+            >
+              {data.category}
+            </span>
+            <time
+              datetime={new Date(data.date).toISOString()}
+              class="flex items-center gap-2 font-mono text-sm text-stone-500 dark:text-stone-400"
+            >
+              <Icon name="ph:calendar-duotone" class="h-5 w-5 text-red-500" aria-hidden="true" />
+              {formattedDate}
+            </time>
+          </div>
+          <h1 class="font-serif text-4xl font-semibold text-stone-700 dark:text-stone-100">{data.title}</h1>
+          <p class="font-serif text-lg text-stone-500 dark:text-stone-400">{data.description}</p>
+        </div>
+        <figure class="overflow-hidden rounded-lg">
+          <Picture
+            src={data.featuredImage}
+            alt={data.featuredImageAlt}
+            width={1920}
+            height={1080}
+            widths={[640, 768, 1024, 1280, 1920]}
+            formats={["avif", "webp"]}
+            class="aspect-video w-full object-cover transition-transform select-none hover:scale-105 hover:rotate-1"
+          />
+        </figure>
+      </header>
+      <div
+        class="prose prose-stone prose-li:text-stone-500 prose-li:dark:text-stone-400 prose-li:font-serif dark:prose-invert prose-headings:text-stone-700 prose-headings:dark:text-stone-100 prose-headings:font-serif prose-p:text-stone-500 prose-p:dark:text-stone-400 prose-p:font-serif prose-a:text-red-500 prose-a:underline prose-a:decoration-dashed prose-a:decoration-from-font prose-a:underline-offset-4 prose-a:hover:bg-red-500 prose-a:hover:text-stone-100 prose-a:active:opacity-50"
+      >
+        {
+          data.content && (
+            <div>
+              {data.content.problem && (
+                <section>
+                  <h2 class="relative font-serif text-2xl font-semibold text-stone-700 dark:text-stone-100">
+                    <span class="relative z-10 inline-flex items-center gap-2 bg-amber-50 pr-4 dark:bg-stone-900">
+                      <Icon name="ph:question-duotone" class="h-6 w-6 text-red-500" aria-hidden="true" />
+                      Problem
+                    </span>
+                    <span
+                      class="absolute top-1/2 right-0 left-0 -z-0 h-px bg-stone-200 dark:bg-stone-700"
+                      aria-hidden="true"
+                    />
+                  </h2>
+                  <p class="font-serif text-stone-500 dark:text-stone-400">{data.content.problem}</p>
+                </section>
+              )}
+              {data.content.solution && (
+                <section>
+                  <h2 class="relative font-serif text-2xl font-semibold text-stone-700 dark:text-stone-100">
+                    <span class="relative z-10 inline-flex items-center gap-2 bg-amber-50 pr-4 dark:bg-stone-900">
+                      <Icon name="ph:lightbulb-duotone" class="h-6 w-6 text-red-500" aria-hidden="true" />
+                      Solution
+                    </span>
+                    <span
+                      class="absolute top-1/2 right-0 left-0 -z-0 h-px bg-stone-200 dark:bg-stone-700"
+                      aria-hidden="true"
+                    />
+                  </h2>
+                  <p class="font-serif text-stone-500 dark:text-stone-400">{data.content.solution}</p>
+                </section>
+              )}
+              {data.content.process && (
+                <section>
+                  <h2 class="relative font-serif text-2xl font-semibold text-stone-700 dark:text-stone-100">
+                    <span class="relative z-10 inline-flex items-center gap-2 bg-amber-50 pr-4 dark:bg-stone-900">
+                      <Icon name="ph:flow-arrow-duotone" class="h-6 w-6 text-red-500" aria-hidden="true" />
+                      Process
+                    </span>
+                    <span
+                      class="absolute top-1/2 right-0 left-0 -z-0 h-px bg-stone-200 dark:bg-stone-700"
+                      aria-hidden="true"
+                    />
+                  </h2>
+                  <p class="font-serif text-stone-500 dark:text-stone-400">{data.content.process}</p>
+                </section>
+              )}
+              {data.content.results && (
+                <section>
+                  <h2 class="relative font-serif text-2xl font-semibold text-stone-700 dark:text-stone-100">
+                    <span class="relative z-10 inline-flex items-center gap-2 bg-amber-50 pr-4 dark:bg-stone-900">
+                      <Icon name="ph:chart-line-up-duotone" class="h-6 w-6 text-red-500" aria-hidden="true" />
+                      Results
+                    </span>
+                    <span
+                      class="absolute top-1/2 right-0 left-0 -z-0 h-px bg-stone-200 dark:bg-stone-700"
+                      aria-hidden="true"
+                    />
+                  </h2>
+                  <p class="font-serif text-stone-500 dark:text-stone-400">{data.content.results}</p>
+                </section>
+              )}
+            </div>
+          )
+        }
+        <Content />
+        {
+          data.content?.videos && data.content.videos.length > 0 && (
+            <section>
+              <h2 class="relative font-serif text-2xl font-semibold text-stone-700 dark:text-stone-100">
+                <span class="relative z-10 inline-flex items-center gap-2 bg-amber-50 pr-4 dark:bg-stone-900">
+                  <Icon name="ph:video-camera-duotone" class="h-6 w-6 text-red-500" aria-hidden="true" />
+                  Project videos
+                </span>
+                <span
+                  class="absolute top-1/2 right-0 left-0 -z-0 h-px bg-stone-200 dark:bg-stone-700"
+                  aria-hidden="true"
+                />
+              </h2>
+              <div class="grid gap-4">
+                {data.content.videos.map((videoUrl: string) => (
+                  <div class="aspect-video w-full">
+                    <iframe
+                      src={videoUrl.replace("youtube.com/watch?v=", "youtube.com/embed/")}
+                      title="YouTube video player"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      referrerpolicy="strict-origin-when-cross-origin"
+                      allowfullscreen
+                      class="h-full w-full rounded-lg"
+                    />
+                  </div>
+                ))}
+              </div>
+            </section>
+          )
+        }
+        {
+          data.content?.images && data.content.images.length > 0 && (
+            <section>
+              <h2 class="relative font-serif text-2xl font-semibold text-stone-700 dark:text-stone-100">
+                <span class="relative z-10 inline-flex items-center gap-2 bg-amber-50 pr-4 dark:bg-stone-900">
+                  <Icon name="ph:image-duotone" class="h-6 w-6 text-red-500" aria-hidden="true" />
+                  Project gallery
+                </span>
+                <span
+                  class="absolute top-1/2 right-0 left-0 -z-0 h-px bg-stone-200 dark:bg-stone-700"
+                  aria-hidden="true"
+                />
+              </h2>
+              <div class="grid gap-4 sm:grid-cols-2">
+                {data.content.images.map((image: ImageMetadata) => (
+                  <Picture
+                    src={image}
+                    alt=""
+                    width={800}
+                    height={600}
+                    widths={[400, 800]}
+                    formats={["avif", "webp"]}
+                    class="aspect-video w-full rounded-lg object-cover select-none"
+                  />
+                ))}
+              </div>
+            </section>
+          )
+        }
+      </div>
+
+      <footer class="space-y-12 border-t border-stone-200 pt-12 dark:border-stone-700">
+        {
+          data.links && data.links.length > 0 && (
+            <section class="space-y-6">
+              <h2 class="relative font-serif text-2xl font-semibold text-stone-700 dark:text-stone-100">
+                <span class="relative z-10 inline-flex items-center gap-2 bg-amber-50 pr-4 dark:bg-stone-900">
+                  <Icon name="ph:link-duotone" class="h-6 w-6 text-red-500" aria-hidden="true" />
+                  External links
+                </span>
+                <span
+                  class="absolute top-1/2 right-0 left-0 -z-0 h-px bg-stone-200 dark:bg-stone-700"
+                  aria-hidden="true"
+                />
+              </h2>
+              <nav class="flex flex-wrap gap-4">
+                {client && (
+                  <a
+                    href={getRelativeLocaleUrl(locale, `clients/${client.id}`)}
+                    class="group relative overflow-hidden rounded-lg border border-stone-200 bg-amber-100/25 px-4 py-2 text-sm font-medium text-stone-700 transition hover:border-red-500 active:scale-95 active:opacity-50 dark:border-stone-700 dark:bg-stone-800 dark:text-stone-100"
+                  >
+                    <span class="flex items-center gap-2">
+                      <Icon name="ph:buildings-duotone" class="h-4 w-4" aria-hidden="true" />
+                      Visit customer profile
+                    </span>
+                  </a>
+                )}
+                {data.links.map((link) => (
+                  <a
+                    href={link.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="group relative overflow-hidden rounded-lg border border-stone-200 bg-amber-100/25 px-4 py-2 text-sm font-medium text-stone-700 transition hover:border-red-500 active:scale-95 active:opacity-50 dark:border-stone-700 dark:bg-stone-800 dark:text-stone-100"
+                  >
+                    <span class="flex items-center gap-2">
+                      <Icon name="ph:arrow-square-out-duotone" class="h-4 w-4" aria-hidden="true" />
+                      {link.label}
+                    </span>
+                  </a>
+                ))}
+              </nav>
+            </section>
+          )
+        }
+        {
+          data.tags && data.tags.length > 0 && (
+            <section class="space-y-6">
+              <h2 class="relative font-serif text-2xl font-semibold text-stone-700 dark:text-stone-100">
+                <span class="relative z-10 inline-flex items-center gap-2 bg-amber-50 pr-4 dark:bg-stone-900">
+                  <Icon name="ph:tag-duotone" class="h-6 w-6 text-red-500" aria-hidden="true" />
+                  Tags
+                </span>
+                <span
+                  class="absolute top-1/2 right-0 left-0 -z-0 h-px bg-stone-200 dark:bg-stone-700"
+                  aria-hidden="true"
+                />
+              </h2>
+              <ul class="flex flex-wrap gap-2">
+                {data.tags.map((tag) => (
+                  <li class="rounded-full bg-amber-100/50 px-3 py-1 text-sm text-stone-700 dark:bg-stone-800 dark:text-stone-300">
+                    #{tag}
+                  </li>
+                ))}
+              </ul>
+            </section>
+          )
+        }
+      </footer>
+    </article>
+  </section>
+</Layout>

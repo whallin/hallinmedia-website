@@ -1,0 +1,143 @@
+---
+import { Icon } from "astro-icon/components";
+import { Image, Picture } from "astro:assets";
+import { getCollection } from "astro:content";
+import Layout from "../../../layouts/Layout.astro";
+
+const [portfolioItems, clients] = await Promise.all([
+  getCollection("portfolioEnCollection"),
+  getCollection("clientsCollection"),
+]);
+
+const resolvedPortfolioItems = await Promise.all(
+  portfolioItems
+    .sort((a, b) => {
+      // First, sort by featured status
+      if (a.data.featured && !b.data.featured) return -1;
+      if (!a.data.featured && b.data.featured) return 1;
+      // Then by date
+      const dateComparison = new Date(b.data.date).getTime() - new Date(a.data.date).getTime();
+      if (dateComparison !== 0) return dateComparison;
+      // Then by category
+      const categoryComparison = a.data.category.localeCompare(b.data.category);
+      if (categoryComparison !== 0) return categoryComparison;
+      // Finally by title (a-z)
+      return a.data.title.localeCompare(b.data.title);
+    })
+    .map(async (item) => {
+      const client = clients.find((c) => c.id === item.data.client.id);
+      return {
+        ...item,
+        resolvedClient: client,
+      };
+    }),
+);
+
+const categories = [...new Set(portfolioItems.map((item) => item.data.category))];
+---
+
+<Layout
+  title="Past work & portfolio"
+  description="Explore my portfolio of past projects and creative work. From photography and video to graphic design, you'll find examples of my experience and expertise."
+  header="Portfolio"
+  headerIcon="ph:sparkle-duotone"
+  headerDescription="Here, I have collected a selection of my past projects and collaborations. Each project represents my passion for creativity and technical excellence. Feel free to explore my work and be inspired by the possibilities for your own project."
+>
+  <section class="mx-auto max-w-2xl space-y-12">
+    <nav class="flex flex-wrap items-center gap-2" aria-label="Portfolio categories">
+      <button
+        class="category-filter cursor-pointer rounded-full border border-stone-200 bg-amber-100/25 px-4 py-1.5 text-sm font-medium text-stone-700 transition hover:opacity-75 active:scale-95 active:opacity-50 data-[active=true]:bg-red-500 data-[active=true]:text-white dark:border-stone-700 dark:bg-stone-800 dark:text-stone-100"
+        data-category="all"
+        data-active="true"
+        aria-current="true"
+      >
+        All projects
+      </button>
+      {
+        categories.map((category) => (
+          <button
+            class="category-filter cursor-pointer rounded-full border border-stone-200 bg-amber-100/25 px-4 py-1.5 text-sm font-medium text-stone-700 transition hover:opacity-75 active:scale-95 active:opacity-50 data-[active=true]:bg-red-500 data-[active=true]:text-stone-100 dark:border-stone-700 dark:bg-stone-800 dark:text-stone-100"
+            data-category={category}
+          >
+            {category}
+          </button>
+        ))
+      }
+    </nav>
+    <section class="grid gap-6 sm:grid-cols-2">
+      {
+        resolvedPortfolioItems.map((item) => (
+          <article
+            class="portfolio-item group relative overflow-hidden rounded-lg border border-stone-200 bg-amber-50/50 transition hover:border-red-500 active:scale-95 active:opacity-50 dark:border-stone-700 dark:bg-stone-800/50"
+            data-category={item.data.category}
+          >
+            <a href={`portfolio/${item.id}`} class="block">
+              <div class="relative aspect-video overflow-hidden">
+                <Picture
+                  src={item.data.featuredImage}
+                  alt={item.data.featuredImageAlt}
+                  width={640}
+                  height={360}
+                  widths={[320, 640]}
+                  formats={["avif", "webp"]}
+                  class="h-full w-full object-cover transition-transform select-none group-hover:scale-105"
+                />
+                {item.data.featured && (
+                  <span class="absolute top-3 right-3 flex items-center gap-1 rounded-full bg-amber-100 px-3 py-1 text-xs font-medium text-amber-700 dark:bg-amber-900 dark:text-amber-100">
+                    <Icon name="ph:star-duotone" class="h-3 w-3" aria-hidden="true" />
+                    Featured
+                  </span>
+                )}
+              </div>
+              <div class="p-6">
+                <span class="rounded-full bg-amber-100/50 px-3 py-1 text-xs font-medium text-amber-700 dark:bg-stone-700 dark:text-stone-300">
+                  {item.data.category}
+                </span>
+                <h2 class="mt-4 mb-2 line-clamp-1 font-serif text-xl text-stone-900 dark:text-stone-100">
+                  {item.data.title}
+                </h2>
+                <p class="mb-4 line-clamp-3 text-sm font-light text-stone-700 dark:text-stone-300">
+                  {item.data.description}
+                </p>
+                {item.resolvedClient && (
+                  <footer class="flex items-center gap-2">
+                    <Image
+                      src={item.resolvedClient.data.avatar}
+                      alt={item.resolvedClient.data.name}
+                      width={24}
+                      height={24}
+                      widths={[24, 48]}
+                      class="h-6 w-6 rounded-full"
+                    />
+                    <span class="text-xs text-stone-600 dark:text-stone-400">{item.resolvedClient.data.name}</span>
+                  </footer>
+                )}
+              </div>
+            </a>
+          </article>
+        ))
+      }
+    </section>
+  </section>
+</Layout>
+
+<script>
+  const categoryButtons = document.querySelectorAll<HTMLButtonElement>(".category-filter");
+  const portfolioItems = document.querySelectorAll<HTMLElement>(".portfolio-item");
+
+  categoryButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const category = button.getAttribute("data-category");
+      categoryButtons.forEach((btn) => btn.setAttribute("data-active", "false"));
+      button.setAttribute("data-active", "true");
+
+      portfolioItems.forEach((item) => {
+        if (category === "all" || item.getAttribute("data-category") === category) {
+          item.style.display = ""; // Reset to default display value
+        } else {
+          item.style.display = "none";
+        }
+      });
+    });
+  });
+</script>
