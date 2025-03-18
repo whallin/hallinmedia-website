@@ -15,10 +15,10 @@ export async function getStaticPaths() {
 const { client } = Astro.props;
 const { data } = client;
 const locale = Astro.currentLocale === "en" || Astro.currentLocale === "sv" ? Astro.currentLocale : "en";
-const portfolioPosts = await getCollection("portfolioEnCollection").then((posts) =>
+const portfolioPosts = await getCollection("portfolioSvCollection").then((posts) =>
   posts
     .filter((post) => post.data.client?.id === client.id)
-    .sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime()),
+    .sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime())
 );
 ---
 
