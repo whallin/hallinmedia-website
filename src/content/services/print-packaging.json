@@ -14,7 +14,7 @@
   "icon": "ph:package-duotone",
   "color": "green",
   "pricing": {
-    "startingFrom": 5000,
+    "startingFrom": 2000,
     "unit": {
       "en": "project",
       "sv": "projekt"

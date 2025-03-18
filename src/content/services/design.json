@@ -14,7 +14,7 @@
   "icon": "ph:paint-brush-duotone",
   "color": "green",
   "pricing": {
-    "startingFrom": 650,
+    "startingFrom": 600,
     "unit": {
       "en": "hour",
       "sv": "timme"
