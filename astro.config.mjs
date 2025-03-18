@@ -23,7 +23,7 @@ export default defineConfig({
   integrations: [
     partytown({
       config: {
-        forward: ["dataLayer.push", "_hsq.push"],
+        forward: ["dataLayer.push"],
       },
     }),
     icon(),
