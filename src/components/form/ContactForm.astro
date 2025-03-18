@@ -257,13 +257,17 @@ const formFields = {
   if (form) {
     form.addEventListener("submit", async (e) => {
       e.preventDefault();
-
       try {
         updateButtonState("loading");
+        const formData = new FormData(form);
+        const jsonData = Object.fromEntries(formData);
 
         const response = await fetch("/api/contact/project", {
           method: "POST",
-          body: new FormData(form),
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(jsonData),
         });
 
         if (response.ok) {

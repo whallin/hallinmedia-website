@@ -23,9 +23,7 @@ export const POST: APIRoute = async ({ request }) => {
   }
 
   try {
-    const formData = await request.formData();
-    const data = Object.fromEntries(formData);
-
+    const data = await request.json();
     const missingFields = await validateFormData(data, PROJECT_REQUIRED_FIELDS);
 
     if (missingFields.length > 0) {
@@ -33,16 +31,19 @@ export const POST: APIRoute = async ({ request }) => {
         JSON.stringify({
           message: `Missing required fields: ${missingFields.join(', ')}`,
         }),
-        { status: 400 },
+        {
+          status: 400,
+          headers: corsHeaders(request),
+        },
       );
     }
 
     const { error } = await resend.emails.send({
       from: 'HallinMedia <form@re.hallin.media>',
       to: 'william@hallin.media',
-      replyTo: data.email as string,
+      replyTo: data.email,
       subject: `New Project Inquiry - ${data.name}`,
-      html: createProjectEmailHTML(data as unknown as ProjectForm),
+      html: createProjectEmailHTML(data as ProjectForm),
     });
 
     if (error) {
