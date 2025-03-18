@@ -522,31 +522,6 @@ const portfolioSvCollection = defineCollection({
         'E-handel',
         'Annat',
       ]),
-      content: z
-        .object({
-          problem: z.string().optional(),
-          lösning: z.string().optional(),
-          process: z.string().optional(),
-          resultat: z.string().optional(),
-          bilder: z.array(image()).optional(),
-          videor: z.array(z.string().url()).optional(),
-        })
-        .optional(),
-      links: z
-        .array(
-          z.object({
-            etikett: z.string(),
-            url: z.string().url(),
-          }),
-        )
-        .optional(),
-      seo: z
-        .object({
-          title: z.string().optional(),
-          description: z.string().optional(),
-          nyckelord: z.array(z.string()).optional(),
-        })
-        .optional(),
     }),
 });
 
