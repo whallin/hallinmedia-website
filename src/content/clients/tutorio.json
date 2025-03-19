@@ -1,0 +1,21 @@
+{
+  "name": "Tutorio",
+  "description": {
+    "en": "Tutorio is an educational platform designed to support students in their academic pursuits, offering resources for A Level, GCSE, Driving, and SAT preparation.",
+    "sv": "Tutorio är en utbildningsplattform som är utformad för att stödja studenter i deras akademiska strävanden och erbjuder resurser för A-nivå, GCSE, körning och SAT-förberedelser."
+  },
+  "avatar": "/src/assets/clients/avatars/tutorio.svg",
+  "logo": "/src/assets/clients/tutorio.svg",
+  "logoDark": "/src/assets/clients/tutorio-dark.svg",
+  "dominantColor": {
+    "light": "#2A8DE1",
+    "dark": "#2A8DE1"
+  },
+  "websiteUrl": "https://tutorio.app/",
+  "socialLinks": {
+    "twitter": "https://x.com/tutorio_uk",
+    "linkedin": "https://www.linkedin.com/company/tutorioapp",
+    "instagram": "https://www.instagram.com/tutorio_uk/",
+    "facebook": "https://www.facebook.com/profile.php?id=100094729565427"
+  }
+}
