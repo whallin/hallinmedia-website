@@ -41,6 +41,7 @@ const translations = {
     contactInfo: "Contact information",
     projectDetails: "Project details",
     budgetAndDeadline: "Budget and deadline",
+    formNotWorking: "Form not working? Email",
   },
   sv: {
     name: "Namn",
@@ -80,6 +81,7 @@ const translations = {
     contactInfo: "Kontaktinformation",
     projectDetails: "Projektdetaljer",
     budgetAndDeadline: "Budget och deadline",
+    formNotWorking: "Fungerar inte formuläret? Mejla till",
   },
 };
 
@@ -226,6 +228,15 @@ const formFields = {
       <span id="button-text">{translations[locale].submit}</span>
     </Button>
   </div>
+  <aside class="text-center text-xs text-stone-500 dark:text-stone-400">
+    {translations[locale].formNotWorking}{" "}
+    <a
+      href="mailto:project@hallin.media"
+      class="font-semibold text-red-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-100 active:opacity-50"
+    >
+      project@hallin.media
+    </a>
+  </aside>
 </form>
 
 <script define:vars={{ translations, locale }}>
