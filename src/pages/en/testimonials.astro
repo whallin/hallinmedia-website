@@ -1,0 +1,119 @@
+---
+import { Icon } from "astro-icon/components";
+import { Image, Picture } from "astro:assets";
+import { getCollection } from "astro:content";
+import { getRelativeLocaleUrl } from "astro:i18n";
+import Button from "../../components/common/Button.astro";
+import Layout from "../../layouts/Layout.astro";
+
+const locale = Astro.currentLocale === "en" || Astro.currentLocale === "sv" ? Astro.currentLocale : "en";
+
+const allTestimonials = (await getCollection("clientsCollection"))
+  .filter((client) => client.data.testimonial)
+  .sort((a, b) => {
+    const aName = a.data.testimonial?.author.name ?? "";
+    const bName = b.data.testimonial?.author.name ?? "";
+    return aName.localeCompare(bName);
+  });
+---
+
+<Layout
+  title="Testimonials & references"
+  description="Discover what my previous clients say about our collaboration. Read honest testimonials and experiences that show how I help businesses grow and develop."
+  header="Testimonials"
+  headerIcon="ph:chat-circle-text-duotone"
+  headerDescription="Here I share testimonials from satisfied clients I have had the pleasure of working with. Each testimonial is a unique story of how we have created successful projects together."
+>
+  <section class="max-w-2xl space-y-8 sm:mx-auto">
+    <nav class="my-8 flex flex-col justify-between gap-2 sm:flex-row" aria-label="Key actions">
+      <Button href={getRelativeLocaleUrl(locale, "hire")}>
+        <Icon name="ph:hand-waving-duotone" class="flex-shrink-0" aria-hidden="true" />
+        Hire me
+        <Icon name="ph:arrow-right" class="flex-shrink-0" aria-hidden="true" />
+      </Button>
+      <Button href={getRelativeLocaleUrl(locale, "clients")} variant="secondary">
+        <Icon name="ph:users-duotone" class="flex-shrink-0" aria-hidden="true" />
+        Browse all clients
+        <Icon name="ph:arrow-right" class="flex-shrink-0" aria-hidden="true" />
+      </Button>
+    </nav>
+    <section class="mt-12 grid gap-8">
+      {
+        allTestimonials.map((client) => (
+          <article
+            class="group relative rounded-lg border border-stone-300 bg-amber-50/50 p-6 transition-colors hover:border-[var(--dominant-color)] dark:border-stone-700 dark:bg-stone-800/50 dark:hover:border-[var(--dominant-color-dark)]"
+            style={`--dominant-color: ${client.data.dominantColor.light}; ${client.data.dominantColor.dark ? `--dominant-color-dark: ${client.data.dominantColor.dark}` : `--dominant-color-dark: ${client.data.dominantColor.light}`}`}
+          >
+            <figure class="absolute inset-x-0 bottom-0 h-3/4 bg-[radial-gradient(ellipse_at_bottom,var(--dominant-color)_0%,transparent_70%)] opacity-10 transition-opacity group-hover:opacity-20 dark:bg-[radial-gradient(ellipse_at_bottom,var(--dominant-color-dark)_0%,transparent_70%)]" />
+            <div
+              class="absolute -top-3 left-4 flex h-6 w-6 items-center justify-center rounded-full border border-stone-300 bg-amber-50 text-[var(--dominant-color)] dark:border-stone-700 dark:bg-stone-900 dark:text-[var(--dominant-color-dark)]"
+              aria-hidden="true"
+            >
+              <Icon name="ph:quotes-duotone" class="h-4 w-4" aria-hidden="true" />
+            </div>
+            <figure class="relative">
+              <blockquote class="mb-4 font-serif text-lg text-stone-900 italic dark:text-stone-100">
+                "{client.data.testimonial?.quote[locale]}"
+              </blockquote>
+              <figcaption class="mt-6 flex items-center gap-4">
+                <Picture
+                  src={client.data.testimonial?.author.avatar ?? client.data.avatar}
+                  alt={client.data.name}
+                  width={128}
+                  height={128}
+                  widths={[48, 64, 128]}
+                  formats={["avif", "webp", "jpeg"]}
+                  class="h-12 w-12 rounded-full border-2 border-stone-50 select-none dark:border-stone-900"
+                />
+                <div class="flex flex-1 items-center justify-between gap-4">
+                  <div>
+                    <h3 class="font-serif font-medium text-stone-900 dark:text-stone-100">
+                      {client.data.testimonial?.author.name}
+                    </h3>
+                    <p class="text-sm text-stone-500 dark:text-stone-400">
+                      {client.data.testimonial?.author.title[locale]}
+                    </p>
+                  </div>
+                  {client.data.logoDark ? (
+                    <a
+                      href={getRelativeLocaleUrl(locale, `clients/${client.id}`)}
+                      class="transition hover:opacity-75 active:scale-95 active:opacity-50"
+                    >
+                      <Image
+                        src={client.data.logo}
+                        alt={client.data.name}
+                        width={96}
+                        height={48}
+                        class="max-h-8 w-24 object-contain object-right select-none dark:hidden"
+                      />
+                      <Image
+                        src={client.data.logoDark}
+                        alt={client.data.name}
+                        width={96}
+                        height={48}
+                        class="hidden max-h-8 w-24 object-contain object-right select-none dark:block"
+                      />
+                    </a>
+                  ) : (
+                    <a
+                      href={getRelativeLocaleUrl(locale, `clients/${client.id}`)}
+                      class="transition hover:opacity-75 active:scale-95 active:opacity-50"
+                    >
+                      <Image
+                        src={client.data.logo}
+                        alt={client.data.name}
+                        width={96}
+                        height={48}
+                        class="max-h-8 w-24 object-contain object-right select-none"
+                      />
+                    </a>
+                  )}
+                </div>
+              </figcaption>
+            </figure>
+          </article>
+        ))
+      }
+    </section>
+  </section>
+</Layout>
