@@ -16,10 +16,14 @@ const locale = Astro.currentLocale === "en" || Astro.currentLocale === "sv" ? As
 const featuredTestimonials = (await getCollection("clientsCollection"))
   .filter((client) => client.data.testimonial?.featured)
   .sort((a, b) => {
-    if (a.data.featured !== b.data.featured) {
-      return b.data.featured ? 1 : -1;
+    const aOrder = a.data.testimonial?.featuredOrder ?? Infinity;
+    const bOrder = b.data.testimonial?.featuredOrder ?? Infinity;
+    if (aOrder !== bOrder) {
+      return aOrder - bOrder;
     }
-    return a.data.name.localeCompare(b.data.name);
+    const aName = a.data.testimonial?.author.name ?? "";
+    const bName = b.data.testimonial?.author.name ?? "";
+    return aName.localeCompare(bName);
   });
 ---
 

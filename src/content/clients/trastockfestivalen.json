@@ -13,5 +13,21 @@
   "socialLinks": {
     "instagram": "https://www.instagram.com/trastockfestivalen",
     "facebook": "https://www.facebook.com/trastockfestivalen/"
+  },
+  "testimonial": {
+    "quote": {
+      "en": "Reliable, careful, independent & friendly. Highly recommend!",
+      "sv": "Trygg, noggran, självgående & trevlig. Rekommenderar starkt!"
+    },
+    "author": {
+      "avatar": "/src/assets/clients/avatars/trastockfestivalen-manna.png",
+      "name": "Manna Bergström",
+      "title": {
+        "en": "Media Manager",
+        "sv": "Medieansvarig"
+      }
+    },
+    "featured": true,
+    "featuredOrder": 2
   }
 }

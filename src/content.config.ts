@@ -176,6 +176,11 @@ const clientsCollection = defineCollection({
               }),
             }),
             featured: z.boolean().default(false),
+            featuredOrder: z
+              .number()
+              .int()
+              .positive('Featured order must be a positive integer')
+              .optional(),
           })
           .optional(),
       })
