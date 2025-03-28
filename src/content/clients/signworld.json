@@ -1,0 +1,19 @@
+{
+  "name": "Signworld",
+  "description": {
+    "en": "Signworld is a company that specializes in professional signage applications for various types of messages and branding. They offer a range of products, including light signs, which are designed to be visually appealing and customizable.",
+    "sv": "Signworld erbjuder professionella skyltapplikationer för olika typer av budskap och varumärkesprofilering. De erbjuder en rad produkter, inklusive ljusskyltar, som är utformade för att vara visuellt tilltalande och anpassningsbara."
+  },
+  "avatar": "/src/assets/clients/avatars/signworld.svg",
+  "logo": "/src/assets/clients/signworld.svg",
+  "logoDark": "/src/assets/clients/signworld-dark.svg",
+  "dominantColor": {
+    "light": "#008ACC"
+  },
+  "websiteUrl": "https://www.signworld.se/",
+  "socialLinks": {
+    "instagram": "https://www.instagram.com/signworldsweden/"
+  },
+  "featured": false,
+  "subcontracted": true
+}

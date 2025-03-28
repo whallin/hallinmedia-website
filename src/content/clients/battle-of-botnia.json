@@ -1,0 +1,19 @@
+{
+  "name": "Battle of Botnia",
+  "description": {
+    "en": "Battle of Botnia is a combat sports event held in Sweden. It features various martial arts, including MMA, kickboxing, and boxing. It's known for showcasing both established and up-and-coming fighters.",
+    "sv": "Battle of Botnia är ett kampsportevenemang som hålls i Sverige. Det består av olika kampsporter, inklusive MMA, kickboxning och boxning. Eventet är känt för att visa upp både etablerade och unga talanger."
+  },
+  "avatar": "/src/assets/clients/avatars/battle-of-botnia.svg",
+  "logo": "/src/assets/clients/battle-of-botnia.svg",
+  "dominantColor": {
+    "light": "#e64213"
+  },
+  "websiteUrl": "https://www.battleofbotnia.se/",
+  "socialLinks": {
+    "instagram": "https://www.instagram.com/battleofbotnia.mma/",
+    "facebook": "https://www.facebook.com/Battleofbotnia.mma/"
+  },
+  "featured": false,
+  "subcontracted": true
+}

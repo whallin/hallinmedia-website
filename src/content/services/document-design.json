@@ -122,7 +122,14 @@
     "communication",
     "content-writing"
   ],
-  "featuredClients": ["conodra", "creavite", "extenseit", "the-babes"],
+  "featuredClients": [
+    "conodra",
+    "creavite",
+    "extenseit",
+    "signworld",
+    "skane-cars",
+    "the-babes"
+  ],
   "featured": false,
   "seo": {
     "en": {

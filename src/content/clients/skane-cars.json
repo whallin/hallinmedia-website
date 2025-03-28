@@ -1,0 +1,16 @@
+{
+  "name": "Skåne Cars",
+  "description": {
+    "en": "Skåne Cars AB is a car dealership located in Hässleholm, Sweden. They specialise in the sale of a wide range of vehicles, including cars, motorhomes, and boats.",
+    "sv": "Skåne Cars AB är en bilhandlare som ligger i Hässleholm, Sverige. De specialiserar sig på försäljning av ett brett utbud av fordon, inklusive bilar, husbilar och båtar."
+  },
+  "avatar": "/src/assets/clients/avatars/skane-cars.svg",
+  "logo": "/src/assets/clients/skane-cars.svg",
+  "logoDark": "/src/assets/clients/skane-cars-dark.svg",
+  "dominantColor": {
+    "light": "#EF9721"
+  },
+  "websiteUrl": "https://skanecars.se/",
+  "featured": false,
+  "subcontracted": true
+}
