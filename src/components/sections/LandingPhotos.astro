@@ -1,59 +1,60 @@
 ---
+import { Icon } from "astro-icon/components";
 import { Picture } from "astro:assets";
-import ImgDSC00534 from "../../assets/landing-photo-grid/DSC00534.jpg";
-import ImgDSC01278 from "../../assets/landing-photo-grid/DSC01278.jpg";
-import ImgDSC02052 from "../../assets/landing-photo-grid/DSC02052.jpg";
-import ImgDSC02114 from "../../assets/landing-photo-grid/DSC02114.jpg";
+import ImgC015 from "../../assets/landing-photo-grid/C015.png";
+import ImgC159 from "../../assets/landing-photo-grid/C159.png";
+import ImgC311 from "../../assets/landing-photo-grid/C311.png";
+import ImgDSC00894 from "../../assets/landing-photo-grid/DSC00894.jpg";
+import ImgDSC00981 from "../../assets/landing-photo-grid/DSC00981.jpg";
 import ImgDSC02239 from "../../assets/landing-photo-grid/DSC02239.jpg";
-import ImgDSC02343 from "../../assets/landing-photo-grid/DSC02343.jpg";
+import ImgDSC02898 from "../../assets/landing-photo-grid/DSC02898.jpg";
 import ImgDSC03000 from "../../assets/landing-photo-grid/DSC03000.jpg";
-import ImgDSC03216 from "../../assets/landing-photo-grid/DSC03216.jpg";
-import ImgDSC03640 from "../../assets/landing-photo-grid/DSC03640.jpg";
+import ImgDSC03027 from "../../assets/landing-photo-grid/DSC03027.jpg";
 
 const photos = [
+  {
+    src: ImgC015,
+    settings: "ISO 400, 180°",
+    model: "BMPCC6K",
+  },
+  {
+    src: ImgC159,
+    settings: "ISO 400, 180°",
+    model: "BMPCC6K",
+  },
+  {
+    src: ImgC311,
+    settings: "ISO 1250, 180°",
+    model: "BMPCC6K",
+  },
+  {
+    src: ImgDSC02898,
+    settings: "ISO 1250, 1/200s, f/5.6",
+    model: "Sony A7IV",
+  },
   {
     src: ImgDSC03000,
     settings: "ISO 3200, 1/200s, f/5.6",
     model: "Sony A7IV",
   },
   {
-    src: ImgDSC02114,
-    settings: "ISO 8000, 1/100s, f/6.3",
+    src: ImgDSC03027,
+    settings: "ISO 6400, 1/400s, f/5.6",
     model: "Sony A7IV",
   },
   {
-    src: ImgDSC00534,
-    settings: "ISO 8000, 1/125s, f/5.6",
+    src: ImgDSC00894,
+    settings: "ISO 800, 1/125s, f/3.5",
+    model: "Sony A7IV",
+  },
+  {
+    src: ImgDSC00981,
+    settings: "ISO 2000, 1/125s, f/4",
     model: "Sony A7IV",
   },
   {
     src: ImgDSC02239,
     settings: "ISO 2000, 1/50s, f/5.6",
-    model: "Sony A7IV",
-  },
-  {
-    src: ImgDSC03216,
-    settings: "ISO 6400, 1/200s, f/5.6",
-    model: "Sony A7IV",
-  },
-  {
-    src: ImgDSC02343,
-    settings: "ISO 1250, 1/80s, f/5.6",
-    model: "Sony A7IV",
-  },
-  {
-    src: ImgDSC01278,
-    settings: "ISO 100, 1/6s, f/22.0",
-    model: "Sony A7IV",
-  },
-  {
-    src: ImgDSC02052,
-    settings: "ISO 12k, 1/100s, f/6.3",
-    model: "Sony A7IV",
-  },
-  {
-    src: ImgDSC03640,
-    settings: "ISO 6400, 1/320s, f/5.6",
     model: "Sony A7IV",
   },
 ];
@@ -67,6 +68,7 @@ const translations = {
     photo_settings: "Photo settings",
     camera_model: "Camera model",
     enlarged_photo: "Enlarged photo",
+    close: "Close",
   },
   sv: {
     photo_gallery: "Fotogalleri",
@@ -76,12 +78,11 @@ const translations = {
     photo_settings: "Fotoinställningar",
     camera_model: "Kameramodell",
     enlarged_photo: "Förstorat foto",
+    close: "Stäng",
   },
 };
 
 const locale = Astro.currentLocale === "en" || Astro.currentLocale === "sv" ? Astro.currentLocale : "en";
-
-// TODO: Add a modal for enlarging the photos - alternatively, just zoom in on the image in the same container
 ---
 
 <section class="@container" aria-label={translations[locale].photo_gallery}>
@@ -120,4 +121,125 @@ const locale = Astro.currentLocale === "en" || Astro.currentLocale === "sv" ? As
       ))
     }
   </article>
+
+  <dialog
+    id="photoModal"
+    class="pointer-events-none fixed inset-0 z-50 hidden bg-black/90 backdrop-blur"
+    aria-labelledby="modalTitle"
+  >
+    <div class="flex min-h-screen w-full items-center justify-center p-8">
+      <div class="relative w-full max-w-5xl">
+        <article class="relative rounded-lg border border-red-500/50 bg-stone-900">
+          <button
+            id="closeModal"
+            class="absolute -top-3 -right-3 z-10 flex h-8 w-8 cursor-pointer items-center justify-center rounded-full bg-red-500 text-white transition-colors hover:bg-red-600 active:bg-red-700"
+            aria-label={translations[locale].close}
+          >
+            <Icon name="ph:x-bold" class="h-4 w-4" />
+          </button>
+          <div id="modalContent" class="p-6">
+            <figure id="modalImageContainer" class="flex justify-center"></figure>
+            <footer
+              class="mt-4 flex flex-col items-center justify-between border-t border-stone-700/50 pt-4 text-white sm:flex-row sm:items-start"
+            >
+              <div class="mb-2 flex items-center gap-2 sm:mb-0">
+                <Icon name="ph:camera-duotone" class="h-5 w-5 text-red-500" />
+                <div id="modalCamera" class="font-mono text-sm"></div>
+              </div>
+              <div class="flex items-center gap-2">
+                <Icon name="ph:sliders-duotone" class="h-5 w-5 text-red-500" />
+                <div id="modalSettings" class="font-mono text-sm"></div>
+              </div>
+            </footer>
+          </div>
+        </article>
+      </div>
+    </div>
+  </dialog>
 </section>
+
+<script>
+  type ModalEvent = MouseEvent | KeyboardEvent;
+
+  function openModal(event: ModalEvent) {
+    const figure = event.currentTarget as HTMLElement;
+    if (!figure) return;
+
+    const modal = document.getElementById("photoModal");
+    const modalImageContainer = document.getElementById("modalImageContainer");
+    const modalCamera = document.getElementById("modalCamera");
+    const modalSettings = document.getElementById("modalSettings");
+
+    if (!modal || !modalImageContainer || !modalCamera || !modalSettings) return;
+
+    const pictureElement = figure.querySelector("picture");
+    if (!pictureElement) return;
+
+    const clonedPicture = pictureElement.cloneNode(true) as HTMLElement;
+    const imgElement = clonedPicture.querySelector("img");
+
+    if (imgElement) {
+      imgElement.classList.remove("aspect-square", "w-full");
+      imgElement.classList.add("max-h-[70vh]", "max-w-full", "rounded-md", "object-contain");
+    }
+
+    modalImageContainer.innerHTML = "";
+    modalImageContainer.appendChild(clonedPicture);
+    modalCamera.textContent = figure.dataset.model || "";
+    modalSettings.textContent = figure.dataset.settings || "";
+
+    modal.classList.remove("hidden");
+    modal.classList.add("flex");
+    modal.classList.remove("pointer-events-none");
+
+    document.body.classList.add("overflow-hidden");
+
+    document.addEventListener("keydown", handleEscKey);
+  }
+
+  function closeModal() {
+    const modal = document.getElementById("photoModal");
+    if (!modal) return;
+
+    modal.classList.add("hidden");
+    modal.classList.remove("flex");
+    modal.classList.add("pointer-events-none");
+
+    document.body.classList.remove("overflow-hidden");
+
+    document.removeEventListener("keydown", handleEscKey);
+  }
+
+  function handleEscKey(event: KeyboardEvent) {
+    if (event.key === "Escape") closeModal();
+  }
+
+  function handleKeydown(event: KeyboardEvent) {
+    if (event.key === "Enter" || event.key === " ") openModal(event);
+  }
+
+  function attachEventListeners() {
+    document.querySelectorAll("figure[data-index]").forEach((figure) => {
+      figure.addEventListener("click", (e) => openModal(e as unknown as ModalEvent));
+      figure.addEventListener("keydown", (e) => handleKeydown(e as unknown as KeyboardEvent));
+    });
+
+    const closeButton = document.getElementById("closeModal");
+    if (closeButton) closeButton.addEventListener("click", closeModal);
+
+    const modal = document.getElementById("photoModal");
+
+    if (modal) {
+      modal.addEventListener("click", (event: MouseEvent) => {
+        const modalContent = modal.querySelector("article");
+        if (modalContent && !modalContent.contains(event.target as Node)) {
+          closeModal();
+        }
+      });
+    }
+  }
+
+  document.readyState === "loading"
+    ? document.addEventListener("DOMContentLoaded", attachEventListeners)
+    : attachEventListeners();
+</script>
