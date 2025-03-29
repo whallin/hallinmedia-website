@@ -15,5 +15,21 @@
     "instagram": "https://www.instagram.com/mrdagarna",
     "facebook": "https://www.facebook.com/mrdagarna/"
   },
-  "featured": true
+  "featured": true,
+  "testimonial": {
+    "quote": {
+      "en": "Thanks a ton for the help William, you're a star!",
+      "sv": "Stort tack för hjälpen William, du är en stjärna!"
+    },
+    "author": {
+      "avatar": "/src/assets/clients/avatars/mr-dagarna-jocelyn.png",
+      "name": "Jocelyn Hultman",
+      "title": {
+        "en": "Press contact",
+        "sv": "Presskontakt"
+      }
+    },
+    "featured": true,
+    "featuredOrder": 3
+  }
 }

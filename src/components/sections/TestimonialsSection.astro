@@ -1,14 +1,18 @@
 ---
+import { Icon } from "astro-icon/components";
 import { Image, Picture } from "astro:assets";
 import { getCollection } from "astro:content";
 import { getRelativeLocaleUrl } from "astro:i18n";
+import Button from "../common/Button.astro";
 
 const translations = {
   en: {
     heading: "What do the customers say?",
+    viewAll: "View all testimonials",
   },
   sv: {
     heading: "Vad säger kunderna?",
+    viewAll: "Se alla recensioner",
   },
 };
 
@@ -111,6 +115,13 @@ const featuredTestimonials = (await getCollection("clientsCollection"))
           </article>
         ))}
       </div>
+      <footer class="text-center">
+        <Button href={getRelativeLocaleUrl(locale, "testimonials")} variant="secondary">
+          <Icon name="ph:heart-duotone" aria-hidden="true" />
+          {translations[locale].viewAll}
+          <Icon name="ph:arrow-right" aria-hidden="true" />
+        </Button>
+      </footer>
     </section>
   )
 }
