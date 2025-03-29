@@ -15,7 +15,7 @@ export default {
     cdn: {
       process: "optimize",
     },
-    compress: true,
+    compress: false,
     jpeg: {
       options: {
         quality: 75,
