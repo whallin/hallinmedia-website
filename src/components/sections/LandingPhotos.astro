@@ -124,12 +124,12 @@ const locale = Astro.currentLocale === "en" || Astro.currentLocale === "sv" ? As
 
   <dialog
     id="photoModal"
-    class="pointer-events-none fixed inset-0 z-50 hidden bg-black/90 backdrop-blur"
+    class="pointer-events-none fixed inset-0 z-50 hidden h-full w-full bg-black/75 backdrop-blur"
     aria-labelledby="modalTitle"
   >
-    <div class="flex min-h-screen w-full items-center justify-center p-8">
+    <div class="flex h-full w-full items-center justify-center p-8">
       <div class="relative w-full max-w-5xl">
-        <article class="relative rounded-lg border border-red-500/50 bg-stone-900">
+        <article class="relative mx-auto w-full rounded-lg border border-red-500/50 bg-stone-900">
           <button
             id="closeModal"
             class="absolute -top-3 -right-3 z-10 flex h-8 w-8 cursor-pointer items-center justify-center rounded-full bg-red-500 text-white transition-colors hover:bg-red-600 active:bg-red-700"
@@ -138,7 +138,7 @@ const locale = Astro.currentLocale === "en" || Astro.currentLocale === "sv" ? As
             <Icon name="ph:x-bold" class="h-4 w-4" />
           </button>
           <div id="modalContent" class="p-6">
-            <figure id="modalImageContainer" class="flex justify-center"></figure>
+            <figure id="modalImageContainer" class="flex w-full justify-center"></figure>
             <footer
               class="mt-4 flex flex-col items-center justify-between border-t border-stone-700/50 pt-4 text-white sm:flex-row sm:items-start"
             >
@@ -180,7 +180,7 @@ const locale = Astro.currentLocale === "en" || Astro.currentLocale === "sv" ? As
 
     if (imgElement) {
       imgElement.classList.remove("aspect-square", "w-full");
-      imgElement.classList.add("max-h-[70vh]", "max-w-full", "rounded-md", "object-contain");
+      imgElement.classList.add("h-auto", "max-h-[60vh]", "max-w-full", "w-auto", "rounded-md", "object-contain");
     }
 
     modalImageContainer.innerHTML = "";
@@ -189,8 +189,16 @@ const locale = Astro.currentLocale === "en" || Astro.currentLocale === "sv" ? As
     modalSettings.textContent = figure.dataset.settings || "";
 
     modal.classList.remove("hidden");
-    modal.classList.add("flex");
+    modal.classList.add("flex", "items-center", "justify-center");
     modal.classList.remove("pointer-events-none");
+
+    // Ensure modal takes full width
+    modal.style.width = "100%";
+    modal.style.height = "100%";
+    modal.style.maxWidth = "100vw";
+    modal.style.maxHeight = "100vh";
+    modal.style.margin = "0";
+    modal.style.padding = "0";
 
     document.body.classList.add("overflow-hidden");
 
@@ -202,8 +210,16 @@ const locale = Astro.currentLocale === "en" || Astro.currentLocale === "sv" ? As
     if (!modal) return;
 
     modal.classList.add("hidden");
-    modal.classList.remove("flex");
+    modal.classList.remove("flex", "items-center", "justify-center");
     modal.classList.add("pointer-events-none");
+
+    // Reset inline styles
+    modal.style.width = "";
+    modal.style.height = "";
+    modal.style.maxWidth = "";
+    modal.style.maxHeight = "";
+    modal.style.margin = "";
+    modal.style.padding = "";
 
     document.body.classList.remove("overflow-hidden");
 
