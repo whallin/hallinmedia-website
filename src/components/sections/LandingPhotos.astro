@@ -162,6 +162,8 @@ const locale = Astro.currentLocale === "en" || Astro.currentLocale === "sv" ? As
   type ModalEvent = MouseEvent | KeyboardEvent;
 
   function openModal(event: ModalEvent) {
+    if (window.innerWidth < 496) return;
+
     const figure = event.currentTarget as HTMLElement;
     if (!figure) return;
 
