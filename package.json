@@ -26,10 +26,10 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/cloudflare": "^12.5.0",
-    "@astrojs/mdx": "^4.2.4",
+    "@astrojs/cloudflare": "^12.5.1",
+    "@astrojs/mdx": "^4.2.5",
     "@astrojs/partytown": "^2.1.4",
-    "@astrojs/sitemap": "^3.3.0",
+    "@astrojs/sitemap": "^3.3.1",
     "@fontsource-variable/dm-sans": "^5.2.5",
     "@fontsource-variable/kode-mono": "^5.2.5",
     "@fontsource-variable/source-serif-4": "^5.2.6",
@@ -37,9 +37,9 @@
     "@iconify-json/ph": "^1.2.2",
     "@iconify-json/twemoji": "^1.2.2",
     "@tailwindcss/vite": "^4.1.4",
-    "astro": "^5.7.4",
+    "astro": "^5.7.7",
     "astro-icon": "^1.1.5",
-    "resend": "^4.3.0",
+    "resend": "^4.4.1",
     "tailwindcss": "^4.1.4"
   },
   "devDependencies": {
