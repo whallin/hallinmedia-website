@@ -103,9 +103,9 @@ const colorVariants: Record<"red" | "blue" | "green" | "purple", ColorVariant> =
                     <figure class={`rounded-lg border p-3 transition-colors ${colors.iconBg}`}>
                       <Icon name={service.data.icon} class={`h-6 w-6 ${colors.iconColor}`} aria-hidden="true" />
                     </figure>
-                    <dl class="flex-1">
+                    <dl class="flex-1 overflow-hidden">
                       <dt>
-                        <h2 class="font-serif text-lg font-medium text-stone-700 dark:text-stone-100">
+                        <h2 class="overflow-hidden font-serif text-lg font-medium text-ellipsis whitespace-nowrap text-stone-700 dark:text-stone-100">
                           {service.data.serviceName[locale]}
                         </h2>
                       </dt>
@@ -136,7 +136,7 @@ const colorVariants: Record<"red" | "blue" | "green" | "purple", ColorVariant> =
                       </li>
                     ))}
                   </ul>
-                  <footer class="mt-auto flex items-center justify-between">
+                  <footer class="mt-auto flex flex-wrap items-center justify-between gap-2">
                     {service.data.featuredClients && (
                       <ul class="flex -space-x-2" role="list" aria-label="Utvalda kunder">
                         {service.data.featuredClients

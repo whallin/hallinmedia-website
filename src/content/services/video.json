@@ -71,8 +71,8 @@
     }
   ],
   "cta": {
-    "en": "Let's create your video",
-    "sv": "Låt oss skapa din video"
+    "en": "Create your video",
+    "sv": "Skapa din video"
   },
   "relatedServices": ["photography", "video-editing", "motion-graphics"],
   "featuredClients": [
