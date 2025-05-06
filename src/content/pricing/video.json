@@ -18,7 +18,7 @@
         "en": "Professional video editing services including colour correction, sound mixing, basic motion graphics, and exports in multiple formats.",
         "sv": "Professionell videoredigering inklusive färgkorrigering, ljudmixning, grundläggande motion graphics och export i flera format."
       },
-      "basePrice": 550,
+      "basePrice": 700,
       "unit": {
         "en": "hour",
         "sv": "timme"
@@ -30,7 +30,7 @@
             "sv": "Grundläggande redigering"
           },
           "sku": "HM-VID-EDIT-BASIC",
-          "price": 550,
+          "price": 700,
           "unit": {
             "en": "hour",
             "sv": "timme"
@@ -42,7 +42,7 @@
             "sv": "Avancerad redigering (Motion Graphics)"
           },
           "sku": "HM-VID-EDIT-ADV",
-          "price": 850,
+          "price": 1050,
           "unit": {
             "en": "hour",
             "sv": "timme"
@@ -91,7 +91,7 @@
         "en": "Professional video production services for up to 4 hours, including essential camera equipment and basic lighting setup.",
         "sv": "Professionella videoproduktionstjänster upp till 4 timmar, inklusive grundläggande kamerautrustning och belysning."
       },
-      "basePrice": 2800,
+      "basePrice": 3500,
       "unit": {
         "en": "session",
         "sv": "session"
@@ -103,7 +103,7 @@
             "sv": "Grundpaket"
           },
           "sku": "HM-VID-PROD-HALF-BASIC",
-          "price": 2800,
+          "price": 3500,
           "unit": {
             "en": "half-day",
             "sv": "halvdag"
@@ -115,7 +115,7 @@
             "sv": "Premiumpaket (Extra belysning & ljud)"
           },
           "sku": "HM-VID-PROD-HALF-PREM",
-          "price": 3900,
+          "price": 4900,
           "unit": {
             "en": "half-day",
             "sv": "halvdag"
@@ -130,7 +130,7 @@
           },
           "sku": "HM-VID-PROD-ADD-HOUR",
           "taxCode": "txcd_20060000",
-          "price": 800,
+          "price": 1000,
           "description": {
             "en": "Extend your half-day video production session with additional hours of professional filming and equipment usage.",
             "sv": "Förläng din halvdags videoproduktion med extra timmar av professionell filmning och utrustningsanvändning."
@@ -151,7 +151,7 @@
             "en": "Receive all unedited footage from your video shoot, delivered securely in high-resolution format.",
             "sv": "Få allt oredigerat material från din videoinspelning, levererat säkert i högupplöst format."
           },
-          "price": 1000
+          "price": 1250
         }
       ],
       "bulkDiscounts": [
@@ -188,7 +188,7 @@
         "en": "Comprehensive video production services for up to 8 hours, including professional camera equipment, lighting, and basic sound recording.",
         "sv": "Omfattande videoproduktionstjänster upp till 8 timmar, inklusive professionell kamerautrustning, belysning och grundläggande ljudinspelning."
       },
-      "basePrice": 4500,
+      "basePrice": 5600,
       "unit": {
         "en": "day",
         "sv": "dag"
@@ -199,8 +199,8 @@
             "en": "Standard Production",
             "sv": "Standardproduktion"
           },
-          "sku": "HM-VID-PROD-FULL-STD",
-          "price": 4500,
+          "sku": "HM-VID-PROD-FULL-STD1",
+          "price": 5600,
           "unit": {
             "en": "day",
             "sv": "dag"
@@ -212,7 +212,7 @@
             "sv": "Premiumproduktion"
           },
           "sku": "HM-VID-PROD-FULL-PREM",
-          "price": 6500,
+          "price": 8100,
           "unit": {
             "en": "day",
             "sv": "dag"
@@ -231,7 +231,7 @@
             "en": "Enhance your video with stunning aerial cinematography, captured by our licensed drone operator using professional-grade equipment.",
             "sv": "Förbättra din video med fantastiska flygbilder, filmade av vår licensierade drönarpilot med professionell utrustning."
           },
-          "price": 1800,
+          "price": 2250,
           "unit": {
             "en": "day",
             "sv": "dag"
@@ -248,7 +248,7 @@
             "en": "Add an additional professional camera operator to capture multiple angles simultaneously, ensuring comprehensive coverage of your event or production.",
             "sv": "Lägg till en extra professionell kameraoperatör för att fånga flera vinklar samtidigt och säkerställa omfattande täckning av ditt evenemang eller produktion."
           },
-          "price": 2800,
+          "price": 3500,
           "unit": {
             "en": "day",
             "sv": "dag"

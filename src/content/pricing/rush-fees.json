@@ -60,7 +60,7 @@
         "en": "Work performed outside regular business hours (09:00-17:00). Available for urgent projects and time-sensitive updates.",
         "sv": "Arbete som utförs utanför ordinarie kontorstid (09:00-17:00). Tillgängligt för brådskande projekt och tidskänsliga uppdateringar."
       },
-      "basePrice": 75,
+      "basePrice": 100,
       "unit": {
         "en": "percent",
         "sv": "procent"
@@ -72,7 +72,7 @@
             "sv": "Kvällstaxa (17:00-22:00)"
           },
           "sku": "HM-RUSH-AH-EVE",
-          "price": 75,
+          "price": 100,
           "unit": {
             "en": "percent",
             "sv": "procent"
@@ -84,7 +84,7 @@
             "sv": "Nattaxa (22:00-09:00)"
           },
           "sku": "HM-RUSH-AH-NIGHT",
-          "price": 100,
+          "price": 150,
           "unit": {
             "en": "percent",
             "sv": "procent"

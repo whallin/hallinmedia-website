@@ -18,7 +18,7 @@
         "en": "Professional content writing with a journalistic approach, specialising in news articles, blog posts, and business communications. SEO-optimised content available.",
         "sv": "Professionellt innehållsskapande med journalistiskt perspektiv, specialisering inom nyhetsartiklar, blogginlägg och företagskommunikation. SEO-optimerat innehåll tillgängligt."
       },
-      "basePrice": 600,
+      "basePrice": 750,
       "unit": {
         "en": "article",
         "sv": "artikel"
@@ -56,7 +56,7 @@
             "sv": "Sociala medier-innehåll"
           },
           "sku": "HM-COM-CONT-SOC",
-          "price": 600,
+          "price": 750,
           "unit": {
             "en": "post",
             "sv": "inlägg"
@@ -68,7 +68,7 @@
             "sv": "Blogginlägg & artiklar"
           },
           "sku": "HM-COM-CONT-BLOG",
-          "price": 1500,
+          "price": 1900,
           "unit": {
             "en": "article",
             "sv": "artikel"
@@ -80,7 +80,7 @@
             "sv": "Tekniskt skrivande"
           },
           "sku": "HM-COM-CONT-TECH",
-          "price": 900,
+          "price": 1100,
           "unit": {
             "en": "page",
             "sv": "sida"
@@ -99,7 +99,7 @@
             "en": "Enhance your content's search engine visibility with thorough keyword research, meta descriptions, and optimised headings structure.",
             "sv": "Förbättra ditt innehålls synlighet i sökmotorer med grundlig nyckelordsanalys, metabeskrivningar och optimerad rubrikstruktur."
           },
-          "price": 800,
+          "price": 1000,
           "unit": {
             "en": "article",
             "sv": "artikel"
@@ -116,7 +116,7 @@
             "en": "Professional translation service between Swedish and English, maintaining tone and context whilst ensuring cultural appropriateness.",
             "sv": "Professionell översättningstjänst mellan svenska och engelska, som bevarar ton och sammanhang samtidigt som kulturell lämplighet säkerställs."
           },
-          "price": 1.5,
+          "price": 1.9,
           "unit": {
             "en": "word",
             "sv": "ord"
@@ -139,7 +139,7 @@
         "en": "Strategic social media management with a focus on engaging storytelling and community building. Includes content planning, creation, and analytics reporting.",
         "sv": "Strategisk hantering av sociala medier med fokus på engagerande berättande och community-building. Inkluderar innehållsplanering, skapande och analysrapportering."
       },
-      "basePrice": 2000,
+      "basePrice": 2500,
       "unit": {
         "en": "month",
         "sv": "månad"
@@ -177,7 +177,7 @@
             "sv": "Grundpaket (2 plattformar)"
           },
           "sku": "HM-COM-SOC-BASIC",
-          "price": 2000,
+          "price": 2500,
           "unit": {
             "en": "month",
             "sv": "månad"
@@ -189,7 +189,7 @@
             "sv": "Premiumpaket (4 plattformar)"
           },
           "sku": "HM-COM-SOC-PREM",
-          "price": 3000,
+          "price": 3750,
           "unit": {
             "en": "month",
             "sv": "månad"
@@ -208,7 +208,7 @@
             "en": "Extend your social media presence to an additional platform with tailored content and platform-specific strategy.",
             "sv": "Utöka din närvaro på sociala medier till ytterligare en plattform med skräddarsytt innehåll och plattformsspecifik strategi."
           },
-          "price": 600,
+          "price": 750,
           "unit": {
             "en": "month",
             "sv": "månad"
@@ -225,7 +225,7 @@
             "en": "Complete management of your social media advertising campaigns, including targeting, budget optimisation, and performance reporting.",
             "sv": "Komplett hantering av dina annonskampanjer på sociala medier, inklusive målgruppsinriktning, budgetoptimering och resultatrapportering."
           },
-          "price": 800,
+          "price": 1000,
           "unit": {
             "en": "month",
             "sv": "månad"
@@ -248,7 +248,7 @@
         "en": "Strategic content planning and analysis for digital platforms. Includes audience analysis and content calendar planning.",
         "sv": "Strategisk innehållsplanering och analys för digitala plattformar. Inkluderar målgruppsanalys och innehållskalenderplanering."
       },
-      "basePrice": 2500,
+      "basePrice": 3100,
       "unit": {
         "en": "project",
         "sv": "projekt"
@@ -260,7 +260,7 @@
             "sv": "Grundläggande strategipaket"
           },
           "sku": "HM-COM-STRAT-BASIC",
-          "price": 2500,
+          "price": 3100,
           "unit": {
             "en": "package",
             "sv": "paket"
@@ -272,7 +272,7 @@
             "sv": "Avancerat strategipaket"
           },
           "sku": "HM-COM-STRAT-ADV",
-          "price": 6000,
+          "price": 7500,
           "unit": {
             "en": "package",
             "sv": "paket"
@@ -291,7 +291,7 @@
             "en": "Detailed analysis of your competitors' content strategy, identifying gaps and opportunities in your market positioning.",
             "sv": "Detaljerad analys av dina konkurrenters innehållsstrategi, identifiering av luckor och möjligheter i din marknadspositionering."
           },
-          "price": 1500
+          "price": 1900
         },
         {
           "name": {
@@ -304,7 +304,7 @@
             "en": "Comprehensive three-month content calendar with detailed topics, publishing schedules, and channel-specific content recommendations.",
             "sv": "Omfattande tremånaders innehållskalender med detaljerade ämnen, publiceringsscheman och kanalspecifika innehållsrekommendationer."
           },
-          "price": 2500
+          "price": 3100
         }
       ],
       "note": {

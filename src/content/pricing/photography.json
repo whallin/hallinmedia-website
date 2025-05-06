@@ -18,7 +18,7 @@
         "en": "Professional product photography optimised for e-commerce and marketing materials, including simple background options and lifestyle setups.",
         "sv": "Professionell produktfotografering optimerad för e-handel och marknadsföringsmaterial, inklusive enkel bakgrund och lifestyle-uppsättningar."
       },
-      "basePrice": 350,
+      "basePrice": 440,
       "unit": {
         "en": "image",
         "sv": "bild"
@@ -30,7 +30,7 @@
             "sv": "Grundläggande produktbild (Enkel bakgrund)"
           },
           "sku": "HM-PHOTO-PROD-BASIC",
-          "price": 350,
+          "price": 440,
           "unit": {
             "en": "image",
             "sv": "bild"
@@ -42,7 +42,7 @@
             "sv": "Lifestyle produktbild"
           },
           "sku": "HM-PHOTO-PROD-LIFE",
-          "price": 500,
+          "price": 630,
           "unit": {
             "en": "image",
             "sv": "bild"
@@ -91,7 +91,7 @@
         "en": "Professional photo editing including advanced colour correction, skin retouching, and creative image enhancement. Specialising in commercial and portrait retouching.",
         "sv": "Professionell fotoredigering inklusive avancerad färgkorrigering, hudretuschering och kreativ bildförbättring. Specialisering inom kommersiell- och porträttretuschering."
       },
-      "basePrice": 450,
+      "basePrice": 560,
       "unit": {
         "en": "hour",
         "sv": "timme"
@@ -103,7 +103,7 @@
             "sv": "Grundläggande retuschering"
           },
           "sku": "HM-PHOTO-EDIT-BASIC",
-          "price": 450,
+          "price": 560,
           "unit": {
             "en": "hour",
             "sv": "timme"
@@ -115,7 +115,7 @@
             "sv": "Kommersiell produktredigering"
           },
           "sku": "HM-PHOTO-EDIT-COM",
-          "price": 550,
+          "price": 690,
           "unit": {
             "en": "hour",
             "sv": "timme"
@@ -127,7 +127,7 @@
             "sv": "Avancerad retuschering"
           },
           "sku": "HM-PHOTO-EDIT-ADV",
-          "price": 650,
+          "price": 810,
           "unit": {
             "en": "hour",
             "sv": "timme"
@@ -146,7 +146,7 @@
             "en": "Professional removal or replacement of image backgrounds. Perfect for e-commerce product photos or creating consistent brand imagery.",
             "sv": "Professionell borttagning eller ersättning av bildbakgrunder. Perfekt för e-handelsprodukter eller för att skapa enhetlig varumärkesbildspråk."
           },
-          "price": 150,
+          "price": 190,
           "unit": {
             "en": "image",
             "sv": "bild"
@@ -187,7 +187,7 @@
         "en": "Professional photography service for up to 8 hours on location, including professional camera equipment, lighting gear, and backup equipment.",
         "sv": "Professionell fotograferingstjänst upp till 8 timmar på plats, inklusive professionell kamerautrustning, belysning och reservutrustning."
       },
-      "basePrice": 4500,
+      "basePrice": 5600,
       "unit": {
         "en": "day",
         "sv": "dag"
@@ -199,7 +199,7 @@
             "sv": "Standardtäckning"
           },
           "sku": "HM-PHOTO-LOC-STD",
-          "price": 4500,
+          "price": 5600,
           "unit": {
             "en": "day",
             "sv": "dag"
@@ -211,7 +211,7 @@
             "sv": "Utökad täckning (10 timmar)"
           },
           "sku": "HM-PHOTO-LOC-EXT",
-          "price": 6000,
+          "price": 7500,
           "unit": {
             "en": "day",
             "sv": "dag"
@@ -230,7 +230,7 @@
             "en": "Receive a curated selection of preview images on the same day as your shoot. Ideal for time-sensitive projects and immediate social media content.",
             "sv": "Få ett urval förhandsvisningsbilder samma dag som fotograferingen. Perfekt för tidskänsliga projekt och omedelbart innehåll för sociala medier."
           },
-          "price": 1200
+          "price": 1500
         },
         {
           "name": {
@@ -243,7 +243,7 @@
             "en": "Additional professional photographer to capture multiple angles or locations simultaneously. Includes separate equipment setup.",
             "sv": "Extra professionell fotograf för att fånga flera vinklar eller platser samtidigt. Inkluderar separat utrusning."
           },
-          "price": 2800,
+          "price": 3500,
           "unit": {
             "en": "day",
             "sv": "dag"

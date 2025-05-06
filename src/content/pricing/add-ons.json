@@ -18,7 +18,7 @@
         "en": "Access to all original source files from your project, enabling future modifications and updates. Includes organised file structure and documentation.",
         "sv": "Tillgång till alla ursprungliga källfiler från ditt projekt, vilket möjliggör framtida ändringar och uppdateringar. Inkluderar organiserad filstruktur och dokumentation."
       },
-      "basePrice": 800,
+      "basePrice": 1000,
       "unit": {
         "en": "project",
         "sv": "projekt"
@@ -39,7 +39,7 @@
         "en": "Regular content maintenance and updates to keep your digital presence current and engaging. Includes performance monitoring and optimisation suggestions.",
         "sv": "Regelbundet innehållsunderhåll och uppdateringar för att hålla din digitala närvaro aktuell och engagerande. Inkluderar prestandaövervakning och optimeringsförslag."
       },
-      "basePrice": 800,
+      "basePrice": 1000,
       "unit": {
         "en": "month",
         "sv": "månad"
@@ -51,7 +51,7 @@
             "sv": "Grundläggande (upp till 4 uppdateringar)"
           },
           "sku": "HM-ADD-UPD-BASIC",
-          "price": 800,
+          "price": 1000,
           "unit": {
             "en": "month",
             "sv": "månad"
@@ -63,7 +63,7 @@
             "sv": "Avancerad (upp till 10 uppdateringar)"
           },
           "sku": "HM-ADD-UPD-ADV",
-          "price": 1200,
+          "price": 1500,
           "unit": {
             "en": "month",
             "sv": "månad"
@@ -112,7 +112,7 @@
         "en": "Essential post-project support including email assistance and basic troubleshooting for delivered work.",
         "sv": "Grundläggande support efter projektet inklusive e-postassistans och grundläggande felsökning för levererat arbete."
       },
-      "basePrice": 400,
+      "basePrice": 500,
       "unit": {
         "en": "month",
         "sv": "månad"
@@ -124,7 +124,7 @@
             "sv": "E-postsupport"
           },
           "sku": "HM-ADD-SUP-EMAIL",
-          "price": 400,
+          "price": 500,
           "unit": {
             "en": "month",
             "sv": "månad"
@@ -136,7 +136,7 @@
             "sv": "Telefonsupport"
           },
           "sku": "HM-ADD-SUP-PHONE",
-          "price": 800,
+          "price": 1000,
           "unit": {
             "en": "month",
             "sv": "månad"
@@ -185,7 +185,7 @@
         "en": "Comprehensive support package with priority assistance and advanced troubleshooting. Includes regular check-ins and preventive maintenance.",
         "sv": "Omfattande supportpaket med prioriterad assistans och avancerad felsökning. Inkluderar regelbundna avstämningar och förebyggande underhåll."
       },
-      "basePrice": 1200,
+      "basePrice": 1500,
       "unit": {
         "en": "month",
         "sv": "månad"
@@ -197,7 +197,7 @@
             "sv": "24/7 support"
           },
           "sku": "HM-ADD-PSUP-24-7",
-          "price": 1200,
+          "price": 1500,
           "unit": {
             "en": "month",
             "sv": "månad"
@@ -209,7 +209,7 @@
             "sv": "Support på plats"
           },
           "sku": "HM-ADD-PSUP-SITE",
-          "price": 1600,
+          "price": 2000,
           "unit": {
             "en": "month",
             "sv": "månad"
@@ -228,7 +228,7 @@
             "en": "Personalised training sessions to help you and your team master your digital solutions. Covers system functionality, content management, and best practices.",
             "sv": "Personliga utbildningssessioner för att hjälpa dig och ditt team att behärska era digitala lösningar. Omfattar systemfunktionalitet, innehållshantering och bästa praxis."
           },
-          "price": 600,
+          "price": 750,
           "unit": {
             "en": "hour",
             "sv": "timme"

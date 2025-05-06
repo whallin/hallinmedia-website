@@ -39,7 +39,7 @@
         "en": "Professional equipment hire for specialised projects. All equipment fully tested, calibrated and insured.",
         "sv": "Uthyrning av professionell utrustning för specialiserade projekt. All utrustning är testad och försäkrad."
       },
-      "basePrice": 400,
+      "basePrice": 500,
       "unit": {
         "en": "day",
         "sv": "dag"
@@ -51,7 +51,7 @@
             "sv": "Ljudutrustning"
           },
           "sku": "HM-FEE-EQUIP-SOUND",
-          "price": 400,
+          "price": 500,
           "unit": {
             "en": "day",
             "sv": "dag"
@@ -63,7 +63,7 @@
             "sv": "Kalibreringsverktyg"
           },
           "sku": "HM-FEE-EQUIP-CAL",
-          "price": 400,
+          "price": 500,
           "unit": {
             "en": "day",
             "sv": "dag"
@@ -75,7 +75,7 @@
             "sv": "Kamerautrustning"
           },
           "sku": "HM-FEE-EQUIP-CAM",
-          "price": 1200,
+          "price": 1500,
           "unit": {
             "en": "day",
             "sv": "dag"
@@ -87,7 +87,7 @@
             "sv": "Komplett kamera- och ljudkit"
           },
           "sku": "HM-FEE-EQUIP-FULL",
-          "price": 1500,
+          "price": 1900,
           "unit": {
             "en": "day",
             "sv": "dag"
@@ -101,7 +101,7 @@
             "sv": "Leverans"
           },
           "sku": "HM-FEE-EQUIP-DEL",
-          "price": 200,
+          "price": 250,
           "taxCode": "txcd_20030000",
           "description": {
             "en": "Professional delivery and setup of equipment to your specified location within the Skellefteå region.",
@@ -118,7 +118,7 @@
             "sv": "Utrustningsutbildning"
           },
           "sku": "HM-FEE-EQUIP-TRN",
-          "price": 800,
+          "price": 1000,
           "taxCode": "txcd_20060044",
           "description": {
             "en": "Comprehensive on-site training session on proper equipment usage, safety procedures and best practices.",
@@ -156,7 +156,7 @@
         "en": "Professional location scouting service for photo and video shoots. Includes detailed location reports and permit assistance.",
         "sv": "Professionell platsspaningsservice för foto- och videoinspelningar. Inkluderar detaljerade platsrapporter och tillståndsassistans."
       },
-      "basePrice": 200,
+      "basePrice": 250,
       "unit": {
         "en": "location",
         "sv": "plats"
@@ -185,7 +185,7 @@
             "sv": "Platstillstånd"
           },
           "sku": "HM-FEE-LOC-PERM",
-          "price": 400,
+          "price": 500,
           "taxCode": "txcd_20060000",
           "description": {
             "en": "Handling and processing of necessary filming permits, including liaison with local authorities and property owners.",
