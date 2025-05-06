@@ -14,7 +14,7 @@
   "icon": "ph:image-duotone",
   "color": "red",
   "pricing": {
-    "startingFrom": 450,
+    "startingFrom": 560,
     "unit": {
       "en": "hour",
       "sv": "timme"

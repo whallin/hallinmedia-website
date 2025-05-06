@@ -14,7 +14,7 @@
   "icon": "ph:article-duotone",
   "color": "purple",
   "pricing": {
-    "startingFrom": 600,
+    "startingFrom": 750,
     "unit": {
       "en": "article",
       "sv": "artikel"

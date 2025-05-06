@@ -14,7 +14,7 @@
   "icon": "ph:camera-duotone",
   "color": "red",
   "pricing": {
-    "startingFrom": 350,
+    "startingFrom": 440,
     "unit": {
       "en": "image",
       "sv": "bild"

@@ -14,7 +14,7 @@
   "icon": "ph:video-camera-duotone",
   "color": "blue",
   "pricing": {
-    "startingFrom": 550,
+    "startingFrom": 700,
     "unit": {
       "en": "hour",
       "sv": "timme"

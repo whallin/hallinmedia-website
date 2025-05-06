@@ -14,7 +14,7 @@
   "icon": "ph:share-network-duotone",
   "color": "purple",
   "pricing": {
-    "startingFrom": 2000,
+    "startingFrom": 2500,
     "unit": {
       "en": "month",
       "sv": "månad"
