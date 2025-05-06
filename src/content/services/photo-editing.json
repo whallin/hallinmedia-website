@@ -4,12 +4,12 @@
     "sv": "Fotoredigering"
   },
   "shortDescription": {
-    "en": "Turn good photos into great ones. Professional photo editing that enhances your images whilst keeping them natural and authentic, perfect for any business use.",
-    "sv": "Förvandla bra foton till fantastiska. Professionell fotoredigering som förbättrar dina bilder samtidigt som de förblir naturliga och autentiska, perfekta för all företagsanvändning."
+    "en": "Professional editing to enhance your images, keeping them natural and authentic. Perfect for boosting your brand.",
+    "sv": "Professionell redigering som förbättrar dina bilder, samtidigt som de förblir naturliga och autentiska. Perfekt för att lyfta ditt varumärke."
   },
   "longDescription": {
-    "en": "Great photo editing can make the difference between a good image and one that truly captures attention. I specialise in enhancing photos whilst maintaining their authenticity, ensuring they look natural and professional.<br /><br />Whether you need product photos that drive sales, portraits that show personality, or brand images that tell your story, I'll help make your photos work harder for your business. Using professional tools and careful attention to detail, I ensure every edit serves a purpose.<br /><br />From basic touch-ups to complex enhancements, I'll help your images look their absolute best across all platforms—print, web, or social media.",
-    "sv": "Bra fotoredigering kan göra skillnaden mellan en bra bild och en som verkligen fångar uppmärksamhet. Jag specialiserar mig på att förbättra foton samtidigt som deras autenticitet bevaras, vilket säkerställer att de ser naturliga och professionella ut.<br /><br />Oavsett om du behöver produktfoton som driver försäljning, porträtt som visar personlighet eller varumärkesbilder som berättar din historia, hjälper jag dig få dina foton att arbeta hårdare för ditt företag. Med professionella verktyg och noggrann uppmärksamhet på detaljer säkerställer jag att varje redigering tjänar ett syfte.<br /><br />Från grundläggande justeringar till komplexa förbättringar hjälper jag dina bilder se absolut bäst ut på alla plattformar—tryck, webb eller sociala medier."
+    "en": "Amazing photos don't just happen; expert editing makes them truly stand out. I specialise in enhancing your images while keeping them looking natural and professional, so they perfectly reflect your brand's quality.<br /><br />Need product photos that pop and drive sales, portraits that capture true personality, or brand images that tell your unique story? I'll help your photos work harder for you. Using professional tools and a keen eye for detail, every edit is made with purpose.<br /><br />From subtle touch-ups to more complex enhancements, I'll ensure your images look their absolute best, ready for print, web, or social media. Let's make your visuals unforgettable.",
+    "sv": "Fantastiska foton skapas inte bara; expertredigering får dem att verkligen sticka ut. Jag specialiserar mig på att förbättra dina bilder samtidigt som de ser naturliga och professionella ut, så att de perfekt återspeglar ditt varumärkes kvalitet.<br /><br />Behöver du produktfoton som sticker ut och driver försäljning, porträtt som fångar sann personlighet, eller varumärkesbilder som berättar din unika historia? Jag hjälper dina foton att arbeta hårdare för dig. Med professionella verktyg och ett skarpt öga för detaljer görs varje redigering med ett syfte.<br /><br />Från subtila justeringar till mer komplexa förbättringar ser jag till att dina bilder ser absolut bäst ut, redo för tryck, webb eller sociala medier. Låt oss göra dina visuella intryck oförglömliga."
   },
   "icon": "ph:image-duotone",
   "color": "red",
@@ -20,41 +20,41 @@
       "sv": "timme"
     },
     "note": {
-      "en": "Price includes professional editing, colour calibration and delivery in multiple optimised formats. Fixed package rates available for product series and campaign imagery. Rush service available at premium rates.",
-      "sv": "Priset inkluderar professionell redigering, färgkalibrering och leverans i flera optimerade format. Fasta paketpriser tillgängliga för produktserier och kampanjbilder. Expresstjänst tillgänglig till premiumpriser."
+      "en": "Price includes professional editing, colour calibration, and delivery in multiple optimised formats. Fixed package rates are available for product series and campaign imagery. Rush service is available at premium rates.",
+      "sv": "Priset inkluderar professionell redigering, färgkalibrering och leverans i flera optimerade format. Fasta paketpriser finns för produktserier och kampanjbilder. Expresstjänst tillgänglig mot tillägg."
     }
   },
   "keyFeatures": [
     {
       "title": {
-        "en": "Perfect every image",
-        "sv": "Perfektera varje bild"
+        "en": "Picture-perfect images",
+        "sv": "Bildperfekta foton"
       },
       "description": {
-        "en": "I enhance your photos whilst keeping them natural-looking, ensuring they reflect your brand's quality and professionalism.",
-        "sv": "Jag förbättrar dina foton samtidigt som de behåller sitt naturliga utseende, säkerställer att de speglar ditt varumärkes kvalitet och professionalism."
+        "en": "I'll enhance your photos to look their best while keeping them natural, ensuring they reflect your quality and professionalism.",
+        "sv": "Jag förbättrar dina foton så de ser fantastiska ut samtidigt som de behåller sin naturliga känsla, och säkerställer att de speglar din kvalitet och professionalism."
       },
       "icon": "ph:paint-brush-duotone"
     },
     {
       "title": {
-        "en": "Expert retouching",
-        "sv": "Expert på retuschering"
+        "en": "Flawless retouching",
+        "sv": "Felfri retuschering"
       },
       "description": {
-        "en": "From simple touch-ups to complex enhancements, I make your subjects look their absolute best whilst staying authentic.",
-        "sv": "Från enkla justeringar till komplexa förbättringar får jag dina motiv att se absolut bäst ut samtidigt som de förblir autentiska."
+        "en": "From simple tidy-ups to detailed enhancements, I make your subjects look their absolute best while staying true to life.",
+        "sv": "Från enkla justeringar till detaljerade förbättringar, får jag dina motiv att se absolut bäst ut samtidigt som de förblir verklighetstrogna."
       },
       "icon": "ph:user-focus-duotone"
     },
     {
       "title": {
-        "en": "Sell more products",
-        "sv": "Sälj fler produkter"
+        "en": "Boost your sales",
+        "sv": "Öka din försäljning"
       },
       "description": {
-        "en": "Professional product photo editing that makes your items stand out and encourages customers to make purchases.",
-        "sv": "Professionell produktbildsredigering som får dina varor att sticka ut och uppmuntrar kunder att göra köp."
+        "en": "Get professional product photo editing that makes your items irresistible and encourages customers to buy.",
+        "sv": "Få professionell produktbildsredigering som gör dina varor oemotståndliga och uppmuntrar kunder att köpa."
       },
       "icon": "ph:shopping-bag-duotone"
     },
@@ -64,8 +64,8 @@
         "sv": "Redo för allt"
       },
       "description": {
-        "en": "Get your images perfectly prepared for any use, whether it's social media, websites, print materials or large displays.",
-        "sv": "Få dina bilder perfekt förberedda för all användning, oavsett om det är sociala medier, webbplatser, trycksaker eller stora skärmar."
+        "en": "Receive your images perfectly prepared for any use – social media, websites, print, or large displays.",
+        "sv": "Få dina bilder perfekt förberedda för all användning – sociala medier, webbplatser, trycksaker eller stora skärmar."
       },
       "icon": "ph:export-duotone"
     }
@@ -73,48 +73,48 @@
   "processSteps": [
     {
       "title": {
-        "en": "Review & plan",
-        "sv": "Granska & planera"
+        "en": "Chat & plan",
+        "sv": "Prata & planera"
       },
       "description": {
-        "en": "Analyze your photos and discuss the look and feel you want to achieve.",
-        "sv": "Analyserar dina foton och diskuterar utseendet och känslan du vill uppnå."
+        "en": "We'll look at your photos and chat about the style and feel you're aiming for.",
+        "sv": "Vi tittar på dina foton och pratar om stilen och känslan du siktar på."
       }
     },
     {
       "title": {
-        "en": "Base edit",
-        "sv": "Grundredigering"
+        "en": "Core editing",
+        "sv": "Grundläggande redigering"
       },
       "description": {
-        "en": "Adjust exposure, color, and composition to establish the foundation.",
-        "sv": "Justerar exponering, färg och komposition för att etablera grunden."
+        "en": "I'll adjust exposure, colour, and composition to create a solid base.",
+        "sv": "Jag justerar exponering, färg och komposition för att skapa en stabil grund."
       }
     },
     {
       "title": {
-        "en": "Retouch",
-        "sv": "Retuschera"
+        "en": "Detailed retouching",
+        "sv": "Detaljerad retuschering"
       },
       "description": {
-        "en": "Apply detailed corrections and enhancements to perfect each image.",
-        "sv": "Applicerar detaljerade korrigeringar och förbättringar för att perfektera varje bild."
+        "en": "Applying careful corrections and enhancements to make each image perfect.",
+        "sv": "Jag applicerar noggranna korrigeringar och förbättringar för att göra varje bild perfekt."
       }
     },
     {
       "title": {
-        "en": "Export",
-        "sv": "Exportera"
+        "en": "Deliver & optimise",
+        "sv": "Leverera & optimera"
       },
       "description": {
-        "en": "Prepare and deliver files optimised for your intended use.",
-        "sv": "Förbereder och levererar filer optimerade för din avsedda användning."
+        "en": "You'll get your files optimised and ready for wherever you plan to use them.",
+        "sv": "Du får dina filer optimerade och redo för var du än planerar att använda dem."
       }
     }
   ],
   "cta": {
-    "en": "Elevate your imagery",
-    "sv": "Höj dina bilder"
+    "en": "Get your photos edited",
+    "sv": "Få dina foton redigerade"
   },
   "relatedServices": ["photography", "video-editing", "design"],
   "featuredClients": [
@@ -127,35 +127,35 @@
   "featured": false,
   "seo": {
     "en": {
-      "title": "Professional Photo Enhancement & Retouching Services",
-      "description": "Elevate your imagery with expert photo editing and retouching. I enhance commercial, product, and portrait photography whilst maintaining authenticity, delivering polished visuals that drive engagement.",
+      "title": "Expert photo editing & retouching | Enhance your images",
+      "description": "Transform your photos with professional editing and retouching. I enhance commercial, product, and portrait photography, delivering natural, polished visuals that boost engagement and sales.",
       "keywords": [
-        "photo enhancement services",
+        "photo editing services",
         "professional image retouching",
-        "commercial photo editing",
-        "product image optimisation",
-        "portrait photo refinement",
-        "high-end photo retouching",
-        "post-production specialist",
-        "colour grading expert",
+        "commercial photo editor",
+        "product photo enhancement",
+        "portrait retouching",
+        "high-end photo editing",
+        "image post-production",
+        "colour correction services",
         "digital image enhancement",
-        "e-commerce photo editing"
+        "e-commerce photo editor"
       ]
     },
     "sv": {
-      "title": "Professionell fotoförbättring & Retuscheringstjänster",
-      "description": "Lyft dina bilder med expertfotoredigering och retuschering. Jag förbättrar kommersiella bilder, produktfoton och porträtt samtidigt som jag bevarar autenticitet, levererar polerade visuella resultat som driver engagemang.",
+      "title": "Expert fotoredigering & retuschering | Förbättra dina bilder",
+      "description": "Förvandla dina foton med professionell redigering och retuschering. Jag förbättrar kommersiella bilder, produktfoton och porträtt, och levererar naturliga, polerade visuella resultat som ökar engagemang och försäljning.",
       "keywords": [
-        "fotoförbättringstjänster",
+        "fotoredigeringstjänster",
         "professionell bildretuschering",
-        "kommersiell fotoredigering",
-        "produktbildsoptimering",
-        "porträttfotoförfining",
-        "högkvalitativ fotoretuschering",
-        "efterproduktionsspecialist",
-        "färggraderingsexpert",
+        "kommersiell fotoredigerare",
+        "produktfotoförbättring",
+        "porträttretuschering",
+        "högkvalitativ fotoredigering",
+        "bild efterproduktion",
+        "färgkorrigeringstjänster",
         "digital bildförbättring",
-        "e-handelsfotoredigering"
+        "e-handelsfotoredigerare"
       ]
     }
   }

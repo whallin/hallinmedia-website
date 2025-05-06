@@ -4,12 +4,12 @@
     "sv": "Videoredigering"
   },
   "shortDescription": {
-    "en": "Expert video editing that transforms your raw footage into polished, engaging content. I'll help your videos look professional and make the right impact across all platforms.",
-    "sv": "Expert videoredigering som förvandlar ditt råmaterial till polerat, engagerande innehåll. Jag hjälper dina videor att se professionella ut och göra rätt intryck på alla plattformar."
+    "en": "Turn your raw footage into captivating videos that shine. I create polished, professional content that engages your audience and makes a real impact, wherever it's seen.",
+    "sv": "Förvandla ditt råmaterial till fängslande videor som glänser. Jag skapar polerat, professionellt innehåll som engagerar din publik och gör verklig skillnad, oavsett var det visas."
   },
   "longDescription": {
-    "en": "Good editing is what turns ordinary footage into compelling content that gets noticed. I take your raw video and craft it into something that captures attention and delivers your message clearly.<br /><br />Using industry-leading software and years of experience, I ensure your videos look and sound their absolute best. Whether it's colour correction, smooth transitions, or engaging graphics, every detail is carefully considered.<br /><br />I work efficiently to deliver high-quality results that fit your timeline and budget. You'll get videos that look professional, engage your audience, and help achieve your goals.",
-    "sv": "Bra redigering är det som förvandlar vanligt material till övertygande innehåll som uppmärksammas. Jag tar din råvideo och formar den till något som fångar uppmärksamhet och levererar ditt budskap tydligt.<br /><br />Med hjälp av branschledande programvara och års av erfarenhet ser jag till att dina videor ser och låter som allra bäst. Oavsett om det gäller färgkorrigering, mjuka övergångar eller engagerande grafik övervägs varje detalj noggrant.<br /><br />Jag arbetar effektivt för att leverera högkvalitativa resultat som passar din tidslinje och budget. Du får videor som ser professionella ut, engagerar din publik och hjälper dig att nå dina mål."
+    "en": "Great video isn't just shot, it's crafted. I take your raw footage and transform it into a compelling story that grabs attention and delivers your message with impact. Think of me as your video wizard, turning everyday clips into something truly special.<br /><br />With top-notch software and a keen eye for detail, I'll make sure your videos look and sound fantastic. From vibrant colour correction and seamless transitions to eye-catching graphics, every element is polished to perfection. My goal is to make your content shine and reflect the quality of your brand.<br /><br />I'm all about delivering brilliant results efficiently, respecting your time and budget. You'll receive videos that not only look professional but also connect with your audience and help you smash your goals.",
+    "sv": "Fantastisk video skapas inte bara, den finslipas. Jag tar ditt råmaterial och förvandlar det till en fängslande berättelse som fångar uppmärksamheten och levererar ditt budskap med kraft. Se mig som din videomagiker som förvandlar vardagliga klipp till något alldeles extra.<br /><br />Med branschledande programvara och ett skarpt öga för detaljer ser jag till att dina videor både ser ut och låter fantastiskt. Från livfull färgkorrigering och sömlösa övergångar till iögonfallande grafik – varje element poleras till perfektion. Mitt mål är att få ditt innehåll att glänsa och spegla kvaliteten på ditt varumärke.<br /><br />Jag fokuserar på att leverera strålande resultat effektivt, med respekt för din tid och budget. Du får videor som inte bara ser professionella ut utan också knyter an till din publik och hjälper dig att krossa dina mål."
   },
   "icon": "ph:video-duotone",
   "color": "blue",
@@ -20,52 +20,52 @@
       "sv": "timme"
     },
     "note": {
-      "en": "Minimum 2 hours per project. Complex motion graphics or 3D effects quoted separately. Includes export in up to three formats and two revision rounds.",
-      "sv": "Minimum 2 timmar per projekt. Komplexa motion graphics eller 3D-effekter offereras separat. Inkluderar export i upp till tre format och två revideringsrundor."
+      "en": "Minimum 2-hour booking. Price includes delivery in up to three formats and two rounds of revisions to make sure it's perfect.",
+      "sv": "Minst 2 timmars bokning. Priset inkluderar leverans i upp till tre format och två revideringsrundor för att säkerställa att allt är perfekt."
     }
   },
   "keyFeatures": [
     {
       "title": {
-        "en": "Compelling stories",
-        "sv": "Övertygande berättelser"
+        "en": "Tell your story",
+        "sv": "Berätta din story"
       },
       "description": {
-        "en": "Transform your raw footage into engaging stories that keep viewers watching and connect emotionally with your message.",
-        "sv": "Förvandla ditt råmaterial till engagerande berättelser som håller tittare fast och skapar känslomässig koppling till ditt budskap."
+        "en": "I'll weave your footage into captivating narratives that hook viewers from start to finish and create a connection with your message.",
+        "sv": "Jag väver samman ditt material till fängslande berättelser som binder tittarna från början till slut och skapar en koppling till ditt budskap."
       },
       "icon": "ph:scissors-duotone"
     },
     {
       "title": {
-        "en": "Professional polish",
-        "sv": "Professionell finish"
+        "en": "Shine with a pro finish",
+        "sv": "Gläns med proffsig finish"
       },
       "description": {
-        "en": "Make your videos look and sound their best with expert colour grading, smooth transitions, and crystal-clear audio that reflects your brand's quality.",
-        "sv": "Få dina videor att se och låta som bäst med expert färgkorrigering, mjuka övergångar och kristallklart ljud som speglar ditt varumärkes kvalitet."
+        "en": "Get that high-end look and sound. With expert colour grading, slick transitions, and crisp audio, your videos will scream quality and professionalism.",
+        "sv": "Få den där exklusiva looken och ljudet. Med expertfärgkorrigering, snygga övergångar och kristallklart ljud kommer dina videor att utstråla kvalitet och professionalism."
       },
       "icon": "ph:palette-duotone"
     },
     {
       "title": {
-        "en": "Eye-catching graphics",
-        "sv": "Iögonfallande grafik"
+        "en": "Grab attention with graphics",
+        "sv": "Fånga uppmärksamhet med grafik"
       },
       "description": {
-        "en": "Stand out with custom animations and text that emphasise your key messages and maintain viewer interest throughout your video.",
-        "sv": "Stick ut med anpassade animationer och text som betonar dina huvudbudskap och behåller tittarintresset genom hela din video."
+        "en": "Make your videos pop! Custom animations and stylish text will highlight your key points and keep viewers glued to the screen.",
+        "sv": "Få dina videor att sticka ut! Anpassade animationer och snygg text lyfter fram dina viktigaste poänger och håller tittarna klistrade vid skärmen."
       },
       "icon": "ph:sparkle-duotone"
     },
     {
       "title": {
-        "en": "Multi-platform ready",
-        "sv": "Multiplattformsklar"
+        "en": "Ready for any screen",
+        "sv": "Redo för alla skärmar"
       },
       "description": {
-        "en": "Get your videos optimised for every platform where your audience watches, from social media to presentations, ensuring maximum impact everywhere.",
-        "sv": "Få dina videor optimerade för varje plattform där din publik tittar, från sociala medier till presentationer, vilket säkerställer maximal effekt överallt."
+        "en": "Your videos, perfectly optimised for every platform – social media, websites, presentations. Look great and make an impact, wherever your audience is.",
+        "sv": "Dina videor, perfekt optimerade för alla plattformar – sociala medier, webbplatser, presentationer. Se bra ut och gör intryck, var din publik än är."
       },
       "icon": "ph:monitor-play-duotone"
     }
@@ -73,48 +73,48 @@
   "processSteps": [
     {
       "title": {
-        "en": "Review & plan",
-        "sv": "Granska & planera"
+        "en": "Chat & strategise",
+        "sv": "Snack & strategi"
       },
       "description": {
-        "en": "We analyze your footage and discuss your vision to create an editing plan that matches your goals.",
-        "sv": "Vi analyserar ditt material och diskuterar din vision för att skapa en redigeringsplan som matchar dina mål."
+        "en": "We'll dive into your footage and chat about your vision. Together, we'll map out a plan to hit your goals and make your video awesome.",
+        "sv": "Vi dyker ner i ditt material och pratar om din vision. Tillsammans skapar vi en plan för att nå dina mål och göra din video grym."
       }
     },
     {
       "title": {
-        "en": "First cut",
-        "sv": "Första klippet"
+        "en": "Craft the story",
+        "sv": "Forma berättelsen"
       },
       "description": {
-        "en": "Create a rough edit that establishes the structure and flow of your video.",
-        "sv": "Skapar en grovklippning som etablerar strukturen och flytet i din video."
+        "en": "I'll assemble the first version, focusing on story, structure, and flow. This is where your video starts to take shape.",
+        "sv": "Jag sätter ihop en första version med fokus på berättelse, struktur och flöde. Det är här din video börjar ta form."
       }
     },
     {
       "title": {
-        "en": "Fine-tune",
-        "sv": "Finjustera"
+        "en": "Polish & perfect",
+        "sv": "Putsa & perfektionera"
       },
       "description": {
-        "en": "Polish the edit with color correction, audio enhancement, and any special effects needed.",
-        "sv": "Putsar redigeringen med färgkorrigering, ljudförbättring och eventuella specialeffekter som behövs."
+        "en": "Time for the magic! I'll add colour correction, enhance the audio, and sprinkle in any effects to make it shine.",
+        "sv": "Dags för magi! Jag lägger till färgkorrigering, förbättrar ljudet och strösslar med effekter för att få det att glänsa."
       }
     },
     {
       "title": {
-        "en": "Finalise",
-        "sv": "Slutför"
+        "en": "Deliver & dazzle",
+        "sv": "Leverera & imponera"
       },
       "description": {
-        "en": "Apply your feedback and export in the right formats for your platforms.",
-        "sv": "Applicerar din feedback och exporterar i rätt format för dina plattformar."
+        "en": "After your feedback, I'll deliver the final video in all the right formats, ready to wow your audience.",
+        "sv": "Efter din feedback levererar jag den färdiga videon i alla rätt format, redo att imponera på din publik."
       }
     }
   ],
   "cta": {
-    "en": "Transform your video",
-    "sv": "Förvandla din video"
+    "en": "Elevate your video",
+    "sv": "Lyft din video"
   },
   "featured": false,
   "featuredClients": [
@@ -125,35 +125,41 @@
   ],
   "seo": {
     "en": {
-      "title": "Expert Video Editing Services",
-      "description": "Transform your raw footage into captivating stories with my specialist editing services. From colour grading to motion graphics, I enhance your video content to achieve maximum impact.",
+      "title": "Pro video editing services | Transform your footage",
+      "description": "Boost your brand with professional video editing. I turn raw footage into engaging, high-impact videos with expert colour grading, motion graphics, and storytelling. Get content that converts.",
       "keywords": [
         "professional video editing",
         "post-production services",
-        "colour grading specialist",
+        "colour correction services",
         "video enhancement",
-        "content optimisation",
+        "video content optimisation",
         "audio post-production",
-        "video effects editing",
+        "motion graphics video",
         "footage transformation",
-        "commercial editing",
-        "narrative structure"
+        "corporate video editing",
+        "storytelling video editing",
+        "social media video editing",
+        "YouTube video editor",
+        "promotional video editing"
       ]
     },
     "sv": {
-      "title": "Expert Videoredigeringstjänster",
-      "description": "Förvandla ditt råmaterial till fängslande berättelser med mina specialistredigeringstjänster. Från färggradering till rörlig grafik förhöjer jag ditt videoinnehåll för maximal effekt.",
+      "title": "Proffsig videoredigering | Förvandla ditt råmaterial",
+      "description": "Stärk ditt varumärke med professionell videoredigering. Jag förvandlar råmaterial till engagerande videor med hög effekt genom expertmässig färgkorrigering, rörlig grafik och storytelling. Få innehåll som konverterar.",
       "keywords": [
         "professionell videoredigering",
         "efterproduktionstjänster",
-        "färggraderingsspecialist",
+        "färgkorrigering video",
         "videoförbättring",
-        "innehållsoptimering",
+        "videoinnehållsoptimering",
         "ljudefterproduktion",
-        "videoeffektredigering",
+        "rörlig grafik video",
         "materialomvandling",
-        "kommersiell redigering",
-        "berättarstruktur"
+        "företagsvideo redigering",
+        "storytelling videoredigering",
+        "videoredigering sociala medier",
+        "YouTube videoredigerare",
+        "reklamvideo redigering"
       ]
     }
   },

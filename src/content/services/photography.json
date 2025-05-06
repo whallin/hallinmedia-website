@@ -1,15 +1,15 @@
 {
   "serviceName": {
-    "en": "Photography",
-    "sv": "Fotografering"
+    "en": "Photography Services",
+    "sv": "Fotograferingstjänster"
   },
   "shortDescription": {
-    "en": "Capture your brand's unique story through stunning photography. From corporate events to product shoots, we'll create images that make your business shine.",
-    "sv": "Fånga ditt varumärkes unika historia genom fantastisk fotografering. Från företagsevent till produktfotografering skapar vi bilder som får ditt företag att lysa."
+    "en": "Let's capture your brand's story with stunning photos. From corporate events to product shots, I create images that make your business shine.",
+    "sv": "Låt mig fånga ditt varumärkes historia med fantastiska foton. Från företagsevent till produktbilder skapar jag bilder som får ditt företag att glänsa."
   },
   "longDescription": {
-    "en": "Great photos do more than just look good—they tell your story and connect with your audience. As your photographer, I focus on creating images that work hard for your business.<br /><br />Whether you need polished corporate headshots, engaging event coverage, or product photos that boost sales, I'll help showcase your brand in its best light. Each shoot is carefully planned to capture authentic moments that resonate with your audience.<br /><br />I bring both creative vision and business understanding to every project, ensuring you get photos that not only look brilliant but also help achieve your goals.",
-    "sv": "Bra foton gör mer än att bara se bra ut—de berättar din historia och skapar kontakt med din publik. Som din fotograf fokuserar jag på att skapa bilder som arbetar hårt för ditt företag.<br /><br />Oavsett om du behöver polerade företagsporträtt, engagerande eventdokumentation eller produktfoton som ökar försäljningen, hjälper jag dig visa upp ditt varumärke i bästa ljus. Varje fotografering planeras noggrant för att fånga äkta ögonblick som resonerar med din publik.<br /><br />Jag tar med både kreativ vision och affärsförståelse till varje projekt, vilket säkerställer att du får foton som inte bara ser briljanta ut utan också hjälper dig nå dina mål."
+    "en": "Amazing photos do more than just look good – they tell your story and connect with your audience. As your photographer, I’m all about creating images that truly work for your business.<br /><br />Need polished corporate headshots, engaging photos from your event, or product shots that drive sales? I’ll help showcase your brand in the best possible light. Every shoot is carefully planned to capture those genuine moments that really speak to your audience.<br /><br />I bring a creative eye and a solid understanding of business to every project. You’ll get photos that not only look brilliant but also help you hit your business goals.",
+    "sv": "Fantastiska foton gör mer än att bara se bra ut – de berättar din historia och skapar kontakt med din publik. Som din fotograf handlar allt för mig om att skapa bilder som verkligen fungerar för ditt företag.<br /><br />Behöver du proffsiga företagsporträtt, engagerande bilder från ditt evenemang, eller produktfoton som driver försäljning? Jag hjälper dig att visa upp ditt varumärke i bästa möjliga ljus. Varje fotografering planeras noggrant för att fånga de där äkta ögonblicken som verkligen talar till din publik.<br /><br />Jag tar med mig ett kreativt öga och en gedigen affärsförståelse till varje projekt. Du får foton som inte bara ser briljanta ut utan också hjälper dig att nå dina affärsmål."
   },
   "icon": "ph:camera-duotone",
   "color": "red",
@@ -20,18 +20,18 @@
       "sv": "bild"
     },
     "note": {
-      "en": "Price includes professional retouching and delivery of high-resolution files. Volume discounts available for projects requiring 10+ images. Minimum booking of 5 images per session.",
-      "sv": "Priset inkluderar professionell retuschering och leverans av högupplösta filer. Volymrabatter tillgängliga för projekt som kräver 10+ bilder. Minsta bokning är 5 bilder per session."
+      "en": "Price includes professional retouching and high-resolution files. Discounts available for 10+ images. Minimum 5 images per session.",
+      "sv": "Priset inkluderar professionell retuschering och högupplösta filer. Rabatter tillgängliga för 10+ bilder. Minst 5 bilder per session."
     }
   },
   "keyFeatures": [
     {
       "title": {
-        "en": "Photos that tell a story",
-        "sv": "Foton som berättar en historia"
+        "en": "Storytelling images",
+        "sv": "Berättande bilder"
       },
       "description": {
-        "en": "I capture genuine moments and create powerful images that showcase your brand's unique personality and values.",
+        "en": "I capture genuine moments, creating powerful images that showcase your brand's unique personality and values.",
         "sv": "Jag fångar äkta ögonblick och skapar kraftfulla bilder som visar ditt varumärkes unika personlighet och värderingar."
       },
       "icon": "ph:strategy-duotone"
@@ -42,30 +42,30 @@
         "sv": "Resultat av högsta kvalitet"
       },
       "description": {
-        "en": "Using the finest equipment and years of expertise, we deliver stunning images that make your brand stand out.",
-        "sv": "Med den bästa utrustningen och års av expertis levererar jag fantastiska bilder som får ditt varumärke att sticka ut."
+        "en": "Using the best gear and years of experience, I deliver stunning images that make your brand stand out.",
+        "sv": "Med den bästa utrustningen och års erfarenhet levererar jag fantastiska bilder som får ditt varumärke att sticka ut."
       },
       "icon": "ph:medal-duotone"
     },
     {
       "title": {
-        "en": "Versatile service",
-        "sv": "Mångsidig service"
+        "en": "Versatile & adaptable",
+        "sv": "Mångsidig & anpassningsbar"
       },
       "description": {
-        "en": "From product shots to corporate events, we adapt our style to match your needs whilst maintaining consistent quality.",
-        "sv": "Från produktbilder till företagsevent anpassar jag stilen för att matcha dina behov samtidigt som jag upprätthåller konsekvent kvalitet."
+        "en": "From product shots to corporate events, I adapt my style to your needs, always ensuring top quality.",
+        "sv": "Från produktbilder till företagsevent anpassar jag min stil efter dina behov, och säkerställer alltid högsta kvalitet."
       },
       "icon": "ph:cube-duotone"
     },
     {
       "title": {
-        "en": "Smooth experience",
-        "sv": "Smidig upplevelse"
+        "en": "A smooth experience",
+        "sv": "En smidig upplevelse"
       },
       "description": {
-        "en": "From planning to delivery, we handle everything professionally, making the whole process easy and stress-free.",
-        "sv": "Från planering till leverans hanterar vi allt professionellt, gör hela processen enkel och stressfri."
+        "en": "From planning to delivery, I handle everything professionally, making it easy and stress-free for you.",
+        "sv": "Från planering till leverans hanterar jag allt professionellt, vilket gör hela processen enkel och stressfri för dig."
       },
       "icon": "ph:clock-clockwise-duotone"
     }
@@ -77,8 +77,8 @@
         "sv": "Planera & förbered"
       },
       "description": {
-        "en": "We discuss your photo needs and plan everything from locations to style to get the perfect shots.",
-        "sv": "Vi diskuterar dina fotobehov och planerar allt från platser till stil för att få de perfekta bilderna."
+        "en": "We'll chat about your photo needs and plan everything – from locations to style – to get the perfect shots.",
+        "sv": "Vi pratar igenom dina fotobehov och planerar allt – från platser till stil – för att få de perfekta bilderna."
       }
     },
     {
@@ -87,8 +87,8 @@
         "sv": "Fotografera & fånga"
       },
       "description": {
-        "en": "Professional photo session with attention to lighting, composition, and your brand's style.",
-        "sv": "Professionell fotosession med fokus på ljussättning, komposition och din varumärkesstil."
+        "en": "A professional photo session focusing on great lighting, composition, and your brand's unique style.",
+        "sv": "En professionell fotosession med fokus på bra ljussättning, komposition och ditt varumärkes unika stil."
       }
     },
     {
@@ -97,58 +97,58 @@
         "sv": "Redigera & förbättra"
       },
       "description": {
-        "en": "Careful selection and editing of the best photos to bring out their full potential.",
-        "sv": "Noggrann selektion och redigering av de bästa bilderna för att ta fram deras fulla potential."
+        "en": "I carefully select and edit the best photos, bringing out their full potential.",
+        "sv": "Jag väljer noggrant ut och redigerar de bästa bilderna för att framhäva deras fulla potential."
       }
     },
     {
       "title": {
-        "en": "Deliver & apply",
-        "sv": "Leverera & tillämpa"
+        "en": "Deliver & use",
+        "sv": "Leverera & använd"
       },
       "description": {
-        "en": "Providing your photos in all needed formats with guidance on how to use them best.",
-        "sv": "Levererar dina bilder i alla önskade format med vägledning om hur de bäst används."
+        "en": "You'll get your photos in all the formats you need, with tips on how to use them best.",
+        "sv": "Du får dina bilder i alla format du behöver, med tips om hur du bäst använder dem."
       }
     }
   ],
   "seo": {
     "en": {
-      "title": "Commercial & Corporate Photography - Visual Brand Storytelling",
-      "description": "Transform your brand's visual presence with bespoke photography services. From sleek corporate headshots to dynamic event coverage across Northern Sweden, I capture moments that define your business.",
+      "title": "Commercial & corporate photography | Visual brand storytelling",
+      "description": "Elevate your brand with bespoke photography. From corporate headshots to event coverage in Northern Sweden, I capture moments that define your business.",
       "keywords": [
         "commercial photography northern sweden",
         "corporate event photographer",
         "business portrait photography",
-        "industrial photo documentation",
+        "industrial photography",
         "product photography services",
-        "brand photography specialist",
-        "professional event coverage",
-        "visual content creation",
+        "brand photographer",
+        "professional event photographer",
+        "visual content creator",
         "corporate headshots skelleftea",
-        "commercial photographer north"
+        "commercial photographer north sweden"
       ]
     },
     "sv": {
-      "title": "Kommersiell & Företagsfotografi - Visuellt varumärkesberättande",
-      "description": "Förvandla ditt varumärkes visuella närvaro med skräddarsydda fotograferingstjänster. Från eleganta företagsporträtt till dynamisk eventdokumentation i norra Sverige fångar jag ögonblick som definierar ditt företag.",
+      "title": "Kommersiell & företagsfotografering | Visuellt berättande för varumärken",
+      "description": "Lyft ditt varumärke med skräddarsydd fotografering. Från företagsporträtt till eventbevakning i norra Sverige – jag fångar ögonblicken som definierar ditt företag.",
       "keywords": [
         "kommersiell fotografi norra sverige",
-        "företagseventfotograf",
-        "företagsporträttfotografering",
-        "industriell fotodokumentation",
-        "produktfotograferingstjänster",
-        "varumärkesfotografspecialist",
-        "professionell eventbevakning",
-        "visuellt innehållsskapande",
+        "företagsevent fotograf",
+        "företagsporträtt",
+        "industrifotografering",
+        "produktfotografering",
+        "varumärkesfotograf",
+        "professionell eventfotograf",
+        "visuellt innehåll",
         "företagsporträtt skellefteå",
-        "kommersiell fotograf norr"
+        "kommersiell fotograf norrland"
       ]
     }
   },
   "cta": {
-    "en": "Book a photoshoot",
-    "sv": "Boka en fotografering"
+    "en": "Book your photoshoot",
+    "sv": "Boka din fotografering"
   },
   "cities": [
     {
@@ -159,53 +159,51 @@
       "slug": "skelleftea",
       "localSeo": {
         "en": {
-          "title": "Commercial Photography in Skellefteå - Industrial & Business Portraits",
-          "description": "Expert commercial photography capturing Skellefteå's industrial evolution and business growth. Specialising in corporate portraits, architectural photography, and industrial documentation.",
+          "title": "Commercial photography Skellefteå | Industrial & Business Portraits",
+          "description": "Expert commercial photography in Skellefteå. Capturing industrial growth & business portraits. Specialising in corporate, architectural & industrial photos.",
           "keywords": [
             "commercial photographer skelleftea",
-            "business portrait photography",
-            "industrial site photos",
-            "architectural photography",
-            "corporate event photos",
-            "product photography north",
-            "professional headshots"
+            "business portraits skelleftea",
+            "industrial photography skelleftea",
+            "architectural photography skelleftea",
+            "corporate event photographer skelleftea",
+            "product photography skelleftea",
+            "professional headshots skelleftea"
           ]
         },
         "sv": {
-          "title": "Kommersiell fotografering i Skellefteå - Industri- & Företagsporträtt",
-          "description": "Expert på kommersiell fotografering som fångar Skellefteås industriella utveckling och företagstillväxt. Specialiserad på företagsporträtt, arkitekturfotografi och industriell dokumentation.",
+          "title": "Kommersiell fotografering Skellefteå | Industri & Företagsporträtt",
+          "description": "Expert på kommersiell fotografering i Skellefteå. Fångar industriell tillväxt & företagsporträtt. Specialiserad på företags-, arkitektur- & industrifoton.",
           "keywords": [
             "företagsfotograf skellefteå",
-            "porträttfotografering",
-            "industrifotografering",
-            "arkitekturfotografi",
+            "porträttfotografering skellefteå",
+            "industrifotografering skellefteå",
+            "arkitekturfotografi skellefteå",
             "eventfotograf skellefteå",
-            "produktfotografering norr",
-            "professionella porträtt"
+            "produktfotografering skellefteå",
+            "professionella porträtt skellefteå"
           ]
         }
       },
       "localContent": {
         "en": {
           "heading": "Commercial photography in Skellefteå",
-          "intro": "Skellefteå's rapid growth brings countless visual stories worth capturing. From architectural marvels like Sara kulturhus to the pulsing industrial developments, my lens documents the city's transformation through carefully composed still imagery that speaks volumes. Based locally, I offer swift response times and deep understanding of the region's unique photographic opportunities.",
+          "intro": "Skellefteå is booming, and there are so many stories to tell! From amazing buildings like Sara Kulturhus to exciting industrial developments, I capture the city's transformation with carefully crafted images. Being local means I can respond quickly and I know the best spots for unique photos.",
           "specificBenefits": [
-            "Specialist in architectural and industrial site photography",
-            "Local studio facilities for professional portrait sessions",
-            "Extensive portfolio of regional corporate event coverage",
-            "Rapid turnaround for urgent marketing materials",
-            "Expert in Nordic natural light conditions year-round"
+            "Specialist in architectural and industrial site photography.",
+            "Great portfolio of regional corporate event coverage.",
+            "Quick turnaround for your urgent marketing needs.",
+            "Expert in using Nordic natural light, all year round."
           ]
         },
         "sv": {
           "heading": "Kommersiell fotografering i Skellefteå",
-          "intro": "Skellefteås snabba tillväxt ger otaliga visuella berättelser värda att fånga. Från arkitektoniska underverk som Sara kulturhus till de pulserande industriella utvecklingarna dokumenterar min lins stadens förvandling genom noggrant komponerade stillbilder som talar sitt tydliga språk. Med lokal bas erbjuder jag snabba responstider och djup förståelse för regionens unika fotografiska möjligheter.",
+          "intro": "Skellefteå växer så det knakar, och det finns så många berättelser att berätta! Från fantastiska byggnader som Sara Kulturhus till spännande industriella utvecklingar, fångar jag stadens förvandling med noggrant komponerade bilder. Att vara lokal innebär att jag kan agera snabbt och känner till de bästa platserna för unika foton.",
           "specificBenefits": [
-            "Specialist på arkitektur- och industrifotografering",
-            "Lokala studiofaciliteter för professionella porträttsessioner",
-            "Omfattande portfolio av regional företagseventsfotografering",
-            "Snabb leverans för brådskande marknadsföringsmaterial",
-            "Expert på nordiska ljusförhållanden året runt"
+            "Specialist på arkitektur- och industrifotografering.",
+            "Bred portfolio av regional företagseventsfotografering.",
+            "Snabb leverans för dina brådskande marknadsföringsbehov.",
+            "Expert på att använda nordiskt naturligt ljus, året runt."
           ]
         }
       }
@@ -218,112 +216,51 @@
       "slug": "umea",
       "localSeo": {
         "en": {
-          "title": "Professional Photography in Umeå",
-          "description": "Capturing Umeå's academic excellence and vibrant cultural scene through expert photography. Specialising in research documentation, performing arts, and academic events.",
+          "title": "Professional photography Umeå | Academic & cultural events",
+          "description": "Capturing Umeå's cultural vibrancy with expert photography. Specialising in research documentation, performing arts, and university events.",
           "keywords": [
             "research photography umea",
-            "academic event photos",
-            "cultural photography",
-            "performing arts photos",
-            "university photographer",
-            "scientific documentation",
-            "gallery exhibition photos"
+            "academic event photographer umea",
+            "cultural photography umea",
+            "performing arts photographer umea",
+            "university photographer umea",
+            "scientific documentation umea",
+            "gallery exhibition photography umea"
           ]
         },
         "sv": {
-          "title": "Professionell fotografering i Umeå",
-          "description": "Fångar Umeås akademiska excellens och livliga kulturscen genom expertfotografering. Specialiserad på forskningsdokumentation, scenkonst och akademiska evenemang.",
+          "title": "Professionell fotografering Umeå | Akademiska & kulturella event",
+          "description": "Fångar Umeås  kulturella liv med expertfotografering. Specialiserad på forskningsdokumentation, scenkonst och universitetsevenemang.",
           "keywords": [
             "forskningsfotograf umeå",
-            "akademisk fotografering",
-            "kulturfotografering",
-            "scenkonstfoton",
-            "universitetsfotograf",
-            "vetenskaplig dokumentation",
-            "utställningsfotografering"
+            "akademisk eventfotograf umeå",
+            "kulturfotografering umeå",
+            "scenkonstfotograf umeå",
+            "universitetsfotograf umeå",
+            "vetenskaplig dokumentation umeå",
+            "utställningsfotografering umeå"
           ]
         }
       },
       "localContent": {
         "en": {
-          "heading": "Cultural photography in Umeå",
-          "intro": "Where intellectual pursuit meets artistic expression, Umeå's diverse landscape demands photography that captures both precision and creativity. My expertise in academic and cultural photography helps institutions and organisations create compelling visual narratives that bridge the gap between scholarly rigour and artistic excellence.",
+          "heading": "Cultural & academic photography in Umeå",
+          "intro": "Umeå blends intellect with artistry, and my photography captures this unique mix. I help institutions and organisations create compelling visual stories that connect scholarly work with artistic flair, perfect for Umeå's dynamic scene.",
           "specificBenefits": [
-            "Refined expertise in performing arts photography",
-            "Specialised equipment for gallery and exhibition documentation",
-            "Contemporary approach to academic portrait photography",
-            "Advanced techniques for low-light venue photography",
-            "Experience with multi-day cultural event coverage"
+            "Skilled in performing arts photography.",
+            "Specialised gear for gallery and exhibition documentation.",
+            "Advanced techniques for low-light venue photography.",
+            "Experienced in covering multi-day cultural events."
           ]
         },
         "sv": {
-          "heading": "Kulturfotografering i Umeå",
-          "intro": "Där intellektuellt sökande möter konstnärligt uttryck kräver Umeås mångsidiga landskap fotografering som fångar både precision och kreativitet. Min expertis inom akademisk och kulturell fotografering hjälper institutioner och organisationer att skapa övertygande visuella berättelser som överbryggar klyftan mellan akademisk stringens och konstnärlig excellens.",
+          "heading": "Kultur- & akademisk fotografering i Umeå",
+          "intro": "Umeå blandar intellekt med konstnärskap, och min fotografering fångar denna unika mix. Jag hjälper institutioner och organisationer att skapa fängslande visuella berättelser som kopplar samman akademiskt arbete med konstnärlig känsla, perfekt för Umeås dynamiska scen.",
           "specificBenefits": [
-            "Förfinad expertis inom scenkonstfotografering",
-            "Specialiserad utrustning för galleri- och utställningsdokumentation",
-            "Modernt förhållningssätt till akademisk porträttfotografering",
-            "Avancerade tekniker för fotografering i svagt ljus",
-            "Erfarenhet av flerdagars kulturevenemangsdokumentation"
-          ]
-        }
-      }
-    },
-    {
-      "name": {
-        "en": "Luleå",
-        "sv": "Luleå"
-      },
-      "slug": "lulea",
-      "localSeo": {
-        "en": {
-          "title": "Technical Photography in Luleå - Industrial Imaging",
-          "description": "Specialist photography services for Luleå's technical industries and coastal operations. Expert in industrial machinery, maritime facilities, and engineering projects.",
-          "keywords": [
-            "technical photographer lulea",
-            "industrial site photography",
-            "maritime facility photos",
-            "engineering documentation",
-            "machinery photography",
-            "port operations photos",
-            "aerial industrial photography"
-          ]
-        },
-        "sv": {
-          "title": "Teknisk fotografering i Luleå - Industrifotografering",
-          "description": "Specialistfotografering för Luleås tekniska industrier och kustverksamhet. Expert på industriell maskineri, maritima anläggningar och ingenjörsprojekt.",
-          "keywords": [
-            "teknisk fotograf luleå",
-            "industrifotografering",
-            "maritim fotografering",
-            "ingenjörsdokumentation",
-            "maskinfotografering",
-            "hamnverksamhetsfoton",
-            "industriell flygfotografering"
-          ]
-        }
-      },
-      "localContent": {
-        "en": {
-          "heading": "Industrial & technical photography in Luleå",
-          "intro": "Luleå's unique position as a tech hub in the Arctic Circle presents distinctive photographic challenges and opportunities. My specialist equipment and expertise in industrial photography allows me to capture your technical achievements with crystal clarity, whether in the controlled environment of a data centre or the dramatic backdrop of maritime facilities.",
-          "specificBenefits": [
-            "High-speed photography for industrial processes",
-            "Custom lighting solutions for machine documentation",
-            "Certified safety training for hazardous environments",
-            "Specialist in technical product photography",
-            "Weather-sealed equipment for maritime conditions"
-          ]
-        },
-        "sv": {
-          "heading": "Industri- & teknisk fotografering i Luleå",
-          "intro": "Luleås unika position som ett tekniskt nav i polcirkeln presenterar särskilda fotografiska utmaningar och möjligheter. Min specialistutrustning och expertis inom industrifotografering låter mig fånga era tekniska prestationer med kristallklar skärpa, vare sig det är i den kontrollerade miljön i ett datacenter eller mot den dramatiska bakgrunden av maritima anläggningar.",
-          "specificBenefits": [
-            "Höghastighetsfotografering för industriella processer",
-            "Anpassade ljussättningslösningar för maskindokumentation",
-            "Certifierad säkerhetsutbildning för riskfyllda miljöer",
-            "Specialist på teknisk produktfotografering",
-            "Vädertätad utrustning för maritima förhållanden"
+            "Skicklig inom scenkonstfotografering.",
+            "Specialiserad utrustning för galleri- och utställningsdokumentation.",
+            "Avancerade tekniker för fotografering i svagt ljus.",
+            "Erfarenhet av att dokumentera flerdagars kulturevenemang."
           ]
         }
       }

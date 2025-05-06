@@ -4,12 +4,12 @@
     "sv": "Digital design"
   },
   "shortDescription": {
-    "en": "Turn your ideas into eye-catching digital designs that make your brand impossible to ignore. From websites to social media, we'll help you stand out in today's digital landscape.",
-    "sv": "Förvandla dina idéer till iögonfallande digitala designer som gör ditt varumärke omöjligt att ignorera. Från webbplatser till sociala medier hjälper vi dig att sticka ut i dagens digitala landskap."
+    "en": "Let's turn your ideas into stunning digital designs that make your brand shine. From websites to social media, I'll help you stand out and get noticed.",
+    "sv": "Låt oss förvandla dina idéer till snygga digitala designer som får ditt varumärke att lysa. Från webbplatser till sociala medier hjälper jag dig att sticka ut och bli sedd."
   },
   "longDescription": {
-    "en": "In the digital world, great design is about creating experiences that captivate and convert. I blend creative flair with strategic thinking to craft designs that don't just look stunning—they drive real results for your business.<br /><br />From striking website designs and intuitive mobile apps to scroll-stopping social media graphics, each project is crafted with both visual impact and user engagement in mind. My designs adapt seamlessly across all devices and platforms, ensuring your brand looks brilliant wherever your audience finds you.<br /><br />By focusing on your business goals and user behaviour, I create designs that guide visitors naturally towards taking action, whether that's making a purchase, signing up, or getting in touch.",
-    "sv": "I den digitala världen handlar bra design om att skapa upplevelser som fängslar och konverterar. Jag blandar kreativt sinne med strategiskt tänkande för att skapa designer som inte bara ser fantastiska ut—de driver verkliga resultat för ditt företag.<br /><br />Från slående webbdesign och intuitiva mobilappar till scroll-stoppande grafik för sociala medier, varje projekt skapas med både visuell effekt och användarengagemang i åtanke. Mina designer anpassar sig sömlöst över alla enheter och plattformar, vilket säkerställer att ditt varumärke ser lysande ut var din publik än hittar dig.<br /><br />Genom att fokusera på dina affärsmål och användarbeteende skapar jag designer som guidar besökare naturligt mot att ta action, oavsett om det handlar om att göra ett köp, registrera sig eller ta kontakt."
+    "en": "Great design isn't just about looking good – it's about creating digital experiences that truly connect and convert. I mix creative spark with smart strategy to deliver designs that are not only beautiful but also work hard for your business.<br /><br />Whether it's a captivating website, an easy-to-use mobile app, or social media graphics that stop the scroll, I design with your audience and your goals in mind. Your brand will look fantastic and work perfectly on any device, wherever your customers are.<br /><br />By understanding what you want to achieve and how your users behave, I craft designs that naturally lead people to take the next step – be it buying, signing up, or reaching out.",
+    "sv": "Bra design handlar inte bara om att se bra ut – det handlar om att skapa digitala upplevelser som verkligen engagerar och konverterar. Jag blandar kreativitet med smart strategi för att leverera designer som inte bara är snygga, utan också jobbar hårt för ditt företag.<br /><br />Oavsett om det är en fängslande webbplats, en lättanvänd mobilapp eller sociala medier-grafik som stoppar scrollandet, designar jag med din publik och dina mål i åtanke. Ditt varumärke kommer att se fantastiskt ut och fungera perfekt på alla enheter, var dina kunder än är.<br /><br />Genom att förstå vad du vill uppnå och hur dina användare beter sig, skapar jag designer som naturligt leder människor att ta nästa steg – vare sig det är att köpa, registrera sig eller kontakta dig."
   },
   "icon": "ph:paint-brush-duotone",
   "color": "green",
@@ -20,52 +20,52 @@
       "sv": "timme"
     },
     "note": {
-      "en": "Price includes design iterations and exported files. Fixed project fees available for larger scopes. Ongoing retainer options from SEK 2,000/month for consistent brand support.",
-      "sv": "Priset inkluderar designiterationer och exporterade filer. Fasta projektavgifter tillgängliga för större omfattningar. Löpande retaineralternativ från 2 000 kr/månad för konsekvent varumärkesstöd."
+      "en": "Hourly rate includes design revisions and all your final files. Retainers start from just 2,000 SEK/month.",
+      "sv": "Timpriset inkluderar designjusteringar och alla dina färdiga filer. Behöver du löpande designstöd? Retainers börjar från endast 2 000 kr/månad."
     }
   },
   "keyFeatures": [
     {
       "title": {
-        "en": "Purpose-driven design",
-        "sv": "Målinriktad design"
+        "en": "Designs that deliver results",
+        "sv": "Design som levererar resultat"
       },
       "description": {
-        "en": "Turn your business goals into stunning designs that not only look great but actively help you attract customers and grow your business.",
-        "sv": "Förvandla dina affärsmål till fantastiska designer som inte bara ser bra ut utan aktivt hjälper dig att attrahera kunder och växa ditt företag."
+        "en": "I create beautiful designs that are laser-focused on your business goals, helping you attract more customers and boost your growth.",
+        "sv": "Jag skapar snygga designer som är helt fokuserade på dina affärsmål och hjälper dig att locka fler kunder och öka din tillväxt."
       },
       "icon": "ph:target-duotone"
     },
     {
       "title": {
-        "en": "User-friendly experience",
-        "sv": "Användarvänlig upplevelse"
+        "en": "Smooth user journeys",
+        "sv": "Smidiga användarresor"
       },
       "description": {
-        "en": "Make your digital presence more effective with intuitive designs that guide visitors naturally to take action, whether it's making a purchase or getting in touch.",
-        "sv": "Gör din digitala närvaro mer effektiv med intuitiva designer som guidar besökare naturligt till handling, oavsett om det gäller att göra ett köp eller ta kontakt."
+        "en": "My intuitive designs make it easy and enjoyable for visitors to achieve their goals on your site, guiding them smoothly towards making a purchase or contacting you.",
+        "sv": "Mina intuitiva designer gör det enkelt och trevligt för besökare att nå sina mål på din webbplats, och guidar dem smidigt mot att göra ett köp eller kontakta dig."
       },
       "icon": "ph:mouse-simple-duotone"
     },
     {
       "title": {
-        "en": "Growth-ready design",
-        "sv": "Tillväxtklar design"
+        "en": "Designs that convert",
+        "sv": "Design som konverterar"
       },
       "description": {
-        "en": "Get designs that help your business grow by turning more visitors into customers, using proven principles that encourage engagement and action.",
-        "sv": "Få designer som hjälper ditt företag växa genom att förvandla fler besökare till kunder, med beprövade principer som uppmuntrar engagemang och handling."
+        "en": "Boost your business with designs built to convert. I use proven strategies to turn more of your visitors into loyal customers by encouraging interaction and action.",
+        "sv": "Boosta ditt företag med design byggd för att konvertera. Jag använder beprövade strategier för att förvandla fler av dina besökare till lojala kunder genom att uppmuntra interaktion och handling."
       },
       "icon": "ph:chart-line-up-duotone"
     },
     {
       "title": {
-        "en": "Future-proof solutions",
-        "sv": "Framtidssäkra lösningar"
+        "en": "Future-ready designs",
+        "sv": "Framtidssäker design"
       },
       "description": {
-        "en": "Stay ahead with modern designs that adapt to new technologies and trends whilst maintaining your unique brand identity across all platforms.",
-        "sv": "Håll dig i framkant med moderna designer som anpassar sig till ny teknik och trender samtidigt som din unika varumärkesidentitet bevaras över alla plattformar."
+        "en": "Stay ahead of the curve with modern, adaptable designs. Your brand will look consistently great and perform brilliantly, ready for tomorrow's tech and trends.",
+        "sv": "Ligg steget före med modern, anpassningsbar design. Ditt varumärke kommer att se genomgående bra ut och prestera suveränt, redo för morgondagens teknik och trender."
       },
       "icon": "ph:trend-up-duotone"
     }
@@ -73,48 +73,48 @@
   "processSteps": [
     {
       "title": {
-        "en": "Discovery",
-        "sv": "Upptäckt"
+        "en": "Understand & strategise",
+        "sv": "Förstå & planera"
       },
       "description": {
-        "en": "Learn about your brand and goals to create a focused design direction.",
-        "sv": "Lär känna ditt varumärke och mål för att skapa en fokuserad designriktning."
+        "en": "We'll kick off by diving deep into your brand, audience, and goals to map out a winning design strategy together.",
+        "sv": "Vi börjar med att dyka djupt ner i ditt varumärke, din målgrupp och dina mål för att tillsammans skapa en vinnande designstrategi."
       }
     },
     {
       "title": {
-        "en": "Design",
-        "sv": "Design"
+        "en": "Create & visualise",
+        "sv": "Skapa & visualisera"
       },
       "description": {
-        "en": "Create initial designs that bring your vision to life.",
-        "sv": "Skapar initiala designer som ger liv åt din vision."
+        "en": "Next, I'll bring your vision to life with initial design concepts, focusing on creativity and user experience.",
+        "sv": "Sedan väcker jag din vision till liv med första designkoncept, med fokus på kreativitet och användarupplevelse."
       }
     },
     {
       "title": {
-        "en": "Refine",
-        "sv": "Förfina"
+        "en": "Refine & perfect",
+        "sv": "Förfina & fullända"
       },
       "description": {
-        "en": "Polish the designs based on your feedback until they're perfect.",
-        "sv": "Putsar designerna baserat på din feedback tills de är perfekta."
+        "en": "Your feedback is key! We'll work together to polish the designs until they're absolutely perfect and you're thrilled with the result.",
+        "sv": "Din feedback är viktig! Vi jobbar tillsammans för att finslipa designen tills den är helt perfekt och du är supernöjd med resultatet."
       }
     },
     {
       "title": {
-        "en": "Deliver",
-        "sv": "Leverera"
+        "en": "Deliver & launch",
+        "sv": "Leverera & lansera"
       },
       "description": {
-        "en": "Package and deliver final files in all formats you need.",
-        "sv": "Paketerar och levererar slutfiler i alla format du behöver."
+        "en": "Once approved, I'll package up all your final design files in every format you need, ready for launch!",
+        "sv": "När allt är godkänt paketerar jag alla dina slutliga designfiler i alla format du behöver, redo för lansering!"
       }
     }
   ],
   "cta": {
-    "en": "Book design services",
-    "sv": "Boka designtjänster"
+    "en": "Let's Create Your Design",
+    "sv": "Låt oss skapa din design"
   },
   "relatedServices": [
     "brand-identity",
@@ -143,35 +143,39 @@
   "featured": true,
   "seo": {
     "en": {
-      "title": "Transformative Digital Design Services - Crafting digital experiences",
-      "description": "Innovative digital design solutions that transform your brand's online presence. My strategic approach creates engaging digital experiences that captivate your audience and drive measurable results.",
+      "title": "Expert digital design services | Stunning, user-friendly designs that convert",
+      "description": "Need a digital design that wows users and drives growth? I create beautiful, intuitive websites, apps, and graphics that boost your brand and deliver real results.",
       "keywords": [
-        "digital design agency",
-        "user experience design",
-        "digital branding",
-        "website design",
-        "mobile design",
-        "interactive design",
-        "digital transformation",
-        "creative design",
-        "digital innovation",
-        "responsive design"
+        "digital design services",
+        "UX design",
+        "online branding",
+        "custom website design",
+        "mobile app design",
+        "engaging digital design",
+        "business growth design",
+        "creative digital solutions",
+        "innovative design",
+        "responsive web design",
+        "graphic design",
+        "UK digital design"
       ]
     },
     "sv": {
-      "title": "Digital Design för moderna varumärken - Kreativ digitaltjänst",
-      "description": "Skapar engagerande digitala upplevelser som förstärker ditt varumärke. Mina kreativa designtjänst kombinerar innovation med strategi för att leverera resultatdrivande digitala lösningar.",
+      "title": "Expert digital design services | Stunning, user-friendly designs that convert",
+      "description": "Behöver du digital design som imponerar på användare och driver tillväxt? Jag skapar snygga, intuitiva webbplatser, appar och grafik som stärker ditt varumärke och ger verkliga resultat.",
       "keywords": [
-        "digital design Sverige",
-        "användarupplevelse",
-        "digital varumärkesdesign",
-        "responsiv design",
-        "interaktiv design",
-        "digital transformation",
-        "kreativ digitalbyrå",
-        "digital innovation",
-        "webbdesign",
-        "digitala lösningar"
+        "digital design tjänster Sverige",
+        "UX design Sverige",
+        "digital varumärkesprofilering",
+        "responsiv webbdesign",
+        "engagerande digital design",
+        "design för företagstillväxt",
+        "kreativa digitala lösningar",
+        "innovativ design Sverige",
+        "anpassad webbdesign",
+        "digitala designlösningar",
+        "grafisk design",
+        "konverterande design"
       ]
     }
   },
@@ -184,51 +188,51 @@
       "slug": "skelleftea",
       "localSeo": {
         "en": {
-          "title": "Strategic Digital Design in Skellefteå - UI/UX & Brand Design",
-          "description": "Transform your digital presence with user-centred design solutions. From innovative web interfaces to comprehensive brand identities, we create designs that drive growth for Skellefteå's evolving business landscape.",
+          "title": "Digital design Skellefteå | UI/UX & branding that drives growth",
+          "description": "Boost your Skellefteå business with expert digital design. I craft user-focused websites, apps, and branding that resonate locally and drive real growth in our dynamic city.",
           "keywords": [
-            "ui design skelleftea",
-            "digital branding north",
-            "user experience design",
-            "web interface solutions",
-            "mobile app design",
-            "brand identity system",
-            "interactive design"
+            "UI design Skellefteå",
+            "digital branding Skellefteå",
+            "UX design Skellefteå",
+            "web design Skellefteå",
+            "mobile app design Skellefteå",
+            "brand identity Skellefteå",
+            "local digital design Skellefteå"
           ]
         },
         "sv": {
-          "title": "Strategisk Digital Design i Skellefteå - UI/UX & Varumärkesdesign",
-          "description": "Förvandla din digitala närvaro med användarcentrerade designlösningar. Från innovativa webbgränssnitt till omfattande varumärkesidentiteter skapar vi design som driver tillväxt för Skellefteås utvecklande näringsliv.",
+          "title": "Digital design Skellefteå | UI/UX & varumärkesbyggande som driver tillväxt",
+          "description": "Boosta ditt Skellefteå-företag med expert digitaldesign. Jag skapar användarfokuserade webbplatser, appar och varumärken som engagerar lokalt och driver verklig tillväxt i vår dynamiska stad.",
           "keywords": [
-            "ui-design skellefteå",
-            "digital branding norr",
-            "användarupplevelse design",
-            "webbgränssnittsdesign",
-            "mobilappsdesign",
-            "varumärkesidentitet",
-            "interaktiv design"
+            "UI-design Skellefteå",
+            "digital branding Skellefteå",
+            "UX-design Skellefteå",
+            "webbdesign Skellefteå",
+            "mobilappsdesign Skellefteå",
+            "varumärkesidentitet Skellefteå",
+            "lokal digitaldesign Skellefteå"
           ]
         }
       },
       "localContent": {
         "en": {
-          "heading": "Innovative digital design in Skellefteå",
-          "intro": "As Skellefteå emerges as northern Sweden's industrial powerhouse, your brand needs design that reflects this dynamic energy. From battery gigafactories to traditional industries, I craft visual experiences that blend innovation with local heritage, helping your business stand out in our rapidly evolving cityscape.",
+          "heading": "Digital Design in Skellefteå",
+          "intro": "Skellefteå is booming, and your brand needs to keep pace! I create digital designs that capture this energy, blending modern innovation with our local spirit. Let's make your business a standout in our exciting city.",
           "specificBenefits": [
-            "Expertise in creating industry-specific digital interfaces for Skellefteå's growing tech sector",
-            "Deep understanding of local design preferences and cultural aesthetics",
-            "Rapid prototyping and iteration cycles with same-day feedback sessions",
-            "Specialised visual solutions for industrial and manufacturing clients"
+            "Designs tailored for Skellefteå's booming tech and industrial sectors.",
+            "Local know-how: designs that click with the Skellefteå audience.",
+            "Fast turnarounds: quick prototypes and feedback to keep your project moving.",
+            "Visuals that work: specialised design for industrial and manufacturing needs."
           ]
         },
         "sv": {
-          "heading": "Innovativ digital design i Skellefteå",
-          "intro": "När Skellefteå växer fram som norra Sveriges industriella kraftcentrum behöver ditt varumärke design som speglar denna dynamiska energi. Från batterigigafabriker till traditionella industrier skapar jag visuella upplevelser som blandar innovation med lokalt arv, och hjälper ditt företag att sticka ut i vårt snabbt utvecklande stadslandskap.",
+          "heading": "Digital Design i Skellefteå",
+          "intro": "Skellefteå blomstrar, och ditt varumärke behöver hänga med! Jag skapar digital design som fångar denna energi, blandar modern innovation med vår lokala anda. Låt oss göra ditt företag till en stjärna i vår spännande stad.",
           "specificBenefits": [
-            "Expertis inom att skapa branschspecifika digitala gränssnitt för Skellefteås växande techsektor",
-            "Djup förståelse för lokala designpreferenser och kulturell estetik",
-            "Snabba prototyp- och iterationscykler med återkoppling samma dag",
-            "Specialiserade visuella lösningar för industri- och tillverkningskunder"
+            "Design skräddarsydd för Skellefteås växande tech- och industrisektorer.",
+            "Lokal kunskap: design som klickar med Skellefteåpubliken.",
+            "Snabba puckar: kvicka prototyper och feedback håller projektet rullande.",
+            "Visuellt som funkar: specialdesign för industri- och tillverkningsbehov."
           ]
         }
       }
@@ -241,108 +245,51 @@
       "slug": "umea",
       "localSeo": {
         "en": {
-          "title": "Creative Digital Design in Umeå - Educational & Cultural Interfaces",
-          "description": "Innovative digital design solutions for Umeå's academic and cultural sectors. Creating engaging interfaces and visual systems that blend intellectual depth with creative expression.",
+          "title": "Digital design Umeå | Creative solutions for academia & culture",
+          "description": "Elevate your Umeå organisation with creative digital design. I specialise in engaging interfaces for education, culture, and business, blending smarts with style.",
           "keywords": [
-            "educational interface design",
-            "cultural sector ux",
-            "research platform design",
-            "digital learning systems",
-            "museum interface design",
-            "academic web design",
-            "creative digital solutions"
+            "educational design Umeå",
+            "cultural UX Umeå",
+            "research design Umeå",
+            "e-learning design Umeå",
+            "museum design Umeå",
+            "academic design Umeå",
+            "creative design Umeå"
           ]
         },
         "sv": {
-          "title": "Kreativ Digital Design i Umeå - Utbildnings- & kulturgränssnitt",
-          "description": "Innovativa digitala designlösningar för Umeås akademiska och kulturella sektorer. Skapar engagerande gränssnitt och visuella system som kombinerar intellektuellt djup med kreativt uttryck.",
+          "title": "Digital design Umeå | Kreativa lösningar för akademi & kultur",
+          "description": "Lyft din Umeå-organisation med kreativ digitaldesign. Jag specialiserar mig på engagerande gränssnitt för utbildning, kultur och näringsliv, och blandar smarthet med stil.",
           "keywords": [
-            "utbildningsgränssnittsdesign",
-            "kultursektor ux",
-            "forskningsplattformsdesign",
-            "digitala lärsystem",
-            "museigränssnittsdesign",
-            "akademisk webbdesign",
-            "kreativa digitallösningar"
+            "utbildningsdesign Umeå",
+            "kultur UX Umeå",
+            "forskningsdesign Umeå",
+            "e-learning design Umeå",
+            "museidesign Umeå",
+            "akademisk design Umeå",
+            "kreativ design Umeå"
           ]
         }
       },
       "localContent": {
         "en": {
-          "heading": "Creative digital design for Umeå",
-          "intro": "In a city where creativity and education intersect, your digital presence needs to reflect both intellectual depth and artistic flair. I create designs that resonate with Umeå's sophisticated audience, whether you're part of the thriving academic community or the innovative business sector.",
+          "heading": "Stylish Digital Design for Umeå",
+          "intro": "Umeå thrives on creativity and knowledge. I craft digital designs that speak to this unique spirit, perfect for academics, cultural institutions, and innovative businesses alike. Let's create something brilliant together.",
           "specificBenefits": [
-            "Tailored design solutions for educational institutions and research visualisation",
-            "Experience in creating engaging interfaces for cultural institutions",
-            "Expertise in accessibility-first design approaches",
-            "Design systems that bridge academic rigour with creative innovation"
+            "Designs that make learning and research engaging and accessible.",
+            "Captivating digital experiences for Umeå's cultural scene.",
+            "Inclusive design: ensuring everyone can access and enjoy your content.",
+            "Smart, creative designs that blend academic depth with fresh ideas."
           ]
         },
         "sv": {
-          "heading": "Kreativ digital design för Umeå",
-          "intro": "I en stad där kreativitet och utbildning möts behöver din digitala närvaro återspegla både intellektuellt djup och artistisk känsla. Jag skapar designer som resonerar med Umeås sofistikerade publik, oavsett om du är del av den blomstrande akademiska gemenskapen eller den innovativa företagssektorn.",
+          "heading": "Stilren Digital Design för Umeå",
+          "intro": "Umeå lever på kreativitet och kunskap. Jag skapar digital design som talar till denna unika anda, perfekt för akademiker, kulturinstitutioner och innovativa företag. Låt oss skapa något briljant tillsammans.",
           "specificBenefits": [
-            "Skräddarsydda designlösningar för utbildningsinstitutioner och forskningsvisualisering",
-            "Erfarenhet av att skapa engagerande gränssnitt för kulturinstitutioner",
-            "Expertis inom tillgänglighetscentrerad designstrategier",
-            "Designsystem som överbryggar akademisk stringens med kreativ innovation"
-          ]
-        }
-      }
-    },
-    {
-      "name": {
-        "en": "Luleå",
-        "sv": "Luleå"
-      },
-      "slug": "lulea",
-      "localSeo": {
-        "en": {
-          "title": "Industrial Digital Design in Luleå - Technical Interface Solutions",
-          "description": "Specialised digital design for Luleå's technology sector. Creating intuitive interfaces for complex systems, data visualisation, and industrial control panels.",
-          "keywords": [
-            "industrial interface design",
-            "technical ux solutions",
-            "control panel design",
-            "data visualization ui",
-            "system interface lulea",
-            "industrial ui design",
-            "technical dashboard design"
-          ]
-        },
-        "sv": {
-          "title": "Industriell Digital Design i Luleå - Tekniska gränssnittslösningar",
-          "description": "Specialiserad digital design för Luleås tekniksektor. Skapar intuitiva gränssnitt för komplexa system, datavisualisering och industriella kontrollpaneler.",
-          "keywords": [
-            "industriell gränssnittsdesign",
-            "tekniska ux-lösningar",
-            "kontrollpaneldesign",
-            "datavisualisering ui",
-            "systemgränssnitt luleå",
-            "industriell ui-design",
-            "teknisk dashboarddesign"
-          ]
-        }
-      },
-      "localContent": {
-        "en": {
-          "heading": "Technical digital design in Luleå",
-          "intro": "At the intersection of technological advancement and industrial expertise, Luleå businesses need design that communicates complex capabilities with clarity and impact. I specialise in creating user interfaces and visual systems that make technical excellence accessible and engaging.",
-          "specificBenefits": [
-            "Focused expertise in industrial control interface design",
-            "Data visualisation solutions for complex technical systems",
-            "Security-conscious design practices for sensitive industrial applications",
-            "Experience in creating multilingual technical documentation interfaces"
-          ]
-        },
-        "sv": {
-          "heading": "Teknisk digital design i Luleå",
-          "intro": "I skärningspunkten mellan teknologisk utveckling och industriell expertis behöver Luleåföretag design som kommunicerar komplexa förmågor med klarhet och genomslag. Jag specialiserar mig på att skapa användargränssnitt och visuella system som gör teknisk excellens tillgänglig och engagerande.",
-          "specificBenefits": [
-            "Fokuserad expertis inom design av industriella kontrollgränssnitt",
-            "Datavisualiseringslösningar för komplexa tekniska system",
-            "Säkerhetsmedvetna designmetoder för känsliga industriella applikationer",
-            "Erfarenhet av att skapa flerspråkiga tekniska dokumentationsgränssnitt"
+            "Design som gör lärande och forskning engagerande och tillgänglig.",
+            "Fängslande digitala upplevelser för Umeås kulturscen.",
+            "Inkluderande design: säkerställer att alla kan ta del av ditt innehåll.",
+            "Smart, kreativ design som blandar akademiskt djup med fräscha idéer."
           ]
         }
       }

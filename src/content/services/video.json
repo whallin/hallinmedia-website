@@ -4,12 +4,12 @@
     "sv": "Videoproduktion"
   },
   "shortDescription": {
-    "en": "Professional video production that tells your story with impact. From corporate films to event coverage, I create videos that connect with your audience and achieve your goals.",
-    "sv": "Professionell videoproduktion som berättar din historia med genomslagskraft. Från företagsfilmer till evenemangsdokumentation skapar jag videor som når fram till din publik och uppnår dina mål."
+    "en": "Let's bring your brand's story to life with impactful videos. From corporate films to event highlights, I craft videos that connect, convert, and help your business thrive.",
+    "sv": "Låt oss ge ditt varumärkes berättelse liv med kraftfulla videor. Från företagsfilmer till evenemangshöjdpunkter skapar jag videor som engagerar, konverterar och hjälper ditt företag att blomstra."
   },
   "longDescription": {
-    "en": "Great video content helps you stand out and connect with your audience in a meaningful way. As your video production partner, I bring your ideas to life with a perfect blend of creativity and technical expertise.<br /><br />Whether you need a polished corporate film, dynamic event coverage, or engaging social media content, I handle every aspect with care and precision. From planning and filming to final delivery, you'll get professional results that make your brand shine.<br /><br />My streamlined production process ensures your project runs smoothly, delivering high-quality videos that work hard for your business and stay within your budget.",
-    "sv": "Bra videoinnehåll hjälper dig att sticka ut och skapa meningsfulla kontakter med din publik. Som din videoproduktionspartner ger jag liv åt dina idéer med en perfekt blandning av kreativitet och teknisk expertis.<br /><br />Oavsett om du behöver en polerad företagsfilm, dynamisk evenemangsdokumentation eller engagerande innehåll för sociala medier, hanterar jag varje aspekt med omsorg och precision. Från planering och filmning till slutleverans får du professionella resultat som får ditt varumärke att lysa.<br /><br />Min effektiva produktionsprocess säkerställer att ditt projekt flyter smidigt och levererar högkvalitativa videor som arbetar hårt för ditt företag och håller sig inom din budget."
+    "en": "Video is a powerful tool to make your brand unforgettable and build real connections. As your dedicated video partner, I blend creative storytelling with technical skill to turn your vision into compelling video content.<br /><br />Need a polished corporate film, vibrant event coverage, or scroll-stopping social media videos? I manage everything from initial idea to final cut, ensuring a smooth journey and results that make your business stand out. You'll receive high-impact videos designed to achieve your specific business goals.<br /><br />My efficient process means top-quality video production that respects your time and budget, delivering content that truly performs for you.",
+    "sv": "Video är ett kraftfullt verktyg för att göra ditt varumärke oförglömligt och bygga äkta relationer. Som din dedikerade videopartner blandar jag kreativt berättande med teknisk skicklighet för att omvandla din vision till fängslande videoinnehåll.<br /><br />Behöver du en finslipad företagsfilm, livfull evenemangstäckning eller sociala medier-videor som får folk att stanna upp? Jag hanterar allt från första idé till färdig film, vilket garanterar en smidig process och resultat som får ditt företag att sticka ut. Du får effektfulla videor utformade för att uppnå dina specifika affärsmål.<br /><br />Min effektiva process innebär videoproduktion av högsta kvalitet som respekterar din tid och budget, och levererar innehåll som verkligen presterar för dig."
   },
   "icon": "ph:video-camera-duotone",
   "color": "blue",
@@ -20,59 +20,59 @@
       "sv": "timme"
     },
     "note": {
-      "en": "Price includes professional equipment, one videographer, and basic editing. Additional crew members, specialised equipment, or complex post-production available at additional cost.",
-      "sv": "Priset inkluderar professionell utrustning, en videograf och grundläggande redigering. Ytterligare teammedlemmar, specialutrustning eller komplex efterproduktion tillgängligt mot extra kostnad."
+      "en": "This starting price covers professional gear, a skilled videographer, and essential editing. Need more? Extra crew, specialised kit, or advanced post-production can be arranged to fit your project.",
+      "sv": "Startpriset täcker professionell utrustning, en skicklig videograf och grundläggande redigering. Behöver du mer? Extra personal, specialutrustning eller avancerad efterbearbetning kan ordnas för att passa ditt projekt."
     }
   },
   "keyFeatures": [
     {
       "title": {
-        "en": "Story-driven content",
-        "sv": "Berättelsedrivet innehåll"
+        "en": "Videos that tell your story",
+        "sv": "Videor som berättar din historia"
       },
       "description": {
-        "en": "I turn your brand's message into engaging stories that connect with viewers and inspire them to take action.",
-        "sv": "Jag förvandlar ditt varumärkes budskap till engagerande berättelser som skapar kontakt med tittare och inspirerar dem att agera."
+        "en": "I craft compelling narratives that capture your brand's essence, engage viewers, and drive action.",
+        "sv": "Jag skapar fängslande berättelser som fångar ditt varumärkes kärna, engagerar tittare och driver till handling."
       },
       "icon": "ph:book-duotone"
     },
     {
       "title": {
-        "en": "Professional quality",
-        "sv": "Professionell kvalitet"
+        "en": "Broadcast-quality results",
+        "sv": "Resultat i sändningskvalitet"
       },
       "description": {
-        "en": "High-end equipment and expert techniques ensure your videos look and sound their absolute best across all screens.",
-        "sv": "Förstklassig utrustning och expertteknik säkerställer att dina videor ser och låter absolut bäst på alla skärmar."
+        "en": "Using top-tier equipment and expert techniques, your videos will look and sound exceptional on every platform.",
+        "sv": "Med förstklassig utrustning och experttekniker kommer dina videor att se ut och låta exceptionella på alla plattformar."
       },
       "icon": "ph:camera-duotone"
     },
     {
       "title": {
-        "en": "Flexible solutions",
-        "sv": "Flexibla lösningar"
+        "en": "Tailored to your needs",
+        "sv": "Anpassat efter dina behov"
       },
       "description": {
-        "en": "From quick social media clips to full-length films, I adapt our approach to match your needs and budget perfectly.",
-        "sv": "Från snabba klipp för sociala medier till fullängdsfilmer anpassar jag mitt tillvägagångssätt för att matcha dina behov och budget perfekt."
+        "en": "Whether it's a snappy social clip or a feature-length documentary, I tailor the production to your specific goals and budget.",
+        "sv": "Oavsett om det är ett snabbt sociala medier-klipp eller en fullängdsdokumentär, anpassar jag produktionen efter dina specifika mål och budget."
       },
       "icon": "ph:bandaids-duotone"
     },
     {
       "title": {
-        "en": "Results that matter",
-        "sv": "Resultat som betyder något"
+        "en": "Videos that drive results",
+        "sv": "Videor som driver resultat"
       },
       "description": {
-        "en": "Every video is crafted to achieve specific goals, whether that's more sales, better engagement, or stronger brand awareness.",
-        "sv": "Varje video är utformad för att uppnå specifika mål, oavsett om det gäller fler försäljningar, bättre engagemang eller starkare varumärkeskännedom."
+        "en": "Each video is strategically designed to hit your targets, from boosting sales and engagement to building lasting brand recognition.",
+        "sv": "Varje video är strategiskt utformad för att nå dina mål, från att öka försäljning och engagemang till att bygga varaktig varumärkeskännedom."
       },
       "icon": "ph:chart-line-up-duotone"
     }
   ],
   "cta": {
-    "en": "Get a quote",
-    "sv": "Begär offert"
+    "en": "Let's create your video",
+    "sv": "Låt oss skapa din video"
   },
   "relatedServices": ["photography", "video-editing", "motion-graphics"],
   "featuredClients": [
@@ -92,76 +92,80 @@
   "processSteps": [
     {
       "title": {
-        "en": "Plan & prepare",
-        "sv": "Planera & förbered"
+        "en": "Discover & plan",
+        "sv": "Upptäck & planera"
       },
       "description": {
-        "en": "We discuss your goals and create a plan that fits your needs, timeline, and budget.",
-        "sv": "Vi diskuterar dina mål och skapar en plan som passar dina behov, tidsram och budget."
+        "en": "We'll dive into your vision, goals, and audience to create a tailored project plan, timeline, and budget.",
+        "sv": "Vi dyker ner i din vision, dina mål och din målgrupp för att skapa en skräddarsydd projektplan, tidslinje och budget."
       }
     },
     {
       "title": {
-        "en": "Film & record",
-        "sv": "Filma & spela in"
+        "en": "Create & capture",
+        "sv": "Skapa & fånga"
       },
       "description": {
-        "en": "Professional filming with high-end equipment and expert direction to capture your story.",
-        "sv": "Professionell filmning med förstklassig utrustning och expertregi för att fånga din berättelse."
+        "en": "Using professional gear and creative direction, I capture high-quality footage that brings your story to life.",
+        "sv": "Med professionell utrustning och kreativ regi fångar jag högkvalitativt material som ger din berättelse liv."
       }
     },
     {
       "title": {
-        "en": "Edit & polish",
-        "sv": "Redigera & putsa"
+        "en": "Refine & perfect",
+        "sv": "Förfina & perfektionera"
       },
       "description": {
-        "en": "Expert editing to transform raw footage into a polished final product that achieves your goals.",
-        "sv": "Expertredigering för att omvandla råmaterial till en polerad slutprodukt som uppnår dina mål."
+        "en": "Skilled editing transforms raw footage into a polished video, fine-tuned to meet your objectives.",
+        "sv": "Skicklig redigering omvandlar råmaterial till en polerad video, finjusterad för att uppfylla dina mål."
       }
     },
     {
       "title": {
-        "en": "Review & deliver",
-        "sv": "Granska & leverera"
+        "en": "Deliver & delight",
+        "sv": "Leverera & imponera"
       },
       "description": {
-        "en": "You review the final video and receive optimised files ready for your intended platforms.",
-        "sv": "Du granskar den färdiga videon och får optimerade filer redo för dina avsedda plattformar."
+        "en": "You'll review the final cut. Once approved, you receive your video, optimised for all your chosen platforms.",
+        "sv": "Du granskar den slutgiltiga versionen. Efter godkännande får du din video, optimerad för alla dina valda plattformar."
       }
     }
   ],
   "seo": {
     "en": {
-      "title": "Professional Video Production - Creative storytelling through Film",
-      "description": "Elevate your message with bespoke video production services in Northern Sweden. From corporate documentaries to dynamic event coverage, I craft compelling visual stories that resonate with your audience.",
+      "title": "Expert video production | Creative storytelling & filming services",
+      "description": "Boost your brand with expert video production in Northern Sweden. I create compelling corporate films, event videos, and promotional content that engages your audience and delivers results.",
       "keywords": [
-        "bespoke video production",
-        "corporate film production",
-        "event videography",
-        "promotional videos",
-        "northern sweden filmmaker",
-        "broadcast quality video",
-        "cinematic storytelling",
+        "creative video production northern sweden",
+        "corporate video production",
+        "event filming services",
+        "promotional video content",
+        "video production northern sweden",
+        "high-quality video production",
+        "story-driven video content",
         "professional video services",
-        "creative film production",
-        "visual storytelling expert"
+        "film production services",
+        "expert videographer northern sweden",
+        "business video services",
+        "marketing videos"
       ]
     },
     "sv": {
-      "title": "Professionell Videoproduktion - Kreativt berättande genom Film",
-      "description": "Lyft ditt budskap med skräddarsydda videoprodukttionstjänster i norra Sverige. Från företagsdokumentärer till dynamisk evenemangstäckning skapar jag övertygande visuella berättelser som når fram till din publik.",
+      "title": "Expert videoproduktion | Kreativt berättande & filmproduktion",
+      "description": "Stärk ditt varumärke med expert videoproduktion i norra Sverige. Jag skapar engagerande företagsfilmer, eventvideor och reklaminnehåll som fängslar din publik och levererar resultat.",
       "keywords": [
-        "skräddarsydd videoproduktion",
-        "företagsfilmproduktion",
-        "evenemangsvideografi",
-        "reklamfilmer",
-        "filmskapare norra sverige",
-        "sändningskvalitet video",
-        "filmiskt berättande",
+        "kreativ videoproduktion norra sverige",
+        "företagsvideoproduktion",
+        "eventfilmningstjänster",
+        "reklamvideoinnehåll",
+        "videoproduktion norra sverige",
+        "högkvalitativ videoproduktion",
+        "berättelsedrivet videoinnehåll",
         "professionella videotjänster",
-        "kreativ filmproduktion",
-        "visuell berättarexpert"
+        "filmproduktionstjänster",
+        "expert videograf norra sverige",
+        "företagsvideotjänster",
+        "marknadsföringsvideor"
       ]
     }
   },
@@ -174,53 +178,55 @@
       "slug": "skelleftea",
       "localSeo": {
         "en": {
-          "title": "Premium Film Production in Skellefteå - Corporate & Event Videography",
-          "description": "Crafting cinematic stories for Skellefteå's thriving business community. From documenting industrial innovations to capturing cultural milestones, we deliver broadcast-quality video production with local expertise.",
+          "title": "Skellefteå video production | Corporate films & event videography",
+          "description": "Expert video production in Skellefteå. I specialise in corporate videos, event coverage, and industrial films that showcase your business. Local expertise, stunning results.",
           "keywords": [
-            "skelleftea videographer",
-            "industrial documentary film",
-            "corporate video production",
+            "video production skelleftea",
+            "industrial video skelleftea",
+            "corporate video skelleftea",
             "event filming skelleftea",
-            "aerial video north sweden",
-            "commercial filmmaker skelleftea",
-            "professional video services"
+            "drone videography skelleftea",
+            "commercial video skelleftea",
+            "professional video services skelleftea",
+            "business video skelleftea",
+            "promotional video skelleftea"
           ]
         },
         "sv": {
-          "title": "Professionell filmproduktion i Skellefteå - Företags- & Eventfilmning",
-          "description": "Skapar filmiska berättelser för Skellefteås växande näringsliv. Från att dokumentera industriella innovationer till att fånga kulturella milstolpar levererar vi videoproduktion av sändningskvalitet med lokal expertis.",
+          "title": "Videoproduktion Skellefteå | Företagsfilm & eventvideo",
+          "description": "Expert videoproduktion i Skellefteå. Jag specialiserar mig på företagsfilm, eventbevakning och industrifilm som lyfter ditt företag. Lokal expertis, imponerande resultat.",
           "keywords": [
             "videoproduktion skellefteå",
             "företagsfilm skellefteå",
-            "eventfilmning norra sverige",
-            "industriell dokumentärfilm",
+            "eventfilmning skellefteå",
+            "industrivideo skellefteå",
             "drönarfilm skellefteå",
-            "professionell filmproduktion",
-            "kommersiell filmskapare"
+            "professionell filmproduktion skellefteå",
+            "kommersiell video skellefteå",
+            "företagsvideo skellefteå",
+            "reklamvideo skellefteå"
           ]
         }
       },
       "localContent": {
         "en": {
-          "heading": "Professional video production in Skellefteå",
-          "intro": "From Northvolt's groundbreaking developments to Sara kulturhus's artistic performances, Skellefteå's story deserves to be told through compelling video. My locally-based production service combines cinematic expertise with deep regional understanding to create films that capture our city's remarkable industrial renaissance.",
+          "heading": "Your Go-To for Video Production in Skellefteå",
+          "intro": "Skellefteå is buzzing with innovation. I'm here to capture your Skellefteå story with compelling videos. As a local videographer, I blend cinematic skill with an understanding of our region to showcase your projects and Skellefteå's growth.",
           "specificBenefits": [
-            "Ultra-fast project mobilisation with premium camera equipment ready on-site",
-            "Extensive experience filming in Skellefteå's unique industrial environments",
-            "Direct access to local talent and production resources",
-            "Intimate knowledge of prime filming locations across the region",
-            "Flexible scheduling for time-sensitive corporate announcements"
+            "Quick Start: Premium gear ready for your Skellefteå project.",
+            "Local Connections: Access to local talent and resources for smoother productions.",
+            "Best Locations: I know the top spots in and around Skellefteå for stunning shots.",
+            "Flexible & fast: Adapting to your deadlines for timely corporate videos."
           ]
         },
         "sv": {
-          "heading": "Videoproduktion i Skellefteå",
-          "intro": "Från Northvolts banbrytande utveckling till Sara kulturhus konstnärliga föreställningar förtjänar Skellefteås historia att berättas genom övertygande video. Min lokalt baserade produktionstjänst kombinerar filmisk expertis med djup regional förståelse för att skapa filmer som fångar vår stads remarkabla industriella renässans.",
+          "heading": "Din expert på videoproduktion i Skellefteå",
+          "intro": "Skellefteå sjuder av innovation. Jag är här för att fånga din Skellefteå-berättelse med fängslande videor. Som lokal videograf kombinerar jag filmisk skicklighet med förståelse för vår region för att lyfta fram dina projekt och Skellefteås tillväxt.",
           "specificBenefits": [
-            "Ultrasnabb projektmobilisering med premiumumtrustning redo på plats",
-            "Omfattande erfarenhet av filmning i Skellefteås unika industriella miljöer",
-            "Direkt tillgång till lokala talanger och produktionsresurser",
-            "Intim kännedom om prime-filminglokationer i regionen",
-            "Flexibel schemaläggning för tidskänsliga företagsmeddelanden"
+            "Snabb start: Premiumutrustning redo för ditt Skellefteå-projekt.",
+            "Lokala kontakter: Tillgång till lokala talanger och resurser för smidigare produktioner.",
+            "Bästa platserna: Jag känner till de bästa inspelningsplatserna i och runt Skellefteå.",
+            "Flexibelt & snabbt: Anpassar mig efter dina deadlines för viktiga företagsfilmer."
           ]
         }
       }
@@ -233,110 +239,55 @@
       "slug": "umea",
       "localSeo": {
         "en": {
-          "title": "Creative Video Production in Umeå",
-          "description": "Specialist video production tailored for Umeå's dynamic academic and cultural sectors. We blend artistic vision with professional expertise to create compelling visual narratives.",
+          "title": "Umeå video production | Creative & academic video services",
+          "description": "Creative video production for Umeå's cultural scenes. I craft engaging videos for universities, research, and arts organisations, blending artistic flair with professional results.",
           "keywords": [
             "umea video production",
-            "university event filming",
-            "cultural documentary umea",
-            "research video documentation",
-            "academic film production",
-            "performing arts videography",
-            "educational content creation"
+            "university video umea",
+            "cultural video umea",
+            "research video umea",
+            "academic video production umea",
+            "performing arts video umea",
+            "educational video umea",
+            "event videography umea",
+            "creative video umea"
           ]
         },
         "sv": {
-          "title": "Kreativ Videoproduktion i Umeå",
-          "description": "Specialiserad videoproduktion anpassad för Umeås dynamiska akademiska och kulturella sektorer. Vi kombinerar konstnärlig vision med professionell expertis för att skapa övertygande visuella berättelser.",
+          "title": "Videoproduktion Umeå | Kreativ & akademisk video",
+          "description": "Kreativ videoproduktion för Umeås kulturella scener. Jag skapar engagerande videor för universitet, forskning och kulturorganisationer, och blandar konstnärlig känsla med professionella resultat.",
           "keywords": [
             "videoproduktion umeå",
-            "akademisk filmning",
-            "kulturell dokumentation",
-            "forskningsvideofilm",
-            "universitetseventsfilmning",
-            "scenkonst videografi",
-            "utbildningsinnehåll"
+            "universitetsvideo umeå",
+            "kulturvideo umeå",
+            "forskningsvideo umeå",
+            "akademisk videoproduktion umeå",
+            "scenkonstvideo umeå",
+            "utbildningsvideo umeå",
+            "eventvideo umeå",
+            "kreativ video umeå"
           ]
         }
       },
       "localContent": {
         "en": {
-          "heading": "Creative video solutions in Umeå",
-          "intro": "Umeå's vibrant mix of academic brilliance and cultural innovation demands video content that's equally sophisticated and engaging. Through my tailored production approach, I help universities, research centres, and creative businesses translate complex ideas into compelling visual narratives that resonate with global audiences.",
+          "heading": "Creative video production for Umeå",
+          "intro": "Umeå thrives on academic and cultural energy. I create engaging videos that capture this spirit. Whether for universities, research, or creative projects, I turn complex ideas into stories for local and global audiences.",
           "specificBenefits": [
-            "Specialised expertise in academic and research video documentation",
-            "Advanced equipment for high-quality indoor venue recordings",
-            "Established partnerships with cultural institutions for seamless productions",
-            "Custom lighting solutions for challenging performance spaces",
-            "Multilingual production capability for international audiences"
+            "Indoor filming pro: Top gear for flawless recording in Umeå's venues.",
+            "Cultural connections: Smooth collaborations with Umeå's cultural institutions.",
+            "Masterful lighting: Custom lighting for performances and tricky spaces.",
+            "Global reach: Multilingual options to connect with international viewers."
           ]
         },
         "sv": {
-          "heading": "Kreativa videolösningar i Umeå",
-          "intro": "Umeås livliga blandning av akademisk briljans och kulturell innovation kräver videoinnehåll som är lika sofistikerat som engagerande. Genom mitt skräddarsydda produktionssätt hjälper jag universitet, forskningscentrum och kreativa företag att översätta komplexa idéer till övertygande visuella berättelser som når fram till globala målgrupper.",
+          "heading": "Kreativ videoproduktion för Umeå",
+          "intro": "Umeå blomstrar med akademisk och kulturell energi. Jag skapar engagerande videor som fångar denna anda. Oavsett om det gäller universitet, forskning eller kreativa projekt, omvandlar jag komplexa idéer till berättelser för lokal och global publik.",
           "specificBenefits": [
-            "Specialiserad expertis inom akademisk och forskningsvideodokumentation",
-            "Avancerad utrustning för högkvalitativa inomhusinspelningar",
-            "Etablerade partnerskap med kulturinstitutioner för sömlösa produktioner",
-            "Anpassade ljussättningslösningar för utmanande scenrum",
-            "Flerspråkig produktionskapacitet för internationell publik"
-          ]
-        }
-      }
-    },
-    {
-      "name": {
-        "en": "Luleå",
-        "sv": "Luleå"
-      },
-      "slug": "lulea",
-      "localSeo": {
-        "en": {
-          "title": "Technical Video Production in Luleå",
-          "description": "Expert video documentation for Luleå's technology and engineering sectors. Specialising in industrial processes, technical demonstrations, and corporate communications with cinematic quality.",
-          "keywords": [
-            "lulea technical video",
-            "industrial process filming",
-            "engineering documentation",
-            "corporate video lulea",
-            "technical demonstration film",
-            "manufacturing videography",
-            "professional video services"
-          ]
-        },
-        "sv": {
-          "title": "Teknisk videoproduktion i Luleå",
-          "description": "Expert på videodokumentation för Luleås teknik- och ingenjörssektorer. Specialiserade på industriella processer, tekniska demonstrationer och företagskommunikation med filmisk kvalitet.",
-          "keywords": [
-            "teknisk video luleå",
-            "industriell processfilmning",
-            "ingenjörsdokumentation",
-            "företagsvideo luleå",
-            "teknisk demonstrationsfilm",
-            "tillverkningsvideografi",
-            "professionell videotjänst"
-          ]
-        }
-      },
-      "localContent": {
-        "en": {
-          "heading": "Technical video excellence in Luleå",
-          "intro": "At the intersection of Arctic innovation and industrial might, Luleå's technological achievements deserve world-class video documentation. My specialised production service combines advanced filming techniques with thorough understanding of industrial safety protocols, delivering compelling content that showcases your technological breakthroughs.",
-          "specificBenefits": [
-            "Cold weather-optimised filming equipment for year-round production",
-            "Certified for secure facility documentation and data centre filming",
-            "Specialised lighting gear for challenging industrial environments",
-            "Advanced stabilisation systems for maritime and industrial filming"
-          ]
-        },
-        "sv": {
-          "heading": "Teknisk videoexcellens i Luleå",
-          "intro": "I skärningspunkten mellan arktisk innovation och industriell styrka förtjänar Luleås teknologiska prestationer videodokumentation i världsklass. Min specialiserade produktionstjänst kombinerar avancerade filmtekniker med grundlig förståelse för industriella säkerhetsprotokoll, och levererar övertygande innehåll som visar upp era teknologiska genombrott.",
-          "specificBenefits": [
-            "Kallväderoptimerad filmutrustning för året-runt-produktion",
-            "Certifierad för säker anläggningsdokumentation och datacentersfilmning",
-            "Specialiserad ljusutrustning för utmanande industrimiljöer",
-            "Avancerade stabiliseringssystem för marin- och industrifilmning"
+            "Proffs på inomhusfilmning: Topputrustning för felfria inspelningar i Umeås lokaler.",
+            "Kulturella samarbeten: Smidiga samarbeten med Umeås kulturinstitutioner.",
+            "Mästerlig ljussättning: Anpassad ljussättning för scener och krävande utrymmen.",
+            "Global räckvidd: Flerspråkiga alternativ för att nå en internationell publik."
           ]
         }
       }
