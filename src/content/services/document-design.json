@@ -4,12 +4,12 @@
     "sv": "Dokumentmallar"
   },
   "shortDescription": {
-    "en": "Make your business documents work smarter with professionally designed templates that save time, ensure consistency, and help your team communicate with confidence.",
-    "sv": "Få dina företagsdokument att arbeta smartare med professionellt designade mallar som sparar tid, säkerställer konsekvens och hjälper ditt team kommunicera med självförtroende."
+    "en": "Boost your team's efficiency and brand image with custom document templates. Save time, ensure consistency, and communicate like a pro!",
+    "sv": "Boosta teamets effektivitet och varumärkesprofil med skräddarsydda dokumentmallar. Spara tid, säkerställ enhetlighet och kommunicera som ett proffs!"
   },
   "longDescription": {
-    "en": "Your business documents should make an impact without creating extra work. I specialise in creating document templates that are both impressive and practical, helping your team work more efficiently whilst maintaining a professional image.<br /><br />Whether you're sending proposals, creating reports, or preparing presentations, each template is thoughtfully designed to make document creation straightforward and stress-free. Built-in features like automated formatting and clear style guides ensure everyone in your organisation can produce polished, on-brand materials with minimal effort.<br /><br />All templates are delivered ready to use in both Microsoft Office and Google Workspace formats, making it easy for your entire team to maintain professional standards across all your business communications.",
-    "sv": "Dina företagsdokument ska göra intryck utan att skapa extra arbete. Jag specialiserar mig på att skapa dokumentmallar som är både imponerande och praktiska, och hjälper ditt team att arbeta mer effektivt samtidigt som en professionell image upprätthålls.<br /><br />Oavsett om du skickar förslag, skapar rapporter eller förbereder presentationer, är varje mall genomtänkt designad för att göra dokumentskapande enkelt och stressfritt. Inbyggda funktioner som automatiserad formatering och tydliga stilguider säkerställer att alla i din organisation kan producera polerade, varumärkesanpassade material med minimal ansträngning.<br /><br />Alla mallar levereras klara att användas i både Microsoft Office och Google Workspace-format, vilket gör det enkelt för hela ditt team att upprätthålla professionella standarder i all er företagskommunikation."
+    "en": "Tired of inconsistent, time-consuming documents? Let's fix that! I create smart, user-friendly document templates that empower your team to produce stunning, on-brand materials in a flash. Imagine proposals that wow, reports that impress, and presentations that pop – all without the usual fuss.<br /><br />My templates are more than just pretty layouts. They're built with clever features like automated formatting and easy-to-follow style guides, so everyone can create professional documents effortlessly. This means less time wrestling with Microsoft Word or Google Docs, and more time focusing on what truly matters.<br /><br />Delivered ready for Microsoft Office and Google Workspace, these templates ensure your entire team communicates with clarity, consistency, and confidence. Ready to transform your document workflow and elevate your brand?",
+    "sv": "Trött på inkonsekventa, tidskrävande dokument? Låt oss fixa det! Jag skapar smarta, användarvänliga dokumentmallar som ger ditt team kraften att producera snygga, varumärkesanpassade material på nolltid. Föreställ dig offerter som imponerar, rapporter som övertygar och presentationer som sticker ut – allt utan det vanliga krånglet.<br /><br />Mina mallar är mer än bara snygga layouter. De är byggda med smarta funktioner som automatisk formatering och lättförståeliga stilguider, så att alla kan skapa professionella dokument utan ansträngning. Det betyder mindre tid att brottas med Microsoft Word eller Google Docs, och mer tid att fokusera på det som verkligen är viktigt.<br /><br />Levereras redo för Microsoft Office och Google Workspace, säkerställer dessa mallar att hela ditt team kommunicerar med tydlighet, enhetlighet och självförtroende. Redo att förvandla ert dokumentflöde och lyfta ert varumärke?"
   },
   "icon": "ph:file-doc-duotone",
   "color": "green",
@@ -20,52 +20,52 @@
       "sv": "mall"
     },
     "note": {
-      "en": "Templates provided in either Microsoft Office or Google Workspace formats. Includes style guide for consistent usage.",
-      "sv": "Mallar tillhandahålls i antingen Microsoft Office och Google Workspace-format. Inkluderar stilguide för konsekvent användning."
+      "en": "Your custom templates come ready for Microsoft Office & Google Workspace, complete with a style guide for easy, consistent use.",
+      "sv": "Dina mallar levereras redo för Microsoft Office & Google Workspace, komplett med en stilguide för enkel och konsekvent användning."
     }
   },
   "keyFeatures": [
     {
       "title": {
-        "en": "Ready when you are",
-        "sv": "Redo när du är"
+        "en": "Instant productivity boost",
+        "sv": "Omedelbar produktivitetsboost"
       },
       "description": {
-        "en": "Get professionally designed templates that your team can start using straight away, saving time whilst maintaining quality and consistency.",
-        "sv": "Få professionellt designade mallar som ditt team kan börja använda direkt, sparar tid samtidigt som kvaliteten och konsekvensen bibehålls."
+        "en": "Hit the ground running with professionally designed templates. Your team saves time and produces consistently high-quality, on-brand documents from day one.",
+        "sv": "Kom igång direkt med professionellt designade mallar. Ditt team sparar tid och producerar konsekvent högkvalitativa, varumärkesanpassade dokument från dag ett."
       },
       "icon": "ph:file-text-duotone"
     },
     {
       "title": {
-        "en": "Perfectly on-brand",
-        "sv": "Perfekt varumärkt"
+        "en": "Flawlessly on-brand, every time",
+        "sv": "Alltid perfekt varumärkesanpassat"
       },
       "description": {
-        "en": "Every document reflects your brand beautifully, with your colours, fonts, and design elements built right into the templates.",
-        "sv": "Varje dokument speglar ditt varumärke vackert, med dina färger, typsnitt och designelement inbyggda i mallarna."
+        "en": "Showcase your brand's unique identity in every document. Your colours, fonts, and key design elements are seamlessly integrated for a polished, professional look.",
+        "sv": "Visa upp ditt varumärkes unika identitet i varje dokument. Dina färger, typsnitt och viktiga designelement integreras sömlöst för ett polerat, professionellt utseende."
       },
       "icon": "ph:paint-brush-duotone"
     },
     {
       "title": {
-        "en": "Works everywhere",
-        "sv": "Fungerar överallt"
+        "en": "Seamless Microsoft & Google integration",
+        "sv": "Smidig Microsoft & Google integration"
       },
       "description": {
-        "en": "Use your templates in both Microsoft Office and Google Workspace, ensuring everyone can work efficiently regardless of their software.",
-        "sv": "Använd dina mallar i både Microsoft Office och Google Workspace, säkerställer att alla kan arbeta effektivt oavsett programvara."
+        "en": "Enjoy full compatibility with both Microsoft Office and Google Workspace. Your team can collaborate and create efficiently, no matter their preferred platform.",
+        "sv": "Njut av full kompatibilitet med både Microsoft Office och Google Workspace. Ditt team kan samarbeta och skapa effektivt, oavsett deras föredragna plattform."
       },
       "icon": "ph:devices-duotone"
     },
     {
       "title": {
-        "en": "Smart features",
-        "sv": "Smarta funktioner"
+        "en": "Time-saving smart features",
+        "sv": "Tidsbesparande smarta funktioner"
       },
       "description": {
-        "en": "Save time with built-in automation that handles formatting, numbering, and repetitive content automatically.",
-        "sv": "Spara tid med inbyggd automation som hanterar formatering, numrering och repetitivt innehåll automatiskt."
+        "en": "Work smarter, not harder. Built-in automation takes care of tedious formatting, numbering, and repetitive content, freeing up your team's valuable time.",
+        "sv": "Arbeta smartare, inte hårdare. Inbyggd automation tar hand om tråkig formatering, numrering och repetitivt innehåll, vilket frigör ditt teams värdefulla tid."
       },
       "icon": "ph:lightning-duotone"
     }
@@ -73,48 +73,48 @@
   "processSteps": [
     {
       "title": {
-        "en": "Understand needs",
-        "sv": "Förstå behov"
+        "en": "Discovery & strategy",
+        "sv": "Upptäckt & strategi"
       },
       "description": {
-        "en": "Learning about your document needs and workflow to create templates that work for your team.",
-        "sv": "Lär känna dina dokumentbehov och arbetsflöde för att skapa mallar som fungerar för ditt team."
+        "en": "We'll dive deep into your document needs, workflow, and brand to craft a template strategy that truly works for your team.",
+        "sv": "Vi dyker djupt ner i era dokumentbehov, arbetsflöden och varumärke för att skapa en mallstrategi som verkligen fungerar för ert team."
       }
     },
     {
       "title": {
-        "en": "Design & build",
-        "sv": "Design & bygg"
+        "en": "Design & development",
+        "sv": "Design & utveckling"
       },
       "description": {
-        "en": "Creating clean, functional templates that match your brand and make document creation easy.",
-        "sv": "Skapar rena, funktionella mallar som matchar ditt varumärke och gör dokumentskapande enkelt."
+        "en": "I'll design and build beautiful, functional templates that perfectly reflect your brand and make document creation a breeze.",
+        "sv": "Jag designar och bygger snygga, funktionella mallar som perfekt återspeglar ert varumärke och gör dokumentskapandet till en barnlek."
       }
     },
     {
       "title": {
-        "en": "Test & refine",
-        "sv": "Testa & förbättra"
+        "en": "Testing & refinement",
+        "sv": "Testning & förfining"
       },
       "description": {
-        "en": "Testing templates with your team and making improvements based on real usage feedback.",
-        "sv": "Testar mallar med ditt team och gör förbättringar baserat på verklig användningsfeedback."
+        "en": "We'll test the templates with your team, gathering real-world feedback to refine and perfect them for optimal usability.",
+        "sv": "Vi testar mallarna med ert team och samlar in feedback från verklig användning för att förfina och fullända dem för optimal användbarhet."
       }
     },
     {
       "title": {
-        "en": "Train & support",
-        "sv": "Utbildning & support"
+        "en": "Launch & support",
+        "sv": "Lansering & support"
       },
       "description": {
-        "en": "Helping your team master the templates with clear guides and ongoing support.",
-        "sv": "Hjälper ditt team behärska mallarna med tydliga guider och löpande support."
+        "en": "I'll equip your team with clear guides and provide ongoing support to ensure everyone masters the new templates with confidence.",
+        "sv": "Jag utrustar ert team med tydliga guider och erbjuder löpande support för att säkerställa att alla behärskar de nya mallarna med självförtroende."
       }
     }
   ],
   "cta": {
-    "en": "Create your templates",
-    "sv": "Skapa dina mallar"
+    "en": "Create smarter documents",
+    "sv": "Skapa smartare dokument"
   },
   "relatedServices": [
     "design",
@@ -133,35 +133,53 @@
   "featured": false,
   "seo": {
     "en": {
-      "title": "Professional Document Template Design - Streamline your business documents",
-      "description": "Elevate your business communications with bespoke document templates. My professional design service helps you create polished, efficient documents that save time and strengthen your brand presence.",
+      "title": "Expert document template design | Boost efficiency & brand consistency",
+      "description": "Transform your business communications with custom document templates. I design user-friendly, professional templates for Microsoft Office & Google Workspace that save time, ensure brand consistency, and empower your team.",
       "keywords": [
-        "business document design",
-        "professional templates",
+        "custom document templates",
+        "professional document templates",
         "document automation",
-        "corporate stationery",
+        "branded document templates",
         "branded documents",
         "business efficiency",
-        "document standardisation",
-        "office templates",
+        "document consistency",
+        "Microsoft Office templates",
+        "Google Workspace templates",
         "business productivity",
-        "professional documentation"
+        "professional documentation",
+        "template design service",
+        "Word templates",
+        "Google Docs templates",
+        "PowerPoint templates",
+        "Google Slides templates",
+        "report templates",
+        "proposal templates",
+        "invoice templates"
       ]
     },
     "sv": {
-      "title": "Professionell dokumentmallsdesign - Effektiva företagsdokument",
-      "description": "Skräddarsydda dokumentmallar som effektiviserar ditt företags kommunikation. Mina professionella mallar sparar tid, säkerställer varumärkeskonsistens och förenklar teamets arbete.",
+      "title": "Expertdesign av dokumentmallar | Öka effektivitet & varumärkeskonsistens",
+      "description": "Förvandla er företagskommunikation med skräddarsydda dokumentmallar. Jag designar användarvänliga, professionella mallar för Microsoft Office & Google Workspace som sparar tid, säkerställer varumärkeskonsistens och stärker ert team.",
       "keywords": [
         "professionella dokumentmallar",
         "företagsmallar",
         "dokumentautomatisering",
         "företagskommunikation",
         "varumärkta dokument",
-        "kontorseffektivitet",
-        "dokumentstandardisering",
-        "kommunikationsmallar",
+        "affärseffektivitet",
+        "dokumentkonsistens",
+        "Microsoft Office-mallar",
+        "Google Workspace-mallar",
         "affärsproduktivitet",
-        "professionell dokumentation"
+        "professionell dokumentation",
+        "malldesign",
+        "Word-mallar",
+        "Google Docs-mallar",
+        "PowerPoint-mallar",
+        "Google Slides-mallar",
+        "rapportmallar",
+        "offertmallar",
+        "fakturamallar"
       ]
     }
   }

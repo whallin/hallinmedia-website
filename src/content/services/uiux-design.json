@@ -4,12 +4,12 @@
     "sv": "UI/UX-design"
   },
   "shortDescription": {
-    "en": "Creating websites and apps that are beautiful and easy to use. I design digital experiences that your users will love and help your business grow.",
-    "sv": "Skapar webbplatser och appar som är vackra och lätta att använda. Jag designar digitala upplevelser som dina användare kommer att älska och som hjälper ditt företag att växa."
+    "en": "Let's create websites and apps that are a joy to use. I design digital experiences your users will love, helping your business thrive.",
+    "sv": "Låt oss skapa webbplatser och appar som är ett nöje att använda. Jag designar digitala upplevelser som dina användare kommer att älska, vilket hjälper ditt företag att blomstra."
   },
   "longDescription": {
-    "en": "A well-designed website or app can make all the difference to your business. I create digital experiences that are both beautiful and functional, making it easy for your users to find what they need.<br /><br />From planning and wireframes to the final polished design, I focus on what works best for your users while meeting your business goals. Every button, menu, and page is thoughtfully crafted to create a smooth, enjoyable experience.<br /><br />Working closely with you throughout the process, I ensure the final product not only looks great but delivers real results for your business.",
-    "sv": "En väldesignad webbplats eller app kan göra stor skillnad för ditt företag. Jag skapar digitala upplevelser som är både vackra och funktionella, vilket gör det enkelt för dina användare att hitta vad de behöver.<br /><br />Från planering och wireframes till den slutliga polerade designen fokuserar jag på vad som fungerar bäst för dina användare samtidigt som jag uppfyller dina affärsmål. Varje knapp, meny och sida är omsorgsfullt utformad för att skapa en smidig, trevlig upplevelse.<br /><br />Genom att arbeta nära dig genom hela processen säkerställer jag att slutprodukten inte bara ser bra ut utan levererar verkliga resultat för ditt företag."
+    "en": "A brilliant website or app can transform your business. I craft digital experiences that are not only beautiful but also incredibly user-friendly, making it effortless for your customers to connect with you.<br /><br />From initial ideas and wireframes to the final, polished design, my focus is always on what works best for your users while achieving your business goals. Every button, menu, and page is thoughtfully designed for a smooth, enjoyable journey.<br /><br />I'll work closely with you every step of the way, ensuring the end result doesn't just look fantastic but also delivers real, measurable success for your business.",
+    "sv": "En lysande webbplats eller app kan förvandla ditt företag. Jag skapar digitala upplevelser som inte bara är vackra utan också otroligt användarvänliga, vilket gör det enkelt för dina kunder att nå dig.<br /><br />Från första idéer och wireframes till den slutgiltiga, polerade designen, är mitt fokus alltid på vad som fungerar bäst för dina användare samtidigt som dina affärsmål uppnås. Varje knapp, meny och sida är genomtänkt designad för en smidig och njutbar resa.<br /><br />Jag kommer att arbeta nära dig varje steg på vägen och se till att slutresultatet inte bara ser fantastiskt ut utan också levererar verklig, mätbar framgång för ditt företag."
   },
   "icon": "ph:layout-duotone",
   "color": "green",
@@ -20,52 +20,52 @@
       "sv": "timme"
     },
     "note": {
-      "en": "Minimum project engagement of 10 hours. Includes comprehensive design system documentation and handover files in Figma format.",
-      "sv": "Minimum projektengagemang på 10 timmar. Inkluderar omfattande designsystemdokumentation och överlämningsfiler i Figma-format."
+      "en": "Minimum project scope of 10 hours. This includes a full design system, documentation, and all handover files in Figma format, ready for development.",
+      "sv": "Minsta projektomfattning på 10 timmar. Detta inkluderar ett komplett designsystem, dokumentation och alla överlämningsfiler i Figma-format, redo för utveckling."
     }
   },
   "keyFeatures": [
     {
       "title": {
-        "en": "User-first design",
-        "sv": "Användarfokuserad design"
+        "en": "User-first approach",
+        "sv": "Användaren i fokus"
       },
       "description": {
-        "en": "I create digital experiences that are easy and enjoyable to use, helping your customers find exactly what they need.",
-        "sv": "Jag skapar digitala upplevelser som är enkla och trevliga att använda, och hjälper dina kunder att hitta precis vad de behöver."
+        "en": "I design digital experiences that are intuitive and enjoyable, helping your customers easily find what they need and love doing it.",
+        "sv": "Jag designar digitala upplevelser som är intuitiva och njutbara, vilket hjälper dina kunder att enkelt hitta vad de behöver och gilla att göra det."
       },
       "icon": "ph:users-three-duotone"
     },
     {
       "title": {
-        "en": "Clear communication",
-        "sv": "Tydlig kommunikation"
+        "en": "Effortless navigation",
+        "sv": "Smidig navigering"
       },
       "description": {
-        "en": "Your website or app will guide users naturally, making complex tasks simple and helping them take action with confidence.",
-        "sv": "Din webbplats eller app kommer att guida användare naturligt, göra komplexa uppgifter enkla och hjälpa dem att agera med självförtroende."
+        "en": "Your website or app will guide users naturally, simplifying complex tasks and empowering them to take action with confidence.",
+        "sv": "Din webbplats eller app kommer att guida användare naturligt, förenkla komplexa uppgifter och ge dem möjlighet att agera med självförtroende."
       },
       "icon": "ph:squares-four-duotone"
     },
     {
       "title": {
-        "en": "Works everywhere",
+        "en": "Seamless across devices",
         "sv": "Fungerar överallt"
       },
       "description": {
-        "en": "Your design will look and work perfectly on all devices, from mobile phones to large desktop screens.",
-        "sv": "Din design kommer att se ut och fungera perfekt på alla enheter, från mobiltelefoner till stora datorskärmar."
+        "en": "Your design will look stunning and work flawlessly on all devices, from smartphones to large desktop screens.",
+        "sv": "Din design kommer att se fantastisk ut och fungera felfritt på alla enheter, från smartphones till stora datorskärmar."
       },
       "icon": "ph:devices-duotone"
     },
     {
       "title": {
-        "en": "Proven success",
-        "sv": "Bevisad framgång"
+        "en": "Results-driven design",
+        "sv": "Resultatdriven design"
       },
       "description": {
-        "en": "I thoroughly test with real users to ensure your design achieves its goals and helps grow your business.",
-        "sv": "Jag testar grundligt med riktiga användare för att säkerställa att din design uppnår sina mål och hjälper till att växa ditt företag."
+        "en": "I rigorously test with real users to ensure your design not only meets its goals but also helps your business grow and succeed.",
+        "sv": "Jag testar noggrant med riktiga användare för att säkerställa att din design inte bara uppfyller sina mål utan också hjälper ditt företag att växa och lyckas."
       },
       "icon": "ph:test-tube-duotone"
     }
@@ -73,48 +73,48 @@
   "processSteps": [
     {
       "title": {
-        "en": "Plan & research",
-        "sv": "Planera & undersök"
+        "en": "Discover & plan",
+        "sv": "Upptäck & planera"
       },
       "description": {
-        "en": "We start by understanding your needs and goals through research and discussions to create a solid foundation for design.",
-        "sv": "Vi börjar med att förstå dina behov och mål genom undersökning och diskussioner för att skapa en solid grund för design."
+        "en": "We kick off by deeply understanding your vision and goals. Through collaborative research and discussions, we'll build a strong foundation for a winning design.",
+        "sv": "Vi startar med att djupt förstå din vision och dina mål. Genom gemensam forskning och diskussioner bygger vi en stark grund för en vinnande design."
       }
     },
     {
       "title": {
-        "en": "Design & build",
-        "sv": "Design & bygg"
+        "en": "Design & create",
+        "sv": "Designa & skapa"
       },
       "description": {
-        "en": "Creating wireframes and interactive designs, working closely with you to ensure we're meeting your vision.",
-        "sv": "Skapar wireframes och interaktiva designer, arbetar nära dig för att säkerställa att vi möter din vision."
+        "en": "This is where your vision comes to life. I'll craft wireframes and interactive prototypes, working closely with you to ensure every detail aligns perfectly with your brand.",
+        "sv": "Det är här din vision blir verklighet. Jag skapar wireframes och interaktiva prototyper och arbetar nära dig för att säkerställa att varje detalj stämmer perfekt överens med ditt varumärke."
       }
     },
     {
       "title": {
         "en": "Test & refine",
-        "sv": "Testa & förbättra"
+        "sv": "Testa & förfina"
       },
       "description": {
-        "en": "Testing the designs with real users and making improvements based on feedback and results.",
-        "sv": "Testar designerna med riktiga användare och gör förbättringar baserat på feedback och resultat."
+        "en": "We'll put the designs to the test with real users, gathering valuable feedback to refine and perfect the experience, ensuring it's both effective and delightful.",
+        "sv": "Vi testar designen med riktiga användare och samlar in värdefull feedback för att förfina och fullända upplevelsen, så att den blir både effektiv och njutbar."
       }
     },
     {
       "title": {
-        "en": "Launch & support",
-        "sv": "Lansera & support"
+        "en": "Launch & grow",
+        "sv": "Lansera & växa"
       },
       "description": {
-        "en": "Delivering final designs with documentation and supporting you through implementation.",
-        "sv": "Levererar slutgiltiga designer med dokumentation och stödjer dig genom implementering."
+        "en": "You'll receive the final, polished designs along with comprehensive documentation. I'll support you through implementation, ready to see your business grow.",
+        "sv": "Du får de slutgiltiga, polerade designerna tillsammans med omfattande dokumentation. Jag stöttar dig genom implementeringen, redo att se ditt företag växa."
       }
     }
   ],
   "cta": {
-    "en": "Book a consultation",
-    "sv": "Boka en konsultation"
+    "en": "Design your success",
+    "sv": "Designa din framgång"
   },
   "featuredClients": [
     "24vision",
@@ -126,34 +126,38 @@
   "featured": false,
   "seo": {
     "en": {
-      "title": "User Experience & Interface Design",
-      "description": "Create intuitive digital experiences that delight your users. My UI/UX design services help businesses craft websites and applications that are both beautiful and highly functional.",
+      "title": "Expert UI/UX design services | User-friendly web & app design",
+      "description": "Ready for a website or app your users will love? My UI/UX design services create intuitive, beautiful digital experiences that boost engagement and drive business growth.",
       "keywords": [
+        "ui ux design services",
         "user experience design",
         "interface design",
+        "app design",
         "website usability",
         "digital product design",
         "user research",
         "interaction design",
-        "responsive design",
-        "accessibility design",
-        "user testing",
-        "conversion optimisation"
+        "responsive web design",
+        "accessible design",
+        "user testing services",
+        "conversion rate optimisation"
       ]
     },
     "sv": {
-      "title": "Användarupplevelse & Gränssnittsdesign",
-      "description": "Skapa intuitiva digitala upplevelser som förtjusar dina användare. Mina UI/UX-designtjänster hjälper företag att skapa webbplatser och applikationer som är både vackra och mycket funktionella.",
+      "title": "Expert UI/UX design | Användarvänlig webb & appdesign",
+      "description": "Redo för en webbplats eller app som dina användare kommer att älska? Mina UI/UX-designtjänster skapar intuitiva, vackra digitala upplevelser som ökar engagemanget och driver affärstillväxt.",
       "keywords": [
-        "användarupplevelsedesign",
+        "ui ux design tjänster",
+        "användarupplevelsedesign Sverige",
         "gränssnittsdesign",
+        "appdesign Sverige",
         "webbplatsanvändbarhet",
         "digital produktdesign",
-        "användarforskning",
+        "användarundersökning",
         "interaktionsdesign",
-        "responsiv design",
-        "tillgänglighetsdesign",
-        "användartestning",
+        "responsiv webbdesign",
+        "tillgänglighetsanpassad design",
+        "användartester",
         "konverteringsoptimering"
       ]
     }

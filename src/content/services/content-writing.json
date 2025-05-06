@@ -1,15 +1,15 @@
 {
   "serviceName": {
-    "en": "Content Writing",
-    "sv": "Innehållsskrivande"
+    "en": "Content writing",
+    "sv": "Innehållsskrivning"
   },
   "shortDescription": {
-    "en": "Transform your expertise into powerful stories that connect with your audience. We craft clear, engaging content that educates, inspires, and convinces readers to take action.",
-    "sv": "Förvandla din expertis till kraftfulla berättelser som når din målgrupp. Vi skapar tydligt, engagerande innehåll som utbildar, inspirerar och övertygar läsare att agera."
+    "en": "Turn your expertise into captivating stories. I write clear, engaging content that educates, inspires, and gets readers to act.",
+    "sv": "Förvandla din expertis till fängslande berättelser. Jag skriver tydligt, engagerande innehåll som utbildar, inspirerar och får läsare att agera."
   },
   "longDescription": {
-    "en": "Great content starts with understanding what moves your audience. I help you find the right words to share your expertise, build trust, and turn readers into customers.<br /><br />Every piece of content serves a clear purpose—whether that's boosting your search rankings, establishing thought leadership, or driving sales. I focus on creating clear, compelling content that speaks directly to your readers' needs whilst advancing your business goals.<br /><br />From SEO-optimised blog posts and attention-grabbing website copy to powerful email campaigns and social media content, I help you tell your story in a way that resonates with your audience and delivers measurable results.",
-    "sv": "Bra innehåll börjar med att förstå vad som berör din målgrupp. Jag hjälper dig hitta rätt ord för att dela din expertis, bygga förtroende och förvandla läsare till kunder.<br /><br />Varje innehållsdel tjänar ett tydligt syfte—oavsett om det handlar om att förbättra dina sökrankningar, etablera thought leadership eller driva försäljning. Jag fokuserar på att skapa tydligt, övertygande innehåll som talar direkt till dina läsares behov samtidigt som det främjar dina affärsmål.<br /><br />Från SEO-optimerade blogginlägg och uppmärksamhetsväckande webbkopia till kraftfulla e-postkampanjer och innehåll för sociala medier hjälper jag dig berätta din historia på ett sätt som resonerar med din målgrupp och ger mätbara resultat."
+    "en": "Want content that truly connects and converts? I help you find the perfect words to share your expertise, build trust, and turn readers into loyal customers.<br /><br />Every article, blog post, or web page I write has a clear goal: boosting your search rankings, establishing you as a thought leader, or driving sales. I craft compelling, SEO-friendly content that speaks directly to your audience's needs and helps your business grow.<br /><br />From engaging blog posts and persuasive website copy to effective email campaigns and shareable social media updates, I'll tell your story in a way that captivates your audience and delivers real results.",
+    "sv": "Vill du ha innehåll som verkligen når fram och konverterar? Jag hjälper dig hitta de perfekta orden för att dela din expertis, bygga förtroende och förvandla läsare till lojala kunder.<br /><br />Varje artikel, blogginlägg eller webbsida jag skriver har ett tydligt mål: att boosta din sökranking, etablera dig som en auktoritet, eller driva försäljning. Jag skapar fängslande, SEO-vänligt innehåll som talar direkt till din målgrupps behov och hjälper ditt företag att växa.<br /><br />Från engagerande blogginlägg och övertygande webbtexter till effektiva e-postkampanjer och delningsvärda sociala medier-uppdateringar, berättar jag din historia på ett sätt som fängslar din publik och levererar verkliga resultat."
   },
   "icon": "ph:article-duotone",
   "color": "purple",
@@ -20,52 +20,52 @@
       "sv": "artikel"
     },
     "note": {
-      "en": "Price includes content strategy alignment, research, writing and one round of revisions. Standard articles range from 800-1500 words with SEO optimisation included. Volume discounts available for content series.",
-      "sv": "Priset inkluderar innehållsstrategisamordning, research, skrivande och en revideringsomgång. Standardartiklar omfattar 800-1500 ord med SEO-optimering inkluderad. Volymrabatter tillgängliga för innehållsserier."
+      "en": "Pricing includes initial strategy chat, research, writing, and one round of revisions. Articles are typically 800-1500 words, with SEO optimisation built-in.",
+      "sv": "Priset inkluderar ett första strategisamtal, research, skrivande och en revideringsrunda. Artiklar är vanligtvis 800-1500 ord, med SEO-optimering inbyggt."
     }
   },
   "keyFeatures": [
     {
       "title": {
-        "en": "Words that convert",
-        "sv": "Ord som konverterar"
+        "en": "Content that converts",
+        "sv": "Innehåll som konverterar"
       },
       "description": {
-        "en": "Get content that speaks directly to your audience and motivates them to take action, whether it's making a purchase or signing up.",
-        "sv": "Få innehåll som talar direkt till din målgrupp och motiverar dem att agera, oavsett om det gäller att göra ett köp eller registrera sig."
+        "en": "Persuasive copy that speaks directly to your ideal customer, encouraging them to buy, sign up, or engage.",
+        "sv": "Övertygande texter som talar direkt till din idealkund och uppmuntrar dem att köpa, registrera sig eller engagera sig."
       },
       "icon": "ph:target-duotone"
     },
     {
       "title": {
-        "en": "Search-friendly content",
-        "sv": "Sökmotorvänligt innehåll"
+        "en": "SEO-powered content",
+        "sv": "SEO-optimerat innehåll"
       },
       "description": {
-        "en": "Rank higher in search results with content that's naturally optimised for both readers and search engines.",
-        "sv": "Ranka högre i sökresultat med innehåll som är naturligt optimerat för både läsare och sökmotorer."
+        "en": "Boost your visibility and rank higher with content expertly optimised for search engines and real readers.",
+        "sv": "Öka din synlighet och ranka högre med innehåll som är expertmässigt optimerat för sökmotorer och verkliga läsare."
       },
       "icon": "ph:magnifying-glass-duotone"
     },
     {
       "title": {
-        "en": "Builds trust",
-        "sv": "Bygger förtroende"
+        "en": "Authority-building content",
+        "sv": "Auktoritetsbyggande innehåll"
       },
       "description": {
-        "en": "Establish your expertise with well-researched, authoritative content that positions your brand as a trusted industry voice.",
-        "sv": "Etablera din expertis med välresearchat, auktoritativt innehåll som positionerar ditt varumärke som en betrodd branschröst."
+        "en": "Build credibility and establish your brand as a trusted industry leader with well-researched, insightful content.",
+        "sv": "Bygg trovärdighet och etablera ditt varumärke som en betrodd branschledare med välresearchat, insiktsfullt innehåll."
       },
       "icon": "ph:clipboard-text-duotone"
     },
     {
       "title": {
-        "en": "Works everywhere",
-        "sv": "Fungerar överallt"
+        "en": "Versatile & engaging",
+        "sv": "Mångsidigt & engagerande"
       },
       "description": {
-        "en": "Get content that works across all your channels - from your website and social media to emails and marketing materials.",
-        "sv": "Få innehåll som fungerar över alla dina kanaler - från din webbplats och sociala medier till e-post och marknadsföringsmaterial."
+        "en": "Engaging content tailored for all your platforms – website, social media, emails, and marketing materials.",
+        "sv": "Engagerande innehåll anpassat för alla dina plattformar – webbplats, sociala medier, e-post och marknadsföringsmaterial."
       },
       "icon": "ph:files-duotone"
     }
@@ -73,48 +73,48 @@
   "processSteps": [
     {
       "title": {
-        "en": "Research & brief",
-        "sv": "Research & brief"
+        "en": "Discovery & briefing",
+        "sv": "Upptäckt & briefing"
       },
       "description": {
-        "en": "Gather information and define the goals and style for your content.",
-        "sv": "Samlar information och definierar målen och stilen för ditt innehåll."
+        "en": "We'll dive deep into your brand, audience, and goals to define the perfect content strategy.",
+        "sv": "Vi dyker djupt ner i ditt varumärke, din målgrupp och dina mål för att definiera den perfekta innehållsstrategin."
       }
     },
     {
       "title": {
-        "en": "Draft",
-        "sv": "Utkast"
+        "en": "Crafting your content",
+        "sv": "Skapande av innehåll"
       },
       "description": {
-        "en": "Write the initial version focusing on structure and key messages.",
-        "sv": "Skriver den första versionen med fokus på struktur och huvudbudskap."
+        "en": "I'll write a compelling first draft, focusing on clear messaging and engaging storytelling.",
+        "sv": "Jag skriver ett fängslande första utkast, med fokus på tydliga budskap och engagerande storytelling."
       }
     },
     {
       "title": {
-        "en": "Review & refine",
-        "sv": "Granska & förfina"
+        "en": "Review & refinement",
+        "sv": "Granskning & förfining"
       },
       "description": {
-        "en": "Polish the content based on your feedback and optimise for impact.",
-        "sv": "Putsar innehållet baserat på din feedback och optimerar för genomslagskraft."
+        "en": "Your feedback is key! We'll refine the draft together to ensure it's perfectly polished and impactful.",
+        "sv": "Din feedback är viktig! Vi förfinar utkastet tillsammans för att säkerställa att det är perfekt polerat och slagkraftigt."
       }
     },
     {
       "title": {
-        "en": "Finalise",
-        "sv": "Slutför"
+        "en": "Delivery & impact",
+        "sv": "Leverans & effekt"
       },
       "description": {
-        "en": "Final check and deliver in your preferred format.",
-        "sv": "Slutkontroll och leverans i ditt önskade format."
+        "en": "Receive your finalised, ready-to-publish content, set to make an impact.",
+        "sv": "Få ditt färdiga, publiceringsklara innehåll, redo att göra verklig skillnad."
       }
     }
   ],
   "cta": {
-    "en": "Transform your content",
-    "sv": "Förvandla ditt innehåll"
+    "en": "Create captivating content",
+    "sv": "Skapa fängslande innehåll"
   },
   "featured": false,
   "relatedServices": [
@@ -126,35 +126,35 @@
   "featuredClients": ["atlasos", "creavite", "extenseit", "norran"],
   "seo": {
     "en": {
-      "title": "Compelling Content Writing Services - Professional Copywriting",
-      "description": "Transform your expertise into engaging content that resonates with your audience. My professional writing services deliver clear, persuasive copy that builds authority and drives engagement.",
+      "title": "Expert content writing services | SEO copywriting that converts",
+      "description": "Need compelling, SEO-friendly content? My professional writing services deliver clear, persuasive copy that builds authority, drives engagement, and boosts conversions.",
       "keywords": [
-        "professional copywriting",
-        "content marketing",
-        "business writing",
-        "blog content",
-        "web copy",
-        "SEO writing",
+        "content writing services",
+        "SEO copywriting",
+        "professional writer",
+        "engaging blog content",
+        "website copywriter",
+        "conversion-focused content",
         "brand storytelling",
-        "editorial services",
+        "freelance writer",
         "content strategy",
-        "business communications"
+        "digital content creation"
       ]
     },
     "sv": {
-      "title": "Professionellt innehållsskrivande - Strategisk content marketing",
-      "description": "Expertis inom innehållsproduktion som engagerar din målgrupp och driver affärsresultat. Jag skapar övertygande, SEO-optimerat innehåll som stärker ditt varumärke och ökar konverteringar.",
+      "title": "Expert innehållsskrivning | SEO-copywriting som konverterar",
+      "description": "Behöver du fängslande, SEO-vänligt innehåll? Mina professionella skrivtjänster levererar tydliga, övertygande texter som bygger auktoritet, driver engagemang och ökar konverteringar.",
       "keywords": [
-        "innehållsproduktion",
-        "digital innehållsstrategi",
-        "professionellt skrivande",
-        "SEO-innehåll",
-        "content marketing Sverige",
+        "innehållsskrivningstjänster",
+        "SEO copywriting",
+        "professionell skribent",
+        "engagerande blogginnehåll",
+        "webbcopywriter",
+        "konverteringsfokuserat innehåll",
         "varumärkesberättande",
-        "webbtexter",
-        "företagskommunikation",
-        "innehållsutveckling",
-        "konverterande texter"
+        "frilansskribent",
+        "innehållsstrategi",
+        "digitalt innehållsskapande"
       ]
     }
   }

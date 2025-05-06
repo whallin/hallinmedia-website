@@ -1,15 +1,15 @@
 {
   "serviceName": {
-    "en": "Brand Design",
-    "sv": "Varumärkesdesign"
+    "en": "Brand Identity",
+    "sv": "Varumärkesidentitet"
   },
   "shortDescription": {
-    "en": "Create a powerful, memorable brand identity that captures your unique essence and connects with your audience. From logos to complete visual systems, we help you stand out and build lasting recognition.",
-    "sv": "Skapa en kraftfull, minnesvärd varumärkesidentitet som fångar din unika essens och når din målgrupp. Från logotyper till kompletta visuella system hjälper vi dig sticka ut och bygga varaktig igenkänning."
+    "en": "Let's build a standout brand identity that captures your business essence and connects with your ideal audience. From a memorable logo to a complete visual system, I'll help you shine and build lasting recognition.",
+    "sv": "Låt oss bygga en stark varumärkesidentitet som fångar ditt företags essens och når din idealiska målgrupp. Från en minnesvärd logotyp till ett komplett visuellt system hjälper jag dig att sticka ut och bygga varaktig igenkänning."
   },
   "longDescription": {
-    "en": "Your brand identity is the face of your business—it's how people recognise, remember, and connect with you. I create distinctive visual identities that bring your brand's personality to life and build meaningful connections with your audience.<br /><br />Through careful research and strategic thinking, I develop cohesive visual systems that work brilliantly across all touchpoints. From your logo and colour palette to typography and brand guidelines, every element is thoughtfully crafted to create an identity that's both memorable and practical.<br /><br />The result is more than just good looks—it's a complete brand toolkit that helps you build recognition, trust, and loyalty, whilst making it easy for your team to maintain a consistent, professional image everywhere you appear.",
-    "sv": "Din varumärkesidentitet är ansiktet utåt för ditt företag—det är hur människor känner igen, kommer ihåg och relaterar till dig. Jag skapar distinkta visuella identiteter som ger liv åt ditt varumärkes personlighet och bygger meningsfulla kopplingar med din målgrupp.<br /><br />Genom noggrann research och strategiskt tänkande utvecklar jag sammanhängande visuella system som fungerar briljant över alla kontaktpunkter. Från din logotyp och färgpalett till typografi och varumärkesriktlinjer är varje element omsorgsfullt utformat för att skapa en identitet som är både minnesvärd och praktisk.<br /><br />Resultatet är mer än bara ett snyggt utseende—det är ett komplett varumärkesverktyg som hjälper dig bygga igenkänning, förtroende och lojalitet, samtidigt som det gör det enkelt för ditt team att upprätthålla en konsekvent, professionell image överallt där ni syns."
+    "en": "Your brand identity is more than just a logo; it's the heart of how people see, remember, and feel about your business. I specialise in crafting distinctive visual identities that bring your brand's unique personality to life, forging genuine connections with your audience.<br /><br />Through insightful research and smart, strategic thinking, I design cohesive visual systems that look great and work perfectly everywhere – online, in print, and beyond. We'll cover everything from your logo and colour palette to typography and clear brand guidelines. Every detail is carefully considered to create an identity that's not only memorable but also incredibly practical for your day-to-day use.<br /><br />What you get is a complete brand toolkit designed to boost recognition, build trust, and foster loyalty. Plus, it makes it super easy for your team to keep everything looking consistent and professional, no matter where your brand shows up.",
+    "sv": "Din varumärkesidentitet är mer än bara en logotyp; det är kärnan i hur människor ser, minns och känner för ditt företag. Jag specialiserar mig på att skapa distinkta visuella identiteter som väcker ditt varumärkes unika personlighet till liv och bygger äkta relationer med din publik.<br /><br />Genom insiktsfull research och smart, strategiskt tänkande designar jag sammanhängande visuella system som ser bra ut och fungerar perfekt överallt – online, i tryck och bortom det. Vi täcker allt från din logotyp och färgpalett till typografi och tydliga varumärkesriktlinjer. Varje detalj är noggrant övervägd för att skapa en identitet som inte bara är minnesvärd utan också otroligt praktisk för din dagliga användning.<br /><br />Vad du får är en komplett varumärkesverktygslåda utformad för att öka igenkänning, bygga förtroende och främja lojalitet. Dessutom gör det det superenkelt för ditt team att hålla allt konsekvent och professionellt, oavsett var ditt varumärke dyker upp."
   },
   "icon": "ph:diamond-duotone",
   "color": "green",
@@ -20,41 +20,41 @@
       "sv": "projekt"
     },
     "note": {
-      "en": "Includes three revision rounds, all source files, and a comprehensive brand guidelines document. Essential package includes core brand elements; Premium adds extended applications and social media kit.",
-      "sv": "Inkluderar tre revideringsrundor, alla källfiler och ett omfattande varumärkesmanual. Grundpaketet inkluderar kärnvarumärkeselement; Premium lägger till utökade applikationer och sociala medier-kit."
+      "en": "All packages include three revision rounds, all your source files, and a comprehensive, easy-to-use brand guidelines document. The Essential package covers your core brand elements, while Premium adds extended applications like social media kits and more.",
+      "sv": "Alla paket inkluderar tre revideringsrundor, alla dina källfiler och ett omfattande, lättanvänt varumärkesmanual. Grundpaketet täcker dina kärnelement för varumärket, medan Premium lägger till utökade applikationer som sociala medier-kit med mera."
     }
   },
   "keyFeatures": [
     {
       "title": {
-        "en": "Brand story & strategy",
-        "sv": "Varumärkesberättelse & strategi"
+        "en": "Your brand story",
+        "sv": "Din varumärkesberättelse"
       },
       "description": {
-        "en": "Transform your business values and goals into a captivating visual story that connects with your audience and stands out in the market.",
-        "sv": "Omvandla dina företagsvärderingar och mål till en fängslande visuell berättelse som når din publik och sticker ut på marknaden."
+        "en": "We'll turn your business values and goals into a compelling visual story that resonates with your audience and makes you stand out.",
+        "sv": "Vi omvandlar dina företagsvärderingar och mål till en fängslande visuell berättelse som når din publik och får dig att sticka ut."
       },
       "icon": "ph:rocket-duotone"
     },
     {
       "title": {
-        "en": "Visual identity kit",
-        "sv": "Visuellt identitetskit"
+        "en": "Complete visual identity kit",
+        "sv": "Komplett visuellt identitetskit"
       },
       "description": {
-        "en": "Get everything you need to look professional - from logos and colours to fonts and design patterns that work together to make your brand instantly recognisable.",
-        "sv": "Få allt du behöver för att se professionell ut - från logotyper och färger till typsnitt och designmönster som samarbetar för att göra ditt varumärke direkt igenkännbart."
+        "en": "Receive everything you need for a polished, professional look: logos, colours, fonts, and design patterns, all working together to make your brand instantly recognisable.",
+        "sv": "Få allt du behöver för ett polerat, professionellt utseende: logotyper, färger, typsnitt och designmönster, allt samverkar för att göra ditt varumärke omedelbart igenkännbart."
       },
       "icon": "ph:paint-brush-duotone"
     },
     {
       "title": {
-        "en": "Easy-to-follow guide",
-        "sv": "Lättförstådd guide"
+        "en": "Simple brand guide",
+        "sv": "Enkel varumärkesguide"
       },
       "description": {
-        "en": "Receive a clear, practical manual that shows your team exactly how to use your brand elements consistently across all materials and platforms.",
-        "sv": "Få en tydlig, praktisk manual som visar ditt team exakt hur man använder dina varumärkeselement konsekvent över alla material och plattformar."
+        "en": "Get a clear, practical guide showing your team exactly how to use your new brand elements consistently across all your materials and platforms.",
+        "sv": "Få en tydlig, praktisk manual som visar ditt team exakt hur ni använder era nya varumärkeselement konsekvent över allt ert material och alla plattformar."
       },
       "icon": "ph:book-duotone"
     },
@@ -64,8 +64,8 @@
         "sv": "Färdiga mallar"
       },
       "description": {
-        "en": "Start using your brand immediately with custom-designed templates for business cards, social media, presentations, and other essential marketing materials.",
-        "sv": "Börja använda ditt varumärke direkt med skräddarsydda mallar för visitkort, sociala medier, presentationer och annat viktigt marknadsföringsmaterial."
+        "en": "Hit the ground running with custom-designed templates for business cards, social media posts, presentations, and other key marketing materials.",
+        "sv": "Kom igång direkt med skräddarsydda mallar för visitkort, inlägg på sociala medier, presentationer och annat viktigt marknadsföringsmaterial."
       },
       "icon": "ph:stack-duotone"
     }
@@ -73,48 +73,48 @@
   "processSteps": [
     {
       "title": {
-        "en": "Learn & plan",
-        "sv": "Lär & planera"
+        "en": "Discover & plan",
+        "sv": "Upptäck & planera"
       },
       "description": {
-        "en": "Getting to know your brand's values and goals to create a design strategy that fits.",
-        "sv": "Lär känna ditt varumärkes värderingar och mål för att skapa en designstrategi som passar."
+        "en": "We'll dive into your brand's heart – its values, goals, and audience – to map out a design strategy that truly fits.",
+        "sv": "Vi dyker ner i hjärtat av ditt varumärke – dess värderingar, mål och publik – för att kartlägga en designstrategi som verkligen passar."
       }
     },
     {
       "title": {
         "en": "Design & create",
-        "sv": "Design & skapa"
+        "sv": "Designa & skapa"
       },
       "description": {
-        "en": "Developing your brand's visual elements and making sure they work together perfectly.",
-        "sv": "Utvecklar ditt varumärkes visuella element och säkerställer att de fungerar perfekt tillsammans."
+        "en": "This is where the magic happens! I'll develop your brand's visual elements, ensuring they all work together beautifully.",
+        "sv": "Det är här magin sker! Jag utvecklar ditt varumärkes visuella element och ser till att de alla fungerar vackert tillsammans."
       }
     },
     {
       "title": {
-        "en": "Review & perfect",
-        "sv": "Granska & perfektera"
+        "en": "Review & refine",
+        "sv": "Granska & förfina"
       },
       "description": {
-        "en": "Fine-tuning all brand elements based on your feedback until everything is just right.",
-        "sv": "Finjusterar alla varumärkeselement baserat på din feedback tills allt är precis rätt."
+        "en": "Your feedback is key. We'll fine-tune every element together until your new brand identity is absolutely perfect.",
+        "sv": "Din feedback är nyckeln. Vi finjusterar varje element tillsammans tills din nya varumärkesidentitet är helt perfekt."
       }
     },
     {
       "title": {
-        "en": "Deliver & guide",
-        "sv": "Leverera & vägleda"
+        "en": "Deliver & empower",
+        "sv": "Leverera & stärk"
       },
       "description": {
-        "en": "Providing your complete brand package with clear guidelines for consistent use.",
-        "sv": "Levererar ditt kompletta varumärkespaket med tydliga riktlinjer för konsekvent användning."
+        "en": "You'll receive your complete brand package, including clear guidelines, empowering you to use your new identity with confidence.",
+        "sv": "Du får ditt kompletta varumärkespaket, inklusive tydliga riktlinjer, som stärker dig att använda din nya identitet med självförtroende."
       }
     }
   ],
   "cta": {
-    "en": "Get a quote",
-    "sv": "Få en offert"
+    "en": "Build your brand",
+    "sv": "Bygg ditt varumärke"
   },
   "relatedServices": [
     "design",
@@ -134,35 +134,35 @@
   "featured": false,
   "seo": {
     "en": {
-      "title": "Bespoke Brand Identity Design - Visual Brand Development",
-      "description": "Create a distinctive brand identity that sets you apart. My expert brand design service crafts memorable visual identities that build recognition and strengthen your market position.",
+      "title": "Brand identity design | Memorable logo & visuals",
+      "description": "Ready for a brand that stands out? I create memorable brand identities, logos, and visual systems that connect with your audience.",
       "keywords": [
-        "brand identity creation",
-        "visual branding",
-        "brand development",
+        "brand identity design",
+        "visual branding services",
         "logo design",
         "brand guidelines",
-        "visual identity system",
+        "small business branding",
+        "corporate identity design",
         "brand style guide",
-        "corporate branding",
-        "brand architecture",
-        "brand consistency"
+        "professional branding",
+        "memorable brand",
+        "visual identity expert"
       ]
     },
     "sv": {
-      "title": "Professionell varumärkesdesign - Strategisk visuell identitet",
-      "description": "Skapa en distinkt varumärkesidentitet som stärker din marknadsposition. Jag utvecklar minnesvärda visuella identiteter som bygger igenkänning och förtroende för ditt växande företag.",
+      "title": "Varumärkesidentitet design | Logotyp & visuell identitet",
+      "description": "Dags för ett varumärke som sticker ut? Jag skapar minnesvärda varumärkesidentiteter, logotyper och visuella system som når din publik.",
       "keywords": [
-        "varumärkesdesign",
+        "varumärkesidentitet design",
         "visuell identitet",
-        "logotyputveckling",
-        "grafisk profil",
+        "logotyp design",
         "varumärkesmanual",
-        "designstrategi",
-        "varumärkesbyggande",
+        "grafisk profil företag",
         "företagsidentitet",
-        "varumärkesriktlinjer",
-        "visuellt system"
+        "varumärkesstrategi",
+        "professionell branding",
+        "minnesvärt varumärke",
+        "visuell identitet expert"
       ]
     }
   }
