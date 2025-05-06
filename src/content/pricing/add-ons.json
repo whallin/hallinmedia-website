@@ -15,8 +15,8 @@
       "sku": "HM-ADD-SRC-BASE",
       "taxCode": "txcd_10504000",
       "description": {
-        "en": "Access to all original source files from your project, enabling future modifications and updates. Includes organised file structure and documentation.",
-        "sv": "Tillgång till alla ursprungliga källfiler från ditt projekt, vilket möjliggör framtida ändringar och uppdateringar. Inkluderar organiserad filstruktur och dokumentation."
+        "en": "Provides all original source files from the project. This allows for future modifications and updates. Includes an organised file structure and documentation.",
+        "sv": "Levererar alla ursprungliga källfiler från projektet. Detta möjliggör framtida ändringar och uppdateringar. Inkluderar en organiserad filstruktur och dokumentation."
       },
       "basePrice": 1000,
       "unit": {
@@ -24,8 +24,8 @@
         "sv": "projekt"
       },
       "note": {
-        "en": "Software licences, plugins, and third-party assets not included.",
-        "sv": "Programvarulicenser, plugins och tredjepartstillgångar ingår ej."
+        "en": "Excludes software licences, plugins, and third-party assets.",
+        "sv": "Exkluderar programvarulicenser, plugins och tredjepartstillgångar."
       }
     },
     {
@@ -36,8 +36,8 @@
       "sku": "HM-ADD-UPD-BASE",
       "taxCode": "txcd_20060035",
       "description": {
-        "en": "Regular content maintenance and updates to keep your digital presence current and engaging. Includes performance monitoring and optimisation suggestions.",
-        "sv": "Regelbundet innehållsunderhåll och uppdateringar för att hålla din digitala närvaro aktuell och engagerande. Inkluderar prestandaövervakning och optimeringsförslag."
+        "en": "Service for regular content maintenance and updates. Includes performance monitoring and optimisation suggestions.",
+        "sv": "Tjänst för regelbundet innehållsunderhåll och uppdateringar. Inkluderar prestandaövervakning och optimeringsförslag."
       },
       "basePrice": 1000,
       "unit": {
@@ -97,8 +97,8 @@
         }
       ],
       "note": {
-        "en": "Updates can be delivered in both English and Swedish. Price varies based on content complexity and volume. Includes basic SEO maintenance.",
-        "sv": "Uppdateringar kan levereras på både engelska och svenska. Priset varierar beroende på innehållets komplexitet och volym. Inkluderar grundläggande SEO-underhåll."
+        "en": "Updates can be provided in English and Swedish. Price is determined by content complexity and volume. Includes basic SEO maintenance.",
+        "sv": "Uppdateringar kan tillhandahållas på engelska och svenska. Priset bestäms av innehållets komplexitet och volym. Inkluderar grundläggande SEO-underhåll."
       }
     },
     {
@@ -109,8 +109,8 @@
       "sku": "HM-ADD-SUP-BASE",
       "taxCode": "txcd_37071003",
       "description": {
-        "en": "Essential post-project support including email assistance and basic troubleshooting for delivered work.",
-        "sv": "Grundläggande support efter projektet inklusive e-postassistans och grundläggande felsökning för levererat arbete."
+        "en": "Post-project support including email assistance and basic troubleshooting for the delivered work.",
+        "sv": "Support efter projektet inklusive e-postassistans och grundläggande felsökning för det levererade arbetet."
       },
       "basePrice": 500,
       "unit": {
@@ -170,8 +170,8 @@
         }
       ],
       "note": {
-        "en": "Response time within 48 hours during weekdays. Available in both English and Swedish.",
-        "sv": "Svarstid inom 48 timmar under vardagar. Tillgänglig på både engelska och svenska."
+        "en": "Response time is typically within 48 hours on weekdays. Service is available in English and Swedish.",
+        "sv": "Svarstid är vanligtvis inom 48 timmar på vardagar. Tjänsten är tillgänglig på engelska och svenska."
       }
     },
     {
@@ -182,8 +182,8 @@
       "sku": "HM-ADD-PSUP-BASE",
       "taxCode": "txcd_37071003",
       "description": {
-        "en": "Comprehensive support package with priority assistance and advanced troubleshooting. Includes regular check-ins and preventive maintenance.",
-        "sv": "Omfattande supportpaket med prioriterad assistans och avancerad felsökning. Inkluderar regelbundna avstämningar och förebyggande underhåll."
+        "en": "Support package with priority assistance and advanced troubleshooting. Includes regular check-ins and preventive maintenance.",
+        "sv": "Supportpaket med prioriterad assistans och avancerad felsökning. Inkluderar regelbundna avstämningar och förebyggande underhåll."
       },
       "basePrice": 1500,
       "unit": {
@@ -225,8 +225,8 @@
           "sku": "HM-ADD-PSUP-EDU",
           "taxCode": "txcd_20060044",
           "description": {
-            "en": "Personalised training sessions to help you and your team master your digital solutions. Covers system functionality, content management, and best practices.",
-            "sv": "Personliga utbildningssessioner för att hjälpa dig och ditt team att behärska era digitala lösningar. Omfattar systemfunktionalitet, innehållshantering och bästa praxis."
+            "en": "Personalised training sessions on system functionality, content management, and best practices for the digital solutions provided.",
+            "sv": "Personliga utbildningssessioner om systemfunktionalitet, innehållshantering och bästa praxis för de digitala lösningar som tillhandahållits."
           },
           "price": 750,
           "unit": {
@@ -262,8 +262,8 @@
         }
       ],
       "note": {
-        "en": "Priority response within 12 hours. On-site support available within Skellefteå municipality. Additional travel costs may apply outside service area.",
-        "sv": "Prioriterad svarstid inom 12 timmar. Support på plats tillgänglig inom Skellefteå kommun. Extra resekostnader kan tillkomma utanför serviceområdet."
+        "en": "Priority response is typically within 12 hours. On-site support is available within Skellefteå municipality; travel costs may apply outside this area.",
+        "sv": "Prioriterad svarstid är vanligtvis inom 12 timmar. Support på plats är tillgänglig inom Skellefteå kommun; resekostnader kan tillkomma utanför detta område."
       }
     }
   ]

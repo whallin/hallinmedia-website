@@ -15,8 +15,8 @@
       "sku": "HM-PHOTO-PROD-BASE",
       "taxCode": "txcd_20030000",
       "description": {
-        "en": "Professional product photography optimised for e-commerce and marketing materials, including simple background options and lifestyle setups.",
-        "sv": "Professionell produktfotografering optimerad för e-handel och marknadsföringsmaterial, inklusive enkel bakgrund och lifestyle-uppsättningar."
+        "en": "Product photography for e-commerce and marketing materials.",
+        "sv": "Produktfotografering för e-handel och marknadsföringsmaterial."
       },
       "basePrice": 440,
       "unit": {
@@ -50,8 +50,8 @@
         }
       ],
       "note": {
-        "en": "Minimum order of 5 products. Bulk discounts available for 10+ images. Includes basic retouching and two file formats.",
-        "sv": "Minimibeställning 5 produkter. Volymrabatter tillgängliga för 10+ bilder. Inkluderar grundläggande retuschering och två filformat."
+        "en": "Minimum order of 5 products. Bulk discounts apply for 10+ images. Basic retouching and two file formats are included.",
+        "sv": "Minsta beställning är 5 produkter. Volymrabatter gäller för 10+ bilder. Grundläggande retuschering och två filformat ingår."
       },
       "bulkDiscounts": [
         {
@@ -88,8 +88,8 @@
       "sku": "HM-PHOTO-EDIT-BASE",
       "taxCode": "txcd_20060000",
       "description": {
-        "en": "Professional photo editing including advanced colour correction, skin retouching, and creative image enhancement. Specialising in commercial and portrait retouching.",
-        "sv": "Professionell fotoredigering inklusive avancerad färgkorrigering, hudretuschering och kreativ bildförbättring. Specialisering inom kommersiell- och porträttretuschering."
+        "en": "Photo editing services including colour correction, skin retouching, and image enhancement. Specialisation in commercial and portrait retouching.",
+        "sv": "Fotoredigeringstjänster inklusive färgkorrigering, hudretuschering och bildförbättring. Specialisering inom kommersiell- och porträttretuschering."
       },
       "basePrice": 560,
       "unit": {
@@ -143,8 +143,8 @@
           "sku": "HM-PHOTO-EDIT-ADD-BG",
           "taxCode": "txcd_20060000",
           "description": {
-            "en": "Professional removal or replacement of image backgrounds. Perfect for e-commerce product photos or creating consistent brand imagery.",
-            "sv": "Professionell borttagning eller ersättning av bildbakgrunder. Perfekt för e-handelsprodukter eller för att skapa enhetlig varumärkesbildspråk."
+            "en": "Removal or replacement of image backgrounds, suitable for e-commerce product photos or creating consistent brand imagery.",
+            "sv": "Borttagning eller ersättning av bildbakgrunder, lämpligt för e-handelsproduktfoton eller för att skapa enhetligt varumärkesbildspråk."
           },
           "price": 190,
           "unit": {
@@ -154,8 +154,8 @@
         }
       ],
       "note": {
-        "en": "Minimum 1-hour booking per project. Bulk discounts available for 10+ images. Includes up to 2 revision rounds per image. Files delivered in both print and web-ready formats.",
-        "sv": "Minimum 1 timmes bokning per projekt. Volymrabatter tillgängliga för 10+ bilder. Inkluderar upp till 2 revideringsrundor per bild. Filer levereras i både tryck- och webbklart format."
+        "en": "Minimum 1-hour booking per project. Bulk discounts apply for 10+ images. Includes up to 2 revision rounds per image. Files are delivered in print and web-ready formats.",
+        "sv": "Minst 1 timmes bokning per projekt. Volymrabatter gäller för 10+ bilder. Inkluderar upp till 2 revideringsomgångar per bild. Filer levereras i tryck- och webbklara format."
       },
       "bulkDiscounts": [
         {
@@ -184,8 +184,8 @@
       "sku": "HM-PHOTO-LOC-BASE",
       "taxCode": "txcd_20030000",
       "description": {
-        "en": "Professional photography service for up to 8 hours on location, including professional camera equipment, lighting gear, and backup equipment.",
-        "sv": "Professionell fotograferingstjänst upp till 8 timmar på plats, inklusive professionell kamerautrustning, belysning och reservutrustning."
+        "en": "Photography service for up to 8 hours on location. Includes camera equipment, lighting gear, and backup equipment.",
+        "sv": "Fotograferingstjänst upp till 8 timmar på plats. Inkluderar kamerautrustning, belysning och reservutrustning."
       },
       "basePrice": 5600,
       "unit": {
@@ -227,8 +227,8 @@
           "sku": "HM-PHOTO-LOC-ADD-PREV",
           "taxCode": "txcd_20030000",
           "description": {
-            "en": "Receive a curated selection of preview images on the same day as your shoot. Ideal for time-sensitive projects and immediate social media content.",
-            "sv": "Få ett urval förhandsvisningsbilder samma dag som fotograferingen. Perfekt för tidskänsliga projekt och omedelbart innehåll för sociala medier."
+            "en": "A curated selection of preview images delivered on the same day as the shoot. Suitable for time-sensitive projects.",
+            "sv": "Ett urval av förhandsvisningsbilder levereras samma dag som fotograferingen. Lämpligt för tidskänsliga projekt."
           },
           "price": 1500
         },
@@ -240,8 +240,8 @@
           "sku": "HM-PHOTO-LOC-ADD-PHOT",
           "taxCode": "txcd_20030000",
           "description": {
-            "en": "Additional professional photographer to capture multiple angles or locations simultaneously. Includes separate equipment setup.",
-            "sv": "Extra professionell fotograf för att fånga flera vinklar eller platser samtidigt. Inkluderar separat utrusning."
+            "en": "An additional photographer to capture multiple angles or locations simultaneously. Includes a separate equipment setup.",
+            "sv": "En extra fotograf för att fånga flera vinklar eller platser samtidigt. Inkluderar en separat utrustningsuppsättning."
           },
           "price": 3500,
           "unit": {
@@ -251,8 +251,8 @@
         }
       ],
       "note": {
-        "en": "Includes 25 professionally retouched photographs. Additional images available at a reduced rate. Includes both high-resolution and web-optimised files. Travel costs apply outside Skellefteå municipality.",
-        "sv": "Inkluderar 25 professionellt retuscherade fotografier. Extra bilder tillgängliga till reducerat pris. Inkluderar både högupplösta och webb-optimerade filer. Resekostnader tillkommer utanför Skellefteå kommun."
+        "en": "Includes 25 retouched photographs. Additional images can be purchased. High-resolution and web-optimised files are included. Travel costs apply outside Skellefteå municipality.",
+        "sv": "Inkluderar 25 retuscherade fotografier. Ytterligare bilder kan köpas till. Högupplösta och webboptimerade filer ingår. Resekostnader tillkommer utanför Skellefteå kommun."
       },
       "bulkDiscounts": [
         {

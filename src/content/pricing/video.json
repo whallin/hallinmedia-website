@@ -15,8 +15,8 @@
       "sku": "HM-VID-EDIT-BASE",
       "taxCode": "txcd_20060000",
       "description": {
-        "en": "Professional video editing services including colour correction, sound mixing, basic motion graphics, and exports in multiple formats.",
-        "sv": "Professionell videoredigering inklusive färgkorrigering, ljudmixning, grundläggande motion graphics och export i flera format."
+        "en": "Video editing services including colour correction, sound mixing, basic motion graphics, and export in multiple formats.",
+        "sv": "Videoredigeringstjänster inklusive färgkorrigering, ljudmixning, grundläggande motion graphics och export i flera format."
       },
       "basePrice": 700,
       "unit": {
@@ -76,8 +76,8 @@
         }
       ],
       "note": {
-        "en": "Minimum 2 hours per project. Complex motion graphics or 3D effects quoted separately. Includes export in up to three formats and two revision rounds.",
-        "sv": "Minimum 2 timmar per projekt. Komplexa motion graphics eller 3D-effekter offereras separat. Inkluderar export i upp till tre format och två revideringsrundor."
+        "en": "Minimum 2 hours per project. Complex motion graphics or 3D effects are quoted separately. Includes export in up to three formats and two revision rounds.",
+        "sv": "Minst 2 timmar per projekt. Komplex motion graphics eller 3D-effekter offereras separat. Inkluderar export i upp till tre format och två revideringsomgångar."
       }
     },
     {
@@ -88,8 +88,8 @@
       "sku": "HM-VID-PROD-HALF",
       "taxCode": "txcd_20060000",
       "description": {
-        "en": "Professional video production services for up to 4 hours, including essential camera equipment and basic lighting setup.",
-        "sv": "Professionella videoproduktionstjänster upp till 4 timmar, inklusive grundläggande kamerautrustning och belysning."
+        "en": "Video production services for up to 4 hours, including camera equipment and basic lighting setup.",
+        "sv": "Videoproduktionstjänster upp till 4 timmar, inklusive kamerautrustning och grundläggande ljussättning."
       },
       "basePrice": 3500,
       "unit": {
@@ -132,8 +132,8 @@
           "taxCode": "txcd_20060000",
           "price": 1000,
           "description": {
-            "en": "Extend your half-day video production session with additional hours of professional filming and equipment usage.",
-            "sv": "Förläng din halvdags videoproduktion med extra timmar av professionell filmning och utrustningsanvändning."
+            "en": "Extends the half-day video production session with additional hours of filming and equipment usage.",
+            "sv": "Förlänger halvdagens videoproduktion med ytterligare timmar av filmning och utrustningsanvändning."
           },
           "unit": {
             "en": "hour",
@@ -148,8 +148,8 @@
           "sku": "HM-VID-PROD-ADD-RAW",
           "taxCode": "txcd_10402100",
           "description": {
-            "en": "Receive all unedited footage from your video shoot, delivered securely in high-resolution format.",
-            "sv": "Få allt oredigerat material från din videoinspelning, levererat säkert i högupplöst format."
+            "en": "Provides all unedited footage from the video shoot, delivered in a high-resolution format.",
+            "sv": "Tillhandahåller allt oredigerat material från videoinspelningen, levererat i högupplöst format."
           },
           "price": 1250
         }
@@ -173,8 +173,8 @@
         }
       ],
       "note": {
-        "en": "Travel costs apply outside of Skellefteå municipality. Equipment selection tailored to project requirements. Footage delivered in 4K resolution where applicable.",
-        "sv": "Resekostnader tillkommer utanför Skellefteå kommun. Val av utrustning anpassas efter projektets krav. Material levereras i 4K-upplösning där det är tillämpligt."
+        "en": "Travel costs apply outside Skellefteå municipality. Equipment is selected based on project requirements. Footage is delivered in 4K resolution where applicable.",
+        "sv": "Resekostnader tillkommer utanför Skellefteå kommun. Utrustning väljs baserat på projektkrav. Material levereras i 4K-upplösning där det är tillämpligt."
       }
     },
     {
@@ -185,8 +185,8 @@
       "sku": "HM-VID-PROD-FULL",
       "taxCode": "txcd_20060000",
       "description": {
-        "en": "Comprehensive video production services for up to 8 hours, including professional camera equipment, lighting, and basic sound recording.",
-        "sv": "Omfattande videoproduktionstjänster upp till 8 timmar, inklusive professionell kamerautrustning, belysning och grundläggande ljudinspelning."
+        "en": "Video production services for up to 8 hours, including camera equipment, lighting, and basic sound recording.",
+        "sv": "Videoproduktionstjänster upp till 8 timmar, inklusive kamerautrustning, ljussättning och grundläggande ljudinspelning."
       },
       "basePrice": 5600,
       "unit": {
@@ -228,8 +228,8 @@
           "sku": "HM-VID-PROD-ADD-DRONE",
           "taxCode": "txcd_20060000",
           "description": {
-            "en": "Enhance your video with stunning aerial cinematography, captured by our licensed drone operator using professional-grade equipment.",
-            "sv": "Förbättra din video med fantastiska flygbilder, filmade av vår licensierade drönarpilot med professionell utrustning."
+            "en": "Aerial cinematography captured by a licensed drone operator using professional-grade equipment.",
+            "sv": "Flygfotografering med drönare, utförd av licensierad drönaroperatör med professionell utrustning."
           },
           "price": 2250,
           "unit": {
@@ -245,8 +245,8 @@
           "sku": "HM-VID-PROD-ADD-CAM",
           "taxCode": "txcd_20060000",
           "description": {
-            "en": "Add an additional professional camera operator to capture multiple angles simultaneously, ensuring comprehensive coverage of your event or production.",
-            "sv": "Lägg till en extra professionell kameraoperatör för att fånga flera vinklar samtidigt och säkerställa omfattande täckning av ditt evenemang eller produktion."
+            "en": "An additional camera operator to capture multiple angles simultaneously for comprehensive coverage.",
+            "sv": "En extra kameraoperatör för att fånga flera vinklar samtidigt för omfattande täckning."
           },
           "price": 3500,
           "unit": {
@@ -282,8 +282,8 @@
         }
       ],
       "note": {
-        "en": "Includes basic post-production and colour grading. Complex editing charged separately. 50% deposit required for bookings. Includes delivery in both high-resolution and web-optimised formats.",
-        "sv": "Inkluderar grundläggande efterproduktion och färgkorrigering. Komplex redigering debiteras separat. 50% deposition krävs för bokningar. Inkluderar leverans i både högupplöst och webb-optimerat format."
+        "en": "Includes basic post-production and colour grading. Complex editing is charged separately. A 50% deposit is required for bookings. Delivery in high-resolution and web-optimised formats is included.",
+        "sv": "Inkluderar grundläggande efterproduktion och färgkorrigering. Komplex redigering debiteras separat. En deposition på 50% krävs vid bokning. Leverans i högupplösta och webboptimerade format ingår."
       }
     }
   ]

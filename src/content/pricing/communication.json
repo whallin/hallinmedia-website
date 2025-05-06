@@ -15,8 +15,8 @@
       "sku": "HM-COM-CONT-BASE",
       "taxCode": "txcd_20060035",
       "description": {
-        "en": "Professional content writing with a journalistic approach, specialising in news articles, blog posts, and business communications. SEO-optimised content available.",
-        "sv": "Professionellt innehållsskapande med journalistiskt perspektiv, specialisering inom nyhetsartiklar, blogginlägg och företagskommunikation. SEO-optimerat innehåll tillgängligt."
+        "en": "Content writing service with a journalistic approach, for news articles, blog posts, and business communications. SEO-optimised content is an available option.",
+        "sv": "Tjänst för innehållsskrivning med ett journalistiskt angreppssätt, för nyhetsartiklar, blogginlägg och företagskommunikation. SEO-optimerat innehåll är ett tillgängligt alternativ."
       },
       "basePrice": 750,
       "unit": {
@@ -96,8 +96,8 @@
           "sku": "HM-COM-CONT-ADD-SEO",
           "taxCode": "txcd_20060035",
           "description": {
-            "en": "Enhance your content's search engine visibility with thorough keyword research, meta descriptions, and optimised headings structure.",
-            "sv": "Förbättra ditt innehålls synlighet i sökmotorer med grundlig nyckelordsanalys, metabeskrivningar och optimerad rubrikstruktur."
+            "en": "Improves content's search engine visibility through keyword research, meta descriptions, and optimised heading structure.",
+            "sv": "Förbättrar innehållets synlighet i sökmotorer genom nyckelordsanalys, metabeskrivningar och optimerad rubrikstruktur."
           },
           "price": 1000,
           "unit": {
@@ -113,8 +113,8 @@
           "sku": "HM-COM-CONT-ADD-TRANS",
           "taxCode": "txcd_20060035",
           "description": {
-            "en": "Professional translation service between Swedish and English, maintaining tone and context whilst ensuring cultural appropriateness.",
-            "sv": "Professionell översättningstjänst mellan svenska och engelska, som bevarar ton och sammanhang samtidigt som kulturell lämplighet säkerställs."
+            "en": "Translation service between Swedish and English, focusing on maintaining tone, context, and cultural appropriateness.",
+            "sv": "Översättningstjänst mellan svenska och engelska, med fokus på att bibehålla ton, sammanhang och kulturell lämplighet."
           },
           "price": 1.9,
           "unit": {
@@ -124,8 +124,8 @@
         }
       ],
       "note": {
-        "en": "Articles include one round of revisions. Blog posts are 800-1200 words unless specified otherwise. SEO optimisation includes keyword research and meta description.",
-        "sv": "Artiklar inkluderar en revideringsrunda. Blogginlägg är 800-1200 ord om inget annat anges. SEO-optimering inkluderar nyckelordsanalys och metabeskrivning."
+        "en": "Articles include one round of revisions. Blog posts are typically 800-1200 words, unless otherwise specified. SEO optimisation includes keyword research and meta description.",
+        "sv": "Artiklar inkluderar en omgång revideringar. Blogginlägg är vanligtvis 800-1200 ord, om inget annat anges. SEO-optimering inkluderar nyckelordsanalys och metabeskrivning."
       }
     },
     {
@@ -136,8 +136,8 @@
       "sku": "HM-COM-SOC-BASE",
       "taxCode": "txcd_20060002",
       "description": {
-        "en": "Strategic social media management with a focus on engaging storytelling and community building. Includes content planning, creation, and analytics reporting.",
-        "sv": "Strategisk hantering av sociala medier med fokus på engagerande berättande och community-building. Inkluderar innehållsplanering, skapande och analysrapportering."
+        "en": "Social media management service focusing on storytelling and community building. Includes content planning, creation, and analytics reporting.",
+        "sv": "Tjänst för hantering av sociala medier med fokus på berättande och community-byggande. Inkluderar innehållsplanering, skapande och analysrapportering."
       },
       "basePrice": 2500,
       "unit": {
@@ -205,8 +205,8 @@
           "sku": "HM-COM-SOC-ADD-PLAT",
           "taxCode": "txcd_20060002",
           "description": {
-            "en": "Extend your social media presence to an additional platform with tailored content and platform-specific strategy.",
-            "sv": "Utöka din närvaro på sociala medier till ytterligare en plattform med skräddarsytt innehåll och plattformsspecifik strategi."
+            "en": "Extends social media presence to an additional platform with tailored content and a platform-specific strategy.",
+            "sv": "Utökar närvaron på sociala medier till ytterligare en plattform med anpassat innehåll och en plattformsspecifik strategi."
           },
           "price": 750,
           "unit": {
@@ -222,8 +222,8 @@
           "sku": "HM-COM-SOC-ADD-AD",
           "taxCode": "txcd_20060002",
           "description": {
-            "en": "Complete management of your social media advertising campaigns, including targeting, budget optimisation, and performance reporting.",
-            "sv": "Komplett hantering av dina annonskampanjer på sociala medier, inklusive målgruppsinriktning, budgetoptimering och resultatrapportering."
+            "en": "Management of social media advertising campaigns, including targeting, budget optimisation, and performance reporting.",
+            "sv": "Hantering av annonskampanjer på sociala medier, inklusive målgruppsinriktning, budgetoptimering och resultatrapportering."
           },
           "price": 1000,
           "unit": {
@@ -233,8 +233,8 @@
         }
       ],
       "note": {
-        "en": "Basic package includes 8 posts per platform monthly. Premium includes 15 posts per platform monthly. Analytics reports provided monthly. Ad spend not included.",
-        "sv": "Grundpaket inkluderar 8 inlägg per plattform månadsvis. Premium inkluderar 15 inlägg per plattform månadsvis. Analysrapporter tillhandahålls månadsvis. Annonskostnader tillkommer."
+        "en": "Basic package: 8 posts per platform monthly. Premium package: 15 posts per platform monthly. Analytics reports are provided monthly. Ad spend is not included.",
+        "sv": "Grundpaket: 8 inlägg per plattform månadsvis. Premiumpaket: 15 inlägg per plattform månadsvis. Analysrapporter tillhandahålls månadsvis. Annonskostnader ingår ej."
       }
     },
     {
@@ -245,8 +245,8 @@
       "sku": "HM-COM-STRAT-BASE",
       "taxCode": "txcd_20060048",
       "description": {
-        "en": "Strategic content planning and analysis for digital platforms. Includes audience analysis and content calendar planning.",
-        "sv": "Strategisk innehållsplanering och analys för digitala plattformar. Inkluderar målgruppsanalys och innehållskalenderplanering."
+        "en": "Content planning and analysis for digital platforms. Includes audience analysis and content calendar planning.",
+        "sv": "Innehållsplanering och analys för digitala plattformar. Inkluderar målgruppsanalys och planering av innehållskalender."
       },
       "basePrice": 3100,
       "unit": {
@@ -288,8 +288,8 @@
           "sku": "HM-COM-STRAT-ADD-COMP",
           "taxCode": "txcd_20060048",
           "description": {
-            "en": "Detailed analysis of your competitors' content strategy, identifying gaps and opportunities in your market positioning.",
-            "sv": "Detaljerad analys av dina konkurrenters innehållsstrategi, identifiering av luckor och möjligheter i din marknadspositionering."
+            "en": "Analysis of competitors' content strategy to identify gaps and opportunities for market positioning.",
+            "sv": "Analys av konkurrenters innehållsstrategi för att identifiera luckor och möjligheter för marknadspositionering."
           },
           "price": 1900
         },
@@ -301,15 +301,15 @@
           "sku": "HM-COM-STRAT-ADD-CAL",
           "taxCode": "txcd_20060048",
           "description": {
-            "en": "Comprehensive three-month content calendar with detailed topics, publishing schedules, and channel-specific content recommendations.",
-            "sv": "Omfattande tremånaders innehållskalender med detaljerade ämnen, publiceringsscheman och kanalspecifika innehållsrekommendationer."
+            "en": "A three-month content calendar with topics, publishing schedules, and channel-specific content recommendations.",
+            "sv": "En tremånaders innehållskalender med ämnen, publiceringsscheman och kanalspecifika innehållsrekommendationer."
           },
           "price": 3100
         }
       ],
       "note": {
-        "en": "Basic package includes 3-month content strategy. Advanced package includes 6-month strategy with quarterly reviews. All documents delivered in both English and Swedish.",
-        "sv": "Grundpaketet inkluderar 3-månaders innehållsstrategi. Avancerat paket inkluderar 6-månaders strategi med kvartalsvisa genomgångar. Alla dokument levereras på både engelska och svenska."
+        "en": "Basic package: 3-month content strategy. Advanced package: 6-month strategy with quarterly reviews. All documents are delivered in English and Swedish.",
+        "sv": "Grundpaket: 3-månaders innehållsstrategi. Avancerat paket: 6-månaders strategi med kvartalsvisa genomgångar. Alla dokument levereras på engelska och svenska."
       }
     }
   ]

@@ -15,8 +15,8 @@
       "sku": "HM-REV-CONT-BASE",
       "taxCode": "txcd_20060035",
       "description": {
-        "en": "Additional content editing and revision rounds for written content, including articles, website copy, and marketing materials. All revisions follow our quality assurance process.",
-        "sv": "Extra innehållsredigering och revideringsrundor för skrivet innehåll, inklusive artiklar, webbtexter och marknadsföringsmaterial."
+        "en": "Additional editing and revision rounds for written content such as articles, website copy, and marketing materials. Revisions follow a quality assurance process.",
+        "sv": "Ytterligare redigerings- och revideringsomgångar för skrivet innehåll såsom artiklar, webbplatstexter och marknadsföringsmaterial. Revideringar följer en kvalitetssäkringsprocess."
       },
       "basePrice": 450,
       "unit": {
@@ -50,8 +50,8 @@
         }
       ],
       "note": {
-        "en": "Basic revision includes grammar, spelling, and minor content adjustments. Comprehensive revision includes structural changes and content rewriting. Available in both British English and Swedish.",
-        "sv": "Grundläggande revidering inkluderar grammatik, stavning och mindre innehållsjusteringar. Omfattande revidering inkluderar strukturella ändringar och omskrivning av innehåll. Tillgänglig på både engelska och svenska."
+        "en": "Basic revision: grammar, spelling, minor content adjustments. Comprehensive revision: structural changes, content rewriting. Available in English and Swedish.",
+        "sv": "Grundläggande revidering: grammatik, stavning, mindre innehållsjusteringar. Omfattande revidering: strukturella ändringar, omskrivning av innehåll. Tillgänglig på engelska och svenska."
       }
     },
     {
@@ -62,8 +62,8 @@
       "sku": "HM-REV-DES-BASE",
       "taxCode": "txcd_20060000",
       "description": {
-        "en": "Additional revision rounds beyond those included in the standard package. Applies to UI/UX, brand identity, and graphic design projects. Each round includes detailed feedback implementation.",
-        "sv": "Extra revideringsrundor utöver de som ingår i standardpaketet. Gäller UI/UX, varumärkesidentitet och grafisk design."
+        "en": "Additional revision rounds for UI/UX, brand identity, and graphic design projects, beyond standard package inclusions. Involves feedback implementation.",
+        "sv": "Ytterligare revideringsomgångar för UI/UX, varumärkesidentitet och grafisk designprojekt, utöver standardpaketets inkluderingar. Innebär implementering av feedback."
       },
       "basePrice": 550,
       "unit": {
@@ -97,8 +97,8 @@
         }
       ],
       "note": {
-        "en": "Minor revisions include colour adjustments, typography changes, and small layout modifications. Major revisions involve significant layout changes or conceptual adjustments. Each round includes up to three iterations.",
-        "sv": "Mindre revideringar inkluderar färgjusteringar, typografiändringar och små layoutmodifieringar. Större revideringar innebär betydande layoutförändringar eller konceptuella justeringar. Varje runda inkluderar upp till tre iterationer."
+        "en": "Minor revisions: colour adjustments, typography changes, small layout modifications. Major revisions: significant layout or conceptual adjustments. Each round includes up to three iterations.",
+        "sv": "Mindre revideringar: färgjusteringar, typografiändringar, små layoutmodifieringar. Större revideringar: betydande layout- eller konceptuella justeringar. Varje runda inkluderar upp till tre iterationer."
       }
     },
     {
@@ -109,8 +109,8 @@
       "sku": "HM-REV-PV-BASE",
       "taxCode": "txcd_10505001",
       "description": {
-        "en": "Additional editing rounds for photo and video content beyond the standard package inclusions. Includes colour correction and technical adjustments.",
-        "sv": "Extra redigeringsrundor för foto- och videoinnehåll utöver standardpaketets inkluderingar."
+        "en": "Additional editing rounds for photo and video content, beyond standard package inclusions. Includes colour correction and technical adjustments.",
+        "sv": "Ytterligare redigeringsomgångar för foto- och videoinnehåll, utöver standardpaketets inkluderingar. Inkluderar färgkorrigering och tekniska justeringar."
       },
       "basePrice": 500,
       "unit": {
@@ -144,8 +144,8 @@
         }
       ],
       "note": {
-        "en": "Minimum 1-hour booking. Includes export in all previously agreed formats. Changes to project scope may require a new quotation.",
-        "sv": "Minimum 1 timmes bokning. Inkluderar export i alla tidigare överenskomna format. Ändringar i projektomfattning kan kräva ny offert."
+        "en": "Minimum 1-hour booking. Export in previously agreed formats is included. Scope changes may require a new quotation.",
+        "sv": "Minst 1 timmes bokning. Export i tidigare överenskomna format ingår. Ändringar i projektets omfattning kan kräva en ny offert."
       }
     },
     {
@@ -156,8 +156,8 @@
       "sku": "HM-REV-RUSH-BASE",
       "taxCode": "txcd_20030000",
       "description": {
-        "en": "Expedited revision service for urgent changes and modifications needed outside standard revision timeframes. Includes priority handling.",
-        "sv": "Påskyndad revideringstjänst för brådskande ändringar och modifieringar som behövs utanför standard revideringstider."
+        "en": "Expedited revision service for urgent changes outside standard timeframes. Includes priority handling.",
+        "sv": "Påskyndad revideringstjänst för brådskande ändringar utanför standardtidsramar. Inkluderar prioriterad hantering."
       },
       "basePrice": 50,
       "unit": {
@@ -191,8 +191,8 @@
         }
       ],
       "note": {
-        "en": "Percentage surcharge applies to standard revision rates. Same-day revisions must be requested before 12:00. Subject to availability and current workload.",
-        "sv": "Procentuellt pristillägg tillkommer på standardrevideringsavgifter. Revideringar samma dag måste begäras före 12:00. Med förbehåll för tillgänglighet och aktuell arbetsbelastning."
+        "en": "Percentage surcharge on standard revision rates. Same-day revisions: request before 12:00. Subject to availability and workload.",
+        "sv": "Procentuellt påslag på ordinarie revideringstaxa. Revideringar samma dag: begäran före kl. 12:00. Beroende på tillgänglighet och arbetsbelastning."
       }
     }
   ]

@@ -15,8 +15,8 @@
       "sku": "HM-DES-TEMP-BASE",
       "taxCode": "txcd_10504000",
       "description": {
-        "en": "Professional templates for business documents and presentations.",
-        "sv": "Professionella mallar för företagsdokument och presentationer."
+        "en": "Templates for business documents and presentations.",
+        "sv": "Mallar för företagsdokument och presentationer."
       },
       "basePrice": 3750,
       "unit": {
@@ -59,8 +59,8 @@
           "taxCode": "txcd_10505001",
           "price": 1900,
           "description": {
-            "en": "Bespoke charts and diagrams designed to complement your template set, perfect for data visualisation and reporting.",
-            "sv": "Skräddarsydda diagram designade för att komplettera ditt mallset, perfekt för datavisualisering och rapportering."
+            "en": "Custom charts and diagrams designed to complement the template set, for data visualisation and reporting.",
+            "sv": "Skräddarsydda diagram designade för att komplettera mallsetet, för datavisualisering och rapportering."
           }
         },
         {
@@ -76,14 +76,14 @@
             "sv": "timme"
           },
           "description": {
-            "en": "Hands-on training to help your team maximise the use of your new templates, ensuring consistent implementation across your organisation.",
-            "sv": "Praktisk utbildning för att hjälpa ditt team maximera användningen av dina nya mallar, säkerställer konsekvent implementering i hela organisationen."
+            "en": "Training on how to use the new templates for consistent implementation.",
+            "sv": "Utbildning i hur de nya mallarna används för konsekvent implementering."
           }
         }
       ],
       "note": {
-        "en": "Templates provided in either Microsoft Office or Google Workspace formats. Includes style guide for consistent usage.",
-        "sv": "Mallar tillhandahålls i antingen Microsoft Office och Google Workspace-format. Inkluderar stilguide för konsekvent användning."
+        "en": "Templates are provided in Microsoft Office or Google Workspace formats. A style guide for consistent usage is included.",
+        "sv": "Mallar tillhandahålls i Microsoft Office- eller Google Workspace-format. En stilguide för konsekvent användning ingår."
       },
       "bulkDiscounts": [
         {
@@ -120,8 +120,8 @@
       "sku": "HM-DES-PRINT-BASE",
       "taxCode": "txcd_20060000",
       "description": {
-        "en": "Professional design for printed materials including business stationery, marketing collateral, and large-format graphics. All designs optimised for both digital and print reproduction.",
-        "sv": "Professionell design för tryckt material inklusive företagsmaterial, marknadsföringsmaterial och storformatsgrafik. Alla designer optimerade för både digital och tryckt reproduktion."
+        "en": "Design for printed materials such as business stationery, marketing collateral, and large-format graphics. Designs are optimised for digital and print reproduction.",
+        "sv": "Design för tryckt material såsom företagskorrespondens, marknadsföringsmaterial och storformatsgrafik. Designer är optimerade för digital och tryckt reproduktion."
       },
       "basePrice": 2500,
       "unit": {
@@ -176,14 +176,14 @@
           "taxCode": "txcd_20060000",
           "price": 500,
           "description": {
-            "en": "Professional preparation of your files for commercial printing, including colour separation, bleed setup and pre-flight checks.",
-            "sv": "Professionell förberedelse av dina filer för kommersiellt tryck, inklusive färgseparation, utfallsinställning och pre-flight-kontroller."
+            "en": "Preparation of files for commercial printing, including colour separation, bleed setup, and pre-flight checks.",
+            "sv": "Förberedelse av filer för kommersiellt tryck, inklusive färgseparation, utfallsinställning och pre-flight-kontroller."
           }
         }
       ],
       "note": {
-        "en": "Includes print-ready files in CMYK colour space, mockups, and PDF proofs. Print coordination service available, excludes printing costs.",
-        "sv": "Inkluderar tryckfärdiga filer i CMYK-färgrymd, mockups och PDF-korrektur. Tryckkoordineringstjänst tillgänglig, exklusive tryckkostnader."
+        "en": "Includes print-ready CMYK files, mockups, and PDF proofs. Print coordination is available; printing costs are not included.",
+        "sv": "Inkluderar tryckfärdiga CMYK-filer, mockups och PDF-korrektur. Tryckkoordinering är tillgänglig; tryckkostnader ingår ej."
       },
       "bulkDiscounts": [
         {
@@ -212,8 +212,8 @@
       "sku": "HM-DES-ILLUS-BASE",
       "taxCode": "txcd_10505001",
       "description": {
-        "en": "Custom digital illustrations, icon sets, and graphical elements tailored for your brand. Includes both vector and raster artwork suitable for various applications.",
-        "sv": "Anpassade digitala illustrationer, ikonuppsättningar och grafiska element skräddarsydda för ditt varumärke. Inkluderar både vektor- och rastergrafik lämplig för olika användningsområden."
+        "en": "Custom digital illustrations, icon sets, and graphical elements. Includes vector and raster artwork for various applications.",
+        "sv": "Anpassade digitala illustrationer, ikonuppsättningar och grafiska element. Inkluderar vektor- och rastergrafik för olika användningsområden."
       },
       "basePrice": 750,
       "unit": {
@@ -272,14 +272,14 @@
             "sv": "grafik"
           },
           "description": {
-            "en": "Convert your static illustrations into engaging animated graphics, suitable for web and social media use.",
-            "sv": "Konvertera dina statiska illustrationer till engagerande animerad grafik, lämplig för webb och sociala medier."
+            "en": "Conversion of static illustrations into animated graphics for web and social media.",
+            "sv": "Konvertering av statiska illustrationer till animerad grafik för webb och sociala medier."
           }
         }
       ],
       "note": {
-        "en": "Minimum 3-hour booking for custom illustration projects. Includes source files and optimised versions for web/print. Two revision rounds included.",
-        "sv": "Minimum 3 timmars bokning för anpassade illustrationsprojekt. Inkluderar källfiler och optimerade versioner för webb/tryck. Två revideringsrundor ingår."
+        "en": "Minimum 3-hour booking for custom illustration projects. Source files and optimised web/print versions are included. Two revision rounds are included.",
+        "sv": "Minst 3 timmars bokning för anpassade illustrationsprojekt. Källfiler och optimerade webb/tryck-versioner ingår. Två revideringsomgångar ingår."
       }
     },
     {
@@ -290,8 +290,8 @@
       "sku": "HM-DES-MKTG-BASE",
       "taxCode": "txcd_20060002",
       "description": {
-        "en": "Comprehensive design package for marketing campaigns and brand presence, tailored to enhance your visual communication.",
-        "sv": "Omfattande designpaket för marknadsföringskampanjer och varumärkesnärvaro."
+        "en": "Design package for marketing campaigns and brand presence to support visual communication.",
+        "sv": "Designpaket för marknadsföringskampanjer och varumärkesnärvaro för att stödja visuell kommunikation."
       },
       "basePrice": 4400,
       "unit": {
@@ -334,8 +334,8 @@
           "taxCode": "txcd_20060002",
           "price": 2500,
           "description": {
-            "en": "Custom-designed templates optimised for various social media platforms, ensuring consistent brand presence across all channels.",
-            "sv": "Skräddarsydda mallar optimerade för olika sociala medieplattformar, säkerställer konsekvent varumärkesnärvaro över alla kanaler."
+            "en": "Custom-designed templates for social media platforms to ensure consistent brand presence.",
+            "sv": "Skräddarsydda mallar för sociala medieplattformar för att säkerställa konsekvent varumärkesnärvaro."
           }
         },
         {
@@ -347,14 +347,14 @@
           "taxCode": "txcd_20060002",
           "price": 1900,
           "description": {
-            "en": "Responsive email templates designed to maintain brand consistency across all major email clients and devices.",
-            "sv": "Responsiva e-postmallar designade för att bibehålla varumärkeskonsistens över alla större e-postklienter och enheter."
+            "en": "Responsive email templates designed for brand consistency across email clients and devices.",
+            "sv": "Responsiva e-postmallar designade för varumärkeskonsistens över e-postklienter och enheter."
           }
         }
       ],
       "note": {
-        "en": "Basic package includes brand-consistent designs for up to 5 different marketing materials. Premium includes up to 10 with additional consultation.",
-        "sv": "Grundpaketet inkluderar varumärkeskonsekventa designer för upp till 5 olika marknadsföringsmaterial. Premium inkluderar upp till 10."
+        "en": "Basic package: brand-consistent designs for up to 5 marketing materials. Premium package: up to 10 materials, includes additional consultation.",
+        "sv": "Grundpaket: varumärkeskonsekventa designer för upp till 5 marknadsföringsmaterial. Premium-paket: upp till 10 material, inkluderar ytterligare konsultation."
       },
       "bulkDiscounts": [
         {
@@ -383,8 +383,8 @@
       "sku": "HM-DES-UX-BASE",
       "taxCode": "txcd_20060013",
       "description": {
-        "en": "User interface and experience design for web and mobile applications, including wireframes, prototypes, and usability testing. Specialising in responsive and accessible design solutions.",
-        "sv": "Användargränssnitts- och upplevelsedesign för webb och mobilapplikationer, inklusive wireframes, prototyper och användbarhetstester. Specialisering inom responsiv och tillgänglig design."
+        "en": "User interface and experience design for web and mobile applications. Includes wireframes, prototypes, and usability testing. Focus on responsive and accessible design.",
+        "sv": "Användargränssnitts- och upplevelsedesign för webb- och mobilapplikationer. Inkluderar wireframes, prototyper och användbarhetstester. Fokus på responsiv och tillgänglig design."
       },
       "basePrice": 940,
       "unit": {
@@ -427,8 +427,8 @@
           "taxCode": "txcd_20060013",
           "price": 3750,
           "description": {
-            "en": "Fully interactive prototype demonstrating user flows and interactions, perfect for testing and stakeholder presentations.",
-            "sv": "Fullt interaktiv prototyp som demonstrerar användarflöden och interaktioner, perfekt för testning och intressentpresentationer."
+            "en": "Interactive prototype demonstrating user flows and interactions, for testing and stakeholder presentations.",
+            "sv": "Interaktiv prototyp som demonstrerar användarflöden och interaktioner, för testning och intressentpresentationer."
           }
         },
         {
@@ -444,14 +444,14 @@
             "sv": "session"
           },
           "description": {
-            "en": "Structured user testing sessions with detailed analysis and recommendations for improvements based on real user feedback.",
-            "sv": "Strukturerade användartestningssessioner med detaljerad analys och rekommendationer för förbättringar baserade på verklig användarfeedback."
+            "en": "User testing sessions with analysis and recommendations based on user feedback.",
+            "sv": "Användartestningssessioner med analys och rekommendationer baserade på användarfeedback."
           }
         }
       ],
       "note": {
-        "en": "Minimum project engagement of 10 hours. Includes comprehensive design system documentation and handover files in Figma format. Additional development consultancy available.",
-        "sv": "Minimum projektengagemang på 10 timmar. Inkluderar omfattande designsystemdokumentation och överlämningsfiler i Figma-format. Ytterligare utvecklingskonsultation tillgänglig."
+        "en": "Minimum project engagement: 10 hours. Includes design system documentation and Figma handover files. Development consultancy is available as an option.",
+        "sv": "Minsta projektåtagande: 10 timmar. Inkluderar dokumentation för designsystem och överlämningsfiler i Figma. Utvecklingskonsultation finns som tillval."
       }
     },
     {
@@ -462,8 +462,8 @@
       "sku": "HM-DES-BRAND-BASE",
       "taxCode": "txcd_20060002",
       "description": {
-        "en": "Comprehensive brand identity design including logo development, colour schemes, typography, and basic brand guidelines. Focused on creating cohesive visual identities across all platforms.",
-        "sv": "Omfattande varumärkesidentitetsdesign inklusive logotyputveckling, färgscheman, typografi och grundläggande varumärkesriktlinjer. Fokus på att skapa sammanhängande visuella identiteter över alla plattformar."
+        "en": "Brand identity design including logo development, colour schemes, typography, and basic brand guidelines. Focus on cohesive visual identities.",
+        "sv": "Varumärkesidentitetsdesign inklusive logotyputveckling, färgscheman, typografi och grundläggande varumärkesriktlinjer. Fokus på sammanhängande visuella identiteter."
       },
       "basePrice": 5600,
       "unit": {
@@ -506,8 +506,8 @@
           "taxCode": "txcd_20060002",
           "price": 1900,
           "description": {
-            "en": "Additional logo variants tailored for specific applications, including monochrome, reversed, and responsive versions.",
-            "sv": "Extra logotypvarianter anpassade för specifika användningsområden, inklusive monokroma, inverterade och responsiva versioner."
+            "en": "Additional logo variants for specific applications, such as monochrome, reversed, and responsive versions.",
+            "sv": "Ytterligare logotypvarianter för specifika applikationer, såsom monokroma, inverterade och responsiva versioner."
           }
         },
         {
@@ -519,14 +519,14 @@
           "taxCode": "txcd_20060002",
           "price": 3100,
           "description": {
-            "en": "Comprehensive brand guidelines document detailing proper usage of all brand elements across different mediums and applications.",
-            "sv": "Omfattande varumärkesriktlinjer som detaljerar korrekt användning av alla varumärkeselement över olika medier och applikationer."
+            "en": "Brand guidelines document detailing usage of brand elements across mediums and applications.",
+            "sv": "Varumärkesmanual som specificerar användning av varumärkeselement över olika medier och applikationer."
           }
         }
       ],
       "note": {
-        "en": "Includes three revision rounds, all source files, and a comprehensive brand guidelines document. Essential package includes core brand elements; Premium adds extended applications and social media kit.",
-        "sv": "Inkluderar tre revideringsrundor, alla källfiler och ett omfattande varumärkesmanual. Grundpaketet inkluderar kärnvarumärkeselement; Premium lägger till utökade applikationer och sociala medier-kit."
+        "en": "Includes three revision rounds, source files, and a brand guidelines document. Essential package: core brand elements. Premium package: extended applications and social media kit.",
+        "sv": "Inkluderar tre revideringsomgångar, källfiler och en varumärkesmanual. Grundpaket: kärnvarumärkeselement. Premium-paket: utökade applikationer och sociala medier-kit."
       }
     },
     {
@@ -537,8 +537,8 @@
       "sku": "HM-DES-WEB-BASE",
       "taxCode": "txcd_10701200",
       "description": {
-        "en": "Custom website design optimised for all devices and screen sizes, delivering intuitive user experiences.",
-        "sv": "Anpassad webbdesign optimerad för alla enheter och skärmstorlekar."
+        "en": "Custom website design optimised for all devices and screen sizes, focusing on intuitive user experiences.",
+        "sv": "Anpassad webbdesign optimerad för alla enheter och skärmstorlekar, med fokus på intuitiva användarupplevelser."
       },
       "basePrice": 9400,
       "unit": {
@@ -581,8 +581,8 @@
           "taxCode": "txcd_10701200",
           "price": 2500,
           "description": {
-            "en": "Bespoke animations and micro-interactions to enhance user engagement and provide visual feedback throughout the website.",
-            "sv": "Skräddarsydda animationer och mikrointeraktioner för att förbättra användarengagemang och ge visuell återkoppling på webbplatsen."
+            "en": "Custom animations and micro-interactions for user engagement and visual feedback on the website.",
+            "sv": "Anpassade animationer och mikrointeraktioner för användarengagemang och visuell återkoppling på webbplatsen."
           }
         },
         {
@@ -594,14 +594,14 @@
           "taxCode": "txcd_10701200",
           "price": 6250,
           "description": {
-            "en": "Comprehensive SEO design implementation including metadata structure, semantic markup, and content hierarchy optimisation.",
-            "sv": "Omfattande SEO-designimplementering inklusive metadatastruktur, semantisk markup och optimering av innehållshierarki."
+            "en": "SEO design implementation including metadata structure, semantic markup, and content hierarchy optimisation.",
+            "sv": "Implementering av SEO-design inklusive metadatastruktur, semantisk märkning och optimering av innehållshierarki."
           }
         }
       ],
       "note": {
-        "en": "Prices are for design only. Development costs quoted separately. Includes mobile-first design approach.",
-        "sv": "Priser gäller endast design. Utvecklingskostnader offereras separat. Inkluderar mobile-first designstrategi."
+        "en": "Prices are for design only; development costs are quoted separately. A mobile-first design approach is included.",
+        "sv": "Priserna gäller endast design; utvecklingskostnader offereras separat. En mobile-first designstrategi ingår."
       }
     }
   ]

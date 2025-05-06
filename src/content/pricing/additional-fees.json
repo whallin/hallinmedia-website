@@ -15,8 +15,8 @@
       "sku": "HM-FEE-MILE-BASE",
       "taxCode": "txcd_20030000",
       "description": {
-        "en": "Standard mileage rate for travel outside the local Skellefteå area. Calculated per kilometre from office location.",
-        "sv": "Standard milersättning för resor utanför Skellefteåområdet. Beräknas per kilometer från kontorsplats."
+        "en": "Mileage rate for travel outside the Skellefteå local area. Calculated per kilometre from the office.",
+        "sv": "Milersättning för resor utanför Skellefteå närområde. Beräknas per kilometer från kontoret."
       },
       "basePrice": 25,
       "unit": {
@@ -24,8 +24,8 @@
         "sv": "mil"
       },
       "note": {
-        "en": "Minimum chargeable distance is 30km return journey. Additional parking fees and tolls charged at cost.",
-        "sv": "Minimisträcka för debitering är 30km tur och retur. Tillkommande parkeringsavgifter och vägavgifter debiteras till självkostnadspris."
+        "en": "Minimum chargeable distance is a 30km return journey. Parking fees and tolls are charged at cost.",
+        "sv": "Minsta debiterbara sträcka är 30 km tur och retur. Parkeringsavgifter och vägtullar debiteras till självkostnadspris."
       }
     },
     {
@@ -36,8 +36,8 @@
       "sku": "HM-FEE-EQUIP-BASE",
       "taxCode": "txcd_20060000",
       "description": {
-        "en": "Professional equipment hire for specialised projects. All equipment fully tested, calibrated and insured.",
-        "sv": "Uthyrning av professionell utrustning för specialiserade projekt. All utrustning är testad och försäkrad."
+        "en": "Rental of professional equipment for specialised projects. All equipment is tested, calibrated, and insured.",
+        "sv": "Uthyrning av professionell utrustning för specialiserade projekt. All utrustning är testad, kalibrerad och försäkrad."
       },
       "basePrice": 500,
       "unit": {
@@ -104,8 +104,8 @@
           "price": 250,
           "taxCode": "txcd_20030000",
           "description": {
-            "en": "Professional delivery and setup of equipment to your specified location within the Skellefteå region.",
-            "sv": "Professionell leverans och installation av utrustning till din angivna plats inom Skellefteåregionen."
+            "en": "Delivery and setup of equipment to a specified location within the Skellefteå region.",
+            "sv": "Leverans och installation av utrustning till en angiven plats inom Skellefteåregionen."
           },
           "unit": {
             "en": "delivery",
@@ -121,8 +121,8 @@
           "price": 1000,
           "taxCode": "txcd_20060044",
           "description": {
-            "en": "Comprehensive on-site training session on proper equipment usage, safety procedures and best practices.",
-            "sv": "Omfattande utbildning på plats om korrekt användning av utrustning, säkerhetsprocedurer och bästa praxis."
+            "en": "On-site training session on equipment usage, safety procedures, and best practices.",
+            "sv": "Utbildning på plats om användning av utrustning, säkerhetsrutiner och bästa praxis."
           },
           "unit": {
             "en": "hour",
@@ -141,8 +141,8 @@
         }
       ],
       "note": {
-        "en": "Refundable security deposit required. Insurance excess and software licences not included. Equipment must be returned in original condition.",
-        "sv": "Återbetalningsbar deposition krävs. Självrisk och programvarulicenser ingår ej. Utrustning måste återlämnas i ursprungligt skick."
+        "en": "A refundable security deposit is required. Insurance excess and software licences are not included. Equipment should be returned in its original condition.",
+        "sv": "En återbetalningsbar deposition krävs. Självrisk och programvarulicenser ingår ej. Utrustningen ska återlämnas i ursprungligt skick."
       }
     },
     {
@@ -153,8 +153,8 @@
       "sku": "HM-FEE-LOC-BASE",
       "taxCode": "txcd_20060048",
       "description": {
-        "en": "Professional location scouting service for photo and video shoots. Includes detailed location reports and permit assistance.",
-        "sv": "Professionell platsspaningsservice för foto- och videoinspelningar. Inkluderar detaljerade platsrapporter och tillståndsassistans."
+        "en": "Location scouting service for photo and video shoots. Includes detailed location reports and assistance with permits.",
+        "sv": "Platsspaningstjänst för foto- och videoinspelningar. Inkluderar detaljerade platsrapporter och assistans med tillstånd."
       },
       "basePrice": 250,
       "unit": {
@@ -171,8 +171,8 @@
           "price": 25,
           "taxCode": "txcd_20030000",
           "description": {
-            "en": "Travel costs for location scouting beyond the local Skellefteå area, calculated per kilometre from our office.",
-            "sv": "Resekostnader för platsspaning utanför Skellefteåområdet, beräknat per kilometer från vårt kontor."
+            "en": "Travel costs for location scouting outside the Skellefteå local area, calculated per kilometre from the office.",
+            "sv": "Resekostnader för platsspaning utanför Skellefteå närområde, beräknat per kilometer från kontoret."
           },
           "unit": {
             "en": "mile",
@@ -188,8 +188,8 @@
           "price": 500,
           "taxCode": "txcd_20060000",
           "description": {
-            "en": "Handling and processing of necessary filming permits, including liaison with local authorities and property owners.",
-            "sv": "Hantering och behandling av nödvändiga filmningstillstånd, inklusive kontakt med lokala myndigheter och fastighetsägare."
+            "en": "Handling and processing of filming permits, including liaison with local authorities and property owners.",
+            "sv": "Hantering och bearbetning av filmningstillstånd, inklusive kontakt med lokala myndigheter och fastighetsägare."
           },
           "unit": {
             "en": "permit",
@@ -216,8 +216,8 @@
         }
       ],
       "note": {
-        "en": "Minimum booking of 2 locations. Permit fees vary by venue. Includes detailed location report with photos and logistics information.",
-        "sv": "Minimumbokning är 2 platser. Tillståndsavgifter varierar beroende på plats. Inkluderar detaljerad platsrapport med foton och logistikinformation."
+        "en": "Minimum booking of 2 locations. Permit fees vary by venue. A detailed location report with photos and logistics information is included.",
+        "sv": "Minsta bokning är 2 platser. Tillståndsavgifter varierar beroende på plats. En detaljerad platsrapport med foton och logistikinformation ingår."
       }
     }
   ]

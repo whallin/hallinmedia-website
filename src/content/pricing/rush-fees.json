@@ -15,8 +15,8 @@
       "sku": "HM-RUSH-NEXT-BASE",
       "taxCode": "txcd_20060000",
       "description": {
-        "en": "Expedited project completion and delivery by the end of the next business day. Includes priority communication and rapid feedback rounds.",
-        "sv": "Påskyndad projektleverans till slutet av nästa arbetsdag. Inkluderar prioriterad kommunikation och återkopplingsrundor."
+        "en": "Project completion and delivery by the end of the next business day. Includes priority communication and feedback rounds.",
+        "sv": "Projektleverans till slutet av nästa arbetsdag. Inkluderar prioriterad kommunikation och återkopplingsrundor."
       },
       "basePrice": 100,
       "unit": {
@@ -24,8 +24,8 @@
         "sv": "procent"
       },
       "note": {
-        "en": "Surcharge of 100% on standard rates. Must be booked before 16:00 for next-day delivery. Subject to current workload and project complexity.",
-        "sv": "Pristillägg på 100% på standardpriser. Måste bokas före 16:00 för leverans nästa dag. Beroende av aktuell arbetsbelastning och projektets komplexitet."
+        "en": "A 100% surcharge applies to standard rates. Booking required before 16:00 for next-day delivery. Subject to workload and project complexity.",
+        "sv": "Ett pristillägg på 100% tillkommer på standardpriser. Bokning krävs före 16:00 för leverans nästa dag. Beroende på aktuell arbetsbelastning och projektets komplexitet."
       }
     },
     {
@@ -36,8 +36,8 @@
       "sku": "HM-RUSH-SAME-BASE",
       "taxCode": "txcd_20060000",
       "description": {
-        "en": "Immediate priority handling and delivery of your project within the same business day. Subject to availability and project scope.",
-        "sv": "Prioriterad hantering och leverans av ditt projekt inom samma arbetsdag. Med förbehåll för tillgänglighet och projektets omfattning."
+        "en": "Priority handling and delivery of the project within the same business day. Subject to availability and project scope.",
+        "sv": "Prioriterad hantering och leverans av projektet inom samma arbetsdag. Med förbehåll för tillgänglighet och projektets omfattning."
       },
       "basePrice": 200,
       "unit": {
@@ -45,8 +45,8 @@
         "sv": "procent"
       },
       "note": {
-        "en": "Surcharge of 200% on standard rates. Must be booked before 10:00 for same-day delivery. Limited to specific services and smaller-scope projects.",
-        "sv": "Pristillägg på 200% på standardpriser. Måste bokas före 10:00 för leverans samma dag. Begränsat till specifika tjänster och mindre omfattande projekt."
+        "en": "A 200% surcharge applies to standard rates. Booking required before 10:00 for same-day delivery. Available for specific services and smaller-scope projects.",
+        "sv": "Ett pristillägg på 200% tillkommer på standardpriser. Bokning krävs före 10:00 för leverans samma dag. Tillgängligt för specifika tjänster och mindre omfattande projekt."
       }
     },
     {
@@ -57,8 +57,8 @@
       "sku": "HM-RUSH-AH-BASE",
       "taxCode": "txcd_20030000",
       "description": {
-        "en": "Work performed outside regular business hours (09:00-17:00). Available for urgent projects and time-sensitive updates.",
-        "sv": "Arbete som utförs utanför ordinarie kontorstid (09:00-17:00). Tillgängligt för brådskande projekt och tidskänsliga uppdateringar."
+        "en": "Work performed outside regular business hours (09:00-17:00), for urgent projects and time-sensitive updates.",
+        "sv": "Arbete som utförs utanför ordinarie kontorstid (09:00-17:00), för brådskande projekt och tidskänsliga uppdateringar."
       },
       "basePrice": 100,
       "unit": {
@@ -92,8 +92,8 @@
         }
       ],
       "note": {
-        "en": "Percentage surcharge on standard rates. Minimum 2-hour booking required. Subject to availability. Emergency contact details provided upon booking.",
-        "sv": "Procentuellt pristillägg på standardpriser. Minimum 2 timmars bokning krävs. Med förbehåll för tillgänglighet. Akuta kontaktuppgifter tillhandahålls vid bokning."
+        "en": "A percentage surcharge applies to standard rates. Minimum 2-hour booking. Subject to availability. Emergency contact details are provided upon booking.",
+        "sv": "Ett procentuellt pristillägg tillkommer på standardpriser. Minst 2 timmars bokning. Med förbehåll för tillgänglighet. Akuta kontaktuppgifter tillhandahålls vid bokning."
       }
     },
     {
@@ -104,8 +104,8 @@
       "sku": "HM-RUSH-WH-BASE",
       "taxCode": "txcd_20030000",
       "description": {
-        "en": "Services provided during weekends or Swedish public holidays. Includes priority handling and emergency support for time-critical projects.",
-        "sv": "Tjänster som tillhandahålls under helger eller svenska helgdagar. Inkluderar akutsupport och prioriterad hantering."
+        "en": "Services provided during weekends or Swedish public holidays. Includes priority handling and support for time-critical projects.",
+        "sv": "Tjänster som tillhandahålls under helger eller svenska helgdagar. Inkluderar prioriterad hantering och support för tidskritiska projekt."
       },
       "basePrice": 150,
       "unit": {
@@ -139,8 +139,8 @@
         }
       ],
       "note": {
-        "en": "Minimum 4-hour booking required. Surcharge applies to standard rates. Must be booked 24 hours in advance for weekends, 48 hours for holidays.",
-        "sv": "Minimum 4 timmars bokning krävs. Pristillägg tillkommer på standardpriser. Måste bokas 24 timmar i förväg för helger, 48 timmar för helgdagar."
+        "en": "Minimum 4-hour booking. A surcharge applies to standard rates. Booking required 24 hours in advance for weekends, 48 hours for holidays.",
+        "sv": "Minst 4 timmars bokning. Ett pristillägg tillkommer på standardpriser. Bokning krävs 24 timmar i förväg för helger, 48 timmar för helgdagar."
       }
     }
   ]
