@@ -102,6 +102,7 @@ const locale = Astro.currentLocale === "en" || Astro.currentLocale === "sv" ? As
                       {service.addons.map((addon) => (
                         <ServiceAddon
                           serviceName={service.name[locale]}
+                          description={addon.description}
                           addonName={addon.name}
                           price={addon.price}
                           unit={addon.unit}
@@ -338,7 +339,7 @@ const locale = Astro.currentLocale === "en" || Astro.currentLocale === "sv" ? As
 
         const serviceName = checkbox.name.replace("service-", "");
         const selectedOption = serviceContainer.querySelector<HTMLInputElement>(
-          `input[name="option-${serviceName}"]:checked`,
+          `input[name="option-${serviceName}"]:checked`
         );
 
         // Add service or option price
@@ -384,7 +385,7 @@ const locale = Astro.currentLocale === "en" || Astro.currentLocale === "sv" ? As
 
         const serviceName = checkbox.name.replace("service-", "");
         const selectedOption = serviceContainer.querySelector<HTMLInputElement>(
-          `input[name="option-${serviceName}"]:checked`,
+          `input[name="option-${serviceName}"]:checked`
         );
 
         // Apply option percentage

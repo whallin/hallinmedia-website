@@ -15,6 +15,7 @@ interface Props {
     }>;
     addons?: Array<{
       name: { en: string; sv: string };
+      description: { en: string; sv: string };
       price: number;
       unit?: { en: string; sv: string };
       optional?: boolean;
@@ -151,9 +152,19 @@ const { service } = Astro.props;
             <dl class="space-y-4">
               {service.addons.map((addon) => (
                 <div class="flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between">
-                  <dt class="font-serif text-stone-500 dark:text-stone-400">
+                  <dt class="flex items-center gap-1 font-serif text-stone-500 dark:text-stone-400">
                     {addon.name[locale]}
                     {addon.optional && ` (${translations[locale].optional})`}
+                    {addon.description && (
+                      <div class="group relative inline-block" tabindex="0">
+                        <Icon name="ph:info-duotone" class="h-4 w-4 flex-shrink-0 cursor-help" aria-hidden="true" />
+                        <div class="pointer-events-none absolute bottom-full left-1/2 z-10 mb-2 -translate-x-1/2 transform opacity-0 transition-opacity group-hover:opacity-100 group-focus:opacity-100">
+                          <div class="w-48 rounded bg-stone-800 p-2 text-xs text-stone-100">
+                            {addon.description[locale]}
+                          </div>
+                        </div>
+                      </div>
+                    )}
                   </dt>
                   <dd class="text-right font-serif text-stone-700 dark:text-stone-100">
                     {addon.unit?.sv === "procent" || addon.unit?.en === "percent" ? (

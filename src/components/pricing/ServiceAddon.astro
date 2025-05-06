@@ -1,9 +1,11 @@
 ---
+import { Icon } from "astro-icon/components";
 import QuantityInput from "../form/QuantityInput.astro";
 
 interface Props {
   serviceName: string;
   addonName: Record<string, string>;
+  description?: Record<string, string>;
   price: number;
   unit?: Record<string, string>;
   disabled?: boolean;
@@ -21,7 +23,7 @@ const translations = {
 };
 
 const locale = Astro.currentLocale === "en" || Astro.currentLocale === "sv" ? Astro.currentLocale : "en";
-const { serviceName, addonName, price, unit, disabled = true } = Astro.props;
+const { serviceName, addonName, description, price, unit, disabled = true } = Astro.props;
 const isPercentage = unit?.sv === "procent" || unit?.en === "percent";
 const sanitizedName = (name: string) => name.toLowerCase().replace(/\s+/g, "-");
 ---
@@ -40,9 +42,25 @@ const sanitizedName = (name: string) => name.toLowerCase().replace(/\s+/g, "-");
     <div class="flex flex-col">
       <label
         for={`addon-${sanitizedName(serviceName)}-${sanitizedName(addonName[locale])}`}
-        class="font-serif text-sm text-stone-600 dark:text-stone-300"
+        class="flex items-center gap-1 font-serif text-sm text-stone-600 dark:text-stone-300"
       >
         {addonName[locale]}
+        {
+          description && description[locale] && (
+            <div class="group relative inline-block" tabindex="0">
+              <Icon
+                name="ph:info-duotone"
+                class="ml-1 h-4 w-4 flex-shrink-0 cursor-help align-middle text-stone-500 dark:text-stone-400"
+                aria-hidden="true"
+              />
+              <div class="pointer-events-none absolute bottom-full left-1/2 z-10 mb-2 -translate-x-1/2 transform opacity-0 transition-opacity group-hover:opacity-100 group-focus:opacity-100">
+                <div class="w-48 rounded bg-stone-800 p-2 text-xs text-stone-100 dark:bg-stone-700 dark:text-stone-200">
+                  {description[locale]}
+                </div>
+              </div>
+            </div>
+          )
+        }
       </label>
       {
         isPercentage && (
