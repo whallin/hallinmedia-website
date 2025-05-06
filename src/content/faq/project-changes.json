@@ -1,0 +1,41 @@
+{
+  "categoryName": {
+    "en": "Project Changes",
+    "sv": "Projektändringar"
+  },
+  "questions": [
+    {
+      "featured": true,
+      "question": {
+        "en": "Do you offer revisions after delivery?",
+        "sv": "Erbjuder du ändringar efter leverans?"
+      },
+      "answer": {
+        "en": "Yes, standard project quotes include up to three rounds of revisions to ensure you're happy with the result. Further revisions are available at my standard hourly rate if needed.",
+        "sv": "Ja, standardprojekt inkluderar upp till tre revideringsrundor för att säkerställa att du är nöjd. Ytterligare revideringar kan göras mot min standardtimtaxa vid behov."
+      }
+    },
+    {
+      "featured": false,
+      "question": {
+        "en": "Do you offer rush projects or urgent turnaround times?",
+        "sv": "Erbjuder du expressprojekt eller snabba leveranstider?"
+      },
+      "answer": {
+        "en": "Yes, I can sometimes accommodate rush projects depending on my current schedule and the project's scope. Rush projects typically incur an additional fee due to the expedited timeline and potential need to reschedule other work. Please contact me ahead of time to discuss your needs.",
+        "sv": "Ja, jag kan ibland ta emot expressprojekt beroende på mitt nuvarande schema och projektets omfattning. Expressprojekt medför vanligtvis en extra avgift på grund av den snabbare tidsplanen och eventuellt behov av att omplanera annat arbete. Kontakta mig i förväg för att diskutera dina behov."
+      }
+    },
+    {
+      "featured": false,
+      "question": {
+        "en": "What if I need to cancel a project?",
+        "sv": "Vad händer om jag behöver avbryta ett projekt?"
+      },
+      "answer": {
+        "en": "If you need to cancel a project, please notify me as soon as possible. Depending on the project stage and contract terms, cancellation fees may apply. For projects cancelled before any work begins, the deposit may be refunded, less any administrative or booking fees.",
+        "sv": "Om du behöver avbryta ett projekt, meddela mig så snart som möjligt. Beroende på projektets skede och avtalsvillkor kan avbokningsavgifter tillkomma. För projekt som avbryts innan något arbete påbörjats kan depositionen återbetalas, minus eventuella administrativa avgifter eller bokningsavgifter."
+      }
+    }
+  ]
+}

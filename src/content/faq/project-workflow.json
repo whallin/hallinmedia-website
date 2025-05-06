@@ -1,0 +1,41 @@
+{
+  "categoryName": {
+    "en": "Project Workflow",
+    "sv": "Projektarbetsflöde"
+  },
+  "questions": [
+    {
+      "featured": false,
+      "question": {
+        "en": "What is your typical project workflow?",
+        "sv": "Hur ser er typiska projektprocess ut?"
+      },
+      "answer": {
+        "en": "<ol class='list-decimal list-inside space-y-1'><li class='pl-2'>Discovery & Briefing (understanding your needs)</li><li class='pl-2'>Proposal & Agreement</li><li class='pl-2'>Design & Development (with regular feedback loops)</li><li class='pl-2'>Revisions</li><li class='pl-2'>Final Delivery</li><li class='pl-2'>Post-launch Support (if applicable)</li></ol><p class='mt-2'>This process is tailored to your specific project.</p>",
+        "sv": "<ol class='list-decimal list-inside space-y-1'><li class='pl-2'>Behovsanalys & Briefing (förstå dina behov)</li><li class='pl-2'>Offert & Avtal</li><li class='pl-2'>Design & Utveckling (med regelbunden återkoppling)</li><li class='pl-2'>Revideringar</li><li class='pl-2'>Slutleverans</li><li class='pl-2'>Support efter lansering (om tillämpligt)</li></ol><p class='mt-2'>Processen anpassas efter ditt specifika projekt.</p>"
+      }
+    },
+    {
+      "featured": true,
+      "question": {
+        "en": "What is the typical timeline for project delivery?",
+        "sv": "Vad är den typiska tidsramen för projektleveranser?"
+      },
+      "answer": {
+        "en": "Project timelines vary: standard projects usually take 2-3 weeks, while more complex ones might take 4-6 weeks. We'll establish a specific timeline during our initial consultation.",
+        "sv": "Projekttidslinjer varierar: standardprojekt tar vanligtvis 2-3 veckor, medan mer komplexa kan ta 4-6 veckor. Vi fastställer en specifik tidslinje under vårt inledande konsultationsmöte."
+      }
+    },
+    {
+      "featured": false,
+      "question": {
+        "en": "How do you track and report project progress?",
+        "sv": "Hur följer du upp och rapporterar projektets framsteg?"
+      },
+      "answer": {
+        "en": "Project progress is tracked and reported via a secure <a href='https://client.newgent.digital/' target='_blank' data-umami-event='faq_answer-link' data-umami-event-url='https://client.newgent.digital/' class='text-red-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-50 active:opacity-50'>client portal</a>. There, you can see real-time updates, access files, and communicate with me. I also provide regular status reports, and you can request an update anytime.",
+        "sv": "Projektframsteg spåras och rapporteras via en säker <a href='https://client.newgent.digital/' target='_blank' data-umami-event='faq_answer-link' data-umami-event-url='https://client.newgent.digital/' class='text-red-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-50 active:opacity-50'>kundportal</a>. Där kan du se uppdateringar i realtid, komma åt filer och kommunicera med mig. Jag tillhandahåller också regelbundna statusrapporter, och du kan begära en uppdatering när som helst."
+      }
+    }
+  ]
+}

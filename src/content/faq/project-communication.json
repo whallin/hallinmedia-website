@@ -1,0 +1,30 @@
+{
+  "categoryName": {
+    "en": "Project Communication",
+    "sv": "Projektkommunikation"
+  },
+  "questions": [
+    {
+      "featured": false,
+      "question": {
+        "en": "How do we communicate during a project?",
+        "sv": "Hur kommunicerar vi under ett projekt?"
+      },
+      "answer": {
+        "en": "For project management, file sharing, and primary communication, I use <a href='https://client.newgent.digital/' target='_blank' data-umami-event='faq_answer-link' data-umami-event-url='https://client.newgent.digital/' class='text-red-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-50 active:opacity-50'>Project.co</a>. We can also use <a href='mailto:william@hallin.media?subject=Project%20Update' data-umami-event='faq_answer-email' class='text-red-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-50 active:opacity-50'>email</a>, <a href='https://wa.me/46706159279' target='_blank' data-umami-event='faq_answer-link' data-umami-event-url='https://wa.me/46706159279' rel='noopener noreferrer' class='text-red-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-50 active:opacity-50'>WhatsApp</a> for quick chats, and Google Meet for virtual meetings.",
+        "sv": "För projekthantering, fildelning och primär kommunikation använder jag <a href='https://client.newgent.digital/' target='_blank' data-umami-event='faq_answer-link' data-umami-event-url='https://client.newgent.digital/' class='text-red-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-50 active:opacity-50'>Project.co</a>. Vi kan även använda <a href='mailto:william@hallin.media?subject=Projektuppdatering' data-umami-event='faq_answer-email' class='text-red-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-50 active:opacity-50'>e-post</a>, <a href='https://wa.me/46706159279' target='_blank' data-umami-event='faq_answer-link' data-umami-event-url='https://wa.me/46706159279' rel='noopener noreferrer' class='text-red-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-50 active:opacity-50'>WhatsApp</a> för snabba meddelanden och Google Meet för virtuella möten."
+      }
+    },
+    {
+      "featured": true,
+      "question": {
+        "en": "How will I be updated on project progress?",
+        "sv": "Hur kommer jag att uppdateras om projektets framsteg?"
+      },
+      "answer": {
+        "en": "Project updates are provided regularly through my project management platform, <a href='https://client.newgent.digital/' target='_blank' data-umami-event='faq_answer-link' data-umami-event-url='https://client.newgent.digital/' class='text-red-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-50 active:opacity-50'>Project.co</a>. We can also schedule regular check-in meetings via Google Meet to discuss progress and address any questions.",
+        "sv": "Projektuppdateringar ges regelbundet via min projekthanteringsplattform, <a href='https://client.newgent.digital/' target='_blank' data-umami-event='faq_answer-link' data-umami-event-url='https://client.newgent.digital/' class='text-red-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-50 active:opacity-50'>Project.co</a>. Vi kan också schemalägga regelbundna avstämningsmöten via Google Meet för att diskutera framsteg och besvara eventuella frågor."
+      }
+    }
+  ]
+}

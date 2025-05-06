@@ -1,0 +1,52 @@
+{
+  "categoryName": {
+    "en": "Support Plans",
+    "sv": "Supportplaner"
+  },
+  "questions": [
+    {
+      "featured": false,
+      "question": {
+        "en": "What support is included during active projects?",
+        "sv": "Vilken support ingår under aktiva projekt?"
+      },
+      "answer": {
+        "en": "During active projects, you receive priority support, which includes:<br>• Regular progress updates.<br>• A dedicated project channel in the <a href='https://client.newgent.digital/' target='_blank' data-umami-event='faq_answer-link' data-umami-event-url='https://client.newgent.digital/' class='text-red-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-50 active:opacity-50'>client portal</a>.<br>• Response within 4 business hours for standard queries.<br>• Technical assistance for critical issues.<br>• File version management and backups.",
+        "sv": "Under aktiva projekt får du prioriterad support, vilket inkluderar:<br>• Regelbundna framstegsuppdateringar.<br>• En dedikerad projektkanal i <a href='https://client.newgent.digital/' target='_blank' data-umami-event='faq_answer-link' data-umami-event-url='https://client.newgent.digital/' class='text-red-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-50 active:opacity-50'>kundportalen</a>.<br>• Svar inom 4 arbetstimmar för standardförfrågningar.<br>• Teknisk assistans vid kritiska problem.<br>• Hantering av filversioner och säkerhetskopior."
+      }
+    },
+    {
+      "featured": true,
+      "question": {
+        "en": "What support do you offer after a project is completed?",
+        "sv": "Vilken support erbjuder du efter att ett projekt är slutfört?"
+      },
+      "answer": {
+        "en": "Each project includes 30 days of complimentary support post-delivery for minor adjustments and technical questions. For longer-term needs, I offer <a href='/pricing#add-ons' data-umami-event='faq_answer-link' data-umami-event-url='/pricing#add-ons' class='text-red-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-50 active:opacity-50'>extended support plans</a>, such as monthly maintenance, content update subscriptions, or priority support, tailored to your requirements.",
+        "sv": "Varje projekt inkluderar 30 dagars kostnadsfri support efter leverans för mindre justeringar och tekniska frågor. För långsiktiga behov erbjuder jag <a href='/pricing#add-ons' data-umami-event='faq_answer-link' data-umami-event-url='/pricing#add-ons' class='text-red-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-50 active:opacity-50'>utökade supportplaner</a>, såsom månatligt underhåll, abonnemang för innehållsuppdateringar eller prioriterad support, anpassade efter dina behov."
+      }
+    },
+    {
+      "featured": false,
+      "question": {
+        "en": "What if I need help with tasks not covered by my plan?",
+        "sv": "Vad om jag behöver hjälp med uppgifter som inte täcks av min plan?"
+      },
+      "answer": {
+        "en": "If you require assistance for tasks or issues outside your current support agreement, please contact me. We can discuss the scope of the additional work, and I can provide a separate quote or suggest an adjustment to your existing plan if appropriate.",
+        "sv": "Om du behöver hjälp med uppgifter eller problem som ligger utanför ditt nuvarande supportavtal, vänligen kontakta mig. Vi kan diskutera omfattningen av det ytterligare arbetet, och jag kan ge en separat offert eller föreslå en justering av din befintliga plan om det är lämpligt."
+      }
+    },
+    {
+      "featured": false,
+      "question": {
+        "en": "Do you offer training or documentation for the delivered project?",
+        "sv": "Erbjuder du utbildning eller dokumentation för det levererade projektet?"
+      },
+      "answer": {
+        "en": "Basic handover documentation is provided with all projects. If you require more comprehensive documentation or personalised training sessions on how to use or manage the deliverables, this can be arranged as an additional service. Please let me know your needs during the project planning phase or after delivery.",
+        "sv": "Grundläggande överlämningsdokumentation tillhandahålls med alla projekt. Om du behöver mer omfattande dokumentation eller personliga utbildningssessioner om hur du använder eller hanterar leveranserna kan detta ordnas som en tilläggstjänst. Meddela mig dina behov under projektplaneringsfasen eller efter leverans."
+      }
+    }
+  ]
+}

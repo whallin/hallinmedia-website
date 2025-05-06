@@ -1,0 +1,30 @@
+{
+  "categoryName": {
+    "en": "Payment Methods",
+    "sv": "Betalningsmetoder"
+  },
+  "questions": [
+    {
+      "featured": true,
+      "question": {
+        "en": "How do you handle payments?",
+        "sv": "Hur hanteras betalningar?"
+      },
+      "answer": {
+        "en": "Payments are primarily handled via Stripe, accepting major credit/debit cards, Klarna, PayPal, Sofort, and more. <br><br>Swedish clients can also pay via Bankgiro. I also support electronic invoicing (PEPPOL BIS Billing 3) through Crediflow.",
+        "sv": "Betalningar hanteras primärt via Stripe, som accepterar de flesta större kredit-/betalkort, Klarna, PayPal, Sofort med flera. <br><br>Svenska kunder kan även betala via Bankgiro. Jag stödjer även e-faktura (PEPPOL BIS Billing 3) via Crediflow."
+      }
+    },
+    {
+      "featured": false,
+      "question": {
+        "en": "How are international payments handled?",
+        "sv": "Hur hanteras internationella betalningar?"
+      },
+      "answer": {
+        "en": "International payments can be made via Stripe (which handles currency conversion automatically) or by bank transfer in SEK. For enterprise clients, I also offer PEPPOL BIS Billing 3 compliant e-invoicing via Crediflow.",
+        "sv": "Internationella betalningar kan göras via Stripe (som hanterar valutakonvertering automatiskt) eller via banköverföring i SEK. För företagskunder erbjuder jag även e-fakturering enligt PEPPOL BIS Billing 3-standarden via Crediflow."
+      }
+    }
+  ]
+}

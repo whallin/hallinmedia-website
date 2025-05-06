@@ -1,0 +1,41 @@
+{
+  "categoryName": {
+    "en": "Deliverables & Ownership",
+    "sv": "Leverabler & Äganderätt"
+  },
+  "questions": [
+    {
+      "featured": true,
+      "question": {
+        "en": "What file formats will I receive?",
+        "sv": "Vilka filformat kommer jag att få?"
+      },
+      "answer": {
+        "en": "You'll receive final files in industry-standard formats suitable for your needs. Common formats include:<br>• <strong>Images:</strong> PNG, JPG, TIFF, PSD<br>• <strong>Videos:</strong> MP4 (H.264/H.265), MOV (ProRes/DNxHR), AVI<br>• <strong>Documents:</strong> PDF, DOCX, PPTX, XLSX<br>• <strong>Audio:</strong> WAV, MP3, AAC<br><br>Source files can be provided if requested (this is typically an <a href='/pricing#add-ons' data-umami-event='faq_answer-link' data-umami-event-url='/pricing#add-ons' class='text-red-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-50 active:opacity-50'>add-on service</a>). All files are compatible with Windows and macOS.",
+        "sv": "Du får slutfiler i branschstandardformat anpassade för dina behov. Vanliga format inkluderar:<br>• <strong>Bilder:</strong> PNG, JPG, TIFF, PSD<br>• <strong>Videor:</strong> MP4 (H.264/H.265), MOV (ProRes/DNxHR), AVI<br>• <strong>Dokument:</strong> PDF, DOCX, PPTX, XLSX<br>• <strong>Ljud:</strong> WAV, MP3, AAC<br><br>Källfiler kan tillhandahållas på begäran (detta är vanligtvis en <a href='/pricing#add-ons' data-umami-event='faq_answer-link' data-umami-event-url='/pricing#add-ons' class='text-red-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-50 active:opacity-50'>tilläggstjänst</a>). Alla filer är kompatibla med Windows och macOS."
+      }
+    },
+    {
+      "featured": false,
+      "question": {
+        "en": "What software are the source files compatible with?",
+        "sv": "Vilka program är källfilerna kompatibla med?"
+      },
+      "answer": {
+        "en": "Source files are typically created with industry-standard software like:<br>• Adobe Creative Suite (Photoshop, Illustrator, InDesign, Acrobat)<br>• Affinity Suite (Designer, Publisher, Photo)<br>• Figma<br>• DaVinci Resolve Studio (not the free version)<br>• Microsoft Office Suite (Word, PowerPoint, Excel)<br><br>To edit these files, you'll need the respective software and licenses. If you plan to edit source files yourself, be aware of potential software licensing costs.",
+        "sv": "Källfiler skapas vanligtvis med branschstandardprogram som:<br>• Adobe Creative Suite (Photoshop, Illustrator, InDesign, Acrobat)<br>• Affinity Suite (Designer, Publisher, Photo)<br>• Figma<br>• DaVinci Resolve Studio (inte gratisversionen)<br>• Microsoft Office Suite (Word, PowerPoint, Excel)<br><br>För att redigera dessa filer behöver du respektive programvara och licenser. Om du planerar att redigera källfiler själv, var medveten om eventuella programvarulicenskostnader."
+      }
+    },
+    {
+      "featured": false,
+      "question": {
+        "en": "Who owns the intellectual property (IP) of the final deliverables?",
+        "sv": "Vem äger den immateriella äganderätten (IP) till de slutliga leveranserna?"
+      },
+      "answer": {
+        "en": "Upon full payment, you, the client, will own the intellectual property rights for the final, delivered work specifically created for you. I retain the right to showcase the work in my portfolio unless otherwise agreed. Pre-existing materials or tools used remain my IP.",
+        "sv": "Efter full betalning äger du som kund de immateriella rättigheterna till det slutgiltiga, levererade arbetet som skapats specifikt för dig. Jag förbehåller mig rätten att visa upp arbetet i min portfolio om inget annat avtalats. Redan existerande material eller verktyg som används förblir min IP."
+      }
+    }
+  ]
+}

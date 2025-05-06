@@ -1,0 +1,52 @@
+{
+  "categoryName": {
+    "en": "Contact & Availability",
+    "sv": "Kontakt & Tillgänglighet"
+  },
+  "questions": [
+    {
+      "featured": false,
+      "question": {
+        "en": "How can I contact you?",
+        "sv": "Hur kan jag kontakta dig?"
+      },
+      "answer": {
+        "en": "For general inquiries, feel free to contact me via <a href='mailto:william@hallin.media?subject=Hello!' data-umami-event='faq_answer-email' class='text-red-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-50 active:opacity-50'>email</a>, <a href='https://wa.me/46706159279' target='_blank' data-umami-event='faq_answer-link' data-umami-event-url='https://wa.me/46706159279' rel='noopener noreferrer' class='text-red-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-50 active:opacity-50'>WhatsApp</a>, or <a href='tel:+46706159279' data-umami-event='faq_answer-phone' class='text-red-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-50 active:opacity-50'>telephone</a> during business hours. Virtual meetings are typically held on Google Meet.<br><br>For official correspondence:<br>NWG Digital AB<br>c/o William Hallin<br>Bleckslagargatan 16<br>934 31 Kåge<br>Sweden",
+        "sv": "För allmänna förfrågningar, kontakta mig gärna via <a href='mailto:william@hallin.media?subject=Hej!' data-umami-event='faq_answer-email' class='text-red-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-50 active:opacity-50'>e-post</a>, <a href='https://wa.me/46706159279' target='_blank' data-umami-event='faq_answer-link' data-umami-event-url='https://wa.me/46706159279' rel='noopener noreferrer' class='text-red-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-50 active:opacity-50'>WhatsApp</a> eller <a href='tel:+46706159279' data-umami-event='faq_answer-phone' class='text-red-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-50 active:opacity-50'>telefon</a> under kontorstid. Virtuella möten hålls vanligtvis via Google Meet.<br><br>För officiell korrespondens:<br>NWG Digital AB<br>c/o William Hallin<br>Bleckslagargatan 16<br>934 31 Kåge<br>Sverige"
+      }
+    },
+    {
+      "featured": false,
+      "question": {
+        "en": "What are your business hours?",
+        "sv": "Vilka är dina kontorstider?"
+      },
+      "answer": {
+        "en": "My standard business hours are Monday to Friday, 9:00 AM to 5:00 PM (CET/CEST). I am closed on Swedish public holidays.",
+        "sv": "Mina ordinarie kontorstider är måndag till fredag, kl. 09:00 till 17:00 (CET/CEST). Jag har stängt på svenska helgdagar."
+      }
+    },
+    {
+      "featured": true,
+      "question": {
+        "en": "What is your typical response time?",
+        "sv": "Vad är din vanliga svarstid?"
+      },
+      "answer": {
+        "en": "I strive to respond to all messages within 2 business hours during my standard support times. More complex questions might take up to 24 hours for a full reply. For urgent issues during active projects, please mark your message with [URGENT]; note that this may incur additional charges.",
+        "sv": "Jag strävar efter att svara på alla meddelanden inom 2 arbetstimmar under mina ordinarie supporttider. Mer komplexa frågor kan ta upp till 24 timmar för ett fullständigt svar. För akuta ärenden under pågående projekt, vänligen markera ditt meddelande med [AKUT]; notera att detta kan medföra extra kostnader."
+      }
+    },
+    {
+      "featured": false,
+      "question": {
+        "en": "Do you offer support outside of business hours?",
+        "sv": "Erbjuder du support utanför kontorstid?"
+      },
+      "answer": {
+        "en": "Support outside of standard business hours can be arranged for urgent matters, subject to availability and potentially additional fees. Please discuss this with me if you anticipate needing out-of-hours support.",
+        "sv": "Support utanför ordinarie kontorstid kan ordnas för akuta ärenden, beroende på tillgänglighet och eventuellt mot en extra avgift. Vänligen diskutera detta med mig om du förväntar dig att behöva support utanför kontorstid."
+      }
+    }
+  ]
+}

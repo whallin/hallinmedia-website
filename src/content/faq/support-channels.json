@@ -1,0 +1,30 @@
+{
+  "categoryName": {
+    "en": "Support Channels",
+    "sv": "Supportkanaler"
+  },
+  "questions": [
+    {
+      "featured": false,
+      "question": {
+        "en": "What is the best way to contact support?",
+        "sv": "Vilket är det bästa sättet att kontakta supporten?"
+      },
+      "answer": {
+        "en": "For active projects, the best way to request support is through my dedicated <a href='https://client.newgent.digital/' target='_blank' data-umami-event='faq_answer-link' data-umami-event-url='https://client.newgent.digital/' class='text-red-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-50 active:opacity-50'>client portal</a>. For general inquiries or post-project support, you can also reach me via <a href='mailto:william@hallin.media?subject=Support%20Request' data-umami-event='faq_answer-email' class='text-red-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-50 active:opacity-50'>email</a>.",
+        "sv": "För pågående projekt är det bästa sättet att begära support via min dedikerade <a href='https://client.newgent.digital/' target='_blank' data-umami-event='faq_answer-link' data-umami-event-url='https://client.newgent.digital/' class='text-red-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-50 active:opacity-50'>kundportal</a>. För allmänna förfrågningar eller support efter projektavslut kan du även nå mig via <a href='mailto:william@hallin.media?subject=Supportförfrågan' data-umami-event='faq_answer-email' class='text-red-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-50 active:opacity-50'>e-post</a>."
+      }
+    },
+    {
+      "featured": false,
+      "question": {
+        "en": "How do I request urgent support outside of business hours?",
+        "sv": "Hur begär jag akut support utanför ordinarie kontorstid?"
+      },
+      "answer": {
+        "en": "For active projects requiring urgent support outside standard hours, use the [URGENT] prefix in your message via <a href='mailto:william@hallin.media?subject=[URGENT] Support Request' data-umami-event='faq_answer-email' class='text-red-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-50 active:opacity-50'>email</a> or the <a href='https://client.newgent.digital/' target='_blank' data-umami-event='faq_answer-link' data-umami-event-url='https://client.newgent.digital/' class='text-red-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-50 active:opacity-50'>client portal</a>. This service guarantees a 2-hour response time but incurs a 150% surcharge on the standard hourly rate, which will be itemised on your invoice.",
+        "sv": "För aktiva projekt som kräver akut support utanför ordinarie kontorstid, använd prefixet [AKUT] i ditt meddelande via <a href='mailto:william@hallin.media?subject=[AKUT] Supportförfrågan' data-umami-event='faq_answer-email' class='text-red-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-50 active:opacity-50'>e-post</a> eller <a href='https://client.newgent.digital/' target='_blank' data-umami-event='faq_answer-link' data-umami-event-url='https://client.newgent.digital/' class='text-red-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-50 active:opacity-50'>kundportalen</a>. Denna tjänst garanterar svar inom 2 timmar men medför ett påslag på 150 % på ordinarie timtaxa, vilket specificeras på din faktura."
+      }
+    }
+  ]
+}

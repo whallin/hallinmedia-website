@@ -1,0 +1,19 @@
+{
+  "categoryName": {
+    "en": "About Newgent",
+    "sv": "Om Newgent"
+  },
+  "questions": [
+    {
+      "featured": true,
+      "question": {
+        "en": "What is \"NWG Digital AB\"/\"Newgent\"?",
+        "sv": "Vad är \"NWG Digital AB\"/\"Newgent\"?"
+      },
+      "answer": {
+        "en": "NWG Digital AB, also known as Newgent or Newgent Digital, is my registered Swedish limited company (aktiebolag). It handles all administrative and financial aspects of my B2B services, both in Sweden and internationally, functioning like a creative service agency.<br><br>Most official documents, including invoices and contracts, will come from NWG Digital AB or Newgent Digital. This includes correspondence addresses and bank account details for payments.<br><br>You can learn more about Newgent Digital at <a href='https://newgent.digital/' target='_blank' data-umami-event='faq_answer-link' data-umami-event-url='https://newgent.digital/' class='text-red-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-50 active:opacity-50'>www.newgent.digital</a>.",
+        "sv": "NWG Digital AB, även känt som Newgent eller Newgent Digital, är mitt registrerade svenska aktiebolag. Det hanterar alla administrativa och finansiella aspekter av mina B2B-tjänster, både i Sverige och internationellt, och fungerar som en kreativ servicebyrå.<br><br>De flesta officiella dokument, inklusive fakturor och avtal, kommer från NWG Digital AB eller Newgent Digital. Detta inkluderar korrespondensadresser och bankkontouppgifter för betalningar.<br><br>Du kan läsa mer om Newgent Digital på <a href='https://newgent.digital/' target='_blank' data-umami-event='faq_answer-link' data-umami-event-url='https://newgent.digital/' class='text-red-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-50 active:opacity-50'>www.newgent.digital</a>."
+      }
+    }
+  ]
+}
