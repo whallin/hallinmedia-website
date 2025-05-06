@@ -102,7 +102,6 @@ const locale = Astro.currentLocale === "en" || Astro.currentLocale === "sv" ? As
                       {service.addons.map((addon) => (
                         <ServiceAddon
                           serviceName={service.name[locale]}
-                          description={addon.description}
                           addonName={addon.name}
                           price={addon.price}
                           unit={addon.unit}

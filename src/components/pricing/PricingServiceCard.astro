@@ -151,37 +151,34 @@ const { service } = Astro.props;
             </h4>
             <dl class="space-y-4">
               {service.addons.map((addon) => (
-                <div class="flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between">
-                  <dt class="flex items-center gap-1 font-serif text-stone-500 dark:text-stone-400">
-                    {addon.name[locale]}
-                    {addon.optional && ` (${translations[locale].optional})`}
-                    {addon.description && (
-                      <div class="group relative inline-block" tabindex="0">
-                        <Icon name="ph:info-duotone" class="h-4 w-4 flex-shrink-0 cursor-help" aria-hidden="true" />
-                        <div class="pointer-events-none absolute bottom-full left-1/2 z-10 mb-2 -translate-x-1/2 transform opacity-0 transition-opacity group-hover:opacity-100 group-focus:opacity-100">
-                          <div class="w-48 rounded bg-stone-800 p-2 text-xs text-stone-100">
-                            {addon.description[locale]}
-                          </div>
-                        </div>
-                      </div>
-                    )}
-                  </dt>
-                  <dd class="text-right font-serif text-stone-700 dark:text-stone-100">
-                    {addon.unit?.sv === "procent" || addon.unit?.en === "percent" ? (
-                      <>{addon.price}%</>
-                    ) : (
-                      <>
-                        <span
-                          id={`price-addon-${addon.name[locale].toLowerCase().replace(/\s+/g, "-")}`}
-                          data-base-price={addon.price}
-                        >
-                          {addon.price.toLocaleString(locale === "sv" ? "sv-SE" : "en-GB")}
-                        </span>{" "}
-                        {translations[locale].currency}
-                        {addon.unit && ` / ${addon.unit[locale]}`}
-                      </>
-                    )}
-                  </dd>
+                <div class="flex flex-col gap-1">
+                  <div class="flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between">
+                    <dt class="flex items-center gap-1 font-serif text-stone-500 dark:text-stone-400">
+                      {addon.name[locale]}
+                      {addon.optional && ` (${translations[locale].optional})`}
+                    </dt>
+                    <dd class="text-right font-serif text-stone-700 dark:text-stone-100">
+                      {addon.unit?.sv === "procent" || addon.unit?.en === "percent" ? (
+                        <>{addon.price}%</>
+                      ) : (
+                        <>
+                          <span
+                            id={`price-addon-${addon.name[locale].toLowerCase().replace(/\s+/g, "-")}`}
+                            data-base-price={addon.price}
+                          >
+                            {addon.price.toLocaleString(locale === "sv" ? "sv-SE" : "en-GB")}
+                          </span>{" "}
+                          {translations[locale].currency}
+                          {addon.unit && ` / ${addon.unit[locale]}`}
+                        </>
+                      )}
+                    </dd>
+                  </div>
+                  {addon.description && (
+                    <div class="max-w-md font-serif text-xs text-stone-400 dark:text-stone-300" tabindex="0">
+                      {addon.description[locale]}
+                    </div>
+                  )}
                 </div>
               ))}
             </dl>
