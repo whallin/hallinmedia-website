@@ -506,7 +506,7 @@ const portfolioEnCollection = defineCollection({
         'Video Production',
         'Branding',
         'Marketing',
-        'E-commerce',
+        'Communication',
         'Other',
       ]),
     }),
@@ -518,12 +518,12 @@ const portfolioSvCollection = defineCollection({
     basePortfolioSchema({ image }).extend({
       category: z.enum([
         'Webbdesign',
-        'Grafisk Design',
+        'Grafisk design',
         'Fotografi',
         'Videoproduktion',
         'Varumärkesbyggande',
         'Marknadsföring',
-        'E-handel',
+        'Kommunikation',
         'Annat',
       ]),
     }),
