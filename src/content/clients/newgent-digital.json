@@ -1,0 +1,17 @@
+{
+  "name": "Newgent Digital",
+  "description": {
+    "en": "Newgent (Digital) is a creative management consultancy that assists in creating successful businesses.",
+    "sv": "Newgent (Digital) är ett kreativt managementkonsultföretag som hjälper till att skapa framgångsrika företag."
+  },
+  "avatar": "/src/assets/clients/avatars/newgent-digital.svg",
+  "logo": "/src/assets/clients/newgent-digital.svg",
+  "logoDark": "/src/assets/clients/newgent-digital-dark.svg",
+  "dominantColor": {
+    "light": "#3083FF"
+  },
+  "websiteUrl": "https://newgent.digital/",
+  "socialLinks": {
+    "linkedin": "https://www.linkedin.com/company/heynewgent/"
+  }
+}
