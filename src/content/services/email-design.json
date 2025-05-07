@@ -16,8 +16,8 @@
   "pricing": {
     "startingFrom": 1900,
     "unit": {
-      "en": "template",
-      "sv": "mall"
+      "en": "project",
+      "sv": "projekt"
     },
     "note": {
       "en": "Every email design includes smart strategy, responsive coding, thorough testing across all email clients, plus HTML and plain text versions.",

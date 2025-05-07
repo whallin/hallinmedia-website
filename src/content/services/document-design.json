@@ -16,8 +16,8 @@
   "pricing": {
     "startingFrom": 3750,
     "unit": {
-      "en": "template",
-      "sv": "mall"
+      "en": "project",
+      "sv": "projekt"
     },
     "note": {
       "en": "Your custom templates come ready for Microsoft Office & Google Workspace, complete with a style guide for easy, consistent use.",
