@@ -167,7 +167,7 @@
       "options": [
         {
           "name": {
-            "en": "Next-Day Revision",
+            "en": "Next-day Revision",
             "sv": "Revidering nästa dag"
           },
           "sku": "HM-REV-RUSH-NEXT",
@@ -179,7 +179,7 @@
         },
         {
           "name": {
-            "en": "Same-Day Revision",
+            "en": "Same-day Revision",
             "sv": "Revidering samma dag"
           },
           "sku": "HM-REV-RUSH-SAME",
