@@ -6,26 +6,22 @@ import Button from "./common/Button.astro";
 
 const translations = {
   en: {
-    heading: "Latest blog posts",
-    description:
-      "Explore thought-provoking articles covering industry insights, creative processes, and professional tips. Dive into a wealth of knowledge that will enhance your understanding of digital creativity and business innovation.",
-    readmore: "Read more",
+    heading: "Fresh from the blog",
+    readmore: "Read the post",
     minread: "min read",
-    cta: "Browse all posts",
+    cta: "Explore all articles",
     details: "Post details",
-    readabout: "Read more about",
-    browse: "Browse all blog posts",
+    readabout: "Continue reading",
+    browse: "See all blog articles",
   },
   sv: {
-    heading: "Senaste blogginläggen",
-    description:
-      "Utforska tankeväckande artiklar som täcker branschinsikter, kreativa processer och professionella tips. Fördjupa dig i en kunskapsbank som kommer att öka din förståelse för digital kreativitet och affärsinnovation.",
-    readmore: "Läs mer",
+    heading: "Nytt från bloggen",
+    readmore: "Läs inlägget",
     minread: "min läsning",
-    cta: "Bläddra bland alla inlägg",
+    cta: "Utforska alla artiklar",
     details: "Inläggsdetaljer",
-    readabout: "Läs mer om",
-    browse: "Bläddra bland alla blogginlägg",
+    readabout: "Fortsätt läsa",
+    browse: "Se alla bloggartiklar",
   },
 };
 
@@ -54,9 +50,6 @@ const calculateReadTime = (content: string) => {
         class="absolute top-1/2 right-0 left-0 -z-0 hidden h-px bg-stone-200 sm:block dark:bg-stone-700"
         aria-hidden="true"></span>
     </h2>
-    <p class="font-serif text-stone-500 dark:text-stone-400">
-      {translations[locale].description}
-    </p>
   </header>
   <ol class="mb-8 divide-y divide-stone-200 dark:divide-stone-700">
     {

@@ -9,7 +9,7 @@
   "services": [
     {
       "name": {
-        "en": "Next-Day Delivery",
+        "en": "Next-day Delivery",
         "sv": "Leverans nästa dag"
       },
       "sku": "HM-RUSH-NEXT-BASE",
@@ -30,7 +30,7 @@
     },
     {
       "name": {
-        "en": "Same-Day Delivery",
+        "en": "Same-day Delivery",
         "sv": "Leverans samma dag"
       },
       "sku": "HM-RUSH-SAME-BASE",
@@ -51,7 +51,7 @@
     },
     {
       "name": {
-        "en": "After-Hours Service",
+        "en": "After-hours Service",
         "sv": "Service utanför kontorstid"
       },
       "sku": "HM-RUSH-AH-BASE",

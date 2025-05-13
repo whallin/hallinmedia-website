@@ -178,7 +178,7 @@
     },
     {
       "name": {
-        "en": "On-Location Photography - Full Day",
+        "en": "On-location Photography - Full Day",
         "sv": "Platsfotografering - Heldag"
       },
       "sku": "HM-PHOTO-LOC-BASE",
@@ -221,7 +221,7 @@
       "addons": [
         {
           "name": {
-            "en": "Same-Day Preview Selection",
+            "en": "Same-day Preview Selection",
             "sv": "Förhandsvisning samma dag"
           },
           "sku": "HM-PHOTO-LOC-ADD-PREV",

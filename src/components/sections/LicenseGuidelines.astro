@@ -4,123 +4,145 @@ import { getRelativeLocaleUrl } from "astro:i18n";
 
 const translations = {
   en: {
-    heading: "Usage Guidelines",
+    heading: "Guidelines for using my content",
     credits: {
-      title: "Credits",
+      title: "Giving Credit Where It's Due",
       description:
-        "All content from HallinMedia needs proper credit as agreed. For how to credit on different platforms, visit",
-      link: "Credit Guidelines",
+        "Properly crediting HallinMedia's content is essential. Find out how to credit on various platforms by visiting my",
+      link: "Easy credit guidelines",
     },
     prohibitedUse: {
-      title: "Not Allowed",
-      description: "All licences forbid these uses:",
+      title: "What's not allowed?",
+      description: "To keep things fair and protect our work, all licenses prohibit the following uses:",
     },
     contentIntegrity: {
-      title: "Content Changes",
-      items: ["Changing content without permission", "Removing file information", "Changing or removing watermarks"],
+      title: "Respecting integrity",
+      items: [
+        "Altering content without our go-ahead",
+        "Deleting important file information (metadata)",
+        "Modifying or removing watermarks",
+      ],
     },
     licensingViolations: {
-      title: "Licence Violations",
-      items: ["Selling licensed content", "Giving rights to others", "Transferring your usage rights"],
+      title: "Understanding license boundaries",
+      items: [
+        "Reselling our licensed content",
+        "Passing on usage rights to third parties",
+        "Transferring your license to someone else",
+      ],
     },
     usageRestrictions: {
-      title: "Usage Limits",
-      items: ["Using outside your licensed area", "Using after licence expires", "Using without a valid licence"],
+      title: "Staying within usage limits",
+      items: [
+        "Using content beyond your agreed licensed area",
+        "Continuing to use content after your license expires",
+        "Using content without a current, valid license",
+      ],
     },
     intellectualProperty: {
-      title: "Trademark Issues",
-      items: ["Using in trademarks", "Adding to logos", "Suggesting a partnership we don't have"],
+      title: "Protecting trademarks & brands",
+      items: [
+        "Using content as part of a trademark or logo",
+        "Implying an endorsement or partnership that doesn't exist",
+      ],
     },
     legalNote:
-      "Breaking these rules may end your licence without refund. HallinMedia may take legal action for copyright violations.",
-    personalDepictions: {
-      title: "Images of People",
-      description: "For photos with identifiable people, different permissions apply:",
-      editorial: {
-        title: "News & Education",
-        items: ["News reporting", "Informational content", "Educational materials"],
-      },
-      commercial: {
-        title: "Commercial Use",
-        items: ["Needs signed model releases", "Has time limits", "Restricted to specific uses"],
-      },
-      contact: "Contact William Hallin",
-      note: "to check model release status before publishing images with people.",
-    },
+      "Violating these guidelines can lead to license termination without a refund. HallinMedia reserves the right to take legal action for copyright infringements to protect our creators.",
     qualityAssurance: {
-      title: "Quality Guidelines",
-      description: "To present licensed content properly, follow these guidelines:",
+      title: "Maintaining content quality",
+      description: "To ensure licensed content is presented at its best, please follow these quality guidelines:",
       technical: {
-        title: "Technical Tips",
-        items: ["Keep the highest resolution possible", "Don't change image proportions", "Use proper compression"],
+        title: "Technical best practices",
+        items: [
+          "Always use the highest resolution available/needed",
+          "Maintain original image aspect ratios",
+          "Apply appropriate compression to balance quality and file size",
+        ],
       },
       visual: {
-        title: "Visual Quality",
-        items: ["Keep correct colour profiles", "Maintain original look", "Keep images sharp"],
+        title: "Visual integrity",
+        items: [
+          "Preserve correct color profiles for accurate reproduction",
+          "Maintain the original artistic look and feel",
+          "Ensure images remain sharp and clear",
+        ],
       },
-      note: "If unsure about technical details, ",
-      contact: "contact HallinMedia",
-      additionalNote: "for optimised files for your needs. We can also advise on complex publishing projects.",
+      note: "If you're unsure about any technical aspects, ",
+      contact: "please contact HallinMedia",
+      additionalNote:
+        "for assistance or to request files optimized for your specific needs. We're also happy to advise on complex publishing projects.",
     },
   },
   sv: {
-    heading: "Användningsriktlinjer",
+    heading: "Riktlinjer för användning av mitt material",
     credits: {
-      title: "Kreditering",
+      title: "Ge äran där den hör hemma",
       description:
-        "Allt innehåll från HallinMedia kräver tydlig kreditering. För hur du krediterar på olika plattformar, besök",
-      link: "Guide för kreditering",
+        "Korrekt kreditering av HallinMedias material är viktigt. Lär dig hur du krediterar på olika plattformar genom att besöka mina",
+      link: "Enkla krediteringsriktlinjer",
     },
     prohibitedUse: {
-      title: "Ej tillåtet",
-      description: "Alla licenser förbjuder dessa användningar:",
+      title: "Vad är inte tillåtet?",
+      description:
+        "För att säkerställa rättvisa och skydda vårt arbete, förbjuder alla licenser följande användningsområden:",
     },
     contentIntegrity: {
-      title: "Innehållsändringar",
-      items: ["Ändringar utan tillstånd", "Borttagning av filinformation", "Ändring eller borttagning av vattenmärken"],
+      title: "Respektera integritet",
+      items: [
+        "Ändra material utan vårt godkännande",
+        "Ta bort viktig filinformation (metadata)",
+        "Modifiera eller ta bort vattenmärken",
+      ],
     },
     licensingViolations: {
-      title: "Licensöverträdelser",
-      items: ["Försäljning av licensierat material", "Vidarebefordran av rättigheter", "Överföring av användningsrätt"],
+      title: "Förstå licensens gränser",
+      items: [
+        "Sälja vidare vårt licensierade material",
+        "Överlåta användningsrättigheter till tredje part",
+        "Överföra din licens till någon annan",
+      ],
     },
     usageRestrictions: {
-      title: "Användningsgränser",
-      items: ["Användning utanför licensområdet", "Användning efter licensens slut", "Användning utan giltig licens"],
+      title: "Användningsgränserna",
+      items: [
+        "Använda material utanför ditt avtalade licensområde",
+        "Fortsätta använda material efter att din licens har löpt ut",
+        "Använda material utan en aktuell, giltig licens",
+      ],
     },
     intellectualProperty: {
-      title: "Varumärkesfrågor",
-      items: ["Användning i varumärken", "Integrering i logotyper", "Antydan om samarbete som inte finns"],
+      title: "Skydda varumärken & identitet",
+      items: [
+        "Använda material som en del av ett varumärke eller logotyp",
+        "Antyda ett partnerskap eller godkännande som inte existerar",
+      ],
     },
     legalNote:
-      "Brott mot dessa regler kan avsluta din licens utan återbetalning. HallinMedia kan vidta rättsliga åtgärder vid upphovsrättsintrång.",
-    personalDepictions: {
-      title: "Bilder på personer",
-      description: "För foton med identifierbara personer gäller olika tillstånd:",
-      editorial: {
-        title: "Nyheter & Utbildning",
-        items: ["Nyhetsrapportering", "Informativt innehåll", "Utbildningsmaterial"],
-      },
-      commercial: {
-        title: "Kommersiell användning",
-        items: ["Kräver signerade modellavtal", "Har tidsbegränsningar", "Begränsat till specifika användningar"],
-      },
-      contact: "Kontakta William Hallin",
-      note: "för att kontrollera modellavtal innan publicering av bilder med personer.",
-    },
+      "Överträdelse av dessa riktlinjer kan leda till att licensen avslutas utan återbetalning. HallinMedia förbehåller sig rätten att vidta rättsliga åtgärder vid upphovsrättsintrång för att skydda våra kreatörer.",
     qualityAssurance: {
-      title: "Kvalitetsriktlinjer",
-      description: "För att presentera licensierat innehåll korrekt, följ dessa riktlinjer:",
+      title: "Bibehålla materialkvalitet",
+      description:
+        "För att säkerställa att licensierat material presenteras på bästa sätt, vänligen följ dessa kvalitetsriktlinjer:",
       technical: {
-        title: "Tekniska tips",
-        items: ["Behåll högsta möjliga upplösning", "Ändra inte bildproportioner", "Använd lämplig komprimering"],
+        title: "Tekniska rekommendationer",
+        items: [
+          "Använd alltid högsta tillgängliga upplösning",
+          "Behåll bildens ursprungliga proportioner",
+          "Använd lämplig komprimering för att balansera kvalitet och filstorlek",
+        ],
       },
       visual: {
-        title: "Visuell kvalitet",
-        items: ["Behåll korrekta färgprofiler", "Bevara originalutseendet", "Håll bilderna skarpa"],
+        title: "Visuell integritet",
+        items: [
+          "Bevara korrekta färgprofiler för korrekt återgivning",
+          "Bibehåll det ursprungliga konstnärliga utseendet och känslan",
+          "Se till att bilderna förblir skarpa och tydliga",
+        ],
       },
-      note: "Vid osäkerhet om tekniska detaljer, ",
-      contact: "kontakta HallinMedia",
-      additionalNote: "för optimerade filer för dina behov. Vi kan även ge råd om komplexa publiceringsproject.",
+      note: "Om du är osäker på några tekniska aspekter, ",
+      contact: "vänligen kontakta HallinMedia",
+      additionalNote:
+        "för hjälp eller för att begära filer optimerade för dina specifika behov. Vi ger också gärna råd om komplexa publiceringsprojekt.",
     },
   },
 };
@@ -211,52 +233,6 @@ const locale = Astro.currentLocale === "en" || Astro.currentLocale === "sv" ? As
     </div>
     <p class="mt-4 font-serif text-xs text-stone-500 dark:text-stone-400">
       {translations[locale].legalNote}
-    </p>
-  </section>
-  <section
-    class="rounded-lg border border-stone-200 bg-amber-50 p-6 dark:border-stone-700 dark:bg-stone-800"
-    aria-labelledby="personal-depictions-heading"
-  >
-    <div class="flex items-center gap-2">
-      <Icon name="ph:user-duotone" class="h-6 w-6 flex-shrink-0 text-red-500" aria-hidden="true" />
-      <h3 id="personal-depictions-heading" class="font-serif font-medium text-stone-700 dark:text-stone-100">
-        {translations[locale].personalDepictions.title}
-      </h3>
-    </div>
-    <p class="mt-3 font-serif text-stone-500 dark:text-stone-400">
-      {translations[locale].personalDepictions.description}
-    </p>
-    <div class="mt-4 grid gap-4 sm:grid-cols-2">
-      <div class="space-y-2">
-        <div class="flex items-center gap-2">
-          <Icon name="ph:identification-card-duotone" class="h-5 w-5 text-red-500" aria-hidden="true" />
-          <h4 class="font-medium text-stone-700 dark:text-stone-200">
-            {translations[locale].personalDepictions.editorial.title}
-          </h4>
-        </div>
-        <ul class="ml-7 list-disc space-y-1 text-sm text-stone-500 dark:text-stone-400">
-          {translations[locale].personalDepictions.editorial.items.map((item) => <li>{item}</li>)}
-        </ul>
-      </div>
-      <div class="space-y-2">
-        <div class="flex items-center gap-2">
-          <Icon name="ph:storefront-duotone" class="h-5 w-5 text-red-500" aria-hidden="true" />
-          <h4 class="font-medium text-stone-700 dark:text-stone-200">
-            {translations[locale].personalDepictions.commercial.title}
-          </h4>
-        </div>
-        <ul class="ml-7 list-disc space-y-1 text-sm text-stone-500 dark:text-stone-400">
-          {translations[locale].personalDepictions.commercial.items.map((item) => <li>{item}</li>)}
-        </ul>
-      </div>
-    </div>
-    <p class="mt-4 font-serif text-xs text-stone-500 dark:text-stone-400">
-      <a
-        href={getRelativeLocaleUrl(locale, "contact")}
-        class="inline-block text-red-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-100 active:opacity-50"
-        >{translations[locale].personalDepictions.contact}</a
-      >{" "}
-      {translations[locale].personalDepictions.note}
     </p>
   </section>
   <section

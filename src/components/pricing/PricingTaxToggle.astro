@@ -1,16 +1,16 @@
 ---
 const translations = {
   en: {
-    withTax: "Prices including VAT (25%)",
-    withoutTax: "Prices excluding VAT (25%)",
-    toggleLabel: "Show prices excluding VAT",
-    viewingPrices: "Showing prices with",
+    withTax: "With VAT (25%) included",
+    withoutTax: "Without VAT (25%)",
+    toggleLabel: "Prefer to see prices without VAT? Just click here!",
+    viewingPrices: "Right now, you're seeing prices:",
   },
   sv: {
-    withTax: "Priser inkl. moms (25%)",
-    withoutTax: "Priser exkl. moms (25%)",
-    toggleLabel: "Visa priser exklusive moms",
-    viewingPrices: "Visar priser med",
+    withTax: "Med moms (25%) inkluderat",
+    withoutTax: "Utan moms (25%)",
+    toggleLabel: "Vill du se priser utan moms? Klicka här!",
+    viewingPrices: "Just nu ser du priser:",
   },
 };
 
@@ -105,7 +105,7 @@ const locale = Astro.currentLocale === "en" || Astro.currentLocale === "sv" ? As
       document.dispatchEvent(
         new CustomEvent("taxStateChanged", {
           detail: { includeTax },
-        }),
+        })
       );
     }
 
