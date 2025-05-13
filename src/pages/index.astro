@@ -15,8 +15,8 @@ const locale = Astro.currentLocale === "en" || Astro.currentLocale === "sv" ? As
 ---
 
 <Layout
-  title="Digital kreatör & fotograf i Skellefteå"
-  description="Expertis inom visuell kommunikation, webbdesign och varumärkesutveckling. Över 4 års erfarenhet av att hjälpa företag växa genom kreativa digitala lösningar."
+  title="Digital kreatör Skellefteå: Design, Foto & Video"
+  description="HallinMedia hjälper ditt företag att sticka ut! Jag erbjuder kreativ design, professionellt foto och moderna videolösningar. Med 4+ års erfarenhet skapar jag digital närvaro som engagerar och konverterar."
 >
   <div class="max-w-2xl sm:mx-auto" aria-labelledby="intro-heading">
     <div class="space-y-4">
@@ -46,15 +46,16 @@ const locale = Astro.currentLocale === "en" || Astro.currentLocale === "sv" ? As
         </h1>
       </div>
       <p class="font-serif text-stone-500 dark:text-stone-400">
-        Jag skapar <a
+        Som din digitala kreatör i Skellefteå hjälper jag företag att berätta sina historier visuellt. Från <a
           href={getRelativeLocaleUrl(locale, "portfolio")}
           class="inline-block text-red-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-100 active:opacity-50"
-          >engagerade visuella upplevelser
-        </a> för varumärken och företag. Med mer än 5 års erfarenhet bakom mig har jag haft nöjet att arbeta med <a
+          >design som fångar ögat</a
+        > till bilder som berättar - jag är här för att förvandla dina idéer till verklighet. Med över fyra års erfarenhet
+        har jag samarbetat med <a
           href={getRelativeLocaleUrl(locale, "clients")}
           class="text-red-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-100 active:opacity-50"
           >kunder över hela Sverige</a
-        > för att hjälpa dem väcka liv i sina varumärken och få sin verksamhet växa genom effektiv kommunikation.
+        >, och hjälpt dem att växa genom smart och snygg digital kommunikation.
       </p>
     </div>
     <nav class="mt-8 flex flex-col justify-between gap-2 sm:flex-row" aria-label="Huvudåtgärder">
@@ -65,7 +66,7 @@ const locale = Astro.currentLocale === "en" || Astro.currentLocale === "sv" ? As
       </Button>
       <Button href={getRelativeLocaleUrl(locale, "portfolio")} variant="secondary">
         <Icon name="ph:sparkle-duotone" class="flex-shrink-0" aria-hidden="true" />
-        Bläddra i min portfölj
+        Utforska min portfölj
         <Icon name="ph:arrow-right" class="flex-shrink-0" aria-hidden="true" />
       </Button>
     </nav>

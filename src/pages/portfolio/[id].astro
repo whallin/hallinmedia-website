@@ -106,7 +106,7 @@ const portfolioSchema = {
                   <h2 class="relative font-serif text-2xl font-semibold text-stone-700 dark:text-stone-100">
                     <span class="relative z-10 inline-flex items-center gap-2 bg-amber-50 pr-4 dark:bg-stone-900">
                       <Icon name="ph:question-duotone" class="h-6 w-6 text-red-500" aria-hidden="true" />
-                      Utmaningen
+                      Vad var haken?
                     </span>
                     <span
                       class="absolute top-1/2 right-0 left-0 -z-0 h-px bg-stone-200 dark:bg-stone-700"
@@ -121,7 +121,7 @@ const portfolioSchema = {
                   <h2 class="relative font-serif text-2xl font-semibold text-stone-700 dark:text-stone-100">
                     <span class="relative z-10 inline-flex items-center gap-2 bg-amber-50 pr-4 dark:bg-stone-900">
                       <Icon name="ph:lightbulb-duotone" class="h-6 w-6 text-red-500" aria-hidden="true" />
-                      Lösningen
+                      Hur löste vi det?
                     </span>
                     <span
                       class="absolute top-1/2 right-0 left-0 -z-0 h-px bg-stone-200 dark:bg-stone-700"
@@ -136,7 +136,7 @@ const portfolioSchema = {
                   <h2 class="relative font-serif text-2xl font-semibold text-stone-700 dark:text-stone-100">
                     <span class="relative z-10 inline-flex items-center gap-2 bg-amber-50 pr-4 dark:bg-stone-900">
                       <Icon name="ph:flow-arrow-duotone" class="h-6 w-6 text-red-500" aria-hidden="true" />
-                      Processen
+                      Vår väg framåt
                     </span>
                     <span
                       class="absolute top-1/2 right-0 left-0 -z-0 h-px bg-stone-200 dark:bg-stone-700"
@@ -151,7 +151,7 @@ const portfolioSchema = {
                   <h2 class="relative font-serif text-2xl font-semibold text-stone-700 dark:text-stone-100">
                     <span class="relative z-10 inline-flex items-center gap-2 bg-amber-50 pr-4 dark:bg-stone-900">
                       <Icon name="ph:chart-line-up-duotone" class="h-6 w-6 text-red-500" aria-hidden="true" />
-                      Resultatet
+                      Vad blev utfallet?
                     </span>
                     <span
                       class="absolute top-1/2 right-0 left-0 -z-0 h-px bg-stone-200 dark:bg-stone-700"
@@ -171,7 +171,7 @@ const portfolioSchema = {
               <h2 class="relative font-serif text-2xl font-semibold text-stone-700 dark:text-stone-100">
                 <span class="relative z-10 inline-flex items-center gap-2 bg-amber-50 pr-4 dark:bg-stone-900">
                   <Icon name="ph:video-camera-duotone" class="h-6 w-6 text-red-500" aria-hidden="true" />
-                  Projektvideos
+                  Kolla in projektet i rörelse
                 </span>
                 <span
                   class="absolute top-1/2 right-0 left-0 -z-0 h-px bg-stone-200 dark:bg-stone-700"
@@ -201,7 +201,7 @@ const portfolioSchema = {
               <h2 class="relative font-serif text-2xl font-semibold text-stone-700 dark:text-stone-100">
                 <span class="relative z-10 inline-flex items-center gap-2 bg-amber-50 pr-4 dark:bg-stone-900">
                   <Icon name="ph:image-duotone" class="h-6 w-6 text-red-500" aria-hidden="true" />
-                  Projektgalleri
+                  Bilder från projektet
                 </span>
                 <span
                   class="absolute top-1/2 right-0 left-0 -z-0 h-px bg-stone-200 dark:bg-stone-700"
@@ -210,15 +210,17 @@ const portfolioSchema = {
               </h2>
               <div class="grid gap-4 sm:grid-cols-2">
                 {data.content.images.map((image: ImageMetadata) => (
-                  <Picture
-                    src={image}
-                    alt=""
-                    width={1080}
-                    height={1080}
-                    widths={[400, 800, 1080]}
-                    formats={["avif", "webp"]}
-                    class="w-full rounded-lg object-cover select-none"
-                  />
+                  <div class="not-prose">
+                    <Picture
+                      src={image}
+                      alt=""
+                      width={1080}
+                      height={1080}
+                      widths={[400, 800, 1080]}
+                      formats={["avif", "webp"]}
+                      class="w-full rounded-lg object-cover select-none"
+                    />
+                  </div>
                 ))}
               </div>
             </section>
@@ -233,7 +235,7 @@ const portfolioSchema = {
               <h2 class="relative font-serif text-2xl font-semibold text-stone-700 dark:text-stone-100">
                 <span class="relative z-10 inline-flex items-center gap-2 bg-amber-50 pr-4 dark:bg-stone-900">
                   <Icon name="ph:link-duotone" class="h-6 w-6 text-red-500" aria-hidden="true" />
-                  Externa länkar
+                  Nyfiken på mer?
                 </span>
                 <span
                   class="absolute top-1/2 right-0 left-0 -z-0 h-px bg-stone-200 dark:bg-stone-700"
@@ -248,7 +250,7 @@ const portfolioSchema = {
                   >
                     <span class="flex items-center gap-2">
                       <Icon name="ph:buildings-duotone" class="h-4 w-4" aria-hidden="true" />
-                      Besök kundprofil
+                      Läs mer om kunden
                     </span>
                   </a>
                 )}
@@ -275,7 +277,7 @@ const portfolioSchema = {
               <h2 class="relative font-serif text-2xl font-semibold text-stone-700 dark:text-stone-100">
                 <span class="relative z-10 inline-flex items-center gap-2 bg-amber-50 pr-4 dark:bg-stone-900">
                   <Icon name="ph:tag-duotone" class="h-6 w-6 text-red-500" aria-hidden="true" />
-                  Taggar
+                  Nyckelord för projektet
                 </span>
                 <span
                   class="absolute top-1/2 right-0 left-0 -z-0 h-px bg-stone-200 dark:bg-stone-700"

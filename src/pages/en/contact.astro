@@ -109,25 +109,25 @@ const socialProfiles = [
 
 const callToActions = [
   {
-    title: "Want to see what I can do?",
-    description: "Browse my portfolio and see examples of past projects.",
+    title: "See my previous projects",
+    description: "Browse my portfolio to see examples of my work and get inspired.",
     icon: "ph:sparkle-duotone",
     href: getRelativeLocaleUrl(locale, "portfolio"),
-    buttonText: "See my work",
+    buttonText: "Explore the portfolio",
   },
   {
-    title: "Do you need a favour?",
-    description: "Find out more about the services I offer and how they can help you.",
+    title: "Discover my services",
+    description: "Learn more about my services and how I can help you achieve your goals.",
     icon: "ph:magic-wand-duotone",
     href: getRelativeLocaleUrl(locale, "services"),
-    buttonText: "Explore my services",
+    buttonText: "View service offerings",
   },
 ];
 ---
 
 <Layout
-  title="Contact William Hallin"
-  description="Want to discuss your next project? Reach me by phone, email or book a free start-up call. I am here to help you realise your vision."
+  title="Contact me"
+  description="Ready to bring your vision to life? Contact me, William Hallin, for photography, video, and design. Let's discuss your project via phone, email, or book a free introductory call."
   header="Contact me"
   headerIcon="ph:hand-waving-duotone"
 >
@@ -136,19 +136,18 @@ const callToActions = [
       <main class="space-y-8">
         <article class="space-y-4">
           <p class="font-serif text-stone-500 dark:text-stone-400">
-            Ready to discuss your next project? Here you will find all the ways to reach me — from direct channels like
-            phone and email to social media. I also offer free start-up calls where we can explore your ideas together.
-            Choose the way that suits you best to start our dialogue.
+            Here you'll find all the ways to reach me — whether you prefer a quick email, a phone call, or to check out
+            my social media. Choose what suits you best, and let's talk further!
           </p>
           <div class="flex items-center gap-2">
             <Icon name="ph:clock-duotone" class="h-5 w-5 text-red-500" aria-hidden="true" />
             <span class="font-serif text-stone-500 dark:text-stone-400">
-              Swedish time: <time id="localTime" datetime="00:00">00:00</time>
+              Sweden local time: <time id="localTime" datetime="00:00">00:00</time>
             </span>
           </div>
         </article>
         <section class="space-y-6">
-          <h2 class="font-serif text-lg text-stone-700 dark:text-stone-100">Primary contact channels</h2>
+          <h2 class="font-serif text-lg text-stone-700 dark:text-stone-100">My best contact methods</h2>
           <ContactCard contacts={primaryContacts} layout="primary" />
           <aside class="rounded-lg border border-stone-200 p-4 dark:border-stone-700">
             <p class="flex items-center gap-4 font-serif text-stone-500 sm:gap-2 dark:text-stone-400">
@@ -173,9 +172,7 @@ const callToActions = [
     </div>
     <section class="mt-8 space-y-6">
       <h2 class="relative font-serif text-lg text-stone-700 dark:text-stone-100">
-        <span class="relative z-10 inline-flex flex-col gap-2 bg-amber-50 pr-4 dark:bg-stone-900">
-          Other profiles
-        </span>
+        <span class="relative z-10 inline-flex flex-col gap-2 bg-amber-50 pr-4 dark:bg-stone-900">Social media</span>
         <span class="absolute top-1/2 right-0 left-0 -z-0 h-px bg-stone-200 dark:bg-stone-700" aria-hidden="true"
         ></span>
       </h2>
@@ -190,7 +187,7 @@ const callToActions = [
             class="relative z-10 inline-flex flex-col gap-2 bg-amber-50 pr-4 sm:flex-row sm:items-center dark:bg-stone-900"
           >
             <Icon name="ph:smiley-duotone" class="h-6 w-6 flex-shrink-0 text-red-500" aria-hidden="true" />
-            What do you want to do next?
+            Curious for more?
           </span>
           <span
             class="absolute top-1/2 right-0 left-0 -z-0 hidden h-px bg-stone-200 sm:block dark:bg-stone-700"
@@ -220,11 +217,11 @@ const callToActions = [
       <aside class="rounded-lg border border-stone-200 bg-amber-50 p-6 dark:border-stone-700 dark:bg-stone-800">
         <div class="flex items-center gap-3">
           <Icon name="ph:lightbulb-duotone" class="h-6 w-6 flex-shrink-0 text-red-500" aria-hidden="true" />
-          <h3 class="font-serif font-medium text-stone-700 dark:text-stone-100">Thinking about a project?</h3>
+          <h3 class="font-serif font-medium text-stone-700 dark:text-stone-100">Have a project idea? Let's talk!</h3>
         </div>
         <p class="mt-3 mb-4 font-serif text-stone-500 dark:text-stone-400">
-          Whether you have a clear idea or just want to discuss possibilities, book a free start-up call where we can go
-          over your needs.
+          Have an idea, big or small, or just want to bounce some thoughts around? Book a free, no-obligation
+          introductory meeting, and we'll discuss your needs and how I can help.
         </p>
         <Button href="https://meetings.hubspot.com/william-hallin" target="_blank" rel="noopener noreferrer">
           <Icon name="ph:calendar-duotone" class="h-4 w-4 flex-shrink-0" aria-hidden="true" />
@@ -240,7 +237,7 @@ const callToActions = [
     const timeElement = document.getElementById("localTime");
     if (timeElement) {
       const now = new Date();
-      const timeString = now.toLocaleTimeString("sv-SE", {
+      const timeString = now.toLocaleTimeString("en-GB", {
         hour: "2-digit",
         minute: "2-digit",
       });

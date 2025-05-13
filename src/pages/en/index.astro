@@ -15,8 +15,8 @@ const locale = Astro.currentLocale === "en" || Astro.currentLocale === "sv" ? As
 ---
 
 <Layout
-  title="Digital creator & photographer in Skellefteå"
-  description="Expertise in visual communication, web design and brand development. Over 4 years of experience in helping businesses grow through creative digital solutions."
+  title="Digital creator Skellefteå: Design, Photography & Video"
+  description="HallinMedia helps your business stand out! I offer creative design, professional photography, and modern video solutions. With 4+ years of experience, I create a digital presence that engages and converts."
 >
   <div class="max-w-2xl sm:mx-auto" aria-labelledby="intro-heading">
     <div class="space-y-4">
@@ -46,16 +46,16 @@ const locale = Astro.currentLocale === "en" || Astro.currentLocale === "sv" ? As
         </h1>
       </div>
       <p class="font-serif text-stone-500 dark:text-stone-400">
-        I create <a
+        As your digital creator in Skellefteå, I help businesses tell their stories visually. From <a
           href={getRelativeLocaleUrl(locale, "portfolio")}
           class="inline-block text-red-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-100 active:opacity-50"
-          >engaging visual experiences</a
-        > for brands and businesses. With more than 5 years of experience behind me, I've had the pleasure of working with
-        <a
+          >eye-catching design</a
+        > to images that narrate — I am here to turn your ideas into reality. With over four years of experience, I have
+        collaborated with <a
           href={getRelativeLocaleUrl(locale, "clients")}
           class="text-red-500 underline decoration-dashed decoration-from-font underline-offset-4 hover:bg-red-500 hover:text-stone-100 active:opacity-50"
-          >clients all over Sweden</a
-        > to help them bring their brands to life and grow their business through effective communication.
+          >clients across Sweden</a
+        >, helping them grow through smart and stylish digital communication.
       </p>
     </div>
     <nav class="mt-8 flex flex-col justify-between gap-2 sm:flex-row" aria-label="Key actions">
@@ -64,9 +64,9 @@ const locale = Astro.currentLocale === "en" || Astro.currentLocale === "sv" ? As
         Contact me
         <Icon name="ph:arrow-right" class="flex-shrink-0" aria-hidden="true" />
       </Button>
-      <Button href={getRelativeLocaleUrl(locale, "services")} variant="secondary">
+      <Button href={getRelativeLocaleUrl(locale, "portfolio")} variant="secondary">
         <Icon name="ph:sparkle-duotone" class="flex-shrink-0" aria-hidden="true" />
-        Browse my services
+        Explore my portfolio
         <Icon name="ph:arrow-right" class="flex-shrink-0" aria-hidden="true" />
       </Button>
     </nav>

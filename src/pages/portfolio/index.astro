@@ -30,18 +30,18 @@ const resolvedPortfolioItems = await Promise.all(
         ...item,
         resolvedClient: client,
       };
-    }),
+    })
 );
 
 const categories = [...new Set(portfolioItems.map((item) => item.data.category))];
 ---
 
 <Layout
-  title="Tidigare arbeten & portfolio"
-  description="Utforska min portfölj med tidigare projekt och kreativa arbeten. Från foto och video till grafisk design - här hittar du exempel på min erfarenhet och expertis."
-  header="Portfolio"
+  title="Portfolio: En samling kreativa projekt"
+  description="Bläddra igenom min portfolio och upptäck en värld av kreativa lösningar. Från fängslande foto och video till stilren grafisk design - se exempel på mitt arbete och hur jag kan hjälpa dig."
+  header="Utforska mina projekt"
   headerIcon="ph:sparkle-duotone"
-  headerDescription="Här har jag samlat ett urval av mina tidigare projekt och samarbeten. Varje projekt representerar min passion för kreativt skapande och teknisk excellens. Utforska gärna mina arbeten och låt dig inspireras av möjligheterna för ditt eget projekt."
+  headerDescription="Här hittar du en blandning av projekt jag brinner för och samarbeten jag är stolt över. Varje arbete visar min passion för kreativitet och tekniskt kunnande. Kika runt och se vad som är möjligt för ditt nästa projekt!"
 >
   <section class="mx-auto max-w-2xl space-y-12">
     <nav class="flex flex-wrap items-center gap-2" aria-label="Portfolio kategorier">
@@ -51,7 +51,7 @@ const categories = [...new Set(portfolioItems.map((item) => item.data.category))
         data-active="true"
         aria-current="true"
       >
-        Alla projekt
+        Visa alla
       </button>
       {
         categories.map((category) => (
@@ -85,7 +85,7 @@ const categories = [...new Set(portfolioItems.map((item) => item.data.category))
                 {item.data.featured && (
                   <span class="absolute top-3 right-3 flex items-center gap-1 rounded-full bg-amber-100 px-3 py-1 text-xs font-medium text-amber-700 dark:bg-amber-900 dark:text-amber-100">
                     <Icon name="ph:star-duotone" class="h-3 w-3" aria-hidden="true" />
-                    Utvalt
+                    Extra stolt över
                   </span>
                 )}
               </div>

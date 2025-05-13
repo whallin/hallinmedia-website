@@ -13,23 +13,23 @@ const locale = Astro.currentLocale === "en" || Astro.currentLocale === "sv" ? As
 ---
 
 <Layout
-  title="About William Hallin"
-  description="Get to know William Hallin — a passionate photographer and video producer who combines creativity with technical expertise. Discover my journey and how I can help you realise your visions."
-  header="About William Hallin"
+  title="About William Hallin - Creative Photographer & Videographer in Skellefteå"
+  description="Get to know William Hallin, your photographer and videographer in Skellefteå. With a passion for visual storytelling and technical expertise, I bring your creative visions to life. Discover my journey!"
+  header="Meet William Hallin"
   headerIcon="ph:smiley-duotone"
 >
   <section class="max-w-2xl sm:mx-auto">
     <article class="flex flex-col-reverse gap-8 sm:flex-row sm:gap-12">
-      <section class="space-y-6" aria-label="Om William">
+      <section class="space-y-6" aria-label="About William">
         <blockquote class="border-l-4 border-red-500 pl-4 font-serif text-stone-500 italic dark:text-stone-400">
-          "I have always been fascinated by how to tell stories through images and video. It's more than just a job for
-          me; it's my hobby."
+          "Capturing moments and telling stories through photography and video is not just my job — it's my greatest
+          passion and hobby."
         </blockquote>
         <div class="space-y-4">
           <p class="font-serif text-stone-500 dark:text-stone-400">
-            William Hallin is a freelance photographer and video producer based in Skellefteå, Västerbotten County.
-            Since his early years, Hallin has shown great interest in media production and graphic design, and this
-            interest has followed him through the years.
+            Hello! I'm William Hallin, a freelance photographer and videographer based in the beautiful Skellefteå,
+            Västerbotten. Ever since childhood, I've been captivated by media production and graphic design, a
+            fascination that has only grown stronger over the years.
           </p>
           <div class="my-6 flex items-center gap-4">
             <div class="h-px flex-1 bg-stone-200 dark:bg-stone-700"></div>
@@ -37,10 +37,10 @@ const locale = Astro.currentLocale === "en" || Astro.currentLocale === "sv" ? As
             <div class="h-px flex-1 bg-stone-200 dark:bg-stone-700"></div>
           </div>
           <p class="font-serif text-stone-500 dark:text-stone-400">
-            During the later years of high school, William Hallin began his freelance work properly, with the start of
-            the limited liability company Newgent Digital and HallinMedia as brands. Freelancing started in the live and
-            TV production industry, but has slowly but surely shifted to more general photo and video productions for
-            corporate clients and journalistic media houses of various kinds.
+            My professional journey began during my upper secondary school years when I started my limited company,
+            Newgent Digital, with HallinMedia as my creative brand. Initially, I focused on live and TV production, but
+            I have gradually broadened my scope to include versatile photo and video productions for businesses and
+            journalistic media houses.
           </p>
           <div class="my-6 flex items-center gap-4">
             <div class="h-px flex-1 bg-stone-200 dark:bg-stone-700"></div>
@@ -48,15 +48,23 @@ const locale = Astro.currentLocale === "en" || Astro.currentLocale === "sv" ? As
             <div class="h-px flex-1 bg-stone-200 dark:bg-stone-700"></div>
           </div>
           <p class="font-serif text-stone-500 dark:text-stone-400">
-            Now {
+            Today, I am {
               Math.floor((new Date().getTime() - new Date("2005-08-05").getTime()) / (1000 * 60 * 60 * 24 * 365.25))
-            }, William Hallin works mainly with corporate clients, both locally and internationally, on everything from
-            photography and video production to graphic design and illustration of information materials, marketing
-            materials. Anything else that may need to be printed, printed, or published on the web.
+            } years old and assist companies, both locally here in Skellefteå and internationally, with everything from engaging
+            photography and professional video production to eye-catching graphic design and communication. Whether it's
+            material for print, web, or marketing, I am ready to bring your ideas to life.
+          </p>
+          <div class="my-6 flex items-center gap-4">
+            <div class="h-px flex-1 bg-stone-200 dark:bg-stone-700"></div>
+            <Icon name="ph:handshake-duotone" class="h-6 w-6 text-red-500" aria-hidden="true" />
+            <div class="h-px flex-1 bg-stone-200 dark:bg-stone-700"></div>
+          </div>
+          <p class="font-serif text-stone-500 dark:text-stone-400">
+            Who knows what exciting projects the future holds? Whether you need a striking image, a captivating
+            commercial, or a memorable advertising poster, the expertise is here.
           </p>
           <p class="font-serif text-stone-500 italic dark:text-stone-400">
-            It is unclear who HallinMedia's customers of the future will be. Whether you need a picture taken, an advert
-            produced or a poster designed, the services are here. Perhaps you are HallinMedia's next customer?
+            Perhaps you will be HallinMedia's next satisfied client? Let's create something amazing together!
           </p>
         </div>
       </section>
@@ -82,7 +90,7 @@ const locale = Astro.currentLocale === "en" || Astro.currentLocale === "sv" ? As
       </Button>
       <Button href={getRelativeLocaleUrl(locale, "services")} variant="secondary">
         <Icon name="ph:magic-wand-duotone" class="flex-shrink-0" aria-hidden="true" />
-        View all services
+        See all services
         <Icon name="ph:arrow-right" class="flex-shrink-0" aria-hidden="true" />
       </Button>
     </nav>

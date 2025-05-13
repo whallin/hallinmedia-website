@@ -14,22 +14,22 @@ const locale = Astro.currentLocale === "en" || Astro.currentLocale === "sv" ? As
 ---
 
 <Layout
-  title="Pricing of creative services"
-  description="See my clear and competitive prices for photo, video, and design. Flexible packages and customised solutions for all budgets. No hidden fees — just honest pricing for quality services."
-  header="Pricing"
+  title="Prices for photography, videography & design - Transparent & flexible"
+  description="Discover my prices for photography, videography, and design. I offer flexible packages and bespoke solutions to suit your budget. Always transparent, no hidden costs."
+  header="Price Overview"
   headerIcon="ph:coins-duotone"
-  headerDescription="Invest wisely in your digital presence with my transparent and flexible pricing options. From single photo sessions to comprehensive branding packages, you'll find professional solutions for every budget. Explore my services and discover how I can maximise the value of your investment."
+  headerDescription="Here you can clearly see the costs for my creative services in photography, videography, and design. I aim to be transparent and flexible, so you can find a solution that suits your specific needs and budget. Explore my packages or use the price calculator for a quick estimate."
 >
   <section class="mx-auto max-w-2xl space-y-16">
     <nav class="my-8 flex flex-col justify-between gap-2 sm:flex-row" aria-label="Main navigation">
       <Button href={getRelativeLocaleUrl(locale, "hire")}>
         <Icon name="ph:handshake-duotone" class="flex-shrink-0" aria-hidden="true" />
-        Begin your projekt today
+        Realise your vision
         <Icon name="ph:arrow-right" class="flex-shrink-0" aria-hidden="true" />
       </Button>
       <Button href={getRelativeLocaleUrl(locale, "pricing/calculator")} variant="secondary">
         <Icon name="ph:calculator-duotone" class="flex-shrink-0" aria-hidden="true" />
-        Visit the pricing calculator
+        Explore the price calculator
         <Icon name="ph:arrow-right" class="flex-shrink-0" aria-hidden="true" />
       </Button>
     </nav>

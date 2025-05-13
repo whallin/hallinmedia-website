@@ -17,22 +17,22 @@ const locale = Astro.currentLocale === "en" || Astro.currentLocale === "sv" ? As
 ---
 
 <Layout
-  title="Interaktiv priskalkylator för ditt projekt"
-  description="Beräkna kostnaden för ditt kreativa projekt med vår interaktiva kalkylator. Anpassa tjänster, utforska tillval och få en direkt prisuppskattning. Ett kraftfullt verktyg för att planera din budget utan överraskningar."
-  header="Priskalkylator"
+  title="Priskalkylator: Få en snabb kostnadsuppskattning för ditt projekt"
+  description="Använd vår enkla priskalkylator för att direkt se en uppskattning av kostnaden för ditt kreativa projekt. Välj tjänster, anpassa tillval och planera din budget tryggt och transparent."
+  header="Priskalkylatorn - ditt första steg"
   headerIcon="ph:calculator-duotone"
-  headerDescription="Ta kontrollen över din projektbudget med min interaktiva priskalkylator. Anpassa tjänster, utforska tillval, och få en transparent överblick över kostnaderna i realtid. Ett kraftfullt verktyg som hjälper dig planera ditt projekt med precision och självförtroende - utan överraskningar."
+  headerDescription="Nyfiken på vad ditt projekt kan kosta? Med min priskalkylator får du snabbt en uppfattning. Välj de tjänster och tillval som passar dig och se en beräkning direkt. Det är ett enkelt sätt att börja planera din budget, helt utan dolda avgifter."
 >
   <section class="mx-auto max-w-2xl space-y-12">
     <nav class="flex flex-col justify-between gap-3 sm:flex-row" aria-label="Huvudnavigation">
       <Button href={getRelativeLocaleUrl(locale, "hire")}>
         <Icon name="ph:handshake-duotone" class="flex-shrink-0" aria-hidden="true" />
-        Starta ditt projekt idag
+        Förverkliga ditt projekt
         <Icon name="ph:arrow-right" class="flex-shrink-0" aria-hidden="true" />
       </Button>
       <Button href={getRelativeLocaleUrl(locale, "contact")} variant="secondary">
         <Icon name="ph:file-text-duotone" class="flex-shrink-0" aria-hidden="true" />
-        Begär en offert
+        Få en anpassad offert
         <Icon name="ph:arrow-right" class="flex-shrink-0" aria-hidden="true" />
       </Button>
     </nav>
@@ -42,12 +42,12 @@ const locale = Astro.currentLocale === "en" || Astro.currentLocale === "sv" ? As
       <div class="flex flex-col items-start gap-2 text-sm text-amber-800 dark:text-amber-400">
         <div class="flex items-center gap-2">
           <Icon name="ph:info-duotone" class="h-6 w-6 flex-shrink-0" aria-hidden="true" />
-          <h2 class="font-semibold">Viktigt om priser</h2>
+          <h2 class="font-semibold">Bra att veta om kalkylatorn</h2>
         </div>
         <p class="text-sm">
-          Priskalkylatorn räknar inte med volymrabatter eller andra rabatter som kan gälla för ditt projekt, eftersom
-          rabatterna tilldelas beroende på projektets storlek och omfång. Kontakta mig gärna och begär en gratis offert
-          för att få en mer exakt prisuppskattning.
+          Priserna i kalkylatorn är preliminära och inkluderar inte eventuella volymrabatter eller andra unika avdrag.
+          För en exakt prisbild baserad på just ditt projekts unika behov och omfattning, rekommenderar jag att du begär
+          en personlig offert. Det är helt kostnadsfritt!
         </p>
       </div>
     </aside>

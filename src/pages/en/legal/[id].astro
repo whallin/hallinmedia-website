@@ -59,7 +59,7 @@ const legalSchema = {
 ---
 
 <Layout
-  title=`${doc.data.title} - Legal documents & conditions`
+  title=`${doc.data.title} - Legal documents`
   description={doc.data.description}
   article={true}
   header={doc.data.title}
@@ -72,7 +72,7 @@ const legalSchema = {
       class="flex flex-wrap items-start gap-4 rounded-lg border border-stone-200 p-4 sm:justify-between sm:gap-0 dark:border-stone-700"
     >
       <dl class="flex flex-col gap-1">
-        <dt class="font-mono text-xs font-medium text-stone-500 dark:text-stone-400">Document type</dt>
+        <dt class="font-mono text-xs font-medium text-stone-500 dark:text-stone-400">Type</dt>
         <dd class={`flex items-center gap-1 text-sm font-medium ${documentTypeColors[doc.data.documentType]}`}>
           <Icon name={doc.data.icon} class="h-4 w-4" aria-hidden="true" />
           {doc.data.documentType}
@@ -82,14 +82,14 @@ const legalSchema = {
         <dt class="font-mono text-xs font-medium text-stone-500 dark:text-stone-400">Published</dt>
         <dd class="flex items-center gap-1 text-sm text-stone-500 dark:text-stone-400">
           <Icon name="ph:calendar-duotone" class="h-4 w-4" aria-hidden="true" />
-          <time datetime={doc.data.publishedDate}>{new Date(doc.data.publishedDate).toLocaleDateString("sv-SE")}</time>
+          <time datetime={doc.data.publishedDate}>{new Date(doc.data.publishedDate).toLocaleDateString("en-GB")}</time>
         </dd>
       </dl>
       <dl class="flex flex-col gap-1">
         <dt class="font-mono text-xs font-medium text-stone-500 dark:text-stone-400">Updated</dt>
         <dd class="flex items-center gap-1 text-sm text-stone-500 dark:text-stone-400">
           <Icon name="ph:calendar-check-duotone" class="h-4 w-4" aria-hidden="true" />
-          <time datetime={doc.data.lastEdited}>{new Date(doc.data.lastEdited).toLocaleDateString("sv-SE")}</time>
+          <time datetime={doc.data.lastEdited}>{new Date(doc.data.lastEdited).toLocaleDateString("en-GB")}</time>
         </dd>
       </dl>
       <dl class="flex flex-col gap-1">
@@ -128,7 +128,7 @@ const legalSchema = {
         <footer class="mt-8 space-y-4 rounded-lg border border-stone-200 p-6 dark:border-stone-700">
           {doc.data.compliance && (
             <section class="space-y-2">
-              <h2 class="font-serif font-medium text-stone-700 dark:text-stone-100">Compliance and standards</h2>
+              <h2 class="font-serif font-medium text-stone-700 dark:text-stone-100">Standards and topics</h2>
               <ul class="flex flex-wrap gap-2">
                 {doc.data.compliance.map((standard) => (
                   <li class="rounded-full bg-amber-100 px-3 py-1 text-sm text-amber-800 dark:bg-amber-900 dark:text-amber-100">

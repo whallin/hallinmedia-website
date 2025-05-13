@@ -20,29 +20,29 @@ const faqSchema = {
         "@type": "Answer",
         text: q.answer[locale].replace(/<[^>]*>/g, ""),
       },
-    })),
+    }))
   ),
 };
 ---
 
 <Layout
-  title="Frequently asked questions & answers"
-  description="Find answers to your questions about my creative services. From prices and working methods to specific project requests — your guide to working with me."
-  header="Frequently asked questions"
+  title="FAQ - All you need to know"
+  description="Curious about my creative services? Here you'll find answers to common questions about pricing, work processes, and how we can bring your project to life. Your guide to a smooth collaboration!"
+  header="Frequently Asked Questions"
   headerIcon="ph:question-duotone"
-  headerDescription="Do you have questions about my approach, prices, or services? Here are answers to the most common questions to help you make informed decisions. Can't find the answer you're looking for? Don't hesitate to contact me directly for a personal dialogue about your project."
+  headerDescription="Do you have questions about how I work, what things cost, or which services I offer? Here I've gathered answers to the most common questions to make it easy for you. If you can't find what you're looking for, don't hesitate to get in touch — I'm happy to help!"
   schema={faqSchema}
 >
   <section class="max-w-2xl sm:mx-auto">
     <nav class="my-8 flex flex-col justify-between gap-2 sm:flex-row" aria-label="Key actions">
       <Button href={getRelativeLocaleUrl(locale, "contact")}>
         <Icon name="ph:hand-waving-duotone" class="flex-shrink-0" aria-hidden="true" />
-        Contact me directly
+        Ask your question directly
         <Icon name="ph:arrow-right" class="flex-shrink-0" aria-hidden="true" />
       </Button>
       <Button href="https://wa.me/46706159279" variant="secondary">
         <Icon name="ph:whatsapp-logo-duotone" class="flex-shrink-0" aria-hidden="true" />
-        WhatsApp
+        Chat on WhatsApp
         <Icon name="ph:arrow-right" class="flex-shrink-0" aria-hidden="true" />
       </Button>
     </nav>

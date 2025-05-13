@@ -106,7 +106,7 @@ const portfolioSchema = {
                   <h2 class="relative font-serif text-2xl font-semibold text-stone-700 dark:text-stone-100">
                     <span class="relative z-10 inline-flex items-center gap-2 bg-amber-50 pr-4 dark:bg-stone-900">
                       <Icon name="ph:question-duotone" class="h-6 w-6 text-red-500" aria-hidden="true" />
-                      Problem
+                      What was the catch?
                     </span>
                     <span
                       class="absolute top-1/2 right-0 left-0 -z-0 h-px bg-stone-200 dark:bg-stone-700"
@@ -121,7 +121,7 @@ const portfolioSchema = {
                   <h2 class="relative font-serif text-2xl font-semibold text-stone-700 dark:text-stone-100">
                     <span class="relative z-10 inline-flex items-center gap-2 bg-amber-50 pr-4 dark:bg-stone-900">
                       <Icon name="ph:lightbulb-duotone" class="h-6 w-6 text-red-500" aria-hidden="true" />
-                      Solution
+                      How did we solve it?
                     </span>
                     <span
                       class="absolute top-1/2 right-0 left-0 -z-0 h-px bg-stone-200 dark:bg-stone-700"
@@ -136,7 +136,7 @@ const portfolioSchema = {
                   <h2 class="relative font-serif text-2xl font-semibold text-stone-700 dark:text-stone-100">
                     <span class="relative z-10 inline-flex items-center gap-2 bg-amber-50 pr-4 dark:bg-stone-900">
                       <Icon name="ph:flow-arrow-duotone" class="h-6 w-6 text-red-500" aria-hidden="true" />
-                      Process
+                      Our way forward
                     </span>
                     <span
                       class="absolute top-1/2 right-0 left-0 -z-0 h-px bg-stone-200 dark:bg-stone-700"
@@ -151,7 +151,7 @@ const portfolioSchema = {
                   <h2 class="relative font-serif text-2xl font-semibold text-stone-700 dark:text-stone-100">
                     <span class="relative z-10 inline-flex items-center gap-2 bg-amber-50 pr-4 dark:bg-stone-900">
                       <Icon name="ph:chart-line-up-duotone" class="h-6 w-6 text-red-500" aria-hidden="true" />
-                      Results
+                      What was the outcome?
                     </span>
                     <span
                       class="absolute top-1/2 right-0 left-0 -z-0 h-px bg-stone-200 dark:bg-stone-700"
@@ -171,7 +171,7 @@ const portfolioSchema = {
               <h2 class="relative font-serif text-2xl font-semibold text-stone-700 dark:text-stone-100">
                 <span class="relative z-10 inline-flex items-center gap-2 bg-amber-50 pr-4 dark:bg-stone-900">
                   <Icon name="ph:video-camera-duotone" class="h-6 w-6 text-red-500" aria-hidden="true" />
-                  Project videos
+                  Check out the project in motion
                 </span>
                 <span
                   class="absolute top-1/2 right-0 left-0 -z-0 h-px bg-stone-200 dark:bg-stone-700"
@@ -201,7 +201,7 @@ const portfolioSchema = {
               <h2 class="relative font-serif text-2xl font-semibold text-stone-700 dark:text-stone-100">
                 <span class="relative z-10 inline-flex items-center gap-2 bg-amber-50 pr-4 dark:bg-stone-900">
                   <Icon name="ph:image-duotone" class="h-6 w-6 text-red-500" aria-hidden="true" />
-                  Project gallery
+                  Images from the project
                 </span>
                 <span
                   class="absolute top-1/2 right-0 left-0 -z-0 h-px bg-stone-200 dark:bg-stone-700"
@@ -210,15 +210,17 @@ const portfolioSchema = {
               </h2>
               <div class="grid gap-4 sm:grid-cols-2">
                 {data.content.images.map((image: ImageMetadata) => (
-                  <Picture
-                    src={image}
-                    alt=""
-                    width={1080}
-                    height={1080}
-                    widths={[400, 800, 1080]}
-                    formats={["avif", "webp"]}
-                    class="w-full rounded-lg object-cover select-none"
-                  />
+                  <div class="not-prose">
+                    <Picture
+                      src={image}
+                      alt=""
+                      width={1080}
+                      height={1080}
+                      widths={[400, 800, 1080]}
+                      formats={["avif", "webp"]}
+                      class="w-full rounded-lg object-cover select-none"
+                    />
+                  </div>
                 ))}
               </div>
             </section>
@@ -233,7 +235,7 @@ const portfolioSchema = {
               <h2 class="relative font-serif text-2xl font-semibold text-stone-700 dark:text-stone-100">
                 <span class="relative z-10 inline-flex items-center gap-2 bg-amber-50 pr-4 dark:bg-stone-900">
                   <Icon name="ph:link-duotone" class="h-6 w-6 text-red-500" aria-hidden="true" />
-                  External links
+                  Curious for more?
                 </span>
                 <span
                   class="absolute top-1/2 right-0 left-0 -z-0 h-px bg-stone-200 dark:bg-stone-700"
@@ -248,7 +250,7 @@ const portfolioSchema = {
                   >
                     <span class="flex items-center gap-2">
                       <Icon name="ph:buildings-duotone" class="h-4 w-4" aria-hidden="true" />
-                      Visit customer profile
+                      Read more about the client
                     </span>
                   </a>
                 )}
@@ -275,7 +277,7 @@ const portfolioSchema = {
               <h2 class="relative font-serif text-2xl font-semibold text-stone-700 dark:text-stone-100">
                 <span class="relative z-10 inline-flex items-center gap-2 bg-amber-50 pr-4 dark:bg-stone-900">
                   <Icon name="ph:tag-duotone" class="h-6 w-6 text-red-500" aria-hidden="true" />
-                  Tags
+                  Keywords for the project
                 </span>
                 <span
                   class="absolute top-1/2 right-0 left-0 -z-0 h-px bg-stone-200 dark:bg-stone-700"

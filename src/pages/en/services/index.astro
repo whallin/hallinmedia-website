@@ -52,17 +52,17 @@ const colorVariants: Record<"red" | "blue" | "green" | "purple", ColorVariant> =
 ---
 
 <Layout
-  title="Creative services in photography, video & design"
-  description="Discover my full range of creative services for businesses. From professional photography and video production to graphic design and communication. Customised solutions to help your brand grow."
-  header="Services"
+  title="Creative services: Photography, videography & design to elevate your brand"
+  description="Transform your vision into reality with expertise in photography, videography, design, and communication. Discover bespoke creative services that engage your audience and grow your business."
+  header="My creative services"
   headerIcon="ph:magic-wand-duotone"
-  headerDescription="Explore my comprehensive range of digital services, from creative photography to strategic design. With over 4+ years of experience, I deliver customised solutions that help your brand stand out and reach new heights. Discover how together we can turn your vision into reality."
+  headerDescription="Explore a wide range of creative services, from captivating photography and videography to impactful design and strategic communication. With over 4 years of experience, I craft solutions that make your brand shine brighter and achieve new successes."
 >
   <div class="mx-auto max-w-2xl space-y-16">
     <nav class="flex flex-col justify-between gap-3 sm:flex-row">
       <Button href="https://meetings.hubspot.com/william-hallin" target="_blank" rel="noopener noreferrer">
         <Icon name="ph:calendar-duotone" class="flex-shrink-0" aria-hidden="true" />
-        Schedule a free meeting
+        Book a free consultation
         <Icon name="ph:arrow-right" class="flex-shrink-0" aria-hidden="true" />
       </Button>
       <Button href={getRelativeLocaleUrl(locale, "hire")} variant="secondary">
@@ -111,7 +111,7 @@ const colorVariants: Record<"red" | "blue" | "green" | "purple", ColorVariant> =
                       </dt>
                       {service.data.pricing && (
                         <dd class={`text-sm ${colors.price}`}>
-                          Från{" "}
+                          From{" "}
                           <strong class="font-handwrite">
                             {service.data.pricing.startingFrom} SEK/{service.data.pricing.unit[locale]}
                           </strong>

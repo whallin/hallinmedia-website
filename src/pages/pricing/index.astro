@@ -14,22 +14,22 @@ const locale = Astro.currentLocale === "en" || Astro.currentLocale === "sv" ? As
 ---
 
 <Layout
-  title="Prissättning för kreativa tjänster"
-  description="Se mina tydliga och konkurrenskraftiga priser för foto, video och design. Flexibla paket och skräddarsydda lösningar för alla budgetar. Inga dolda avgifter - bara ärlig prissättning för kvalitativa tjänster."
-  header="Priser"
+  title="Priser för foto, video & design - Transparent & flexibelt"
+  description="Upptäck mina priser för foto, video och design. Jag erbjuder flexibla paket och skräddarsydda lösningar som passar din budget. Alltid transparent, inga dolda kostnader."
+  header="Prisöversikt"
   headerIcon="ph:coins-duotone"
-  headerDescription="Investera klokt i din digitala närvaro med mina transparenta och flexibla prisalternativ. Från enstaka fotosessioner till omfattande varumärkespaket - här hittar du professionella lösningar för varje budget. Utforska mina tjänster och upptäck hur jag kan maximera värdet av din investering."
+  headerDescription="Här ser du tydligt vad mina kreativa tjänster inom foto, video och design kostar. Jag strävar efter att vara transparent och flexibel, så du kan hitta en lösning som passar just dina behov och din budget. Utforska mina paket eller använd priskalkylatorn för en snabb uppskattning."
 >
   <section class="mx-auto max-w-2xl space-y-16">
     <nav class="my-8 flex flex-col justify-between gap-2 sm:flex-row" aria-label="Huvudnavigation">
       <Button href={getRelativeLocaleUrl(locale, "hire")}>
         <Icon name="ph:handshake-duotone" class="flex-shrink-0" aria-hidden="true" />
-        Starta ditt projekt idag
+        Förverkliga din vision
         <Icon name="ph:arrow-right" class="flex-shrink-0" aria-hidden="true" />
       </Button>
       <Button href={getRelativeLocaleUrl(locale, "pricing/calculator")} variant="secondary">
         <Icon name="ph:calculator-duotone" class="flex-shrink-0" aria-hidden="true" />
-        Besök priskalkylatorn
+        Utforska priskalkylatorn
         <Icon name="ph:arrow-right" class="flex-shrink-0" aria-hidden="true" />
       </Button>
     </nav>

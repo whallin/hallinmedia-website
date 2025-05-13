@@ -2,6 +2,7 @@
 import { Icon } from "astro-icon/components";
 import { Image, Picture } from "astro:assets";
 import { getCollection } from "astro:content";
+import { getRelativeLocaleUrl } from "astro:i18n";
 import Layout from "../../../layouts/Layout.astro";
 
 const [portfolioItems, clients] = await Promise.all([
@@ -30,18 +31,19 @@ const resolvedPortfolioItems = await Promise.all(
         ...item,
         resolvedClient: client,
       };
-    }),
+    })
 );
 
 const categories = [...new Set(portfolioItems.map((item) => item.data.category))];
+const locale = Astro.currentLocale === "en" || Astro.currentLocale === "sv" ? Astro.currentLocale : "en";
 ---
 
 <Layout
-  title="Past work & portfolio"
-  description="Explore my portfolio of past projects and creative work. From photography and video to graphic design, you'll find examples of my experience and expertise."
-  header="Portfolio"
+  title="Portfolio: A collection of creative projects"
+  description="Browse my portfolio and discover a world of creative solutions. From captivating photography and video to stylish graphic design — see examples of my work and how I can assist you."
+  header="Explore my projects"
   headerIcon="ph:sparkle-duotone"
-  headerDescription="Here, I have collected a selection of my past projects and collaborations. Each project represents my passion for creativity and technical excellence. Feel free to explore my work and be inspired by the possibilities for your own project."
+  headerDescription="Here you'll find a mix of projects I'm passionate about and collaborations I'm proud of. Each piece showcases my dedication to creativity and technical skill. Take a look around and see what's possible for your next project!"
 >
   <section class="mx-auto max-w-2xl space-y-12">
     <nav class="flex flex-wrap items-center gap-2" aria-label="Portfolio categories">
@@ -51,7 +53,7 @@ const categories = [...new Set(portfolioItems.map((item) => item.data.category))
         data-active="true"
         aria-current="true"
       >
-        All projects
+        Show all
       </button>
       {
         categories.map((category) => (
@@ -71,7 +73,7 @@ const categories = [...new Set(portfolioItems.map((item) => item.data.category))
             class="portfolio-item group relative overflow-hidden rounded-lg border border-stone-200 bg-amber-50/50 transition hover:border-red-500 active:scale-95 active:opacity-50 dark:border-stone-700 dark:bg-stone-800/50"
             data-category={item.data.category}
           >
-            <a href={`portfolio/${item.id}`} class="block">
+            <a href={getRelativeLocaleUrl(locale, `portfolio/${item.id}`)} class="block">
               <div class="relative aspect-video overflow-hidden">
                 <Picture
                   src={item.data.featuredImage}
@@ -85,7 +87,7 @@ const categories = [...new Set(portfolioItems.map((item) => item.data.category))
                 {item.data.featured && (
                   <span class="absolute top-3 right-3 flex items-center gap-1 rounded-full bg-amber-100 px-3 py-1 text-xs font-medium text-amber-700 dark:bg-amber-900 dark:text-amber-100">
                     <Icon name="ph:star-duotone" class="h-3 w-3" aria-hidden="true" />
-                    Featured
+                    Especially proud of
                   </span>
                 )}
               </div>

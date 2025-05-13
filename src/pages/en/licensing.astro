@@ -8,137 +8,143 @@ import Layout from "../../layouts/Layout.astro";
 const licenseTypes = [
   {
     icon: "ph:seal-duotone",
-    title: "Standard Licence",
-    description: "Basic usage rights for defined purposes and limited timeframe.",
+    title: "Standard Licence — ideal for everyday use",
+    description:
+      "Grants you fundamental rights to use the material for specific purposes for a limited time. Perfect for web and small-scale print.",
     includes: [
-      "Web publications and social media",
-      "Limited print material (up to ~1000 copies)",
-      "Internal corporate communications",
-      "12 month usage period",
-      "National use (Sweden)",
+      "Use on websites and social media",
+      "Print materials in small editions (up to approx. 1,000 copies)",
+      "Internal company communication and presentations",
+      "Use for 12 months",
+      "Use within the United Kingdom",
     ],
     excludes: [
-      "Commercial products for resale",
-      "Extensive advertising campaigns",
-      "Content modifications",
-      "Redistribution or transfer to third parties",
-      "International use",
+      "Products intended for resale (e.g., t-shirts, mugs)",
+      "Large advertising campaigns with broad exposure",
+      "Alterations to the image or video content itself",
+      "Assigning or selling the licence to others",
+      "Use outside the United Kingdom",
     ],
-    price: "From 2,000 SEK excl. VAT per content item",
+    price: "From 2,000 SEK excl. VAT per image/video",
   },
   {
     icon: "ph:seal-check-duotone",
-    title: "Extended Licence",
-    description: "Broader usage rights for commercial applications and longer duration.",
+    title: "Extended Licence — for commercial success",
+    description:
+      "Provides broader rights for commercial use and a longer validity period. Suitable for those aiming for wider reach and product sales.",
     includes: [
-      "All standard licence features",
-      "Commercial products for resale",
-      "Extended advertising campaigns",
-      "Minor content modifications",
-      "24 month usage period",
-      "Use within EU/EEA",
+      "Everything included in the Standard Licence",
+      "Use on products for resale",
+      "Larger advertising campaigns",
+      "Option for minor adjustments to the content",
+      "Use for 24 months",
+      "Use within the EU/EEA area",
     ],
     excludes: [
-      "Exclusive usage rights",
-      "Unrestricted global use",
-      "Extensive content modifications",
-      "Redistribution or transfer to third parties",
+      "Exclusive rights — others can still licence the same material",
+      "Unlimited global use",
+      "Major alterations to the content without approval",
+      "Assigning or selling the licence to others",
     ],
-    price: "From 6,000 SEK excl. VAT per content item",
+    price: "From 6,000 SEK excl. VAT per image/video",
   },
   {
     icon: "ph:crown-duotone",
-    title: "Exclusive Licence",
-    description: "Exclusive rights to use content within specific industries or territories.",
+    title: "Exclusive Licence — for a unique and unbeatable presence",
+    description:
+      "Secures you sole rights to use the material within a specific industry or geographical area. Tailored for maximum impact.",
     includes: [
-      "All extended licence features",
-      "Exclusive usage rights within defined area",
-      "Industry or territorial exclusivity",
-      "Extensive modification rights",
-      "Negotiable usage period",
-      "Global use possible",
+      "Everything included in the Extended Licence",
+      "Sole right to use the material within the agreed area/industry",
+      "Option for extensive customisation of the content",
+      "Usage period as mutually agreed",
+      "Option for global use",
     ],
-    excludes: ["Unlimited global exclusivity", "Transfer of copyright", "Permanent transfer of rights"],
-    price: "From 12,000 SEK excl. VAT per content item",
+    excludes: [
+      "Total global exclusivity without any restrictions",
+      "Transfer of copyright (I still own the original)",
+      "Permanent transfer of all rights",
+    ],
+    price: "From 12,000 SEK excl. VAT per image/video",
   },
 ];
 
 const comparisonTable = {
-  headers: ["", "Standard", "Extended", "Exclusive"],
+  headers: ["Feature", "Standard", "Extended", "Exclusive"],
   rows: [
     {
-      feature: "Web Usage",
+      feature: "Online use (web, social media)",
       standard: { icon: "ph:check-circle-duotone", status: true },
       extended: { icon: "ph:check-circle-duotone", status: true },
       exclusive: { icon: "ph:check-circle-duotone", status: true },
-      description: "Use on websites, blogs and digital platforms",
+      description: "Use on your website, blog, and social media channels.",
     },
     {
-      feature: "Print Material",
-      standard: { text: "~1000 copies" },
+      feature: "Printed material",
+      standard: { text: "~1,000 copies" },
       extended: { text: "Unlimited" },
       exclusive: { text: "Unlimited" },
-      description: "Brochures, reports, business cards and other printed materials",
+      description: "Ideal for brochures, reports, business cards, and similar printed items.",
     },
     {
-      feature: "Geographic Scope",
+      feature: "Where can the material be used?",
       standard: { icon: "twemoji:flag-sweden", text: "Sweden" },
       extended: { icon: "twemoji:flag-european-union", text: "EU/EEA" },
-      exclusive: { icon: "ph:globe-duotone", status: true },
-      description: "Territories where content may be used",
+      exclusive: { icon: "ph:globe-duotone", status: true, text: "Global (negotiable)" },
+      description: "The geographical areas where you are permitted to use the material.",
     },
     {
-      feature: "Products for Resale",
+      feature: "Sell products with the material? (e.g., posters)",
       standard: { icon: "ph:x-circle-duotone", status: false },
       extended: { icon: "ph:check-circle-duotone", status: true },
       exclusive: { icon: "ph:check-circle-duotone", status: true },
-      description: "Use on products intended for sale",
+      description: "Whether you can use the material on products that you resell.",
     },
     {
-      feature: "Content Modification",
+      feature: "May I alter the material?",
       standard: { icon: "ph:x-circle-duotone", status: false },
-      extended: { text: "Limited" },
-      exclusive: { icon: "ph:check-circle-duotone", status: true },
-      description: "Ability to edit, crop or adapt content",
+      extended: { text: "Minor adjustments" },
+      exclusive: { icon: "ph:check-circle-duotone", status: true, text: "Extensive" },
+      description: "Your ability to edit, crop, or adapt the material.",
     },
     {
-      feature: "Usage Period",
-      standard: { text: "12 mo." },
-      extended: { text: "24 mo." },
-      exclusive: { text: "Negotiable" },
-      description: "Time period during which content may be used",
+      feature: "How long may I use the material?",
+      standard: { text: "12 months" },
+      extended: { text: "24 months" },
+      exclusive: { text: "Flexible" },
+      description: "The period during which you are entitled to use the material.",
     },
     {
-      feature: "Model Rights",
+      feature: "Agreements with models/persons in image?",
       standard: { text: "Standard" },
       extended: { text: "Extended" },
       exclusive: { text: "Comprehensive" },
-      description: "Extent of consent from depicted persons",
+      description: "Indicates the extent of consent obtained from individuals featured in the material.",
     },
     {
-      feature: "Quality Requirements",
-      standard: { text: "Original" },
-      extended: { text: "High" },
-      exclusive: { text: "Maximum" },
-      description: "Requirements for reproduction quality and colour management",
+      feature: "Image quality requirements for reproduction",
+      standard: { text: "Original quality" },
+      extended: { text: "High quality" },
+      exclusive: { text: "Maximum quality" },
+      description: "Ensures the material is reproduced accurately and to a high standard.",
     },
     {
-      feature: "Exclusivity",
+      feature: "Exclusive rights",
       standard: { icon: "ph:x-circle-duotone", status: false },
       extended: { icon: "ph:x-circle-duotone", status: false },
       exclusive: { icon: "ph:check-circle-duotone", status: true },
-      description: "Exclusive rights within specific area or industry",
+      description: "Grants you sole rights to use the material within a specific area or industry.",
     },
   ],
 };
 ---
 
 <Layout
-  title="Licensing of materials"
-  description="Flexible licensing solutions for professional use of photographs, videos and creative content. Choose from standard, extended and exclusive licences for your business needs."
-  header="Licensing"
+  title="Image & video licences — choose the right option for your project"
+  description="Understand my licensing options for photos, videos, and creative materials. Select a standard, extended, or exclusive licence to match your company's needs and budget. Get clear information and start today!"
+  header="Licensing of creative material"
   headerIcon="ph:certificate-duotone"
-  headerDescription="Choose the right licence solution for your business needs. From standard single-use licences to exclusive rights, you'll find flexible options to suit your business. Explore my licence types and get full control over how you use your creative content."
+  headerDescription="I offer flexible solutions suitable for everything from small web projects to large commercial campaigns. Explore my licence types — Standard, Extended, and Exclusive — and discover how you can use my creative content to strengthen your brand."
 >
   <section class="max-w-2xl space-y-8 sm:mx-auto">
     <LicenseTypes licenseTypes={licenseTypes} />

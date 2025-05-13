@@ -8,7 +8,7 @@ import Layout from "../../../layouts/Layout.astro";
 const locale = Astro.currentLocale === "en" || Astro.currentLocale === "sv" ? Astro.currentLocale : "en";
 const enPosts = await getCollection("blogEnCollection", ({ data }) => !data.draft);
 const sortedPosts = enPosts.sort(
-  (a, b) => new Date(b.data.publishedDate).getTime() - new Date(a.data.publishedDate).getTime(),
+  (a, b) => new Date(b.data.publishedDate).getTime() - new Date(a.data.publishedDate).getTime()
 );
 
 const calculateReadTime = (content: string) => {
@@ -18,11 +18,11 @@ const calculateReadTime = (content: string) => {
 ---
 
 <Layout
-  title="Blog"
-  description="Explore expert insights in photography, design, and development. Practical guides and industry analyses to help you grow in digital creation."
-  header="Blog"
+  title="Blog - Insights & guides for creators"
+  description="Discover William Hallin's blog! Get expert tips, guides, and inspiration in photography, design, and web development. Perfect for those looking to grow creatively and digitally."
+  header="The Blog"
   headerIcon="ph:newspaper-duotone"
-  headerDescription="Dive into a world of creative knowledge and technical expertise. From hands-on tutorials to industry analyses, I share in-depth insights into photography, design and digital development. Whether you're a beginner or an expert, there's something here to inspire and develop your skills. Explore, learn and grow with me."
+  headerDescription="Here on my blog, I share knowledge, tips, and inspiration in photography, design, and web development. Whether you're just starting your creative journey or are an experienced professional, you'll find articles to help you develop, learn new things, and stay updated."
 >
   <section class="max-w-2xl sm:mx-auto">
     {
@@ -32,7 +32,7 @@ const calculateReadTime = (content: string) => {
             <h2 class="relative font-serif text-2xl font-semibold">
               <span class="relative z-10 inline-flex items-center gap-2 bg-amber-50 pr-4 dark:bg-stone-900">
                 <Icon name="ph:star-duotone" class="h-6 w-6 text-yellow-500" aria-hidden="true" />
-                Featured posts
+                Featured gems
               </span>
               <span
                 class="absolute top-1/2 right-0 left-0 -z-0 h-px bg-stone-200 dark:bg-stone-700"
@@ -93,7 +93,7 @@ const calculateReadTime = (content: string) => {
         <h2 class="relative font-serif text-2xl font-semibold">
           <span class="relative z-10 inline-flex items-center gap-2 bg-amber-50 pr-4 dark:bg-stone-900">
             <Icon name="ph:clock-duotone" class="h-6 w-6 text-red-500" aria-hidden="true" />
-            Latest posts
+            The very latest articles
           </span>
           <span class="absolute top-1/2 right-0 left-0 -z-0 h-px bg-stone-200 dark:bg-stone-700" aria-hidden="true"
           ></span>

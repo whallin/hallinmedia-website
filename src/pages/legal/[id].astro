@@ -59,7 +59,7 @@ const legalSchema = {
 ---
 
 <Layout
-  title=`${doc.data.title} - Juridiska dokument & villkor`
+  title=`${doc.data.title} - Juridiska dokument`
   description={doc.data.description}
   article={true}
   header={doc.data.title}
@@ -72,7 +72,7 @@ const legalSchema = {
       class="flex flex-wrap items-start gap-4 rounded-lg border border-stone-200 p-4 sm:justify-between sm:gap-0 dark:border-stone-700"
     >
       <dl class="flex flex-col gap-1">
-        <dt class="font-mono text-xs font-medium text-stone-500 dark:text-stone-400">Dokumenttyp</dt>
+        <dt class="font-mono text-xs font-medium text-stone-500 dark:text-stone-400">Typ</dt>
         <dd class={`flex items-center gap-1 text-sm font-medium ${documentTypeColors[doc.data.documentType]}`}>
           <Icon name={doc.data.icon} class="h-4 w-4" aria-hidden="true" />
           {doc.data.documentType}
@@ -86,7 +86,7 @@ const legalSchema = {
         </dd>
       </dl>
       <dl class="flex flex-col gap-1">
-        <dt class="font-mono text-xs font-medium text-stone-500 dark:text-stone-400">Uppdaterad</dt>
+        <dt class="font-mono text-xs font-medium text-stone-500 dark:text-stone-400">Ändrad</dt>
         <dd class="flex items-center gap-1 text-sm text-stone-500 dark:text-stone-400">
           <Icon name="ph:calendar-check-duotone" class="h-4 w-4" aria-hidden="true" />
           <time datetime={doc.data.lastEdited}>{new Date(doc.data.lastEdited).toLocaleDateString("sv-SE")}</time>
@@ -102,7 +102,7 @@ const legalSchema = {
       {
         doc.data.jurisdiction && (
           <dl class="flex flex-col gap-1">
-            <dt class="font-mono text-xs font-medium text-stone-500 dark:text-stone-400">Jurisdiktion</dt>
+            <dt class="font-mono text-xs font-medium text-stone-500 dark:text-stone-400">Gäller för</dt>
             <dd class="flex items-center gap-1 text-sm text-stone-500 dark:text-stone-400">
               <Icon name="ph:map-pin-duotone" class="h-4 w-4" aria-hidden="true" />
               {doc.data.jurisdiction}
@@ -111,7 +111,7 @@ const legalSchema = {
         )
       }
       <dl class="flex flex-col gap-1">
-        <dt class="font-mono text-xs font-medium text-stone-500 dark:text-stone-400">Målgrupp</dt>
+        <dt class="font-mono text-xs font-medium text-stone-500 dark:text-stone-400">Berör</dt>
         <dd class="flex items-center gap-1 text-sm text-stone-500 dark:text-stone-400">
           <Icon name="ph:users-duotone" class="h-4 w-4" aria-hidden="true" />
           {doc.data.audience}
@@ -128,7 +128,7 @@ const legalSchema = {
         <footer class="mt-8 space-y-4 rounded-lg border border-stone-200 p-6 dark:border-stone-700">
           {doc.data.compliance && (
             <section class="space-y-2">
-              <h2 class="font-serif font-medium text-stone-700 dark:text-stone-100">Efterlevnad och standarder</h2>
+              <h2 class="font-serif font-medium text-stone-700 dark:text-stone-100">Standarder och ämnen</h2>
               <ul class="flex flex-wrap gap-2">
                 {doc.data.compliance.map((standard) => (
                   <li class="rounded-full bg-amber-100 px-3 py-1 text-sm text-amber-800 dark:bg-amber-900 dark:text-amber-100">

@@ -20,29 +20,29 @@ const faqSchema = {
         "@type": "Answer",
         text: q.answer[locale].replace(/<[^>]*>/g, ""),
       },
-    })),
+    }))
   ),
 };
 ---
 
 <Layout
-  title="Vanliga frågor & svar"
-  description="Hitta svar på dina frågor om mina kreativa tjänster. Från priser och arbetssätt till specifika projektförfrågningar - din guide till att arbeta med mig."
+  title="Frågor & svar - Allt du behöver veta"
+  description="Nyfiken på mina kreativa tjänster? Här hittar du svar på vanliga frågor om priser, arbetsprocesser och hur vi kan förverkliga ditt projekt. Din guide till ett smidigt samarbete!"
   header="Vanliga frågor"
   headerIcon="ph:question-duotone"
-  headerDescription="Har du funderingar kring mitt arbetssätt, priser eller tjänster? Här har jag samlat svar på de vanligaste frågorna för att hjälpa dig fatta välgrundade beslut. Hittar du inte svaret du söker? Tveka inte att kontakta mig direkt för en personlig dialog om ditt projekt."
+  headerDescription="Har du funderingar kring hur jag jobbar, vad saker kostar eller vilka tjänster jag erbjuder? Då har du kommit rätt! Här har jag samlat svar på de vanligaste frågorna för att göra det enkelt för dig. Om du inte hittar det du söker, tveka inte att höra av dig - jag hjälper gärna till!"
   schema={faqSchema}
 >
   <section class="max-w-2xl sm:mx-auto">
     <nav class="my-8 flex flex-col justify-between gap-2 sm:flex-row" aria-label="Huvudåtgärder">
       <Button href={getRelativeLocaleUrl(locale, "contact")}>
         <Icon name="ph:hand-waving-duotone" class="flex-shrink-0" aria-hidden="true" />
-        Kontakta mig direkt
+        Ställ din fråga direkt
         <Icon name="ph:arrow-right" class="flex-shrink-0" aria-hidden="true" />
       </Button>
       <Button href="https://wa.me/46706159279" variant="secondary">
         <Icon name="ph:whatsapp-logo-duotone" class="flex-shrink-0" aria-hidden="true" />
-        WhatsApp
+        Chatta på WhatsApp
         <Icon name="ph:arrow-right" class="flex-shrink-0" aria-hidden="true" />
       </Button>
     </nav>

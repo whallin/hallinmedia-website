@@ -17,22 +17,22 @@ const locale = Astro.currentLocale === "en" || Astro.currentLocale === "sv" ? As
 ---
 
 <Layout
-  title="Interactive price calculator for your project"
-  description="Calculate the cost of your creative project with our interactive calculator. Customise services, explore options and get an instant price estimate. A powerful tool to plan your budget without surprises."
-  header="Pricing Calculator"
+  title="Price Calculator: Get a quick cost estimate for your project"
+  description="Use our simple price calculator to instantly see an estimated cost for your creative project. Select services, customise options, and plan your budget confidently and transparently."
+  header="The price calculator - your first step"
   headerIcon="ph:calculator-duotone"
-  headerDescription="Take control of your project budget with my interactive price calculator. Customise services, explore options, and get a transparent overview of costs in real time. A powerful tool to help you plan your project with precision and confidence — no surprises."
+  headerDescription="Curious about what your project might cost? With my price calculator, you'll quickly get an idea. Choose the services and options that suit you and see a calculation instantly. It's an easy way to start planning your budget, with no hidden fees."
 >
   <section class="mx-auto max-w-2xl space-y-12">
     <nav class="flex flex-col justify-between gap-3 sm:flex-row" aria-label="Main navigation">
       <Button href={getRelativeLocaleUrl(locale, "hire")}>
         <Icon name="ph:handshake-duotone" class="flex-shrink-0" aria-hidden="true" />
-        Begin your project today
+        Bring your project to life
         <Icon name="ph:arrow-right" class="flex-shrink-0" aria-hidden="true" />
       </Button>
       <Button href={getRelativeLocaleUrl(locale, "contact")} variant="secondary">
         <Icon name="ph:file-text-duotone" class="flex-shrink-0" aria-hidden="true" />
-        Request a quote
+        Get a customised quote
         <Icon name="ph:arrow-right" class="flex-shrink-0" aria-hidden="true" />
       </Button>
     </nav>
@@ -42,12 +42,12 @@ const locale = Astro.currentLocale === "en" || Astro.currentLocale === "sv" ? As
       <div class="flex flex-col items-start gap-2 text-sm text-amber-800 dark:text-amber-400">
         <div class="flex items-center gap-2">
           <Icon name="ph:info-duotone" class="h-6 w-6 flex-shrink-0" aria-hidden="true" />
-          <h2 class="font-semibold">Important about prices</h2>
+          <h2 class="font-semibold">Good to know about the calculator</h2>
         </div>
         <p class="text-sm">
-          The price calculator does not take into account volume discounts or other discounts that may apply to your
-          project, as discounts are granted depending on the size and scope of the project. Feel free to contact me and
-          request a free quote to get a more accurate price estimate.
+          The prices in the calculator are preliminary and do not include any potential volume discounts or other unique
+          deductions. For an exact price based on your project's specific needs and scope, I recommend requesting a
+          personal quote. It's completely free of charge!
         </p>
       </div>
     </aside>
@@ -338,7 +338,7 @@ const locale = Astro.currentLocale === "en" || Astro.currentLocale === "sv" ? As
 
         const serviceName = checkbox.name.replace("service-", "");
         const selectedOption = serviceContainer.querySelector<HTMLInputElement>(
-          `input[name="option-${serviceName}"]:checked`,
+          `input[name="option-${serviceName}"]:checked`
         );
 
         // Add service or option price
@@ -384,7 +384,7 @@ const locale = Astro.currentLocale === "en" || Astro.currentLocale === "sv" ? As
 
         const serviceName = checkbox.name.replace("service-", "");
         const selectedOption = serviceContainer.querySelector<HTMLInputElement>(
-          `input[name="option-${serviceName}"]:checked`,
+          `input[name="option-${serviceName}"]:checked`
         );
 
         // Apply option percentage

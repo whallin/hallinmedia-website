@@ -8,7 +8,7 @@ import Layout from "../../layouts/Layout.astro";
 const locale = Astro.currentLocale === "en" || Astro.currentLocale === "sv" ? Astro.currentLocale : "en";
 const svPosts = await getCollection("blogSvCollection", ({ data }) => !data.draft);
 const sortedPosts = svPosts.sort(
-  (a, b) => new Date(b.data.publishedDate).getTime() - new Date(a.data.publishedDate).getTime(),
+  (a, b) => new Date(b.data.publishedDate).getTime() - new Date(a.data.publishedDate).getTime()
 );
 
 const calculateReadTime = (content: string) => {
@@ -18,11 +18,11 @@ const calculateReadTime = (content: string) => {
 ---
 
 <Layout
-  title="Blogg"
-  description="Utforska expertinsikter inom fotografi, design och utveckling. Praktiska guider och branschanalyser som hjälper dig växa inom digitalt skapande."
-  header="Blogg"
+  title="Blogg - Insikter & guider för kreatörer"
+  description="Upptäck William Hallins blogg! Få experttips, guider och inspiration inom foto, design och webbutveckling. Perfekt för dig som vill växa kreativt och digitalt."
+  header="Bloggen"
   headerIcon="ph:newspaper-duotone"
-  headerDescription="Dyk in i en värld av kreativ kunskap och teknisk expertis. Här delar jag med mig av djupgående insikter inom fotografi, design och digital utveckling - från praktiska tutorials till branschanalyser. Oavsett om du är nybörjare eller expert finns här något som kan inspirera och utveckla dina färdigheter. Utforska, lär dig och väx tillsammans med mig."
+  headerDescription="Här på min blogg delar jag med mig av kunskap, tips och inspiration inom fotografi, design och webbutveckling. Oavsett om du precis har börjat din kreativa resa eller är en erfaren proffs, hittar du artiklar som hjälper dig att utvecklas, lära dig nya saker och hålla dig uppdaterad."
 >
   <section class="max-w-2xl sm:mx-auto">
     {
@@ -32,7 +32,7 @@ const calculateReadTime = (content: string) => {
             <h2 class="relative font-serif text-2xl font-semibold">
               <span class="relative z-10 inline-flex items-center gap-2 bg-amber-50 pr-4 dark:bg-stone-900">
                 <Icon name="ph:star-duotone" class="h-6 w-6 text-yellow-500" aria-hidden="true" />
-                Utvalda inlägg
+                Utvalda guldkorn
               </span>
               <span
                 class="absolute top-1/2 right-0 left-0 -z-0 h-px bg-stone-200 dark:bg-stone-700"
@@ -93,7 +93,7 @@ const calculateReadTime = (content: string) => {
         <h2 class="relative font-serif text-2xl font-semibold">
           <span class="relative z-10 inline-flex items-center gap-2 bg-amber-50 pr-4 dark:bg-stone-900">
             <Icon name="ph:clock-duotone" class="h-6 w-6 text-red-500" aria-hidden="true" />
-            Senaste inläggen
+            Allra senaste artiklarna
           </span>
           <span class="absolute top-1/2 right-0 left-0 -z-0 h-px bg-stone-200 dark:bg-stone-700" aria-hidden="true"
           ></span>
