@@ -38,8 +38,8 @@
         },
         {
           "name": {
-            "en": "Advanced Edit (Motion Graphics)",
-            "sv": "Avancerad redigering (Motion Graphics)"
+            "en": "Motion Graphics",
+            "sv": "Motion Graphics"
           },
           "sku": "HM-VID-EDIT-ADV",
           "price": 1050,
@@ -82,7 +82,7 @@
     },
     {
       "name": {
-        "en": "Video Production - Half Day",
+        "en": "Video Production - Half day",
         "sv": "Videoproduktion - Halvdag"
       },
       "sku": "HM-VID-PROD-HALF",
@@ -111,7 +111,7 @@
         },
         {
           "name": {
-            "en": "Premium Package (Additional Lighting & Sound)",
+            "en": "Premium Package (Additional lighting & sound)",
             "sv": "Premiumpaket (Extra belysning & ljud)"
           },
           "sku": "HM-VID-PROD-HALF-PREM",
@@ -179,7 +179,7 @@
     },
     {
       "name": {
-        "en": "Video Production - Full Day",
+        "en": "Video Production - Full day",
         "sv": "Videoproduktion - Heldag"
       },
       "sku": "HM-VID-PROD-FULL",

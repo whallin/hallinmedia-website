@@ -26,7 +26,7 @@
       "options": [
         {
           "name": {
-            "en": "Basic Product Shot (Simple Background)",
+            "en": "Basic Product Shot (Simple background)",
             "sv": "Grundläggande produktbild (Enkel bakgrund)"
           },
           "sku": "HM-PHOTO-PROD-BASIC",
@@ -178,7 +178,7 @@
     },
     {
       "name": {
-        "en": "On-location Photography - Full Day",
+        "en": "On-location Photography - Full day",
         "sv": "Platsfotografering - Heldag"
       },
       "sku": "HM-PHOTO-LOC-BASE",
