@@ -4,12 +4,20 @@
     "sv": "Fotografering"
   },
   "shortDescription": {
-    "en": "Let's capture your brand's story with stunning photos. From corporate events to product shots, I create images that make your business shine.",
-    "sv": "Låt mig fånga ditt varumärkes historia med fantastiska foton. Från företagsevent till produktbilder skapar jag bilder som får ditt företag att glänsa."
+    "en": "Capturing stunning, high-quality images that tell your story and elevate your brand. Specialising in product, corporate, and event photography.",
+    "sv": "Fångar fantastiska, högkvalitativa bilder som berättar din historia och lyfter ditt varumärke. Specialiserad på produkt-, företags- och evenemangsfotografering."
   },
   "longDescription": {
-    "en": "Amazing photos do more than just look good – they tell your story and connect with your audience. As your photographer, I’m all about creating images that truly work for your business.<br /><br />Need polished corporate headshots, engaging photos from your event, or product shots that drive sales? I’ll help showcase your brand in the best possible light. Every shoot is carefully planned to capture those genuine moments that really speak to your audience.<br /><br />I bring a creative eye and a solid understanding of business to every project. You’ll get photos that not only look brilliant but also help you hit your business goals.",
-    "sv": "Fantastiska foton gör mer än att bara se bra ut – de berättar din historia och skapar kontakt med din publik. Som din fotograf handlar allt för mig om att skapa bilder som verkligen fungerar för ditt företag.<br /><br />Behöver du proffsiga företagsporträtt, engagerande bilder från ditt evenemang, eller produktfoton som driver försäljning? Jag hjälper dig att visa upp ditt varumärke i bästa möjliga ljus. Varje fotografering planeras noggrant för att fånga de där äkta ögonblicken som verkligen talar till din publik.<br /><br />Jag tar med mig ett kreativt öga och en gedigen affärsförståelse till varje projekt. Du får foton som inte bara ser briljanta ut utan också hjälper dig att nå dina affärsmål."
+    "en": [
+      "I provide professional photography services designed to make your brand shine, capture unforgettable moments, and showcase your products in the best possible light.",
+      "Whether you need crisp product shots for your e-commerce store, engaging corporate headshots, dynamic event coverage, or captivating imagery for your marketing campaigns, I bring creativity, technical expertise, and a keen eye for detail to every project.",
+      "I work closely with you to understand your vision, objectives, and brand identity, ensuring the final images align perfectly with your goals. From initial concept to final delivery, you can expect a seamless and professional experience from me, William Hallin."
+    ],
+    "sv": [
+      "Jag erbjuder professionella fotograferingstjänster utformade för att få ditt varumärke att glänsa, fånga oförglömliga ögonblick och visa upp dina produkter i bästa möjliga ljus.",
+      "Oavsett om du behöver skarpa produktbilder för din e-handelsbutik, engagerande företagsporträtt, dynamisk evenemangsdokumentation eller fängslande bilder för dina marknadsföringskampanjer, bidrar jag med kreativitet, teknisk expertis och ett skarpt öga för detaljer i varje projekt.",
+      "Jag arbetar nära dig för att förstå din vision, dina mål och din varumärkesidentitet, och säkerställer att de slutliga bilderna stämmer perfekt överens med dina syften. Från första koncept till slutleverans kan du förvänta dig en smidig och professionell upplevelse."
+    ]
   },
   "icon": "ph:camera-duotone",
   "color": "red",
@@ -20,263 +28,459 @@
       "sv": "bild"
     },
     "note": {
-      "en": "Price includes professional retouching and high-resolution files. Discounts available for 10+ images. Minimum 5 images per session.",
-      "sv": "Priset inkluderar professionell retuschering och högupplösta filer. Rabatter tillgängliga för 10+ bilder. Minst 5 bilder per session."
+      "en": "Prices vary based on project scope and specific requirements. Contact me for a detailed quote tailored to your needs. See the pricing page for detailed packages.",
+      "sv": "Priserna varierar beroende på projektets omfattning och specifika krav. Kontakta mig för en detaljerad offert anpassad efter dina behov. Se prissidan för detaljerade paket."
     }
   },
   "keyFeatures": [
     {
       "title": {
-        "en": "Storytelling images",
-        "sv": "Berättande bilder"
+        "en": "High-quality imagery",
+        "sv": "Högkvalitativa bilder"
       },
       "description": {
-        "en": "I capture genuine moments, creating powerful images that showcase your brand's unique personality and values.",
-        "sv": "Jag fångar äkta ögonblick och skapar kraftfulla bilder som visar ditt varumärkes unika personlighet och värderingar."
+        "en": "Delivering sharp, vibrant, and professionally edited photographs that make an impact.",
+        "sv": "Levererar skarpa, livfulla och professionellt redigerade fotografier som gör intryck."
       },
-      "icon": "ph:strategy-duotone"
+      "icon": "ph:image-square-duotone"
     },
     {
       "title": {
-        "en": "Top-quality results",
-        "sv": "Resultat av högsta kvalitet"
+        "en": "Tailored to your brand",
+        "sv": "Anpassat efter ditt varumärke"
       },
       "description": {
-        "en": "Using the best gear and years of experience, I deliver stunning images that make your brand stand out.",
-        "sv": "Med den bästa utrustningen och års erfarenhet levererar jag fantastiska bilder som får ditt varumärke att sticka ut."
+        "en": "Photography that reflects your unique brand identity and communicates your message effectively.",
+        "sv": "Fotografi som återspeglar din unika varumärkesidentitet och kommunicerar ditt budskap effektivt."
       },
-      "icon": "ph:medal-duotone"
+      "icon": "ph:user-focus-duotone"
     },
     {
       "title": {
-        "en": "Versatile & adaptable",
-        "sv": "Mångsidig & anpassningsbar"
+        "en": "Versatile services",
+        "sv": "Mångsidiga tjänster"
       },
       "description": {
-        "en": "From product shots to corporate events, I adapt my style to your needs, always ensuring top quality.",
-        "sv": "Från produktbilder till företagsevent anpassar jag min stil efter dina behov, och säkerställer alltid högsta kvalitet."
+        "en": "Expertise in product, corporate, event, and lifestyle photography to meet diverse needs.",
+        "sv": "Expertis inom produkt-, företags-, evenemangs- och livsstilsfotografering för att möta olika behov."
       },
-      "icon": "ph:cube-duotone"
+      "icon": "ph:stack-duotone"
     },
     {
       "title": {
-        "en": "A smooth experience",
-        "sv": "En smidig upplevelse"
+        "en": "Professional & reliable",
+        "sv": "Professionell & pålitlig"
       },
       "description": {
-        "en": "From planning to delivery, I handle everything professionally, making it easy and stress-free for you.",
-        "sv": "Från planering till leverans hanterar jag allt professionellt, vilket gör hela processen enkel och stressfri för dig."
+        "en": "A seamless experience from consultation to delivery, ensuring your project is handled with care.",
+        "sv": "En smidig upplevelse från konsultation till leverans, vilket säkerställer att ditt projekt hanteras med omsorg."
       },
-      "icon": "ph:clock-clockwise-duotone"
+      "icon": "ph:seal-check-duotone"
     }
   ],
   "processSteps": [
     {
       "title": {
-        "en": "Plan & prepare",
-        "sv": "Planera & förbered"
+        "en": "Consultation & briefing",
+        "sv": "Konsultation & genomgång"
       },
       "description": {
-        "en": "We'll chat about your photo needs and plan everything – from locations to style – to get the perfect shots.",
-        "sv": "Vi pratar igenom dina fotobehov och planerar allt – från platser till stil – för att få de perfekta bilderna."
+        "en": "We discuss your project goals, style preferences, and specific requirements to ensure a shared vision.",
+        "sv": "Vi diskuterar dina projektmål, stilpreferenser och specifika krav för att säkerställa en gemensam vision."
       }
     },
     {
       "title": {
-        "en": "Shoot & capture",
-        "sv": "Fotografera & fånga"
+        "en": "Planning & preparation",
+        "sv": "Planering & förberedelse"
       },
       "description": {
-        "en": "A professional photo session focusing on great lighting, composition, and your brand's unique style.",
-        "sv": "En professionell fotosession med fokus på bra ljussättning, komposition och ditt varumärkes unika stil."
+        "en": "I meticulously plan the shoot, including location scouting (if needed), shot lists, and equipment preparation.",
+        "sv": "Jag planerar noggrant fotograferingen, inklusive eventuell platsrekognosering, bildlistor och förberedelse av utrustning."
       }
     },
     {
       "title": {
-        "en": "Edit & enhance",
-        "sv": "Redigera & förbättra"
+        "en": "The Photoshoot",
+        "sv": "Fotograferingen"
       },
       "description": {
-        "en": "I carefully select and edit the best photos, bringing out their full potential.",
-        "sv": "Jag väljer noggrant ut och redigerar de bästa bilderna för att framhäva deras fulla potential."
+        "en": "Capturing high-quality images with professional equipment and creative direction, either on-location or in-studio.",
+        "sv": "Fångar högkvalitativa bilder med professionell utrustning och kreativ ledning, antingen på plats eller i studio."
       }
     },
     {
       "title": {
-        "en": "Deliver & use",
-        "sv": "Leverera & använd"
+        "en": "Editing",
+        "sv": "Redigering"
       },
       "description": {
-        "en": "You'll get your photos in all the formats you need, with tips on how to use them best.",
-        "sv": "Du får dina bilder i alla format du behöver, med tips om hur du bäst använder dem."
+        "en": "Images are professionally edited for colour correction, retouching, and overall enhancement to meet the highest standards.",
+        "sv": "Bilderna redigeras professionellt för färgkorrigering, retuschering och övergripande förbättring för att uppfylla högsta standard."
+      }
+    },
+    {
+      "title": {
+        "en": "Delivery & review",
+        "sv": "Leverans & granskning"
+      },
+      "description": {
+        "en": "You receive your final, high-resolution images through a secure online gallery, ready for use.",
+        "sv": "Du får dina slutgiltiga, högupplösta bilder via ett säkert onlinegalleri, redo att användas."
       }
     }
   ],
+  "cta": {
+    "en": "Capture stunning visuals",
+    "sv": "Fånga fantastiska bilder"
+  },
+  "relatedServices": [],
+  "featuredClients": [],
+  "featured": true,
   "seo": {
     "en": {
-      "title": "Commercial & corporate photography | Visual brand storytelling",
-      "description": "Elevate your brand with bespoke photography. From corporate headshots to event coverage in Northern Sweden, I capture moments that define your business.",
+      "title": "Professional photography services in Sweden",
+      "description": "Expert photography for products, corporate needs, and events. Elevate your brand with high-quality, compelling images by William Hallin.",
       "keywords": [
-        "commercial photography northern sweden",
-        "corporate event photographer",
-        "business portrait photography",
-        "industrial photography",
-        "product photography services",
-        "brand photographer",
-        "professional event photographer",
-        "visual content creator",
-        "corporate headshots skelleftea",
-        "commercial photographer north sweden"
+        "photography",
+        "photographer",
+        "product photography",
+        "corporate photography",
+        "event photography",
+        "commercial photography",
+        "Sweden",
+        "professional photographer",
+        "William Hallin"
       ]
     },
     "sv": {
-      "title": "Kommersiell & företagsfotografering | Visuellt berättande för varumärken",
-      "description": "Lyft ditt varumärke med skräddarsydd fotografering. Från företagsporträtt till eventbevakning i norra Sverige – jag fångar ögonblicken som definierar ditt företag.",
+      "title": "Professionell fotograf i Sverige",
+      "description": "Expertfotografering för produkter, företag och evenemang. Lyft ditt varumärke med högkvalitativa, övertygande bilder av William Hallin.",
       "keywords": [
-        "kommersiell fotografi norra sverige",
-        "företagsevent fotograf",
-        "företagsporträtt",
-        "industrifotografering",
+        "fotografering",
+        "fotograf",
         "produktfotografering",
-        "varumärkesfotograf",
-        "professionell eventfotograf",
-        "visuellt innehåll",
-        "företagsporträtt skellefteå",
-        "kommersiell fotograf norrland"
+        "företagsfotografering",
+        "evenemangsfotografering",
+        "kommersiell fotografering",
+        "Sverige",
+        "professionell fotograf",
+        "William Hallin"
       ]
     }
   },
-  "cta": {
-    "en": "Book your photoshoot",
-    "sv": "Boka din fotografering"
-  },
   "cities": [
     {
-      "name": {
-        "en": "Skellefteå",
-        "sv": "Skellefteå"
-      },
+      "name": { "en": "Skellefteå", "sv": "Skellefteå" },
       "slug": "skelleftea",
       "localSeo": {
         "en": {
-          "title": "Commercial photography Skellefteå | Industrial & Business Portraits",
-          "description": "Expert commercial photography in Skellefteå. Capturing industrial growth & business portraits. Specialising in corporate, architectural & industrial photos.",
+          "title": "Professional photographer in Skellefteå",
+          "description": "Your local Skellefteå photographer, William Hallin, for stunning product, corporate, and event photography. Get high-quality images that make an impact.",
           "keywords": [
-            "commercial photographer skelleftea",
-            "business portraits skelleftea",
-            "industrial photography skelleftea",
-            "architectural photography skelleftea",
-            "corporate event photographer skelleftea",
-            "product photography skelleftea",
-            "professional headshots skelleftea"
+            "photographer Skellefteå",
+            "photography Skellefteå",
+            "product photography Skellefteå",
+            "corporate photographer Skellefteå",
+            "event photographer Skellefteå",
+            "William Hallin Skellefteå"
           ]
         },
         "sv": {
-          "title": "Kommersiell fotografering Skellefteå | Industri & Företagsporträtt",
-          "description": "Expert på kommersiell fotografering i Skellefteå. Fångar industriell tillväxt & företagsporträtt. Specialiserad på företags-, arkitektur- & industrifoton.",
+          "title": "Professionell fotograf i Skellefteå",
+          "description": "Din lokala fotograf i Skellefteå, William Hallin, för fantastisk produkt-, företags- och evenemangsfotografering. Få högkvalitativa bilder som gör intryck.",
           "keywords": [
-            "företagsfotograf skellefteå",
-            "porträttfotografering skellefteå",
-            "industrifotografering skellefteå",
-            "arkitekturfotografi skellefteå",
-            "eventfotograf skellefteå",
-            "produktfotografering skellefteå",
-            "professionella porträtt skellefteå"
+            "fotograf Skellefteå",
+            "fotografering Skellefteå",
+            "produktfotografering Skellefteå",
+            "företagsfotograf Skellefteå",
+            "evenemangsfotograf Skellefteå",
+            "William Hallin Skellefteå"
           ]
         }
       },
       "localContent": {
         "en": {
-          "heading": "Commercial photography in Skellefteå",
-          "intro": "Skellefteå is booming, and there are so many stories to tell! From amazing buildings like Sara Kulturhus to exciting industrial developments, I capture the city's transformation with carefully crafted images. Being local means I can respond quickly and I know the best spots for unique photos.",
+          "heading": "Photography in Skellefteå by William",
+          "intro": "Looking for a professional photographer in Skellefteå? I'm William Hallin, and I provide top-tier photography services tailored to businesses and individuals in the Skellefteå area, helping you capture exceptional images that tell your story.",
           "specificBenefits": [
-            "Specialist in architectural and industrial site photography.",
-            "Great portfolio of regional corporate event coverage.",
-            "Quick turnaround for your urgent marketing needs.",
-            "Expert in using Nordic natural light, all year round."
+            "Local knowledge of Skellefteå for unique and impactful location shoots.",
+            "Flexible scheduling to accommodate your Skellefteå-based business needs.",
+            "Personalised service from a dedicated local photographer.",
+            "High-quality images that enhance your brand's presence in Skellefteå."
           ]
         },
         "sv": {
-          "heading": "Kommersiell fotografering i Skellefteå",
-          "intro": "Skellefteå växer så det knakar, och det finns så många berättelser att berätta! Från fantastiska byggnader som Sara Kulturhus till spännande industriella utvecklingar, fångar jag stadens förvandling med noggrant komponerade bilder. Att vara lokal innebär att jag kan agera snabbt och känner till de bästa platserna för unika foton.",
+          "heading": "Fotografi i Skellefteå av William",
+          "intro": "Letar du efter en professionell fotograf i Skellefteå? Jag är William Hallin, och jag erbjuder förstklassiga fotograferingstjänster anpassade för företag och privatpersoner i Skellefteåområdet, och hjälper dig att fånga exceptionella bilder som berättar din historia.",
           "specificBenefits": [
-            "Specialist på arkitektur- och industrifotografering.",
-            "Bred portfolio av regional företagseventsfotografering.",
-            "Snabb leverans för dina brådskande marknadsföringsbehov.",
-            "Expert på att använda nordiskt naturligt ljus, året runt."
+            "Lokal kännedom om Skellefteå för unika och slagkraftiga fotograferingsplatser.",
+            "Flexibel schemaläggning för att passa dina Skellefteå-baserade affärsbehov.",
+            "Personlig service från en dedikerad lokal fotograf.",
+            "Högkvalitativa bilder som stärker ditt varumärkes närvaro i Skellefteå."
           ]
         }
       }
     },
     {
-      "name": {
-        "en": "Umeå",
-        "sv": "Umeå"
-      },
+      "name": { "en": "Umeå", "sv": "Umeå" },
       "slug": "umea",
       "localSeo": {
         "en": {
-          "title": "Professional photography Umeå | Academic & cultural events",
-          "description": "Capturing Umeå's cultural vibrancy with expert photography. Specialising in research documentation, performing arts, and university events.",
+          "title": "Professional photographer in Umeå",
+          "description": "William Hallin offers creative and professional photography services in Umeå. Specialising in product, corporate, and event photography to elevate your brand.",
           "keywords": [
-            "research photography umea",
-            "academic event photographer umea",
-            "cultural photography umea",
-            "performing arts photographer umea",
-            "university photographer umea",
-            "scientific documentation umea",
-            "gallery exhibition photography umea"
+            "photographer Umeå",
+            "photography Umeå",
+            "product photography Umeå",
+            "corporate photographer Umeå",
+            "event photographer Umeå",
+            "William Hallin Umeå"
           ]
         },
         "sv": {
-          "title": "Professionell fotografering Umeå | Akademiska & kulturella event",
-          "description": "Fångar Umeås  kulturella liv med expertfotografering. Specialiserad på forskningsdokumentation, scenkonst och universitetsevenemang.",
+          "title": "Professionell fotograf i Umeå",
+          "description": "William Hallin erbjuder kreativa och professionella fotograferingstjänster i Umeå. Specialiserad på produkt-, företags- och evenemangsfotografering för att lyfta ditt varumärke.",
           "keywords": [
-            "forskningsfotograf umeå",
-            "akademisk eventfotograf umeå",
-            "kulturfotografering umeå",
-            "scenkonstfotograf umeå",
-            "universitetsfotograf umeå",
-            "vetenskaplig dokumentation umeå",
-            "utställningsfotografering umeå"
+            "fotograf Umeå",
+            "fotografering Umeå",
+            "produktfotografering Umeå",
+            "företagsfotograf Umeå",
+            "evenemangsfotograf Umeå",
+            "William Hallin Umeå"
           ]
         }
       },
       "localContent": {
         "en": {
-          "heading": "Cultural & academic photography in Umeå",
-          "intro": "Umeå blends intellect with artistry, and my photography captures this unique mix. I help institutions and organisations create compelling visual stories that connect scholarly work with artistic flair, perfect for Umeå's dynamic scene.",
+          "heading": "Go-to photographer in Umeå",
+          "intro": "For businesses and individuals in Umeå seeking high-impact photography, I'm William Hallin. I offer a range of services designed to meet your specific needs. Let's create something visually stunning together.",
           "specificBenefits": [
-            "Skilled in performing arts photography.",
-            "Specialised gear for gallery and exhibition documentation.",
-            "Advanced techniques for low-light venue photography.",
-            "Experienced in covering multi-day cultural events."
+            "Bringing creative photography solutions to the vibrant Umeå community.",
+            "Convenient on-location shoots available throughout Umeå and nearby areas.",
+            "Dedicated to helping Umeå businesses enhance their visual presence with compelling imagery.",
+            "A personal and professional approach from your Umeå photographer, William Hallin."
           ]
         },
         "sv": {
-          "heading": "Kultur- & akademisk fotografering i Umeå",
-          "intro": "Umeå blandar intellekt med konstnärskap, och min fotografering fångar denna unika mix. Jag hjälper institutioner och organisationer att skapa fängslande visuella berättelser som kopplar samman akademiskt arbete med konstnärlig känsla, perfekt för Umeås dynamiska scen.",
+          "heading": "Din fotograf i Umeå",
+          "intro": "För företag och privatpersoner i Umeå som söker slagkraftig fotografering, är jag William Hallin. Jag erbjuder en rad tjänster utformade för att möta dina specifika behov. Låt oss skapa något visuellt fantastiskt tillsammans.",
           "specificBenefits": [
-            "Skicklig inom scenkonstfotografering.",
-            "Specialiserad utrustning för galleri- och utställningsdokumentation.",
-            "Avancerade tekniker för fotografering i svagt ljus.",
-            "Erfarenhet av att dokumentera flerdagars kulturevenemang."
+            "Levererar kreativa fotografilösningar till det livliga Umeå-samhället.",
+            "Bekväma fotograferingar på plats tillgängliga i hela Umeå med omnejd.",
+            "Dedikerad till att hjälpa Umeå-företag att förbättra sin visuella närvaro med övertygande bilder.",
+            "Ett personligt och professionellt bemötande från din Umeå-fotograf, William Hallin."
+          ]
+        }
+      }
+    },
+    {
+      "name": { "en": "Luleå", "sv": "Luleå" },
+      "slug": "lulea",
+      "localSeo": {
+        "en": {
+          "title": "Professional photographer in Luleå",
+          "description": "William Hallin provides high-quality photography services in Luleå for product, corporate, and event needs. Capture your best moments with a professional touch.",
+          "keywords": [
+            "photographer Luleå",
+            "photography Luleå",
+            "product photography Luleå",
+            "corporate photographer Luleå",
+            "event photographer Luleå",
+            "William Hallin Luleå"
+          ]
+        },
+        "sv": {
+          "title": "Professionell fotograf i Luleå",
+          "description": "William Hallin tillhandahåller högkvalitativa fotograferingstjänster i Luleå för produkt-, företags- och evenemangsbehov. Fånga dina bästa ögonblick med en professionell touch.",
+          "keywords": [
+            "fotograf Luleå",
+            "fotografering Luleå",
+            "produktfotografering Luleå",
+            "företagsfotograf Luleå",
+            "evenemangsfotograf Luleå",
+            "William Hallin Luleå"
+          ]
+        }
+      },
+      "localContent": {
+        "en": {
+          "heading": "Photography in Luleå with William",
+          "intro": "I'm William Hallin, and I extend my professional photography services to Luleå, offering businesses and individuals compelling visual content. From detailed product shots to dynamic event coverage, I'm here to serve your needs.",
+          "specificBenefits": [
+            "Serving the Luleå region with professional and reliable photography.",
+            "Understanding the visual needs of Luleå's dynamic industries and community.",
+            "Committed to delivering exceptional quality and personalised service for every Luleå client.",
+            "Your trusted partner for impactful photography in Luleå."
+          ]
+        },
+        "sv": {
+          "heading": "Fotografi i Luleå med William",
+          "intro": "Jag är William Hallin, och jag utökar mina professionella fotograferingstjänster till Luleå, och erbjuder företag och privatpersoner övertygande visuellt innehåll. Från detaljerade produktbilder till dynamisk evenemangsdokumentation finns jag här för att tillgodose dina behov.",
+          "specificBenefits": [
+            "Betjänar Luleåregionen med professionell och pålitlig fotografering.",
+            "Förståelse för de visuella behoven hos Luleås dynamiska industrier och samhälle.",
+            "Engagerad i att leverera exceptionell kvalitet och personlig service till varje Luleå-kund.",
+            "Din pålitliga partner för slagkraftig fotografering i Luleå."
+          ]
+        }
+      }
+    },
+    {
+      "name": { "en": "Sundsvall", "sv": "Sundsvall" },
+      "slug": "sundsvall",
+      "localSeo": {
+        "en": {
+          "title": "Professional photographer in Sundsvall",
+          "description": "William Hallin brings expert photography to Sundsvall. Whether it's for your business, products, or special events, get images that stand out.",
+          "keywords": [
+            "photographer Sundsvall",
+            "photography Sundsvall",
+            "product photography Sundsvall",
+            "corporate photographer Sundsvall",
+            "event photographer Sundsvall",
+            "William Hallin Sundsvall"
+          ]
+        },
+        "sv": {
+          "title": "Professionell fotograf i Sundsvall",
+          "description": "William Hallin levererar expertfotografering till Sundsvall. Oavsett om det gäller ditt företag, dina produkter eller speciella evenemang, få bilder som sticker ut.",
+          "keywords": [
+            "fotograf Sundsvall",
+            "fotografering Sundsvall",
+            "produktfotografering Sundsvall",
+            "företagsfotograf Sundsvall",
+            "evenemangsfotograf Sundsvall",
+            "William Hallin Sundsvall"
+          ]
+        }
+      },
+      "localContent": {
+        "en": {
+          "heading": "Photography solutions in Sundsvall",
+          "intro": "If you're in Sundsvall and require professional photography, I'm William Hallin. I offer tailored services to capture the essence of your brand, products, or events with creativity and precision.",
+          "specificBenefits": [
+            "Providing Sundsvall businesses with impactful visual storytelling.",
+            "Flexible on-location photography services across the Sundsvall area.",
+            "A focus on quality and client satisfaction for all Sundsvall projects.",
+            "Collaborate with William Hallin for standout photography in Sundsvall."
+          ]
+        },
+        "sv": {
+          "heading": "Fotografilösningar i Sundsvall",
+          "intro": "Om du befinner dig i Sundsvall och behöver professionell fotografering, är jag William Hallin. Jag erbjuder skräddarsydda tjänster för att fånga essensen av ditt varumärke, dina produkter eller evenemang med kreativitet och precision.",
+          "specificBenefits": [
+            "Förser Sundsvalls företag med slagkraftigt visuellt berättande.",
+            "Flexibla fotograferingstjänster på plats i hela Sundsvallsområdet.",
+            "Fokus på kvalitet och kundnöjdhet för alla Sundsvallsprojekt.",
+            "Samarbeta med William Hallin för enastående fotografering i Sundsvall."
+          ]
+        }
+      }
+    },
+    {
+      "name": { "en": "Örnsköldsvik", "sv": "Örnsköldsvik" },
+      "slug": "ornskoldsvik",
+      "localSeo": {
+        "en": {
+          "title": "Professional photographer in Örnsköldsvik",
+          "description": "William Hallin, your trusted photographer in Örnsköldsvik for exceptional product, corporate, and event photography. Let's create memorable images.",
+          "keywords": [
+            "photographer Örnsköldsvik",
+            "photography Örnsköldsvik",
+            "product photography Örnsköldsvik",
+            "corporate photographer Örnsköldsvik",
+            "event photographer Örnsköldsvik",
+            "William Hallin Örnsköldsvik"
+          ]
+        },
+        "sv": {
+          "title": "Professionell fotograf i Örnsköldsvik",
+          "description": "William Hallin, din pålitliga fotograf i Örnsköldsvik för exceptionell produkt-, företags- och evenemangsfotografering. Låt oss skapa minnesvärda bilder.",
+          "keywords": [
+            "fotograf Örnsköldsvik",
+            "fotografering Örnsköldsvik",
+            "produktfotografering Örnsköldsvik",
+            "företagsfotograf Örnsköldsvik",
+            "evenemangsfotograf Örnsköldsvik",
+            "William Hallin Örnsköldsvik"
+          ]
+        }
+      },
+      "localContent": {
+        "en": {
+          "heading": "Photography services for Örnsköldsvik",
+          "intro": "I'm William Hallin, serving Örnsköldsvik with professional photography that captures attention and delivers results. I'm committed to providing high-quality images for all your needs.",
+          "specificBenefits": [
+            "Bringing a creative eye and technical skill to photography projects in Örnsköldsvik.",
+            "Reliable and professional service for businesses and events in the Örnsköldsvik area.",
+            "Helping you showcase the best of what Örnsköldsvik has to offer through stunning visuals.",
+            "Your local Örnsköldsvik photographer, committed to your project's success."
+          ]
+        },
+        "sv": {
+          "heading": "Fotografitjänster för Örnsköldsvik",
+          "intro": "Jag är William Hallin, och betjänar Örnsköldsvik med professionell fotografering som fångar uppmärksamhet och levererar resultat. Jag är engagerad i att tillhandahålla högkvalitativa bilder för alla dina behov.",
+          "specificBenefits": [
+            "Bidrar med ett kreativt öga och teknisk skicklighet till fotoprojekt i Örnsköldsvik.",
+            "Pålitlig och professionell service för företag och evenemang i Örnsköldsviksområdet.",
+            "Hjälper dig att visa upp det bästa av vad Örnsköldsvik har att erbjuda genom fantastiska bilder.",
+            "Din lokala Örnsköldsvik-fotograf, engagerad i ditt projekts framgång."
+          ]
+        }
+      }
+    },
+    {
+      "name": { "en": "Härnösand", "sv": "Härnösand" },
+      "slug": "harnosand",
+      "localSeo": {
+        "en": {
+          "title": "Professional photographer in Härnösand",
+          "description": "William Hallin offers expert photography services in Härnösand. From commercial shoots to event coverage, get professional results every time.",
+          "keywords": [
+            "photographer Härnösand",
+            "photography Härnösand",
+            "product photography Härnösand",
+            "corporate photographer Härnösand",
+            "event photographer Härnösand",
+            "William Hallin Härnösand"
+          ]
+        },
+        "sv": {
+          "title": "Professionell fotograf i Härnösand",
+          "description": "William Hallin erbjuder expertfotograferingstjänster i Härnösand. Från kommersiella fotograferingar till evenemangsdokumentation, få professionella resultat varje gång.",
+          "keywords": [
+            "fotograf Härnösand",
+            "fotografering Härnösand",
+            "produktfotografering Härnösand",
+            "företagsfotograf Härnösand",
+            "evenemangsfotograf Härnösand",
+            "William Hallin Härnösand"
+          ]
+        }
+      },
+      "localContent": {
+        "en": {
+          "heading": "Quality photography in Härnösand",
+          "intro": "I'm William Hallin, and I offer professional photography services to clients in Härnösand, ensuring your visual content is both captivating and effective. Let's collaborate on your next project.",
+          "specificBenefits": [
+            "Providing Härnösand with high-standard photography for diverse commercial and personal needs.",
+            "Convenient on-location shoots available in Härnösand and the surrounding High Coast area.",
+            "A commitment to excellence and client satisfaction in every Härnösand photography project.",
+            "Partner with William Hallin for professional photography that makes a difference in Härnösand."
+          ]
+        },
+        "sv": {
+          "heading": "Kvalitetsfotografi i Härnösand",
+          "intro": "Jag är William Hallin, och jag erbjuder professionella fotograferingstjänster till kunder i Härnösand, och säkerställer att ditt visuella innehåll är både fängslande och effektivt. Låt oss samarbeta på ditt nästa projekt.",
+          "specificBenefits": [
+            "Förser Härnösand med högkvalitativ fotografering för olika kommersiella och personliga behov.",
+            "Bekväma fotograferingar på plats tillgängliga i Härnösand och det omgivande Höga Kusten-området.",
+            "Ett engagemang för excellens och kundnöjdhet i varje Härnösandsprojekt.",
+            "Samarbeta med William Hallin för professionell fotografering som gör skillnad i Härnösand."
           ]
         }
       }
     }
-  ],
-  "relatedServices": ["photo-editing", "video", "design"],
-  "featuredClients": [
-    "kulturforening-humlan",
-    "lastbilsstation",
-    "mr-dagarna",
-    "nolia",
-    "norran",
-    "producenterna",
-    "rfsl",
-    "skelleftea-symfoniorkester",
-    "trastockfestivalen"
-  ],
-  "featured": true
+  ]
 }

@@ -1,0 +1,458 @@
+{
+  "serviceName": {
+    "en": "Graphic design",
+    "sv": "Grafisk design"
+  },
+  "shortDescription": {
+    "en": "Crafting compelling visuals that tell your story and elevate your brand with professional graphic design services.",
+    "sv": "Skapar övertygande visuellt material som berättar din historia och lyfter ditt varumärke med professionella grafiska designtjänster."
+  },
+  "longDescription": {
+    "en": [
+      "I'm William Hallin, and I specialise in creating bespoke visual solutions that capture attention, communicate your message effectively, and build a memorable brand identity.",
+      "From logos and brand identities that resonate with your target audience, to marketing materials that drive engagement, and digital assets that enhance your online presence, I provide a comprehensive range of graphic design services.",
+      "My approach is collaborative and tailored to your unique needs, ensuring the final product is not only beautiful but also strategically sound.",
+      "Whether you're a start-up looking to establish your visual footprint, or an established business aiming to refresh your brand, I'm here to help you make a lasting impression. Let's work together to transform your ideas into impactful designs."
+    ],
+    "sv": [
+      "Jag är William Hallin, och jag specialiserar mig på att skapa skräddarsydda visuella lösningar som fångar uppmärksamhet, kommunicerar ditt budskap effektivt och bygger en minnesvärd varumärkesidentitet.",
+      "Från logotyper och varumärkesidentiteter som når din målgrupp, till marknadsföringsmaterial som driver engagemang och digitala tillgångar som stärker din närvaro online, erbjuder jag ett brett utbud av grafiska designtjänster.",
+      "Mitt tillvägagångssätt är samarbetande och anpassat efter dina unika behov, vilket säkerställer att slutprodukten inte bara är vacker utan också strategiskt genomtänkt.",
+      "Oavsett om du är en nystartad verksamhet som vill etablera din visuella profil, eller ett etablerat företag som siktar på att förnya ditt varumärke, är jag här för att hjälpa dig göra ett bestående intryck. Låt oss arbeta tillsammans för att omvandla dina idéer till slagkraftig design."
+    ]
+  },
+  "icon": "ph:paint-brush-duotone",
+  "color": "green",
+  "pricing": {
+    "startingFrom": 750,
+    "unit": {
+      "en": "hour",
+      "sv": "timme"
+    },
+    "note": {
+      "en": "Projects are quoted individually based on scope and complexity. Hourly rates apply for smaller tasks or ongoing support.",
+      "sv": "Projekt offereras individuellt baserat på omfattning och komplexitet. Timpriser gäller för mindre uppdrag eller löpande support."
+    }
+  },
+  "keyFeatures": [
+    {
+      "title": {
+        "en": "Bespoke identities",
+        "sv": "Skräddarsydda identiteter"
+      },
+      "description": {
+        "en": "Logos, colour palettes, and typography that reflect you and your unique brand.",
+        "sv": "Logotyper, färgpaletter och typografi som speglar dig och ditt unika varumärke."
+      },
+      "icon": "ph:palette-duotone"
+    },
+    {
+      "title": {
+        "en": "Engaging marketing",
+        "sv": "Engagerande marknadsföring"
+      },
+      "description": {
+        "en": "Brochures, flyers, social media graphics, and presentations that convert.",
+        "sv": "Broschyrer, flyers, grafik för sociala medier och presentationer som konverterar."
+      },
+      "icon": "ph:projector-screen-chart-duotone"
+    },
+    {
+      "title": {
+        "en": "Digital & print expertise",
+        "sv": "Expertis inom digitalt & tryck"
+      },
+      "description": {
+        "en": "Designs optimised for both online platforms and high-quality print.",
+        "sv": "Design optimerad för både onlineplattformar och högkvalitativt tryck."
+      },
+      "icon": "ph:devices-duotone"
+    },
+    {
+      "title": { "en": "UI/UX for web", "sv": "UI/UX för webben" },
+      "description": {
+        "en": "Intuitive and user-friendly interfaces for websites and applications.",
+        "sv": "Intuitiva och användarvänliga gränssnitt för webbplatser och applikationer."
+      },
+      "icon": "ph:selection-all-duotone"
+    }
+  ],
+  "processSteps": [
+    {
+      "title": {
+        "en": "Discovery & briefing",
+        "sv": "Upptäckt & genomgång"
+      },
+      "description": {
+        "en": "We start by understanding your vision, goals, audience, and specific design needs.",
+        "sv": "Vi börjar med att förstå din vision, dina mål, din målgrupp och specifika designbehov."
+      }
+    },
+    {
+      "title": { "en": "Concept & design", "sv": "Koncept & design" },
+      "description": {
+        "en": "I develop initial concepts and design mock-ups based on our discussion, exploring creative directions.",
+        "sv": "Jag utvecklar initiala koncept och designutkast baserat på vår diskussion och utforskar kreativa riktningar."
+      }
+    },
+    {
+      "title": {
+        "en": "Refinement & feedback",
+        "sv": "Förfining & återkoppling"
+      },
+      "description": {
+        "en": "We review the designs together, and I incorporate your feedback to refine the visuals to perfection.",
+        "sv": "Vi granskar designen tillsammans, och jag införlivar din återkoppling för att finslipa det visuella till perfektion."
+      }
+    },
+    {
+      "title": {
+        "en": "Finalisation & delivery",
+        "sv": "Slutförande & leverans"
+      },
+      "description": {
+        "en": "Once approved, I prepare and deliver all final files in the required formats for web and print.",
+        "sv": "När allt är godkänt förbereder och levererar jag alla slutliga filer i de format som krävs för webb och tryck."
+      }
+    }
+  ],
+  "cta": {
+    "en": "Elevate your visuals",
+    "sv": "Lyft ditt visuella material"
+  },
+  "relatedServices": [],
+  "featuredClients": [],
+  "featured": true,
+  "seo": {
+    "en": {
+      "title": "Professional graphic design services",
+      "description": "Elevate your brand with bespoke graphic design by William Hallin. Logos, branding, marketing materials, and UI/UX design for impactful visual communication.",
+      "keywords": [
+        "graphic design",
+        "visual identity",
+        "branding",
+        "logo design",
+        "marketing materials",
+        "UI/UX design",
+        "William Hallin",
+        "HallinMedia"
+      ]
+    },
+    "sv": {
+      "title": "Professionell grafisk design",
+      "description": "Lyft ditt varumärke med skräddarsydd grafisk design av William Hallin. Logotyper, varumärkesidentitet, marknadsföringsmaterial och UI/UX-design för slagkraftig visuell kommunikation.",
+      "keywords": [
+        "grafisk design",
+        "visuell identitet",
+        "varumärkesbyggande",
+        "logotypdesign",
+        "marknadsföringsmaterial",
+        "UI/UX-design",
+        "William Hallin",
+        "HallinMedia"
+      ]
+    }
+  },
+  "cities": [
+    {
+      "name": { "en": "Skellefteå", "sv": "Skellefteå" },
+      "slug": "skelleftea",
+      "localSeo": {
+        "en": {
+          "title": "Innovative graphic design in Skellefteå",
+          "description": "Transform your Skellefteå business with innovative graphic design by William Hallin. Specialising in branding, digital, and print design solutions.",
+          "keywords": [
+            "graphic design Skellefteå",
+            "Skellefteå branding services",
+            "digital design Skellefteå",
+            "William Hallin Skellefteå",
+            "HallinMedia"
+          ]
+        },
+        "sv": {
+          "title": "Innovativ grafisk design i Skellefteå",
+          "description": "Förvandla ditt företag i Skellefteå med innovativ grafisk design av William Hallin. Specialiserad på varumärkesbyggande, digitala och tryckta designlösningar.",
+          "keywords": [
+            "grafisk design Skellefteå",
+            "Skellefteå varumärkestjänster",
+            "digital design Skellefteå",
+            "William Hallin Skellefteå",
+            "HallinMedia"
+          ]
+        }
+      },
+      "localContent": {
+        "en": {
+          "heading": "Graphic design for Skellefteå",
+          "intro": "I'm William Hallin, ready to support your growth with cutting-edge graphic design. From compelling brand identities to engaging digital experiences, let's create visuals that drive success.",
+          "specificBenefits": [
+            "Fueling Skellefteå's innovation with strategic and creative graphic design.",
+            "Bespoke design services tailored to the dynamic market of Skellefteå.",
+            "Your partner in Skellefteå for building a strong visual presence, William Hallin.",
+            "Elevate your brand in Skellefteå with professional design that speaks volumes."
+          ]
+        },
+        "sv": {
+          "heading": "Grafisk design för Skellefteå",
+          "intro": "Jag är William Hallin, redo att stödja er tillväxt med spetskompetens inom grafisk design. Från övertygande varumärkesidentiteter till engagerande digitala upplevelser, låt oss skapa visuellt material som driver framgång.",
+          "specificBenefits": [
+            "Driver Skellefteås innovation med strategisk och kreativ grafisk design.",
+            "Skräddarsydda designtjänster anpassade till den dynamiska marknaden i Skellefteå.",
+            "Din partner i Skellefteå för att bygga en stark visuell närvaro, William Hallin.",
+            "Lyft ditt varumärke i Skellefteå med professionell design som talar sitt tydliga språk."
+          ]
+        }
+      }
+    },
+    {
+      "name": { "en": "Umeå", "sv": "Umeå" },
+      "slug": "umea",
+      "localSeo": {
+        "en": {
+          "title": "Creative graphic design services in Umeå",
+          "description": "William Hallin: Your Umeå graphic design expert for vibrant branding, web, and print visuals. Let's make your Umeå business shine.",
+          "keywords": [
+            "graphic design Umeå",
+            "Umeå web design",
+            "branding Umeå",
+            "William Hallin Umeå",
+            "HallinMedia"
+          ]
+        },
+        "sv": {
+          "title": "Kreativa grafiska designtjänster i Umeå",
+          "description": "William Hallin: Din expert på grafisk design i Umeå för levande varumärkesbyggande, webb- och tryckmaterial. Låt oss få ditt företag i Umeå att glänsa.",
+          "keywords": [
+            "grafisk design Umeå",
+            "Umeå webbdesign",
+            "varumärkesbyggande Umeå",
+            "William Hallin Umeå",
+            "HallinMedia"
+          ]
+        }
+      },
+      "localContent": {
+        "en": {
+          "heading": "Vibrant graphic design in Umeå",
+          "intro": "As William Hallin, I offer dynamic graphic design services that resonate with Umeå's innovative spirit. Let's collaborate to create visuals that captivate and inspire.",
+          "specificBenefits": [
+            "Infusing Umeå's creative energy into every design project.",
+            "Tailored graphic design solutions for start-ups and established businesses in Umeå.",
+            "William Hallin: Your dedicated design resource in the heart of Umeå.",
+            "Crafting memorable brand experiences for the Umeå market."
+          ]
+        },
+        "sv": {
+          "heading": "Levande grafisk design i Umeå",
+          "intro": "Som William Hallin erbjuder jag dynamiska grafiska designtjänster som genljuder med Umeås innovativa anda. Låt oss samarbeta för att skapa visuellt material som fängslar och inspirerar.",
+          "specificBenefits": [
+            "Ingjuter Umeås kreativa energi i varje designprojekt.",
+            "Skräddarsydda grafiska designlösningar för nystartade och etablerade företag i Umeå.",
+            "William Hallin: Din dedikerade designresurs i hjärtat av Umeå.",
+            "Skapar minnesvärda varumärkesupplevelser för Umeåmarknaden."
+          ]
+        }
+      }
+    },
+    {
+      "name": { "en": "Luleå", "sv": "Luleå" },
+      "slug": "lulea",
+      "localSeo": {
+        "en": {
+          "title": "Top-tier graphic design in Luleå",
+          "description": "For impactful graphic design in Luleå, trust William Hallin. Delivering exceptional branding, digital, and print design to elevate your Luleå enterprise.",
+          "keywords": [
+            "graphic design Luleå",
+            "Luleå branding expert",
+            "digital marketing Luleå",
+            "William Hallin Luleå",
+            "HallinMedia"
+          ]
+        },
+        "sv": {
+          "title": "Grafisk design i toppklass i Luleå",
+          "description": "För slagkraftig grafisk design i Luleå, lita på William Hallin. Levererar exceptionell varumärkesbyggnad, digital och tryckt design för att lyfta ditt företag i Luleå.",
+          "keywords": [
+            "grafisk design Luleå",
+            "Luleå varumärkesexpert",
+            "digital marknadsföring Luleå",
+            "William Hallin Luleå",
+            "HallinMedia"
+          ]
+        }
+      },
+      "localContent": {
+        "en": {
+          "heading": "Powering Luleå with strategic design",
+          "intro": "I'm William Hallin, here to provide your business with strategic graphic design that makes an impact. From tech start-ups to established industries, let's build a stronger brand together.",
+          "specificBenefits": [
+            "Strategic design thinking to support Luleå's industrial and tech growth.",
+            "High-impact visual solutions for businesses aiming high in Luleå.",
+            "William Hallin: Your Luleå partner for clear, compelling graphic communication.",
+            "Bespoke graphic design that reflects the unique character of Luleå."
+          ]
+        },
+        "sv": {
+          "heading": "Stärker Luleå med strategisk design",
+          "intro": "Jag är William Hallin, här för att förse ditt företag med strategisk grafisk design som gör intryck. Från teknikstartups till etablerade industrier, låt oss bygga ett starkare varumärke tillsammans.",
+          "specificBenefits": [
+            "Strategiskt designtänkande för att stödja Luleås industriella och tekniska tillväxt.",
+            "Visuella lösningar med hög genomslagskraft för företag som siktar högt i Luleå.",
+            "William Hallin: Din Luleåpartner för tydlig, övertygande grafisk kommunikation.",
+            "Skräddarsydd grafisk design som speglar Luleås unika karaktär."
+          ]
+        }
+      }
+    },
+    {
+      "name": { "en": "Sundsvall", "sv": "Sundsvall" },
+      "slug": "sundsvall",
+      "localSeo": {
+        "en": {
+          "title": "Graphic design services in Sundsvall",
+          "description": "William Hallin offers expert graphic design in Sundsvall. Creative logos, branding, and marketing visuals to make your Sundsvall business stand out.",
+          "keywords": [
+            "graphic design Sundsvall",
+            "Sundsvall logo design",
+            "branding Sundsvall",
+            "William Hallin Sundsvall",
+            "HallinMedia"
+          ]
+        },
+        "sv": {
+          "title": "Grafisk design i Sundsvall",
+          "description": "William Hallin erbjuder expertis inom grafisk design i Sundsvall. Kreativa logotyper, varumärkesbyggande och marknadsföringsmaterial som får ditt företag i Sundsvall att sticka ut.",
+          "keywords": [
+            "grafisk design Sundsvall",
+            "Sundsvall logotypdesign",
+            "varumärkesbyggande Sundsvall",
+            "William Hallin Sundsvall",
+            "HallinMedia"
+          ]
+        }
+      },
+      "localContent": {
+        "en": {
+          "heading": "Creative design for Sundsvall businesses",
+          "intro": "I'm William Hallin, providing Sundsvall with distinctive graphic design solutions that enhance brand presence and engage audiences. Let's bring your visual ideas to life in Sundsvall.",
+          "specificBenefits": [
+            "Partner with William Hallin for impactful graphic design strategies in Sundsvall.",
+            "Creating visuals that resonate with the Sundsvall audience and drive results.",
+            "Local design expertise in Sundsvall to strengthen your brand's visual voice and reach.",
+            "Dedicated support for all your graphic design needs in the Sundsvall region."
+          ]
+        },
+        "sv": {
+          "heading": "Kreativ design för företag i Sundsvall",
+          "intro": "Jag är William Hallin och erbjuder Sundsvall distinkta grafiska designlösningar som stärker varumärkesnärvaron och engagerar målgrupper. Låt oss förverkliga dina visuella idéer i Sundsvall.",
+          "specificBenefits": [
+            "Samarbeta med William Hallin för slagkraftiga grafiska designstrategier i Sundsvall.",
+            "Skapar visuellt material som når Sundsvallspubliken och driver resultat.",
+            "Lokal designexpertis i Sundsvall för att förstärka ditt varumärkes visuella röst och räckvidd.",
+            "Dedikerat stöd för alla dina grafiska designbehov i Sundsvallsregionen."
+          ]
+        }
+      }
+    },
+    {
+      "name": { "en": "Örnsköldsvik", "sv": "Örnsköldsvik" },
+      "slug": "ornskoldsvik",
+      "localSeo": {
+        "en": {
+          "title": "Professional graphic design in Örnsköldsvik",
+          "description": "Your specialist for graphic design in Örnsköldsvik, William Hallin. Delivering impactful branding, print, and digital design solutions.",
+          "keywords": [
+            "graphic design Örnsköldsvik",
+            "Örnsköldsvik branding",
+            "print design Örnsköldsvik",
+            "William Hallin Örnsköldsvik",
+            "HallinMedia"
+          ]
+        },
+        "sv": {
+          "title": "Professionell grafisk design i Örnsköldsvik",
+          "description": "Din specialist på grafisk design i Örnsköldsvik, William Hallin. Levererar slagkraftiga lösningar för varumärkesbyggande, tryck och digital design.",
+          "keywords": [
+            "grafisk design Örnsköldsvik",
+            "Örnsköldsvik varumärkesbyggande",
+            "tryckdesign Örnsköldsvik",
+            "William Hallin Örnsköldsvik",
+            "HallinMedia"
+          ]
+        }
+      },
+      "localContent": {
+        "en": {
+          "heading": "Graphic design for Örnsköldsvik",
+          "intro": "William Hallin, serving Örnsköldsvik with professional graphic design services that capture attention and deliver results. I'm committed to high-quality visual communication for all your needs.",
+          "specificBenefits": [
+            "Bringing creative design and strategic insight to projects in Örnsköldsvik.",
+            "Reliable and professional graphic design services for businesses in the Örnsköldsvik area.",
+            "Helping you articulate your brand's best through compelling visuals and design in Örnsköldsvik.",
+            "Your local Örnsköldsvik graphic design partner, William Hallin, committed to your project's success."
+          ]
+        },
+        "sv": {
+          "heading": "Grafisk design för Örnsköldsvik",
+          "intro": "William Hallin, betjänar Örnsköldsvik med professionella grafiska designtjänster som fångar uppmärksamhet och levererar resultat. Jag är engagerad i högkvalitativ visuell kommunikation för alla dina behov.",
+          "specificBenefits": [
+            "Bidrar med kreativ design och strategisk insikt till projekt i Örnsköldsvik.",
+            "Pålitliga och professionella grafiska designtjänster för företag och organisationer i Örnsköldsviksområdet.",
+            "Hjälper dig att formulera ditt varumärkes bästa genom övertygande visuellt material och design i Örnsköldsvik.",
+            "Din lokala Örnsköldsvikspartner inom grafisk design, William Hallin, engagerad i ditt projekts framgång."
+          ]
+        }
+      }
+    },
+    {
+      "name": { "en": "Härnösand", "sv": "Härnösand" },
+      "slug": "harnosand",
+      "localSeo": {
+        "en": {
+          "title": "Expert graphic design solutions in Härnösand",
+          "description": "William Hallin offers expert graphic design in Härnösand. From brand identity to marketing materials, get professional visual results every time.",
+          "keywords": [
+            "graphic design Härnösand",
+            "Härnösand brand identity",
+            "marketing design Härnösand",
+            "William Hallin Härnösand",
+            "HallinMedia"
+          ]
+        },
+        "sv": {
+          "title": "Expertlösningar inom grafisk design i Härnösand",
+          "description": "William Hallin erbjuder experttjänster inom grafisk design i Härnösand. Från varumärkesidentitet till marknadsföringsmaterial, få professionella visuella resultat varje gång.",
+          "keywords": [
+            "grafisk design Härnösand",
+            "Härnösand varumärkesidentitet",
+            "marknadsföringsdesign Härnösand",
+            "William Hallin Härnösand",
+            "HallinMedia"
+          ]
+        }
+      },
+      "localContent": {
+        "en": {
+          "heading": "Quality graphic design in Härnösand",
+          "intro": "I'm William Hallin, providing professional graphic design services to clients in Härnösand, ensuring your visuals are both captivating and effective. Let's collaborate on your next design project.",
+          "specificBenefits": [
+            "Providing Härnösand with high-quality graphic design for diverse commercial and organisational needs.",
+            "Convenient and personalised design strategies available in Härnösand and the High Coast area.",
+            "A commitment to excellence and client satisfaction in every Härnösand graphic design project by William Hallin.",
+            "Partner with William Hallin for professional graphic design that makes a difference in Härnösand."
+          ]
+        },
+        "sv": {
+          "heading": "Kvalitetsdesign i Härnösand",
+          "intro": "Jag är William Hallin och erbjuder professionella grafiska designtjänster till kunder i Härnösand, vilket säkerställer att ditt visuella material är både fängslande och effektivt. Låt oss samarbeta på ditt nästa designprojekt.",
+          "specificBenefits": [
+            "Förser Härnösand med högkvalitativ grafisk design för olika kommersiella och organisatoriska behov.",
+            "Bekväma och personligt anpassade designstrategier tillgängliga i Härnösand och det omgivande Höga Kusten-området.",
+            "Ett engagemang för excellens och kundnöjdhet i varje Härnösandsprojekt inom grafisk design av William Hallin.",
+            "Samarbeta med William Hallin för professionell grafisk design som gör skillnad i Härnösand."
+          ]
+        }
+      }
+    }
+  ]
+}

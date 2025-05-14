@@ -1,0 +1,480 @@
+{
+  "serviceName": {
+    "en": "Video Production",
+    "sv": "Videoproduktion"
+  },
+  "shortDescription": {
+    "en": "Craft compelling visual stories with expert video production services, from concept to final cut. Elevate your brand with high-quality video content.",
+    "sv": "Skapa fängslande visuella berättelser med expertis inom videoproduktion, från koncept till färdig film. Stärk ditt varumärke med högkvalitativt videoinnehåll."
+  },
+  "longDescription": {
+    "en": [
+      "I'm William Hallin, a video production specialist helping businesses and individuals bring their visions to life through the power of video.",
+      "Whether you need engaging promotional videos, informative corporate content, dynamic event coverage, or captivating social media shorts, I provide a comprehensive service tailored to your unique goals.",
+      "My approach combines creative storytelling with technical proficiency, ensuring your message not only reaches but also resonates with your target audience. Let's collaborate to produce videos that make a lasting impact."
+    ],
+    "sv": [
+      "Jag är William Hallin, en specialist inom videoproduktion som hjälper företag och privatpersoner att förverkliga sina visioner genom kraften i video.",
+      "Oavsett om du behöver engagerande reklamfilmer, informativt företagsinnehåll, dynamisk evenemangsdokumentation eller fängslande korta filmer för sociala medier, erbjuder jag en heltäckande tjänst anpassad efter dina unika mål.",
+      "Mitt tillvägagångssätt kombinerar kreativt berättande med teknisk skicklighet, vilket säkerställer att ditt budskap inte bara når fram utan också engagerar din målgrupp. Låt oss samarbeta för att producera videor som gör ett bestående intryck."
+    ]
+  },
+  "icon": "ph:video-camera-duotone",
+  "color": "blue",
+  "pricing": {
+    "startingFrom": 3500,
+    "unit": {
+      "en": "session",
+      "sv": "session"
+    },
+    "note": {
+      "en": "Half-day session (up to 4 hours). Full-day and custom packages available. Editing services are priced separately.",
+      "sv": "Halvdagssession (upp till 4 timmar). Heldags- och anpassade paket tillgängliga. Redigeringstjänster prissätts separat."
+    }
+  },
+  "keyFeatures": [
+    {
+      "title": {
+        "en": "Creative concept development",
+        "sv": "Kreativ konceptutveckling"
+      },
+      "description": {
+        "en": "Collaborative brainstorming and script development to ensure your message is clear and impactful.",
+        "sv": "Samarbete kring idéutveckling och manusarbete för att säkerställa att ditt budskap är tydligt och slagkraftigt."
+      },
+      "icon": "ph:lightbulb-duotone"
+    },
+    {
+      "title": {
+        "en": "High-quality filming",
+        "sv": "Högkvalitativ filmning"
+      },
+      "description": {
+        "en": "Professional-grade cameras, lighting, and audio equipment for a polished final product.",
+        "sv": "Professionell kamerautrustning, ljussättning och ljudupptagning för en polerad slutprodukt."
+      },
+      "icon": "ph:camera-duotone"
+    },
+    {
+      "title": {
+        "en": "Expert post-production",
+        "sv": "Expert efterproduktion"
+      },
+      "description": {
+        "en": "Skilled editing, colour grading, sound design, and motion graphics to bring your footage to life.",
+        "sv": "Skicklig redigering, färgsättning, ljuddesign och motion graphics för att levandegöra ditt material."
+      },
+      "icon": "ph:film-strip-duotone"
+    },
+    {
+      "title": {
+        "en": "Versatile video formats",
+        "sv": "Mångsidiga videoformat"
+      },
+      "description": {
+        "en": "Delivery in various formats optimised for web, social media, presentations, and broadcast.",
+        "sv": "Leverans i olika format optimerade för webb, sociala medier, presentationer och sändning."
+      },
+      "icon": "ph:export-duotone"
+    }
+  ],
+  "processSteps": [
+    {
+      "title": {
+        "en": "Discovery & planning",
+        "sv": "Upptäckt & planering"
+      },
+      "description": {
+        "en": "We discuss your objectives, audience, and creative vision to outline the project scope and strategy.",
+        "sv": "Vi diskuterar dina mål, målgrupp och kreativa vision för att definiera projektets omfattning och strategi."
+      }
+    },
+    {
+      "title": {
+        "en": "Pre-production",
+        "sv": "Förproduktion"
+      },
+      "description": {
+        "en": "Scripting, storyboarding, location scouting, and scheduling to ensure a smooth production phase.",
+        "sv": "Manusskrivning, storyboard, platsrekognosering och schemaläggning för att säkerställa en smidig produktionsfas."
+      }
+    },
+    {
+      "title": {
+        "en": "Production",
+        "sv": "Produktion"
+      },
+      "description": {
+        "en": "Capturing high-quality footage and audio according to the agreed plan, using professional equipment.",
+        "sv": "Inspelning av högkvalitativt video- och ljudmaterial enligt den överenskomna planen, med professionell utrustning."
+      }
+    },
+    {
+      "title": {
+        "en": "Post-production",
+        "sv": "Efterproduktion"
+      },
+      "description": {
+        "en": "Editing, colour grading, sound mixing, adding graphics, and incorporating feedback to create the final video.",
+        "sv": "Redigering, färgsättning, ljudmixning, tillägg av grafik och hantering av feedback för att skapa den slutgiltiga videon."
+      }
+    },
+    {
+      "title": {
+        "en": "Delivery & distribution",
+        "sv": "Leverans & distribution"
+      },
+      "description": {
+        "en": "Providing the final video files in your desired formats, ready for sharing and distribution.",
+        "sv": "Leverans av de färdiga videofilerna i önskade format, redo för delning och distribution."
+      }
+    }
+  ],
+  "cta": {
+    "en": "Tell your story",
+    "sv": "Berätta din historia"
+  },
+  "relatedServices": [],
+  "featuredClients": [],
+  "featured": true,
+  "seo": {
+    "en": {
+      "title": "Professional video production services",
+      "description": "Elevate your brand with expert video production by William Hallin. Offering creative filming and editing for businesses and events. Based in Skellefteå, serving Norrland.",
+      "keywords": [
+        "video production",
+        "videographer",
+        "corporate video",
+        "promotional video",
+        "event videography",
+        "video editing",
+        "William Hallin",
+        "Skellefteå video"
+      ]
+    },
+    "sv": {
+      "title": "Professionell videoproduktion",
+      "description": "Stärk ditt varumärke med expertmässig videoproduktion av William Hallin. Erbjuder kreativ filmning och redigering för företag och evenemang. Baserad i Skellefteå, verksam i Norrland.",
+      "keywords": [
+        "videoproduktion",
+        "videograf",
+        "företagsvideo",
+        "reklamfilm",
+        "evenemangsvideo",
+        "videoredigering",
+        "William Hallin",
+        "Skellefteå video"
+      ]
+    }
+  },
+  "cities": [
+    {
+      "name": { "en": "Skellefteå", "sv": "Skellefteå" },
+      "slug": "skelleftea",
+      "localSeo": {
+        "en": {
+          "title": "Expert video production in Skellefteå",
+          "description": "William Hallin provides top-tier video production services in Skellefteå. Specialising in corporate, promotional, and event videos that engage and convert.",
+          "keywords": [
+            "video production Skellefteå",
+            "Skellefteå videographer",
+            "corporate video Skellefteå",
+            "promotional video Skellefteå",
+            "event videography Skellefteå",
+            "William Hallin Skellefteå"
+          ]
+        },
+        "sv": {
+          "title": "Expert videoproduktion i Skellefteå",
+          "description": "William Hallin erbjuder förstklassiga videoproduktionstjänster i Skellefteå. Specialiserad på företags-, reklam- och evenemangsvideor som engagerar och konverterar.",
+          "keywords": [
+            "videoproduktion Skellefteå",
+            "Skellefteå videograf",
+            "företagsvideo Skellefteå",
+            "reklamfilm Skellefteå",
+            "evenemangsvideo Skellefteå",
+            "William Hallin Skellefteå"
+          ]
+        }
+      },
+      "localContent": {
+        "en": {
+          "heading": "Your partner for video in Skellefteå",
+          "intro": "Based in Skellefteå, I'm William Hallin, and I'm passionate about creating impactful video content for local businesses and organisations. Let's make your Skellefteå story shine.",
+          "specificBenefits": [
+            "Local Skellefteå expertise for authentic and relevant video content.",
+            "Flexible on-location filming throughout the Skellefteå region.",
+            "Dedicated to enhancing Skellefteå businesses with compelling visual narratives.",
+            "Collaborate with a Skellefteå-based professional for outstanding video results."
+          ]
+        },
+        "sv": {
+          "heading": "Din partner för video i Skellefteå",
+          "intro": "Baserad i Skellefteå, jag är William Hallin, och jag brinner för att skapa slagkraftigt videoinnehåll för lokala företag och organisationer. Låt oss få din Skellefteå-berättelse att lysa.",
+          "specificBenefits": [
+            "Lokal Skellefteå-expertis för autentiskt och relevant videoinnehåll.",
+            "Flexibel filmning på plats i hela Skellefteåregionen.",
+            "Dedikerad till att stärka Skellefteå-företag med fängslande visuella berättelser.",
+            "Samarbeta med en Skellefteå-baserad professionell för enastående videoresultat."
+          ]
+        }
+      }
+    },
+    {
+      "name": { "en": "Umeå", "sv": "Umeå" },
+      "slug": "umea",
+      "localSeo": {
+        "en": {
+          "title": "Creative video production in Umeå",
+          "description": "Looking for a videographer in Umeå? William Hallin offers professional video production services, creating stunning visuals for businesses and events in Umeå.",
+          "keywords": [
+            "video production Umeå",
+            "Umeå videographer",
+            "corporate video Umeå",
+            "event videography Umeå",
+            "promotional video Umeå",
+            "William Hallin Umeå"
+          ]
+        },
+        "sv": {
+          "title": "Kreativ videoproduktion i Umeå",
+          "description": "Letar du efter en videograf i Umeå? William Hallin erbjuder professionella videoproduktionstjänster och skapar fantastiska visuella lösningar för företag och evenemang i Umeå.",
+          "keywords": [
+            "videoproduktion Umeå",
+            "Umeå videograf",
+            "företagsvideo Umeå",
+            "evenemangsvideo Umeå",
+            "reklamfilm Umeå",
+            "William Hallin Umeå"
+          ]
+        }
+      },
+      "localContent": {
+        "en": {
+          "heading": "Bringing Umeå to life with video",
+          "intro": "I'm William Hallin, extending my professional video production services to Umeå. I'm committed to delivering high-quality, engaging video content that meets your specific needs in the Umeå area.",
+          "specificBenefits": [
+            "Providing Umeå businesses with dynamic video content that tells their story.",
+            "Reliable and creative video production services available on-site in Umeå.",
+            "Focused on quality and client satisfaction for all Umeå video projects.",
+            "Partner with William Hallin for exceptional video production in Umeå."
+          ]
+        },
+        "sv": {
+          "heading": "Levande gör Umeå med video",
+          "intro": "Jag är William Hallin och utökar mina professionella videoproduktionstjänster till Umeå. Jag är engagerad i att leverera högkvalitativt, engagerande videoinnehåll som möter dina specifika behov i Umeåområdet.",
+          "specificBenefits": [
+            "Förser Umeå-företag med dynamiskt videoinnehåll som berättar deras historia.",
+            "Pålitliga och kreativa videoproduktionstjänster tillgängliga på plats i Umeå.",
+            "Fokus på kvalitet och kundnöjdhet för alla Umeå-videoprojekt.",
+            "Samarbeta med William Hallin för exceptionell videoproduktion i Umeå."
+          ]
+        }
+      }
+    },
+    {
+      "name": { "en": "Luleå", "sv": "Luleå" },
+      "slug": "lulea",
+      "localSeo": {
+        "en": {
+          "title": "Professional videographer in Luleå",
+          "description": "William Hallin: Your go-to videographer in Luleå for compelling corporate, event, and promotional video production. Let's create impactful visuals.",
+          "keywords": [
+            "video production Luleå",
+            "Luleå videographer",
+            "business video Luleå",
+            "event video Luleå",
+            "marketing video Luleå",
+            "William Hallin Luleå"
+          ]
+        },
+        "sv": {
+          "title": "Professionell videograf i Luleå",
+          "description": "William Hallin: Din videograf i Luleå för fängslande företags-, evenemangs- och reklamvideoproduktion. Låt oss skapa slagkraftiga visuella lösningar.",
+          "keywords": [
+            "videoproduktion Luleå",
+            "Luleå videograf",
+            "företagsvideo Luleå",
+            "evenemangsvideo Luleå",
+            "marknadsföringsvideo Luleå",
+            "William Hallin Luleå"
+          ]
+        }
+      },
+      "localContent": {
+        "en": {
+          "heading": "Video production in Luleå",
+          "intro": "As William Hallin, I offer expert video production to clients in Luleå, helping you communicate effectively through engaging and professional video content. Ready for your Luleå project?",
+          "specificBenefits": [
+            "Delivering creative and technical video expertise to Luleå projects.",
+            "On-location video shoots across Luleå and the Norrbotten region.",
+            "Committed to producing high-quality video that achieves your Luleå business goals.",
+            "Your local connection for professional video production in Luleå."
+          ]
+        },
+        "sv": {
+          "heading": "Videoproduktionstjänster i Luleå",
+          "intro": "Som William Hallin erbjuder jag expertvideoproduktion till kunder i Luleå, och hjälper dig att kommunicera effektivt genom engagerande och professionellt videoinnehåll. Redo för ditt Luleå-projekt?",
+          "specificBenefits": [
+            "Levererar kreativ och teknisk videoexpertis till Luleå-projekt.",
+            "Videoinspelningar på plats i Luleå och Norrbottensregionen.",
+            "Engagerad i att producera högkvalitativ video som uppnår dina Luleå-affärsmål.",
+            "Din lokala kontakt för professionell videoproduktion i Luleå."
+          ]
+        }
+      }
+    },
+    {
+      "name": { "en": "Sundsvall", "sv": "Sundsvall" },
+      "slug": "sundsvall",
+      "localSeo": {
+        "en": {
+          "title": "Top video production in Sundsvall",
+          "description": "William Hallin delivers exceptional video production in Sundsvall. From corporate films to event coverage, get compelling video content that stands out.",
+          "keywords": [
+            "video production Sundsvall",
+            "Sundsvall videographer",
+            "corporate video Sundsvall",
+            "event videography Sundsvall",
+            "promotional video Sundsvall",
+            "William Hallin Sundsvall"
+          ]
+        },
+        "sv": {
+          "title": "Topp videoproduktion i Sundsvall",
+          "description": "William Hallin levererar exceptionell videoproduktion i Sundsvall. Från företagsfilmer till evenemangsdokumentation, få fängslande videoinnehåll som sticker ut.",
+          "keywords": [
+            "videoproduktion Sundsvall",
+            "Sundsvall videograf",
+            "företagsvideo Sundsvall",
+            "evenemangsvideo Sundsvall",
+            "reklamfilm Sundsvall",
+            "William Hallin Sundsvall"
+          ]
+        }
+      },
+      "localContent": {
+        "en": {
+          "heading": "Video production for Sundsvall",
+          "intro": "I'm William Hallin, providing Sundsvall with professional video production services designed to capture attention and deliver results. Let's bring your Sundsvall vision to the screen.",
+          "specificBenefits": [
+            "Providing Sundsvall businesses with powerful visual storytelling through video.",
+            "Flexible video production services on location throughout the Sundsvall area.",
+            "Focus on quality and client satisfaction for all Sundsvall video projects.",
+            "Collaborate with William Hallin for outstanding video production in Sundsvall."
+          ]
+        },
+        "sv": {
+          "heading": "Videoproduktion för Sundsvall",
+          "intro": "Jag är William Hallin, och förser Sundsvall med professionella videoproduktionstjänster utformade för att fånga uppmärksamhet och leverera resultat. Låt oss förverkliga din Sundsvallsvision på skärmen.",
+          "specificBenefits": [
+            "Förser Sundsvalls företag med slagkraftigt visuellt berättande genom video.",
+            "Flexibla videoproduktionstjänster på plats i hela Sundsvallsområdet.",
+            "Fokus på kvalitet och kundnöjdhet för alla Sundsvallsprojekt inom video.",
+            "Samarbeta med William Hallin för enastående videoproduktion i Sundsvall."
+          ]
+        }
+      }
+    },
+    {
+      "name": { "en": "Örnsköldsvik", "sv": "Örnsköldsvik" },
+      "slug": "ornskoldsvik",
+      "localSeo": {
+        "en": {
+          "title": "Professional videographer in Örnsköldsvik",
+          "description": "William Hallin, your trusted videographer in Örnsköldsvik for exceptional corporate, promotional, and event video production. Let's create memorable videos.",
+          "keywords": [
+            "video production Örnsköldsvik",
+            "Örnsköldsvik videographer",
+            "corporate video Örnsköldsvik",
+            "event videography Örnsköldsvik",
+            "William Hallin Örnsköldsvik"
+          ]
+        },
+        "sv": {
+          "title": "Professionell videograf i Örnsköldsvik",
+          "description": "William Hallin, din pålitliga videograf i Örnsköldsvik för exceptionell företags-, reklam- och evenemangsvideoproduktion. Låt oss skapa minnesvärda videor.",
+          "keywords": [
+            "videoproduktion Örnsköldsvik",
+            "Örnsköldsvik videograf",
+            "företagsvideo Örnsköldsvik",
+            "evenemangsvideo Örnsköldsvik",
+            "William Hallin Örnsköldsvik"
+          ]
+        }
+      },
+      "localContent": {
+        "en": {
+          "heading": "Video production services for Örnsköldsvik",
+          "intro": "I'm William Hallin, serving Örnsköldsvik with professional video production that captures attention and delivers results. I'm committed to providing high-quality videos for all your needs.",
+          "specificBenefits": [
+            "Bringing a creative eye and technical skill to video projects in Örnsköldsvik.",
+            "Reliable and professional video service for businesses and events in the Örnsköldsvik area.",
+            "Helping you showcase the best of Örnsköldsvik through stunning video content.",
+            "Your local Örnsköldsvik videographer, committed to your project's success."
+          ]
+        },
+        "sv": {
+          "heading": "Videoproduktionstjänster för Örnsköldsvik",
+          "intro": "Jag är William Hallin, och betjänar Örnsköldsvik med professionell videoproduktion som fångar uppmärksamhet och levererar resultat. Jag är engagerad i att tillhandahålla högkvalitativa videor för alla dina behov.",
+          "specificBenefits": [
+            "Bidrar med ett kreativt öga och teknisk skicklighet till videoprojekt i Örnsköldsvik.",
+            "Pålitlig och professionell videoservice för företag och evenemang i Örnsköldsviksområdet.",
+            "Hjälper dig att visa upp det bästa av vad Örnsköldsvik har att erbjuda genom fantastiskt videoinnehåll.",
+            "Din lokala Örnsköldsvik-videograf, engagerad i ditt projekts framgång."
+          ]
+        }
+      }
+    },
+    {
+      "name": { "en": "Härnösand", "sv": "Härnösand" },
+      "slug": "harnosand",
+      "localSeo": {
+        "en": {
+          "title": "Expert video production in Härnösand",
+          "description": "William Hallin offers expert video production services in Härnösand. From commercial shoots to event coverage, get professional video results every time.",
+          "keywords": [
+            "video production Härnösand",
+            "Härnösand videographer",
+            "corporate video Härnösand",
+            "event videography Härnösand",
+            "William Hallin Härnösand"
+          ]
+        },
+        "sv": {
+          "title": "Expert videoproduktion i Härnösand",
+          "description": "William Hallin erbjuder expertvideoproduktionstjänster i Härnösand. Från kommersiella inspelningar till evenemangsdokumentation, få professionella videoresultat varje gång.",
+          "keywords": [
+            "videoproduktion Härnösand",
+            "Härnösand videograf",
+            "företagsvideo Härnösand",
+            "evenemangsvideo Härnösand",
+            "William Hallin Härnösand"
+          ]
+        }
+      },
+      "localContent": {
+        "en": {
+          "heading": "Quality video production in Härnösand",
+          "intro": "I'm William Hallin, and I offer professional video production services to clients in Härnösand, ensuring your visual content is both captivating and effective. Let's collaborate on your next video project.",
+          "specificBenefits": [
+            "Providing Härnösand with high-standard video production for diverse commercial and personal needs.",
+            "Convenient on-location video shoots available in Härnösand and the surrounding High Coast area.",
+            "A commitment to excellence and client satisfaction in every Härnösand video project.",
+            "Partner with William Hallin for professional video production that makes a difference in Härnösand."
+          ]
+        },
+        "sv": {
+          "heading": "Kvalitetsvideoproduktion i Härnösand",
+          "intro": "Jag är William Hallin, och jag erbjuder professionella videoproduktionstjänster till kunder i Härnösand, och säkerställer att ditt visuella innehåll är både fängslande och effektivt. Låt oss samarbeta på ditt nästa videoprojekt.",
+          "specificBenefits": [
+            "Förser Härnösand med högkvalitativ videoproduktion för olika kommersiella och personliga behov.",
+            "Bekväma videoinspelningar på plats tillgängliga i Härnösand och det omgivande Höga Kusten-området.",
+            "Ett engagemang för excellens och kundnöjdhet i varje Härnösandsprojekt inom video.",
+            "Samarbeta med William Hallin för professionell videoproduktion som gör skillnad i Härnösand."
+          ]
+        }
+      }
+    }
+  ]
+}

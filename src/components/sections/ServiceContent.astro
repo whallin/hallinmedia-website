@@ -64,29 +64,36 @@ const colorVariants = {
     bg: "bg-red-500/50",
     text: "text-red-500",
     border: "border-red-500",
-    accent: "bg-red-500/10 dark:bg-red-500/20",
+    accent: "bg-red-300/10 dark:bg-red-400/10",
     hover: "hover:border-red-500",
   },
   blue: {
     bg: "bg-blue-600/50",
     text: "text-blue-600",
     border: "border-blue-600",
-    accent: "bg-blue-600/10 dark:bg-blue-600/20",
+    accent: "bg-blue-300/10 dark:bg-blue-400/10",
     hover: "hover:border-blue-600",
   },
   green: {
     bg: "bg-green-600/50",
     text: "text-green-600",
     border: "border-green-600",
-    accent: "bg-green-600/10 dark:bg-green-600/20",
+    accent: "bg-green-300/10 dark:bg-green-400/10",
     hover: "hover:border-green-600",
   },
   purple: {
     bg: "bg-purple-500/50",
     text: "text-purple-500",
     border: "border-purple-500",
-    accent: "bg-purple-500/10 dark:bg-purple-500/20",
+    accent: "bg-purple-300/10 dark:bg-purple-400/10",
     hover: "hover:border-purple-500",
+  },
+  orange: {
+    bg: "bg-orange-500/50",
+    text: "text-orange-500",
+    border: "border-orange-500",
+    accent: "bg-orange-300/10 dark:bg-orange-500/10",
+    hover: "hover:border-orange-500",
   },
 };
 
@@ -98,7 +105,13 @@ const colors = colorVariants[data.color as keyof typeof colorVariants];
 
 <section class="mx-auto max-w-2xl space-y-16">
   <section class="space-y-8">
-    <p class="font-serif text-stone-700 dark:text-stone-100" set:html={data.longDescription[locale]} />
+    <div class="space-y-4">
+      {
+        data.longDescription[locale].map((paragraph) => (
+          <p class="font-serif text-stone-700 dark:text-stone-100" set:html={paragraph} />
+        ))
+      }
+    </div>
     <nav class="flex flex-col justify-between gap-3 sm:flex-row">
       <Button href={getRelativeLocaleUrl(locale, "hire")}>
         <Icon name="ph:handshake-duotone" class="flex-shrink-0" aria-hidden="true" />
@@ -117,6 +130,28 @@ const colors = colorVariants[data.color as keyof typeof colorVariants];
       </Button>
     </nav>
   </section>
+  {
+    city && (
+      <section class="space-y-8" aria-labelledby="local-benefits-heading">
+        <div class={`space-y-4 rounded-lg border ${colors.border} ${colors.accent} p-6`}>
+          <p class="font-serif leading-relaxed text-stone-700 dark:text-stone-100">{city.localContent[locale].intro}</p>
+          <hr class={`${colors.border} my-6`} />
+          <ul class="grid gap-4 sm:grid-cols-2">
+            {city.localContent[locale].specificBenefits.map((benefit) => (
+              <li class="group flex items-start gap-2">
+                <Icon
+                  name="ph:check-circle-duotone"
+                  class={`mt-1 h-5 w-5 flex-shrink-0 ${colors.text}`}
+                  aria-hidden="true"
+                />
+                <span class="font-serif text-sm text-stone-700 dark:text-stone-100">{benefit}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+    )
+  }
   {
     data.keyFeatures && (
       <section class="space-y-8" aria-labelledby="key-features-heading">
@@ -150,27 +185,6 @@ const colors = colorVariants[data.color as keyof typeof colorVariants];
               )}
             </div>
           ))}
-        </div>
-      </section>
-    )
-  }
-  {
-    city && (
-      <section class="space-y-8" aria-labelledby="local-benefits-heading">
-        <div class={`space-y-4 rounded-lg border ${colors.border} ${colors.accent} p-6`}>
-          <p class="font-serif leading-relaxed text-stone-700 dark:text-stone-100">{city.localContent[locale].intro}</p>
-          <ul class="grid gap-4 sm:grid-cols-2">
-            {city.localContent[locale].specificBenefits.map((benefit) => (
-              <li class="group flex items-start gap-2">
-                <Icon
-                  name="ph:check-circle-duotone"
-                  class={`mt-1 h-5 w-5 flex-shrink-0 ${colors.text}`}
-                  aria-hidden="true"
-                />
-                <span class="text-stone-500 dark:text-stone-400">{benefit}</span>
-              </li>
-            ))}
-          </ul>
         </div>
       </section>
     )
@@ -402,7 +416,7 @@ const colors = colorVariants[data.color as keyof typeof colorVariants];
     )
   }
   {
-    !city && data.cities && (
+    city! && data.cities && (
       <div class="space-y-6">
         <h2 class="relative font-serif text-2xl font-semibold text-stone-700 dark:text-stone-100">
           <span class="relative z-10 inline-flex items-center gap-2 bg-amber-50 pr-4 dark:bg-stone-900">
@@ -412,17 +426,21 @@ const colors = colorVariants[data.color as keyof typeof colorVariants];
           <span class="absolute top-1/2 right-0 left-0 -z-0 h-px bg-stone-200 dark:bg-stone-700" aria-hidden="true" />
         </h2>
         <div class="grid gap-4 sm:grid-cols-2">
-          {data.cities.map((city) => (
-            <a
-              href={getRelativeLocaleUrl(locale, `services/${service.id}/${city.slug}`)}
-              class={`group rounded-lg border border-stone-200 p-6 transition ${colors.hover} active:scale-95 active:opacity-50 dark:border-stone-700`}
-            >
-              <div class="flex flex-col gap-1">
-                <h3 class="font-serif font-medium text-stone-700 dark:text-stone-100">{city.name[locale]}</h3>
-                <p class="line-clamp-2 text-sm text-stone-500 dark:text-stone-400">{city.localContent[locale].intro}</p>
-              </div>
-            </a>
-          ))}
+          {data.cities
+            .sort((a, b) => a.name[locale].localeCompare(b.name[locale]))
+            .map((city) => (
+              <a
+                href={getRelativeLocaleUrl(locale, `services/${service.id}/${city.slug}`)}
+                class={`group rounded-lg border border-stone-200 p-6 transition ${colors.hover} active:scale-95 active:opacity-50 dark:border-stone-700`}
+              >
+                <div class="flex flex-col gap-1">
+                  <h3 class="font-serif font-medium text-stone-700 dark:text-stone-100">{city.name[locale]}</h3>
+                  <p class="line-clamp-2 text-sm text-stone-500 dark:text-stone-400">
+                    {city.localContent[locale].intro}
+                  </p>
+                </div>
+              </a>
+            ))}
         </div>
       </div>
     )

@@ -4,111 +4,120 @@
     "sv": "Kommunikation"
   },
   "shortDescription": {
-    "en": "Let's craft clear, compelling messages that boost your brand and get people talking. I'll help you connect effectively with your audience, everywhere.",
-    "sv": "Låt oss skapa tydliga, övertygande budskap som stärker ditt varumärke och får folk att prata. Jag hjälper dig nå din publik effektivt, överallt."
+    "en": "Craft compelling narratives and build meaningful connections with strategic communication services by William Hallin. From content creation to social media management, let's amplify your voice.",
+    "sv": "Skapa övertygande berättelser och bygg meningsfulla relationer med strategiska kommunikationstjänster av William Hallin. Från innehållsskapande till hantering av sociala medier, låt oss förstärka din röst."
   },
   "longDescription": {
-    "en": "In today's fast-paced world, <i>how</i> you say things matters just as much as <i>what</i> you say. With a background in journalism and digital communication, I help you cut through the noise and deliver messages that truly resonate.<br /><br />Whether you're after a full communication strategy or punchy campaign messaging, I blend smart insights with engaging storytelling to hit your goals. Every word is carefully chosen to boost your brand and build real connections with your audience.<br /><br />From nailing your company's core message to creating campaigns that captivate, I'll help you communicate in a way that builds trust, sparks engagement, and delivers real results for your business.",
-    "sv": "I dagens snabba värld är <i>hur</i> du säger saker lika viktigt som <i>vad</i> du säger. Med erfarenhet från både journalistik och digital kommunikation hjälper jag dig tränga igenom bruset och leverera budskap som verkligen når fram.<br /><br />Oavsett om du behöver en komplett kommunikationsstrategi eller slagkraftiga kampanjbudskap, blandar jag smarta insikter med engagerande berättelser för att nå dina mål. Varje ord väljs noggrant för att stärka ditt varumärke och bygga äkta relationer med din publik.<br /><br />Från att spika ditt företags kärnbudskap till att skapa kampanjer som fängslar, hjälper jag dig kommunicera på ett sätt som bygger förtroende, skapar engagemang och ger verkliga resultat för ditt företag."
+    "en": [
+      "As William Hallin, a freelance professional, I offer a comprehensive suite of communication services designed to help your brand resonate with its target audience and achieve its strategic objectives.",
+      "My approach combines journalistic integrity with creative flair, ensuring your message is not only heard but also remembered. Whether you need engaging website copy, persuasive marketing materials, expertly crafted articles, or dynamic social media campaigns, I provide tailored solutions that drive results.",
+      "Services include content creation (articles, blog posts, website content, technical writing), social media management (strategy, content planning, execution, analytics), and overarching content strategy development. I focus on understanding your unique voice and goals to deliver communication that truly connects."
+    ],
+    "sv": [
+      "Som William Hallin, en frilansprofessionell, erbjuder jag en omfattande uppsättning kommunikationstjänster utformade för att hjälpa ditt varumärke att nå ut till sin målgrupp och uppnå sina strategiska mål.",
+      "Min metod kombinerar journalistisk integritet med kreativ flair, vilket säkerställer att ditt budskap inte bara hörs utan också kommer ihåg. Oavsett om du behöver engagerande webbtexter, övertygande marknadsföringsmaterial, skickligt skrivna artiklar eller dynamiska kampanjer på sociala medier, erbjuder jag skräddarsydda lösningar som ger resultat.",
+      "Tjänster inkluderar innehållsskapande (artiklar, blogginlägg, webbplatsinnehåll, tekniskt skrivande), hantering av sociala medier (strategi, innehållsplanering, genomförande, analys) och övergripande utveckling av innehållsstrategi. Jag fokuserar på att förstå din unika röst och dina mål för att leverera kommunikation som verkligen skapar kontakt."
+    ]
   },
   "icon": "ph:megaphone-duotone",
   "color": "purple",
   "pricing": {
     "startingFrom": 750,
     "unit": {
-      "en": "article",
-      "sv": "artikel"
+      "en": "project",
+      "sv": "projekt"
     },
     "note": {
-      "en": "Prices include one revision round. Articles are typically 800-1200 words. Content strategy packages start from SEK 3,500.",
-      "sv": "Priserna inkluderar en revideringsrunda. Artiklar är vanligtvis 800-1200 ord. Paket för innehållsstrategi börjar från 3 500 kr."
+      "en": "Pricing varies based on project scope and complexity. Contact me for a detailed quote.",
+      "sv": "Prissättningen varierar beroende på projektets omfattning och komplexitet. Kontakta mig för en detaljerad offert."
     }
   },
   "keyFeatures": [
     {
       "title": {
-        "en": "Messages that connect",
-        "sv": "Budskap som når fram"
+        "en": "Strategic content creation",
+        "sv": "Strategiskt innehållsskapande"
       },
       "description": {
-        "en": "Turn complex ideas into clear, engaging messages that your audience understands and acts on.",
-        "sv": "Förvandla komplexa idéer till tydliga, engagerande budskap som din publik förstår och agerar på."
+        "en": "Developing compelling content that aligns with your brand voice and marketing goals, from articles to website copy.",
+        "sv": "Utvecklar engagerande innehåll som överensstämmer med ditt varumärkes röst och marknadsföringsmål, från artiklar till webbtexter."
       },
-      "icon": "ph:file-text-duotone"
+      "icon": "ph:article-duotone"
     },
     {
       "title": {
-        "en": "Your distinctive voice",
-        "sv": "Din unika röst"
+        "en": "Social media management",
+        "sv": "Hantering av sociala medier"
       },
       "description": {
-        "en": "Build trust with a strong, memorable brand voice that resonates with your audience across all channels.",
-        "sv": "Bygg förtroende med en stark, minnesvärd varumärkesröst som din publik känner igen och gillar, överallt."
-      },
-      "icon": "ph:microphone-stage-duotone"
-    },
-    {
-      "title": {
-        "en": "Perfectly pitched content",
-        "sv": "Perfekt anpassat innehåll"
-      },
-      "description": {
-        "en": "Get content perfectly tailored for every platform – social media, websites, presentations, and reports.",
-        "sv": "Få innehåll som är perfekt anpassat för varje plattform – sociala medier, webbplatser, presentationer och rapporter."
+        "en": "Building and nurturing your online community through consistent, high-quality content and interaction.",
+        "sv": "Bygger och vårdar din online-community genom konsekvent, högkvalitativt innehåll och interaktion."
       },
       "icon": "ph:share-network-duotone"
     },
     {
       "title": {
-        "en": "Bilingual brilliance",
-        "sv": "Tvåspråkig träffsäkerhet"
+        "en": "Content strategy",
+        "sv": "Innehållsstrategi"
       },
       "description": {
-        "en": "Reach Swedish and English audiences effectively with messaging that feels natural and impactful in both languages.",
-        "sv": "Nå både svenska och engelska målgrupper effektivt med budskap som känns naturliga och kraftfulla på båda språken."
+        "en": "Crafting a roadmap for your content to ensure it effectively reaches and engages your target audience.",
+        "sv": "Skapar en färdplan för ditt innehåll för att säkerställa att det effektivt når och engagerar din målgrupp."
       },
-      "icon": "ph:translate-duotone"
+      "icon": "ph:chart-line-up-duotone"
+    },
+    {
+      "title": {
+        "en": "Persuasive copywriting",
+        "sv": "Övertygande copywriting"
+      },
+      "description": {
+        "en": "Writing clear, concise, and persuasive copy that drives action and converts readers.",
+        "sv": "Skriver tydliga, koncisa och övertygande texter som driver handling och konverterar läsare."
+      },
+      "icon": "ph:pencil-line-duotone"
     }
   ],
   "processSteps": [
     {
       "title": {
-        "en": "Discovery",
-        "sv": "Upptäckt"
+        "en": "Discovery & consultation",
+        "sv": "Upptäckt & konsultation"
       },
       "description": {
-        "en": "We'll explore your goals, audience, and key messages together.",
-        "sv": "Vi utforskar dina mål, din målgrupp och dina kärnbudskap tillsammans."
+        "en": "We start with a thorough discussion to understand your brand, audience, objectives, and specific communication needs.",
+        "sv": "Vi börjar med en grundlig diskussion för att förstå ditt varumärke, din målgrupp, dina mål och specifika kommunikationsbehov."
+      }
+    },
+    {
+      "title": { "en": "Strategy & planning", "sv": "Strategi & planering" },
+      "description": {
+        "en": "Based on our consultation, I develop a tailored communication strategy and a detailed plan of action.",
+        "sv": "Baserat på vår konsultation utvecklar jag en skräddarsydd kommunikationsstrategi och en detaljerad handlingsplan."
       }
     },
     {
       "title": {
-        "en": "Strategy",
-        "sv": "Strategi"
+        "en": "Creation & execution",
+        "sv": "Skapande & genomförande"
       },
       "description": {
-        "en": "I'll create a clear plan to reach your audience effectively.",
-        "sv": "Jag skapar en tydlig plan för att nå din målgrupp effektivt."
+        "en": "I craft the content and implement the communication plan, keeping you informed throughout the process.",
+        "sv": "Jag skapar innehållet och implementerar kommunikationsplanen, och håller dig informerad under hela processen."
       }
     },
     {
-      "title": {
-        "en": "Creation",
-        "sv": "Skapande"
-      },
+      "title": { "en": "Review & refinement", "sv": "Granskning & förfining" },
       "description": {
-        "en": "I'll develop targeted content that truly connects.",
-        "sv": "Jag utvecklar målinriktat innehåll som verkligen når fram."
+        "en": "You'll have the opportunity to review all deliverables, and I'll make any necessary revisions to ensure your complete satisfaction.",
+        "sv": "Du får möjlighet att granska allt material, och jag gör eventuella nödvändiga revideringar för att säkerställa din fullständiga tillfredsställelse."
       }
     },
     {
-      "title": {
-        "en": "Launch & learn",
-        "sv": "Lansering & lärdom"
-      },
+      "title": { "en": "Delivery & analysis", "sv": "Leverans & analys" },
       "description": {
-        "en": "We'll get your message out there and track its impact.",
-        "sv": "Vi ser till att ditt budskap når ut och mäter effekten."
+        "en": "Once approved, the final content is delivered. For ongoing services like social media, I provide regular performance analysis.",
+        "sv": "När det är godkänt levereras det slutgiltiga innehållet. För löpande tjänster som sociala medier tillhandahåller jag regelbunden resultatanalys."
       }
     }
   ],
@@ -116,166 +125,344 @@
     "en": "Amplify your message",
     "sv": "Förstärk ditt budskap"
   },
-  "relatedServices": [
-    "content-writing",
-    "social-media",
-    "email-design",
-    "design"
-  ],
-  "featuredClients": [
-    "atlasos",
-    "creavite",
-    "extenseit",
-    "kaffepunkten",
-    "norran",
-    "the-babes"
-  ],
+  "relatedServices": [],
+  "featuredClients": [],
   "featured": true,
   "seo": {
     "en": {
-      "title": "Strategic communication services | Boost your brand's voice",
-      "description": "Expert communication services to help your business connect meaningfully. I craft clear, strategic messages that build relationships and drive action. Let's get your story heard.",
+      "title": "Strategic communication services",
+      "description": "Elevate your brand with expert communication services by William Hallin. Content creation, social media management, and content strategy tailored to your needs.",
       "keywords": [
-        "business communication services",
-        "strategic communications consultant",
-        "corporate messaging expert",
-        "communication strategy development",
-        "brand voice building",
-        "multichannel communication expert",
-        "clear messaging services",
-        "audience engagement strategies",
-        "communication planning services",
-        "brand storytelling expert"
+        "communication services",
+        "content creation",
+        "social media management",
+        "content strategy",
+        "copywriting",
+        "William Hallin",
+        "freelance communication",
+        "HallinMedia"
       ]
     },
     "sv": {
-      "title": "Strategisk kommunikation | Stärk ditt varumärkes röst",
-      "description": "Expert på kommunikationstjänster som hjälper ditt företag att skapa meningsfulla kontakter. Jag skapar tydliga, strategiska budskap som bygger relationer och driver handling. Låt oss berätta din historia.",
+      "title": "Strategiska kommunikationstjänster",
+      "description": "Lyft ditt varumärke med expertkommunikationstjänster av William Hallin. Innehållsskapande, hantering av sociala medier och innehållsstrategi anpassad efter dina behov.",
       "keywords": [
-        "företagskommunikation tjänster",
-        "strategisk kommunikationskonsult",
-        "expert på företagsbudskap",
-        "utveckling av kommunikationsstrategi",
-        "bygga varumärkesröst",
-        "expert på flerkanalskommunikation",
-        "tydliga budskapstjänster",
-        "strategier för målgruppsengagemang",
-        "kommunikationsplanering",
-        "expert på varumärkesberättande"
+        "kommunikationstjänster",
+        "innehållsskapande",
+        "sociala medier",
+        "innehållsstrategi",
+        "copywriting",
+        "William Hallin",
+        "frilans kommunikation",
+        "HallinMedia"
       ]
     }
   },
   "cities": [
     {
-      "name": {
-        "en": "Skellefteå",
-        "sv": "Skellefteå"
-      },
+      "name": { "en": "Skellefteå", "sv": "Skellefteå" },
       "slug": "skelleftea",
       "localSeo": {
         "en": {
-          "title": "Strategic communications partner in Skellefteå | Business messaging",
-          "description": "Expert communication for Skellefteå's dynamic industries. From corporate messaging to stakeholder engagement, let's communicate effectively in this fast-growing market.",
+          "title": "Strategic communication in Skellefteå",
+          "description": "Boost your Skellefteå business with William Hallin's communication services: content, social media, and strategy for growth.",
           "keywords": [
-            "corporate communications Skelleftea",
-            "business messaging strategy Skelleftea",
-            "stakeholder communications North Sweden",
-            "content strategy Skelleftea",
-            "industrial sector communication",
-            "marketing communications Skelleftea",
-            "bilingual business content Skelleftea"
+            "communication Skellefteå",
+            "content creation Skellefteå",
+            "social media Skellefteå",
+            "William Hallin Skellefteå",
+            "Skellefteå marketing",
+            "HallinMedia"
           ]
         },
         "sv": {
-          "title": "Strategisk kommunikationspartner i Skellefteå | Företagskommunikation",
-          "description": "Expertkommunikation för Skellefteås dynamiska industrier. Från företagsbudskap till intressentdialog, låt oss kommunicera effektivt på denna snabbväxande marknad.",
+          "title": "Strategisk kommunikation i Skellefteå",
+          "description": "Stärk ditt Skellefteå-företag med William Hallins kommunikationstjänster: innehåll, sociala medier och strategi för tillväxt.",
           "keywords": [
-            "företagskommunikation Skellefteå",
-            "kommunikationsstrategi Skellefteå",
-            "intressentkommunikation Norrland",
-            "innehållsstrategi Skellefteå",
-            "industrikommunikation",
-            "marknadskommunikation Skellefteå",
-            "tvåspråkigt företagsinnehåll Skellefteå"
+            "kommunikation Skellefteå",
+            "innehållsskapande Skellefteå",
+            "sociala medier Skellefteå",
+            "William Hallin Skellefteå",
+            "Skellefteå marknadsföring",
+            "HallinMedia"
           ]
         }
       },
       "localContent": {
         "en": {
-          "heading": "Strategic communication in Skellefteå",
-          "intro": "Skellefteå is booming! Your message needs to connect with established locals and new arrivals alike. I'll help you navigate this exciting communication landscape, crafting messages that build trust and spark engagement across our diverse, expanding community.",
+          "heading": "Elevate your message in Skellefteå",
+          "intro": "As Skellefteå continues to grow, clear communication is key. I'm William Hallin, offering tailored communication services to help your Skellefteå-based business or organisation thrive.",
           "specificBenefits": [
-            "Targeted messaging for tech industries",
-            "Bilingual content that shines for local and global audiences",
-            "Proactive crisis communication planning for industrial peace of mind",
-            "Storytelling that links traditional industry with bold innovation"
+            "Custom communication plans designed for the dynamic Skellefteå market.",
+            "Engaging content that connects with the Skellefteå community and beyond.",
+            "Strategic social media management to amplify your presence in Skellefteå.",
+            "Your local communication expert, William Hallin, dedicated to Skellefteå's success stories."
           ]
         },
         "sv": {
-          "heading": "Strategisk kommunikation i Skellefteå",
-          "intro": "Skellefteå blomstrar! Ditt budskap behöver nå både bofasta och nyinflyttade. Jag hjälper dig navigera detta spännande kommunikationslandskap och skapar budskap som bygger förtroende och engagemang i vår mångsidiga, växande stad.",
+          "heading": "Förstärk ditt budskap i Skellefteå",
+          "intro": "I takt med att Skellefteå fortsätter att växa är tydlig kommunikation nyckeln. Jag är William Hallin och erbjuder skräddarsydda kommunikationstjänster för att hjälpa ditt Skellefteå-baserade företag eller organisation att blomstra.",
           "specificBenefits": [
-            "Målinriktade budskap för teknikindustrin",
-            "Tvåspråkigt innehåll som imponerar på både lokal och global publik",
-            "Proaktiv kriskommunikationsplanering för trygg industriell drift",
-            "Berättelser som kopplar samman traditionell industri med djärv innovation"
+            "Anpassade kommunikationsplaner utformade för den dynamiska Skellefteå-marknaden.",
+            "Engagerande innehåll som skapar kontakt med Skellefteå-gemenskapen och bortom.",
+            "Strategisk hantering av sociala medier för att förstärka din närvaro i Skellefteå.",
+            "Din lokala kommunikationsexpert, William Hallin, dedikerad till Skellefteås framgångshistorier."
           ]
         }
       }
     },
     {
-      "name": {
-        "en": "Umeå",
-        "sv": "Umeå"
-      },
+      "name": { "en": "Umeå", "sv": "Umeå" },
       "slug": "umea",
       "localSeo": {
         "en": {
-          "title": "Cultural communications in Umeå",
-          "description": "Specialised communication for Umeå's knowledge hub. Transforming complex research and cultural projects into engaging content that connects with everyone.",
+          "title": "Effective communication services in Umeå",
+          "description": "William Hallin provides Umeå with expert communication: compelling content, strategic social media, and clear messaging for your brand.",
           "keywords": [
-            "academic communications Umea",
-            "research content Umea",
-            "cultural sector messaging Umea",
-            "knowledge translation services",
-            "science communication Umea",
-            "public engagement content Umea",
-            "academic outreach Umea"
+            "communication Umeå",
+            "content strategy Umeå",
+            "social media Umeå",
+            "William Hallin Umeå",
+            "Umeå freelance communication",
+            "HallinMedia"
           ]
         },
         "sv": {
-          "title": "Kulturkommunikation i Umeå",
-          "description": "Specialiserad kommunikation för Umeås kunskapsnav. Förvandlar komplex forskning och kulturprojekt till engagerande innehåll som når alla.",
+          "title": "Effektiva kommunikationstjänster i Umeå",
+          "description": "William Hallin förser Umeå med expertkommunikation: övertygande innehåll, strategiska sociala medier och tydliga budskap för ditt varumärke.",
           "keywords": [
-            "akademisk kommunikation Umeå",
-            "forskningsinnehåll Umeå",
-            "kultursektorkommunikation Umeå",
-            "kunskapsförmedling",
-            "vetenskapskommunikation Umeå",
-            "publikt engagemang Umeå",
-            "akademisk spridning Umeå"
+            "kommunikation Umeå",
+            "innehållsstrategi Umeå",
+            "sociala medier Umeå",
+            "William Hallin Umeå",
+            "Umeå frilans kommunikation",
+            "HallinMedia"
           ]
         }
       },
       "localContent": {
         "en": {
-          "heading": "Communication in Umeå",
-          "intro": "In Umeå's vibrant academic and cultural scene, your message needs to be both smart and accessible. I help turn complex ideas into compelling stories that captivate everyone, from academic peers to the wider community.",
+          "heading": "Communication for Umeå",
+          "intro": "I'm William Hallin, offering specialised communication services to help Umeå businesses and initiatives connect and convert.",
           "specificBenefits": [
-            "Expertly translating academic research into engaging public content",
-            "Cultural communication strategies that boost audience engagement",
-            "Research impact stories for funding bids and public outreach",
-            "Cross-disciplinary communication that bridges science and humanities"
+            "Strategic communication tailored to Umeå's innovative and cultural landscape.",
+            "Content that captivates and engages the diverse Umeå audience.",
+            "Amplify your Umeå presence with targeted and effective social media strategies.",
+            "William Hallin: Your partner for impactful communication in the heart of Umeå."
           ]
         },
         "sv": {
-          "heading": "Kommunikation i Umeå",
-          "intro": "I Umeås levande akademiska och kulturella miljö behöver ditt budskap vara både smart och tillgängligt. Jag hjälper till att omvandla komplexa idéer till fängslande berättelser som engagerar alla, från akademiska kollegor till allmänheten.",
+          "heading": "Kommunikation för Umeå",
+          "intro": "Jag är William Hallin och erbjuder specialiserade kommunikationstjänster för att hjälpa Umeå-företag och initiativ att skapa kontakt och konvertera.",
           "specificBenefits": [
-            "Expertöversättning av akademisk forskning till engagerande publikt innehåll",
-            "Kommunikationsstrategier för kultursektorn som ökar publikens engagemang",
-            "Berättelser om forskningens genomslag för anslag och publikkontakt",
-            "Tvärvetenskaplig kommunikation som bygger broar mellan vetenskap och humaniora"
+            "Strategisk kommunikation anpassad till Umeås innovativa och kulturella landskap.",
+            "Innehåll som fängslar och engagerar den mångsidiga Umeå-publiken.",
+            "Förstärk din Umeå-närvaro med målinriktade och effektiva sociala mediestrategier.",
+            "William Hallin: Din partner för slagkraftig kommunikation i hjärtat av Umeå."
+          ]
+        }
+      }
+    },
+    {
+      "name": { "en": "Luleå", "sv": "Luleå" },
+      "slug": "lulea",
+      "localSeo": {
+        "en": {
+          "title": "Communication expertise in Luleå",
+          "description": "For businesses in Luleå, William Hallin delivers strategic communication services, including content creation and social media, to enhance your brand.",
+          "keywords": [
+            "communication Luleå",
+            "Luleå content marketing",
+            "social media Luleå",
+            "William Hallin Luleå",
+            "Luleå communication consultant",
+            "HallinMedia"
+          ]
+        },
+        "sv": {
+          "title": "Kommunikationsexpertis i Luleå",
+          "description": "För företag i Luleå levererar William Hallin strategiska kommunikationstjänster, inklusive innehållsskapande och sociala medier, för att stärka ditt varumärke.",
+          "keywords": [
+            "kommunikation Luleå",
+            "Luleå content marketing",
+            "sociala medier Luleå",
+            "William Hallin Luleå",
+            "Luleå kommunikationskonsult",
+            "HallinMedia"
+          ]
+        }
+      },
+      "localContent": {
+        "en": {
+          "heading": "Powering Luleå with communication",
+          "intro": "From the tech hubs to the cultural heart of Luleå, effective communication is vital. I'm William Hallin, ready to provide your Luleå enterprise with impactful communication solutions.",
+          "specificBenefits": [
+            "Communication strategies that resonate with Luleå's unique industrial and technological environment.",
+            "Content crafted to engage and inform the Luleå community and stakeholders.",
+            "Strengthen your brand's voice in Luleå through targeted communication and social media.",
+            "William Hallin: Dedicated to delivering communication excellence for Luleå businesses."
+          ]
+        },
+        "sv": {
+          "heading": "Stärker Luleå med kommunikation",
+          "intro": "Från tekniknaven till Luleås kulturella hjärta är effektiv kommunikation avgörande. Jag är William Hallin, redo att förse ditt Luleå-företag med slagkraftiga kommunikationslösningar.",
+          "specificBenefits": [
+            "Kommunikationsstrategier som når fram i Luleås unika industriella och teknologiska miljö.",
+            "Innehåll skapat för att engagera och informera Luleås invånare och intressenter.",
+            "Stärk ditt varumärkes röst i Luleå genom målinriktad kommunikation och sociala medier.",
+            "William Hallin: Dedikerad till att leverera kommunikationsexcellens för Luleå-företag."
+          ]
+        }
+      }
+    },
+    {
+      "name": { "en": "Sundsvall", "sv": "Sundsvall" },
+      "slug": "sundsvall",
+      "localSeo": {
+        "en": {
+          "title": "Expert communication services in Sundsvall",
+          "description": "William Hallin: Your Sundsvall expert for strategic communication, content creation, and social media management. Let's elevate your local brand.",
+          "keywords": [
+            "communication Sundsvall",
+            "content strategy Sundsvall",
+            "social media Sundsvall",
+            "copywriting Sundsvall",
+            "William Hallin Sundsvall",
+            "HallinMedia"
+          ]
+        },
+        "sv": {
+          "title": "Expert kommunikationstjänster i Sundsvall",
+          "description": "William Hallin: Din Sundsvallsexpert för strategisk kommunikation, innehållsskapande och hantering av sociala medier. Låt oss lyfta ditt lokala varumärke.",
+          "keywords": [
+            "kommunikation Sundsvall",
+            "innehållsstrategi Sundsvall",
+            "sociala medier Sundsvall",
+            "copywriting Sundsvall",
+            "William Hallin Sundsvall",
+            "HallinMedia"
+          ]
+        }
+      },
+      "localContent": {
+        "en": {
+          "heading": "Strategic communication for Sundsvall",
+          "intro": "Hi, I'm William Hallin. I offer businesses and organisations in Sundsvall top-tier communication services, from compelling content creation to effective social media strategies, designed to make your message stand out.",
+          "specificBenefits": [
+            "Partner with William Hallin for impactful communication strategies in Sundsvall.",
+            "Crafting messages that resonate with the Sundsvall audience and drive results.",
+            "Local expertise in Sundsvall to enhance your brand's voice and reach.",
+            "Dedicated support for all your communication needs in the Sundsvall region."
+          ]
+        },
+        "sv": {
+          "heading": "Strategisk kommunikation för Sundsvall",
+          "intro": "Hej, jag är William Hallin. Jag erbjuder företag och organisationer i Sundsvall förstklassiga kommunikationstjänster, från övertygande innehållsskapande till effektiva sociala mediestrategier, utformade för att få ditt budskap att sticka ut.",
+          "specificBenefits": [
+            "Samarbeta med William Hallin för slagkraftiga kommunikationsstrategier i Sundsvall.",
+            "Skapar budskap som når Sundsvallspubliken och driver resultat.",
+            "Lokal expertis i Sundsvall för att förstärka ditt varumärkes röst och räckvidd.",
+            "Dedikerat stöd för alla dina kommunikationsbehov i Sundsvallsregionen."
+          ]
+        }
+      }
+    },
+    {
+      "name": { "en": "Örnsköldsvik", "sv": "Örnsköldsvik" },
+      "slug": "ornskoldsvik",
+      "localSeo": {
+        "en": {
+          "title": "Professional communication in Örnsköldsvik",
+          "description": "William Hallin, your trusted communication specialist in Örnsköldsvik for impactful content, social media, and strategic planning. Let's connect.",
+          "keywords": [
+            "Örnsköldsvik communication",
+            "content creation Örnsköldsvik",
+            "social media Örnsköldsvik",
+            "William Hallin Örnsköldsvik",
+            "HallinMedia"
+          ]
+        },
+        "sv": {
+          "title": "Professionell kommunikation i Örnsköldsvik",
+          "description": "William Hallin, din pålitliga kommunikationsspecialist i Örnsköldsvik för slagkraftigt innehåll, sociala medier och strategisk planering. Låt oss skapa kontakt.",
+          "keywords": [
+            "kommunikation Örnsköldsvik",
+            "Örnsköldsvik innehållsskapande",
+            "sociala medier Örnsköldsvik",
+            "William Hallin Örnsköldsvik",
+            "HallinMedia"
+          ]
+        }
+      },
+      "localContent": {
+        "en": {
+          "heading": "Communication for Örnsköldsvik",
+          "intro": "I'm William Hallin, serving Örnsköldsvik with professional communication services that capture attention and deliver results. I'm committed to providing high-quality strategic communication for all your needs.",
+          "specificBenefits": [
+            "Bringing creative communication and strategic insight to projects in Örnsköldsvik.",
+            "Reliable and professional communication services for businesses and organisations in the Örnsköldsvik area.",
+            "Helping you articulate the best of Örnsköldsvik through compelling content and messaging.",
+            "Your local Örnsköldsvik communication partner, William Hallin, committed to your project's success."
+          ]
+        },
+        "sv": {
+          "heading": "Kommunikation för Örnsköldsvik",
+          "intro": "Jag är William Hallin, och betjänar Örnsköldsvik med professionella kommunikationstjänster som fångar uppmärksamhet och levererar resultat. Jag är engagerad i att tillhandahålla högkvalitativ strategisk kommunikation för alla dina behov.",
+          "specificBenefits": [
+            "Bidrar med kreativ kommunikation och strategisk insikt till projekt i Örnsköldsvik.",
+            "Pålitliga och professionella kommunikationstjänster för företag och organisationer i Örnsköldsviksområdet.",
+            "Hjälper dig att formulera det bästa av vad Örnsköldsvik har att erbjuda genom övertygande innehåll och budskap.",
+            "Din lokala Örnsköldsvikspartner inom kommunikation, William Hallin, engagerad i ditt projekts framgång."
+          ]
+        }
+      }
+    },
+    {
+      "name": { "en": "Härnösand", "sv": "Härnösand" },
+      "slug": "harnosand",
+      "localSeo": {
+        "en": {
+          "title": "Expert communication solutions in Härnösand",
+          "description": "William Hallin offers expert communication services in Härnösand. From strategic content to social media management, get professional results every time.",
+          "keywords": [
+            "communication Härnösand",
+            "Härnösand content strategy",
+            "social media Härnösand",
+            "William Hallin Härnösand",
+            "HallinMedia"
+          ]
+        },
+        "sv": {
+          "title": "Expertlösningar inom kommunikation i Härnösand",
+          "description": "William Hallin erbjuder expertkommunikationstjänster i Härnösand. Från strategiskt innehåll till hantering av sociala medier, få professionella resultat varje gång.",
+          "keywords": [
+            "kommunikation Härnösand",
+            "Härnösand innehållsstrategi",
+            "sociala medier Härnösand",
+            "William Hallin Härnösand",
+            "HallinMedia"
+          ]
+        }
+      },
+      "localContent": {
+        "en": {
+          "heading": "Quality communication in Härnösand",
+          "intro": "I'm William Hallin, and I provide professional communication services to clients in Härnösand, ensuring your messaging is both captivating and effective. Let's collaborate on your next communication project.",
+          "specificBenefits": [
+            "Providing Härnösand with high-quality communication for diverse commercial and organisational needs.",
+            "Convenient and personalised communication strategies available in Härnösand and the surrounding High Coast area.",
+            "A commitment to excellence and client satisfaction in every Härnösand communication project by William Hallin.",
+            "Partner with William Hallin for professional communication that makes a difference in Härnösand."
+          ]
+        },
+        "sv": {
+          "heading": "Kvalitetskommunikation i Härnösand",
+          "intro": "Jag är William Hallin, och jag erbjuder professionella kommunikationstjänster till kunder i Härnösand, och säkerställer att ditt budskap är både fängslande och effektivt. Låt oss samarbeta på ditt nästa kommunikationsprojekt.",
+          "specificBenefits": [
+            "Förser Härnösand med högkvalitativ kommunikation för olika kommersiella och organisatoriska behov.",
+            "Bekväma och personligt anpassade kommunikationsstrategier tillgängliga i Härnösand och det omgivande Höga Kusten-området.",
+            "Ett engagemang för excellens och kundnöjdhet i varje Härnösandsprojekt inom kommunikation av William Hallin.",
+            "Samarbeta med William Hallin för professionell kommunikation som gör skillnad i Härnösand."
           ]
         }
       }
