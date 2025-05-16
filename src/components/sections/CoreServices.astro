@@ -212,11 +212,27 @@ const translations = {
 <script>
   document.querySelectorAll(".radial-blob").forEach((blob) => {
     const article = blob.closest("article");
+    let currentX = 0;
+    let currentY = 0;
+    let targetX = 0;
+    let targetY = 0;
 
     article?.addEventListener("mousemove", (e) => {
       const rect = article.getBoundingClientRect();
-      (blob as HTMLElement).style.left = `${e.clientX - rect.left}px`;
-      (blob as HTMLElement).style.top = `${e.clientY - rect.top}px`;
+      targetX = e.clientX - rect.left;
+      targetY = e.clientY - rect.top;
     });
+
+    function animate() {
+      currentX += (targetX - currentX) * 0.15;
+      currentY += (targetY - currentY) * 0.15;
+
+      (blob as HTMLElement).style.left = `${currentX}px`;
+      (blob as HTMLElement).style.top = `${currentY}px`;
+
+      requestAnimationFrame(animate);
+    }
+
+    animate();
   });
 </script>
