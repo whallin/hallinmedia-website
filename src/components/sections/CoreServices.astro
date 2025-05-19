@@ -144,9 +144,7 @@ const translations = {
                   <h3 class="font-serif text-lg font-semibold text-stone-700 dark:text-stone-100">{service.title}</h3>
                   <p class="mt-2 font-serif text-stone-500 dark:text-stone-400">{service.description}</p>
                   <aside class="mt-2 flex flex-col gap-2 text-xs text-stone-400 @sm:flex-row @sm:items-center dark:text-stone-500">
-                    <p>
-                      {translations[locale].clientsbought} <span class="lowercase">{service.title}</span>:
-                    </p>
+                    <p>{translations[locale].clientsbought}:</p>
                     <ul class="flex -space-x-2" role="list" aria-label={translations[locale].clientLogos}>
                       {service.clients
                         .map((client) => clientsMap.get(client))
