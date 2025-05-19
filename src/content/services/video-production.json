@@ -134,8 +134,19 @@
     "en": "Tell your story",
     "sv": "Berätta din historia"
   },
-  "relatedServices": [],
-  "featuredClients": [],
+  "relatedServices": ["photography"],
+  "featuredClients": [
+    "battle-of-botnia",
+    "brannbollsyran",
+    "kulturforening-humlan",
+    "lastbilsstation",
+    "mr-dagarna",
+    "nolia",
+    "norraskog",
+    "producenterna",
+    "skelleftea-symfoniorkester",
+    "trastockfestivalen"
+  ],
   "featured": true,
   "seo": {
     "en": {

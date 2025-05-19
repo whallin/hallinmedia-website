@@ -125,8 +125,16 @@
     "en": "Amplify your message",
     "sv": "Förstärk ditt budskap"
   },
-  "relatedServices": [],
-  "featuredClients": [],
+  "relatedServices": ["graphic-design"],
+  "featuredClients": [
+    "24vision",
+    "atlasos",
+    "conodra",
+    "creavite",
+    "norran",
+    "sannegardens-pizzeria",
+    "signworld"
+  ],
   "featured": true,
   "seo": {
     "en": {

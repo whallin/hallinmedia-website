@@ -134,8 +134,18 @@
     "en": "Capture stunning visuals",
     "sv": "Fånga fantastiska bilder"
   },
-  "relatedServices": [],
-  "featuredClients": [],
+  "relatedServices": ["video-production"],
+  "featuredClients": [
+    "battle-of-botnia",
+    "brannbollsyran",
+    "kulturforening-humlan",
+    "lastbilsstation",
+    "mr-dagarna",
+    "norraskog",
+    "producenterna",
+    "rfsl",
+    "trastockfestivalen"
+  ],
   "featured": true,
   "seo": {
     "en": {

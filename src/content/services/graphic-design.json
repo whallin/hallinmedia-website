@@ -120,8 +120,23 @@
     "en": "Elevate your visuals",
     "sv": "Lyft ditt visuella material"
   },
-  "relatedServices": [],
-  "featuredClients": [],
+  "relatedServices": ["communication"],
+  "featuredClients": [
+    "24vision",
+    "atlasos",
+    "condora",
+    "creative-kids",
+    "creavite",
+    "extenseit",
+    "fiscal-year",
+    "kaffepunkten",
+    "sannegardens-pizzeria",
+    "signworld",
+    "skane-cars",
+    "the-babes",
+    "tutorio",
+    "zeller-co"
+  ],
   "featured": true,
   "seo": {
     "en": {
