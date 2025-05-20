@@ -12,6 +12,17 @@ export default defineConfig({
   site: "https://hallin.media",
   trailingSlash: "ignore",
 
+  redirects: {
+    "/hem": "/",
+    "/arbeten": "/portfolio",
+    "/tjanster": "/services",
+    "/anlita-mig": "/hire",
+    "/home": "/en",
+    "/works": "/en/portfolio",
+    "/services": "/en/services",
+    "/hire-me": "/en/hire",
+  },
+
   output: "static",
   adapter: cloudflare({
     imageService: "compile",
